@@ -464,3 +464,14 @@ tr:last-child td { border-bottom: 0; }
 
 .lost { text-align: center; padding: 80px 0; }
 .lost svg { width: 140px; margin: 0 auto 20px; }
+
+/* ---------- photo strip ---------- */
+
+.strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 28px; }
+@media (min-width: 720px) { .strip { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+.strip .photo { aspect-ratio: 1; border-radius: 22px; }
+.strip .photo:nth-child(odd) { transform: rotate(-1.5deg); }
+.strip .photo:nth-child(even) { transform: rotate(1.5deg); }
+
+.campus .photo { margin: -24px -24px 12px; border-radius: var(--radius) var(--radius) 0 0; aspect-ratio: 16 / 9; }
+.campus .photo::after { border-radius: 0; }

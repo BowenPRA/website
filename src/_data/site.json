@@ -16,13 +16,15 @@
       "name": "Primary Campus",
       "who": "Early Years and Primary",
       "address": "Trần Nhân Tông, Cẩm Thanh, Hội An",
-      "mapUrl": "https://maps.google.com/?q=Palm+River+Academy+Tran+Nhan+Tong+Cam+Thanh+Hoi+An"
+      "mapUrl": "https://maps.google.com/?q=Palm+River+Academy+Tran+Nhan+Tong+Cam+Thanh+Hoi+An",
+      "photo": "palm-river-academy-primary-campus-cam-thanh"
     },
     {
       "name": "Secondary Campus",
       "who": "Secondary and Upper Years",
       "address": "ĐX18, Cẩm Thanh, Hội An",
-      "mapUrl": "https://maps.google.com/?q=Palm+River+Academy+DX18+Cam+Thanh+Hoi+An"
+      "mapUrl": "https://maps.google.com/?q=Palm+River+Academy+DX18+Cam+Thanh+Hoi+An",
+      "photo": "palm-river-academy-secondary-campus-gate-cam-thanh"
     }
   ],
   "formAction": "https://formspree.io/f/REPLACE_ME"

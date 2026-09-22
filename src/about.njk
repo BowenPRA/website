@@ -18,7 +18,7 @@ description: "Palm River Academy opened in 2017 in Cẩm Thanh, Hội An. A lice
       <p>About half our families are Vietnamese and half are from somewhere else. About half our teachers, too. The children notice this less than the adults do.</p>
       <p>Today we teach from 20 months to 18 years across two campuses in Cẩm Thanh, a few minutes apart. Academic classes never go above {{ site.classCap }} children.</p>
     </div>
-    <div class="photo photo--blob" data-caption="photo: the Primary Campus from the gate, or an early photo from 2017"></div>
+    {% photo "palm-river-academy-community-at-campus-wall", "photo--blob" %}
   </div>
 </section>
 
@@ -54,7 +54,7 @@ description: "Palm River Academy opened in 2017 in Cẩm Thanh, Hội An. A lice
     <ul class="team">
       {% for m in team.members %}
       <li>
-        <div class="photo photo--square photo--blob{% if loop.index is even %}-b{% endif %}" data-caption="photo: {{ m.name }}"></div>
+        {% photo "team-" + m.slug, "photo--square photo--blob" + ("-b" if loop.index is even else ""), "160px" %}
         <strong>{{ m.name }}</strong>
         <em>{{ m.role }}</em>
         <p>{{ m.bio }}</p>
@@ -69,16 +69,7 @@ description: "Palm River Academy opened in 2017 in Cẩm Thanh, Hội An. A lice
 <section>
   <div class="wrap">
     <h2>Two campuses in Cẩm Thanh</h2>
-    <div class="cards">
-      {% for c in site.campuses %}
-      <div class="card campus">
-        <h3>{{ c.name }}</h3>
-        <p class="campus__who">{{ c.who }}</p>
-        <p>{{ c.address }}</p>
-        <a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
-      </div>
-      {% endfor %}
-    </div>
+    {% include "partials/campuses.njk" %}
   </div>
 </section>
 

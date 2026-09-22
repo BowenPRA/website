@@ -19,7 +19,7 @@ description: "Palm River Academy is a learning community in Hội An for childre
         <a class="btn btn--ghost" href="{{ '/learning/' | url }}">See what we teach</a>
       </div>
     </div>
-    <div class="photo photo--blob" data-caption="photo: a Year 3 class mid-experiment, or the river from the Primary Campus"></div>
+    {% photo "year-1-students-building-magnetic-tiles-outdoors", "photo--blob", "(min-width: 900px) 45vw, 100vw", true %}
   </div>
 </section>
 
@@ -76,6 +76,12 @@ description: "Palm River Academy is a learning community in Hội An for childre
       <li><time>Afternoon</time><p>Vocational classes on rotation: cooking, art and design, technology, public speaking.</p></li>
       <li><time>16:00</time><p>Home. Usually a bit muddy.</p></li>
     </ol>
+    <div class="strip">
+      {% photo "nursery-child-watercolour-painting", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "primary-students-reading-corner", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "nursery-children-sand-pit-play", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "secondary-students-printing-mural", "", "(min-width: 720px) 25vw, 50vw" %}
+    </div>
   </div>
 </section>
 
@@ -97,7 +103,7 @@ description: "Palm River Academy is a learning community in Hội An for childre
 
 <section class="band--paper">
   <div class="wrap two">
-    <div class="photo photo--blob-b" data-caption="photo: a Global Program student on their first day, with the class"></div>
+    {% photo "global-program-nature-walk-hoi-an", "photo--blob-b" %}
     <div>
       <p class="eyebrow">Passing through Hội An?</p>
       <h2>Join us for three weeks or three months</h2>
@@ -113,16 +119,7 @@ description: "Palm River Academy is a learning community in Hội An for childre
   <div class="wrap">
     <p class="eyebrow">Two campuses, five minutes apart</p>
     <h2>Find us in Cẩm Thanh</h2>
-    <div class="cards">
-      {% for c in site.campuses %}
-      <div class="card campus">
-        <h3>{{ c.name }}</h3>
-        <p class="campus__who">{{ c.who }}</p>
-        <p>{{ c.address }}</p>
-        <a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
-      </div>
-      {% endfor %}
-    </div>
+    {% include "partials/campuses.njk" %}
   </div>
 </section>
 

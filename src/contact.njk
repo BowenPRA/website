@@ -46,6 +46,7 @@ description: "Book a tour of Palm River Academy in Hội An, or ask a question. 
       </div>
       {% for c in site.campuses %}
       <div class="card campus" style="margin-bottom:18px">
+        {% photo c.photo, "", "(min-width: 900px) 40vw, 100vw" %}
         <h3>{{ c.name }}</h3>
         <p class="campus__who">{{ c.who }}</p>
         <p>{{ c.address }}</p>

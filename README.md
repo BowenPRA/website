@@ -26,7 +26,8 @@ Then open http://localhost:8080. Edits under `src/` rebuild automatically.
 | `src/assets/css/main.css` | All styles. Design tokens are at the top |
 | `src/assets/js/main.js` | Nav sheet, age picker |
 | `src/*.njk`, `src/**/*.njk` | The pages |
-| `source-images/` | Originals from the old Wix sites, not in git (too big); see its README |
+| `originals/` | Full-size photos and Wix exports, not in git (too big); see its README |
+| `scripts/images.mjs` | Turns `originals/picks.json` into WebP files in `src/assets/img/photos/` |
 
 ## Deploy
 
