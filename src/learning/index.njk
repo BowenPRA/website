@@ -8,14 +8,14 @@ description: "Early Years, Primary, Lower Secondary, Upper Secondary and the Glo
 {% set heroPhoto = "primary-students-clay-modelling" %}
 {% set heroEyebrow = "Academics" %}
 {% set heroTitle = 'Five programs, one way of <span class="mark">working</span>' %}
-{% set heroText = "Whatever the age, the day has the same shape: academic subjects in English, something physical, something made with your hands." %}
+{% set heroText = "Every age, the same idea: lessons in English, something physical, something made by hand." %}
 {% include "partials/pagehero.njk" %}
 
 <section data-picker>
   <div class="wrap">
     <p class="eyebrow eyebrow--sun">Start here</p>
     <h2>How old is your child?</h2>
-    <p class="lede">Tap an age and we will show you the right program. Or read them all, they are short.</p>
+    <p class="lede">Tap an age to see the right program.</p>
     <div class="picker__chips" role="group" aria-label="Filter programs by age">
       {% for p in programs %}<button class="chip chip--{{ p.tone }}" type="button" data-key="{{ p.key }}" aria-pressed="false">{{ p.chip }}</button>{% endfor %}
     </div>

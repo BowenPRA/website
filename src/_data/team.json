@@ -1,5 +1,5 @@
 {
-  "intro": "A mix of Vietnamese and international teachers. Every academic teacher has a degree in their subject, teaching experience and a TESOL certificate, and is qualified to teach in Việt Nam.",
+  "intro": "Every academic teacher has a degree in their subject and a TESOL certificate, and is qualified to teach in Việt Nam.",
   "note": "Keep each person to a role and one short line: what they lead or teach. Leadership first.",
   "members": [
     { "name": "Mr. Seth", "slug": "seth", "role": "Head Teacher", "teaches": "Also teaches Cooking" },

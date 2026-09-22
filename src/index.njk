@@ -12,7 +12,7 @@ description: "Palm River Academy is an English language center in Hội An for c
   <div class="wrap hero__inner">
     <p class="eyebrow eyebrow--on rise" style="--d:0">English Language Center · Hội An</p>
     <h1 class="rise" style="--d:1">English, learned <span class="mark">by doing.</span></h1>
-    <p class="lede rise" style="--d:2">We are an English language center for children from 20 months to 18 years. Our students learn English through science, maths, cooking, art and sport. Content through context. Less studying English, more doing things in English.</p>
+    <p class="lede rise" style="--d:2">For children from 20 months to 18 years. Science, maths, cooking, art and sport, all in English.</p>
     <div class="hero__actions rise" style="--d:3">
       <a class="btn btn--sun" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
@@ -32,7 +32,7 @@ description: "Palm River Academy is an English language center in Hội An for c
       <p class="eyebrow eyebrow--blue">Discover our story</p>
       <h2>Serving families in Hội An and Đà Nẵng since {{ site.founded }}</h2>
       <p class="lede lede--blue">Hội An's oldest international learning center.</p>
-      <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn English without sitting still all day. That is still the idea. We combine the Cambridge curriculum with small classes and real-world skills: public speaking, art, technology, cooking, sport. About half our families are Vietnamese and half are from abroad, and the same goes for our teachers.</p>
+      <p>We opened in {{ site.founded }} for families who wanted their children to learn English without sitting still all day. That is still the idea. Half our families are Vietnamese and half are from abroad. So are our teachers.</p>
       <a class="btn btn--primary" href="{{ '/about/' | url }}">About us</a>
     </div>
     <div class="blob-wrap has-sticker">
@@ -61,12 +61,12 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div class="center narrow">
       <p class="eyebrow">How we teach English</p>
       <h2>Content through context</h2>
-      <p class="lede">Nobody learns a language from a worksheet. Our students learn English because they need it to measure the flour, explain the experiment and argue about the rules of the game.</p>
+      <p class="lede">Nobody learns a language from a worksheet. Children learn English because they need it to measure the flour, explain the experiment and argue about the rules.</p>
     </div>
     <div class="method">
-      <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, taught in English by qualified teachers. The language comes with the content.</p></div>
-      <div class="method__item">{{ ic.icon("whisk", "sun") }}<strong>Doing, not drilling</strong><p>Cooking, technology, crafts, art, movement, Maker Space, Art of Science, Everyday Experts. Every afternoon is hands-on.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "green") }}<strong>Small enough to talk</strong><p>Never more than {{ site.classCap }} in an academic class, so every child speaks, gets heard and gets corrected kindly.</p></div>
+      <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, with qualified teachers.</p></div>
+      <div class="method__item">{{ ic.icon("whisk", "sun") }}<strong>Doing, not drilling</strong><p>Every afternoon is hands-on: cooking, crafts, art, technology, sport.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "green") }}<strong>Small enough to talk</strong><p>{{ site.classCap }} or fewer per class, so every child gets to speak.</p></div>
     </div>
   </div>
 </section>
@@ -77,7 +77,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div class="center narrow">
       <p class="eyebrow eyebrow--coral">Academics</p>
       <h2>From 20 months to 18 years</h2>
-      <p class="lede">Pick your child's stage. Every one of them keeps the same shape: academic subjects in English, something physical, something made with your hands.</p>
+      <p class="lede">Pick your child's stage.</p>
     </div>
     <div class="tiles mt">
       {% for p in programs %}{% if p.key != 'global' %}
@@ -94,9 +94,9 @@ description: "Palm River Academy is an English language center in Hội An for c
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 <section class="band--blue band--bubbles">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Max class size</h3><p>Every academic class is capped at {{ site.classCap }} students, so every child gets care and attention.</p></div>
-    <div class="stat"><p class="stat__num" data-count="22">22+</p><h3>Qualified staff</h3><p>International and Vietnamese teachers with experience at every level, from Nursery to Upper Secondary.</p></div>
-    <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Alumni abroad</h3><p>PRA students have gone on to high schools and universities overseas.</p></div>
+    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Max class size</h3><p>In every academic class.</p></div>
+    <div class="stat"><p class="stat__num" data-count="22">22+</p><h3>Staff</h3><p>Vietnamese and international, Nursery to Upper Secondary.</p></div>
+    <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Alumni abroad</h3><p>At high schools and universities overseas.</p></div>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
@@ -110,7 +110,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div>
       <p class="eyebrow eyebrow--violet">Visiting Hội An?</p>
       <h2>The Global Program</h2>
-      <p>Whether you are a travelling family, living in Hội An for a season, or looking for a short-term program to keep your child learning, the Global Program gives you real classes with our regular students for three weeks to three months. Half days or full days, ages 2 to 14, with a progress report and a certificate at the end.</p>
+      <p>Here for a few weeks or a season? Your child joins a real class for three weeks to three months, half day or full day, ages 2 to 14.</p>
       <a class="btn btn--green" href="{{ '/learning/global-program/' | url }}">How it works</a>
     </div>
   </div>
@@ -121,7 +121,7 @@ description: "Palm River Academy is an English language center in Hội An for c
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow eyebrow--sun">Campus life</p>
-      <h2>Live, learn and grow at Palm River Academy</h2>
+      <h2>Lanterns, cupcakes and chess</h2>
     </div>
     <div class="gallery mt">
       {% photo "gallery-lantern-workshop", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
@@ -147,7 +147,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div>
       <p class="eyebrow">Find your way to PRA</p>
       <h2>One campus in Cẩm Thanh</h2>
-      <p>A few minutes from Hội An's old town. Early Years, Primary, Lower Secondary and Upper Secondary all learn on the same site.</p>
+      <p>A few minutes from Hội An's old town. Every age learns on the same site.</p>
       <p><strong>{{ site.campus.address }}</strong><br>{{ site.hours }}</p>
       <a class="btn btn--primary" href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
     </div>

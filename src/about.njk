@@ -9,7 +9,7 @@ description: "Palm River Academy is a licensed English language center in Hội 
 {% set heroPhoto = "community-at-campus-wall" %}
 {% set heroEyebrow = "About Us" %}
 {% set heroTitle = 'Our vision. Our staff. <span class="mark">Our story.</span>' %}
-{% set heroText = site.licenceLine + " We teach English through content, in small classes, to children from 20 months to 18 years." %}
+{% set heroText = "A licensed English language center in Hội An since " + site.founded + ". Small classes, 20 months to 18 years." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
@@ -17,8 +17,8 @@ description: "Palm River Academy is a licensed English language center in Hội 
     <div>
       <p class="eyebrow eyebrow--blue">Our story</p>
       <h2>Hội An's oldest international learning center</h2>
-      <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn English without sitting still all day. That is still the idea. We follow the Cambridge curriculum for English, Maths and Science because it is clear and recognised anywhere, and we wrap it in things you can touch: cooking, art, technology, sport, and projects the students choose.</p>
-      <p>We welcome students from 20 months to 18 years, Vietnamese and international families side by side. Academic classes never go above {{ site.classCap }} children. We prepare students for more than one path: universities abroad, or meaningful work at home.</p>
+      <p>We opened in {{ site.founded }} for families who wanted their children to learn English without sitting still all day. We teach the Cambridge curriculum because schools everywhere recognise it, and we wrap it in things you can touch: cooking, art, technology, sport.</p>
+      <p>Vietnamese and international families sit side by side. Classes stay at {{ site.classCap }} or fewer. Some students go on to universities abroad; others to work here at home.</p>
     </div>
     <div class="blob-wrap has-sticker">
       <span class="sticker sticker--tr">Since {{ site.founded }}</span>
@@ -32,13 +32,13 @@ description: "Palm River Academy is a licensed English language center in Hội 
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow">Our philosophy</p>
-      <h2>Students learn best when engaged</h2>
-      <p class="lede">We are an English language center, and we believe the fastest way to learn a language is to use it for something real. So we teach content through context: science, maths, cooking, art and sport, all in English, all hands-on.</p>
+      <h2>Use English for something real</h2>
+      <p class="lede">The fastest way to learn a language is to need it. So science, maths, cooking, art and sport all happen in English.</p>
     </div>
     <div class="method">
-      <div class="method__item">{{ ic.icon("sparkle", "sun") }}<strong>Play-based and project-based</strong><p>Exploration and problem-solving over outcomes alone. In Early Years that means play. Later it means experiments, building, presenting and a personal project.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "blue") }}<strong>English as the medium</strong><p>The language is never the lesson on its own. It is how you measure, explain, argue and present. Children pick it up because they need it.</p></div>
-      <div class="method__item">{{ ic.icon("star", "coral") }}<strong>Confidence and independence</strong><p>Adaptable learners who think critically and creatively, ready to contribute at home and as global citizens.</p></div>
+      <div class="method__item">{{ ic.icon("sparkle", "sun") }}<strong>Play first, projects later</strong><p>Play in Early Years. Experiments, building and presenting after that.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "blue") }}<strong>English is the tool</strong><p>It is how you measure, explain and argue. Children pick it up because they need it.</p></div>
+      <div class="method__item">{{ ic.icon("star", "coral") }}<strong>Doing it yourself</strong><p>Students plan, make and present their own work, and get braver each time.</p></div>
     </div>
   </div>
 </section>
@@ -51,12 +51,12 @@ description: "Palm River Academy is a licensed English language center in Hội 
       <h2>Six principles</h2>
     </div>
     <ol class="values values--3">
-      <li><div><strong>Intellectual Exploration</strong><p>Curiosity and deep thinking through hands-on experiences that make students ask questions and find answers.</p></div></li>
-      <li><div><strong>Creative Expression</strong><p>Students develop their own voice through arts, projects and inventive problem-solving.</p></div></li>
-      <li><div><strong>Sports and Fun</strong><p>Play and physical activity are essential for healthy development and strong relationships.</p></div></li>
-      <li><div><strong>Community Impact</strong><p>Students take part in the life of Hội An and give something back to it.</p></div></li>
-      <li><div><strong>Global Citizenship</strong><p>Understanding and respecting other cultures, starting with the one at the next desk.</p></div></li>
-      <li><div><strong>Leadership Development</strong><p>Confidence and the skills to guide others and take initiative, in school and beyond.</p></div></li>
+      <li><div><strong>Intellectual Exploration</strong><p>Asking questions, then finding the answers by hand.</p></div></li>
+      <li><div><strong>Creative Expression</strong><p>Art, projects and ideas that are their own.</p></div></li>
+      <li><div><strong>Sports and Fun</strong><p>Moving, playing, and enjoying it.</p></div></li>
+      <li><div><strong>Community Impact</strong><p>Taking part in Hội An and giving back.</p></div></li>
+      <li><div><strong>Global Citizenship</strong><p>Respect for other cultures, starting at the next desk.</p></div></li>
+      <li><div><strong>Leadership Development</strong><p>Taking the lead and helping others follow.</p></div></li>
     </ol>
   </div>
 </section>
@@ -92,7 +92,7 @@ description: "Palm River Academy is a licensed English language center in Hội 
     <div>
       <p class="eyebrow">Our campus</p>
       <h2>One site in Cẩm Thanh</h2>
-      <p>All our students, from Nursery to Upper Secondary, learn on one campus a few minutes from Hội An's old town: classrooms, a library, a kitchen, a maker space, a turf field, a sand playground and a treehouse.</p>
+      <p>Every age learns here, a few minutes from Hội An's old town. Classrooms, a library, a kitchen, a maker space, a turf field, a sand pit and a treehouse.</p>
       <p><strong>{{ site.campus.address }}</strong></p>
       <a class="btn btn--primary" href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
     </div>

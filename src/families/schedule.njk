@@ -8,7 +8,7 @@ description: "The weekly timetable for every class at Palm River Academy, from N
 {% set heroPhoto = "gallery-twister-game" %}
 {% set heroEyebrow = "Schedule and calendar · " + schedule.schoolYear %}
 {% set heroTitle = 'What a <span class="mark">week</span> looks like' %}
-{% set heroText = "Every class, every period, Monday to Friday. Mornings are Cambridge subjects in English. Afternoons are the hands-on classes. Pick a class below." %}
+{% set heroText = "Every class, every period, Monday to Friday. Cambridge subjects in the morning, hands-on classes after lunch." %}
 {% include "partials/pagehero.njk" %}
 
 <section data-tt>
@@ -46,7 +46,7 @@ description: "The weekly timetable for every class at Palm River Academy, from N
     {% endfor %}
 
     <span class="swipe-hint">Swipe sideways to see the whole week. The time column stays put.</span>
-    <p class="form__note" style="margin-top:20px">Boredom is a real class. Everyday Experts, Master Minds and Book Worms too. Ask us about them on your visit, they are more fun than they sound. Teachers' names are left off this page; you will meet them on the tour.</p>
+    <p class="form__note" style="margin-top:20px">Yes, Boredom is a real class. Teachers' names are left off; you will meet them on the tour.</p>
   </div>
 </section>
 
@@ -74,6 +74,6 @@ description: "The weekly timetable for every class at Palm River Academy, from N
 </section>
 
 {% set ctaTitle = "Come and watch a real Tuesday." %}
-{% set ctaText = "Tours run on school days. Pick a morning and see the timetable in action." %}
+{% set ctaText = "Pick a morning and see the timetable in action." %}
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}
