@@ -1,14 +1,15 @@
 ---
 layout: layouts/base.njk
+tone: green
 title: "Primary"
 description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Maths and Science every morning; cooking, technology, craft, art and movement in the afternoons."
 ---
 {% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "primary-students-boardwalk-trip" %}
-{% set heroTone = "green" %}
+{% set heroShape = "tall" %}
 {% set heroEyebrow = "Primary · Years 1 to 6 · ages 5 to 11" %}
-{% set heroTitle = "Cambridge in the morning, flour on your hands by three" %}
+{% set heroTitle = 'Cambridge in the morning, <span class="mark">flour</span> on your hands by three' %}
 {% set heroText = "Primary follows the Cambridge International curriculum for English, Maths and Science, taught in English in classes of " + site.classCap + " or fewer. Then the afternoon opens up." %}
 {% include "partials/pagehero.njk" %}
 

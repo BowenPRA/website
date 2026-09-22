@@ -6,19 +6,24 @@ description: "Palm River Academy is an English language center in Hội An for c
 {% import "macros/icons.njk" as ic %}
 
 <section class="hero">
-  <div class="hero__bg">{% photo "hero-cooking-class-hoi-an", "", "100vw", true %}</div>
+  <div class="hero__bg" style="--focus: 28% 30%">{% photo "hero-cooking-class-hoi-an", "", "100vw", true %}</div>
   <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-a.webp' | url }}" alt="" width="900" height="910">
   <img class="leaf leaf--bl" src="{{ '/assets/img/leaf-b.webp' | url }}" alt="" width="900" height="910">
   <div class="wrap hero__inner">
-    <p class="eyebrow eyebrow--white">English Language Center · Hội An</p>
-    <h1>English, learned by doing.</h1>
-    <p class="lede">We are an English language center for children from 20 months to 18 years. Our students learn English through science, maths, cooking, art and sport. Content through context. Less studying English, more doing things in English.</p>
-    <div class="hero__actions">
+    <p class="eyebrow eyebrow--on rise" style="--d:0">English Language Center · Hội An</p>
+    <h1 class="rise" style="--d:1">English, learned <span class="mark">by doing.</span></h1>
+    <p class="lede rise" style="--d:2">We are an English language center for children from 20 months to 18 years. Our students learn English through science, maths, cooking, art and sport. Content through context. Less studying English, more doing things in English.</p>
+    <div class="hero__actions rise" style="--d:3">
       <a class="btn btn--sun" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
     </div>
   </div>
-  {% set waveColor = "white" %}{% include "partials/wave.njk" %}
+  <ul class="hero__facts" aria-label="At a glance">
+    <li class="sticker sticker--sun">20 months to 18 years</li>
+    <li class="sticker sticker--coral">{{ site.classCap }} or fewer per class</li>
+    <li class="sticker sticker--green">Since {{ site.founded }}</li>
+  </ul>
+  {% include "partials/river.njk" %}
 </section>
 
 <section>
@@ -37,15 +42,19 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
-{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
-<div class="marquee band--blue" aria-hidden="true">
-  <svg class="marquee__leaf" viewBox="0 0 100 100"><path d="M50 95 C 20 70, 10 35, 50 5 C 90 35, 80 70, 50 95 Z" fill="var(--green-light)"/><path d="M50 12 L50 90" stroke="#fff" stroke-width="3" opacity=".6"/><circle class="eye" cx="42" cy="40" r="7"/><circle class="eye" cx="58" cy="40" r="7"/><circle class="pupil" cx="43" cy="41" r="3"/><circle class="pupil" cx="59" cy="41" r="3"/></svg>
-  <div class="marquee__track">
-    <span>Intellectual Exploration</span><span>Creative Expression</span><span>Sports and Fun</span><span>Community Impact</span><span>Global Citizenship</span><span>Leadership</span>
-    <span>Intellectual Exploration</span><span>Creative Expression</span><span>Sports and Fun</span><span>Community Impact</span><span>Global Citizenship</span><span>Leadership</span>
+<div class="ribbons" aria-hidden="true">
+  <svg class="mascot" viewBox="0 0 100 100"><path d="M50 95 C 20 70, 10 35, 50 5 C 90 35, 80 70, 50 95 Z" fill="var(--green-light)"/><path d="M50 12 L50 90" stroke="#fff" stroke-width="3" opacity=".6"/><g class="mascot__eyes"><circle class="eye" cx="42" cy="40" r="7"/><circle class="eye" cx="58" cy="40" r="7"/><circle class="pupil" cx="43" cy="41" r="3"/><circle class="pupil" cx="59" cy="41" r="3"/></g></svg>
+  <div class="ribbon ribbon--sun">
+    <div class="ribbon__track ribbon__track--rev">
+      {% for i in [1, 2] %}<span>Science</span><span>Maths</span><span>Cooking</span><span>Art</span><span>Sport</span><span>Technology</span><span>Public speaking</span><span>Maker Space</span>{% endfor %}
+    </div>
+  </div>
+  <div class="ribbon ribbon--blue">
+    <div class="ribbon__track">
+      {% for i in [1, 2] %}<span>Intellectual Exploration</span><span>Creative Expression</span><span>Sports and Fun</span><span>Community Impact</span><span>Global Citizenship</span><span>Leadership</span>{% endfor %}
+    </div>
   </div>
 </div>
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 
 <section class="band--pale">
   <div class="wrap">
@@ -73,7 +82,8 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div class="tiles mt">
       {% for p in programs %}{% if p.key != 'global' %}
       <a class="tile tile--{{ p.tone }}" href="{{ p.url | url }}">
-        {% photo p.photo, "", "(min-width: 720px) 25vw, 50vw" %}
+        {% photo p.photo, "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 46vw" %}
+        <span class="tile__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span class="tile__label"><strong>{{ p.name }}</strong><small>{{ p.ages }}</small></span>
       </a>
       {% endif %}{% endfor %}
@@ -82,11 +92,11 @@ description: "Palm River Academy is an English language center in Hội An for c
 </section>
 
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
-<section class="band--blue">
+<section class="band--blue band--bubbles">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num">&lt;{{ site.classCap }}</p><h3>Per class</h3><p>Every academic class is capped at {{ site.classCap }} students, so every child gets care and attention.</p></div>
-    <div class="stat"><p class="stat__num">22+</p><h3>Qualified staff</h3><p>International and Vietnamese teachers with experience at every level, from Nursery to Upper Secondary.</p></div>
-    <div class="stat"><p class="stat__num">10+</p><h3>Alumni abroad</h3><p>PRA students have gone on to high schools and universities overseas.</p></div>
+    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Max class size</h3><p>Every academic class is capped at {{ site.classCap }} students, so every child gets care and attention.</p></div>
+    <div class="stat"><p class="stat__num" data-count="22">22+</p><h3>Qualified staff</h3><p>International and Vietnamese teachers with experience at every level, from Nursery to Upper Secondary.</p></div>
+    <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Alumni abroad</h3><p>PRA students have gone on to high schools and universities overseas.</p></div>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
@@ -106,23 +116,24 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
+{% set waveColor = "sun" %}{% include "partials/wave.njk" %}
+<section class="band--sun">
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow eyebrow--sun">Campus life</p>
       <h2>Live, learn and grow at Palm River Academy</h2>
     </div>
     <div class="gallery mt">
-      {% photo "gallery-lantern-workshop", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-magnetic-tiles", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-cupcake-decorating", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-chess-library", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-twister-game", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-mural-printing", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-water-play", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "gallery-reading-corner", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-lantern-workshop", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-magnetic-tiles", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-cupcake-decorating", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-chess-library", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-twister-game", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-mural-printing", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-water-play", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+      {% photo "gallery-reading-corner", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
     </div>
+    <p class="gallery__hint" hidden>Tap a photo to see it bigger.</p>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}

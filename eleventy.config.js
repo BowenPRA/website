@@ -13,7 +13,8 @@ export default function (eleventyConfig) {
   const pathPrefix = process.env.PATH_PREFIX || "/";
   let photos = {};
   try { photos = JSON.parse(readFileSync("src/_data/photos.json", "utf8")); } catch {}
-  eleventyConfig.addShortcode("photo", (slug, classes = "", sizes = "(min-width: 900px) 50vw, 100vw", eager = false) => {
+  // The default sizes fit a .two column: half the 1180px wrap on desktop, capped at 560px when stacked.
+  eleventyConfig.addShortcode("photo", (slug, classes = "", sizes = "(min-width: 1240px) 560px, (min-width: 900px) 46vw, (min-width: 620px) 560px, 92vw", eager = false) => {
     const p = photos[slug];
     if (!p) return `<div class="photo ${classes}" data-caption="photo: ${slug}"></div>`;
     const base = `${pathPrefix}assets/img/photos/${slug}`.replace(/\/{2,}/g, "/");

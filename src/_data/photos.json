@@ -23,38 +23,42 @@
   },
   "primary-students-clay-modelling": {
     "alt": "Young students shape clay at a long table in a bright classroom",
-    "width": 960,
-    "height": 720,
+    "width": 1429,
+    "height": 1072,
     "sizes": [
       480,
-      960
+      960,
+      1429
     ],
     "src": "wix-draft/124001_1866d88566bc47e5ac98c4fc73f35b3e~mv2.jpg"
   },
   "early-years-girls-tyre-wall": {
     "alt": "Two Early Years girls play on the turf in front of the tyre climbing wall",
-    "width": 480,
-    "height": 640,
+    "width": 810,
+    "height": 1080,
     "sizes": [
-      480
+      480,
+      810
     ],
     "src": "wix-draft/974c20_e38bbd5280e640b282909ca65d676a1c.jpg"
   },
   "primary-students-boardwalk-trip": {
     "alt": "Primary students in tie-dye shirts and sun hats on a bamboo boardwalk during a field trip",
-    "width": 480,
-    "height": 640,
+    "width": 810,
+    "height": 1080,
     "sizes": [
-      480
+      480,
+      810
     ],
     "src": "wix-draft/Untitled-design.jpg"
   },
   "secondary-students-classroom": {
     "alt": "Secondary students working together around a table in their classroom",
-    "width": 480,
-    "height": 640,
+    "width": 758,
+    "height": 1011,
     "sizes": [
-      480
+      480,
+      758
     ],
     "src": "wix-draft/124001_342e854d839b46dc9ba3d300bba13d98~mv2.jpg"
   },
@@ -137,41 +141,45 @@
   },
   "gallery-mural-printing": {
     "alt": "Older students print a mural of colourful circles on a long sheet of fabric",
-    "width": 960,
-    "height": 960,
+    "width": 1086,
+    "height": 1086,
     "sizes": [
       480,
-      960
+      960,
+      1086
     ],
     "src": "wix-current/6c6955_73fc8c0cd80d45a7be1e697903357455~mv2.png"
   },
   "gallery-twister-game": {
     "alt": "A teacher plays Twister with three young children on the classroom floor",
-    "width": 960,
-    "height": 960,
+    "width": 1086,
+    "height": 1086,
     "sizes": [
       480,
-      960
+      960,
+      1086
     ],
     "src": "wix-current/6c6955_43445f57efa34930889f2cb3efcac974~mv2.png"
   },
   "gallery-cupcake-decorating": {
     "alt": "Students decorate cupcakes with bright icing at an outdoor table",
-    "width": 960,
-    "height": 960,
+    "width": 1086,
+    "height": 1086,
     "sizes": [
       480,
-      960
+      960,
+      1086
     ],
     "src": "wix-current/6c6955_ace840c3cf3b42bdb81c51570e56af8a~mv2.png"
   },
   "gallery-water-play": {
     "alt": "Children play in a paddling pool in the courtyard on a sunny day",
-    "width": 960,
-    "height": 960,
+    "width": 1086,
+    "height": 1086,
     "sizes": [
       480,
-      960
+      960,
+      1086
     ],
     "src": "wix-current/6c6955_c01febe2d2b04d5eb686bd32cf9539e6~mv2.png"
   },
@@ -199,30 +207,33 @@
   },
   "campus-playground-collage": {
     "alt": "The campus playground with its climbing frame, turf and treehouse",
-    "width": 480,
-    "height": 360,
+    "width": 624,
+    "height": 468,
     "sizes": [
-      480
+      480,
+      624
     ],
     "src": "wix-current/6c6955_7a8af45e7bdf41f68a086f95cefa1f55~mv2.png"
   },
   "early-years-paddling-pool": {
     "alt": "Young children laugh and splash together in an inflatable pool",
-    "width": 960,
-    "height": 720,
+    "width": 1080,
+    "height": 810,
     "sizes": [
       480,
-      960
+      960,
+      1080
     ],
     "src": "wix-draft/early-year-PRA.jpg"
   },
   "early-years-rainbow-parachute": {
     "alt": "Early Years children lift a rainbow parachute together on the turf",
-    "width": 960,
-    "height": 720,
+    "width": 1086,
+    "height": 815,
     "sizes": [
       480,
-      960
+      960,
+      1086
     ],
     "src": "wix-current/6c6955_8ffca8e185084c329d3dd8e0b5f4f0af~mv2.png"
   },
@@ -250,113 +261,125 @@
   },
   "upper-years-science-with-teacher": {
     "alt": "A teacher and three teenage students do a hands-on science activity at a wooden table",
-    "width": 480,
-    "height": 360,
+    "width": 855,
+    "height": 641,
     "sizes": [
-      480
+      480,
+      855
     ],
     "src": "wix-current/124001_00dff74c53654316a7e45bd8740d5538~mv2.jpg"
   },
   "team-seth": {
     "alt": "Mr. Seth",
-    "width": 480,
-    "height": 480,
+    "width": 600,
+    "height": 600,
     "sizes": [
-      480
+      480,
+      600
     ],
     "src": "wix-current/Mr_-Seth.png"
   },
   "team-bowen": {
     "alt": "Mr. Bowen",
-    "width": 480,
-    "height": 480,
+    "width": 600,
+    "height": 600,
     "sizes": [
-      480
+      480,
+      600
     ],
     "src": "wix-current/Mr_-Bowen.png"
   },
   "team-caleb": {
     "alt": "Mr. Caleb",
-    "width": 480,
-    "height": 480,
+    "width": 600,
+    "height": 600,
     "sizes": [
-      480
+      480,
+      600
     ],
     "src": "wix-current/Mr_-Caleb.png"
   },
   "team-david": {
     "alt": "Mr. David",
-    "width": 960,
-    "height": 960,
+    "width": 1522,
+    "height": 1522,
     "sizes": [
       480,
-      960
+      960,
+      1522
     ],
     "src": "wix-current/David_edited_edited_edited.png"
   },
   "team-kiu": {
     "alt": "Ms. Kiu",
-    "width": 960,
-    "height": 960,
+    "width": 1086,
+    "height": 1086,
     "sizes": [
       480,
-      960
+      960,
+      1086
     ],
     "src": "wix-current/Kiu.png"
   },
   "team-solo": {
     "alt": "Ms. Solo",
-    "width": 960,
-    "height": 960,
+    "width": 1226,
+    "height": 1226,
     "sizes": [
       480,
-      960
+      960,
+      1226
     ],
     "src": "wix-current/Solo-2.png"
   },
   "team-thanh": {
     "alt": "Ms. Thanh",
-    "width": 480,
-    "height": 480,
+    "width": 753,
+    "height": 753,
     "sizes": [
-      480
+      480,
+      753
     ],
     "src": "wix-current/Thanh.png"
   },
   "team-tham": {
     "alt": "Ms. Tham",
-    "width": 480,
-    "height": 480,
+    "width": 600,
+    "height": 600,
     "sizes": [
-      480
+      480,
+      600
     ],
     "src": "wix-current/Ms_-Tham.png"
   },
   "team-thoa": {
     "alt": "Ms. Thoa",
-    "width": 480,
-    "height": 480,
+    "width": 600,
+    "height": 600,
     "sizes": [
-      480
+      480,
+      600
     ],
     "src": "wix-current/Ms_-Thoa.png"
   },
   "team-tham-v": {
     "alt": "Ms. Thắm V",
-    "width": 480,
-    "height": 480,
+    "width": 600,
+    "height": 600,
     "sizes": [
-      480
+      480,
+      600
     ],
     "src": "wix-current/Ms_-Tham-V.png"
   },
   "community-at-campus-wall": {
     "alt": "Students and staff gathered in front of the painted I love Palm River Academy wall at the campus gate",
-    "width": 960,
-    "height": 720,
+    "width": 1189,
+    "height": 892,
     "sizes": [
       480,
-      960
+      960,
+      1189
     ],
     "src": "wix-draft/124001_9ce831bd8b7e49cc879a7c2e3e3f6784~mv2.jpg"
   }

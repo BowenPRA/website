@@ -39,23 +39,14 @@ const out = {};
 for (const p of picks) {
   if (!p.slug || !p.src || !p.alt) { console.warn("skipping pick without slug/src/alt:", p); continue; }
   const srcPath = join(ORIGINALS, p.src);
-  const first = join(OUT, `${p.slug}-${WIDTHS[0]}.webp`);
-  let done = false;
-  if (!force && existing[p.slug]) { try { await stat(first); done = true; } catch {} }
-  if (done) { out[p.slug] = { ...existing[p.slug], alt: p.alt }; continue; }
 
   // optional "region": [left, top, width, height] as fractions of the source, applied first
   let base = sharp(srcPath, { failOn: "none" }).rotate();
   let meta = await base.metadata();
   let srcW = meta.width, srcH = meta.height;
-  let regionBuf = null;
-  if (p.region) {
-    const [l, t, w, h] = p.region;
-    regionBuf = await base.extract({ left: Math.round(l * srcW), top: Math.round(t * srcH), width: Math.round(w * srcW), height: Math.round(h * srcH) }).toBuffer();
-    meta = await sharp(regionBuf).metadata();
-    srcW = meta.width; srcH = meta.height;
-  }
-  const source = () => (regionBuf ? sharp(regionBuf) : sharp(srcPath, { failOn: "none" }).rotate());
+  if ((meta.orientation || 1) >= 5) [srcW, srcH] = [srcH, srcW];
+  const region = p.region && p.region.map((f, i) => Math.round(f * (i % 2 ? srcH : srcW)));
+  if (region) { srcW = region[2]; srcH = region[3]; }
   const ratio = p.aspect ? ratios[p.aspect] : srcW / srcH;
   if (!ratio) throw new Error(`unknown aspect ${p.aspect} for ${p.slug}`);
 
@@ -63,18 +54,34 @@ for (const p of picks) {
   let cropW = srcW, cropH = Math.round(srcW / ratio);
   if (cropH > srcH) { cropH = srcH; cropW = Math.round(srcH * ratio); }
 
-  const sizes = [];
+  // Every step up to the crop width. When the source falls between steps, the last file is the
+  // full crop width (480 + 810, say), so a small original is never upscaled or thrown away.
+  const widths = [];
   for (const w of WIDTHS) {
-    if (w > cropW && sizes.length) break; // do not upscale beyond the largest that fits
     const width = Math.min(w, cropW);
-    const height = Math.round(width / ratio);
-    await source()
-      .resize({ width, height, fit: "cover", position: p.position || "attention" })
-      .webp({ quality: QUALITY })
-      .toFile(join(OUT, `${p.slug}-${w}.webp`));
-    sizes.push(w);
+    if (widths.length && width - widths[widths.length - 1] < 120) break;
+    widths.push(width);
+    if (width < w) break;
   }
-  const width = Math.min(WIDTHS[sizes.length - 1], cropW);
+
+  const prev = existing[p.slug];
+  if (!force && prev && prev.sizes.join() === widths.join()) {
+    try { await stat(join(OUT, `${p.slug}-${widths[0]}.webp`)); out[p.slug] = { ...prev, alt: p.alt }; continue; } catch {}
+  }
+
+  const regionBuf = region
+    ? await base.extract({ left: region[0], top: region[1], width: region[2], height: region[3] }).toBuffer()
+    : null;
+  const source = () => (regionBuf ? sharp(regionBuf) : sharp(srcPath, { failOn: "none" }).rotate());
+
+  for (const width of widths) {
+    await source()
+      .resize({ width, height: Math.round(width / ratio), fit: "cover", position: p.position || "attention" })
+      .webp({ quality: QUALITY })
+      .toFile(join(OUT, `${p.slug}-${width}.webp`));
+  }
+  const sizes = widths;
+  const width = widths[widths.length - 1];
   out[p.slug] = { alt: p.alt, width, height: Math.round(width / ratio), sizes, src: p.src };
   console.log(`built ${p.slug} (${sizes.join("/")}) from ${p.src}`);
 }

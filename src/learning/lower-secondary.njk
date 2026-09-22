@@ -1,14 +1,15 @@
 ---
 layout: layouts/base.njk
+tone: blue
 title: "Lower Secondary"
 description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space."
 ---
 {% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "secondary-students-classroom" %}
-{% set heroTone = "blue" %}
+{% set heroShape = "tall" %}
 {% set heroEyebrow = "Lower Secondary · Years 7 to 9 · ages 11 to 14" %}
-{% set heroTitle = "More independence, bigger projects" %}
+{% set heroTitle = 'More independence, bigger <span class="mark">projects</span>' %}
 {% set heroText = "Lower Secondary follows Cambridge Lower Secondary in English, Maths and Science, each taught by a subject specialist. Classes stay at " + site.classCap + " or fewer, and students carry more of the planning themselves." %}
 {% include "partials/pagehero.njk" %}
 

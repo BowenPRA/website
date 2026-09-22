@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
+tone: sun
 title: "Early Years"
 description: "Nursery and Kindergarten at Palm River Academy for children from 20 months to 4 years. Play-based, in English, following the British EYFS framework."
 ---
 
 {% set heroPhoto = "early-years-paddling-pool" %}
-{% set heroTone = "sun" %}
 {% set heroEyebrow = "Early Years · 20 months to 4 years" %}
-{% set heroTitle = "Play is the work" %}
+{% set heroTitle = 'Play is <span class="mark">the work</span>' %}
 {% set heroText = "Nursery and Kindergarten spend the day in English, much of it outside, most of it playing. We follow the British Early Years Foundation Stage framework, which is a careful way of saying we watch what each child is ready for and set it up." %}
 {% include "partials/pagehero.njk" %}
 
@@ -37,6 +37,7 @@ description: "Nursery and Kindergarten at Palm River Academy for children from 2
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section class="faq">
   <div class="wrap narrow">

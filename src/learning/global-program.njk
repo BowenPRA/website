@@ -1,13 +1,14 @@
 ---
 layout: layouts/base.njk
+tone: violet
 title: "Global Program"
 description: "The Global Program at Palm River Academy is a 3 week to 3 month program for travelling families in Hội An. Half-day and full-day options, ages 2 to 14, with a progress report and certificate."
 ---
 
 {% set heroPhoto = "global-program-rice-paddy-hoi-an" %}
-{% set heroTone = "violet" %}
+{% set heroShape = "tall" %}
 {% set heroEyebrow = "Global Program · 3 weeks to 3 months" %}
-{% set heroTitle = "For families passing through Hội An" %}
+{% set heroTitle = 'For families passing through <span class="mark">Hội An</span>' %}
 {% set heroText = "Not everyone follows a school calendar. If you are travelling, here for a season, or between schools, your child can join us for three weeks to three months. They join a real class with our regular students, not a separate holiday group." %}
 {% include "partials/pagehero.njk" %}
 
@@ -41,6 +42,7 @@ description: "The Global Program at Palm River Academy is a 3 week to 3 month pr
     {% photo "global-program-nature-walk", "photo--lg" %}
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section class="faq">
   <div class="wrap narrow">

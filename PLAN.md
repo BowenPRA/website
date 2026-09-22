@@ -119,14 +119,20 @@ the Wix draft.
 children's book: white and pale blue, bright blue and green, palm leaves, rounded
 photo tiles, a hand-drawn underline here and there, big photos of real students.
 
-**Colours** (from the Wix draft)
+**Colours** (from the Wix draft, extended 2026-09-22 in the colour and motion pass)
 - Bright blue `#116DFF` (headings, buttons), deep blue `#0B4FBF`, navy `#0E2A5C` (footer)
 - Green `#48971D` (contact button, accents), light green `#9CC64A`
-- Pale blue `#EDF6F8` for alternating bands, white page background
-- Mango `#F6A64B` only for focus rings
+- Stage colours: sun `#FFC857` (Early Years), green (Primary), blue (Lower Secondary),
+  coral `#FF6F59` (Upper Secondary), violet `#7C5CFF` (Global Program). The same
+  colour follows a stage everywhere: tiles, menu dots, age chips, program cards.
+- **Page tones.** Each page sets `tone:` in front matter (blue, green, sun, coral,
+  violet). The tone colours that page's hero band, its pale bands, FAQ, tables and
+  form edge, so each page has its own colour and all pages share the same parts.
+  Hero band shades are picked for 4.5:1 contrast with their text (white, or ink on sun).
+- White page background; a five-colour tape at the top of the footer and in the menu.
 
 **Type**
-- Poppins throughout (600/700 for headings, 400/500 for body), as on the Wix draft
+- Poppins throughout (700/800 for headings and big numbers, 400/500 for body), as on the Wix draft
 - Big, generous line height. Body 18px on mobile, 19px on desktop.
 
 **Whimsy that earns its place**
@@ -139,8 +145,15 @@ photo tiles, a hand-drawn underline here and there, big photos of real students.
   SVG, positioned so they never cover text on narrow screens.
 - **Hand-drawn underline** under one key phrase per page (an SVG stroke).
 - **Blob photo masks** on team and stage photos, rotated a few degrees.
-- **Tiny motion:** a slow palm sway on the logo mark and a hover wobble on
-  the main button. All off under `prefers-reduced-motion`.
+- **Motion that feels alive, never in the way** (all of it stops under
+  `prefers-reduced-motion`): hero text rises in and the underline draws itself;
+  a slow zoom on the home photo; the river edge under every hero drifts; two
+  crossed ribbons carry the values and subjects; sections fade up as they scroll
+  in; stat numbers count up; cards lift and their colour bar grows on hover;
+  stickers bob; the leaf mascot blinks; the header slides away when scrolling
+  down and back when scrolling up; pages cross-fade in browsers that support it.
+- **Gallery** is polaroids with tape; tap one to open a lightbox. On phones it is
+  a swipe strip.
 - **Microcopy with a wink** in the 404 page, the form success message, and
   the FAQ headings. Never in the fee table.
 

@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+tone: green
 title: "About Us"
 description: "Palm River Academy is a licensed English language center in Hội An, open since 2017. Our vision, our staff and our story."
 ---
@@ -7,7 +8,7 @@ description: "Palm River Academy is a licensed English language center in Hội 
 
 {% set heroPhoto = "community-at-campus-wall" %}
 {% set heroEyebrow = "About Us" %}
-{% set heroTitle = "Our vision. Our staff. Our story." %}
+{% set heroTitle = 'Our vision. Our staff. <span class="mark">Our story.</span>' %}
 {% set heroText = site.licenceLine + " We teach English through content, in small classes, to children from 20 months to 18 years." %}
 {% include "partials/pagehero.njk" %}
 

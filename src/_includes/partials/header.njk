@@ -1,3 +1,6 @@
+{% set u = page.url or "/" %}
+{% set inAcademics = u.startsWith("/learning/") %}
+{% set inAdmissions = u.startsWith("/admissions/") or u.startsWith("/families/") or u.startsWith("/contact/") %}
 <header class="site-header">
   <div class="wrap site-header__bar">
     <a class="brand" href="{{ '/' | url }}" aria-label="{{ site.name }} home">
@@ -6,19 +9,19 @@
 
     <nav class="nav-desktop" aria-label="Main">
       <ul>
-        <li><a href="{{ '/about/' | url }}">About Us</a></li>
+        <li><a href="{{ '/about/' | url }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>About Us</a></li>
         <li class="has-menu">
-          <a href="{{ '/learning/' | url }}">Academics</a>
+          <a href="{{ '/learning/' | url }}"{% if inAcademics %} aria-current="{{ 'page' if u == '/learning/' else 'true' }}"{% endif %}>Academics <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="menu">
-            <li><a href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten, 20 months to 4</small></a></li>
-            <li><a href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a></li>
-            <li><a href="{{ '/learning/lower-secondary/' | url }}">Lower Secondary <small>Years 7 to 9</small></a></li>
-            <li><a href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary <small>Ages 14 to 18</small></a></li>
-            <li><a href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a></li>
+            <li><a class="dot dot--sun" href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten, 20 months to 4</small></a></li>
+            <li><a class="dot dot--green" href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a></li>
+            <li><a class="dot dot--blue" href="{{ '/learning/lower-secondary/' | url }}">Lower Secondary <small>Years 7 to 9</small></a></li>
+            <li><a class="dot dot--coral" href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary <small>Ages 14 to 18</small></a></li>
+            <li><a class="dot dot--violet" href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a></li>
           </ul>
         </li>
         <li class="has-menu">
-          <a href="{{ '/admissions/' | url }}">Admissions</a>
+          <a href="{{ '/admissions/' | url }}"{% if inAdmissions %} aria-current="{{ 'page' if u == '/admissions/' else 'true' }}"{% endif %}>Admissions <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="menu">
             <li><a href="{{ '/admissions/' | url }}">Enrollment</a></li>
             <li><a href="{{ '/admissions/tuition-and-fees/' | url }}">Tuition and fees</a></li>
@@ -40,19 +43,19 @@
 
 <nav class="sheet" id="sheet" aria-label="Main, mobile" hidden>
   <div class="sheet__group">
-    <a class="sheet__top" href="{{ '/' | url }}">Home</a>
-    <a class="sheet__top" href="{{ '/about/' | url }}">About Us</a>
+    <a class="sheet__top" href="{{ '/' | url }}"{% if u == '/' %} aria-current="page"{% endif %}>Home</a>
+    <a class="sheet__top" href="{{ '/about/' | url }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>About Us</a>
   </div>
   <div class="sheet__group">
-    <span class="sheet__label">Academics</span>
-    <a href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten</small></a>
-    <a href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a>
-    <a href="{{ '/learning/lower-secondary/' | url }}">Lower Secondary <small>Years 7 to 9</small></a>
-    <a href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary <small>Ages 14 to 18</small></a>
-    <a href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a>
+    <a class="sheet__label" href="{{ '/learning/' | url }}">Academics</a>
+    <a class="dot dot--sun" href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten</small></a>
+    <a class="dot dot--green" href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a>
+    <a class="dot dot--blue" href="{{ '/learning/lower-secondary/' | url }}">Lower Secondary <small>Years 7 to 9</small></a>
+    <a class="dot dot--coral" href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary <small>Ages 14 to 18</small></a>
+    <a class="dot dot--violet" href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a>
   </div>
   <div class="sheet__group">
-    <span class="sheet__label">Admissions</span>
+    <a class="sheet__label" href="{{ '/admissions/' | url }}">Admissions</a>
     <a href="{{ '/admissions/' | url }}">Enrollment</a>
     <a href="{{ '/admissions/tuition-and-fees/' | url }}">Tuition and fees</a>
     <a href="{{ '/families/schedule/' | url }}">Schedule and calendar</a>
@@ -62,4 +65,5 @@
     <a class="btn btn--green" href="{{ '/contact/' | url }}">Contact Us</a>
     <a class="sheet__phone" href="tel:{{ site.phoneIntl }}">Call {{ site.phone }}</a>
   </div>
+  <div class="tape" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 </nav>
