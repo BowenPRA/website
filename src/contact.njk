@@ -37,8 +37,12 @@ description: "Book a tour of Palm River Academy in Hội An, or ask a question. 
       </div>
       <div><label for="msg">Anything we should know</label><textarea id="msg" name="message" placeholder="Dates you are in Hội An, your child's English, what they love doing..."></textarea></div>
       <input type="hidden" name="_subject" value="Website inquiry">
+      {% if "REPLACE_ME" in site.formAction %}
+      <button class="btn btn--green" type="submit" disabled>Send</button>
+      <p class="form__note">We are still connecting this form. Until then, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or message us on <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
+      {% else %}
       <button class="btn btn--green" type="submit">Send</button>
-      <p class="form__note todo">TODO: replace the Formspree action in src/_data/site.json, or swap this form for a Google Form embed. Until then, please use the phone or email on the right.</p>
+      {% endif %}
     </form>
     <div>
       <div class="card" style="margin-bottom:18px">

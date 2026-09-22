@@ -200,17 +200,26 @@ photo tiles, a hand-drawn underline here and there, big photos of real students.
 
 ## 8. Content Bowen needs to supply
 
-- Fee tables (Regular and Global) and the answers to the five fee FAQs
-  (other fees, development fee, payment schedule, transport, refund).
-- Answers to the five enrollment FAQs.
-- Real team list with two-sentence bios and photos (the draft had five names,
-  three with placeholder text).
-- Daily schedule per group (seven groups).
-- 2026-27 calendar (the draft has 2025-26).
-- Family handbook PDF.
-- 15 to 25 good photos: kids working, outside time, cooking class, both
-  campuses, a classroom, the river. Landscape and portrait mix.
-- Where the inquiry form should deliver (Formspree account or Google Form).
+Filled in on 2026-09-22 from the 2026-27 Tuition and Fees sheet, the 2026-27
+academic calendar (10 Aug version), the 2025-26 Family Handbook, the Global
+Program brochure (Sep 2025), the admissions SOP and the admin app. Decisions from
+Bowen: Upper Secondary fees are "ask us"; the Global brochure table stands for
+2026-27; there is no development fee any more; the contact form stays (Formspree).
+
+Done: fee tables and fee FAQs, enrollment FAQs, program FAQs, team, daily
+schedules, 2026-27 calendar, handbook short version.
+
+Still open:
+- Formspree form ID for the contact form (sign up with admin@, create a form,
+  put the ID in `src/_data/site.json` `formAction`). Until then Send is disabled
+  and the form points people to email and WhatsApp.
+- A 2026-27 family handbook. The site offers a copy by email rather than a PDF,
+  because only the 2025-26 edition exists.
+- Quarter 4 start: the fee sheet says 29 March, the calendar says 25 March. The
+  site gives neither, only the 22 March payment date.
+- Trial day price: the 2026-27 fee sheet says 1,600,000 and the SOP says 1,500,000.
+  The site uses 1,600,000.
+- Parent and teacher meeting dates for 2026-27 (not on the calendar).
 - Whether to keep a promotion slot on the home page.
 
 ## 9. Build phases
@@ -237,9 +246,10 @@ photo tiles, a hand-drawn underline here and there, big photos of real students.
   for the Regular Program page. Bowen to confirm.
 - One campus: Trần Nhân Tông, Cẩm Thanh, Hội An. The ĐX18 secondary campus is
   no longer used.
-- Staff on the site are the ten people on the current site plus Ms. Duyen and
-  Mr. Chiến from the timetable. Mr. Landon, Ms. Thuy and Ms. Ali from the Wix draft
-  are not listed until Bowen confirms.
+- Staff on the site are the ten people on the current site plus Ms. Duyen from the
+  timetable (Mr. Chiến removed at Bowen's request, 2026-09-22). Each person gets a
+  role and one short line, no bio paragraph. Mr. Landon, Ms. Thuy and Ms. Ali from
+  the Wix draft are not listed until Bowen confirms.
 - The schedule page is generated from the admin app's timetable
   (`scripts/schedule-from-admin.mjs`), with teacher names removed.
 - Photos: prefer the ones Bowen chose for the Wix draft plus polished activity shots

@@ -2,46 +2,111 @@
 layout: layouts/base.njk
 tone: sun
 title: "Tuition and fees"
-description: "Tuition and fees for the Regular Program and Global Program at Palm River Academy, plus payment schedule, transport, and refund policy."
+description: "Tuition and fees for 2026-2027 at Palm River Academy in Hội An: Regular Program tuition, Global Program weekly prices, meals, transport, discounts and refunds."
 ---
 
 {% set heroPhoto = "gallery-cupcake-decorating" %}
-{% set heroEyebrow = "Admissions" %}
+{% set heroEyebrow = "Admissions · 2026-2027" %}
 {% set heroTitle = 'Tuition and <span class="mark">fees</span>' %}
-{% set heroText = "We believe education is one of the most meaningful investments you can make. Tuition supports small classes, exceptional teachers and everything on this site." %}
+{% set heroText = "Every fee for the 2026-2027 year on one page, in Vietnamese đồng. If something costs extra, it is listed here." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
   <div class="wrap">
-    <h2>Regular Program</h2>
-    <p class="form__note">Full academic year, August to June. <span class="todo">TODO: replace the placeholder rows with the real 2026-27 fee table.</span></p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Program</th><th>Annual tuition</th><th>Per payment (3 instalments)</th></tr></thead>
+    <p class="eyebrow eyebrow--sun">Regular Program</p>
+    <h2>A full year, August to June</h2>
+    <p class="lede">Pay for the whole year before it starts, or pay one quarter at a time. Paying in full by the Early Bird date saves the cost of Quarter 4.</p>
+    <div class="table-wrap mt">
+      <table class="fees-table">
+        <thead>
+          <tr><th rowspan="2">Program</th><th colspan="2" class="group">Pay the full year</th><th colspan="2" class="group">Pay by quarter</th></tr>
+          <tr><th class="num">Early Bird<small>by 20 May</small></th><th class="num">Standard<small>by 30 June</small></th><th class="num">Quarters 1 to 3<small>each</small></th><th class="num">Quarter 4</th></tr>
+        </thead>
         <tbody>
-          <tr><td>Nursery</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Kindergarten</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Primary (Years 1 to 6)</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Secondary (Years 7 to 9)</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Upper Secondary</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Nursery</td><td class="num" data-label="Early Bird, by 20 May">100,500,000</td><td class="num" data-label="Standard, by 30 June">109,000,000</td><td class="num" data-label="Quarters 1 to 3, each">33,500,000</td><td class="num" data-label="Quarter 4">16,750,000</td></tr>
+          <tr><td>Kindergarten</td><td class="num" data-label="Early Bird, by 20 May">132,000,000</td><td class="num" data-label="Standard, by 30 June">142,000,000</td><td class="num" data-label="Quarters 1 to 3, each">44,000,000</td><td class="num" data-label="Quarter 4">22,000,000</td></tr>
+          <tr><td>Primary<small>Years 1 to 6</small></td><td class="num" data-label="Early Bird, by 20 May">168,000,000</td><td class="num" data-label="Standard, by 30 June">182,000,000</td><td class="num" data-label="Quarters 1 to 3, each">56,000,000</td><td class="num" data-label="Quarter 4">28,000,000</td></tr>
+          <tr><td>Lower Secondary<small>Years 7 to 9</small></td><td class="num" data-label="Early Bird, by 20 May">183,000,000</td><td class="num" data-label="Standard, by 30 June">197,000,000</td><td class="num" data-label="Quarters 1 to 3, each">61,000,000</td><td class="num" data-label="Quarter 4">30,500,000</td></tr>
+          <tr><td>Upper Secondary<small>Ages 14 to 18</small></td><td colspan="4">Depends on your student's pathway. <a href="{{ '/contact/' | url }}">Ask us</a> and we will send the figures.</td></tr>
         </tbody>
       </table>
     </div>
-
     <span class="swipe-hint">Swipe sideways to see the whole table.</span>
-    <h2 style="margin-top:48px">Global Program</h2>
-    <p class="form__note">Per week. Longer stays cost less per week. <span class="todo">TODO: real table.</span></p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Pathway</th><th>3 to 5 weeks</th><th>6 to 9 weeks</th><th>10 weeks or more</th></tr></thead>
+    <p class="table-note">All amounts in VND. Quarterly payments are due by 28 July, 8 October, 17 December and 22 March. Joining partway through the year? Tuition starts from your child's first day.</p>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--violet">Global Program</p>
+    <h2>Priced by the week</h2>
+    <p class="lede">For stays of three weeks to three months. The longer your child stays, the less each week costs. The weekly price is the same however many days your child comes that week.</p>
+    <div class="table-wrap mt">
+      <table class="fees-table">
+        <thead>
+          <tr><th rowspan="2">Pathway</th><th colspan="3" class="group">Price per week, by length of stay</th></tr>
+          <tr><th class="num">3 to 5 weeks</th><th class="num">6 to 9 weeks</th><th class="num">10 to 12 weeks</th></tr>
+        </thead>
         <tbody>
-          <tr><td>Early Years</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Vocational half day</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Academic half day</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
-          <tr><td>Full day</td><td>TODO</td><td>TODO</td><td>from 4,200,000 VND</td></tr>
+          <tr class="fees-table__group"><td colspan="4">Early Years<small>Nursery and Kindergarten, ages 2 to 5</small></td></tr>
+          <tr><td>Full day</td><td class="num" data-label="3 to 5 weeks">5,000,000</td><td class="num" data-label="6 to 9 weeks">4,500,000</td><td class="num" data-label="10 to 12 weeks">4,200,000</td></tr>
+          <tr class="fees-table__group"><td colspan="4">Primary<small>Years 1 to 6</small></td></tr>
+          <tr><td>Vocational, half day</td><td class="num" data-label="3 to 5 weeks">5,000,000</td><td class="num" data-label="6 to 9 weeks">4,500,000</td><td class="num" data-label="10 to 12 weeks">4,200,000</td></tr>
+          <tr><td>Academic, half day *</td><td class="num" data-label="3 to 5 weeks">7,000,000</td><td class="num" data-label="6 to 9 weeks">6,800,000</td><td class="num" data-label="10 to 12 weeks">6,500,000</td></tr>
+          <tr><td>Cambridge and vocational, full day *</td><td class="num" data-label="3 to 5 weeks">9,200,000</td><td class="num" data-label="6 to 9 weeks">8,800,000</td><td class="num" data-label="10 to 12 weeks">8,500,000</td></tr>
+          <tr class="fees-table__group"><td colspan="4">Lower Secondary<small>Years 7 to 9</small></td></tr>
+          <tr><td>Vocational, half day</td><td class="num" data-label="3 to 5 weeks">5,200,000</td><td class="num" data-label="6 to 9 weeks">4,800,000</td><td class="num" data-label="10 to 12 weeks">4,400,000</td></tr>
+          <tr><td>Academic, half day *</td><td class="num muted" data-label="3 to 5 weeks">not offered</td><td class="num" data-label="6 to 9 weeks">7,000,000</td><td class="num" data-label="10 to 12 weeks">6,700,000</td></tr>
+          <tr><td>Cambridge and vocational, full day *</td><td class="num muted" data-label="3 to 5 weeks">not offered</td><td class="num" data-label="6 to 9 weeks">9,100,000</td><td class="num" data-label="10 to 12 weeks">8,800,000</td></tr>
         </tbody>
       </table>
     </div>
+    <span class="swipe-hint">Swipe sideways to see the whole table.</span>
+    <p class="table-note">All amounts in VND. * The academic and full-day pathways need enough English to follow Cambridge lessons; we decide case by case after meeting your child. Global Program fees are paid in full before the first day. A week with one holiday is charged in full; if holidays cut two weeks of your stay to three class days or fewer, we take one week off the bill. <a href="{{ '/learning/global-program/' | url }}">How the Global Program works</a>.</p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--coral">Everything else</p>
+      <h2>Other fees and discounts</h2>
+    </div>
+    <div class="fees">
+      <div class="card fee">
+        <p class="fee__label">New student admission fee</p>
+        <p class="fee__amount">10,000,000 <small>VND, once</small></p>
+        <p>Paid when your child first joins the Regular Program. It covers processing the application, getting your child started and the first assessment. Not refundable.</p>
+      </div>
+      <div class="card fee">
+        <p class="fee__label">Trial day</p>
+        <p class="fee__amount">1,600,000 <small>VND a day</small></p>
+        <p>Up to three days, meals included. If your child enrolls, we take it off the tuition. If not, it is not refundable.</p>
+      </div>
+      <div class="card fee">
+        <p class="fee__label">Meals</p>
+        <p class="fee__amount">75,000 <small>to 80,000 VND a day</small></p>
+        <p>Lunch and two snacks: 75,000 for Early Years, 80,000 for Primary and Secondary. Optional. Refundable with 15 days' notice.</p>
+      </div>
+      <div class="card fee">
+        <p class="fee__label">Transport</p>
+        <p class="fee__amount">2,000,000 <small>VND a month and up</small></p>
+        <p>Morning pick-up and afternoon drop-off. Hội An 2,000,000, Vĩnh Điện 2,650,000, Đà Nẵng 4,000,000 a month, where the route has space.</p>
+      </div>
+      <div class="card fee">
+        <p class="fee__label">Brothers and sisters</p>
+        <p class="fee__amount">5% <small>off tuition</small></p>
+        <p>For the second and third child, taken off the lower tuition. It cannot be combined with other discounts.</p>
+      </div>
+      <div class="card fee">
+        <p class="fee__label">Uniform</p>
+        <p class="fee__amount">0 <small>there isn't one</small></p>
+        <p>Children come in their own clothes. Closed-toe shoes for PE and trips.</p>
+      </div>
+    </div>
+    <p class="table-note center">Most materials and activities are included. Some field trips, special events and after-school clubs cost extra, and external exam fees are paid separately. Fees can change.</p>
   </div>
 </section>
 
@@ -49,12 +114,10 @@ description: "Tuition and fees for the Regular Program and Global Program at Pal
 <section class="band--pale faq">
   <div class="wrap narrow">
     <h2>The other questions</h2>
-    <details><summary>In addition to tuition, what other fees are there?</summary><p class="todo">TODO: enrollment fee, development fee, uniform, lunch, trips, exam fees.</p></details>
-    <details><summary>What is covered by the development fee?</summary><p class="todo">TODO.</p></details>
-    <details><summary>What is your payment schedule?</summary><p>Tuition is paid in three instalments. The second is due in November and the third in March. Exact dates are on the <a href="{{ '/families/calendar/' | url }}">calendar</a>.</p></details>
-    <details><summary>Do you offer transportation?</summary><p class="todo">TODO.</p></details>
-    <details><summary>What is your refund policy?</summary><p class="todo">TODO.</p></details>
-    <details><summary>Bản tiếng Việt?</summary><p class="todo">TODO: link to the Vietnamese translation of this page.</p></details>
+    <details><summary>How can we pay?</summary><p>Cash or bank transfer. If you are paying from abroad, make sure the full amount arrives before your child's first day. Bank and transfer charges are paid by the family.</p></details>
+    <details><summary>When is each payment due?</summary><p>If you pay the whole year, by 20 May for the Early Bird price or by 30 June for the Standard price. If you pay by quarter, by 28 July, 8 October, 17 December and 22 March. Meals and transport can be paid for the year or by quarter. The dates are also on the <a href="{{ '/families/schedule/#calendar' | url }}">calendar</a>.</p></details>
+    <details><summary>What if we join partway through the year?</summary><p>You pay from your child's first day. We work out that quarter's tuition from the number of class days left in it.</p></details>
+    <details><summary>What is your refund policy?</summary><p>If you paid for the full year and your child leaves before 18 December 2026, we refund the equivalent of the Quarter 3 tuition. Quarterly payments are not refunded. Meals are refundable with 15 days' notice. Transport follows the tuition rule for families who paid the full year and is not refundable on quarterly payments. The admission fee is not refundable.</p></details>
   </div>
 </section>
 

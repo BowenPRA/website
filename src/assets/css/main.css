@@ -805,6 +805,54 @@ th { font-weight: 600; background: var(--accent-pale); color: var(--blue-ink); }
 tbody tr { transition: background-color 0.15s ease; }
 tbody tr:hover { background: #FAFCFF; }
 tr:last-child td { border-bottom: 0; }
+.fees-table { min-width: 640px; }
+.fees-table th { vertical-align: bottom; }
+.fees-table th.group { text-align: center; border-bottom: 2px solid var(--accent-tint); }
+.fees-table th small, .fees-table td small { display: block; font-size: 0.8em; font-weight: 500; color: var(--ink-soft); }
+.fees-table td:first-child { font-weight: 600; color: var(--blue-ink); }
+.fees-table .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fees-table td.num { font-weight: 500; }
+.fees-table .muted { color: var(--ink-soft); font-weight: 400; font-style: italic; }
+.fees-table__group td { background: var(--accent-pale); color: var(--accent-ink) !important; font-weight: 700; padding-top: 10px; padding-bottom: 8px; }
+.fees-table__group td small { display: inline; margin-left: 8px; }
+.table-note { font-size: 0.9em; color: var(--ink-soft); margin: 14px 0 0; max-width: 80ch; }
+.table-note.center { margin-inline: auto; margin-top: 24px; }
+/* fee tables stack into one card per row on phones */
+@media (max-width: 719px) {
+  .table-wrap:has(.fees-table) { overflow: visible; background: none; box-shadow: none; border: 0; border-radius: 0; }
+  .table-wrap:has(.fees-table) + .swipe-hint { display: none; }
+  .fees-table { min-width: 0; }
+  .fees-table thead { display: none; }
+  .fees-table, .fees-table tbody, .fees-table tr, .fees-table td { display: block; width: 100%; }
+  .fees-table tr { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm); margin-bottom: 12px; overflow: hidden; }
+  .fees-table td { border: 0; padding: 8px 16px; }
+  .fees-table td:first-child { padding: 14px 16px 10px; font-size: 1.05em; border-bottom: 1px solid var(--line); background: var(--accent-pale); }
+  .fees-table td.num { display: flex; justify-content: space-between; gap: 12px; text-align: right; }
+  .fees-table td.num::before { content: attr(data-label); text-align: left; color: var(--ink-soft); font-weight: 500; }
+  .fees-table td.num:last-child { padding-bottom: 14px; }
+  .fees-table td[colspan]:not(:first-child) { padding: 12px 16px 14px; }
+  .fees-table tbody tr:hover { background: #fff; }
+  .fees-table tr.fees-table__group { background: none; border: 0; box-shadow: none; margin: 22px 0 8px; }
+  .fees-table tr.fees-table__group td { background: none; padding: 0 4px; border: 0; font-size: 1.1em; }
+  .fees-table__group td small { display: block; margin: 2px 0 0; }
+}
+.fees { display: grid; gap: 18px; margin-top: clamp(28px, 4vw, 44px); grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+@media (min-width: 900px) { .fees { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.fee__label { font-weight: 600; color: var(--blue-ink); margin: 0 0 4px; }
+.fee__amount { font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; color: var(--accent-ink); margin: 0 0 10px; }
+.fee__amount small { font-size: 0.5em; font-weight: 600; letter-spacing: 0; color: var(--ink-soft); }
+.fee p:last-child { font-size: 0.95em; color: var(--ink-soft); }
+.tag--make-up-days { background: var(--violet-pale); color: var(--violet-ink); }
+.checklist { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 14px; }
+.checklist li { position: relative; padding-left: 40px; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: 0.15em; width: 26px; height: 26px; border-radius: 9px; rotate: -6deg;
+  background: var(--accent) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / 16px no-repeat;
+}
+.checklist li:nth-child(3n+2)::before { background-color: var(--sun-deep); rotate: 5deg; }
+.checklist li:nth-child(3n)::before { background-color: var(--blue); rotate: -2deg; }
+.checklist strong { color: var(--blue-ink); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
 .swipe-hint { display: block; font-size: 0.82em; color: var(--ink-soft); margin: 8px 0 0; }
 @media (min-width: 900px) { .swipe-hint { display: none; } }
 
@@ -864,9 +912,9 @@ tr:last-child td { border-bottom: 0; }
 }
 .team li:hover .photo, .team li:hover .avatar { rotate: -6deg; scale: 1.05; }
 .team .avatar { display: grid; place-items: center; background: var(--blue-tint); color: var(--blue-deep); font-weight: 700; font-size: 2rem; }
-.team strong { font-size: 1.04rem; display: block; color: var(--blue-ink); }
-.team em { display: block; color: var(--green-deep); font-style: normal; font-weight: 600; font-size: 0.88rem; }
-.team small { display: block; color: var(--ink-soft); font-size: 0.82rem; margin-top: 4px; }
+.team strong { font-size: 1.08rem; display: block; color: var(--blue-ink); }
+.team em { display: block; color: var(--green-deep); font-style: normal; font-weight: 600; font-size: 0.9rem; line-height: 1.35; margin-top: 2px; }
+.team small { display: block; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.4; margin-top: 6px; }
 .team p { font-size: 0.9em; color: var(--ink-soft); margin: 10px 0 0; text-align: left; }
 @media (max-width: 559px) {
   .team li { display: grid; grid-template-columns: 84px minmax(0, 1fr); column-gap: 18px; align-items: center; text-align: left; padding: 18px; }

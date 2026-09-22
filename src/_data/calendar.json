@@ -1,46 +1,44 @@
 {
-  "year": "2025 to 2026",
-  "note": "Dates from the 2025-26 draft. Replace with the 2026-27 calendar before launch.",
+  "year": "2026 to 2027",
+  "note": "From the 2026-2027 academic calendar. Tuition dates are for families paying by quarter. If bad weather closes PRA during the year, the lost days are made up on the marked make-up days.",
   "months": [
     { "name": "August", "events": [
-      { "date": "Wed 6 Aug", "what": "First day of the academic year", "tag": "early dismissal" }
+      { "date": "Tue 4 Aug", "what": "First day of the academic year", "tag": "" }
     ]},
     { "name": "September", "events": [
-      { "date": "Mon 1 to Tue 2 Sep", "what": "Independence Day", "tag": "no classes" }
+      { "date": "Mon 31 Aug to Wed 2 Sep", "what": "Independence Day holiday", "tag": "no classes" }
     ]},
     { "name": "October", "events": [
-      { "date": "Mon 13 to Fri 17 Oct", "what": "Fall break", "tag": "no classes" },
-      { "date": "Fri 24 Oct", "what": "Parent and teacher meetings", "tag": "" }
+      { "date": "Thu 8 Oct", "what": "End of Quarter 1. Quarter 2 tuition due", "tag": "fees" },
+      { "date": "Fri 9 to Wed 14 Oct", "what": "Fall break", "tag": "no classes" },
+      { "date": "Thu 15 Oct", "what": "Quarter 2 begins", "tag": "" }
     ]},
     { "name": "November", "events": [
-      { "date": "Mon 10 Nov", "what": "Second tuition payment due", "tag": "fees" },
-      { "date": "Thu 27 Nov", "what": "Thanksgiving lunch", "tag": "" }
+      { "date": "Tue 24 Nov", "what": "PRA closed", "tag": "no classes" }
     ]},
     { "name": "December", "events": [
-      { "date": "Fri 19 to Wed 31 Dec", "what": "Winter holiday", "tag": "no classes" }
+      { "date": "Thu 17 Dec", "what": "End of Quarter 2. Quarter 3 tuition due", "tag": "fees" },
+      { "date": "Fri 18 Dec to Mon 4 Jan", "what": "Winter holiday", "tag": "no classes" }
     ]},
     { "name": "January", "events": [
-      { "date": "Thu 1 to Mon 5 Jan", "what": "Winter holiday", "tag": "no classes" }
+      { "date": "Tue 5 Jan", "what": "Quarter 3 begins", "tag": "" },
+      { "date": "Fri 29 Jan", "what": "Make-up day if weather has closed PRA earlier in the year", "tag": "make-up days" }
     ]},
     { "name": "February", "events": [
-      { "date": "Fri 6 Feb", "what": "Tết celebration at school", "tag": "" },
-      { "date": "Fri 13 to Fri 27 Feb", "what": "Tết holiday", "tag": "no classes" }
+      { "date": "Mon 1 to Tue 2 Feb", "what": "Make-up days if weather has closed PRA earlier in the year", "tag": "make-up days" },
+      { "date": "Wed 3 to Mon 15 Feb", "what": "Tết holiday", "tag": "no classes" }
     ]},
     { "name": "March", "events": [
-      { "date": "Mon 2 Mar", "what": "Tết holiday", "tag": "no classes" },
-      { "date": "Mon 9 Mar", "what": "Third tuition payment due", "tag": "fees" },
-      { "date": "Fri 27 Mar", "what": "Parent and teacher meetings", "tag": "" }
+      { "date": "Mon 22 Mar", "what": "Quarter 4 tuition due", "tag": "fees" },
+      { "date": "Wed 24 Mar", "what": "End of Quarter 3", "tag": "" },
+      { "date": "Fri 26 Mar", "what": "PRA closed", "tag": "no classes" }
     ]},
     { "name": "April", "events": [
-      { "date": "Mon 27 Apr", "what": "Hùng Kings Day observed", "tag": "no classes" },
-      { "date": "Tue 28 to Wed 29 Apr", "what": "Spring break", "tag": "no classes" },
-      { "date": "Thu 30 Apr", "what": "Reunification Day", "tag": "no classes" }
-    ]},
-    { "name": "May", "events": [
-      { "date": "Fri 1 May", "what": "Labour Day", "tag": "no classes" }
+      { "date": "Fri 16 Apr", "what": "Hùng Kings' Commemoration Day", "tag": "no classes" },
+      { "date": "Mon 26 to Fri 30 Apr", "what": "Spring break and Reunification Day", "tag": "no classes" }
     ]},
     { "name": "June", "events": [
-      { "date": "Fri 12 Jun", "what": "Last day of classes and graduation", "tag": "" }
+      { "date": "Fri 4 Jun", "what": "Last day of the academic year", "tag": "" }
     ]}
   ]
 }
