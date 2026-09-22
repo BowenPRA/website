@@ -105,7 +105,7 @@ Global Program · campus-life gallery · Find your way to PRA · CTA.
 | `/admissions/` | How to enroll | Four steps + FAQ | Steps 1 to 4, FAQ (documents, assessment, English level, trial day, rolling admissions), inquiry form | Send inquiry |
 | `/admissions/tuition-and-fees/` | Tuition and fees | Real numbers | Regular Program table, Global Program table, other fees, payment schedule, transport, refund policy, Vietnamese translation link | Ask a question |
 | `/families/calendar/` | Calendar | Academic year dates | Month-by-month list (from data file), download .ics link later | none |
-| `/families/schedule/` | Daily schedule | Per-group timetables | Accordions per group (Nursery, Kindy, Y1-2, Y4-5, Y6, Y8, Y9) | none |
+| `/families/schedule/` | Schedule and calendar | The shape of the day at each stage, then the year's dates | Day-at-a-glance chart, one card per stage (core mornings, weekly mix of specialist and vocational classes), practical notes, calendar | Book a visit |
 | `/families/handbook/` | Family handbook | Norms and guidelines | Link to PDF plus a short summary | none |
 | `/events/` | Events | Last year's festivals, theme weeks, trips and graduation, August to June | Month chips, one section per event (from `src/_data/events.json`: name, date, 1 to 3 sentences, polaroids with a lightbox), link to this year's calendar | Book a visit |
 | `/contact/` | Contact / Book a visit | One form, map, phone, Zalo/WhatsApp, hours | Form (name, child's age, dates if visiting, message), addresses of both campuses, hours | Send |
@@ -251,7 +251,14 @@ Still open:
   timetable (Mr. Chiến removed at Bowen's request, 2026-09-22). Each person gets a
   role and one short line, no bio paragraph. Mr. Landon, Ms. Thuy and Ms. Ali from
   the Wix draft are not listed until Bowen confirms.
-- The schedule page is generated from the admin app's timetable
-  (`scripts/schedule-from-admin.mjs`), with teacher names removed.
+- The schedule page does not show full timetables (Bowen, 2026-09-22): it is for
+  parents and gives the broad strokes. A day-at-a-glance chart compares the stages,
+  then one card per stage shows the core subjects every morning and the week's mix
+  of specialist and vocational classes (with days a week). Stages split where the
+  timetable does: Nursery / Kindergarten, Year 1 / Years 2 to 6, Year 7 / Years 8
+  and 9 (who share the Upper Secondary day). The content lives in
+  `src/_data/days.json`, written by hand from `src/_data/schedule.json` (still
+  copied from the admin app by `scripts/schedule-from-admin.mjs`, but no longer
+  rendered). The same file feeds the "A day in ..." timelines on the stage pages.
 - Photos: prefer the ones Bowen chose for the Wix draft plus polished activity shots
   of older students; avoid close-up toddler phone snapshots.

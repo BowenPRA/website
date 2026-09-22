@@ -80,7 +80,8 @@
   var revealSelector = [
     "main section .center.narrow", ".two > *", ".method > *", ".cards > *", ".tiles > *", ".gallery > *",
     ".values > li", ".steps > li", ".team > li", ".stats > *", ".cal > *", ".programs > *",
-    ".faq details", ".table-wrap", ".picker__chips", ".cta__inner", ".faq h2"
+    ".faq details", ".table-wrap", ".picker__chips", ".cta__inner", ".faq h2",
+    ".dayplan__row", ".daynotes > li", ".stages > *", ".dayline li"
   ].join(",");
   var counters = document.querySelectorAll("[data-count]");
   if ("IntersectionObserver" in window && !reduceMotion) {
@@ -135,24 +136,6 @@
           if (!c.hidden) pop(c);
         });
         grid.classList.add("is-filtered");
-      });
-    });
-  }
-
-  // Timetable tabs (Schedule page)
-  var tt = document.querySelector("[data-tt]");
-  if (tt) {
-    var tabs = tt.querySelectorAll('[role="tab"]');
-    var panels = tt.querySelectorAll(".tt-panel");
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        var key = tab.getAttribute("data-key");
-        tabs.forEach(function (t) {
-          var on = t === tab;
-          t.setAttribute("aria-selected", String(on));
-          t.setAttribute("aria-pressed", String(on));
-        });
-        panels.forEach(function (p) { p.hidden = p.id !== "panel-" + key; });
       });
     });
   }

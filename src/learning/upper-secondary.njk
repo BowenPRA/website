@@ -16,7 +16,7 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
     <div class="center narrow">
       <p class="eyebrow eyebrow--coral">Two pathways</p>
       <h2>Choose the route, keep the day</h2>
-      <p class="lede">Mornings, each student works through their own program with a teacher beside them. Afternoons are shared: Movement, Art of Science, Maker Space, Wellbeing and study time.</p>
+      <p class="lede">Every student follows one of two routes. The day around it is the same.</p>
     </div>
     <div class="cards mt">
       <div class="card card--blue"><h3>US diploma</h3><p>An accredited US online high school, leading to a recognised US diploma. Students work at their own pace; a PRA teacher checks progress and gets them unstuck every day.</p></div>
@@ -26,15 +26,29 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
+<section class="band--pale" id="day">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--coral">Monday to Friday</p>
+      <h2>An Upper Secondary day</h2>
+      <p class="lede">Mornings on their own courses, afternoons together. Years 8 and 9 share this day.</p>
+    </div>
+    <div class="mt">{% set dayKey = "upper-secondary" %}{% include "partials/dayline.njk" %}</div>
+    <p class="table-note center">Afternoons mix Movement twice a week, Wellbeing, a choice of Maker Space or Art of Science, and study time. <a href="{{ '/families/schedule/#upper-secondary' | url }}">See the week at a glance</a>.</p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
   <div class="wrap two">
     <div>
       <p class="eyebrow eyebrow--blue">Beyond the diploma</p>
-      <h2>Exams we prepare for</h2>
+      <h2>Exams, a project and a trip</h2>
+      <h3>Exam prep</h3>
       <p><strong>IELTS</strong> and <strong>Pearson PTE</strong>, which most universities abroad ask for. <strong>GED</strong> for a faster route to a recognised secondary credential. Each student gets their own plan and practice papers.</p>
-      <h2>The personal project</h2>
+      <h3>The personal project</h3>
       <p>One project a year, their choice: a business, research, a film, an app, a garden. They set the goal, we hold them to it, they present it.</p>
-      <h2>The trip</h2>
+      <h3>The trip</h3>
       <p>Once a year the Upper Secondary students plan an educational trip: destination, budget, itinerary, logistics. They do the spreadsheets. We check them.</p>
     </div>
     <div class="blob-wrap blob-wrap--coral has-sticker">
@@ -43,9 +57,9 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
     </div>
   </div>
 </section>
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-<section>
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
   <div class="wrap two two--flip">
     <div class="blob-wrap">
       {% photo "upper-years-students-group-project", "photo--lg photo--tilt-r" %}
@@ -54,7 +68,6 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
       <p class="eyebrow">After PRA</p>
       <h2>Where our students have gone</h2>
       <p>More than ten former students are at high schools and universities overseas: in the US and Australia, and at international schools in Hà Nội, Đà Nẵng and India.</p>
-      <a class="btn btn--primary btn--small" href="{{ '/families/schedule/' | url }}">See the Teens week</a>
     </div>
   </div>
 </section>

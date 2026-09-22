@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 tone: blue
 title: "Lower Secondary"
-description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space."
+description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge English, Maths and Science every morning, plus History, Executive Function, Art of Science and technology in the Maker Space."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -10,7 +10,7 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Low
 {% set heroShape = "tall" %}
 {% set heroEyebrow = "Lower Secondary · Years 7 to 9 · ages 11 to 14" %}
 {% set heroTitle = 'More independence, bigger <span class="mark">projects</span>' %}
-{% set heroText = "Cambridge English, Maths and Science, each with a specialist teacher. Classes of " + site.classCap + " or fewer, and students do more of the planning." %}
+{% set heroText = "Cambridge English, Maths and Science every morning, each with a specialist teacher. Classes of " + site.classCap + " or fewer, and students do more of the planning." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
@@ -29,26 +29,52 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Low
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
+<section class="band--pale" id="day">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--coral">Afternoons</p>
-      <h2>Where it gets built</h2>
+      <p class="eyebrow eyebrow--blue">Monday to Friday</p>
+      <h2>Year 7, then Years 8 and 9</h2>
+      <p class="lede">Year 7 is a class with one shared timetable. From Year 8, mornings follow each student's own program.</p>
     </div>
-    <div class="cards cards--3 mt">
-      <div class="card">{{ ic.icon("flask", "blue") }}<h3>Art of Science</h3><p>Three afternoons a week of experiments that use the morning's science.</p></div>
-      <div class="card">{{ ic.icon("tools", "sun") }}<h3>Maker Space</h3><p>Tools, materials and a problem. Students design, build, test and present.</p></div>
-      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement</h3><p>Sport and fitness twice a week.</p></div>
-      <div class="card">{{ ic.icon("heart", "coral") }}<h3>Wellbeing</h3><p>A weekly class on the things that make the rest of the week go better.</p></div>
-      <div class="card">{{ ic.icon("clock", "violet") }}<h3>Review</h3><p>Time each week to catch up and ask the question you did not ask in class.</p></div>
-      <div class="card">{{ ic.icon("star", "sun") }}<h3>Year 9 Checkpoint</h3><p>An optional Cambridge test in English, Maths and Science at the end of Year 9. Good practice before Upper Secondary.</p></div>
+    <div class="cards mt">
+      <div class="card">
+        <span class="card__tag">Year 7</span>
+        <h3>One class, one timetable</h3>
+        <p>Maths, English and Science every morning, then History or Executive Function before lunch. Afternoons are for making, moving and experiments.</p>
+        {% set dayKey = "lower-secondary" %}{% include "partials/dayline.njk" %}
+      </div>
+      <div class="card">
+        <span class="card__tag">Years 8 and 9</span>
+        <h3>Their own program</h3>
+        <p>Two long blocks each morning with the Upper Secondary students. Each student works through their own English, Maths and Science, with a teacher coaching.</p>
+        {% set dayKey = "upper-secondary" %}{% include "partials/dayline.njk" %}
+      </div>
     </div>
-    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/' | url }}">See the Year 7 and Teens week</a></p>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--coral">Afternoons</p>
+      <h2>Where it gets built</h2>
+      <p class="lede">Specialist and vocational classes, in English, with the tools out.</p>
+    </div>
+    <div class="cards cards--3 mt">
+      <div class="card">{{ ic.icon("flask", "blue") }}<h3>Art of Science</h3><p>Experiments that use the morning's science. Three afternoons a week in Year 7.</p></div>
+      <div class="card">{{ ic.icon("tools", "sun") }}<h3>Maker Space</h3><p>Technology and design. Tools, materials and a problem: students design, build, test and present. Twice a week in Year 7.</p></div>
+      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement</h3><p>Sport and fitness twice a week.</p></div>
+      <div class="card">{{ ic.icon("heart", "coral") }}<h3>Wellbeing</h3><p>A weekly class on the things that make the rest of the week go better.</p></div>
+      <div class="card">{{ ic.icon("clock", "violet") }}<h3>Review and study time</h3><p>Time each week to catch up and ask the question you did not ask in class.</p></div>
+      <div class="card">{{ ic.icon("star", "sun") }}<h3>Year 9 Checkpoint</h3><p>An optional Cambridge test in English, Maths and Science at the end of Year 9. Good practice before Upper Secondary.</p></div>
+    </div>
+    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/#lower-secondary' | url }}">See the mix for each year</a></p>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
   <div class="wrap two two--flip">
     <div class="blob-wrap blob-wrap--coral">
       {% photo "secondary-table-tennis", "photo--lg photo--tilt" %}
@@ -56,13 +82,13 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Low
     <div>
       <p class="eyebrow eyebrow--coral">What comes next</p>
       <h2>Upper Secondary</h2>
-      <p>After Year 9, students move into <a href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary</a>, with a US diploma or Cambridge pathway at their own pace.</p>
+      <p>After Year 9, students move into <a href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary</a>, with a US diploma or Cambridge pathway at their own pace. Years 8 and 9 already share its day, so the step up is a small one.</p>
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale faq">
+<section class="faq">
   <div class="wrap narrow">
     <h2>Questions parents ask</h2>
     <details><summary>Can a student join partway through the year?</summary><p>Yes, we admit students all year. Tuition runs from your child's first day, and we meet them before they start so they join the right class.</p></details>

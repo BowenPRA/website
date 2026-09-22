@@ -7,6 +7,12 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
+  // "8:45" -> 525, minutes since midnight (day chart on the schedule page)
+  eleventyConfig.addFilter("mins", (t) => {
+    const [h, m] = String(t).split(":").map(Number);
+    return h * 60 + (m || 0);
+  });
+
   // {% photo "slug", "css classes", "sizes attr" %}
   // Renders a responsive <img> from src/_data/photos.json (built by scripts/images.mjs).
   // Unknown slugs fall back to a labelled placeholder so a page never breaks.

@@ -14,22 +14,53 @@ description: "Nursery and Kindergarten at Palm River Academy for children from 2
 <section>
   <div class="wrap two">
     <div>
-      <p class="eyebrow">Two groups</p>
+      <p class="eyebrow eyebrow--sun">Two groups</p>
       <h2>Nursery and Kindergarten</h2>
       <p><strong>Nursery</strong> has two teachers in the room all day. Mornings are short bursts of learning: a story, a song, a puzzle. Then lunch, a nap and a gentle afternoon.</p>
-      <p><strong>Kindergarten</strong> starts every day outside, then phonics and maths. After lunch comes Understanding the World: science and geography for four-year-olds.</p>
+      <p><strong>Kindergarten</strong> starts every day outside, then phonics and maths, then literacy. After the nap comes Understanding the World: science and geography for four-year-olds.</p>
       <p>Both groups pick up English from the room. Most of our youngest children arrive with none.</p>
-      <a class="btn btn--primary btn--small" href="{{ '/families/schedule/' | url }}">See the Nursery and Kindergarten week</a>
     </div>
     <div class="blob-wrap has-sticker"><span class="sticker sticker--tr">EYFS framework</span>{% photo "early-years-rainbow-parachute", "photo--lg photo--tilt" %}</div>
   </div>
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale" id="day">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--sun">Monday to Friday</p>
+      <h2>A day in Early Years</h2>
+      <p class="lede">Busy mornings, a long nap, a gentle afternoon.</p>
+    </div>
+    <div class="mt">{% set dayKey = "early-years" %}{% include "partials/dayline.njk" %}</div>
+    <p class="table-note center">Nursery follows the same rhythm, with play and stories in place of the Kindergarten lessons. <a href="{{ '/families/schedule/#early-years' | url }}">Compare every stage's day</a>.</p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap two two--flip">
+    <div class="blob-wrap blob-wrap--coral">{% photo "early-years-girls-tyre-wall", "photo--lg photo--portrait photo--tilt-r" %}</div>
+    <div>
+      <p class="eyebrow eyebrow--coral">Starting gently</p>
+      <h2>A few mornings with you first</h2>
+      <ol class="steps">
+        <li><div><strong>You stay</strong><p>For the first few days a parent stays for outdoor time in the morning, then takes their child home.</p></div></li>
+        <li><div><strong>Shorter days</strong><p>Then a little longer each day, building up as your child settles.</p></div></li>
+        <li><div><strong>The full day</strong><p>Once settled, it is a full-time program. Tuition is the same however many days your child comes.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
-    <h2>Four things we watch for</h2>
-    <div class="cards">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--sun">What we watch for</p>
+      <h2>Four areas, every day</h2>
+    </div>
+    <div class="cards mt">
       <div class="card"><h3>Social and emotional skills</h3><p>Sharing, waiting, saying what you need, calming down.</p></div>
       <div class="card"><h3>Physical development</h3><p>Climbing, balancing, pouring, cutting, drawing. Every day, on the turf and in the sand.</p></div>
       <div class="card"><h3>Language and literacy</h3><p>Stories, songs and a lot of conversation in English. Phonics starts when a child is curious about letters, not before.</p></div>
@@ -43,8 +74,9 @@ description: "Nursery and Kindergarten at Palm River Academy for children from 2
   <div class="wrap narrow">
     <h2>Questions parents ask</h2>
     <details><summary>Does my child need any English to start?</summary><p>No. Most of our youngest children arrive with none. They pick it up from the room.</p></details>
-    <details><summary>Can we start with a few days a week?</summary><p>Most children start gently. For the first few days a parent stays for outdoor time in the morning, then takes their child home. After that come shorter days, building up to the full day as your child settles. Once settled it is a full-time program, and tuition is the same however many days your child comes. We take children from 20 months.</p></details>
-    <details><summary>What about nappies and naps?</summary><p>Nappies are fine. Please send spare nappies and wipes, a change of clothes and a plastic bag. There is a two-hour nap every day, and each child has their own cot. The day ends at 15:15, and after-care until 16:30 is available for an extra fee.</p></details>
+    <details><summary>Can we start with a few days a week?</summary><p>At first, yes: most children start with short days, as above. Once settled it is a full-time program, and tuition is the same however many days your child comes. We take children from 20 months.</p></details>
+    <details><summary>What about nappies and naps?</summary><p>Nappies are fine. Please send spare nappies and wipes, a change of clothes and a plastic bag. There is a two-hour nap every day, and each child has their own cot.</p></details>
+    <details><summary>What time is pick-up?</summary><p>15:15. After-care until 16:30 is available for an extra fee. Drop-off is from 8:00 to 8:30.</p></details>
     <details><summary>Is there a progress report?</summary><p>Yes. Early Years families get a written progress report describing what their child is exploring and what comes next.</p></details>
   </div>
 </section>

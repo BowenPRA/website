@@ -1,0 +1,11 @@
+{# One stage's day as a timeline. Set dayKey to a stage key from days.json (early-years, primary, lower-secondary, upper-secondary).
+   Runs across the page when there is room and down it on phones or in narrow columns. #}
+{% for s in days.stages %}{% if s.key == dayKey %}
+<div class="dayline">
+  <ol>
+    {% for st in s.steps %}
+    <li><time>{{ st.t }}</time><strong>{{ st.what }}</strong>{% if st.note %}<span>{{ st.note }}</span>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</div>
+{% endif %}{% endfor %}

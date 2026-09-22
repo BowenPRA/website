@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 tone: green
 title: "Primary"
-description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Maths and Science every morning; cooking, technology, craft, art and movement in the afternoons."
+description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Maths and Science every morning; cooking, technology, craft, art, dance and movement in the afternoons."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -18,7 +18,7 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
     <div>
       <p class="eyebrow">Every morning</p>
       <h2>English, Maths and Science</h2>
-      <p>Three lessons before lunch. <strong>English</strong> is real books, real writing and a lot of talking. <strong>Maths</strong> starts with objects and works up. <strong>Science</strong> is experiments first, explanations second.</p>
+      <p>Three lessons before lunch, every day. <strong>English</strong> is real books, real writing and a lot of talking. <strong>Maths</strong> starts with objects and works up. <strong>Science</strong> is experiments first, explanations second.</p>
       <p>Cambridge Primary is recognised everywhere, so moving on later is easy.</p>
     </div>
     <div class="blob-wrap blob-wrap--green has-sticker">
@@ -29,7 +29,19 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
+<section class="band--pale" id="day">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">Monday to Friday</p>
+      <h2>A Primary day</h2>
+      <p class="lede">The core subjects while heads are fresh, the hands-on classes after lunch.</p>
+    </div>
+    <div class="mt">{% set dayKey = "primary" %}{% include "partials/dayline.njk" %}</div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow eyebrow--sun">Every afternoon</p>
@@ -37,19 +49,19 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
       <p class="lede">This year's afternoon classes. This is where the English gets used.</p>
     </div>
     <div class="cards cards--3 mt">
-      <div class="card">{{ ic.icon("whisk", "sun") }}<h3>Cooking</h3><p>A real kitchen and a dish to take home, Thursdays and Fridays.</p></div>
-      <div class="card">{{ ic.icon("laptop", "blue") }}<h3>Technology</h3><p>Typing, coding, and making screens do what you tell them.</p></div>
+      <div class="card">{{ ic.icon("whisk", "sun") }}<h3>Cooking</h3><p>A real kitchen and a dish to take home, one afternoon a week.</p></div>
+      <div class="card">{{ ic.icon("laptop", "blue") }}<h3>Technology</h3><p>Typing, coding, and making screens do what you tell them. Once or twice a week.</p></div>
       <div class="card">{{ ic.icon("palette", "coral") }}<h3>Craft and Art</h3><p>Lanterns, printing, clay, paint. Assessed by what gets made, not by a test.</p></div>
-      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement and Exercise</h3><p>Structured sport, fitness and free play on the turf, twice a week.</p></div>
-      <div class="card">{{ ic.icon("book", "violet") }}<h3>Everyday Experts, Master Minds, Book Worms</h3><p>Practical know-how, puzzles and reading, in small groups.</p></div>
+      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement and Dance</h3><p>Sport, fitness and free play on the turf, twice a week. From Year 2 there is a dance class too.</p></div>
+      <div class="card">{{ ic.icon("book", "violet") }}<h3>Talk, puzzles and books</h3><p>Practice, Presentation and Play and Master Minds in Year 1. Everyday Experts, Book Worms and Wellbeing from Year 2.</p></div>
       <div class="card">{{ ic.icon("clock", "sun") }}<h3>Boredom</h3><p>No screens, no instructions. Just time to think something up.</p></div>
     </div>
-    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/' | url }}">See the full Primary week</a></p>
+    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/#primary' | url }}">See the mix for each year</a></p>
   </div>
 </section>
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-<section>
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
   <div class="wrap two two--flip">
     <div class="blob-wrap">
       {% photo "hero-cooking-class-hoi-an", "photo--lg photo--tilt" %}
@@ -62,9 +74,9 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale faq">
+<section class="faq">
   <div class="wrap narrow">
     <h2>Questions parents ask</h2>
     <details><summary>My child's English is basic. Can they keep up?</summary><p>Yes. Your child does not need fluent English to join Primary, and children who arrive with little English usually settle in quickly. The whole day is in English, in a class of {{ site.classCap }} or fewer, so they hear and use it all day with a teacher close by.</p></details>

@@ -2,59 +2,108 @@
 layout: layouts/base.njk
 tone: violet
 title: "Schedule and calendar"
-description: "The weekly timetable for every class at Palm River Academy, from Nursery to Teens, plus the academic calendar."
+description: "How the day runs at Palm River Academy, from Early Years to Upper Secondary: English, Maths and Science every morning, specialist and vocational classes after lunch. Plus the dates for the year."
 ---
+{% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "gallery-twister-game" %}
 {% set heroEyebrow = "Schedule and calendar · " + schedule.schoolYear %}
-{% set heroTitle = 'What a <span class="mark">week</span> looks like' %}
-{% set heroText = "Every class, every period, Monday to Friday. Cambridge subjects in the morning, hands-on classes after lunch." %}
+{% set heroTitle = 'How the <span class="mark">day</span> runs' %}
+{% set heroText = "English, Maths and Science every morning. Cooking, technology, art and sport after lunch. Here is the shape of the week at each age, and the dates for the year." %}
 {% include "partials/pagehero.njk" %}
 
-<section data-tt>
+{% set dayFrom = days.from | mins %}
+{% set daySpan = (days.to | mins) - dayFrom %}
+<section>
   <div class="wrap">
-    <div class="tt-tabs" role="tablist" aria-label="Choose a class">
-      {% for k in schedule.classes %}
-      <button class="chip" type="button" role="tab" id="tab-{{ k.key }}" aria-controls="panel-{{ k.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" data-key="{{ k.key }}">{{ k.name }}</button>
-      {% endfor %}
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--violet">Monday to Friday</p>
+      <h2>The day at a glance</h2>
+      <p class="lede">Doors open at 8:00 for every age. The core subjects come first, while heads are fresh. After lunch come the classes where the English gets used.</p>
     </div>
 
-    {% for k in schedule.classes %}
-    <div class="tt-panel" id="panel-{{ k.key }}" role="tabpanel" aria-labelledby="tab-{{ k.key }}" {% if not loop.first %}hidden{% endif %}>
-      <h3>{{ k.name }}</h3>
-      <p class="meta">{{ k.yearGroups | join(", ") }}{% if k.note %} · {{ k.note }}{% endif %}</p>
-      <div class="table-wrap">
-        <table class="tt">
-          <thead><tr><th>Time</th>{% for d in schedule.days %}<th>{{ d }}</th>{% endfor %}</tr></thead>
-          <tbody>
-            {% for r in k.rows %}
-            {% if r.all %}
-            <tr class="k-{{ r.kind }}"><td>{{ r.time }}</td><td class="all" colspan="{{ schedule.days.length }}">{{ r.all }}</td></tr>
-            {% else %}
-            {% set same = true %}{% for d in r.days %}{% if d.s != r.days[0].s %}{% set same = false %}{% endif %}{% endfor %}
-            {% if same %}
-            <tr class="k-{{ r.days[0].kind }}"><td>{{ r.time }}</td><td class="{{ 'all' if r.days[0].kind else 'lesson all' }}" colspan="{{ schedule.days.length }}">{{ r.days[0].s }}</td></tr>
-            {% else %}
-            <tr><td>{{ r.time }}</td>{% for d in r.days %}<td class="{{ 'lesson' if not d.kind }}">{{ d.s }}</td>{% endfor %}</tr>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </tbody>
-        </table>
+    <figure class="dayplan">
+      <ul class="dayplan__key">
+        <li><i class="key key--core"></i>Core lessons</li>
+        <li><i class="key key--spec"></i>Specialist and vocational classes</li>
+        <li><i class="key key--rest"></i>Arrival, lunch and rest</li>
+      </ul>
+      <div class="dayplan__axis" aria-hidden="true">
+        <span></span>
+        <div class="dayplan__ticks">
+          {% for t in days.ticks %}<span style="--x: {{ ((t | mins) - dayFrom) / daySpan * 100 }}%">{{ t }}</span>{% endfor %}
+        </div>
       </div>
-    </div>
-    {% endfor %}
+      {% for r in days.rows %}
+      <div class="dayplan__row dayplan__row--{{ r.tone }}">
+        <a class="dayplan__who" href="{{ r.href }}"><span class="dot dot--{{ r.tone }}"></span><span>{{ r.who }}<small>{{ r.sub }}</small></span></a>
+        <div class="dayplan__bar" role="img" aria-label="{{ r.say }}">
+          {% for s in r.segs %}{% set a = s.from | mins %}{% set b = s.to | mins %}
+          <span class="seg seg--{{ s.k }}" style="--l: {{ (a - dayFrom) / daySpan * 100 }}%; --w: {{ (b - a) / daySpan * 100 }}%" title="{{ s.from }} to {{ s.to }} · {{ s.t }}"><b>{% if s.label %}<em class="seg__long">{{ s.label }}</em>{% endif %}{% if s.short %}<em class="seg__short">{{ s.short }}</em>{% endif %}</b></span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+      <figcaption>Snack breaks at about 10:25 and 14:05 are left off. Years 8 and 9 share the day with Upper Secondary.</figcaption>
+    </figure>
 
-    <span class="swipe-hint">Swipe sideways to see the whole week. The time column stays put.</span>
-    <p class="form__note" style="margin-top:20px">Yes, Boredom is a real class. Teachers' names are left off; you will meet them on the tour.</p>
+    <ul class="daynotes">
+      <li>{{ ic.icon("clock", "violet") }}<span><strong>Off sick or away?</strong> Tell us by 8:00 that morning.</span></li>
+      <li>{{ ic.icon("whisk", "sun") }}<span><strong>Lunch and two snacks</strong> every day, if you want them.</span></li>
+      <li>{{ ic.icon("bus", "blue") }}<span><strong>The bus</strong> runs around Hội An, Vĩnh Điện and Đà Nẵng.</span></li>
+    </ul>
   </div>
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale" id="calendar">
+<section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Academic calendar</p>
+      <p class="eyebrow eyebrow--violet">Stage by stage</p>
+      <h2>What the week holds</h2>
+      <p class="lede">Mornings keep to the core subjects. The mix after lunch changes as children grow.</p>
+    </div>
+
+    <div class="stages mt">
+      {% for s in days.stages %}
+      <article class="sday sday--{{ s.tone }}" id="{{ s.key }}">
+        <header class="sday__rail">
+          {% photo s.photo, "sday__photo", "(min-width: 960px) 280px, 92vw" %}
+          <p class="sday__ages">{{ s.ages }}</p>
+          <h3>{{ s.name }}</h3>
+          <p class="sday__groups">{{ s.groups }}</p>
+          <ul class="sday__facts">{% for f in s.facts %}<li>{{ f }}</li>{% endfor %}</ul>
+          <a class="sday__more" href="{{ s.url | url }}">More about {{ s.name }} <span aria-hidden="true">→</span></a>
+        </header>
+        <div class="sday__body">
+          {% for z in [s.am, s.pm] %}
+          <div class="sday__zone sday__zone--{{ 'am' if loop.first else 'pm' }}">
+            <h4 class="sday__when">{{ ic.icon("sun" if loop.first else "palette", s.tone) }}<span>{{ z.title }}{% if z.key %} <small>Number = {{ z.key | lower }}</small>{% endif %}</span></h4>
+            {% for it in z.items %}
+            <div class="sday__item{% if it.who %} has-who{% endif %}">
+              {% if it.who %}<p class="sday__who">{{ it.who }}</p>{% endif %}
+              <div>
+                {% if it.core %}<ul class="core">{% for c in it.core %}{% if not loop.first and it.coreJoin %}<li class="core__join">{{ it.coreJoin }}</li>{% endif %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+                {% if it.classes %}<ul class="mix">{% for c in it.classes %}<li{% if c.opt %} class="is-opt"{% endif %}>{{ c.n }}{% if c.opt %} <small>optional</small>{% endif %}<b aria-label="{{ c.d }} {{ 'day' if c.d == 1 else 'days' }} a week">{{ c.d }}</b></li>{% endfor %}</ul>{% endif %}
+                {% if it.text %}<p>{{ it.text }}</p>{% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="table-note center">Teachers' names are left off; you will meet them on the tour. And yes, Boredom is a real class.</p>
+  </div>
+</section>
+
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+<section id="calendar">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--violet">Academic calendar</p>
       <h2>Dates for {{ calendar.year }}</h2>
     </div>
     <div class="cal" style="margin-top:32px">
@@ -74,6 +123,6 @@ description: "The weekly timetable for every class at Palm River Academy, from N
 </section>
 
 {% set ctaTitle = "Come and watch a real Tuesday." %}
-{% set ctaText = "Pick a morning and see the timetable in action." %}
+{% set ctaText = "Pick a morning and see the day in action." %}
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}
