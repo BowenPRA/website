@@ -5,39 +5,39 @@
     "name": "Early Years",
     "ages": "20 months to 4 years",
     "url": "/learning/early-years/",
-    "colour": "palm",
-    "summary": "Play, stories, songs, mud, and a lot of talking. We follow the British EYFS framework and speak English all day. Half days are fine for the littlest ones.",
-    "points": ["Nursery and Kindergarten groups", "Partial-day option", "Outdoor time every day"]
+    "photo": "early-years-girls-tyre-wall",
+    "summary": "Nursery and Kindergarten. Play, stories, songs, phonics and a lot of talking, all in English. We follow the British EYFS framework.",
+    "points": ["Two homeroom teachers in Nursery", "Phonics, maths and literacy in Kindergarten", "Outside play every morning"]
   },
   {
     "key": "primary",
     "chip": "5 to 11",
     "name": "Primary",
-    "ages": "5 to 11 years",
+    "ages": "Years 1 to 6, ages 5 to 11",
     "url": "/learning/primary/",
-    "colour": "river",
-    "summary": "Cambridge English, Maths, and Science in the morning. PE every day. Afternoons rotate through vocational classes like cooking, art, and technology.",
-    "points": ["Cambridge Primary curriculum", "Daily PE", "Optional Year 6 Checkpoint"]
+    "photo": "primary-students-boardwalk-trip",
+    "summary": "Cambridge English, Maths and Science every morning. Afternoons are cooking, technology, craft, art, movement and a class called Boredom.",
+    "points": ["Cambridge Primary curriculum", "Movement and exercise every week", "Optional Year 6 Checkpoint"]
   },
   {
     "key": "secondary",
     "chip": "11 to 14",
     "name": "Secondary",
-    "ages": "11 to 14 years",
+    "ages": "Years 7 to 9, ages 11 to 14",
     "url": "/learning/secondary/",
-    "colour": "river",
-    "summary": "Cambridge Lower Secondary in the core subjects, taught by subject specialists. Same daily PE and vocational rotation, with more independence and bigger projects.",
+    "photo": "secondary-students-classroom",
+    "summary": "Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space.",
     "points": ["Cambridge Lower Secondary", "Subject-specialist teachers", "Optional Year 9 Checkpoint"]
   },
   {
     "key": "upper",
     "chip": "14 to 18",
     "name": "Upper Years",
-    "ages": "14 to 18 years",
+    "ages": "Ages 14 to 18",
     "url": "/learning/upper-years/",
-    "colour": "mango",
-    "summary": "A US diploma or a Cambridge pathway, at your own pace, with a coach in the room. Plus IELTS, PTE, and GED prep, a personal project, and one trip a year that the students plan themselves.",
-    "points": ["US diploma or Cambridge route", "IELTS, PTE, GED preparation", "Student-planned annual trip"]
+    "photo": "upper-years-students-group-project",
+    "summary": "A US diploma or a Cambridge pathway at each student's own pace, with a teacher coaching every block. Plus IELTS, PTE and GED preparation.",
+    "points": ["US diploma or Cambridge route", "IELTS, PTE, GED preparation", "Personal project and a student-planned trip"]
   },
   {
     "key": "global",
@@ -45,8 +45,8 @@
     "name": "Global Program",
     "ages": "3 weeks to 3 months, ages 2 to 14",
     "url": "/learning/global-program/",
-    "colour": "palm",
-    "summary": "For families passing through. Your child joins a real class, not a holiday club. Choose a half day or full day, academic or hands-on, and leave with a report and a certificate.",
+    "photo": "global-program-rice-paddy-hoi-an",
+    "summary": "For travelling families. Your child joins a real class, half day or full day, and leaves with a progress report and a certificate.",
     "points": ["Stay 3 weeks to 3 months", "Half-day and full-day options", "Progress report in the first two weeks"]
   }
 ]

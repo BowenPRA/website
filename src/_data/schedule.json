@@ -1,0 +1,1262 @@
+{
+  "schoolYear": "2026-2027",
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ],
+  "classes": [
+    {
+      "key": "nursery",
+      "name": "Nursery",
+      "yearGroups": [
+        "Nursery"
+      ],
+      "note": "",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Welcome / Drop-off",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–9:15",
+          "days": [
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:15–10:00",
+          "days": [
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:00–10:30",
+          "all": "Snack and play",
+          "kind": "break"
+        },
+        {
+          "time": "10:30–11:15",
+          "days": [
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:15–13:45",
+          "all": "Lunch and nap",
+          "kind": "lunch"
+        },
+        {
+          "time": "13:45–14:30",
+          "days": [
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            },
+            {
+              "s": "Learning time",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:30–15:15",
+          "all": "Snack and play",
+          "kind": "break"
+        },
+        {
+          "time": "15:15–15:30",
+          "all": "Goodbye / Pick-up",
+          "kind": "routine"
+        },
+        {
+          "time": "15:30–16:00",
+          "all": "Teacher time",
+          "kind": "routine"
+        }
+      ]
+    },
+    {
+      "key": "kindergarten",
+      "name": "Kindergarten",
+      "yearGroups": [
+        "Kindergarten"
+      ],
+      "note": "",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Welcome / Drop-off",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–9:15",
+          "days": [
+            {
+              "s": "Outside play",
+              "kind": ""
+            },
+            {
+              "s": "Outside play",
+              "kind": ""
+            },
+            {
+              "s": "Outside play",
+              "kind": ""
+            },
+            {
+              "s": "Outside play",
+              "kind": ""
+            },
+            {
+              "s": "Outside play",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:15–10:00",
+          "days": [
+            {
+              "s": "Phonics and Math",
+              "kind": ""
+            },
+            {
+              "s": "Phonics and Math",
+              "kind": ""
+            },
+            {
+              "s": "Phonics and Math",
+              "kind": ""
+            },
+            {
+              "s": "Phonics and Math",
+              "kind": ""
+            },
+            {
+              "s": "Phonics and Math",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:00–10:30",
+          "all": "Snack and play",
+          "kind": "break"
+        },
+        {
+          "time": "10:30–11:15",
+          "days": [
+            {
+              "s": "Literacy",
+              "kind": ""
+            },
+            {
+              "s": "Literacy",
+              "kind": ""
+            },
+            {
+              "s": "Literacy",
+              "kind": ""
+            },
+            {
+              "s": "Literacy",
+              "kind": ""
+            },
+            {
+              "s": "Literacy",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:15–13:45",
+          "all": "Lunch and nap",
+          "kind": "lunch"
+        },
+        {
+          "time": "13:45–14:45",
+          "days": [
+            {
+              "s": "Understanding the World",
+              "kind": ""
+            },
+            {
+              "s": "Understanding the World",
+              "kind": ""
+            },
+            {
+              "s": "Understanding the World",
+              "kind": ""
+            },
+            {
+              "s": "Understanding the World",
+              "kind": ""
+            },
+            {
+              "s": "Understanding the World",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:45–15:15",
+          "all": "Snack and play",
+          "kind": "break"
+        },
+        {
+          "time": "15:15–15:30",
+          "all": "Goodbye / Pick-up",
+          "kind": "routine"
+        },
+        {
+          "time": "15:30–16:00",
+          "all": "Teacher time",
+          "kind": "routine"
+        }
+      ]
+    },
+    {
+      "key": "year1",
+      "name": "Year 1",
+      "yearGroups": [
+        "Year 1"
+      ],
+      "note": "",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Arrival / Soft Start",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–8:45",
+          "all": "Homeroom",
+          "kind": "homeroom"
+        },
+        {
+          "time": "8:45–9:35",
+          "days": [
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:35–10:25",
+          "days": [
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:25–10:45",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "10:45–11:35",
+          "days": [
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:35–12:25",
+          "all": "Lunch",
+          "kind": "lunch"
+        },
+        {
+          "time": "12:25–13:15",
+          "days": [
+            {
+              "s": "Boredom",
+              "kind": ""
+            },
+            {
+              "s": "Practice, Presentation & Play",
+              "kind": ""
+            },
+            {
+              "s": "Technology",
+              "kind": ""
+            },
+            {
+              "s": "Cooking",
+              "kind": ""
+            },
+            {
+              "s": "Crafts",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "13:15–14:05",
+          "days": [
+            {
+              "s": "Movement & Exercise",
+              "kind": ""
+            },
+            {
+              "s": "Master Minds",
+              "kind": ""
+            },
+            {
+              "s": "Movement & Exercise",
+              "kind": ""
+            },
+            {
+              "s": "Cooking",
+              "kind": ""
+            },
+            {
+              "s": "Review",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:05–14:25",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "14:25–15:15",
+          "days": [
+            {
+              "s": "Practice, Presentation & Play",
+              "kind": ""
+            },
+            {
+              "s": "Boredom",
+              "kind": ""
+            },
+            {
+              "s": "Crafts",
+              "kind": ""
+            },
+            {
+              "s": "Technology",
+              "kind": ""
+            },
+            {
+              "s": "Boredom",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "year2_3",
+      "name": "Year 2–3",
+      "yearGroups": [
+        "Year 2",
+        "Year 3"
+      ],
+      "note": "",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Arrival / Soft Start",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–8:45",
+          "all": "Homeroom",
+          "kind": "homeroom"
+        },
+        {
+          "time": "8:45–9:35",
+          "days": [
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:35–10:25",
+          "days": [
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:25–10:45",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "10:45–11:35",
+          "days": [
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:35–12:25",
+          "all": "Lunch",
+          "kind": "lunch"
+        },
+        {
+          "time": "12:25–13:15",
+          "days": [
+            {
+              "s": "Review",
+              "kind": ""
+            },
+            {
+              "s": "Movement & Exercise",
+              "kind": ""
+            },
+            {
+              "s": "Dance",
+              "kind": ""
+            },
+            {
+              "s": "Movement & Exercise",
+              "kind": ""
+            },
+            {
+              "s": "Everyday Experts",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "13:15–14:05",
+          "days": [
+            {
+              "s": "Book Worms",
+              "kind": ""
+            },
+            {
+              "s": "Wellbeing",
+              "kind": ""
+            },
+            {
+              "s": "Craft",
+              "kind": ""
+            },
+            {
+              "s": "Review",
+              "kind": ""
+            },
+            {
+              "s": "Craft, then snack at 13:45",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:05–14:25",
+          "days": [
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Cooking",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:25–15:15",
+          "days": [
+            {
+              "s": "Technology",
+              "kind": ""
+            },
+            {
+              "s": "Everyday Experts",
+              "kind": ""
+            },
+            {
+              "s": "Boredom",
+              "kind": ""
+            },
+            {
+              "s": "Art",
+              "kind": ""
+            },
+            {
+              "s": "Cooking",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "year5",
+      "name": "Year 5",
+      "yearGroups": [
+        "Year 4",
+        "Year 5",
+        "Year 6"
+      ],
+      "note": "",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Arrival / Soft Start",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–8:45",
+          "all": "Homeroom",
+          "kind": "homeroom"
+        },
+        {
+          "time": "8:45–9:35",
+          "days": [
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:35–10:25",
+          "days": [
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:25–10:45",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "10:45–11:35",
+          "days": [
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:35–12:25",
+          "all": "Lunch",
+          "kind": "lunch"
+        },
+        {
+          "time": "12:25–13:15",
+          "days": [
+            {
+              "s": "Review",
+              "kind": ""
+            },
+            {
+              "s": "Movement & Exercise",
+              "kind": ""
+            },
+            {
+              "s": "Dance",
+              "kind": ""
+            },
+            {
+              "s": "Movement & Exercise",
+              "kind": ""
+            },
+            {
+              "s": "Everyday Experts",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "13:15–14:05",
+          "days": [
+            {
+              "s": "Book Worms",
+              "kind": ""
+            },
+            {
+              "s": "Wellbeing",
+              "kind": ""
+            },
+            {
+              "s": "Craft",
+              "kind": ""
+            },
+            {
+              "s": "Review",
+              "kind": ""
+            },
+            {
+              "s": "Craft, then snack at 13:45",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:05–14:25",
+          "days": [
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Snack / Break",
+              "kind": "break"
+            },
+            {
+              "s": "Cooking",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:25–15:15",
+          "days": [
+            {
+              "s": "Technology",
+              "kind": ""
+            },
+            {
+              "s": "Everyday Experts",
+              "kind": ""
+            },
+            {
+              "s": "Boredom",
+              "kind": ""
+            },
+            {
+              "s": "Art",
+              "kind": ""
+            },
+            {
+              "s": "Cooking",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "year7",
+      "name": "Year 7",
+      "yearGroups": [
+        "Year 7"
+      ],
+      "note": "",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Arrival / Soft Start",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–8:45",
+          "all": "Homeroom",
+          "kind": "homeroom"
+        },
+        {
+          "time": "8:45–9:35",
+          "days": [
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            },
+            {
+              "s": "Math",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:35–10:25",
+          "days": [
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            },
+            {
+              "s": "English",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:25–10:45",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "10:45–11:35",
+          "days": [
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            },
+            {
+              "s": "Science",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:35–12:25",
+          "days": [
+            {
+              "s": "History",
+              "kind": ""
+            },
+            {
+              "s": "Executive Function",
+              "kind": ""
+            },
+            {
+              "s": "History",
+              "kind": ""
+            },
+            {
+              "s": "Executive Function",
+              "kind": ""
+            },
+            {
+              "s": "Review: History / Executive Function",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "12:25–13:15",
+          "all": "Lunch",
+          "kind": "lunch"
+        },
+        {
+          "time": "13:15–14:05",
+          "days": [
+            {
+              "s": "Art of Science",
+              "kind": ""
+            },
+            {
+              "s": "Movement",
+              "kind": ""
+            },
+            {
+              "s": "Art of Science",
+              "kind": ""
+            },
+            {
+              "s": "Movement",
+              "kind": ""
+            },
+            {
+              "s": "Art of Science",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:05–14:25",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "14:25–15:20",
+          "days": [
+            {
+              "s": "Review",
+              "kind": ""
+            },
+            {
+              "s": "Maker Space",
+              "kind": ""
+            },
+            {
+              "s": "Maker Space",
+              "kind": ""
+            },
+            {
+              "s": "Review",
+              "kind": ""
+            },
+            {
+              "s": "Wellbeing",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "teens",
+      "name": "Teens",
+      "yearGroups": [
+        "Year 8",
+        "Year 9",
+        "Upper Secondary"
+      ],
+      "note": "Blocks 1 and 2 follow each student’s own program.",
+      "rows": [
+        {
+          "time": "8:00–8:30",
+          "all": "Arrival / Soft Start",
+          "kind": "routine"
+        },
+        {
+          "time": "8:30–8:45",
+          "all": "Homeroom",
+          "kind": "homeroom"
+        },
+        {
+          "time": "8:45–9:35",
+          "days": [
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "9:35–10:25",
+          "days": [
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            },
+            {
+              "s": "Block 1",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "10:25–10:45",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "10:45–11:35",
+          "days": [
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "11:35–12:25",
+          "days": [
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            },
+            {
+              "s": "Block 2",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "12:25–13:15",
+          "all": "Lunch",
+          "kind": "lunch"
+        },
+        {
+          "time": "13:15–14:05",
+          "days": [
+            {
+              "s": "Study time",
+              "kind": ""
+            },
+            {
+              "s": "Movement",
+              "kind": ""
+            },
+            {
+              "s": "Study time",
+              "kind": ""
+            },
+            {
+              "s": "Movement",
+              "kind": ""
+            },
+            {
+              "s": "Art of Science or Study time",
+              "kind": ""
+            }
+          ]
+        },
+        {
+          "time": "14:05–14:25",
+          "all": "Snack / Break",
+          "kind": "break"
+        },
+        {
+          "time": "14:25–15:20",
+          "days": [
+            {
+              "s": "Study time",
+              "kind": ""
+            },
+            {
+              "s": "Study time",
+              "kind": ""
+            },
+            {
+              "s": "Maker Space or Study time",
+              "kind": ""
+            },
+            {
+              "s": "Wellbeing",
+              "kind": ""
+            },
+            {
+              "s": "Study time",
+              "kind": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

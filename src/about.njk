@@ -1,75 +1,90 @@
 ---
 layout: layouts/base.njk
-title: "About"
-description: "Palm River Academy opened in 2017 in Cẩm Thanh, Hội An. A licensed English language center and a learning community for children from 20 months to 18 years."
+title: "About Us"
+description: "Palm River Academy is a licensed English language center in Hội An, open since 2017. Our vision, our staff and our story."
 ---
 
-<div class="wrap page-head">
-  <p class="eyebrow">About us</p>
-  <h1>A small place by the river, since 2017</h1>
-  <p class="lede">{{ site.licenceLine }} We are also, more simply, a learning community: children from 20 months to 18, twenty-odd adults, two campuses, and a lot of projects on the go.</p>
-</div>
+{% set heroPhoto = "students-waterfall-field-trip" %}
+{% set heroEyebrow = "About Us" %}
+{% set heroTitle = "Our vision. Our staff. Our story." %}
+{% set heroText = site.licenceLine + " We teach English through content, in small classes, to children from 20 months to 18 years." %}
+{% include "partials/pagehero.njk" %}
 
-<section class="band--paper">
+<section>
   <div class="wrap two">
     <div>
-      <h2>Our story, short version</h2>
-      <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn in English without sitting still all day. That is still the idea. We follow the Cambridge curriculum for English, Maths, and Science because it is clear and recognised anywhere, and we wrap it in things you can touch: cooking, art, technology, sport, and projects the students choose.</p>
-      <p>About half our families are Vietnamese and half are from somewhere else. About half our teachers, too. The children notice this less than the adults do.</p>
-      <p>Today we teach from 20 months to 18 years across two campuses in Cẩm Thanh, a few minutes apart. Academic classes never go above {{ site.classCap }} children.</p>
+      <p class="eyebrow">Our story</p>
+      <h2>Hội An's oldest international learning center</h2>
+      <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn English without sitting still all day. That is still the idea. We follow the Cambridge curriculum for English, Maths and Science because it is clear and recognised anywhere, and we wrap it in things you can touch: cooking, art, technology, sport, and projects the students choose.</p>
+      <p>We welcome students from 20 months to 18 years, Vietnamese and international families side by side. Academic classes never go above {{ site.classCap }} children. We prepare students for more than one path: universities abroad, or meaningful work at home.</p>
     </div>
-    {% photo "palm-river-academy-community-at-campus-wall", "photo--blob" %}
+    {% photo "primary-students-clay-modelling", "photo--lg photo--tilt-r" %}
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+<section class="band--pale">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">Our philosophy</p>
+      <h2>Students learn best when engaged</h2>
+      <p class="lede">We are an English language center, and we believe the fastest way to learn a language is to use it for something real. So we teach content through context: science, maths, cooking, art and sport, all in English, all hands-on.</p>
+    </div>
+    <div class="method">
+      <div class="method__item"><strong>Play-based and project-based</strong><p>Exploration and problem-solving over outcomes alone. In Early Years that means play. Later it means experiments, building, presenting and a personal project.</p></div>
+      <div class="method__item"><strong>English as the medium</strong><p>The language is never the lesson on its own. It is how you measure, explain, argue and present. Children pick it up because they need it.</p></div>
+      <div class="method__item"><strong>Confidence and independence</strong><p>Adaptable learners who think critically and creatively, ready to contribute at home and as global citizens.</p></div>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
-    <p class="eyebrow">How we teach</p>
-    <h2>Children learn when they are <span class="mark">doing something</span></h2>
-    <div class="two">
-      <div>
-        <p>We plan lessons around exploring and solving problems, not just around the answer at the end. In Early Years that means play. In Primary and Secondary it means experiments, building things, and presenting them to people. In Upper Years it means a personal project and a trip the students plan and budget themselves.</p>
-        <p>The point is confidence and independence. A child who has cooked for the class, presented a project to a room of parents, and explained a maths idea to a younger student is ready for most things, including exams.</p>
-      </div>
-      <ol class="values">
-        <li><div><strong>Intellectual exploration</strong><p>Ask, test, be wrong, try again.</p></div></li>
-        <li><div><strong>Creative expression</strong><p>Art, projects, and unusual solutions.</p></div></li>
-        <li><div><strong>Sports and fun</strong><p>Outside every day. It matters.</p></div></li>
-        <li><div><strong>Global citizenship</strong><p>Respect for other cultures, starting with the one at the next desk.</p></div></li>
-        <li><div><strong>Leadership</strong><p>Real responsibility, in small doses, from early on.</p></div></li>
-      </ol>
+    <div class="center narrow">
+      <p class="eyebrow">Our PRA values</p>
+      <h2>Six principles</h2>
     </div>
+    <ol class="values values--3">
+      <li><div><strong>Intellectual Exploration</strong><p>Curiosity and deep thinking through hands-on experiences that make students ask questions and find answers.</p></div></li>
+      <li><div><strong>Creative Expression</strong><p>Students develop their own voice through arts, projects and inventive problem-solving.</p></div></li>
+      <li><div><strong>Sports and Fun</strong><p>Play and physical activity are essential for healthy development and strong relationships.</p></div></li>
+      <li><div><strong>Community Impact</strong><p>Students take part in the life of Hội An and give something back to it.</p></div></li>
+      <li><div><strong>Global Citizenship</strong><p>Understanding and respecting other cultures, starting with the one at the next desk.</p></div></li>
+      <li><div><strong>Leadership Development</strong><p>Confidence and the skills to guide others and take initiative, in school and beyond.</p></div></li>
+    </ol>
   </div>
 </section>
 
-{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
-
-<section class="band--paper">
+<section class="band--pale">
   <div class="wrap">
-    <p class="eyebrow">The people</p>
-    <h2>Our team</h2>
-    <p class="lede">Vietnamese and international teachers. Every Cambridge subject teacher holds a degree in their subject, teaching experience, and a TESOL certificate, and is qualified to teach in Việt Nam.</p>
-    <ul class="team">
+    <div class="center narrow">
+      <p class="eyebrow">Our academy team</p>
+      <h2>Vietnamese and international teachers</h2>
+      <p class="lede">{{ team.intro }}</p>
+    </div>
+    <ul class="team" style="margin-top:32px">
       {% for m in team.members %}
       <li>
-        {% photo "team-" + m.slug, "photo--square photo--blob" + ("-b" if loop.index is even else ""), "160px" %}
+        {% if photos["team-" + m.slug] %}{% photo "team-" + m.slug, "", "120px" %}{% else %}<div class="avatar" aria-hidden="true">{{ m.name | replace("Mr. ", "") | replace("Ms. ", "") | first }}</div>{% endif %}
         <strong>{{ m.name }}</strong>
         <em>{{ m.role }}</em>
-        <p>{{ m.bio }}</p>
+        {% if m.teaches %}<small>{{ m.teaches }}</small>{% endif %}
+        {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
       </li>
       {% endfor %}
     </ul>
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
 <section>
-  <div class="wrap">
-    <h2>Two campuses in Cẩm Thanh</h2>
-    {% include "partials/campuses.njk" %}
+  <div class="wrap two">
+    {% photo site.campus.photo, "photo--lg photo--wide" %}
+    <div>
+      <p class="eyebrow">Our campus</p>
+      <h2>One site in Cẩm Thanh</h2>
+      <p>All our students, from Nursery to Upper Years, learn on one campus a few minutes from Hội An's old town: classrooms, a library, a kitchen, a maker space, a turf field, a sand playground and a treehouse.</p>
+      <p><strong>{{ site.campus.address }}</strong></p>
+      <a class="btn btn--primary" href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
+    </div>
   </div>
 </section>
 

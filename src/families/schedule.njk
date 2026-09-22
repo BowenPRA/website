@@ -1,32 +1,75 @@
 ---
 layout: layouts/base.njk
-title: "Daily schedule"
-description: "Daily timetables for each group at Palm River Academy, from Nursery to Year 9."
+title: "Schedule and calendar"
+description: "The weekly timetable for every class at Palm River Academy, from Nursery to Teens, plus the academic calendar."
 ---
 
-<div class="wrap page-head">
-  <p class="eyebrow">Families</p>
-  <h1>The daily schedule</h1>
-  <p class="lede">Each group's day is a mix of Cambridge subject time, vocational classes, PE, and pastoral time. Open your child's group.</p>
-</div>
+{% set heroPhoto = "gallery-twister-game" %}
+{% set heroEyebrow = "Schedule and calendar · " + schedule.schoolYear %}
+{% set heroTitle = "What a week looks like" %}
+{% set heroText = "Every class, every period, Monday to Friday. Mornings are Cambridge subjects in English. Afternoons are the hands-on classes. Pick a class below." %}
+{% include "partials/pagehero.njk" %}
 
-<section class="band--paper faq">
+<section data-tt>
   <div class="wrap">
-    {% set groups = ["Nursery", "Kindergarten", "Years 1 and 2", "Years 4 and 5", "Year 6", "Year 8", "Year 9"] %}
-    {% for g in groups %}
-    <details>
-      <summary>{{ g }}</summary>
+    <div class="tt-tabs" role="tablist" aria-label="Choose a class">
+      {% for k in schedule.classes %}
+      <button class="chip" type="button" role="tab" id="tab-{{ k.key }}" aria-controls="panel-{{ k.key }}" aria-selected="{{ 'true' if loop.first else 'false' }}" aria-pressed="{{ 'true' if loop.first else 'false' }}" data-key="{{ k.key }}">{{ k.name }}</button>
+      {% endfor %}
+    </div>
+
+    {% for k in schedule.classes %}
+    <div class="tt-panel" id="panel-{{ k.key }}" role="tabpanel" aria-labelledby="tab-{{ k.key }}" {% if not loop.first %}hidden{% endif %}>
+      <h3>{{ k.name }}</h3>
+      <p class="meta">{{ k.yearGroups | join(", ") }}{% if k.note %} · {{ k.note }}{% endif %}</p>
       <div class="table-wrap">
-        <table>
-          <thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr></thead>
+        <table class="tt">
+          <thead><tr><th>Time</th>{% for d in schedule.days %}<th>{{ d }}</th>{% endfor %}</tr></thead>
           <tbody>
-            <tr><td>8:00</td><td colspan="5" class="todo">TODO: paste the {{ g }} timetable here (or move all timetables into src/_data/schedule.json).</td></tr>
+            {% for r in k.rows %}
+            {% if r.all %}
+            <tr class="k-{{ r.kind }}"><td>{{ r.time }}</td><td class="all" colspan="{{ schedule.days.length }}">{{ r.all }}</td></tr>
+            {% else %}
+            {% set same = true %}{% for d in r.days %}{% if d.s != r.days[0].s %}{% set same = false %}{% endif %}{% endfor %}
+            {% if same %}
+            <tr class="k-{{ r.days[0].kind }}"><td>{{ r.time }}</td><td class="{{ 'all' if r.days[0].kind else 'lesson all' }}" colspan="{{ schedule.days.length }}">{{ r.days[0].s }}</td></tr>
+            {% else %}
+            <tr><td>{{ r.time }}</td>{% for d in r.days %}<td class="{{ 'lesson' if not d.kind }}">{{ d.s }}</td>{% endfor %}</tr>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
           </tbody>
         </table>
       </div>
-    </details>
+    </div>
     {% endfor %}
+
+    <p class="form__note" style="margin-top:20px">Boredom is a real class. Everyday Experts, Master Minds and Book Worms too. Ask us about them on your visit, they are more fun than they sound. Teachers' names are left off this page; you will meet them on the tour.</p>
   </div>
 </section>
 
+<section class="band--pale" id="calendar">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">Academic calendar</p>
+      <h2>Dates for {{ calendar.year }}</h2>
+    </div>
+    <div class="cal" style="margin-top:32px">
+      {% for m in calendar.months %}
+      <div class="cal__month">
+        <h3>{{ m.name }}</h3>
+        <ul>
+          {% for e in m.events %}
+          <li><time>{{ e.date }}</time>{{ e.what }}{% if e.tag %} <span class="tag tag--{{ e.tag | replace(' ', '-') }}">{{ e.tag }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="form__note" style="margin-top:24px">{{ calendar.note }}</p>
+  </div>
+</section>
+
+{% set ctaTitle = "Come and watch a real Tuesday." %}
+{% set ctaText = "Tours run on school days. Pick a morning and see the timetable in action." %}
 {% include "partials/cta.njk" %}

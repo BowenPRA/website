@@ -1,30 +1,28 @@
-{% set riverColor = "var(--ink)" %}{% include "partials/river.njk" %}
 <footer class="site-footer">
-  <svg class="site-footer__leaf" viewBox="0 0 200 200" aria-hidden="true">
-    <path d="M10 190 C 30 120, 80 60, 190 10 C 120 60, 80 110, 60 190 Z" fill="var(--palm)"/>
-    <path d="M10 190 C 60 150, 120 130, 190 130 C 120 140, 70 160, 40 195 Z" fill="var(--palm-light)"/>
-  </svg>
   <div class="wrap site-footer__grid">
     <div>
-      <p class="site-footer__name">{{ site.name }}</p>
+      <img class="site-footer__logo" src="{{ '/assets/img/logo.png' | url }}" alt="{{ site.name }}" width="1064" height="429">
       <p class="site-footer__tag">{{ site.tagline }}</p>
       <p class="site-footer__licence">{{ site.licenceLine }}</p>
+      <div class="social">
+        <a href="{{ site.social.facebook }}" rel="noopener" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg></a>
+        <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2c.2-.6.2-1.1.2-1.2l-.5-.3z"/></svg></a>
+      </div>
     </div>
     <div>
       <p class="site-footer__h">Find us</p>
-      {% for c in site.campuses %}
-      <p><strong>{{ c.name }}</strong><br>{{ c.address }}<br><a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a></p>
-      {% endfor %}
+      <p>{{ site.campus.address }}<br><a href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a></p>
+      <p>{{ site.hours }}</p>
     </div>
     <div>
       <p class="site-footer__h">Talk to us</p>
       <p><a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a><br>
-      <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
-      {{ site.hours }}</p>
-      <p><a href="{{ '/contact/' | url }}">Book a visit</a> · <a href="{{ '/admissions/' | url }}">How to enroll</a></p>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><a href="{{ '/contact/' | url }}">Book a tour</a> · <a href="{{ '/admissions/' | url }}">Enrollment</a> · <a href="{{ '/admissions/tuition-and-fees/' | url }}">Fees</a></p>
     </div>
   </div>
   <div class="wrap site-footer__small">
-    <p>© {{ '' | year }} {{ site.name }}. Serving families in Hội An and Đà Nẵng since {{ site.founded }}.</p>
+    <span>© {{ '' | year }} {{ site.name }}. Serving families in Hội An and Đà Nẵng since {{ site.founded }}.</span>
+    <span><a href="{{ '/families/handbook/' | url }}">Family handbook</a></span>
   </div>
 </footer>

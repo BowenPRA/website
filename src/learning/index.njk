@@ -1,49 +1,53 @@
 ---
 layout: layouts/base.njk
-title: "Learning"
-description: "Early Years, Primary, Secondary, Upper Years, and the Global Program at Palm River Academy, side by side."
+title: "Academics"
+description: "Early Years, Primary, Secondary, Upper Years and the Global Program at Palm River Academy, side by side."
 ---
 
-<div class="wrap page-head">
-  <p class="eyebrow">Learning</p>
-  <h1>Five programs, one way of working</h1>
-  <p class="lede">Whatever the age, the day has the same shape: academic subjects in English, something physical, something made with your hands. Pick your child's age below.</p>
-</div>
+{% set heroPhoto = "primary-students-clay-modelling" %}
+{% set heroEyebrow = "Academics" %}
+{% set heroTitle = "Five programs, one way of working" %}
+{% set heroText = "Whatever the age, the day has the same shape: academic subjects in English, something physical, something made with your hands." %}
+{% include "partials/pagehero.njk" %}
 
-<section class="band--paper">
+<section data-picker>
   <div class="wrap">
+    <p class="eyebrow">Start here</p>
+    <h2>How old is your child?</h2>
+    <p class="lede">Tap an age and we will show you the right program. Or read them all, they are short.</p>
+    <div class="picker__chips" role="group" aria-label="Filter programs by age">
+      {% for p in programs %}<button class="chip" type="button" data-key="{{ p.key }}" aria-pressed="false">{{ p.chip }}</button>{% endfor %}
+    </div>
     <div class="programs">
       {% for p in programs %}
-      <article class="program program--{{ p.colour }}">
+      <article class="program" data-key="{{ p.key }}">
         <p class="program__ages">{{ p.ages }}</p>
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
         <ul>{% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}</ul>
-        <a class="btn btn--ghost btn--small" href="{{ p.url | url }}">About {{ p.name }}</a>
+        <a class="btn btn--primary btn--small" href="{{ p.url | url }}">About {{ p.name }}</a>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
-<section>
+<section class="band--pale">
   <div class="wrap">
     <h2>Side by side</h2>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Program</th><th>Ages</th><th>Curriculum</th><th>Day</th><th>Class size</th></tr></thead>
         <tbody>
-          <tr><td>Early Years</td><td>20 months to 4</td><td>British EYFS, in English</td><td>Full or partial day</td><td>Small groups</td></tr>
-          <tr><td>Primary</td><td>5 to 11</td><td>Cambridge Primary + vocational</td><td>8:00 to 16:00</td><td>13 or fewer</td></tr>
-          <tr><td>Secondary</td><td>11 to 14</td><td>Cambridge Lower Secondary + vocational</td><td>8:00 to 16:00</td><td>13 or fewer</td></tr>
-          <tr><td>Upper Years</td><td>14 to 18</td><td>US diploma or Cambridge pathway, exam prep</td><td>8:00 to 16:00</td><td>13 or fewer</td></tr>
-          <tr><td>Global Program</td><td>2 to 14</td><td>Joins the above for 3 weeks to 3 months</td><td>Half or full day</td><td>13 or fewer</td></tr>
+          <tr><td>Early Years</td><td>20 months to 4</td><td>British EYFS, in English</td><td>8:00 to 15:30</td><td>Small groups, two teachers</td></tr>
+          <tr><td>Primary</td><td>Years 1 to 6</td><td>Cambridge Primary + afternoon classes</td><td>8:00 to 15:15</td><td>{{ site.classCap }} or fewer</td></tr>
+          <tr><td>Secondary</td><td>Years 7 to 9</td><td>Cambridge Lower Secondary + afternoon classes</td><td>8:00 to 15:20</td><td>{{ site.classCap }} or fewer</td></tr>
+          <tr><td>Upper Years</td><td>Ages 14 to 18</td><td>US diploma or Cambridge pathway, exam prep</td><td>8:00 to 15:20</td><td>{{ site.classCap }} or fewer</td></tr>
+          <tr><td>Global Program</td><td>2 to 14</td><td>Joins the above for 3 weeks to 3 months</td><td>Half or full day</td><td>{{ site.classCap }} or fewer</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="form__note">Exact hours per group are on the <a href="{{ '/families/schedule/' | url }}">daily schedule</a>.</p>
+    <p class="form__note">Every group's full week is on the <a href="{{ '/families/schedule/' | url }}">schedule page</a>.</p>
   </div>
 </section>
 

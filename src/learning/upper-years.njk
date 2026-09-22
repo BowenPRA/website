@@ -1,35 +1,30 @@
 ---
 layout: layouts/base.njk
 title: "Upper Years"
-description: "Upper Years at Palm River Academy for students aged 14 to 18. A US diploma or Cambridge pathway at your own pace, IELTS, PTE and GED preparation, a personal project, and a student-planned trip."
+description: "Upper Years at Palm River Academy for students aged 14 to 18. A US diploma or Cambridge pathway at your own pace, IELTS, PTE and GED preparation, a personal project and a student-planned trip."
 ---
 
-<div class="wrap page-head">
-  <p class="eyebrow">Upper Years · 14 to 18 years</p>
-  <h1>Your own pace, with a coach in the room</h1>
-  <p class="lede">Upper Years students work toward a US high school diploma or a Cambridge pathway through accredited online courses, with our teachers coaching them daily. Alongside that: exam preparation, a personal project, and one trip a year that the students plan and budget themselves.</p>
-</div>
+{% set heroPhoto = "upper-years-students-group-project" %}
+{% set heroEyebrow = "Upper Years · ages 14 to 18" %}
+{% set heroTitle = "Your own pace, with a coach in the room" %}
+{% set heroText = "Upper Years students work toward a US high school diploma or a Cambridge pathway through accredited online courses, with our teachers coaching them in every block. Alongside that: exam preparation, a personal project, and one trip a year that the students plan and budget themselves." %}
+{% include "partials/pagehero.njk" %}
 
-<section class="band--paper">
+<section>
   <div class="wrap">
-    <h2>Two pathways</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>US diploma</h3>
-        <p>An online high school program accredited in the US, leading to a diploma recognised by the US Department of Education. Students move through courses at their own pace with a PRA teacher tracking progress and unblocking them every day.</p>
-      </div>
-      <div class="card">
-        <h3>Cambridge pathway</h3>
-        <p>For students aiming at UK-style university admission. Cambridge-backed courses toward IGCSE and beyond, supported by our subject teachers.</p>
-      </div>
+    <div class="center narrow">
+      <p class="eyebrow">Two pathways</p>
+      <h2>Choose the route, keep the day</h2>
+      <p class="lede">The Teens class runs two morning blocks where every student follows their own program with a teacher beside them. The afternoons are shared: Movement, Art of Science, Maker Space, Wellbeing and study time.</p>
     </div>
-    <p class="form__note">Not sure which fits? That is what the first conversation is for. <a href="{{ '/contact/' | url }}">Ask us.</a></p>
+    <div class="cards" style="margin-top:32px">
+      <div class="card card--blue"><h3>US diploma</h3><p>An online high school program accredited in the US, leading to a diploma recognised by the US Department of Education. Students move through courses at their own pace with a PRA teacher tracking progress and unblocking them every day.</p></div>
+      <div class="card card--green"><h3>Cambridge pathway</h3><p>For students aiming at UK-style university admission. Cambridge-backed courses toward IGCSE and beyond, supported by our subject teachers.</p></div>
+    </div>
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
-<section>
+<section class="band--pale">
   <div class="wrap two">
     <div>
       <h2>Exams we prepare for</h2>
@@ -39,16 +34,18 @@ description: "Upper Years at Palm River Academy for students aged 14 to 18. A US
       <h2>The trip</h2>
       <p>Once a year the Upper Years plan an educational trip: destination, budget, itinerary, logistics. They do the spreadsheets. We check them.</p>
     </div>
-    {% photo "upper-years-group-project-laptop", "photo--blob" %}
+    {% photo "upper-years-science-with-teacher", "photo--lg photo--tilt" %}
   </div>
 </section>
 
-{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
-
-<section class="band--paper">
-  <div class="wrap">
-    <h2>Where our students have gone</h2>
-    <p>More than ten former students are now at high schools and universities overseas. <span class="todo">TODO: two or three named examples with the family's permission.</span></p>
+<section>
+  <div class="wrap two two--flip">
+    {% photo "gallery-chess-library", "photo--lg photo--square photo--tilt-r" %}
+    <div>
+      <h2>Where our students have gone</h2>
+      <p>More than ten former students are now at high schools and universities overseas. <span class="todo">TODO: two or three named examples with the family's permission.</span></p>
+      <a class="btn btn--primary btn--small" href="{{ '/families/schedule/' | url }}">See the Teens week</a>
+    </div>
   </div>
 </section>
 

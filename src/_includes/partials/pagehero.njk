@@ -1,0 +1,9 @@
+<section class="hero hero--inner">
+  <div class="hero__bg">{% photo heroPhoto, "", "100vw", true %}</div>
+  <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-a.webp' | url }}" alt="" width="900" height="910">
+  <div class="wrap hero__inner">
+    {% if heroEyebrow %}<p class="eyebrow" style="color:#fff">{{ heroEyebrow }}</p>{% endif %}
+    <h1>{{ heroTitle }}</h1>
+    {% if heroText %}<p class="lede">{{ heroText }}</p>{% endif %}
+  </div>
+</section>

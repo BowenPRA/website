@@ -6,34 +6,29 @@
 
     <nav class="nav-desktop" aria-label="Main">
       <ul>
-        <li><a href="{{ '/about/' | url }}">About</a></li>
+        <li><a href="{{ '/about/' | url }}">About Us</a></li>
         <li class="has-menu">
-          <a href="{{ '/learning/' | url }}">Learning</a>
+          <a href="{{ '/learning/' | url }}">Academics</a>
           <ul class="menu">
-            <li><a href="{{ '/learning/early-years/' | url }}">Early Years <small>20 months to 4</small></a></li>
-            <li><a href="{{ '/learning/primary/' | url }}">Primary <small>5 to 11</small></a></li>
-            <li><a href="{{ '/learning/secondary/' | url }}">Secondary <small>11 to 14</small></a></li>
-            <li><a href="{{ '/learning/upper-years/' | url }}">Upper Years <small>14 to 18</small></a></li>
+            <li><a href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten, 20 months to 4</small></a></li>
+            <li><a href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a></li>
+            <li><a href="{{ '/learning/secondary/' | url }}">Secondary <small>Years 7 to 9</small></a></li>
+            <li><a href="{{ '/learning/upper-years/' | url }}">Upper Years <small>Ages 14 to 18</small></a></li>
             <li><a href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a></li>
           </ul>
         </li>
         <li class="has-menu">
           <a href="{{ '/admissions/' | url }}">Admissions</a>
           <ul class="menu">
-            <li><a href="{{ '/admissions/' | url }}">How to enroll</a></li>
+            <li><a href="{{ '/admissions/' | url }}">Enrollment</a></li>
             <li><a href="{{ '/admissions/tuition-and-fees/' | url }}">Tuition and fees</a></li>
-          </ul>
-        </li>
-        <li class="has-menu">
-          <a href="{{ '/families/calendar/' | url }}">Families</a>
-          <ul class="menu">
-            <li><a href="{{ '/families/calendar/' | url }}">Calendar</a></li>
-            <li><a href="{{ '/families/schedule/' | url }}">Daily schedule</a></li>
+            <li><a href="{{ '/families/schedule/' | url }}">Schedule and calendar</a></li>
             <li><a href="{{ '/families/handbook/' | url }}">Family handbook</a></li>
+            <li><a href="{{ '/contact/' | url }}">Book a tour</a></li>
           </ul>
         </li>
       </ul>
-      <a class="btn btn--primary btn--small" href="{{ '/contact/' | url }}">Book a visit</a>
+      <a class="btn btn--green btn--small" href="{{ '/contact/' | url }}">Contact Us</a>
     </nav>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sheet">
@@ -46,29 +41,25 @@
 <nav class="sheet" id="sheet" aria-label="Main, mobile" hidden>
   <div class="sheet__group">
     <a class="sheet__top" href="{{ '/' | url }}">Home</a>
-    <a class="sheet__top" href="{{ '/about/' | url }}">About</a>
+    <a class="sheet__top" href="{{ '/about/' | url }}">About Us</a>
   </div>
   <div class="sheet__group">
-    <span class="sheet__label">Learning</span>
-    <a href="{{ '/learning/early-years/' | url }}">Early Years <small>20 months to 4</small></a>
-    <a href="{{ '/learning/primary/' | url }}">Primary <small>5 to 11</small></a>
-    <a href="{{ '/learning/secondary/' | url }}">Secondary <small>11 to 14</small></a>
-    <a href="{{ '/learning/upper-years/' | url }}">Upper Years <small>14 to 18</small></a>
+    <span class="sheet__label">Academics</span>
+    <a href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten</small></a>
+    <a href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a>
+    <a href="{{ '/learning/secondary/' | url }}">Secondary <small>Years 7 to 9</small></a>
+    <a href="{{ '/learning/upper-years/' | url }}">Upper Years <small>Ages 14 to 18</small></a>
     <a href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a>
   </div>
   <div class="sheet__group">
     <span class="sheet__label">Admissions</span>
-    <a href="{{ '/admissions/' | url }}">How to enroll</a>
+    <a href="{{ '/admissions/' | url }}">Enrollment</a>
     <a href="{{ '/admissions/tuition-and-fees/' | url }}">Tuition and fees</a>
-  </div>
-  <div class="sheet__group">
-    <span class="sheet__label">Families</span>
-    <a href="{{ '/families/calendar/' | url }}">Calendar</a>
-    <a href="{{ '/families/schedule/' | url }}">Daily schedule</a>
+    <a href="{{ '/families/schedule/' | url }}">Schedule and calendar</a>
     <a href="{{ '/families/handbook/' | url }}">Family handbook</a>
   </div>
   <div class="sheet__group sheet__group--cta">
-    <a class="btn btn--primary" href="{{ '/contact/' | url }}">Book a visit</a>
+    <a class="btn btn--green" href="{{ '/contact/' | url }}">Contact Us</a>
     <a class="sheet__phone" href="tel:{{ site.phoneIntl }}">Call {{ site.phone }}</a>
   </div>
 </nav>

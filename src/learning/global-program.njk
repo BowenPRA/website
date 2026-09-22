@@ -4,65 +4,47 @@ title: "Global Program"
 description: "The Global Program at Palm River Academy is a 3 week to 3 month program for travelling families in Hội An. Half-day and full-day options, ages 2 to 14, with a progress report and certificate."
 ---
 
-<div class="wrap page-head">
-  <p class="eyebrow">Global Program · 3 weeks to 3 months</p>
-  <h1>For families passing through Hội An</h1>
-  <p class="lede">Not everyone follows a school calendar. If you are travelling, here for a season, or between schools, your child can join us for three weeks to three months. They join a real class with our regular students, not a separate holiday group.</p>
-</div>
+{% set heroPhoto = "global-program-rice-paddy-hoi-an" %}
+{% set heroEyebrow = "Global Program · 3 weeks to 3 months" %}
+{% set heroTitle = "For families passing through Hội An" %}
+{% set heroText = "Not everyone follows a school calendar. If you are travelling, here for a season, or between schools, your child can join us for three weeks to three months. They join a real class with our regular students, not a separate holiday group." %}
+{% include "partials/pagehero.njk" %}
 
-<section class="band--paper">
+<section>
   <div class="wrap">
-    <h2>Four ways to join</h2>
-    <div class="cards">
-      <div class="card">
-        <p class="program__ages">Ages 2 to 5</p>
-        <h3>Early Years</h3>
-        <p>Play-based days in English following the British EYFS framework. Stories, music, movement, sand, water. Short-term children settle in quickly because the days are predictable and warm.</p>
-      </div>
-      <div class="card">
-        <p class="program__ages">Years 1 to 9 · half day</p>
-        <h3>Vocational half day</h3>
-        <p>For children who learn by doing. Cooking and nutrition, public speaking, creative play and innovation, PE and movement, art and design. Making, not sitting.</p>
-      </div>
-      <div class="card">
-        <p class="program__ages">Years 1 to 9 · half day</p>
-        <h3>Academic half day</h3>
-        <p>Keep up with school while you are away. Cambridge English, Maths, and Science in small classes, without committing to a full day.</p>
-      </div>
-      <div class="card">
-        <p class="program__ages">Years 1 to 9 · full day</p>
-        <h3>Cambridge plus vocational, full day</h3>
-        <p>The whole PRA day: Cambridge core subjects in the morning and vocational classes in the afternoon. This is what our regular students do.</p>
-      </div>
+    <div class="center narrow">
+      <p class="eyebrow">Four pathways</p>
+      <h2>Tailored to your child's age and goals</h2>
+    </div>
+    <div class="cards" style="margin-top:32px">
+      <div class="card"><span class="card__tag">Ages 2 to 5</span><h3>Early Years</h3><p>Play-based days in English following the British EYFS framework. Stories, music, movement, sand, water. Short-term children settle in quickly because the days are predictable and warm.</p></div>
+      <div class="card"><span class="card__tag">Years 1 to 9 · half day</span><h3>Vocational half day</h3><p>For children who learn by doing. Cooking and nutrition, public speaking, creative play and innovation, PE and movement, art and design. Making, not sitting.</p></div>
+      <div class="card"><span class="card__tag">Years 1 to 9 · half day</span><h3>Academic half day</h3><p>Keep up with school while you are away. Cambridge English, Maths and Science in small classes, without committing to a full day.</p></div>
+      <div class="card"><span class="card__tag">Years 1 to 9 · full day</span><h3>Cambridge plus vocational, full day</h3><p>The whole PRA day: Cambridge core subjects in the morning and hands-on classes in the afternoon. This is what our regular students do.</p></div>
     </div>
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
-<section>
+<section class="band--green">
   <div class="wrap two">
     <div>
-      <h2>What you go home with</h2>
+      <h2>Progress and completion</h2>
       <ul>
         <li>A written progress report within the first two weeks, so you know how your child is settling.</li>
         <li>A final report at the end of the stay.</li>
         <li>A Certificate of Completion. Useful for the school back home, and nice on the fridge.</li>
       </ul>
-      <h2>What it costs</h2>
-      <p>From 4,200,000 VND per week when you book ten weeks or more. Shorter stays cost a little more per week. The full table is on the <a href="{{ '/admissions/tuition-and-fees/' | url }}">fees page</a>.</p>
+      <p style="margin-top:16px"><strong>From 4,200,000 VND per week</strong> when you book ten weeks or more. Shorter stays cost a little more per week. The full table is on the <a href="{{ '/admissions/tuition-and-fees/' | url }}" style="color:#fff">fees page</a>.</p>
     </div>
-    {% photo "year-5-rice-paddy-field-trip-hoi-an", "photo--blob-b" %}
+    {% photo "global-program-nature-walk", "photo--lg" %}
   </div>
 </section>
 
-{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
-
-<section class="band--paper faq">
-  <div class="wrap">
+<section class="faq">
+  <div class="wrap narrow">
     <h2>Questions travelling families ask</h2>
     <details><summary>When can we start?</summary><p class="todo">TODO: confirm start days, minimum notice, and whether starts are possible during holidays.</p></details>
-    <details><summary>Does my child need English?</summary><p class="todo">TODO: confirm the minimum for each pathway. Early Years and the vocational half day are usually fine with little English.</p></details>
+    <details><summary>Does my child need English?</summary><p class="todo">TODO: confirm the minimum for each pathway.</p></details>
     <details><summary>Can we try a day first?</summary><p class="todo">TODO: trial day policy.</p></details>
     <details><summary>Is lunch included?</summary><p class="todo">TODO.</p></details>
   </div>

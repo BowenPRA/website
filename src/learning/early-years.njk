@@ -4,45 +4,44 @@ title: "Early Years"
 description: "Nursery and Kindergarten at Palm River Academy for children from 20 months to 4 years. Play-based, in English, following the British EYFS framework."
 ---
 
-<div class="wrap page-head">
-  <p class="eyebrow">Early Years · 20 months to 4 years</p>
-  <h1>Play is the work</h1>
-  <p class="lede">Our Nursery and Kindergarten groups spend the day in English, mostly outside, mostly playing. We follow the British Early Years Foundation Stage framework, which is a careful way of saying we watch what each child is ready for and set it up.</p>
-</div>
+{% set heroPhoto = "early-years-paddling-pool" %}
+{% set heroEyebrow = "Early Years · 20 months to 4 years" %}
+{% set heroTitle = "Play is the work" %}
+{% set heroText = "Nursery and Kindergarten spend the day in English, much of it outside, most of it playing. We follow the British Early Years Foundation Stage framework, which is a careful way of saying we watch what each child is ready for and set it up." %}
+{% include "partials/pagehero.njk" %}
 
-<section class="band--paper">
-  <div class="wrap two two--flip">
-    {% photo "early-years-water-play-paddling-pool", "photo--blob" %}
+<section>
+  <div class="wrap two">
     <div>
-      <h2>What a morning looks like</h2>
-      <p>Children arrive, choose something to do, and are quietly steered toward what they need: a story, a song, a tricky puzzle, a friend they have not played with yet. There is a snack, a run outside, and a short group time with phonics or counting hidden inside a game.</p>
-      <p>The youngest ones can do a partial day and go home after lunch. Everyone naps or rests in the early afternoon.</p>
+      <p class="eyebrow">Two groups</p>
+      <h2>Nursery and Kindergarten</h2>
+      <p><strong>Nursery</strong> has two teachers in the room all day. The morning is learning time in short bursts: a story, a song, a tricky puzzle, a friend to play with. Then snack and play, lunch and a nap, and a gentler afternoon.</p>
+      <p><strong>Kindergarten</strong> starts every day outside. Then phonics and maths, literacy, and after lunch a subject called Understanding the World, which is science and geography for four-year-olds.</p>
+      <p>Both groups pick up English from the room. Most of our youngest children arrive with none.</p>
+      <a class="btn btn--primary btn--small" href="{{ '/families/schedule/' | url }}">See the Nursery and Kindergarten week</a>
     </div>
+    {% photo "early-years-rainbow-parachute", "photo--lg photo--tilt" %}
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
-<section>
+<section class="band--pale">
   <div class="wrap">
     <h2>Four things we watch for</h2>
     <div class="cards">
-      <div class="card"><h3>Getting along</h3><p>Sharing, waiting, saying what you need, calming down. Cooperative play with a teacher nearby to help it go well.</p></div>
-      <div class="card"><h3>Moving</h3><p>Climbing, balancing, pouring, cutting, drawing. Big movements and small ones, every day.</p></div>
-      <div class="card"><h3>Language and early reading</h3><p>Stories, songs, and a lot of conversation in English. Phonics starts when a child is curious about letters, not before.</p></div>
-      <div class="card"><h3>Numbers and patterns</h3><p>Counting real things, sorting, noticing shapes. Maths as something you do with your hands first.</p></div>
+      <div class="card"><h3>Social and emotional skills</h3><p>Sharing, waiting, saying what you need, calming down. Cooperative play with a teacher nearby to help it go well.</p></div>
+      <div class="card"><h3>Physical development</h3><p>Climbing, balancing, pouring, cutting, drawing. Big movements and small ones, every day, on the turf and in the sand.</p></div>
+      <div class="card"><h3>Language and literacy</h3><p>Stories, songs and a lot of conversation in English. Phonics starts when a child is curious about letters, not before.</p></div>
+      <div class="card"><h3>Mathematics and reasoning</h3><p>Counting real things, sorting, noticing shapes and patterns. Maths as something you do with your hands first.</p></div>
     </div>
   </div>
 </section>
 
-{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
-
-<section class="band--paper faq">
-  <div class="wrap">
+<section class="faq">
+  <div class="wrap narrow">
     <h2>Questions parents ask</h2>
     <details><summary>Does my child need any English to start?</summary><p>No. Most of our youngest children arrive with none. They pick it up from the room.</p></details>
-    <details><summary>Can we start with a few days a week?</summary><p class="todo">TODO: confirm the options for partial weeks and partial days, and the earliest starting age for each.</p></details>
-    <details><summary>What about nappies and naps?</summary><p class="todo">TODO: one paragraph on toileting, rest time, and what to bring.</p></details>
+    <details><summary>Can we start with a few days a week?</summary><p class="todo">TODO: confirm the options for partial weeks and partial days, and the earliest starting age.</p></details>
+    <details><summary>What about nappies and naps?</summary><p class="todo">TODO: one paragraph on toileting, rest time and what to bring.</p></details>
     <details><summary>Is there a progress report?</summary><p>Yes. Early Years families get a written progress report describing what their child is exploring and what comes next.</p></details>
   </div>
 </section>

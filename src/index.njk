@@ -1,125 +1,127 @@
 ---
 layout: layouts/base.njk
-title: "Learning by doing, in Hội An"
-description: "Palm River Academy is a learning community in Hội An for children from 20 months to 18 years. Classes of 13 or fewer, Cambridge subjects, real projects, outside time every day."
+title: "English, learned by doing"
+description: "Palm River Academy is an English language center in Hội An for children from 20 months to 18. We teach English through science, maths, cooking, art and sport, in classes of 13 or fewer."
 ---
 
 <section class="hero">
-  <svg class="hero__leaf" viewBox="0 0 200 200" aria-hidden="true">
-    <path d="M190 190 C 170 120, 120 60, 10 10 C 80 60, 120 110, 140 190 Z" fill="var(--palm)"/>
-    <path d="M190 190 C 140 150, 80 130, 10 130 C 80 140, 130 160, 160 195 Z" fill="var(--palm-light)"/>
-  </svg>
-  <div class="wrap hero__grid">
-    <div>
-      <p class="eyebrow">Hội An · since {{ site.founded }}</p>
-      <h1>Kids learn best when they are <span class="mark">making something.</span></h1>
-      <p class="lede">Palm River Academy is a learning community for children from 20 months to 18 years. Cambridge subjects in English, real projects, classes of {{ site.classCap }} or fewer, and time outside every single day.</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="{{ '/contact/' | url }}">Book a visit</a>
-        <a class="btn btn--ghost" href="{{ '/learning/' | url }}">See what we teach</a>
-      </div>
-    </div>
-    {% photo "year-1-students-building-magnetic-tiles-outdoors", "photo--blob", "(min-width: 900px) 45vw, 100vw", true %}
-  </div>
-</section>
-
-{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
-
-<section class="band--paper" data-picker>
-  <div class="wrap">
-    <p class="eyebrow">Start here</p>
-    <h2>How old is your child?</h2>
-    <p class="lede">Tap an age and we will show you the right program. Or just read them all, they are short.</p>
-    <div class="picker__chips" role="group" aria-label="Filter programs by age">
-      {% for p in programs %}
-      <button class="chip" type="button" data-key="{{ p.key }}" aria-pressed="false">{{ p.chip }}</button>
-      {% endfor %}
-    </div>
-    <div class="programs">
-      {% for p in programs %}
-      <article class="program program--{{ p.colour }}" data-key="{{ p.key }}">
-        <p class="program__ages">{{ p.ages }}</p>
-        <h3>{{ p.name }}</h3>
-        <p>{{ p.summary }}</p>
-        <ul>
-          {% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}
-        </ul>
-        <a class="btn btn--ghost btn--small" href="{{ p.url | url }}">About {{ p.name }}</a>
-      </article>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
-<section>
-  <div class="wrap">
-    <div class="facts">
-      <div class="fact"><p class="fact__num">{{ site.founded }}</p><p>The year we opened. That makes us Hội An's oldest international learning center.</p></div>
-      <div class="fact"><p class="fact__num fact__num--palm">{{ site.classCap }}</p><p>The most children you will ever find in one of our academic classes.</p></div>
-      <div class="fact"><p class="fact__num fact__num--mango">22+</p><p>Teachers and staff, about half Vietnamese and half from abroad.</p></div>
-      <div class="fact"><p class="fact__num">10+</p><p>Former students now at high schools and universities overseas.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="band--river">
-  <div class="wrap">
-    <p class="eyebrow">A normal Tuesday</p>
-    <h2>What a day here looks like</h2>
-    <p class="lede">Every group's timetable is a bit different. This is the shape of it.</p>
-    <ol class="day">
-      <li><time>8:00</time><p>Arrive, put your bag away, morning meeting with your class.</p></li>
-      <li><time>Morning</time><p>Cambridge English, Maths, and Science. Small groups, a lot of talking and doing.</p></li>
-      <li><time>Late morning</time><p>Outside. PE, games, or just running about. Every day, rain or shine (mostly shine).</p></li>
-      <li><time>Afternoon</time><p>Vocational classes on rotation: cooking, art and design, technology, public speaking.</p></li>
-      <li><time>16:00</time><p>Home. Usually a bit muddy.</p></li>
-    </ol>
-    <div class="strip">
-      {% photo "nursery-child-watercolour-painting", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "primary-students-reading-corner", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "nursery-children-sand-pit-play", "", "(min-width: 720px) 25vw, 50vw" %}
-      {% photo "secondary-students-printing-mural", "", "(min-width: 720px) 25vw, 50vw" %}
+  <div class="hero__bg">{% photo "hero-cooking-class-hoi-an", "", "100vw", true %}</div>
+  <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-a.webp' | url }}" alt="" width="900" height="910">
+  <img class="leaf leaf--bl" src="{{ '/assets/img/leaf-b.webp' | url }}" alt="" width="900" height="910">
+  <div class="wrap hero__inner">
+    <p class="eyebrow" style="color:#fff">Palm River Academy · English Language Center · Hội An</p>
+    <h1>English, learned by doing.</h1>
+    <p class="lede">We are an English language center for children from 20 months to 18 years. Our students learn English through science, maths, cooking, art and sport. Content through context. Less studying English, more doing things in English.</p>
+    <div class="hero__actions">
+      <a class="btn btn--green" href="{{ '/contact/' | url }}">Book a tour</a>
+      <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <p class="eyebrow">What we care about</p>
-    <h2>Five things, in the order the kids would put them</h2>
-    <ol class="values">
-      <li><div><strong>Sports and fun</strong><p>Play and moving around are not a break from learning. They are part of it.</p></div></li>
-      <li><div><strong>Intellectual exploration</strong><p>Ask the question, run the experiment, be wrong, try again.</p></div></li>
-      <li><div><strong>Creative expression</strong><p>Art, projects, and odd ideas that turn out to be good ones.</p></div></li>
-      <li><div><strong>Global citizenship</strong><p>Vietnamese and international kids in the same room, learning from each other first.</p></div></li>
-      <li><div><strong>Leadership</strong><p>Older students plan real things, like the annual trip, with a real budget.</p></div></li>
-    </ol>
-  </div>
-</section>
-
-{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
-
-<section class="band--paper">
   <div class="wrap two">
-    {% photo "global-program-nature-walk-hoi-an", "photo--blob-b" %}
     <div>
-      <p class="eyebrow">Passing through Hội An?</p>
-      <h2>Join us for three weeks or three months</h2>
-      <p>The Global Program is for travelling families and families here for a season. Your child joins a real class with our regular students, not a holiday club. Half days or full days, ages 2 to 14. You get a progress report in the first two weeks and a certificate at the end.</p>
-      <a class="btn btn--palm" href="{{ '/learning/global-program/' | url }}">How the Global Program works</a>
+      <p class="eyebrow">Discover our story</p>
+      <h2>Serving families in Hội An and Đà Nẵng since {{ site.founded }}</h2>
+      <p class="lede lede--blue">Hội An's oldest international learning center.</p>
+      <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn English without sitting still all day. That is still the idea. We combine the Cambridge curriculum with small classes and real-world skills: public speaking, art, technology, cooking, sport. About half our families are Vietnamese and half are from abroad, and the same goes for our teachers.</p>
+      <a class="btn btn--primary" href="{{ '/about/' | url }}">About us</a>
+    </div>
+    {% photo "students-waterfall-field-trip", "photo--lg photo--tilt-r" %}
+  </div>
+</section>
+
+<div class="marquee band--blue" aria-hidden="true">
+  <svg class="marquee__leaf" viewBox="0 0 100 100"><path d="M50 95 C 20 70, 10 35, 50 5 C 90 35, 80 70, 50 95 Z" fill="var(--green-light)"/><path d="M50 12 L50 90" stroke="#fff" stroke-width="3" opacity=".6"/><circle class="eye" cx="42" cy="40" r="7"/><circle class="eye" cx="58" cy="40" r="7"/><circle class="pupil" cx="43" cy="41" r="3"/><circle class="pupil" cx="59" cy="41" r="3"/></svg>
+  <div class="marquee__track">
+    <span>Intellectual Exploration</span><span>Creative Expression</span><span>Sports and Fun</span><span>Community Impact</span><span>Global Citizenship</span><span>Leadership</span>
+    <span>Intellectual Exploration</span><span>Creative Expression</span><span>Sports and Fun</span><span>Community Impact</span><span>Global Citizenship</span><span>Leadership</span>
+  </div>
+</div>
+
+<section class="band--pale">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">How we teach English</p>
+      <h2>Content through context</h2>
+      <p class="lede">Nobody learns a language from a worksheet. Our students learn English because they need it to measure the flour, explain the experiment and argue about the rules of the game.</p>
+    </div>
+    <div class="method">
+      <div class="method__item"><strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, taught in English by qualified teachers. The language comes with the content.</p></div>
+      <div class="method__item"><strong>Doing, not drilling</strong><p>Cooking, technology, crafts, art, movement, Maker Space, Art of Science, Everyday Experts. Every afternoon is hands-on.</p></div>
+      <div class="method__item"><strong>Small enough to talk</strong><p>Never more than {{ site.classCap }} in an academic class, so every child speaks, gets heard and gets corrected kindly.</p></div>
     </div>
   </div>
 </section>
 
-{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
-
 <section>
   <div class="wrap">
-    <p class="eyebrow">Two campuses, five minutes apart</p>
-    <h2>Find us in Cẩm Thanh</h2>
-    {% include "partials/campuses.njk" %}
+    <div class="center narrow">
+      <p class="eyebrow">Academics</p>
+      <h2>From 20 months to 18 years</h2>
+      <p class="lede">Pick your child's stage. Every one of them keeps the same shape: academic subjects in English, something physical, something made with your hands.</p>
+    </div>
+    <div class="tiles" style="margin-top:36px">
+      {% for p in programs %}{% if p.key != 'global' %}
+      <a class="tile" href="{{ p.url | url }}">
+        {% photo p.photo, "", "(min-width: 900px) 25vw, 50vw" %}
+        <span class="tile__label"><strong>{{ p.name }}</strong><small>{{ p.ages }}</small></span>
+      </a>
+      {% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band--blue">
+  <div class="wrap stats">
+    <div class="stat"><p class="stat__num">&lt; {{ site.classCap }}</p><h3>Per class</h3><p>Every academic class is capped at {{ site.classCap }} students, so every child gets care and attention.</p></div>
+    <div class="stat"><p class="stat__num">22+</p><h3>Qualified staff</h3><p>International and Vietnamese teachers with experience at every level, from Nursery to Upper Years.</p></div>
+    <div class="stat"><p class="stat__num">10+</p><h3>Alumni abroad</h3><p>PRA students have gone on to high schools and universities overseas.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two two--flip">
+    {% photo "global-program-nature-walk", "photo--lg photo--tilt" %}
+    <div>
+      <p class="eyebrow">Visiting Hội An?</p>
+      <h2>The Global Program</h2>
+      <p>Whether you are a travelling family, living in Hội An for a season, or looking for a short-term program to keep your child learning, the Global Program gives you real classes with our regular students for three weeks to three months. Half days or full days, ages 2 to 14, with a progress report and a certificate at the end.</p>
+      <a class="btn btn--green" href="{{ '/learning/global-program/' | url }}">How it works</a>
+    </div>
+  </div>
+</section>
+
+<section class="band--pale">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">Campus life</p>
+      <h2>Live, learn and grow at Palm River Academy</h2>
+    </div>
+    <div class="gallery" style="margin-top:32px">
+      {% photo "gallery-lantern-workshop", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-magnetic-tiles", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-cupcake-decorating", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-chess-library", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-twister-game", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-mural-printing", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-water-play", "", "(min-width: 720px) 25vw, 50vw" %}
+      {% photo "gallery-reading-corner", "", "(min-width: 720px) 25vw, 50vw" %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap two">
+    {% photo site.campus.photo, "photo--lg photo--wide" %}
+    <div>
+      <p class="eyebrow">Find your way to PRA</p>
+      <h2>One campus in Cẩm Thanh</h2>
+      <p>A few minutes from Hội An's old town. Early Years, Primary, Secondary and Upper Years all learn on the same site.</p>
+      <p><strong>{{ site.campus.address }}</strong><br>{{ site.hours }}</p>
+      <a class="btn btn--primary" href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
+    </div>
   </div>
 </section>
 

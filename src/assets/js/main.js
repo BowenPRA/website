@@ -20,7 +20,7 @@
     });
   }
 
-  // Age picker on the home page
+  // Age picker (Academics overview)
   var picker = document.querySelector("[data-picker]");
   if (picker) {
     var chips = picker.querySelectorAll(".chip");
@@ -39,6 +39,24 @@
         chip.setAttribute("aria-pressed", "true");
         cards.forEach(function (c) { c.hidden = c.getAttribute("data-key") !== key; });
         grid.classList.add("is-filtered");
+      });
+    });
+  }
+
+  // Timetable tabs (Schedule page)
+  var tt = document.querySelector("[data-tt]");
+  if (tt) {
+    var tabs = tt.querySelectorAll('[role="tab"]');
+    var panels = tt.querySelectorAll(".tt-panel");
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var key = tab.getAttribute("data-key");
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.setAttribute("aria-selected", String(on));
+          t.setAttribute("aria-pressed", String(on));
+        });
+        panels.forEach(function (p) { p.hidden = p.id !== "panel-" + key; });
       });
     });
   }

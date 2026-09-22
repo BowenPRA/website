@@ -1,35 +1,18 @@
 {
-  "note": "Bios for Ms. Ali, Mr. David and Ms. Thuy were placeholders in the Wix draft. Replace before launch. Photos go in assets/img/team/ as <slug>.jpg.",
+  "intro": "A mix of Vietnamese and international teachers. Every academic teacher has a degree in their subject, teaching experience and a TESOL certificate, and is qualified to teach in Việt Nam.",
+  "note": "Roles come from the 2026-27 timetable in the admin app. Add a one-line bio per person when ready; Mr. Landon, Ms. Thuy and Ms. Ali from the Wix draft are not listed because they are not on the current site or timetable. Bowen to confirm.",
   "members": [
-    {
-      "name": "Mr. Landon",
-      "role": "Academy Director",
-      "slug": "landon",
-      "bio": "Vietnamese-American, principal at PRA since 2019. Bachelor's in Education and a Master's in Professional Studies from the US."
-    },
-    {
-      "name": "Mr. Seth",
-      "role": "Head Teacher",
-      "slug": "seth",
-      "bio": "From California, teaching in Việt Nam for a decade. Bachelor's in Health Science and a certified biology teacher for grades 7 to 12."
-    },
-    {
-      "name": "Ms. Thuy",
-      "role": "Executive Director",
-      "slug": "thuy",
-      "bio": "TODO: two sentences."
-    },
-    {
-      "name": "Ms. Ali",
-      "role": "Technology Teacher",
-      "slug": "ali",
-      "bio": "TODO: two sentences."
-    },
-    {
-      "name": "Mr. David",
-      "role": "Primary Teacher and Counselor",
-      "slug": "david",
-      "bio": "TODO: two sentences."
-    }
+    { "name": "Mr. Seth", "slug": "seth", "role": "Head Teacher", "teaches": "Cooking, Art of Science, Teens", "bio": "From California, teaching in Việt Nam for a decade. Bachelor's in Health Science and a certified biology teacher for grades 7 to 12." },
+    { "name": "Mr. Bowen", "slug": "bowen", "role": "Year 7 Homeroom", "teaches": "Maths and Science, Teens" },
+    { "name": "Mr. David", "slug": "david", "role": "Teens Homeroom and Counselor", "teaches": "English, Maths, Maker Space" },
+    { "name": "Mr. Caleb", "slug": "caleb", "role": "Year 2 and 3 Homeroom", "teaches": "Art, Dance, Technology, Everyday Experts" },
+    { "name": "Ms. Kiu", "slug": "kiu", "role": "Year 5 Homeroom", "teaches": "English, Science, History, Wellbeing" },
+    { "name": "Ms. Solo", "slug": "solo", "role": "Year 1 Homeroom", "teaches": "English, Maths, Science" },
+    { "name": "Ms. Thanh", "slug": "thanh", "role": "Kindergarten Homeroom", "teaches": "Phonics, Maths, Understanding the World" },
+    { "name": "Ms. Tham", "slug": "tham", "role": "Nursery Homeroom", "teaches": "Nursery" },
+    { "name": "Ms. Thoa", "slug": "thoa", "role": "Nursery Teacher", "teaches": "Nursery" },
+    { "name": "Ms. Thắm V", "slug": "tham-v", "role": "Primary Teacher", "teaches": "Craft, Review, Boredom" },
+    { "name": "Ms. Duyen", "slug": "duyen", "role": "Primary Teacher", "teaches": "Technology, Crafts" },
+    { "name": "Mr. Chiến", "slug": "chien", "role": "PE Teacher", "teaches": "Movement and Exercise" }
   ]
 }

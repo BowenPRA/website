@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or site.description }}">
-  <meta name="theme-color" content="#FFF8EC">
+  <meta name="theme-color" content="#116DFF">
   <meta property="og:title" content="{{ title or site.name }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ site.url }}{{ '/assets/img/share.png' | url }}">
+  <meta property="og:image" content="{{ site.url }}{{ '/assets/img/photos/hero-cooking-class-hoi-an-1600.webp' | url }}">
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | url }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
 </head>
 <body class="page-{{ page.fileSlug or 'home' }}">
@@ -23,7 +23,9 @@
     {{ content | safe }}
   </main>
   {% include "partials/footer.njk" %}
-  <a class="float-cta" href="{{ '/contact/' | url }}">Book a visit</a>
+  <a class="float-cta" href="{{ '/contact/' | url }}" aria-label="Contact us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+  </a>
   <script src="{{ '/assets/js/main.js' | url }}" defer></script>
 </body>
 </html>
