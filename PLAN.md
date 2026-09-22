@@ -89,7 +89,8 @@ Admissions ▾ (Enrollment, Tuition and fees, Schedule and calendar, Family hand
 Book a tour) · Events · [Contact Us]
 
 Home page section order, top to bottom: full-bleed photo hero with palm leaves ·
-Discover our story · values marquee · "Content through context" (the English
+Our story · the student-made yearbook film (navy band,
+native video player, a 3 min cut of the 2025-26 yearbook video in src/assets/video/) · values marquee · "Content through context" (the English
 language center explanation) · four photo tiles for the stages · stats band ·
 Global Program · campus-life gallery · Find your way to PRA · CTA.
 

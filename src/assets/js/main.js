@@ -48,6 +48,17 @@
   if (header) header.addEventListener("focusin", function () { header.classList.remove("is-hidden"); });
   onScroll();
 
+  // Yearbook film: the big play button starts the video and gets out of the way
+  document.querySelectorAll(".film__player").forEach(function (player) {
+    var video = player.querySelector("video");
+    var play = player.querySelector(".film__play");
+    if (!video || !play) return;
+    video.controls = false; // the poster stays clean; the browser controls come back once the film starts
+    play.addEventListener("click", function () { video.play(); });
+    video.addEventListener("play", function () { player.classList.add("is-playing"); video.controls = true; });
+    video.addEventListener("ended", function () { player.classList.remove("is-playing"); });
+  });
+
   // Photos fade in over a shimmer while they load
   document.querySelectorAll(".photo img").forEach(function (img) {
     if (img.complete && img.naturalWidth) return;

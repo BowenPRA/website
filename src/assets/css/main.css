@@ -566,6 +566,35 @@ section { padding: var(--section) 0; position: relative; }
 @media (min-width: 900px) { .two--flip > :first-child { order: 0; } }
 .two--top { align-items: start; }
 
+/* ---------- yearbook film (home) ----------
+   A navy band with the student-made film in a white frame, like the site's photos. The poster shows until play;
+   a big play button sits on top and main.js hides it once the film starts. The file only loads on play. */
+.film__grid { display: grid; gap: clamp(28px, 4vw, 56px); align-items: center; }
+@media (min-width: 900px) { .film__grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
+.film__text .lede { color: rgba(255,255,255,0.9); }
+.film__meta { margin: 0; font-size: var(--t-small); color: var(--green-light); font-weight: 600; }
+.film__player { position: relative; margin: 0; }
+.film__video {
+  display: block; width: 100%; aspect-ratio: 16 / 9; background: var(--blue-ink);
+  border: var(--frame); border-radius: var(--r-lg); box-shadow: var(--shadow-pop); transform: rotate(-1.5deg);
+  transition: transform 0.6s var(--bounce);
+}
+.film__player.is-playing .film__video, .film__player:hover .film__video { transform: rotate(0deg); }
+.film__play {
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%; z-index: 2;
+  width: 88px; height: 88px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center;
+  background: var(--green-deep); color: #fff; box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 0 0 10px rgba(255,255,255,0.18);
+  transition: scale 0.35s var(--bounce), background-color 0.2s ease;
+}
+.film__play svg { width: 40px; height: 40px; translate: 3px 0; }
+.film__play:hover { scale: 1.08; background: var(--green); }
+.film__play::after { content: ""; position: absolute; inset: -10px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.5); animation: ping 3s ease-out infinite; }
+.film__player.is-playing .film__play, .film__player .film__video:not([poster]) + .film__play { display: none; }
+.film__caption { margin: 14px 0 0; text-align: center; font-size: var(--t-small); color: rgba(255,255,255,0.75); }
+.film .sticker--tl { top: -14px; left: 6px; }
+.film > .frond--tr { opacity: 0.9; }
+@media (max-width: 899px) { .film > .frond--tr { display: none; } .film__grid { text-align: center; } .film__text .lede { margin-inline: auto; } .film__play { width: 72px; height: 72px; } .film__play svg { width: 32px; height: 32px; } }
+
 /* ---------- ribbons (subjects and values) ---------- */
 
 .ribbons {
