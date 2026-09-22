@@ -3,35 +3,41 @@ layout: layouts/base.njk
 title: "English, learned by doing"
 description: "Palm River Academy is an English language center in Hội An for children from 20 months to 18. We teach English through science, maths, cooking, art and sport, in classes of 13 or fewer."
 ---
+{% import "macros/icons.njk" as ic %}
 
 <section class="hero">
   <div class="hero__bg">{% photo "hero-cooking-class-hoi-an", "", "100vw", true %}</div>
   <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-a.webp' | url }}" alt="" width="900" height="910">
   <img class="leaf leaf--bl" src="{{ '/assets/img/leaf-b.webp' | url }}" alt="" width="900" height="910">
   <div class="wrap hero__inner">
-    <p class="eyebrow" style="color:#fff">Palm River Academy · English Language Center · Hội An</p>
+    <p class="eyebrow eyebrow--white">English Language Center · Hội An</p>
     <h1>English, learned by doing.</h1>
     <p class="lede">We are an English language center for children from 20 months to 18 years. Our students learn English through science, maths, cooking, art and sport. Content through context. Less studying English, more doing things in English.</p>
     <div class="hero__actions">
-      <a class="btn btn--green" href="{{ '/contact/' | url }}">Book a tour</a>
+      <a class="btn btn--sun" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
     </div>
   </div>
+  {% set waveColor = "white" %}{% include "partials/wave.njk" %}
 </section>
 
 <section>
   <div class="wrap two">
     <div>
-      <p class="eyebrow">Discover our story</p>
+      <p class="eyebrow eyebrow--blue">Discover our story</p>
       <h2>Serving families in Hội An and Đà Nẵng since {{ site.founded }}</h2>
       <p class="lede lede--blue">Hội An's oldest international learning center.</p>
       <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn English without sitting still all day. That is still the idea. We combine the Cambridge curriculum with small classes and real-world skills: public speaking, art, technology, cooking, sport. About half our families are Vietnamese and half are from abroad, and the same goes for our teachers.</p>
       <a class="btn btn--primary" href="{{ '/about/' | url }}">About us</a>
     </div>
-    {% photo "students-waterfall-field-trip", "photo--lg photo--tilt-r" %}
+    <div class="blob-wrap has-sticker">
+      <span class="sticker sticker--tl">Est. {{ site.founded }}</span>
+      {% photo "students-waterfall-field-trip", "photo--lg photo--tilt-r" %}
+    </div>
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 <div class="marquee band--blue" aria-hidden="true">
   <svg class="marquee__leaf" viewBox="0 0 100 100"><path d="M50 95 C 20 70, 10 35, 50 5 C 90 35, 80 70, 50 95 Z" fill="var(--green-light)"/><path d="M50 12 L50 90" stroke="#fff" stroke-width="3" opacity=".6"/><circle class="eye" cx="42" cy="40" r="7"/><circle class="eye" cx="58" cy="40" r="7"/><circle class="pupil" cx="43" cy="41" r="3"/><circle class="pupil" cx="59" cy="41" r="3"/></svg>
   <div class="marquee__track">
@@ -39,6 +45,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     <span>Intellectual Exploration</span><span>Creative Expression</span><span>Sports and Fun</span><span>Community Impact</span><span>Global Citizenship</span><span>Leadership</span>
   </div>
 </div>
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 
 <section class="band--pale">
   <div class="wrap">
@@ -48,24 +55,25 @@ description: "Palm River Academy is an English language center in Hội An for c
       <p class="lede">Nobody learns a language from a worksheet. Our students learn English because they need it to measure the flour, explain the experiment and argue about the rules of the game.</p>
     </div>
     <div class="method">
-      <div class="method__item"><strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, taught in English by qualified teachers. The language comes with the content.</p></div>
-      <div class="method__item"><strong>Doing, not drilling</strong><p>Cooking, technology, crafts, art, movement, Maker Space, Art of Science, Everyday Experts. Every afternoon is hands-on.</p></div>
-      <div class="method__item"><strong>Small enough to talk</strong><p>Never more than {{ site.classCap }} in an academic class, so every child speaks, gets heard and gets corrected kindly.</p></div>
+      <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, taught in English by qualified teachers. The language comes with the content.</p></div>
+      <div class="method__item">{{ ic.icon("whisk", "sun") }}<strong>Doing, not drilling</strong><p>Cooking, technology, crafts, art, movement, Maker Space, Art of Science, Everyday Experts. Every afternoon is hands-on.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "green") }}<strong>Small enough to talk</strong><p>Never more than {{ site.classCap }} in an academic class, so every child speaks, gets heard and gets corrected kindly.</p></div>
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Academics</p>
+      <p class="eyebrow eyebrow--coral">Academics</p>
       <h2>From 20 months to 18 years</h2>
       <p class="lede">Pick your child's stage. Every one of them keeps the same shape: academic subjects in English, something physical, something made with your hands.</p>
     </div>
-    <div class="tiles" style="margin-top:36px">
+    <div class="tiles mt">
       {% for p in programs %}{% if p.key != 'global' %}
-      <a class="tile" href="{{ p.url | url }}">
-        {% photo p.photo, "", "(min-width: 900px) 25vw, 50vw" %}
+      <a class="tile tile--{{ p.tone }}" href="{{ p.url | url }}">
+        {% photo p.photo, "", "(min-width: 720px) 25vw, 50vw" %}
         <span class="tile__label"><strong>{{ p.name }}</strong><small>{{ p.ages }}</small></span>
       </a>
       {% endif %}{% endfor %}
@@ -73,19 +81,24 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 <section class="band--blue">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num">&lt; {{ site.classCap }}</p><h3>Per class</h3><p>Every academic class is capped at {{ site.classCap }} students, so every child gets care and attention.</p></div>
+    <div class="stat"><p class="stat__num">&lt;{{ site.classCap }}</p><h3>Per class</h3><p>Every academic class is capped at {{ site.classCap }} students, so every child gets care and attention.</p></div>
     <div class="stat"><p class="stat__num">22+</p><h3>Qualified staff</h3><p>International and Vietnamese teachers with experience at every level, from Nursery to Upper Years.</p></div>
     <div class="stat"><p class="stat__num">10+</p><h3>Alumni abroad</h3><p>PRA students have gone on to high schools and universities overseas.</p></div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap two two--flip">
-    {% photo "global-program-nature-walk", "photo--lg photo--tilt" %}
+    <div class="blob-wrap blob-wrap--violet has-sticker">
+      <span class="sticker sticker--violet sticker--br">3 weeks to 3 months</span>
+      {% photo "global-program-nature-walk", "photo--lg photo--tilt" %}
+    </div>
     <div>
-      <p class="eyebrow">Visiting Hội An?</p>
+      <p class="eyebrow eyebrow--violet">Visiting Hội An?</p>
       <h2>The Global Program</h2>
       <p>Whether you are a travelling family, living in Hội An for a season, or looking for a short-term program to keep your child learning, the Global Program gives you real classes with our regular students for three weeks to three months. Half days or full days, ages 2 to 14, with a progress report and a certificate at the end.</p>
       <a class="btn btn--green" href="{{ '/learning/global-program/' | url }}">How it works</a>
@@ -93,13 +106,14 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Campus life</p>
+      <p class="eyebrow eyebrow--sun">Campus life</p>
       <h2>Live, learn and grow at Palm River Academy</h2>
     </div>
-    <div class="gallery" style="margin-top:32px">
+    <div class="gallery mt">
       {% photo "gallery-lantern-workshop", "", "(min-width: 720px) 25vw, 50vw" %}
       {% photo "gallery-magnetic-tiles", "", "(min-width: 720px) 25vw, 50vw" %}
       {% photo "gallery-cupcake-decorating", "", "(min-width: 720px) 25vw, 50vw" %}
@@ -111,10 +125,14 @@ description: "Palm River Academy is an English language center in Hội An for c
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap two">
-    {% photo site.campus.photo, "photo--lg photo--wide" %}
+    <div class="blob-wrap blob-wrap--green has-sticker">
+      <span class="sticker sticker--green sticker--tr">5 min from the old town</span>
+      {% photo site.campus.photo, "photo--lg photo--wide" %}
+    </div>
     <div>
       <p class="eyebrow">Find your way to PRA</p>
       <h2>One campus in Cẩm Thanh</h2>
@@ -125,4 +143,5 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

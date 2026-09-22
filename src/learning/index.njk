@@ -12,7 +12,7 @@ description: "Early Years, Primary, Secondary, Upper Years and the Global Progra
 
 <section data-picker>
   <div class="wrap">
-    <p class="eyebrow">Start here</p>
+    <p class="eyebrow eyebrow--sun">Start here</p>
     <h2>How old is your child?</h2>
     <p class="lede">Tap an age and we will show you the right program. Or read them all, they are short.</p>
     <div class="picker__chips" role="group" aria-label="Filter programs by age">
@@ -20,7 +20,7 @@ description: "Early Years, Primary, Secondary, Upper Years and the Global Progra
     </div>
     <div class="programs">
       {% for p in programs %}
-      <article class="program" data-key="{{ p.key }}">
+      <article class="program program--{{ p.tone }}" data-key="{{ p.key }}">
         <p class="program__ages">{{ p.ages }}</p>
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
@@ -32,6 +32,7 @@ description: "Early Years, Primary, Secondary, Upper Years and the Global Progra
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <h2>Side by side</h2>
@@ -47,8 +48,10 @@ description: "Early Years, Primary, Secondary, Upper Years and the Global Progra
         </tbody>
       </table>
     </div>
+    <span class="swipe-hint">Swipe sideways to see the whole table.</span>
     <p class="form__note">Every group's full week is on the <a href="{{ '/families/schedule/' | url }}">schedule page</a>.</p>
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

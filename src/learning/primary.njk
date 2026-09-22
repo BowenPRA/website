@@ -3,8 +3,10 @@ layout: layouts/base.njk
 title: "Primary"
 description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Maths and Science every morning; cooking, technology, craft, art and movement in the afternoons."
 ---
+{% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "primary-students-boardwalk-trip" %}
+{% set heroTone = "green" %}
 {% set heroEyebrow = "Primary · Years 1 to 6 · ages 5 to 11" %}
 {% set heroTitle = "Cambridge in the morning, flour on your hands by three" %}
 {% set heroText = "Primary follows the Cambridge International curriculum for English, Maths and Science, taught in English in classes of " + site.classCap + " or fewer. Then the afternoon opens up." %}
@@ -18,40 +20,49 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
       <p>The day starts with a soft arrival and homeroom, then three lessons before lunch. <strong>English</strong> is reading real books, writing things people will read, and talking. A lot of talking. <strong>Maths</strong> starts with objects and patterns and works up to the abstract. <strong>Science</strong> is experiments first, explanations second.</p>
       <p>The Cambridge Primary framework means your child's progress is measured against a standard schools recognise anywhere, and moving on later is straightforward.</p>
     </div>
-    {% photo "gallery-reading-corner", "photo--lg photo--square photo--tilt-r" %}
+    <div class="blob-wrap blob-wrap--green has-sticker">
+      <span class="sticker sticker--green sticker--tr">Cambridge Primary</span>
+      {% photo "gallery-reading-corner", "photo--lg photo--square photo--tilt-r" %}
+    </div>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Every afternoon</p>
+      <p class="eyebrow eyebrow--sun">Every afternoon</p>
       <h2>The classes with the odd names</h2>
       <p class="lede">These are the afternoon classes on this year's Primary timetable. They are where the English gets used.</p>
     </div>
-    <div class="cards cards--3" style="margin-top:32px">
-      <div class="card"><h3>Cooking</h3><p>A real kitchen, real knives under supervision, and a dish to take home on Thursdays and Fridays.</p></div>
-      <div class="card"><h3>Technology</h3><p>Typing, coding, and making things on a screen that do what you told them to.</p></div>
-      <div class="card"><h3>Craft and Art</h3><p>Lanterns, printing, clay, paint. Assessed by what gets made, not by a test.</p></div>
-      <div class="card"><h3>Movement and Exercise</h3><p>Structured sport, fitness and free play with a PE teacher, twice a week.</p></div>
-      <div class="card"><h3>Everyday Experts, Master Minds, Book Worms</h3><p>Practical know-how, puzzles and reading, in small groups.</p></div>
-      <div class="card"><h3>Boredom</h3><p>Yes, a class called Boredom. No screens, no instructions. It is where the best ideas come from. Ask us about it on your visit.</p></div>
+    <div class="cards cards--3 mt">
+      <div class="card">{{ ic.icon("whisk", "sun") }}<h3>Cooking</h3><p>A real kitchen, real knives under supervision, and a dish to take home on Thursdays and Fridays.</p></div>
+      <div class="card">{{ ic.icon("laptop", "blue") }}<h3>Technology</h3><p>Typing, coding, and making things on a screen that do what you told them to.</p></div>
+      <div class="card">{{ ic.icon("palette", "coral") }}<h3>Craft and Art</h3><p>Lanterns, printing, clay, paint. Assessed by what gets made, not by a test.</p></div>
+      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement and Exercise</h3><p>Structured sport, fitness and free play with a PE teacher, twice a week.</p></div>
+      <div class="card">{{ ic.icon("book", "violet") }}<h3>Everyday Experts, Master Minds, Book Worms</h3><p>Practical know-how, puzzles and reading, in small groups.</p></div>
+      <div class="card">{{ ic.icon("clock", "sun") }}<h3>Boredom</h3><p>Yes, a class called Boredom. No screens, no instructions. It is where the best ideas come from. Ask us about it on your visit.</p></div>
     </div>
-    <p class="center" style="margin-top:24px"><a class="btn btn--primary" href="{{ '/families/schedule/' | url }}">See the full Primary week</a></p>
+    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/' | url }}">See the full Primary week</a></p>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap two two--flip">
-    {% photo "hero-cooking-class-hoi-an", "photo--lg photo--tilt" %}
+    <div class="blob-wrap">
+      {% photo "hero-cooking-class-hoi-an", "photo--lg photo--tilt" %}
+    </div>
     <div>
-      <h2>Checkpoints and reports</h2>
+      <p class="eyebrow eyebrow--blue">Checkpoints and reports</p>
+      <h2>How you know it is working</h2>
       <p><strong>Year 6 Checkpoint.</strong> Optional. A Cambridge diagnostic test in English, Maths and Science at the end of Primary. It gives a clear picture of strengths and gaps, and practice at sitting a formal exam.</p>
       <p><strong>Reports and meetings.</strong> Written progress reports, plus parent and teacher meetings in October and March. In between, just ask.</p>
     </div>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale faq">
   <div class="wrap narrow">
     <h2>Questions parents ask</h2>
@@ -62,4 +73,5 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

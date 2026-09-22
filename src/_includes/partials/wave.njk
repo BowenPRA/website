@@ -1,0 +1,4 @@
+{# Wavy edge. Set waveColor (pale | white | blue | green | sun | ink) to the colour of the band that FOLLOWS. #}
+<div class="wave wave--{{ waveColor or 'white' }}{% if waveOver %} wave--over{% endif %}" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 34 C 160 60, 320 4, 520 26 S 860 60, 1060 30 S 1340 6, 1440 30 L 1440 60 L 0 60 Z" fill="currentColor"/></svg>
+</div>

@@ -3,6 +3,7 @@ layout: layouts/base.njk
 title: "About Us"
 description: "Palm River Academy is a licensed English language center in Hội An, open since 2017. Our vision, our staff and our story."
 ---
+{% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "students-waterfall-field-trip" %}
 {% set heroEyebrow = "About Us" %}
@@ -13,15 +14,19 @@ description: "Palm River Academy is a licensed English language center in Hội 
 <section>
   <div class="wrap two">
     <div>
-      <p class="eyebrow">Our story</p>
+      <p class="eyebrow eyebrow--blue">Our story</p>
       <h2>Hội An's oldest international learning center</h2>
       <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn English without sitting still all day. That is still the idea. We follow the Cambridge curriculum for English, Maths and Science because it is clear and recognised anywhere, and we wrap it in things you can touch: cooking, art, technology, sport, and projects the students choose.</p>
       <p>We welcome students from 20 months to 18 years, Vietnamese and international families side by side. Academic classes never go above {{ site.classCap }} children. We prepare students for more than one path: universities abroad, or meaningful work at home.</p>
     </div>
-    {% photo "primary-students-clay-modelling", "photo--lg photo--tilt-r" %}
+    <div class="blob-wrap has-sticker">
+      <span class="sticker sticker--tr">Since {{ site.founded }}</span>
+      {% photo "primary-students-clay-modelling", "photo--lg photo--tilt-r" %}
+    </div>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
@@ -30,17 +35,18 @@ description: "Palm River Academy is a licensed English language center in Hội 
       <p class="lede">We are an English language center, and we believe the fastest way to learn a language is to use it for something real. So we teach content through context: science, maths, cooking, art and sport, all in English, all hands-on.</p>
     </div>
     <div class="method">
-      <div class="method__item"><strong>Play-based and project-based</strong><p>Exploration and problem-solving over outcomes alone. In Early Years that means play. Later it means experiments, building, presenting and a personal project.</p></div>
-      <div class="method__item"><strong>English as the medium</strong><p>The language is never the lesson on its own. It is how you measure, explain, argue and present. Children pick it up because they need it.</p></div>
-      <div class="method__item"><strong>Confidence and independence</strong><p>Adaptable learners who think critically and creatively, ready to contribute at home and as global citizens.</p></div>
+      <div class="method__item">{{ ic.icon("sparkle", "sun") }}<strong>Play-based and project-based</strong><p>Exploration and problem-solving over outcomes alone. In Early Years that means play. Later it means experiments, building, presenting and a personal project.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "blue") }}<strong>English as the medium</strong><p>The language is never the lesson on its own. It is how you measure, explain, argue and present. Children pick it up because they need it.</p></div>
+      <div class="method__item">{{ ic.icon("star", "coral") }}<strong>Confidence and independence</strong><p>Adaptable learners who think critically and creatively, ready to contribute at home and as global citizens.</p></div>
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Our PRA values</p>
+      <p class="eyebrow eyebrow--coral">Our PRA values</p>
       <h2>Six principles</h2>
     </div>
     <ol class="values values--3">
@@ -54,17 +60,18 @@ description: "Palm River Academy is a licensed English language center in Hội 
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Our academy team</p>
+      <p class="eyebrow eyebrow--blue">Our academy team</p>
       <h2>Vietnamese and international teachers</h2>
       <p class="lede">{{ team.intro }}</p>
     </div>
-    <ul class="team" style="margin-top:32px">
+    <ul class="team mt">
       {% for m in team.members %}
       <li>
-        {% if photos["team-" + m.slug] %}{% photo "team-" + m.slug, "", "120px" %}{% else %}<div class="avatar" aria-hidden="true">{{ m.name | replace("Mr. ", "") | replace("Ms. ", "") | first }}</div>{% endif %}
+        {% if photos["team-" + m.slug] %}{% photo "team-" + m.slug, "", "116px" %}{% else %}<div class="avatar" aria-hidden="true">{{ m.name | replace("Mr. ", "") | replace("Ms. ", "") | first }}</div>{% endif %}
         <strong>{{ m.name }}</strong>
         <em>{{ m.role }}</em>
         {% if m.teaches %}<small>{{ m.teaches }}</small>{% endif %}
@@ -74,10 +81,13 @@ description: "Palm River Academy is a licensed English language center in Hội 
     </ul>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap two">
-    {% photo site.campus.photo, "photo--lg photo--wide" %}
+    <div class="blob-wrap blob-wrap--green">
+      {% photo site.campus.photo, "photo--lg photo--wide" %}
+    </div>
     <div>
       <p class="eyebrow">Our campus</p>
       <h2>One site in Cẩm Thanh</h2>
@@ -88,4 +98,5 @@ description: "Palm River Academy is a licensed English language center in Hội 
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

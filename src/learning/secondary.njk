@@ -3,8 +3,10 @@ layout: layouts/base.njk
 title: "Secondary"
 description: "Secondary at Palm River Academy, Years 7 to 9. Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space."
 ---
+{% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "secondary-students-classroom" %}
+{% set heroTone = "blue" %}
 {% set heroEyebrow = "Secondary · Years 7 to 9 · ages 11 to 14" %}
 {% set heroTitle = "More independence, bigger projects" %}
 {% set heroText = "Secondary follows Cambridge Lower Secondary in English, Maths and Science, each taught by a subject specialist. Classes stay at " + site.classCap + " or fewer, and students carry more of the planning themselves." %}
@@ -13,43 +15,52 @@ description: "Secondary at Palm River Academy, Years 7 to 9. Cambridge Lower Sec
 <section>
   <div class="wrap two">
     <div>
-      <p class="eyebrow">The academic core</p>
+      <p class="eyebrow eyebrow--blue">The academic core</p>
       <h2>Subject teachers, real practical work</h2>
       <p>Each core subject has its own teacher with a degree in the field. <strong>English</strong> moves into literature, argument and writing for an audience. <strong>Maths</strong> builds toward IGCSE-level reasoning. <strong>Science</strong> covers biology, chemistry and physics with practical work every week.</p>
       <p>On top of the core, Year 7 studies <strong>History</strong> and <strong>Executive Function</strong>, which is the honest name for learning how to plan, organise and finish things.</p>
     </div>
-    {% photo "secondary-marble-run-wall", "photo--lg photo--tilt-r" %}
+    <div class="blob-wrap blob-wrap--blue has-sticker">
+      <span class="sticker sticker--blue sticker--tr">Cambridge Lower Secondary</span>
+      {% photo "secondary-marble-run-wall", "photo--lg photo--tilt-r" %}
+    </div>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Afternoons</p>
+      <p class="eyebrow eyebrow--coral">Afternoons</p>
       <h2>Where it gets built</h2>
     </div>
-    <div class="cards cards--3" style="margin-top:32px">
-      <div class="card"><h3>Art of Science</h3><p>Three afternoons a week. Experiments and builds that need the science from the morning to work.</p></div>
-      <div class="card"><h3>Maker Space</h3><p>Tools, materials and a problem. Students design, build, test and present.</p></div>
-      <div class="card"><h3>Movement</h3><p>Sport and fitness twice a week. By this age most students have found their thing, and we make room for it.</p></div>
-      <div class="card"><h3>Wellbeing</h3><p>A weekly class on the things that make the rest of the week go better.</p></div>
-      <div class="card"><h3>Review</h3><p>Time each week to consolidate, catch up and ask the question you did not ask in class.</p></div>
-      <div class="card"><h3>Year 9 Checkpoint</h3><p>Optional Cambridge diagnostic in English, Maths and Science at the end of Year 9, and good preparation for exam pathways in Upper Years.</p></div>
+    <div class="cards cards--3 mt">
+      <div class="card">{{ ic.icon("flask", "blue") }}<h3>Art of Science</h3><p>Three afternoons a week. Experiments and builds that need the science from the morning to work.</p></div>
+      <div class="card">{{ ic.icon("tools", "sun") }}<h3>Maker Space</h3><p>Tools, materials and a problem. Students design, build, test and present.</p></div>
+      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement</h3><p>Sport and fitness twice a week. By this age most students have found their thing, and we make room for it.</p></div>
+      <div class="card">{{ ic.icon("heart", "coral") }}<h3>Wellbeing</h3><p>A weekly class on the things that make the rest of the week go better.</p></div>
+      <div class="card">{{ ic.icon("clock", "violet") }}<h3>Review</h3><p>Time each week to consolidate, catch up and ask the question you did not ask in class.</p></div>
+      <div class="card">{{ ic.icon("star", "sun") }}<h3>Year 9 Checkpoint</h3><p>Optional Cambridge diagnostic in English, Maths and Science at the end of Year 9, and good preparation for exam pathways in Upper Years.</p></div>
     </div>
-    <p class="center" style="margin-top:24px"><a class="btn btn--primary" href="{{ '/families/schedule/' | url }}">See the Year 7 and Teens week</a></p>
+    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/' | url }}">See the Year 7 and Teens week</a></p>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap two two--flip">
-    {% photo "secondary-table-tennis", "photo--lg photo--tilt" %}
+    <div class="blob-wrap blob-wrap--coral">
+      {% photo "secondary-table-tennis", "photo--lg photo--tilt" %}
+    </div>
     <div>
-      <h2>What comes next</h2>
+      <p class="eyebrow eyebrow--coral">What comes next</p>
+      <h2>Upper Years</h2>
       <p>After Year 9, students move into <a href="{{ '/learning/upper-years/' | url }}">Upper Years</a>, where they choose between a US diploma and a Cambridge pathway and work at their own pace with a teacher coaching every block.</p>
     </div>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale faq">
   <div class="wrap narrow">
     <h2>Questions parents ask</h2>
@@ -59,4 +70,5 @@ description: "Secondary at Palm River Academy, Years 7 to 9. Cambridge Lower Sec
   </div>
 </section>
 
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

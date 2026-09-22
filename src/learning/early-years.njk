@@ -5,6 +5,7 @@ description: "Nursery and Kindergarten at Palm River Academy for children from 2
 ---
 
 {% set heroPhoto = "early-years-paddling-pool" %}
+{% set heroTone = "sun" %}
 {% set heroEyebrow = "Early Years · 20 months to 4 years" %}
 {% set heroTitle = "Play is the work" %}
 {% set heroText = "Nursery and Kindergarten spend the day in English, much of it outside, most of it playing. We follow the British Early Years Foundation Stage framework, which is a careful way of saying we watch what each child is ready for and set it up." %}
@@ -20,10 +21,11 @@ description: "Nursery and Kindergarten at Palm River Academy for children from 2
       <p>Both groups pick up English from the room. Most of our youngest children arrive with none.</p>
       <a class="btn btn--primary btn--small" href="{{ '/families/schedule/' | url }}">See the Nursery and Kindergarten week</a>
     </div>
-    {% photo "early-years-rainbow-parachute", "photo--lg photo--tilt" %}
+    <div class="blob-wrap has-sticker"><span class="sticker sticker--tr">EYFS framework</span>{% photo "early-years-rainbow-parachute", "photo--lg photo--tilt" %}</div>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap">
     <h2>Four things we watch for</h2>
@@ -48,4 +50,5 @@ description: "Nursery and Kindergarten at Palm River Academy for children from 2
 
 {% set ctaTitle = "Come and see the sand pit." %}
 {% set ctaText = "Bring your child. A visit during the morning is the best way to see whether they settle." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

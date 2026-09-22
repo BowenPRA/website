@@ -5,6 +5,7 @@ description: "The weekly timetable for every class at Palm River Academy, from N
 ---
 
 {% set heroPhoto = "gallery-twister-game" %}
+{% set heroTone = "blue" %}
 {% set heroEyebrow = "Schedule and calendar · " + schedule.schoolYear %}
 {% set heroTitle = "What a week looks like" %}
 {% set heroText = "Every class, every period, Monday to Friday. Mornings are Cambridge subjects in English. Afternoons are the hands-on classes. Pick a class below." %}
@@ -44,10 +45,12 @@ description: "The weekly timetable for every class at Palm River Academy, from N
     </div>
     {% endfor %}
 
+    <span class="swipe-hint">Swipe sideways to see the whole week. The time column stays put.</span>
     <p class="form__note" style="margin-top:20px">Boredom is a real class. Everyday Experts, Master Minds and Book Worms too. Ask us about them on your visit, they are more fun than they sound. Teachers' names are left off this page; you will meet them on the tour.</p>
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale" id="calendar">
   <div class="wrap">
     <div class="center narrow">
@@ -72,4 +75,5 @@ description: "The weekly timetable for every class at Palm River Academy, from N
 
 {% set ctaTitle = "Come and watch a real Tuesday." %}
 {% set ctaText = "Tours run on school days. Pick a morning and see the timetable in action." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

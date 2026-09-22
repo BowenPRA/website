@@ -7,7 +7,12 @@
     "url": "/learning/early-years/",
     "photo": "early-years-girls-tyre-wall",
     "summary": "Nursery and Kindergarten. Play, stories, songs, phonics and a lot of talking, all in English. We follow the British EYFS framework.",
-    "points": ["Two homeroom teachers in Nursery", "Phonics, maths and literacy in Kindergarten", "Outside play every morning"]
+    "points": [
+      "Two homeroom teachers in Nursery",
+      "Phonics, maths and literacy in Kindergarten",
+      "Outside play every morning"
+    ],
+    "tone": "sun"
   },
   {
     "key": "primary",
@@ -17,7 +22,12 @@
     "url": "/learning/primary/",
     "photo": "primary-students-boardwalk-trip",
     "summary": "Cambridge English, Maths and Science every morning. Afternoons are cooking, technology, craft, art, movement and a class called Boredom.",
-    "points": ["Cambridge Primary curriculum", "Movement and exercise every week", "Optional Year 6 Checkpoint"]
+    "points": [
+      "Cambridge Primary curriculum",
+      "Movement and exercise every week",
+      "Optional Year 6 Checkpoint"
+    ],
+    "tone": "green"
   },
   {
     "key": "secondary",
@@ -27,7 +37,12 @@
     "url": "/learning/secondary/",
     "photo": "secondary-students-classroom",
     "summary": "Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space.",
-    "points": ["Cambridge Lower Secondary", "Subject-specialist teachers", "Optional Year 9 Checkpoint"]
+    "points": [
+      "Cambridge Lower Secondary",
+      "Subject-specialist teachers",
+      "Optional Year 9 Checkpoint"
+    ],
+    "tone": "blue"
   },
   {
     "key": "upper",
@@ -37,7 +52,12 @@
     "url": "/learning/upper-years/",
     "photo": "upper-years-students-group-project",
     "summary": "A US diploma or a Cambridge pathway at each student's own pace, with a teacher coaching every block. Plus IELTS, PTE and GED preparation.",
-    "points": ["US diploma or Cambridge route", "IELTS, PTE, GED preparation", "Personal project and a student-planned trip"]
+    "points": [
+      "US diploma or Cambridge route",
+      "IELTS, PTE, GED preparation",
+      "Personal project and a student-planned trip"
+    ],
+    "tone": "coral"
   },
   {
     "key": "global",
@@ -47,6 +67,11 @@
     "url": "/learning/global-program/",
     "photo": "global-program-rice-paddy-hoi-an",
     "summary": "For travelling families. Your child joins a real class, half day or full day, and leaves with a progress report and a certificate.",
-    "points": ["Stay 3 weeks to 3 months", "Half-day and full-day options", "Progress report in the first two weeks"]
+    "points": [
+      "Stay 3 weeks to 3 months",
+      "Half-day and full-day options",
+      "Progress report in the first two weeks"
+    ],
+    "tone": "violet"
   }
 ]

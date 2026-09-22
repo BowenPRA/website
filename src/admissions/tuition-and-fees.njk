@@ -5,6 +5,7 @@ description: "Tuition and fees for the Regular Program and Global Program at Pal
 ---
 
 {% set heroPhoto = "gallery-cupcake-decorating" %}
+{% set heroTone = "sun" %}
 {% set heroEyebrow = "Admissions" %}
 {% set heroTitle = "Tuition and fees" %}
 {% set heroText = "We believe education is one of the most meaningful investments you can make. Tuition supports small classes, exceptional teachers and everything on this site." %}
@@ -27,6 +28,7 @@ description: "Tuition and fees for the Regular Program and Global Program at Pal
       </table>
     </div>
 
+    <span class="swipe-hint">Swipe sideways to see the whole table.</span>
     <h2 style="margin-top:48px">Global Program</h2>
     <p class="form__note">Per week. Longer stays cost less per week. <span class="todo">TODO: real table.</span></p>
     <div class="table-wrap">
@@ -43,6 +45,7 @@ description: "Tuition and fees for the Regular Program and Global Program at Pal
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale faq">
   <div class="wrap narrow">
     <h2>The other questions</h2>
@@ -57,4 +60,5 @@ description: "Tuition and fees for the Regular Program and Global Program at Pal
 
 {% set ctaTitle = "Questions about fees? Just ask." %}
 {% set ctaText = "We would rather answer a direct question than have you guess. Call, email, or use the form." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

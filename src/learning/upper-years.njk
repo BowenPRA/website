@@ -5,6 +5,7 @@ description: "Upper Years at Palm River Academy for students aged 14 to 18. A US
 ---
 
 {% set heroPhoto = "upper-years-students-group-project" %}
+{% set heroTone = "coral" %}
 {% set heroEyebrow = "Upper Years · ages 14 to 18" %}
 {% set heroTitle = "Your own pace, with a coach in the room" %}
 {% set heroText = "Upper Years students work toward a US high school diploma or a Cambridge pathway through accredited online courses, with our teachers coaching them in every block. Alongside that: exam preparation, a personal project, and one trip a year that the students plan and budget themselves." %}
@@ -24,6 +25,7 @@ description: "Upper Years at Palm River Academy for students aged 14 to 18. A US
   </div>
 </section>
 
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap two">
     <div>
@@ -34,7 +36,7 @@ description: "Upper Years at Palm River Academy for students aged 14 to 18. A US
       <h2>The trip</h2>
       <p>Once a year the Upper Years plan an educational trip: destination, budget, itinerary, logistics. They do the spreadsheets. We check them.</p>
     </div>
-    {% photo "upper-years-science-with-teacher", "photo--lg photo--tilt" %}
+    <div class="blob-wrap blob-wrap--coral has-sticker"><span class="sticker sticker--coral sticker--tr">IELTS · PTE · GED</span>{% photo "upper-years-science-with-teacher", "photo--lg photo--tilt" %}</div>
   </div>
 </section>
 
@@ -51,4 +53,5 @@ description: "Upper Years at Palm River Academy for students aged 14 to 18. A US
 
 {% set ctaTitle = "Let's talk about your student's plan." %}
 {% set ctaText = "Upper Years is built around the individual, so the first step is a conversation, in person or by video call." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}
