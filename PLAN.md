@@ -99,8 +99,8 @@ Global Program · campus-life gallery · Find your way to PRA · CTA.
 | `/learning/` | Learning overview | One page that compares all stages by age | Age ladder, table: ages / curriculum / day length / class cap, links to each stage | Pick a stage |
 | `/learning/early-years/` | Early Years (20 months to 4) | EYFS, play, language | What a morning looks like, four areas (social, physical, language, maths), partial-day option, FAQ | Book a visit |
 | `/learning/primary/` | Primary (5 to 11) | Cambridge core + PE + vocational | Subjects, daily PE, vocational rotation, Y6 Checkpoint, FAQ | Book a visit |
-| `/learning/secondary/` | Secondary (11 to 14) | Same shape as Primary, own copy (the draft reused Primary text) | Subjects, PE, vocational, Y9 Checkpoint, FAQ | Book a visit |
-| `/learning/upper-years/` | Upper Years (14 to 18) | Pathways: US diploma or Cambridge; exams; personal project; annual trip | Pathways, exam prep (GED, IELTS, PTE), project, trip | Ask a question |
+| `/learning/lower-secondary/` | Lower Secondary (Years 7 to 9) | Same shape as Primary, own copy (the draft reused Primary text) | Subjects, PE, vocational, Y9 Checkpoint, FAQ | Book a visit |
+| `/learning/upper-secondary/` | Upper Secondary (14 to 18) | Pathways: US diploma or Cambridge; exams; personal project; annual trip | Pathways, exam prep (GED, IELTS, PTE), project, trip | Ask a question |
 | `/learning/global-program/` | Global Program (3 weeks to 3 months) | For travelling families; four pathways; price from | Who it is for, four pathways (Early Years, Vocational half day, Academic half day, Full day), what you get (reports, certificate), price from, how to book | Ask about dates |
 | `/admissions/` | How to enroll | Four steps + FAQ | Steps 1 to 4, FAQ (documents, assessment, English level, trial day, rolling admissions), inquiry form | Send inquiry |
 | `/admissions/tuition-and-fees/` | Tuition and fees | Real numbers | Regular Program table, Global Program table, other fees, payment schedule, transport, refund policy, Vietnamese translation link | Ask a question |

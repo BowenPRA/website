@@ -32,11 +32,11 @@
   {
     "key": "secondary",
     "chip": "11 to 14",
-    "name": "Secondary",
+    "name": "Lower Secondary",
     "ages": "Years 7 to 9, ages 11 to 14",
-    "url": "/learning/secondary/",
+    "url": "/learning/lower-secondary/",
     "photo": "secondary-students-classroom",
-    "summary": "Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space.",
+    "summary": "Years 7 to 9. Cambridge Lower Secondary with subject teachers, plus History, Executive Function, Art of Science and the Maker Space.",
     "points": [
       "Cambridge Lower Secondary",
       "Subject-specialist teachers",
@@ -47,9 +47,9 @@
   {
     "key": "upper",
     "chip": "14 to 18",
-    "name": "Upper Years",
+    "name": "Upper Secondary",
     "ages": "Ages 14 to 18",
-    "url": "/learning/upper-years/",
+    "url": "/learning/upper-secondary/",
     "photo": "upper-years-students-group-project",
     "summary": "A US diploma or a Cambridge pathway at each student's own pace, with a teacher coaching every block. Plus IELTS, PTE and GED preparation.",
     "points": [

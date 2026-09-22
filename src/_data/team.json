@@ -1,18 +1,18 @@
 {
   "intro": "A mix of Vietnamese and international teachers. Every academic teacher has a degree in their subject, teaching experience and a TESOL certificate, and is qualified to teach in Việt Nam.",
-  "note": "Roles come from the 2026-27 timetable in the admin app. Add a one-line bio per person when ready; Mr. Landon, Ms. Thuy and Ms. Ali from the Wix draft are not listed because they are not on the current site or timetable. Bowen to confirm.",
+  "note": "Bios describe what each person teaches and leads in 2026-27, from the timetable. Add personal background (home country, degrees, years at PRA) when ready.",
   "members": [
-    { "name": "Mr. Seth", "slug": "seth", "role": "Head Teacher", "teaches": "Cooking, Art of Science, Teens", "bio": "From California, teaching in Việt Nam for a decade. Bachelor's in Health Science and a certified biology teacher for grades 7 to 12." },
-    { "name": "Mr. Bowen", "slug": "bowen", "role": "Year 7 Homeroom", "teaches": "Maths and Science, Teens" },
-    { "name": "Mr. David", "slug": "david", "role": "Teens Homeroom and Counselor", "teaches": "English, Maths, Maker Space" },
-    { "name": "Mr. Caleb", "slug": "caleb", "role": "Year 2 and 3 Homeroom", "teaches": "Art, Dance, Technology, Everyday Experts" },
-    { "name": "Ms. Kiu", "slug": "kiu", "role": "Year 5 Homeroom", "teaches": "English, Science, History, Wellbeing" },
-    { "name": "Ms. Solo", "slug": "solo", "role": "Year 1 Homeroom", "teaches": "English, Maths, Science" },
-    { "name": "Ms. Thanh", "slug": "thanh", "role": "Kindergarten Homeroom", "teaches": "Phonics, Maths, Understanding the World" },
-    { "name": "Ms. Tham", "slug": "tham", "role": "Nursery Homeroom", "teaches": "Nursery" },
-    { "name": "Ms. Thoa", "slug": "thoa", "role": "Nursery Teacher", "teaches": "Nursery" },
-    { "name": "Ms. Thắm V", "slug": "tham-v", "role": "Primary Teacher", "teaches": "Craft, Review, Boredom" },
-    { "name": "Ms. Duyen", "slug": "duyen", "role": "Primary Teacher", "teaches": "Technology, Crafts" },
-    { "name": "Mr. Chiến", "slug": "chien", "role": "PE Teacher", "teaches": "Movement and Exercise" }
+    { "name": "Mr. Seth", "slug": "seth", "role": "Head Teacher", "teaches": "Cooking, Art of Science, Teens", "bio": "From California, teaching in Việt Nam for a decade, with a Bachelor's in Health Science and certification as a biology teacher for grades 7 to 12. Runs the kitchen on cooking days, Art of Science for Secondary, and one of the Teens blocks. If your child comes home smelling of garlic, that was Seth." },
+    { "name": "Mr. Bowen", "slug": "bowen", "role": "Year 7 Homeroom", "teaches": "Maths and Science, Teens", "bio": "Year 7's homeroom teacher and their Maths and Science teacher, plus a Teens block. Bowen also runs the school office side of PRA, so he is usually the first person you will hear from about admissions, fees and reports." },
+    { "name": "Mr. David", "slug": "david", "role": "Teens Homeroom and Counselor", "teaches": "English, Maths, Maker Space", "bio": "Homeroom for the Teens class, where every student follows their own diploma or Cambridge program with David beside them. Teaches Year 7 English and Year 5 Maths, runs the Maker Space, and is the school counselor." },
+    { "name": "Mr. Caleb", "slug": "caleb", "role": "Year 2 and 3 Homeroom", "teaches": "Art, Dance, Technology, Everyday Experts", "bio": "Homeroom for Years 2 and 3 and their English, Maths and Science teacher in the mornings. In the afternoons he teaches Technology, Art and Craft and Everyday Experts to Years 2 to 5, Dance, and Movement for Year 7." },
+    { "name": "Ms. Kiu", "slug": "kiu", "role": "Year 5 Homeroom", "teaches": "English, Science, History, Wellbeing", "bio": "Homeroom for Year 5 and their English and Science teacher. Also teaches History and Executive Function to Year 7, Wellbeing to every class from Year 2 to Teens, and Literacy to the Kindergarten." },
+    { "name": "Ms. Solo", "slug": "solo", "role": "Year 1 Homeroom", "teaches": "English, Maths, Science", "bio": "Homeroom for Year 1 and their English, Maths and Science teacher, plus Practice, Presentation and Play. Also takes the Nursery's afternoon session, so she meets most children before they ever reach Year 1." },
+    { "name": "Ms. Thanh", "slug": "thanh", "role": "Kindergarten Homeroom", "teaches": "Phonics, Maths, Understanding the World", "bio": "Homeroom for the Kindergarten. Starts every day outside, then phonics and maths, and after lunch Understanding the World, which is science and geography for four-year-olds." },
+    { "name": "Ms. Tham", "slug": "tham", "role": "Nursery Homeroom", "teaches": "Nursery", "bio": "Homeroom for the Nursery, our youngest group. Leads the morning learning time with Ms. Thoa and writes the Nursery progress reports." },
+    { "name": "Ms. Thoa", "slug": "thoa", "role": "Nursery Teacher", "teaches": "Nursery", "bio": "The second teacher in the Nursery room all day, from drop-off through the afternoon session. Two adults for the smallest children is the point." },
+    { "name": "Ms. Thắm V", "slug": "tham-v", "role": "Primary Teacher", "teaches": "Craft, Technology, Review", "bio": "Teaches Craft and Technology to Years 2 to 5 in the afternoons, runs Review sessions and the class called Boredom, and looks after the cafeteria at lunch." },
+    { "name": "Ms. Duyen", "slug": "duyen", "role": "Office and Primary Teacher", "teaches": "Technology, Crafts", "bio": "Teaches Technology and Crafts to Year 1 and is on the gate every morning at drop-off. Also part of the school office team." },
+    { "name": "Mr. Chiến", "slug": "chien", "role": "PE Teacher", "teaches": "Movement and Exercise", "bio": "Movement and Exercise for Year 1 and Years 2 to 5: structured sport, fitness and free play on the turf, twice a week for every class." }
   ]
 }

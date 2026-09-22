@@ -1,0 +1,12 @@
+---
+pagination:
+  data: redirects
+  size: 1
+  alias: r
+permalink: "{{ r.from }}index.html"
+eleventyExcludeFromCollections: true
+redirects:
+  - { from: "/learning/secondary/", to: "/learning/lower-secondary/" }
+  - { from: "/learning/upper-years/", to: "/learning/upper-secondary/" }
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved · Palm River Academy</title><meta http-equiv="refresh" content="0; url={{ r.to | url }}"><link rel="canonical" href="{{ r.to | url }}"></head><body><p><a href="{{ r.to | url }}">This page has moved.</a></p></body></html>

@@ -59,7 +59,7 @@
     "src": "wix-draft/124001_342e854d839b46dc9ba3d300bba13d98~mv2.jpg"
   },
   "upper-years-students-group-project": {
-    "alt": "Upper Years students gathered around a laptop and worksheets on the floor, seen from above",
+    "alt": "Upper Secondary students gathered around a laptop and worksheets on the floor, seen from above",
     "width": 1600,
     "height": 2133,
     "sizes": [
@@ -349,5 +349,15 @@
       480
     ],
     "src": "wix-current/Ms_-Tham-V.png"
+  },
+  "community-at-campus-wall": {
+    "alt": "Students and staff gathered in front of the painted I love Palm River Academy wall at the campus gate",
+    "width": 960,
+    "height": 720,
+    "sizes": [
+      480,
+      960
+    ],
+    "src": "wix-draft/124001_9ce831bd8b7e49cc879a7c2e3e3f6784~mv2.jpg"
   }
 }
