@@ -7,21 +7,21 @@ description: "Palm River Academy is an English language center in Hội An for c
 
 <section class="hero">
   <div class="hero__bg" style="--focus: 28% 30%">{% photo "hero-cooking-class-hoi-an", "", "100vw", true %}</div>
-  <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-a.webp' | url }}" alt="" width="900" height="910">
-  <img class="leaf leaf--bl" src="{{ '/assets/img/leaf-b.webp' | url }}" alt="" width="900" height="910">
+  {% set frondClass = "frond--tr" %}{% include "partials/frond.njk" %}
+  {% set frondClass = "frond--bl" %}{% include "partials/frond.njk" %}
   <div class="wrap hero__inner">
     <p class="eyebrow eyebrow--on rise" style="--d:0">English Language Center · Hội An</p>
     <h1 class="rise" style="--d:1">English, learned <span class="mark">by doing.</span></h1>
     <p class="lede rise" style="--d:2">For children from 20 months to 18 years. Science, maths, cooking, art and sport, all in English.</p>
     <div class="hero__actions rise" style="--d:3">
-      <a class="btn btn--sun" href="{{ '/contact/' | url }}">Book a tour</a>
+      <a class="btn btn--white" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
     </div>
   </div>
   <ul class="hero__facts" aria-label="At a glance">
-    <li class="sticker sticker--sun">20 months to 18 years</li>
-    <li class="sticker sticker--coral">{{ site.classCap }} or fewer per class</li>
-    <li class="sticker sticker--green">Since {{ site.founded }}</li>
+    <li class="sticker">20 months to 18 years</li>
+    <li class="sticker sticker--green">{{ site.classCap }} or fewer per class</li>
+    <li class="sticker sticker--coral">Since {{ site.founded }}</li>
   </ul>
   {% include "partials/river.njk" %}
 </section>
@@ -29,14 +29,14 @@ description: "Palm River Academy is an English language center in Hội An for c
 <section>
   <div class="wrap two">
     <div>
-      <p class="eyebrow eyebrow--blue">Discover our story</p>
+      <p class="eyebrow eyebrow--blue">Our story</p>
       <h2>Serving families in Hội An and Đà Nẵng since {{ site.founded }}</h2>
       <p class="lede lede--blue">Hội An's oldest international learning center.</p>
       <p>We opened in {{ site.founded }} for families who wanted their children to learn English without sitting still all day. That is still the idea. Half our families are Vietnamese and half are from abroad. So are our teachers.</p>
       <a class="btn btn--primary" href="{{ '/about/' | url }}">About us</a>
     </div>
-    <div class="blob-wrap has-sticker">
-      <span class="sticker sticker--tl">Est. {{ site.founded }}</span>
+    <div class="leaf-wrap leaf-wrap--r has-sticker">
+      <span class="sticker sticker--sun sticker--tl">Est. {{ site.founded }}</span>
       {% photo "community-at-campus-wall", "photo--lg photo--tilt-r" %}
     </div>
   </div>
@@ -44,7 +44,7 @@ description: "Palm River Academy is an English language center in Hội An for c
 
 <div class="ribbons" aria-hidden="true">
   <svg class="mascot" viewBox="0 0 100 100"><path d="M50 95 C 20 70, 10 35, 50 5 C 90 35, 80 70, 50 95 Z" fill="var(--green-light)"/><path d="M50 12 L50 90" stroke="#fff" stroke-width="3" opacity=".6"/><g class="mascot__eyes"><circle class="eye" cx="42" cy="40" r="7"/><circle class="eye" cx="58" cy="40" r="7"/><circle class="pupil" cx="43" cy="41" r="3"/><circle class="pupil" cx="59" cy="41" r="3"/></g></svg>
-  <div class="ribbon ribbon--sun">
+  <div class="ribbon ribbon--green">
     <div class="ribbon__track ribbon__track--rev">
       {% for i in [1, 2] %}<span>Science</span><span>Maths</span><span>Cooking</span><span>Art</span><span>Sport</span><span>Technology</span><span>Public speaking</span><span>Maker Space</span>{% endfor %}
     </div>
@@ -65,8 +65,8 @@ description: "Palm River Academy is an English language center in Hội An for c
     </div>
     <div class="method">
       <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, with qualified teachers.</p></div>
-      <div class="method__item">{{ ic.icon("whisk", "sun") }}<strong>Doing, not drilling</strong><p>Every afternoon is hands-on: cooking, crafts, art, technology, sport.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "green") }}<strong>Small enough to talk</strong><p>{{ site.classCap }} or fewer per class, so every child gets to speak.</p></div>
+      <div class="method__item">{{ ic.icon("whisk", "green") }}<strong>Doing, not drilling</strong><p>Every afternoon is hands-on: cooking, crafts, art, technology, sport.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "blue") }}<strong>Small enough to talk</strong><p>{{ site.classCap }} or fewer per class, so every child gets to speak.</p></div>
     </div>
   </div>
 </section>
@@ -75,7 +75,7 @@ description: "Palm River Academy is an English language center in Hội An for c
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--coral">Academics</p>
+      <p class="eyebrow eyebrow--blue">Academics</p>
       <h2>From 20 months to 18 years</h2>
       <p class="lede">Pick your child's stage.</p>
     </div>
@@ -92,9 +92,9 @@ description: "Palm River Academy is an English language center in Hội An for c
 </section>
 
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
-<section class="band--blue band--bubbles">
+<section class="band--blue">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Max class size</h3><p>In every academic class.</p></div>
+    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Children per class, at most</h3><p>In every academic class.</p></div>
     <div class="stat"><p class="stat__num" data-count="22">22+</p><h3>Staff</h3><p>Vietnamese and international, Nursery to Upper Secondary.</p></div>
     <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Alumni abroad</h3><p>At high schools and universities overseas.</p></div>
   </div>
@@ -103,7 +103,7 @@ description: "Palm River Academy is an English language center in Hội An for c
 
 <section>
   <div class="wrap two two--flip">
-    <div class="blob-wrap blob-wrap--violet has-sticker">
+    <div class="leaf-wrap has-sticker">
       <span class="sticker sticker--violet sticker--br">3 weeks to 3 months</span>
       {% photo "global-program-nature-walk", "photo--lg photo--tilt" %}
     </div>
@@ -116,11 +116,11 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
-{% set waveColor = "sun" %}{% include "partials/wave.njk" %}
-<section class="band--sun">
+{% set waveColor = "pale-green" %}{% include "partials/wave.njk" %}
+<section class="band--pale-green">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--sun">Campus life</p>
+      <p class="eyebrow">Campus life</p>
       <h2>Lanterns, cupcakes and chess</h2>
     </div>
     <div class="gallery mt">
@@ -141,12 +141,12 @@ description: "Palm River Academy is an English language center in Hội An for c
 
 <section>
   <div class="wrap two">
-    <div class="blob-wrap blob-wrap--green has-sticker">
+    <div class="leaf-wrap leaf-wrap--tint has-sticker">
       <span class="sticker sticker--green sticker--tr">5 min from the old town</span>
       {% photo site.campus.photo, "photo--lg photo--wide" %}
     </div>
     <div>
-      <p class="eyebrow">Find your way to PRA</p>
+      <p class="eyebrow">Where we are</p>
       <h2>One campus in Cẩm Thanh</h2>
       <p>A few minutes from Hội An's old town. Every age learns on the same site.</p>
       <p><strong>{{ site.campus.address }}</strong><br>{{ site.hours }}</p>

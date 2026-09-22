@@ -116,55 +116,64 @@ the Wix draft.
 
 ## 5. Design direction
 
-**Feel:** polished and bright, like the Wix draft, with the playfulness of a good
-children's book: white and pale blue, bright blue and green, palm leaves, rounded
-photo tiles, a hand-drawn underline here and there, big photos of real students.
+> Revised 2026-09-22 in the polish pass: blue and green became the whole identity, the yellow
+> circles gave way to a drawn palm frond, and every page shares one set of parts.
 
-**Colours** (from the Wix draft, extended 2026-09-22 in the colour and motion pass)
-- Bright blue `#116DFF` (headings, buttons), deep blue `#0B4FBF`, navy `#0E2A5C` (footer)
-- Green `#48971D` (contact button, accents), light green `#9CC64A`
-- Stage colours: sun `#FFC857` (Early Years), green (Primary), blue (Lower Secondary),
-  coral `#FF6F59` (Upper Secondary), violet `#7C5CFF` (Global Program). The same
-  colour follows a stage everywhere: tiles, menu dots, age chips, program cards.
-- **Page tones.** Each page sets `tone:` in front matter (blue, green, sun, coral,
-  violet). The tone colours that page's hero band, its pale bands, FAQ, tables and
-  form edge, so each page has its own colour and all pages share the same parts.
-  Hero band shades are picked for 4.5:1 contrast with their text (white, or ink on sun).
-- White page background; a five-colour tape at the top of the footer and in the menu.
+**Feel:** polished and bright, with the playfulness of a good children's book: white and pale
+blue or pale green, bright blue and leaf green, palm fronds, framed photos with a slight tilt,
+one hand-drawn underline per page, big photos of real students.
+
+**Colours** (all in `:root` in `main.css`)
+- Core pair: bright blue `#116DFF` (headings, primary buttons, blue band, CTA) and green
+  `#48971D` (fronds, eyebrows, small marks). Deep blue `#0B4FBF` for links and hover, navy
+  `#0E2A5C` for the footer and small headings, light blue `#7FB2FF` in the tape and calendar.
+  Deep green `#2F7D14` carries any small white text (Contact Us and Send buttons, the green
+  band, step badges, icons), because white on `#48971D` is only 3.7:1. Light green `#9CC64A`
+  for the underline, footer headings, stat marks and the tape. Pale green `#EDF7E3` and pale
+  blue `#EEF5FF` for tinted bands.
+- Stage colours (sun `#FFC857`, green, blue, coral `#FF6F59`, violet `#7C5CFF`) are markers
+  only: menu dots, age chips, tile labels, price-card bars, the day chart and one sticker. They
+  never colour a whole page or a button. Sun, coral and violet never carry body text.
+- **Page tones.** Front matter `tone:` is `blue` (default: Home, Academics, Lower Secondary,
+  Contact), `green` (About, Primary, Handbook), `navy` (Admissions, Events, Upper Secondary) or
+  `light`, a pale green-to-blue hero with blue headings (Early Years, Fees, Global Program,
+  Schedule). The tone colours the hero band and the page's pale bands, FAQ, tables and form edge.
+  Optional `stage:` sets the page's marker colour for its eyebrows and tags.
+- Buttons: blue on white pages, white on coloured bands, deep green for Contact Us and Send.
+- The tape at the top of the footer and the mobile menu is greens and blues with one thread of sun.
 
 **Type**
-- Poppins throughout (700/800 for headings and big numbers, 400/500 for body), as on the Wix draft
-- Big, generous line height. Body 18px on mobile, 19px on desktop.
+- Poppins throughout (700/800 for headings and big numbers, 400/500 for body).
+- One type scale and one space scale, as custom properties (`--t-h1` to `--t-eyebrow`,
+  `--s-1` to `--s-5`, `--section`). Body 18px on mobile, 19.5px from 720px.
+
+**Shape system**
+- Radii `--r-sm` 12, `--r` 18, `--r-lg` 28, pills. Three shadows (`--shadow-sm`, `--shadow`,
+  `--shadow-pop`). Every framed photo (`.photo--lg`, the hero photo) has the same 8px white
+  frame, large radius, pop shadow and a 2 degree tilt.
+- **The palm frond** is the one recurring motif. It is drawn in code (`src/assets/img/frond.svg`
+  for CSS masks; the same paths inlined once per page as `#frond` and `#frond-hang` symbols via
+  `partials/frond-symbol.njk`, placed with `partials/frond.njk`). It hangs into the home hero,
+  sits behind every inner-page hero photo and every framed photo (`.leaf-wrap`), peeks from a
+  corner of every tinted band, frames the CTA and sits in the footer. Two tones per frond: back
+  leaflets darker, stem and front leaflets lighter.
+- Stickers are white paper labels by default, with green, blue, sun, coral or violet variants.
+- Polaroids with tape in the galleries, alternating sun and green tape.
 
 **Whimsy that earns its place**
-- **Age picker on the home page.** "How old is your child?" with tappable
-  chips (Under 5, 5 to 11, 11 to 14, 14 to 18, Just visiting Hội An). Picking
-  one swaps in the right program card. Works without JS (all cards shown).
-- **River divider.** A wavy SVG edge between major sections instead of hard
-  lines. One shape, reused, slightly different colour each time.
-- **Palm leaves that peek in** from the edge of the hero and footer. Static
-  SVG, positioned so they never cover text on narrow screens.
-- **Hand-drawn underline** under one key phrase per page (an SVG stroke).
-- **Blob photo masks** on team and stage photos, rotated a few degrees.
-- **Motion that feels alive, never in the way** (all of it stops under
-  `prefers-reduced-motion`): hero text rises in and the underline draws itself;
-  a slow zoom on the home photo; the river edge under every hero drifts; two
-  crossed ribbons carry the values and subjects; sections fade up as they scroll
-  in; stat numbers count up; cards lift and their colour bar grows on hover;
-  stickers bob; the leaf mascot blinks; the header slides away when scrolling
-  down and back when scrolling up; pages cross-fade in browsers that support it.
-- **Gallery** is polaroids with tape; tap one to open a lightbox. On phones it is
-  a swipe strip.
-- **Microcopy with a wink** in the 404 page, the form success message, and
-  the FAQ headings. Never in the fee table.
+- Age picker on the Academics page; river divider under every hero; wavy edges between bands;
+  the hand-drawn underline in leaf green; a leaf mascot on the ribbons; polaroids with a lightbox.
+- **Motion** (all of it stops under `prefers-reduced-motion`): hero text rises in and the
+  underline draws itself; a slow zoom on the home photo; the river drifts; fronds sway a few
+  degrees; the two ribbons scroll; sections fade up as they scroll in; stat numbers count up;
+  cards lift and their colour bar grows on hover; stickers bob; the mascot blinks; the header
+  slides away on the way down and back on the way up.
 
 **What we do not do**
-- Purple or neon gradients, glassmorphism, floating 3D blobs.
-- Hero video autoplay.
+- Purple or neon gradients, glassmorphism, morphing blobs, floating rings or bubbles.
+- Yellow as a page or section colour. Yellow, coral and violet are accents only.
+- Hero video autoplay, parallax, scroll-jacking, cursor effects, stock photos.
 - Icon-card grids of three as the default section.
-- Parallax, scroll-jacking, cursor effects.
-- Stock photos. If we do not have the photo, the section gets an illustration
-  or nothing.
 
 ## 6. Mobile-first rules
 

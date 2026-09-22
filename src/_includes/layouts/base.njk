@@ -17,8 +17,9 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
   <script>document.documentElement.classList.add("js")</script>
 </head>
-<body class="page-{{ page.fileSlug or 'home' }} tone-{{ tone or 'blue' }}">
+<body class="page-{{ page.fileSlug or 'home' }} tone-{{ tone or 'blue' }}{% if stage %} stage-{{ stage }}{% endif %}">
   <a class="skip" href="#main">Skip to content</a>
+  {% include "partials/frond-symbol.njk" %}
   {% include "partials/header.njk" %}
   <main id="main">
     {{ content | safe }}

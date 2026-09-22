@@ -78,7 +78,9 @@
   // Scroll reveal. Only things that start below the fold get hidden, so nothing flashes,
   // and without JS (or with reduced motion) everything is simply there.
   var revealSelector = [
-    "main section .center.narrow", ".two > *", ".method > *", ".cards > *", ".tiles > *", ".gallery > *",
+    "main section .center.narrow", ".two > *", ".method > *", ".cards > *", ".tiles > *",
+    // on phones the gallery is a swipe strip, so it rises as one piece instead of photo by photo
+    window.innerWidth < 720 ? ".gallery" : ".gallery > *",
     ".values > li", ".steps > li", ".team > li", ".stats > *", ".cal > *", ".programs > *",
     ".faq details", ".table-wrap", ".picker__chips", ".cta__inner", ".faq h2",
     ".dayplan__row", ".daynotes > li", ".stages > *", ".dayline li"

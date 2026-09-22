@@ -8,8 +8,8 @@ description: "Palm River Academy is a licensed English language center in Hội 
 
 {% set heroPhoto = "community-at-campus-wall" %}
 {% set heroEyebrow = "About Us" %}
-{% set heroTitle = 'Our vision. Our staff. <span class="mark">Our story.</span>' %}
-{% set heroText = "A licensed English language center in Hội An since " + site.founded + ". Small classes, 20 months to 18 years." %}
+{% set heroTitle = 'Small classes, real projects, <span class="mark">since ' + site.founded + '</span>' %}
+{% set heroText = "A licensed English language center in Hội An for children from 20 months to 18 years. Here is who we are and how we teach." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
@@ -20,8 +20,8 @@ description: "Palm River Academy is a licensed English language center in Hội 
       <p>We opened in {{ site.founded }} for families who wanted their children to learn English without sitting still all day. We teach the Cambridge curriculum because schools everywhere recognise it, and we wrap it in things you can touch: cooking, art, technology, sport.</p>
       <p>Vietnamese and international families sit side by side. Classes stay at {{ site.classCap }} or fewer. Some students go on to universities abroad; others to work here at home.</p>
     </div>
-    <div class="blob-wrap has-sticker">
-      <span class="sticker sticker--tr">Since {{ site.founded }}</span>
+    <div class="leaf-wrap leaf-wrap--r has-sticker">
+      <span class="sticker sticker--sun sticker--tr">Since {{ site.founded }}</span>
       {% photo "student-lantern-making-hoi-an", "photo--lg photo--tall photo--tilt-r" %}
     </div>
   </div>
@@ -36,9 +36,9 @@ description: "Palm River Academy is a licensed English language center in Hội 
       <p class="lede">The fastest way to learn a language is to need it. So science, maths, cooking, art and sport all happen in English.</p>
     </div>
     <div class="method">
-      <div class="method__item">{{ ic.icon("sparkle", "sun") }}<strong>Play first, projects later</strong><p>Play in Early Years. Experiments, building and presenting after that.</p></div>
+      <div class="method__item">{{ ic.icon("sparkle", "green") }}<strong>Play first, projects later</strong><p>Play in Early Years. Experiments, building and presenting after that.</p></div>
       <div class="method__item">{{ ic.icon("chat", "blue") }}<strong>English is the tool</strong><p>It is how you measure, explain and argue. Children pick it up because they need it.</p></div>
-      <div class="method__item">{{ ic.icon("star", "coral") }}<strong>Doing it yourself</strong><p>Students plan, make and present their own work, and get braver each time.</p></div>
+      <div class="method__item">{{ ic.icon("star", "blue") }}<strong>Doing it yourself</strong><p>Students plan, make and present their own work, and get braver each time.</p></div>
     </div>
   </div>
 </section>
@@ -47,8 +47,8 @@ description: "Palm River Academy is a licensed English language center in Hội 
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--coral">Our PRA values</p>
-      <h2>Six principles</h2>
+      <p class="eyebrow eyebrow--blue">Our values</p>
+      <h2>Six things we hold to</h2>
     </div>
     <ol class="values values--3">
       <li><div><strong>Intellectual Exploration</strong><p>Asking questions, then finding the answers by hand.</p></div></li>
@@ -65,7 +65,7 @@ description: "Palm River Academy is a licensed English language center in Hội 
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--blue">Our academy team</p>
+      <p class="eyebrow eyebrow--blue">Our team</p>
       <h2>Vietnamese and international teachers</h2>
       <p class="lede">{{ team.intro }}</p>
     </div>
@@ -86,7 +86,7 @@ description: "Palm River Academy is a licensed English language center in Hội 
 
 <section>
   <div class="wrap two">
-    <div class="blob-wrap blob-wrap--green">
+    <div class="leaf-wrap leaf-wrap--tint">
       {% photo site.campus.photo, "photo--lg photo--wide" %}
     </div>
     <div>

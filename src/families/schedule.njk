@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-tone: violet
+tone: light
 title: "Schedule and calendar"
 description: "How the day runs at Palm River Academy, from Early Years to Upper Secondary: English, Maths and Science every morning, specialist and vocational classes after lunch. Plus the dates for the year."
 ---
@@ -17,9 +17,9 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--violet">Monday to Friday</p>
+      <p class="eyebrow">Monday to Friday</p>
       <h2>The day at a glance</h2>
-      <p class="lede">Doors open at 8:00 for every age. The core subjects come first, while heads are fresh. After lunch come the classes where the English gets used.</p>
+      <p class="lede">Doors open at 8:00 for every age. Core subjects first, while heads are fresh. After lunch, the classes where the English gets used.</p>
     </div>
 
     <figure class="dayplan">
@@ -48,8 +48,8 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
     </figure>
 
     <ul class="daynotes">
-      <li>{{ ic.icon("clock", "violet") }}<span><strong>Off sick or away?</strong> Tell us by 8:00 that morning.</span></li>
-      <li>{{ ic.icon("whisk", "sun") }}<span><strong>Lunch and two snacks</strong> every day, if you want them.</span></li>
+      <li>{{ ic.icon("clock", "blue") }}<span><strong>Off sick or away?</strong> Tell us by 8:00 that morning.</span></li>
+      <li>{{ ic.icon("whisk", "green") }}<span><strong>Lunch and two snacks</strong> every day, if you want them.</span></li>
       <li>{{ ic.icon("bus", "blue") }}<span><strong>The bus</strong> runs around Hội An, Vĩnh Điện and Đà Nẵng.</span></li>
     </ul>
   </div>
@@ -59,7 +59,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--violet">Stage by stage</p>
+      <p class="eyebrow">Stage by stage</p>
       <h2>What the week holds</h2>
       <p class="lede">Mornings keep to the core subjects. The mix after lunch changes as children grow.</p>
     </div>
@@ -103,10 +103,10 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
 <section id="calendar">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--violet">Academic calendar</p>
+      <p class="eyebrow">Academic calendar</p>
       <h2>Dates for {{ calendar.year }}</h2>
     </div>
-    <div class="cal" style="margin-top:32px">
+    <div class="cal mt">
       {% for m in calendar.months %}
       <div class="cal__month">
         <h3>{{ m.name }}</h3>
@@ -118,7 +118,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
       </div>
       {% endfor %}
     </div>
-    <p class="form__note" style="margin-top:24px">{{ calendar.note }}</p>
+    <p class="table-note table-note--gap">{{ calendar.note }}</p>
   </div>
 </section>
 

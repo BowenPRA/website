@@ -1,0 +1,3 @@
+{# A palm frond. Set frondClass before including: "frond--bl" or "frond--br" reach up from a bottom corner,
+   "frond--tr" or "frond--tl" hang from a top corner (they use the pre-rotated #frond-hang symbol). Add "frond--soft" for no shadow. #}
+<svg class="frond {{ frondClass }}" viewBox="0 0 640 640" aria-hidden="true"><use href="#{{ 'frond-hang' if ('frond--tr' in frondClass or 'frond--tl' in frondClass) else 'frond' }}"/></svg>

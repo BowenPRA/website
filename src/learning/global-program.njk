@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
-tone: violet
+tone: light
+stage: violet
 title: "Global Program"
 description: "The Global Program at Palm River Academy is a 3 week to 3 month program for travelling families in Hội An. Half-day and full-day options, ages 2 to 14, with a progress report and certificate."
 ---
@@ -15,10 +16,10 @@ description: "The Global Program at Palm River Academy is a 3 week to 3 month pr
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Four pathways</p>
+      <p class="eyebrow eyebrow--stage">Four pathways</p>
       <h2>Choose how much of the day</h2>
     </div>
-    <div class="cards" style="margin-top:32px">
+    <div class="cards mt">
       <div class="card"><span class="card__tag">Ages 2 to 5</span><h3>Early Years</h3><p>Play-based days in English: stories, music, sand and water. Short-stay children settle fast because every day has the same rhythm.</p></div>
       <div class="card"><span class="card__tag">Years 1 to 9 · half day</span><h3>Vocational half day</h3><p>Cooking, public speaking, art, PE and making things. For children who learn by doing.</p></div>
       <div class="card"><span class="card__tag">Years 1 to 9 · half day</span><h3>Academic half day</h3><p>Cambridge English, Maths and Science, so your child keeps up while you are away.</p></div>
@@ -37,9 +38,9 @@ description: "The Global Program at Palm River Academy is a 3 week to 3 month pr
         <li>A final report at the end of the stay.</li>
         <li>A Certificate of Completion. Useful for the school back home, and nice on the fridge.</li>
       </ul>
-      <p style="margin-top:16px"><strong>From 4,200,000 VND a week</strong> for Early Years and the vocational half day when your child stays 10 to 12 weeks. Shorter stays, and the academic and full-day pathways, cost more per week. The full table is on the <a href="{{ '/admissions/tuition-and-fees/' | url }}" style="color:#fff">fees page</a>.</p>
+      <p class="mt"><strong>From 4,200,000 VND a week</strong> for Early Years and the vocational half day when your child stays 10 to 12 weeks. Shorter stays, and the academic and full-day pathways, cost more per week. The full table is on the <a href="{{ '/admissions/tuition-and-fees/' | url }}">fees page</a>.</p>
     </div>
-    {% photo "global-program-nature-walk", "photo--lg" %}
+    <div class="leaf-wrap leaf-wrap--deep">{% photo "global-program-nature-walk", "photo--lg photo--tilt" %}</div>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}

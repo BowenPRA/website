@@ -1,13 +1,11 @@
 <section class="cta">
-  <span class="cta__bubble cta__bubble--a" aria-hidden="true"></span>
-  <span class="cta__bubble cta__bubble--b" aria-hidden="true"></span>
-  <span class="cta__bubble cta__bubble--c" aria-hidden="true"></span>
-  <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-c.webp' | url }}" alt="" width="900" height="910" loading="lazy">
+  {% set frondClass = "frond--bl" %}{% include "partials/frond.njk" %}
+  {% set frondClass = "frond--tr" %}{% include "partials/frond.njk" %}
   <div class="wrap cta__inner">
     <h2>{{ ctaTitle or "Come and see it for yourself." }}</h2>
     <p>{{ ctaText or "Walk around with us for an hour, Monday to Friday. Not in Hội An yet? We will do a video call." }}</p>
     <div class="cta__actions">
-      <a class="btn btn--sun" href="{{ '/contact/' | url }}">Book a tour</a>
+      <a class="btn btn--white" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="tel:{{ site.phoneIntl }}">Call {{ site.phone }}</a>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <div class="tape" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-  <img class="leaf leaf--footer" src="{{ '/assets/img/leaf-b.webp' | url }}" alt="" width="900" height="910" loading="lazy">
+  {% set frondClass = "frond--br" %}{% include "partials/frond.njk" %}
   <div class="wrap site-footer__grid">
     <div>
       <img class="site-footer__logo" src="{{ '/assets/img/logo.png' | url }}" alt="{{ site.name }}" width="1064" height="429" loading="lazy">

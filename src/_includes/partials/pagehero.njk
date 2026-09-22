@@ -1,9 +1,8 @@
-{# Inner-page hero: the page's tone colour as the band, the photo framed beside the text.
-   Set heroPhoto, heroEyebrow, heroTitle (may hold a <span class="mark">), heroText; optional heroShape (tall | wide). #}
+{# Inner-page hero: the page tone as the band, the photo framed beside the text with a palm frond behind it.
+   Set heroPhoto, heroEyebrow, heroTitle (may hold a <span class="mark">), heroText; optional heroShape (tall) for a portrait photo. #}
 <section class="phero">
   <span class="phero__dots" aria-hidden="true"></span>
-  <span class="phero__ring" aria-hidden="true"></span>
-  <img class="leaf leaf--tr" src="{{ '/assets/img/leaf-a.webp' | url }}" alt="" width="900" height="910">
+  {% set frondClass = "frond--tr frond--soft" %}{% include "partials/frond.njk" %}
   <div class="wrap phero__grid">
     <div class="phero__text">
       {% if heroEyebrow %}<p class="eyebrow eyebrow--on rise" style="--d:0">{{ heroEyebrow }}</p>{% endif %}
@@ -11,9 +10,8 @@
       {% if heroText %}<p class="lede rise" style="--d:2">{{ heroText }}</p>{% endif %}
     </div>
     <div class="phero__media rise" style="--d:2">
-      <span class="phero__blob" aria-hidden="true"></span>
+      {% set frondClass = "" %}{% include "partials/frond.njk" %}
       {% photo heroPhoto, "phero__photo" + (" phero__photo--" + heroShape if heroShape else ""), "(min-width: 1240px) 520px, (min-width: 900px) 44vw, (min-width: 620px) 560px, 92vw", true %}
-      <svg class="phero__squiggle" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M4 20 C 16 4, 28 4, 40 20 S 64 36, 76 20 S 100 4, 116 20" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg>
     </div>
   </div>
   {% include "partials/river.njk" %}
