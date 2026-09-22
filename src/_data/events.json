@@ -45,6 +45,21 @@
     "photos": []
   },
   {
+    "id": "thanksgiving",
+    "name": "Thanksgiving",
+    "month": "Nov",
+    "year": "2025",
+    "when": "Thursday 27 November",
+    "summary": "An American Thanksgiving celebration, shared with families.",
+    "did": [
+      "Upper Secondary students cooked the food with their teacher, including trays of homemade cookies"
+    ],
+    "photos": [
+      "thanksgiving-cooking-team",
+      "thanksgiving-stirring-the-pot"
+    ]
+  },
+  {
     "id": "christmas",
     "name": "Christmas Talent Show and Market",
     "month": "Dec",
@@ -63,24 +78,44 @@
     ]
   },
   {
+    "id": "tet",
+    "name": "Tết",
+    "month": "Feb",
+    "year": "2026",
+    "when": "Thursday 12 February",
+    "summary": "A day of Tết traditions to welcome the Year of the Horse.",
+    "did": [
+      "Students wrote New Year words in calligraphy on red paper",
+      "Classes played traditional Vietnamese games together",
+      "Many children came to school in áo dài"
+    ],
+    "photos": [
+      "tet-calligraphy-on-red-paper",
+      "tet-tug-of-war"
+    ]
+  },
+  {
     "id": "march-mathness",
     "name": "March Mathness",
     "month": "Mar",
     "year": "2026",
     "when": "March, with a family afternoon on 2 April",
-    "summary": "A month of maths games across the whole campus.",
+    "summary": "A month of maths games, puzzles and challenges across the whole campus.",
     "did": [
-      "Classes guessed where 15 metres ends, marked it in chalk, then checked with a tape measure",
-      "Students estimated the pom-poms in a jar, and winners took home prize stickers",
-      "At a Stay and Play afternoon, families joined their children at the game tables: mazes, cube towers, card puzzles and strategy games"
+      "Every class played maths games and worked through puzzles together",
+      "Students took on maths challenges, and the winners took home prizes",
+      "Families came in for a Stay and Play afternoon and joined the games"
     ],
     "photos": [
+      "march-mathness-lawn-maze",
       "march-mathness-pick-up-sticks-game",
-      "march-mathness-magic-square-cards",
+      "march-mathness-number-cards",
       "march-mathness-cube-tower",
+      "march-mathness-prize-winner",
+      "march-mathness-magic-square-cards",
       "march-mathness-cube-building",
-      "march-mathness-paper-boats",
-      "march-mathness-counting-game"
+      "march-mathness-card-game",
+      "march-mathness-paper-boats"
     ]
   },
   {
@@ -95,7 +130,10 @@
       "They designed new book covers in art class and voted for the best one",
       "Everyone stopped to read at lunch, and the week ended with a costume parade and a campus festival of word games"
     ],
-    "photos": []
+    "photos": [
+      "book-character-day-costumes",
+      "book-character-day-teacher"
+    ]
   },
   {
     "id": "learning-without-walls",
@@ -110,8 +148,12 @@
       "A beach day, a sports day with a pool party, and an overnight camping trip for Year 6"
     ],
     "photos": [
-      "learning-without-walls-kim-bong-carpentry-village",
-      "learning-without-walls-3d-art-museum"
+      "learning-without-walls-group-photo",
+      "learning-without-walls-3d-wave",
+      "learning-without-walls-workshop-visit",
+      "learning-without-walls-water-game",
+      "learning-without-walls-yoga",
+      "learning-without-walls-kim-bong-carpentry-village"
     ]
   },
   {

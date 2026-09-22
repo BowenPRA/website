@@ -34,8 +34,8 @@ permalink: /events/
           </ul>
           {% endif %}
           {% if e.photos.length %}
-          <div class="gallery gallery--event"{% if e.photos.length == 4 %} style="--cols: 4"{% endif %}>
-            {% for slug in e.photos %}{% photo slug, "", "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px" %}{% endfor %}
+          <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
+            {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
           </div>
           {% endif %}
         </div>

@@ -92,8 +92,9 @@ Home page section order, top to bottom: full-bleed photo hero with palm leaves �
 Our story · values marquee · "Content through context" (the English
 language center explanation) · four photo tiles for the stages · stats band ·
 Global Program · campus-life gallery · the student-made yearbook film (navy band,
-native video player, a 3 min cut of the 2025-26 yearbook video in src/assets/video/;
-credit it to the "Yearbook Team", not a year group) · Find your way to PRA · CTA.
+native video player, a 3 min cut of the 2025-26 yearbook video in src/assets/video/,
+with a taped polaroid of the Yearbook Team under the text; credit it to the "Yearbook Team",
+not a year group) · Find your way to PRA · CTA.
 
 | URL | Page | Purpose | Sections | Main CTA |
 |---|---|---|---|---|

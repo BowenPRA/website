@@ -106,7 +106,7 @@
     {
       "key": "lower-secondary", "name": "Lower Secondary", "tone": "blue",
       "ages": "Ages 11 to 14",
-      "url": "/learning/lower-secondary/", "photo": "secondary-marble-run-wall",
+      "url": "/learning/lower-secondary/", "photo": "maker-space-chain-reaction-board",
       "facts": ["8:00 to 15:20", "Homeroom at 8:30", "Lunch at 12:25"],
       "am": {
         "title": "Every morning",

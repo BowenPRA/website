@@ -237,17 +237,6 @@
     ],
     "src": "wix-current/6c6955_8ffca8e185084c329d3dd8e0b5f4f0af~mv2.png"
   },
-  "secondary-marble-run-wall": {
-    "alt": "Secondary students test a marble run they built on the classroom wall",
-    "width": 1600,
-    "height": 1200,
-    "sizes": [
-      480,
-      960,
-      1600
-    ],
-    "src": "wix-draft/124001_23d8174111da4373b56cf93821dbaef2~mv2.jpg"
-  },
   "secondary-table-tennis": {
     "alt": "A teenage student plays table tennis outdoors",
     "width": 1600,
@@ -421,17 +410,6 @@
     ],
     "src": "events/2026_03 March Mathness/Photos/Stay and Play/IMG_9683.jpg"
   },
-  "march-mathness-counting-game": {
-    "alt": "Three young children pass a counting piece between them on the turf",
-    "width": 1600,
-    "height": 1200,
-    "sizes": [
-      480,
-      960,
-      1600
-    ],
-    "src": "events/2026_03 March Mathness/Photos/Stay and Play/z7686398547871_7a0d77b0638bdcb32639e9f2691d64fc.jpg"
-  },
   "mid-autumn-festival-costume-parade": {
     "alt": "Young children in costume walk across the stage in front of a handmade Mid-Autumn Festival banner",
     "width": 1600,
@@ -483,17 +461,6 @@
       1600
     ],
     "src": "events/2026_06_12 Graduation/_extracted/4 Year 4-5 Graduation - Year 45 -Oh, the Places/image78.jpeg"
-  },
-  "learning-without-walls-3d-art-museum": {
-    "alt": "Students pose in a painted gondola at a 3D art museum in Đà Nẵng",
-    "width": 1556,
-    "height": 1167,
-    "sizes": [
-      480,
-      960,
-      1556
-    ],
-    "src": "events/2026_06_12 Graduation/_extracted/4 Year 4-5 Graduation - Year 45 -Oh, the Places/image86.jpeg"
   },
   "mid-autumn-festival-show-for-families": {
     "alt": "Families watch students perform on the Mid-Autumn Festival stage under rows of paper lanterns",
@@ -571,5 +538,203 @@
       1600
     ],
     "src": "events/2026_03 March Mathness/Photos/Added 2026-09-22/z7686398664794_8f1f134b969210e7913b60a12b52b7cf.jpg"
+  },
+  "yearbook-team-2025-26": {
+    "alt": "The Yearbook Team sit together on the floor with their laptops, a camera and a copy of the yearbook",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "yearbook/uploads/IMG_1798.jpg"
+  },
+  "lower-secondary-classroom-lesson": {
+    "alt": "A teacher points to the whiteboard while secondary students listen around a long table",
+    "width": 1136,
+    "height": 852,
+    "sizes": [
+      480,
+      960,
+      1136
+    ],
+    "src": "yearbook/uploads/1000018737.jpg"
+  },
+  "maker-space-chain-reaction-board": {
+    "alt": "A student fixes an egg-box ramp to the chain-reaction board he is building on the classroom wall",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "yearbook/uploads/DSC00940.JPG"
+  },
+  "thanksgiving-cooking-team": {
+    "alt": "Upper Secondary students and their teacher in blue aprons stand behind the Thanksgiving food they cooked",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_11_27 Thanksgiving/DSC00348.JPG"
+  },
+  "thanksgiving-stirring-the-pot": {
+    "alt": "A student and his teacher, both in Palm River Academy aprons, stir a big pot for Thanksgiving",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_11_27 Thanksgiving/DSC00193.JPG"
+  },
+  "tet-calligraphy-on-red-paper": {
+    "alt": "Students paint Vietnamese calligraphy on red paper for Tết",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_02_12 Tet/DSC00978.JPG"
+  },
+  "tet-tug-of-war": {
+    "alt": "Students pull together in a tug of war on the turf at the Tết celebration",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_02_12 Tet/DSC01155.JPG"
+  },
+  "march-mathness-lawn-maze": {
+    "alt": "Children and parents work their way through a giant maze puzzle laid out on the lawn",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Added 2026-09-23/IMG_0140.jpg"
+  },
+  "march-mathness-number-cards": {
+    "alt": "Young children match counting cubes to number cards at a maths table",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Added 2026-09-23/IMG_0062.jpg"
+  },
+  "march-mathness-prize-winner": {
+    "alt": "A smiling student holds up his prize, a jar of pom-poms, next to his maths teacher",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Added 2026-09-23/IMG_20260310_083727.jpg"
+  },
+  "march-mathness-card-game": {
+    "alt": "Older students lay out playing cards for a maths card game",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Added 2026-09-23/IMG_0117.jpg"
+  },
+  "book-character-day-costumes": {
+    "alt": "Three girls dressed as book characters stand together on the school field",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_04 Reading Safari Week/Added 2026-09-23/DSC01981.JPG"
+  },
+  "book-character-day-teacher": {
+    "alt": "A teacher in a long black costume with a white collar on Book Character Day",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_04 Reading Safari Week/Added 2026-09-23/ADSC01890.JPG"
+  },
+  "learning-without-walls-group-photo": {
+    "alt": "Students and teachers sit together on the front steps of a building during Learning Without Walls",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06 Learning Without Walls/Added 2026-09-23/update24.jpg"
+  },
+  "learning-without-walls-3d-wave": {
+    "alt": "Students pose on a painted surfboard in front of a giant 3D wave at an art museum",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06 Learning Without Walls/Added 2026-09-23/IMG_0073.JPG"
+  },
+  "learning-without-walls-workshop-visit": {
+    "alt": "Students sit on the floor and listen to their host during a workshop visit",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06 Learning Without Walls/Added 2026-09-23/IMG_7570.jpg"
+  },
+  "learning-without-walls-water-game": {
+    "alt": "A student hops through a hopscotch course while classmates with water guns try to soak him",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06 Learning Without Walls/Added 2026-09-23/update30.jpg"
+  },
+  "learning-without-walls-yoga": {
+    "alt": "Young children stretch into a downward dog pose on the turf",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06 Learning Without Walls/Added 2026-09-23/update4.jpg"
   }
 }

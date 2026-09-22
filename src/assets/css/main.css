@@ -570,7 +570,12 @@ section { padding: var(--section) 0; position: relative; }
    A navy band with the student-made film in a white frame, like the site's photos. The poster shows until play;
    a big play button sits on top and main.js hides it once the film starts. The file only loads on play. */
 .film__grid { display: grid; gap: clamp(28px, 4vw, 56px); align-items: center; }
-@media (min-width: 900px) { .film__grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
+@media (min-width: 900px) {
+  .film__grid { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); row-gap: 0; }
+  .film__player { grid-column: 2; grid-row: 1 / span 2; }
+  .film__text { align-self: end; }
+  .film__team { grid-column: 1; grid-row: 2; align-self: start; }
+}
 .film__text .lede { color: rgba(255,255,255,0.9); }
 .film__meta { margin: 0; font-size: var(--t-small); color: var(--green-light); font-weight: 600; }
 .film__player { position: relative; margin: 0; }
@@ -592,8 +597,13 @@ section { padding: var(--section) 0; position: relative; }
 .film__player.is-playing .film__play, .film__player .film__video:not([poster]) + .film__play { display: none; }
 .film__caption { margin: 14px 0 0; text-align: center; font-size: var(--t-small); color: rgba(255,255,255,0.75); }
 .film .sticker--tl { top: -14px; left: 6px; }
+/* the team who made it: a taped polaroid under the text */
+.film__team { position: relative; max-width: 300px; margin: 30px 0 8px; padding: 8px 8px 0; background: #fff; border-radius: 10px; rotate: -2.5deg; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); }
+.film__team::before { content: ""; position: absolute; z-index: 2; top: -9px; left: 50%; width: 64px; height: 20px; margin-left: -32px; rotate: 4deg; background: rgba(156, 198, 74, 0.8); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.film__team .photo { border-radius: 4px; }
+.film__team figcaption { padding: 7px 4px 9px; text-align: center; font-size: var(--t-small); font-weight: 600; color: var(--ink); }
 .film > .frond--tr { opacity: 0.9; }
-@media (max-width: 899px) { .film > .frond--tr { display: none; } .film__grid { text-align: center; } .film__text .lede { margin-inline: auto; } .film__play { width: 72px; height: 72px; } .film__play svg { width: 32px; height: 32px; } }
+@media (max-width: 899px) { .film > .frond--tr { display: none; } .film__grid { text-align: center; } .film__text .lede { margin-inline: auto; } .film__team { margin: 10px auto 0; max-width: 260px; } .film__play { width: 72px; height: 72px; } .film__play svg { width: 32px; height: 32px; } }
 
 /* ---------- ribbons (subjects and values) ---------- */
 
