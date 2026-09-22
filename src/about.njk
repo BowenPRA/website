@@ -1,0 +1,85 @@
+---
+layout: layouts/base.njk
+title: "About"
+description: "Palm River Academy opened in 2017 in Cẩm Thanh, Hội An. A licensed English language center and a learning community for children from 20 months to 18 years."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">About us</p>
+  <h1>A small place by the river, since 2017</h1>
+  <p class="lede">{{ site.licenceLine }} We are also, more simply, a learning community: children from 20 months to 18, twenty-odd adults, two campuses, and a lot of projects on the go.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap two">
+    <div>
+      <h2>Our story, short version</h2>
+      <p>We opened in {{ site.founded }} with a handful of families who wanted their children to learn in English without sitting still all day. That is still the idea. We follow the Cambridge curriculum for English, Maths, and Science because it is clear and recognised anywhere, and we wrap it in things you can touch: cooking, art, technology, sport, and projects the students choose.</p>
+      <p>About half our families are Vietnamese and half are from somewhere else. About half our teachers, too. The children notice this less than the adults do.</p>
+      <p>Today we teach from 20 months to 18 years across two campuses in Cẩm Thanh, a few minutes apart. Academic classes never go above {{ site.classCap }} children.</p>
+    </div>
+    <div class="photo photo--blob" data-caption="photo: the Primary Campus from the gate, or an early photo from 2017"></div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How we teach</p>
+    <h2>Children learn when they are <span class="mark">doing something</span></h2>
+    <div class="two">
+      <div>
+        <p>We plan lessons around exploring and solving problems, not just around the answer at the end. In Early Years that means play. In Primary and Secondary it means experiments, building things, and presenting them to people. In Upper Years it means a personal project and a trip the students plan and budget themselves.</p>
+        <p>The point is confidence and independence. A child who has cooked for the class, presented a project to a room of parents, and explained a maths idea to a younger student is ready for most things, including exams.</p>
+      </div>
+      <ol class="values">
+        <li><div><strong>Intellectual exploration</strong><p>Ask, test, be wrong, try again.</p></div></li>
+        <li><div><strong>Creative expression</strong><p>Art, projects, and unusual solutions.</p></div></li>
+        <li><div><strong>Sports and fun</strong><p>Outside every day. It matters.</p></div></li>
+        <li><div><strong>Global citizenship</strong><p>Respect for other cultures, starting with the one at the next desk.</p></div></li>
+        <li><div><strong>Leadership</strong><p>Real responsibility, in small doses, from early on.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
+
+<section class="band--paper">
+  <div class="wrap">
+    <p class="eyebrow">The people</p>
+    <h2>Our team</h2>
+    <p class="lede">Vietnamese and international teachers. Every Cambridge subject teacher holds a degree in their subject, teaching experience, and a TESOL certificate, and is qualified to teach in Việt Nam.</p>
+    <ul class="team">
+      {% for m in team.members %}
+      <li>
+        <div class="photo photo--square photo--blob{% if loop.index is even %}-b{% endif %}" data-caption="photo: {{ m.name }}"></div>
+        <strong>{{ m.name }}</strong>
+        <em>{{ m.role }}</em>
+        <p>{{ m.bio }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <h2>Two campuses in Cẩm Thanh</h2>
+    <div class="cards">
+      {% for c in site.campuses %}
+      <div class="card campus">
+        <h3>{{ c.name }}</h3>
+        <p class="campus__who">{{ c.who }}</p>
+        <p>{{ c.address }}</p>
+        <a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

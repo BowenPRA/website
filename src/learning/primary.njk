@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+title: "Primary"
+description: "Primary at Palm River Academy for children aged 5 to 11. Cambridge English, Maths, and Science, PE every day, and vocational classes in the afternoon."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Primary · 5 to 11 years</p>
+  <h1>Cambridge in the morning, <span class="mark">mud by lunchtime</span></h1>
+  <p class="lede">Primary follows the Cambridge International curriculum for English, Maths, and Science, taught by qualified teachers in classes of {{ site.classCap }} or fewer. Then the day opens up: sport, cooking, art, technology.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap two">
+    <div>
+      <h2>The academic core</h2>
+      <p><strong>English</strong> is reading real books, writing things people will read, and talking. A lot of talking. <strong>Maths</strong> starts with objects and patterns and works up to the abstract. <strong>Science</strong> is experiments first, explanations second.</p>
+      <p>The Cambridge Primary framework means your child's progress is measured against a standard schools recognise anywhere, and moving to another school later is straightforward.</p>
+    </div>
+    <div class="photo photo--blob" data-caption="photo: a science experiment in a Year 2 or 3 class"></div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <h2>The rest of the day</h2>
+    <div class="cards">
+      <div class="card"><h3>PE, every day</h3><p>Structured sport, calisthenics, and free play, in rotation. The aim is that every child finds something physical they like enough to keep doing.</p></div>
+      <div class="card"><h3>Vocational classes</h3><p>Subjects rotate each year so children meet a range of skills. This year: technology, fashion and design, and art, taught by specialists. Assessed by making things, not by tests.</p></div>
+      <div class="card"><h3>Year 6 Checkpoint</h3><p>Optional. A Cambridge diagnostic test in English, Maths, and Science at the end of Primary. It gives a clear picture of strengths and gaps, and practice at sitting a formal exam.</p></div>
+      <div class="card"><h3>Reports and meetings</h3><p>Written progress reports and two parent and teacher meetings a year, in October and March. In between, just ask.</p></div>
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
+
+<section class="band--paper faq">
+  <div class="wrap">
+    <h2>Questions parents ask</h2>
+    <details><summary>My child's English is basic. Can they keep up?</summary><p class="todo">TODO: describe the English support in place for new arrivals and how placement works.</p></details>
+    <details><summary>Which year group will my child join?</summary><p class="todo">TODO: explain how year placement is decided (age, assessment, previous school).</p></details>
+    <details><summary>Is there homework?</summary><p class="todo">TODO: one honest paragraph.</p></details>
+    <details><summary>Do you offer transport or lunch?</summary><p class="todo">TODO: link to the fees page once the answers are in.</p></details>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

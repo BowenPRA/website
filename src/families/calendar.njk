@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: "Calendar"
+description: "The Palm River Academy academic calendar, month by month. Holidays, breaks, parent meetings, and payment dates."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Families</p>
+  <h1>Academic calendar {{ calendar.year }}</h1>
+  <p class="lede">Every date we know about. If something changes we will tell you by email first and update this page second.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap">
+    <div class="cal">
+      {% for m in calendar.months %}
+      <div class="cal__month">
+        <h3>{{ m.name }}</h3>
+        <ul>
+          {% for e in m.events %}
+          <li>
+            <time>{{ e.date }}</time>
+            {{ e.what }}{% if e.tag %} <span class="tag tag--{{ e.tag | replace(' ', '-') }}">{{ e.tag }}</span>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="form__note" style="margin-top:24px">{{ calendar.note }}</p>
+  </div>
+</section>
+
+{% set ctaTitle = "Planning a visit around the holidays?" %}
+{% set ctaText = "Tours run on school days. Check the dates above, then pick one." %}
+{% include "partials/cta.njk" %}

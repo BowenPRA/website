@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+title: "Learning"
+description: "Early Years, Primary, Secondary, Upper Years, and the Global Program at Palm River Academy, side by side."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Learning</p>
+  <h1>Five programs, one way of working</h1>
+  <p class="lede">Whatever the age, the day has the same shape: academic subjects in English, something physical, something made with your hands. Pick your child's age below.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap">
+    <div class="programs">
+      {% for p in programs %}
+      <article class="program program--{{ p.colour }}">
+        <p class="program__ages">{{ p.ages }}</p>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.summary }}</p>
+        <ul>{% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+        <a class="btn btn--ghost btn--small" href="{{ p.url | url }}">About {{ p.name }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <h2>Side by side</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Program</th><th>Ages</th><th>Curriculum</th><th>Day</th><th>Class size</th></tr></thead>
+        <tbody>
+          <tr><td>Early Years</td><td>20 months to 4</td><td>British EYFS, in English</td><td>Full or partial day</td><td>Small groups</td></tr>
+          <tr><td>Primary</td><td>5 to 11</td><td>Cambridge Primary + vocational</td><td>8:00 to 16:00</td><td>13 or fewer</td></tr>
+          <tr><td>Secondary</td><td>11 to 14</td><td>Cambridge Lower Secondary + vocational</td><td>8:00 to 16:00</td><td>13 or fewer</td></tr>
+          <tr><td>Upper Years</td><td>14 to 18</td><td>US diploma or Cambridge pathway, exam prep</td><td>8:00 to 16:00</td><td>13 or fewer</td></tr>
+          <tr><td>Global Program</td><td>2 to 14</td><td>Joins the above for 3 weeks to 3 months</td><td>Half or full day</td><td>13 or fewer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="form__note">Exact hours per group are on the <a href="{{ '/families/schedule/' | url }}">daily schedule</a>.</p>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

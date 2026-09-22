@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: "Daily schedule"
+description: "Daily timetables for each group at Palm River Academy, from Nursery to Year 9."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Families</p>
+  <h1>The daily schedule</h1>
+  <p class="lede">Each group's day is a mix of Cambridge subject time, vocational classes, PE, and pastoral time. Open your child's group.</p>
+</div>
+
+<section class="band--paper faq">
+  <div class="wrap">
+    {% set groups = ["Nursery", "Kindergarten", "Years 1 and 2", "Years 4 and 5", "Year 6", "Year 8", "Year 9"] %}
+    {% for g in groups %}
+    <details>
+      <summary>{{ g }}</summary>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr></thead>
+          <tbody>
+            <tr><td>8:00</td><td colspan="5" class="todo">TODO: paste the {{ g }} timetable here (or move all timetables into src/_data/schedule.json).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: "How to enroll"
+description: "Enrolling at Palm River Academy takes four steps: an inquiry, a visit, the forms, and a payment. Rolling admissions through the year."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Admissions</p>
+  <h1>Four steps, no fuss</h1>
+  <p class="lede">Choosing where your child spends their days is a big decision. The process for making it should not be. Here is the whole thing.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap">
+    <ol class="steps">
+      <li><div><strong>Say hello</strong><p>Fill in the short form on the <a href="{{ '/contact/' | url }}">contact page</a>, or call. Tell us your child's age and what you are looking for. We reply with the practical things: programs, calendar, fees.</p></div></li>
+      <li><div><strong>Visit</strong><p>Come to the campus, meet the teachers, see a class in action. If you are not in Hội An yet, we do this on a video call. We will also chat with your child to understand how they learn and where their English is.</p></div></li>
+      <li><div><strong>Forms</strong><p>When you are ready, we send the enrollment forms. They gather what we need to get your child's first day right.</p></div></li>
+      <li><div><strong>Payment and welcome</strong><p>Pay the enrollment fee to hold the place. You get a welcome packet with everything for day one, and we get to add a name to a class list.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Before you ask</h2>
+    <details><summary>What documents do you need?</summary><p class="todo">TODO: list (passport or birth certificate, previous school reports, vaccination record, photos, visa status if relevant).</p></details>
+    <details><summary>Will my child do an assessment?</summary><p class="todo">TODO: describe the placement chat or test by age group.</p></details>
+    <details><summary>How much English does my child need?</summary><p class="todo">TODO: honest answer per stage.</p></details>
+    <details><summary>Can we do a trial day?</summary><p class="todo">TODO.</p></details>
+    <details><summary>Are there deadlines, or can we join any time?</summary><p class="todo">TODO: rolling admissions answer, with any cut-offs for exam-year students.</p></details>
+  </div>
+</section>
+
+{% set ctaTitle = "Step one is a hello." %}
+{% include "partials/cta.njk" %}

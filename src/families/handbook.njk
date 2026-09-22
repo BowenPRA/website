@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: "Family handbook"
+description: "The Palm River Academy family handbook. The guidelines and norms every family agrees to so that school works well for everyone."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Families</p>
+  <h1>The family handbook</h1>
+  <p class="lede">Everything a PRA family is expected to know: drop-off and pick-up, uniform, food, sick days, phones, how we talk to each other. Please read it once properly and then keep it somewhere you can find it.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap two">
+    <div>
+      <h2>Read it</h2>
+      <p><a class="btn btn--primary" href="{{ '/assets/docs/family-handbook.pdf' | url }}">Download the handbook (PDF)</a></p>
+      <p class="form__note todo">TODO: add the PDF at src/assets/docs/family-handbook.pdf and, ideally, the Vietnamese version next to it.</p>
+    </div>
+    <div>
+      <h2>The short version</h2>
+      <ul>
+        <li class="todo">TODO: five or six one-line norms pulled from the handbook (arrival time, sick policy, what to bring, contacting teachers).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "Something not covered?" %}
+{% set ctaText = "Ask the office. If it is a good question we will add it to the handbook." %}
+{% include "partials/cta.njk" %}

@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+title: "Book a visit"
+description: "Book a tour of Palm River Academy in Hội An, or ask a question. Phone, email, and both campus addresses."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Contact</p>
+  <h1>Come and have a look</h1>
+  <p class="lede">Tours take about an hour on a school day. Not in Hội An yet? We will do a video call instead. Or just ask a question, we answer those too.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap two" style="align-items:start">
+    <form class="form" action="{{ site.formAction }}" method="POST">
+      <div class="form__row">
+        <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="form__row">
+        <div><label for="phone">Phone or Zalo or WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div><label for="age">Your child's age</label>
+          <select id="age" name="child_age">
+            <option value="">Choose one</option>
+            <option>Under 2</option><option>2 to 4</option><option>5 to 7</option><option>8 to 11</option><option>11 to 14</option><option>14 to 18</option>
+          </select>
+        </div>
+      </div>
+      <div><label for="want">What would you like?</label>
+        <select id="want" name="want">
+          <option>A campus tour</option>
+          <option>A video call</option>
+          <option>Information about the Global Program</option>
+          <option>Just a question</option>
+        </select>
+      </div>
+      <div><label for="msg">Anything we should know</label><textarea id="msg" name="message" placeholder="Dates you are in Hội An, your child's English, what they love doing..."></textarea></div>
+      <input type="hidden" name="_subject" value="Website inquiry">
+      <button class="btn btn--primary" type="submit">Send</button>
+      <p class="form__note todo">TODO: replace the Formspree action in src/_data/site.json, or swap this form for a Google Form embed. Until then, please use the phone or email on the right.</p>
+    </form>
+    <div>
+      <div class="card" style="margin-bottom:18px">
+        <h3>Talk to a person</h3>
+        <p><a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a><br>{{ site.hours }}</p>
+      </div>
+      {% for c in site.campuses %}
+      <div class="card campus" style="margin-bottom:18px">
+        <h3>{{ c.name }}</h3>
+        <p class="campus__who">{{ c.who }}</p>
+        <p>{{ c.address }}</p>
+        <a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

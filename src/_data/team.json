@@ -1,0 +1,35 @@
+{
+  "note": "Bios for Ms. Ali, Mr. David and Ms. Thuy were placeholders in the Wix draft. Replace before launch. Photos go in assets/img/team/ as <slug>.jpg.",
+  "members": [
+    {
+      "name": "Mr. Landon",
+      "role": "Academy Director",
+      "slug": "landon",
+      "bio": "Vietnamese-American, principal at PRA since 2019. Bachelor's in Education and a Master's in Professional Studies from the US."
+    },
+    {
+      "name": "Mr. Seth",
+      "role": "Head Teacher",
+      "slug": "seth",
+      "bio": "From California, teaching in Việt Nam for a decade. Bachelor's in Health Science and a certified biology teacher for grades 7 to 12."
+    },
+    {
+      "name": "Ms. Thuy",
+      "role": "Executive Director",
+      "slug": "thuy",
+      "bio": "TODO: two sentences."
+    },
+    {
+      "name": "Ms. Ali",
+      "role": "Technology Teacher",
+      "slug": "ali",
+      "bio": "TODO: two sentences."
+    },
+    {
+      "name": "Mr. David",
+      "role": "Primary Teacher and Counselor",
+      "slug": "david",
+      "bio": "TODO: two sentences."
+    }
+  ]
+}

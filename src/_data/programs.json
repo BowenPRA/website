@@ -1,0 +1,52 @@
+[
+  {
+    "key": "early",
+    "chip": "Under 5",
+    "name": "Early Years",
+    "ages": "20 months to 4 years",
+    "url": "/learning/early-years/",
+    "colour": "palm",
+    "summary": "Play, stories, songs, mud, and a lot of talking. We follow the British EYFS framework and speak English all day. Half days are fine for the littlest ones.",
+    "points": ["Nursery and Kindergarten groups", "Partial-day option", "Outdoor time every day"]
+  },
+  {
+    "key": "primary",
+    "chip": "5 to 11",
+    "name": "Primary",
+    "ages": "5 to 11 years",
+    "url": "/learning/primary/",
+    "colour": "river",
+    "summary": "Cambridge English, Maths, and Science in the morning. PE every day. Afternoons rotate through vocational classes like cooking, art, and technology.",
+    "points": ["Cambridge Primary curriculum", "Daily PE", "Optional Year 6 Checkpoint"]
+  },
+  {
+    "key": "secondary",
+    "chip": "11 to 14",
+    "name": "Secondary",
+    "ages": "11 to 14 years",
+    "url": "/learning/secondary/",
+    "colour": "river",
+    "summary": "Cambridge Lower Secondary in the core subjects, taught by subject specialists. Same daily PE and vocational rotation, with more independence and bigger projects.",
+    "points": ["Cambridge Lower Secondary", "Subject-specialist teachers", "Optional Year 9 Checkpoint"]
+  },
+  {
+    "key": "upper",
+    "chip": "14 to 18",
+    "name": "Upper Years",
+    "ages": "14 to 18 years",
+    "url": "/learning/upper-years/",
+    "colour": "mango",
+    "summary": "A US diploma or a Cambridge pathway, at your own pace, with a coach in the room. Plus IELTS, PTE, and GED prep, a personal project, and one trip a year that the students plan themselves.",
+    "points": ["US diploma or Cambridge route", "IELTS, PTE, GED preparation", "Student-planned annual trip"]
+  },
+  {
+    "key": "global",
+    "chip": "Just visiting Hội An",
+    "name": "Global Program",
+    "ages": "3 weeks to 3 months, ages 2 to 14",
+    "url": "/learning/global-program/",
+    "colour": "palm",
+    "summary": "For families passing through. Your child joins a real class, not a holiday club. Choose a half day or full day, academic or hands-on, and leave with a report and a certificate.",
+    "points": ["Stay 3 weeks to 3 months", "Half-day and full-day options", "Progress report in the first two weeks"]
+  }
+]

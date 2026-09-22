@@ -1,0 +1,30 @@
+{% set riverColor = "var(--ink)" %}{% include "partials/river.njk" %}
+<footer class="site-footer">
+  <svg class="site-footer__leaf" viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M10 190 C 30 120, 80 60, 190 10 C 120 60, 80 110, 60 190 Z" fill="var(--palm)"/>
+    <path d="M10 190 C 60 150, 120 130, 190 130 C 120 140, 70 160, 40 195 Z" fill="var(--palm-light)"/>
+  </svg>
+  <div class="wrap site-footer__grid">
+    <div>
+      <p class="site-footer__name">{{ site.name }}</p>
+      <p class="site-footer__tag">{{ site.tagline }}</p>
+      <p class="site-footer__licence">{{ site.licenceLine }}</p>
+    </div>
+    <div>
+      <p class="site-footer__h">Find us</p>
+      {% for c in site.campuses %}
+      <p><strong>{{ c.name }}</strong><br>{{ c.address }}<br><a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a></p>
+      {% endfor %}
+    </div>
+    <div>
+      <p class="site-footer__h">Talk to us</p>
+      <p><a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a><br>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+      {{ site.hours }}</p>
+      <p><a href="{{ '/contact/' | url }}">Book a visit</a> · <a href="{{ '/admissions/' | url }}">How to enroll</a></p>
+    </div>
+  </div>
+  <div class="wrap site-footer__small">
+    <p>© {{ '' | year }} {{ site.name }}. Serving families in Hội An and Đà Nẵng since {{ site.founded }}.</p>
+  </div>
+</footer>

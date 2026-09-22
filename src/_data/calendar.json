@@ -1,0 +1,46 @@
+{
+  "year": "2025 to 2026",
+  "note": "Dates from the 2025-26 draft. Replace with the 2026-27 calendar before launch.",
+  "months": [
+    { "name": "August", "events": [
+      { "date": "Wed 6 Aug", "what": "First day of the academic year", "tag": "early dismissal" }
+    ]},
+    { "name": "September", "events": [
+      { "date": "Mon 1 to Tue 2 Sep", "what": "Independence Day", "tag": "no classes" }
+    ]},
+    { "name": "October", "events": [
+      { "date": "Mon 13 to Fri 17 Oct", "what": "Fall break", "tag": "no classes" },
+      { "date": "Fri 24 Oct", "what": "Parent and teacher meetings", "tag": "" }
+    ]},
+    { "name": "November", "events": [
+      { "date": "Mon 10 Nov", "what": "Second tuition payment due", "tag": "fees" },
+      { "date": "Thu 27 Nov", "what": "Thanksgiving lunch", "tag": "" }
+    ]},
+    { "name": "December", "events": [
+      { "date": "Fri 19 to Wed 31 Dec", "what": "Winter holiday", "tag": "no classes" }
+    ]},
+    { "name": "January", "events": [
+      { "date": "Thu 1 to Mon 5 Jan", "what": "Winter holiday", "tag": "no classes" }
+    ]},
+    { "name": "February", "events": [
+      { "date": "Fri 6 Feb", "what": "Tết celebration at school", "tag": "" },
+      { "date": "Fri 13 to Fri 27 Feb", "what": "Tết holiday", "tag": "no classes" }
+    ]},
+    { "name": "March", "events": [
+      { "date": "Mon 2 Mar", "what": "Tết holiday", "tag": "no classes" },
+      { "date": "Mon 9 Mar", "what": "Third tuition payment due", "tag": "fees" },
+      { "date": "Fri 27 Mar", "what": "Parent and teacher meetings", "tag": "" }
+    ]},
+    { "name": "April", "events": [
+      { "date": "Mon 27 Apr", "what": "Hùng Kings Day observed", "tag": "no classes" },
+      { "date": "Tue 28 to Wed 29 Apr", "what": "Spring break", "tag": "no classes" },
+      { "date": "Thu 30 Apr", "what": "Reunification Day", "tag": "no classes" }
+    ]},
+    { "name": "May", "events": [
+      { "date": "Fri 1 May", "what": "Labour Day", "tag": "no classes" }
+    ]},
+    { "name": "June", "events": [
+      { "date": "Fri 12 Jun", "what": "Last day of classes and graduation", "tag": "" }
+    ]}
+  ]
+}

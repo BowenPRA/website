@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+title: "Tuition and fees"
+description: "Tuition and fees for the Regular Program and Global Program at Palm River Academy, plus payment schedule, transport, and refund policy."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Admissions</p>
+  <h1>What it costs</h1>
+  <p class="lede">Tuition pays for small classes and good teachers. That is most of it. Everything else is listed here so there are no surprises later.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap">
+    <h2>Regular Program</h2>
+    <p class="form__note">Full academic year, August to June. <span class="todo">TODO: replace the placeholder rows with the real 2026-27 fee table.</span></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Program</th><th>Annual tuition</th><th>Per payment (3 instalments)</th></tr></thead>
+        <tbody>
+          <tr><td>Nursery (partial day)</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Nursery and Kindergarten (full day)</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Primary (Years 1 to 6)</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Secondary (Years 7 to 9)</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Upper Years</td><td>TODO</td><td>TODO</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 style="margin-top:48px">Global Program</h2>
+    <p class="form__note">Per week. Longer stays cost less per week. <span class="todo">TODO: real table.</span></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Pathway</th><th>3 to 5 weeks</th><th>6 to 9 weeks</th><th>10 weeks or more</th></tr></thead>
+        <tbody>
+          <tr><td>Early Years</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Vocational half day</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Academic half day</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+          <tr><td>Full day</td><td>TODO</td><td>TODO</td><td>from 4,200,000 VND</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section class="faq">
+  <div class="wrap">
+    <h2>The other questions</h2>
+    <details><summary>What fees are there besides tuition?</summary><p class="todo">TODO: enrollment fee, development fee, uniform, lunch, trips, exam fees.</p></details>
+    <details><summary>What does the development fee cover?</summary><p class="todo">TODO.</p></details>
+    <details><summary>When are payments due?</summary><p>Tuition is paid in three instalments. The second is due in November and the third in March. Exact dates are on the <a href="{{ '/families/calendar/' | url }}">calendar</a>.</p></details>
+    <details><summary>Do you offer transport?</summary><p class="todo">TODO.</p></details>
+    <details><summary>What is the refund policy?</summary><p class="todo">TODO.</p></details>
+    <details><summary>Bản tiếng Việt?</summary><p class="todo">TODO: link to the Vietnamese translation of this page (PDF for now, a /vi/ page later).</p></details>
+  </div>
+</section>
+
+{% set ctaTitle = "Questions about fees? Just ask." %}
+{% set ctaText = "We would rather answer a direct question than have you guess. Call, email, or use the form." %}
+{% include "partials/cta.njk" %}

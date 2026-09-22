@@ -1,0 +1,29 @@
+{
+  "name": "Palm River Academy",
+  "shortName": "PRA",
+  "tagline": "A learning community in Hội An for children from 20 months to 18 years.",
+  "description": "Palm River Academy is a small, hands-on learning community in Hội An, Việt Nam. Cambridge subjects, real projects, classes of 13 or fewer, for children from 20 months to 18 years.",
+  "url": "https://www.palmriveracademy.edu.vn",
+  "email": "admin@palmriveracademy.edu.vn",
+  "phone": "0968 49 42 45",
+  "phoneIntl": "+84968494245",
+  "hours": "Monday to Friday, 8:00 to 16:00",
+  "founded": 2017,
+  "classCap": 13,
+  "licenceLine": "Palm River Academy is a licensed English language center in Hội An, Việt Nam.",
+  "campuses": [
+    {
+      "name": "Primary Campus",
+      "who": "Early Years and Primary",
+      "address": "Trần Nhân Tông, Cẩm Thanh, Hội An",
+      "mapUrl": "https://maps.google.com/?q=Palm+River+Academy+Tran+Nhan+Tong+Cam+Thanh+Hoi+An"
+    },
+    {
+      "name": "Secondary Campus",
+      "who": "Secondary and Upper Years",
+      "address": "ĐX18, Cẩm Thanh, Hội An",
+      "mapUrl": "https://maps.google.com/?q=Palm+River+Academy+DX18+Cam+Thanh+Hoi+An"
+    }
+  ],
+  "formAction": "https://formspree.io/f/REPLACE_ME"
+}

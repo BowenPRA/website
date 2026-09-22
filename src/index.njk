@@ -1,0 +1,129 @@
+---
+layout: layouts/base.njk
+title: "Learning by doing, in Hội An"
+description: "Palm River Academy is a learning community in Hội An for children from 20 months to 18 years. Classes of 13 or fewer, Cambridge subjects, real projects, outside time every day."
+---
+
+<section class="hero">
+  <svg class="hero__leaf" viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M190 190 C 170 120, 120 60, 10 10 C 80 60, 120 110, 140 190 Z" fill="var(--palm)"/>
+    <path d="M190 190 C 140 150, 80 130, 10 130 C 80 140, 130 160, 160 195 Z" fill="var(--palm-light)"/>
+  </svg>
+  <div class="wrap hero__grid">
+    <div>
+      <p class="eyebrow">Hội An · since {{ site.founded }}</p>
+      <h1>Kids learn best when they are <span class="mark">making something.</span></h1>
+      <p class="lede">Palm River Academy is a learning community for children from 20 months to 18 years. Cambridge subjects in English, real projects, classes of {{ site.classCap }} or fewer, and time outside every single day.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ '/contact/' | url }}">Book a visit</a>
+        <a class="btn btn--ghost" href="{{ '/learning/' | url }}">See what we teach</a>
+      </div>
+    </div>
+    <div class="photo photo--blob" data-caption="photo: a Year 3 class mid-experiment, or the river from the Primary Campus"></div>
+  </div>
+</section>
+
+{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
+
+<section class="band--paper" data-picker>
+  <div class="wrap">
+    <p class="eyebrow">Start here</p>
+    <h2>How old is your child?</h2>
+    <p class="lede">Tap an age and we will show you the right program. Or just read them all, they are short.</p>
+    <div class="picker__chips" role="group" aria-label="Filter programs by age">
+      {% for p in programs %}
+      <button class="chip" type="button" data-key="{{ p.key }}" aria-pressed="false">{{ p.chip }}</button>
+      {% endfor %}
+    </div>
+    <div class="programs">
+      {% for p in programs %}
+      <article class="program program--{{ p.colour }}" data-key="{{ p.key }}">
+        <p class="program__ages">{{ p.ages }}</p>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.summary }}</p>
+        <ul>
+          {% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}
+        </ul>
+        <a class="btn btn--ghost btn--small" href="{{ p.url | url }}">About {{ p.name }}</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><p class="fact__num">{{ site.founded }}</p><p>The year we opened. That makes us Hội An's oldest international learning center.</p></div>
+      <div class="fact"><p class="fact__num fact__num--palm">{{ site.classCap }}</p><p>The most children you will ever find in one of our academic classes.</p></div>
+      <div class="fact"><p class="fact__num fact__num--mango">22+</p><p>Teachers and staff, about half Vietnamese and half from abroad.</p></div>
+      <div class="fact"><p class="fact__num">10+</p><p>Former students now at high schools and universities overseas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band--river">
+  <div class="wrap">
+    <p class="eyebrow">A normal Tuesday</p>
+    <h2>What a day here looks like</h2>
+    <p class="lede">Every group's timetable is a bit different. This is the shape of it.</p>
+    <ol class="day">
+      <li><time>8:00</time><p>Arrive, put your bag away, morning meeting with your class.</p></li>
+      <li><time>Morning</time><p>Cambridge English, Maths, and Science. Small groups, a lot of talking and doing.</p></li>
+      <li><time>Late morning</time><p>Outside. PE, games, or just running about. Every day, rain or shine (mostly shine).</p></li>
+      <li><time>Afternoon</time><p>Vocational classes on rotation: cooking, art and design, technology, public speaking.</p></li>
+      <li><time>16:00</time><p>Home. Usually a bit muddy.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What we care about</p>
+    <h2>Five things, in the order the kids would put them</h2>
+    <ol class="values">
+      <li><div><strong>Sports and fun</strong><p>Play and moving around are not a break from learning. They are part of it.</p></div></li>
+      <li><div><strong>Intellectual exploration</strong><p>Ask the question, run the experiment, be wrong, try again.</p></div></li>
+      <li><div><strong>Creative expression</strong><p>Art, projects, and odd ideas that turn out to be good ones.</p></div></li>
+      <li><div><strong>Global citizenship</strong><p>Vietnamese and international kids in the same room, learning from each other first.</p></div></li>
+      <li><div><strong>Leadership</strong><p>Older students plan real things, like the annual trip, with a real budget.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
+
+<section class="band--paper">
+  <div class="wrap two">
+    <div class="photo photo--blob-b" data-caption="photo: a Global Program student on their first day, with the class"></div>
+    <div>
+      <p class="eyebrow">Passing through Hội An?</p>
+      <h2>Join us for three weeks or three months</h2>
+      <p>The Global Program is for travelling families and families here for a season. Your child joins a real class with our regular students, not a holiday club. Half days or full days, ages 2 to 14. You get a progress report in the first two weeks and a certificate at the end.</p>
+      <a class="btn btn--palm" href="{{ '/learning/global-program/' | url }}">How the Global Program works</a>
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Two campuses, five minutes apart</p>
+    <h2>Find us in Cẩm Thanh</h2>
+    <div class="cards">
+      {% for c in site.campuses %}
+      <div class="card campus">
+        <h3>{{ c.name }}</h3>
+        <p class="campus__who">{{ c.who }}</p>
+        <p>{{ c.address }}</p>
+        <a href="{{ c.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

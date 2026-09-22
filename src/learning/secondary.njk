@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+title: "Secondary"
+description: "Secondary at Palm River Academy for students aged 11 to 14. Cambridge Lower Secondary with subject specialists, daily PE, vocational classes, and the Year 9 Checkpoint."
+---
+
+<div class="wrap page-head">
+  <p class="eyebrow">Secondary · 11 to 14 years</p>
+  <h1>More independence, bigger projects</h1>
+  <p class="lede">Secondary follows Cambridge Lower Secondary in English, Maths, and Science, taught by subject specialists on our Secondary Campus. Classes stay at {{ site.classCap }} or fewer. The day still includes PE and a vocational class, but students carry more of the planning themselves.</p>
+</div>
+
+<section class="band--paper">
+  <div class="wrap two two--flip">
+    <div class="photo photo--blob-b" data-caption="photo: a Year 8 group presenting or building something"></div>
+    <div>
+      <h2>The academic core</h2>
+      <p>Each core subject has its own teacher with a degree in the field. <strong>English</strong> moves into literature, argument, and writing for an audience. <strong>Maths</strong> builds toward the reasoning needed for IGCSE-level work. <strong>Science</strong> covers biology, chemistry, and physics with practical work every week.</p>
+      <p class="todo">TODO: one sentence on English support for students who arrive with less English.</p>
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--sand)" %}{% include "partials/river.njk" %}
+
+<section>
+  <div class="wrap">
+    <h2>The rest of the day</h2>
+    <div class="cards">
+      <div class="card"><h3>PE, every day</h3><p>Team sport, fitness, and free play. By this age most students have found their thing, and we make room for it.</p></div>
+      <div class="card"><h3>Vocational classes</h3><p>Rotating specialist subjects, this year technology, fashion and design, and art. Assessed by what gets made. Older students often work alongside younger ones on shared projects.</p></div>
+      <div class="card"><h3>Year 9 Checkpoint</h3><p>Optional Cambridge diagnostic in English, Maths, and Science at the end of Year 9. Useful preparation for exam-based pathways in Upper Years, and a clear report for families.</p></div>
+      <div class="card"><h3>What comes next</h3><p>After Year 9 students move into <a href="{{ '/learning/upper-years/' | url }}">Upper Years</a>, where they choose between a US diploma and a Cambridge pathway.</p></div>
+    </div>
+  </div>
+</section>
+
+{% set riverColor = "var(--paper)" %}{% include "partials/river.njk" %}
+
+<section class="band--paper faq">
+  <div class="wrap">
+    <h2>Questions parents ask</h2>
+    <details><summary>Can a student join partway through the year?</summary><p class="todo">TODO: rolling admissions answer, with any exceptions.</p></details>
+    <details><summary>How do you handle a student with gaps from a previous school?</summary><p class="todo">TODO: one paragraph on placement and support.</p></details>
+    <details><summary>Do you teach Vietnamese?</summary><p class="todo">TODO: confirm what Vietnamese language or culture classes are offered.</p></details>
+  </div>
+</section>
+
+{% include "partials/cta.njk" %}

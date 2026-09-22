@@ -1,0 +1,14 @@
+{
+  "name": "pra-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Palm River Academy public website (Eleventy, GitHub Pages)",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
