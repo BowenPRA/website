@@ -42,31 +42,6 @@ description: "Palm River Academy is an English language center in Hội An for c
   </div>
 </section>
 
-{% set waveColor = "navy" %}{% include "partials/wave.njk" %}
-<section class="band--navy film">
-  {% set frondClass = "frond--tr" %}{% include "partials/frond.njk" %}
-  <div class="wrap film__grid">
-    <div class="film__text">
-      <p class="eyebrow eyebrow--on">Made by students</p>
-      <h2>The 2025-26 yearbook, as a film</h2>
-      <p class="lede">Our Upper Secondary yearbook team photographed, designed and edited the whole year. This is their three-minute cut.</p>
-      <p class="film__meta">3 min · with sound · every class, from Nursery to Upper Secondary</p>
-    </div>
-    <figure class="film__player">
-      <span class="sticker sticker--sun sticker--tl">Student made</span>
-      <video class="film__video" controls preload="none" playsinline
-        poster="{{ '/assets/video/yearbook-2025-26-poster.webp' | url }}"
-        src="{{ '/assets/video/yearbook-2025-26.mp4' | url }}"
-        aria-label="Palm River Academy yearbook 2025-26, a film by the student yearbook team"></video>
-      <button class="film__play" type="button" aria-label="Play the yearbook film">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
-      </button>
-      <figcaption class="film__caption">Yearbook 2025-26 · Palm River Academy students</figcaption>
-    </figure>
-  </div>
-</section>
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
-
 <div class="ribbons" aria-hidden="true">
   <svg class="mascot" viewBox="0 0 100 100"><path d="M50 95 C 20 70, 10 35, 50 5 C 90 35, 80 70, 50 95 Z" fill="var(--green-light)"/><path d="M50 12 L50 90" stroke="#fff" stroke-width="3" opacity=".6"/><g class="mascot__eyes"><circle class="eye" cx="42" cy="40" r="7"/><circle class="eye" cx="58" cy="40" r="7"/><circle class="pupil" cx="43" cy="41" r="3"/><circle class="pupil" cx="59" cy="41" r="3"/></g></svg>
   <div class="ribbon ribbon--green">
@@ -160,6 +135,30 @@ description: "Palm River Academy is an English language center in Hội An for c
     </div>
     <p class="gallery__hint" hidden>Tap a photo to see it bigger.</p>
     <p class="center mt"><a class="btn btn--primary" href="{{ '/events/' | url }}">A year of events</a></p>
+  </div>
+</section>
+
+{% set waveColor = "navy" %}{% include "partials/wave.njk" %}
+<section class="band--navy film">
+  {% set frondClass = "frond--tr" %}{% include "partials/frond.njk" %}
+  <div class="wrap film__grid">
+    <div class="film__text">
+      <p class="eyebrow eyebrow--on">Made by students</p>
+      <h2>The 2025-26 yearbook, as a film</h2>
+      <p class="lede">Our Yearbook Team photographed, designed and edited the whole year. This is their three-minute cut.</p>
+      <p class="film__meta">3 min · with sound · every class, from Nursery to Upper Secondary</p>
+    </div>
+    <figure class="film__player">
+      <span class="sticker sticker--sun sticker--tl">Student made</span>
+      <video class="film__video" controls preload="none" playsinline
+        poster="{{ '/assets/video/yearbook-2025-26-poster.webp' | url }}"
+        src="{{ '/assets/video/yearbook-2025-26.mp4' | url }}"
+        aria-label="Palm River Academy yearbook 2025-26, a film by the Yearbook Team"></video>
+      <button class="film__play" type="button" aria-label="Play the yearbook film">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+      </button>
+      <figcaption class="film__caption">Yearbook 2025-26 · Palm River Academy students</figcaption>
+    </figure>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
