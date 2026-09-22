@@ -1,5 +1,10 @@
 # Palm River Academy website plan
 
+> Revised 2026-09-22 after Bowen's review of the first build. Structure and look follow
+> the Wix Studio draft; facts follow the current palmriveracademy.edu.vn site; the
+> timetable comes from the admin app; there is one campus. Sections below are updated
+> where they changed.
+
 Working plan for the new palmriveracademy.edu.vn. This replaces both the current
 Wix site (one long page) and the unfinished Wix Studio draft (ten pages). It is
 a static site hosted on GitHub Pages. No blog for now.
@@ -45,8 +50,9 @@ Drop:
 
 ## 3. Positioning and voice
 
-**One line:** Palm River Academy is a learning community in Hội An for children
-from 20 months to 18 years, where kids learn in English by doing real things.
+**One line:** Palm River Academy is an English language center in Hội An for
+children from 20 months to 18 years. We teach English through content: science,
+maths, cooking, art and sport. Content through context, and doing.
 
 **The "English Language Center" line** appears in the footer on every page and
 in the About page opening: "Palm River Academy is a licensed English language
@@ -60,7 +66,7 @@ center in Hội An, Việt Nam." The rest of the site says "learning community",
   talking to a parent.
 - Warm and a little playful. Jokes are allowed if they are small and true.
 - Honest about what we are: small, hands-on, mixed Vietnamese and
-  international, two modest campuses near the river.
+  international, one modest campus near the river.
 - Every page ends with one clear next step (book a visit, ask a question).
 
 **Banned words and patterns** (this is the anti-AI-slop list):
@@ -76,8 +82,15 @@ center in Hội An, Việt Nam." The rest of the site says "learning community",
 
 ## 4. Site map
 
-Top nav (5 items max on desktop, hamburger sheet on mobile):
-Home · About · Learning ▾ · Admissions ▾ · Families ▾ · [Book a visit]
+Top nav (mirrors the Wix draft; hamburger sheet on mobile):
+About Us · Academics ▾ (Early Years, Primary, Secondary, Upper Years, Global Program) ·
+Admissions ▾ (Enrollment, Tuition and fees, Schedule and calendar, Family handbook,
+Book a tour) · [Contact Us]
+
+Home page section order, top to bottom: full-bleed photo hero with palm leaves ·
+Discover our story · values marquee · "Content through context" (the English
+language center explanation) · four photo tiles for the stages · stats band ·
+Global Program · campus-life gallery · Find your way to PRA · CTA.
 
 | URL | Page | Purpose | Sections | Main CTA |
 |---|---|---|---|---|
@@ -102,20 +115,18 @@ the Wix draft.
 
 ## 5. Design direction
 
-**Feel:** a good children's book, not a corporate brochure. Cream paper, river
-blue, palm green, a bit of mango. Rounded shapes, wavy edges, hand-drawn
-underlines. Lots of white space and big photos of real kids doing real things.
+**Feel:** polished and bright, like the Wix draft, with the playfulness of a good
+children's book: white and pale blue, bright blue and green, palm leaves, rounded
+photo tiles, a hand-drawn underline here and there, big photos of real students.
 
-**Colours** (from the logo)
-- Palm green `#6B9E3B`, light palm `#A5CF56`
-- River blue `#1C79BE`, deep river `#0E5C99`
-- Sand (page background) `#FFF8EC`, paper (cards) `#FFFFFF`
-- Mango (accent, sparingly) `#F6A64B`
-- Ink `#22302B`, soft ink `#5B6A63`
+**Colours** (from the Wix draft)
+- Bright blue `#116DFF` (headings, buttons), deep blue `#0B4FBF`, navy `#0E2A5C` (footer)
+- Green `#48971D` (contact button, accents), light green `#9CC64A`
+- Pale blue `#EDF6F8` for alternating bands, white page background
+- Mango `#F6A64B` only for focus rings
 
 **Type**
-- Headings: Fredoka (rounded, friendly, still legible large)
-- Body: Nunito (soft but serious enough for fee tables)
+- Poppins throughout (600/700 for headings, 400/500 for body), as on the Wix draft
 - Big, generous line height. Body 18px on mobile, 19px on desktop.
 
 **Whimsy that earns its place**
@@ -211,5 +222,12 @@ underlines. Lots of white space and big photos of real kids doing real things.
   11, Secondary 11 to 14, Upper 14 to 18). The Global Program says Early
   Years is 2 to 5; the draft is inconsistent and we go with 20 months to 4
   for the Regular Program page. Bowen to confirm.
-- Two campuses listed as Primary Campus (Trần Nhân Tông) and Secondary
-  Campus (ĐX18), both Cẩm Thanh, Hội An.
+- One campus: Trần Nhân Tông, Cẩm Thanh, Hội An. The ĐX18 secondary campus is
+  no longer used.
+- Staff on the site are the ten people on the current site plus Ms. Duyen and
+  Mr. Chiến from the timetable. Mr. Landon, Ms. Thuy and Ms. Ali from the Wix draft
+  are not listed until Bowen confirms.
+- The schedule page is generated from the admin app's timetable
+  (`scripts/schedule-from-admin.mjs`), with teacher names removed.
+- Photos: prefer the ones Bowen chose for the Wix draft plus polished activity shots
+  of older students; avoid close-up toddler phone snapshots.
