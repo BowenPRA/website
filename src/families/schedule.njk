@@ -44,7 +44,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
         </div>
       </div>
       {% endfor %}
-      <figcaption>Snack breaks at about 10:25 and 14:05 are left off. Years 8 and 9 share the day with Upper Secondary.</figcaption>
+      <figcaption>Snack breaks at about 10:25 and 14:05 are left off.</figcaption>
     </figure>
 
     <ul class="daynotes">
@@ -71,20 +71,20 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
           {% photo s.photo, "sday__photo", "(min-width: 960px) 280px, 92vw" %}
           <p class="sday__ages">{{ s.ages }}</p>
           <h3>{{ s.name }}</h3>
-          <p class="sday__groups">{{ s.groups }}</p>
+          {% if s.groups %}<p class="sday__groups">{{ s.groups }}</p>{% endif %}
           <ul class="sday__facts">{% for f in s.facts %}<li>{{ f }}</li>{% endfor %}</ul>
           <a class="sday__more" href="{{ s.url | url }}">More about {{ s.name }} <span aria-hidden="true">→</span></a>
         </header>
         <div class="sday__body">
           {% for z in [s.am, s.pm] %}
           <div class="sday__zone sday__zone--{{ 'am' if loop.first else 'pm' }}">
-            <h4 class="sday__when">{{ ic.icon("sun" if loop.first else "palette", s.tone) }}<span>{{ z.title }}{% if z.key %} <small>Number = {{ z.key | lower }}</small>{% endif %}</span></h4>
+            <h4 class="sday__when">{{ ic.icon("sun" if loop.first else "palette", s.tone) }}<span>{{ z.title }}</span></h4>
             {% for it in z.items %}
             <div class="sday__item{% if it.who %} has-who{% endif %}">
               {% if it.who %}<p class="sday__who">{{ it.who }}</p>{% endif %}
               <div>
                 {% if it.core %}<ul class="core">{% for c in it.core %}{% if not loop.first and it.coreJoin %}<li class="core__join">{{ it.coreJoin }}</li>{% endif %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
-                {% if it.classes %}<ul class="mix">{% for c in it.classes %}<li{% if c.opt %} class="is-opt"{% endif %}>{{ c.n }}{% if c.opt %} <small>optional</small>{% endif %}<b aria-label="{{ c.d }} {{ 'day' if c.d == 1 else 'days' }} a week">{{ c.d }}</b></li>{% endfor %}</ul>{% endif %}
+                {% if it.classes %}<ul class="mix">{% for c in it.classes %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
                 {% if it.text %}<p>{{ it.text }}</p>{% endif %}
               </div>
             </div>

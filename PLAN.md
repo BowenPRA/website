@@ -36,7 +36,7 @@ Keep from the Wix Studio draft:
   under 13 per class, 22+ staff, 10+ alumni studying abroad, two campuses in
   Cẩm Thanh, Cambridge curriculum, EYFS for Early Years, US diploma or
   Cambridge pathway for Upper Years, GED/IELTS/PTE prep, rotating vocational
-  classes, Y6 and Y9 Checkpoint, four-step admissions process.
+  classes, four-step admissions process. (Checkpoint tests are not mentioned on the site.)
 - The five values (Intellectual Exploration, Creative Expression, Sports and
   Fun, Global Citizenship, Leadership Development). The draft says "6
   principles" but lists five; we use five.
@@ -98,8 +98,8 @@ Global Program · campus-life gallery · Find your way to PRA · CTA.
 | `/about/` | About | Story, philosophy, values, team | Opening (learning community + ELC line), founded 2017 story, five values, philosophy, team grid, campuses | Book a visit |
 | `/learning/` | Learning overview | One page that compares all stages by age | Age ladder, table: ages / curriculum / day length / class cap, links to each stage | Pick a stage |
 | `/learning/early-years/` | Early Years (20 months to 4) | EYFS, play, language | What a morning looks like, four areas (social, physical, language, maths), partial-day option, FAQ | Book a visit |
-| `/learning/primary/` | Primary (5 to 11) | Cambridge core + PE + vocational | Subjects, daily PE, vocational rotation, Y6 Checkpoint, FAQ | Book a visit |
-| `/learning/lower-secondary/` | Lower Secondary (Years 7 to 9) | Same shape as Primary, own copy (the draft reused Primary text) | Subjects, PE, vocational, Y9 Checkpoint, FAQ | Book a visit |
+| `/learning/primary/` | Primary (5 to 11) | Cambridge core + PE + vocational | Subjects, daily PE, vocational rotation, reports, FAQ | Book a visit |
+| `/learning/lower-secondary/` | Lower Secondary (Years 7 to 9) | Same shape as Primary, own copy (the draft reused Primary text) | Subjects, PE, vocational, FAQ | Book a visit |
 | `/learning/upper-secondary/` | Upper Secondary (14 to 18) | Pathways: US diploma or Cambridge; exams; personal project; annual trip | Pathways, exam prep (GED, IELTS, PTE), project, trip | Ask a question |
 | `/learning/global-program/` | Global Program (3 weeks to 3 months) | For travelling families; four pathways; price from | Who it is for, four pathways (Early Years, Vocational half day, Academic half day, Full day), what you get (reports, certificate), price from, how to book | Ask about dates |
 | `/admissions/` | How to enroll | Four steps + FAQ | Steps 1 to 4, FAQ (documents, assessment, English level, trial day, rolling admissions), inquiry form | Send inquiry |
@@ -253,10 +253,11 @@ Still open:
   the Wix draft are not listed until Bowen confirms.
 - The schedule page does not show full timetables (Bowen, 2026-09-22): it is for
   parents and gives the broad strokes. A day-at-a-glance chart compares the stages,
-  then one card per stage shows the core subjects every morning and the week's mix
-  of specialist and vocational classes (with days a week). Stages split where the
-  timetable does: Nursery / Kindergarten, Year 1 / Years 2 to 6, Year 7 / Years 8
-  and 9 (who share the Upper Secondary day). The content lives in
+  then one card per stage shows the core subjects every morning and the mix of
+  specialist and vocational classes. Bowen's follow-ups: no counts of how often
+  each class runs; no Year 8 / Year 9 split, just Lower Secondary (the Year 7
+  timetable) and Upper Secondary (the teens timetable); never mention Checkpoint
+  tests anywhere on the site. The content lives in
   `src/_data/days.json`, written by hand from `src/_data/schedule.json` (still
   copied from the admin app by `scripts/schedule-from-admin.mjs`, but no longer
   rendered). The same file feeds the "A day in ..." timelines on the stage pages.

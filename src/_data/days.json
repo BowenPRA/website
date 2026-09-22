@@ -1,11 +1,11 @@
 {
-  "_about": "The shape of the day at each stage, for the schedule page and the program pages. Written by hand from the 2026-27 timetable in schedule.json (copied from the admin app). Class counts are days a week. When the timetable changes, update this file by hand.",
+  "_about": "The shape of the day at each stage, for the schedule page and the program pages. Written by hand from the 2026-27 timetable in schedule.json (copied from the admin app): Lower Secondary follows the Year 7 timetable, Upper Secondary the teens timetable. Parent-facing: no class counts, no year-by-year splits inside a stage. When the timetable changes, update this file by hand.",
   "from": "8:00",
   "to": "15:30",
   "ticks": ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"],
   "rows": [
     {
-      "who": "Early Years", "sub": "Nursery and Kindergarten", "tone": "sun", "href": "#early-years",
+      "who": "Early Years", "sub": "20 months to 4 years", "tone": "sun", "href": "#early-years",
       "say": "Early Years: drop-off from 8:00, play and learning 8:30 to 11:15, lunch and a nap 11:15 to 13:45, an afternoon session, pick-up at 15:15.",
       "segs": [
         { "from": "8:00", "to": "8:30", "k": "rest", "t": "Drop-off" },
@@ -16,7 +16,7 @@
       ]
     },
     {
-      "who": "Primary", "sub": "Years 1 to 6", "tone": "green", "href": "#primary",
+      "who": "Primary", "sub": "Ages 5 to 11", "tone": "green", "href": "#primary",
       "say": "Primary: arrive from 8:00, English, Maths and Science 8:45 to 11:35, lunch, specialist and vocational classes 12:25 to 15:15.",
       "segs": [
         { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive" },
@@ -26,8 +26,8 @@
       ]
     },
     {
-      "who": "Year 7", "sub": "Lower Secondary", "tone": "blue", "href": "#lower-secondary",
-      "say": "Year 7: arrive from 8:00, Maths, English and Science 8:45 to 11:35, History or Executive Function, lunch at 12:25, specialist and vocational classes until 15:20.",
+      "who": "Lower Secondary", "sub": "Ages 11 to 14", "tone": "blue", "href": "#lower-secondary",
+      "say": "Lower Secondary: arrive from 8:00, Maths, English and Science 8:45 to 11:35, History or Executive Function, lunch at 12:25, specialist and vocational classes until 15:20.",
       "segs": [
         { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive" },
         { "from": "8:45", "to": "11:35", "k": "core", "t": "Maths, English and Science, with snack at 10:25", "label": "Maths · English · Science", "short": "Core lessons" },
@@ -37,8 +37,8 @@
       ]
     },
     {
-      "who": "Year 8 and up", "sub": "Years 8, 9 and Upper Secondary", "tone": "coral", "href": "#upper-secondary",
-      "say": "Year 8 and up: arrive from 8:00, two long blocks on each student's own program 8:45 to 12:25, lunch, then Movement, Wellbeing, electives and study time until 15:20.",
+      "who": "Upper Secondary", "sub": "Ages 14 to 18", "tone": "coral", "href": "#upper-secondary",
+      "say": "Upper Secondary: arrive from 8:00, two long blocks on each student's own program 8:45 to 12:25, lunch, then Movement, Wellbeing, electives and study time until 15:20.",
       "segs": [
         { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive" },
         { "from": "8:45", "to": "12:25", "k": "core", "t": "Two long blocks on each student's own program, with snack at 10:25", "label": "Two blocks on their own program", "short": "Core lessons" },
@@ -63,8 +63,7 @@
       "pm": {
         "title": "After lunch",
         "items": [
-          { "who": "Both groups", "text": "Lunch at 11:15, then a two-hour nap. Every child has their own cot." },
-          { "who": "Kindergarten", "core": ["Understanding the World"], "text": "Science and geography for four-year-olds, every afternoon. Nursery has one more play session." }
+          { "text": "Lunch at 11:15, then a two-hour nap in their own cot. After that, Nursery has one more play session and Kindergarten has Understanding the World: science and geography for four-year-olds." }
         ]
       },
       "steps": [
@@ -79,7 +78,7 @@
     },
     {
       "key": "primary", "name": "Primary", "tone": "green",
-      "ages": "Years 1 to 6 · ages 5 to 11", "groups": "Year 1, Years 2 and 3, Years 4 to 6",
+      "ages": "Ages 5 to 11",
       "url": "/learning/primary/", "photo": "primary-students-clay-modelling",
       "facts": ["8:00 to 15:15", "Homeroom at 8:30", "Lunch at 11:35"],
       "am": {
@@ -89,19 +88,10 @@
         ]
       },
       "pm": {
-        "title": "Afternoons: specialist and vocational classes",
-        "key": "Days a week",
+        "title": "Afternoons",
         "items": [
-          { "who": "Year 1", "classes": [
-            { "n": "Cooking", "d": 1 }, { "n": "Technology", "d": 2 }, { "n": "Crafts", "d": 2 },
-            { "n": "Movement and Exercise", "d": 2 }, { "n": "Practice, Presentation and Play", "d": 2 },
-            { "n": "Master Minds", "d": 1 }, { "n": "Boredom", "d": 3 }, { "n": "Review", "d": 1 }
-          ] },
-          { "who": "Years 2 to 6", "classes": [
-            { "n": "Cooking", "d": 1 }, { "n": "Technology", "d": 1 }, { "n": "Art", "d": 1 }, { "n": "Craft", "d": 2 },
-            { "n": "Movement and Exercise", "d": 2 }, { "n": "Dance", "d": 1 }, { "n": "Everyday Experts", "d": 2 },
-            { "n": "Book Worms", "d": 1 }, { "n": "Wellbeing", "d": 1 }, { "n": "Boredom", "d": 1 }, { "n": "Review", "d": 2 }
-          ] }
+          { "classes": ["Cooking", "Technology", "Art and Craft", "Movement and Exercise", "Dance", "Practice, Presentation and Play", "Master Minds", "Everyday Experts", "Book Worms", "Wellbeing", "Boredom"],
+            "text": "Specialist and vocational classes, where the English gets used." }
         ]
       },
       "steps": [
@@ -115,28 +105,20 @@
     },
     {
       "key": "lower-secondary", "name": "Lower Secondary", "tone": "blue",
-      "ages": "Years 7 to 9 · ages 11 to 14", "groups": "Year 7, and Years 8 and 9",
+      "ages": "Ages 11 to 14",
       "url": "/learning/lower-secondary/", "photo": "secondary-marble-run-wall",
       "facts": ["8:00 to 15:20", "Homeroom at 8:30", "Lunch at 12:25"],
       "am": {
         "title": "Every morning",
         "items": [
-          { "who": "Year 7", "core": ["Maths", "English", "Science"], "text": "Cambridge Lower Secondary, one lesson of each every day. Then History or Executive Function until lunch." },
-          { "who": "Years 8 and 9", "core": ["English", "Maths", "Science"], "text": "Two long blocks with the Upper Secondary students. Each student works through their own program, with a teacher coaching." }
+          { "core": ["Maths", "English", "Science"], "text": "Cambridge Lower Secondary, one lesson of each every day. Then History or Executive Function until lunch." }
         ]
       },
       "pm": {
-        "title": "Specialist and vocational classes",
-        "key": "Days a week",
+        "title": "Afternoons",
         "items": [
-          { "who": "Year 7", "classes": [
-            { "n": "Art of Science", "d": 3 }, { "n": "Maker Space (technology)", "d": 2 }, { "n": "Movement", "d": 2 },
-            { "n": "History", "d": 2 }, { "n": "Executive Function", "d": 2 }, { "n": "Wellbeing", "d": 1 }, { "n": "Review", "d": 3 }
-          ] },
-          { "who": "Years 8 and 9", "classes": [
-            { "n": "Movement", "d": 2 }, { "n": "Wellbeing", "d": 1 }, { "n": "Maker Space (technology)", "d": 1, "opt": true },
-            { "n": "Art of Science", "d": 1, "opt": true }, { "n": "Study time", "d": 4 }
-          ] }
+          { "classes": ["Maker Space (technology)", "Art of Science", "Movement", "History", "Executive Function", "Wellbeing"],
+            "text": "Specialist and vocational classes, with time each week to review and catch up." }
         ]
       },
       "steps": [
@@ -151,7 +133,7 @@
     },
     {
       "key": "upper-secondary", "name": "Upper Secondary", "tone": "coral",
-      "ages": "Ages 14 to 18", "groups": "Shares the day with Years 8 and 9",
+      "ages": "Ages 14 to 18",
       "url": "/learning/upper-secondary/", "photo": "upper-years-science-with-teacher",
       "facts": ["8:00 to 15:20", "Homeroom at 8:30", "Lunch at 12:25"],
       "am": {
@@ -162,12 +144,9 @@
       },
       "pm": {
         "title": "Afternoons",
-        "key": "Days a week",
         "items": [
-          { "classes": [
-            { "n": "Movement", "d": 2 }, { "n": "Wellbeing", "d": 1 }, { "n": "Maker Space (technology)", "d": 1, "opt": true },
-            { "n": "Art of Science", "d": 1, "opt": true }, { "n": "Study time", "d": 4 }
-          ], "text": "Study time goes on coursework, exam practice and the personal project." }
+          { "classes": ["Movement", "Wellbeing", "Maker Space (technology)", "Art of Science", "Study time"],
+            "text": "Study time goes on coursework, exam practice and the personal project." }
         ]
       },
       "steps": [
