@@ -3,6 +3,8 @@ mirroring the folder tree, and copy existing JPG/PNG files across unchanged.
 Orientation from EXIF is applied so the JPGs are upright.
 
     python scripts/heic-to-jpg.py
+    python scripts/heic-to-jpg.py events events   (folders under originals/; the same
+                                                   folder twice converts in place, next to each HEIC)
 """
 import shutil
 import sys
@@ -15,8 +17,8 @@ import pillow_heif
 pillow_heif.register_heif_opener()
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "originals" / "photos"
-DST = ROOT / "originals" / "photos-jpg"
+SRC = ROOT / "originals" / (sys.argv[1] if len(sys.argv) > 1 else "photos")
+DST = ROOT / "originals" / (sys.argv[2] if len(sys.argv) > 2 else "photos-jpg")
 
 
 def convert(path: Path) -> str:

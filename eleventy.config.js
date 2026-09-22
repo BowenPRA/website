@@ -21,7 +21,8 @@ export default function (eleventyConfig) {
     const srcset = p.sizes.map((w) => `${base}-${w}.webp ${w}w`).join(", ");
     const largest = p.sizes[p.sizes.length - 1];
     const alt = String(p.alt).replace(/"/g, "&quot;");
-    return `<div class="photo ${classes}"><img src="${base}-${largest}.webp" srcset="${srcset}" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${alt}"${eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}></div>`;
+    const focus = p.focus ? ` style="object-position: ${p.focus}"` : "";
+    return `<div class="photo ${classes}"><img src="${base}-${largest}.webp" srcset="${srcset}" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${alt}"${focus}${eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}></div>`;
   });
 
   return {

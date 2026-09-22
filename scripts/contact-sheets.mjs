@@ -1,22 +1,25 @@
 // Make numbered contact sheets from a folder of photos so a reviewer (human or model)
 // can scan many images at once and refer to them by number.
 //
-//   node scripts/contact-sheets.mjs <folder under originals/> <outDir> [perSheet=20]
+//   node scripts/contact-sheets.mjs <folder under originals/> <outDir> [perSheet=20] [skip regex]
 //
 // Writes <outDir>/sheet-001.jpg ... and <outDir>/index.json mapping sheet -> [{n, file}].
 // Sheets are 4 columns, 300px cells, with the number burned into each cell.
+// sharp cannot read HEIC, so convert those first (scripts/heic-to-jpg.py); files whose
+// path under the folder matches the skip regex (posters, tickets) are left off.
 
 import sharp from "sharp";
 import { readdir, mkdir, writeFile, stat } from "node:fs/promises";
 import { join, relative, extname } from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
-const [, , folderArg, outArg, perArg] = process.argv;
+const [, , folderArg, outArg, perArg, skipArg] = process.argv;
 const FOLDER = join(ROOT, "originals", folderArg || "photos");
 const OUT = outArg || join(ROOT, "originals", "_sheets");
 const PER = Number(perArg) || 20;
 const COLS = 4, CELL = 300, PAD = 6, LABEL = 22;
-const EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif", ".tif", ".tiff"]);
+const EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"]);
+const SKIP = skipArg ? new RegExp(skipArg, "i") : null;
 
 async function walk(dir, acc = []) {
   for (const e of await readdir(dir, { withFileTypes: true })) {
@@ -27,7 +30,7 @@ async function walk(dir, acc = []) {
   return acc;
 }
 
-const files = (await walk(FOLDER)).sort();
+const files = (await walk(FOLDER)).sort().filter((f) => !SKIP || !SKIP.test(relative(FOLDER, f).replace(/\\/g, "/")));
 await mkdir(OUT, { recursive: true });
 const index = [];
 const rows = Math.ceil(PER / COLS);

@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+tone: coral
+title: "Events"
+description: "Mid-Autumn lanterns, a Christmas talent show, March Mathness, trips and graduation: the 2025-26 year at Palm River Academy, month by month."
+permalink: /events/
+---
+{% set heroPhoto = "events-hero-maths-prize-stickers" %}
+{% set heroShape = "tall" %}
+{% set heroEyebrow = "Events · 2025-26" %}
+{% set heroTitle = 'Lanterns, a talent show and <span class="mark">maths games</span>' %}
+{% set heroText = "What we did last year, August to June: festivals, theme weeks, trips and a graduation." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap">
+    <nav class="months" aria-label="Jump to a month">
+      {% for e in events %}{% if loop.first or events[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
+    </nav>
+    <p class="gallery__hint events__hint" hidden>Tap a photo to see it bigger.</p>
+
+    <ol class="year">
+      {% for e in events %}
+      <li class="event" id="{{ e.id }}" data-c="{{ loop.index0 % 5 }}">
+        <p class="event__when"><span class="event__month">{{ e.month }}</span> <span class="event__yr">{{ e.year }}</span></p>
+        <div class="event__body">
+          <h2>{{ e.name }}</h2>
+          <p class="event__date">{{ e.when }}</p>
+          {% for t in e.text %}<p>{{ t }}</p>{% endfor %}
+          {% if e.photos.length %}
+          <div class="gallery gallery--event"{% if e.photos.length == 4 %} style="--cols: 4"{% endif %}>
+            {% for slug in e.photos %}{% photo slug, "", "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px" %}{% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--coral">This year</p>
+    <h2>Dates for 2026-27</h2>
+    <p class="lede">Term dates and holidays are on the calendar. Event dates go out to families during the year.</p>
+    <a class="btn btn--primary" href="{{ '/families/calendar/' | url }}">See the calendar</a>
+  </div>
+</section>
+
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

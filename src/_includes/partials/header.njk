@@ -30,6 +30,7 @@
             <li><a href="{{ '/contact/' | url }}">Book a tour</a></li>
           </ul>
         </li>
+        <li><a href="{{ '/events/' | url }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>Events</a></li>
       </ul>
       <a class="btn btn--green btn--small" href="{{ '/contact/' | url }}">Contact Us</a>
     </nav>
@@ -45,6 +46,7 @@
   <div class="sheet__group">
     <a class="sheet__top" href="{{ '/' | url }}"{% if u == '/' %} aria-current="page"{% endif %}>Home</a>
     <a class="sheet__top" href="{{ '/about/' | url }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>About Us</a>
+    <a class="sheet__top" href="{{ '/events/' | url }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>Events</a>
   </div>
   <div class="sheet__group">
     <a class="sheet__label" href="{{ '/learning/' | url }}">Academics</a>

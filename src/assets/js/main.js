@@ -157,10 +157,10 @@
     });
   }
 
-  // Gallery lightbox
-  var gallery = document.querySelector(".gallery");
-  if (gallery && typeof HTMLDialogElement === "function") {
-    var items = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));
+  // Gallery lightbox. Each .gallery is its own set: the arrows stay inside the gallery you opened.
+  var galleries = document.querySelectorAll(".gallery");
+  if (galleries.length && typeof HTMLDialogElement === "function") {
+    var items = [];
     var icon = function (d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'; };
     var box = document.createElement("dialog");
     box.className = "lightbox";
@@ -185,15 +185,23 @@
       bigImg.alt = img.alt;
       caption.textContent = img.alt;
     }
-    items.forEach(function (img, i) {
-      var tile = img.parentElement;
-      tile.setAttribute("tabindex", "0");
-      tile.setAttribute("role", "button");
-      tile.setAttribute("aria-label", "View larger: " + img.alt);
-      function open() { show(i); box.showModal(); }
-      tile.addEventListener("click", open);
-      tile.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+    galleries.forEach(function (gallery) {
+      var set = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));
+      set.forEach(function (img, i) {
+        var tile = img.parentElement;
+        tile.setAttribute("tabindex", "0");
+        tile.setAttribute("role", "button");
+        tile.setAttribute("aria-label", "View larger: " + img.alt);
+        function open() {
+          items = set;
+          box.classList.toggle("is-single", set.length < 2);
+          show(i);
+          box.showModal();
+        }
+        tile.addEventListener("click", open);
+        tile.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+        });
       });
     });
     box.querySelector(".lightbox__close").addEventListener("click", function () { box.close(); });
@@ -212,7 +220,6 @@
       if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
       touchX = null;
     });
-    var hint = document.querySelector(".gallery__hint");
-    if (hint) hint.hidden = false;
+    document.querySelectorAll(".gallery__hint").forEach(function (hint) { hint.hidden = false; });
   }
 })();

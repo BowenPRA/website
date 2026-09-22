@@ -85,7 +85,7 @@ center in Hội An, Việt Nam." The rest of the site says "learning community",
 Top nav (mirrors the Wix draft; hamburger sheet on mobile):
 About Us · Academics ▾ (Early Years, Primary, Secondary, Upper Years, Global Program) ·
 Admissions ▾ (Enrollment, Tuition and fees, Schedule and calendar, Family handbook,
-Book a tour) · [Contact Us]
+Book a tour) · Events · [Contact Us]
 
 Home page section order, top to bottom: full-bleed photo hero with palm leaves ·
 Discover our story · values marquee · "Content through context" (the English
@@ -107,6 +107,7 @@ Global Program · campus-life gallery · Find your way to PRA · CTA.
 | `/families/calendar/` | Calendar | Academic year dates | Month-by-month list (from data file), download .ics link later | none |
 | `/families/schedule/` | Daily schedule | Per-group timetables | Accordions per group (Nursery, Kindy, Y1-2, Y4-5, Y6, Y8, Y9) | none |
 | `/families/handbook/` | Family handbook | Norms and guidelines | Link to PDF plus a short summary | none |
+| `/events/` | Events | Last year's festivals, theme weeks, trips and graduation, August to June | Month chips, one section per event (from `src/_data/events.json`: name, date, 1 to 3 sentences, polaroids with a lightbox), link to this year's calendar | Book a visit |
 | `/contact/` | Contact / Book a visit | One form, map, phone, Zalo/WhatsApp, hours | Form (name, child's age, dates if visiting, message), addresses of both campuses, hours | Send |
 | `/404.html` | Not found | Friendly | A palm and a link home | Home |
 

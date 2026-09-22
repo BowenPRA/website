@@ -6,7 +6,10 @@
 //     "slug": "hoi-an-primary-science-class", // becomes the file name (SEO: descriptive, kebab-case)
 //     "alt":  "Two Year 3 students pour vinegar into a volcano model during science",
 //     "aspect": "4:3",                        // optional: "4:3", "3:4", "1:1", "16:9", "3:2"; omit to keep the original
-//     "position": "attention"                 // optional sharp crop position; default "attention"
+//     "position": "attention",                // optional sharp crop position; default "attention"
+//     "region": [0.1, 0.2, 0.5, 0.5],         // optional [left, top, width, height] fractions, cut before the aspect crop
+//     "trim": true,                           // optional: cut a transparent border off first
+//     "focus": "50% 20%"                      // optional object-position for pages that crop it again (gallery squares)
 //   }
 //
 // Output: src/assets/img/photos/<slug>-{480,960,1600}.webp
@@ -40,12 +43,22 @@ for (const p of picks) {
   if (!p.slug || !p.src || !p.alt) { console.warn("skipping pick without slug/src/alt:", p); continue; }
   const srcPath = join(ORIGINALS, p.src);
 
-  // optional "region": [left, top, width, height] as fractions of the source, applied first
-  let base = sharp(srcPath, { failOn: "none" }).rotate();
+  // optional "trim": true cuts a transparent border off the source first (region is then relative to what is left),
+  // plus 2px of its soft edge so padding never repeats a half-clear row
+  let input = srcPath;
+  if (p.trim) {
+    const { data, info } = await sharp(srcPath, { failOn: "none" }).rotate().trim().png().toBuffer({ resolveWithObject: true });
+    input = await sharp(data).extract({ left: 2, top: 2, width: info.width - 4, height: info.height - 4 }).removeAlpha().png().toBuffer();
+  }
+
+  // optional "region": [left, top, width, height] as fractions of the source, applied first.
+  // A region may run past the edges; the overhang is filled by repeating the edge pixels.
+  let base = sharp(input, { failOn: "none" }).rotate();
   let meta = await base.metadata();
   let srcW = meta.width, srcH = meta.height;
   if ((meta.orientation || 1) >= 5) [srcW, srcH] = [srcH, srcW];
   const region = p.region && p.region.map((f, i) => Math.round(f * (i % 2 ? srcH : srcW)));
+  const imgW = srcW, imgH = srcH;
   if (region) { srcW = region[2]; srcH = region[3]; }
   const ratio = p.aspect ? ratios[p.aspect] : srcW / srcH;
   if (!ratio) throw new Error(`unknown aspect ${p.aspect} for ${p.slug}`);
@@ -66,13 +79,22 @@ for (const p of picks) {
 
   const prev = existing[p.slug];
   if (!force && prev && prev.sizes.join() === widths.join()) {
-    try { await stat(join(OUT, `${p.slug}-${widths[0]}.webp`)); out[p.slug] = { ...prev, alt: p.alt }; continue; } catch {}
+    try { await stat(join(OUT, `${p.slug}-${widths[0]}.webp`)); out[p.slug] = { ...prev, alt: p.alt, focus: p.focus }; continue; } catch {}
   }
 
-  const regionBuf = region
-    ? await base.extract({ left: region[0], top: region[1], width: region[2], height: region[3] }).toBuffer()
-    : null;
-  const source = () => (regionBuf ? sharp(regionBuf) : sharp(srcPath, { failOn: "none" }).rotate());
+  let regionBuf = null;
+  if (region) {
+    const [l, t, w, h] = region;
+    const left = Math.max(0, l), top = Math.max(0, t);
+    const right = Math.min(imgW, l + w), bottom = Math.min(imgH, t + h);
+    regionBuf = await base.extract({ left, top, width: right - left, height: bottom - top }).toBuffer();
+    if (left > l || top > t || right < l + w || bottom < t + h) {
+      regionBuf = await sharp(regionBuf)
+        .extend({ left: left - l, top: top - t, right: l + w - right, bottom: t + h - bottom, extendWith: "copy" })
+        .toBuffer();
+    }
+  }
+  const source = () => (regionBuf ? sharp(regionBuf) : sharp(input, { failOn: "none" }).rotate());
 
   for (const width of widths) {
     await source()
@@ -82,7 +104,7 @@ for (const p of picks) {
   }
   const sizes = widths;
   const width = widths[widths.length - 1];
-  out[p.slug] = { alt: p.alt, width, height: Math.round(width / ratio), sizes, src: p.src };
+  out[p.slug] = { alt: p.alt, width, height: Math.round(width / ratio), sizes, src: p.src, focus: p.focus };
   console.log(`built ${p.slug} (${sizes.join("/")}) from ${p.src}`);
 }
 

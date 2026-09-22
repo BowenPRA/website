@@ -271,104 +271,98 @@
   },
   "team-seth": {
     "alt": "Mr. Seth",
-    "width": 600,
-    "height": 600,
+    "width": 478,
+    "height": 478,
     "sizes": [
-      480,
-      600
+      478
     ],
     "src": "wix-current/Mr_-Seth.png"
   },
   "team-bowen": {
     "alt": "Mr. Bowen",
-    "width": 600,
-    "height": 600,
+    "width": 351,
+    "height": 351,
     "sizes": [
-      480,
-      600
+      351
     ],
     "src": "wix-current/Mr_-Bowen.png"
   },
   "team-caleb": {
     "alt": "Mr. Caleb",
-    "width": 600,
-    "height": 600,
+    "width": 480,
+    "height": 480,
     "sizes": [
-      480,
-      600
+      480
     ],
     "src": "wix-current/Mr_-Caleb.png"
   },
   "team-david": {
     "alt": "Mr. David",
-    "width": 1522,
-    "height": 1522,
+    "width": 1600,
+    "height": 1600,
     "sizes": [
       480,
       960,
-      1522
+      1600
     ],
     "src": "wix-current/David_edited_edited_edited.png"
   },
   "team-kiu": {
     "alt": "Ms. Kiu",
-    "width": 1086,
-    "height": 1086,
+    "width": 1195,
+    "height": 1195,
     "sizes": [
       480,
       960,
-      1086
+      1195
     ],
     "src": "wix-current/Kiu.png"
   },
   "team-solo": {
     "alt": "Ms. Solo",
-    "width": 1226,
-    "height": 1226,
+    "width": 1091,
+    "height": 1091,
     "sizes": [
       480,
       960,
-      1226
+      1091
     ],
     "src": "wix-current/Solo-2.png"
   },
   "team-thanh": {
     "alt": "Ms. Thanh",
-    "width": 753,
-    "height": 753,
+    "width": 716,
+    "height": 716,
     "sizes": [
       480,
-      753
+      716
     ],
     "src": "wix-current/Thanh.png"
   },
   "team-tham": {
     "alt": "Ms. Tham",
-    "width": 600,
-    "height": 600,
+    "width": 459,
+    "height": 459,
     "sizes": [
-      480,
-      600
+      459
     ],
     "src": "wix-current/Ms_-Tham.png"
   },
   "team-thoa": {
     "alt": "Ms. Thoa",
-    "width": 600,
-    "height": 600,
+    "width": 480,
+    "height": 480,
     "sizes": [
-      480,
-      600
+      480
     ],
     "src": "wix-current/Ms_-Thoa.png"
   },
   "team-tham-v": {
     "alt": "Ms. Thắm V",
-    "width": 600,
-    "height": 600,
+    "width": 480,
+    "height": 480,
     "sizes": [
-      480,
-      600
+      480
     ],
     "src": "wix-current/Ms_-Tham-V.png"
   },
@@ -382,5 +376,156 @@
       1189
     ],
     "src": "wix-draft/124001_9ce831bd8b7e49cc879a7c2e3e3f6784~mv2.jpg"
+  },
+  "events-hero-maths-prize-stickers": {
+    "alt": "A group of children grin and hold up the prize stickers they won at March Mathness",
+    "width": 1600,
+    "height": 2000,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/IMG_3204.jpg"
+  },
+  "march-mathness-pick-up-sticks-game": {
+    "alt": "Four older students work out a strategy for a pick-up-sticks maths game at a wooden table",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Stay and Play/IMG_9679.jpg"
+  },
+  "march-mathness-cube-tower": {
+    "alt": "Two young boys look up at the tall tower of connecting cubes they built",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/IMG_0067.jpg"
+  },
+  "march-mathness-cube-building": {
+    "alt": "Two girls build towers from connecting cubes, one smiling at the other",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Stay and Play/IMG_9683.jpg"
+  },
+  "march-mathness-pom-pom-models": {
+    "alt": "Students fold paper boats beside pom-pom models on a table outdoors",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Stay and Play/z7686401271259_3c05f75f39aa9ac918975d35e0ffee9f.jpg"
+  },
+  "march-mathness-counting-game": {
+    "alt": "Three young children pass a counting piece between them on the turf",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/Stay and Play/z7686398547871_7a0d77b0638bdcb32639e9f2691d64fc.jpg"
+  },
+  "march-mathness-pom-pom-jar": {
+    "alt": "A big jar of pom-poms next to a box asking how many are inside",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_03 March Mathness/Photos/unnamed.webp"
+  },
+  "mid-autumn-festival-costume-parade": {
+    "alt": "Young children in costume walk across the stage in front of a handmade Mid-Autumn Festival banner",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_10_03 Mid-Autumn Festival/Mid-Autumn Parent Photos/IMG_3275.jpg"
+  },
+  "mid-autumn-festival-parents-watching": {
+    "alt": "Parents clap and film as children in costume perform under paper lanterns",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_10_03 Mid-Autumn Festival/_extracted/IMG_3281/t0003.2s.jpg"
+  },
+  "christmas-show-gymnastics-duo": {
+    "alt": "Two students hold the splits with their arms up during the Christmas talent show",
+    "width": 960,
+    "height": 720,
+    "sizes": [
+      480,
+      960
+    ],
+    "src": "events/2025_12_17 Christmas/_extracted/IMG_8723/t0064.2s.jpg"
+  },
+  "christmas-show-kindergarten-dance": {
+    "alt": "Kindergarten children in red and white Christmas outfits dance on stage",
+    "width": 960,
+    "height": 720,
+    "sizes": [
+      480,
+      960
+    ],
+    "src": "events/2025_12_17 Christmas/_extracted/IMG_8713/t0045.9s.jpg"
+  },
+  "christmas-show-student-hosts": {
+    "alt": "Two older students host the Christmas talent show in front of a Merry Christmas screen",
+    "width": 960,
+    "height": 720,
+    "sizes": [
+      480,
+      960
+    ],
+    "src": "events/2025_12_17 Christmas/_extracted/IMG_8712/t0020.4s.jpg"
+  },
+  "learning-without-walls-kim-bong-carpentry-village": {
+    "alt": "Students and teachers pose under the carved fish arch at the Kim Bồng carpentry village",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06_12 Graduation/_extracted/4 Year 4-5 Graduation - Year 45 -Oh, the Places/image78.jpeg"
+  },
+  "learning-without-walls-3d-art-museum": {
+    "alt": "Students pose in a painted gondola at a 3D art museum in Đà Nẵng",
+    "width": 1556,
+    "height": 1167,
+    "sizes": [
+      480,
+      960,
+      1556
+    ],
+    "src": "events/2026_06_12 Graduation/_extracted/4 Year 4-5 Graduation - Year 45 -Oh, the Places/image86.jpeg"
   }
 }

@@ -1,17 +1,17 @@
 {
   "intro": "Every academic teacher has a degree in their subject and a TESOL certificate, and is qualified to teach in Việt Nam.",
-  "note": "Keep each person to a role and one short line: what they lead or teach. Leadership first.",
+  "note": "Keep each person to a role and one short line that starts with a verb (Teaches, Also teaches, Leads, Reviews), subjects in Title Case, no Oxford comma. Leadership first.",
   "members": [
     { "name": "Mr. Seth", "slug": "seth", "role": "Head Teacher", "teaches": "Also teaches Cooking" },
     { "name": "Mr. David", "slug": "david", "role": "Deputy Head Teacher", "teaches": "Reviews academics across PRA" },
-    { "name": "Mr. Bowen", "slug": "bowen", "role": "Upper Secondary Coordinator", "teaches": "Maths and Science" },
-    { "name": "Mr. Caleb", "slug": "caleb", "role": "Primary Homeroom Teacher", "teaches": "Movement and Exercise" },
-    { "name": "Ms. Kiu", "slug": "kiu", "role": "Year 5 Homeroom Teacher", "teaches": "Wellbeing, English and Science" },
-    { "name": "Ms. Solo", "slug": "solo", "role": "Year 1 Homeroom Teacher", "teaches": "English, Maths and Science" },
-    { "name": "Ms. Thanh", "slug": "thanh", "role": "Kindergarten Homeroom Teacher", "teaches": "Phonics, Maths and Understanding the World" },
-    { "name": "Ms. Tham", "slug": "tham", "role": "Nursery Homeroom Teacher", "teaches": "Leads the Nursery" },
-    { "name": "Ms. Thoa", "slug": "thoa", "role": "Nursery Teacher", "teaches": "In the Nursery room all day" },
-    { "name": "Ms. Thắm V", "slug": "tham-v", "role": "Primary Teacher", "teaches": "Craft, Technology and Review" },
-    { "name": "Ms. Duyen", "slug": "duyen", "role": "Office and Primary Teacher", "teaches": "Technology and Crafts" }
+    { "name": "Mr. Bowen", "slug": "bowen", "role": "Upper Secondary Coordinator", "teaches": "Teaches Maths and Science" },
+    { "name": "Mr. Caleb", "slug": "caleb", "role": "Primary Homeroom Teacher", "teaches": "Teaches English, Maths, Science and Movement" },
+    { "name": "Ms. Kiu", "slug": "kiu", "role": "Primary Homeroom Teacher", "teaches": "Teaches English, Science and Wellbeing" },
+    { "name": "Ms. Solo", "slug": "solo", "role": "Primary Homeroom Teacher", "teaches": "Teaches English, Maths and Science" },
+    { "name": "Ms. Thanh", "slug": "thanh", "role": "Kindergarten Homeroom Teacher", "teaches": "Teaches Phonics, Maths and Understanding the World" },
+    { "name": "Ms. Tham", "slug": "tham", "role": "Nursery Homeroom Teacher", "teaches": "Leads the Nursery class" },
+    { "name": "Ms. Thoa", "slug": "thoa", "role": "Nursery Teacher", "teaches": "Teaches in the Nursery all day" },
+    { "name": "Ms. Thắm V", "slug": "tham-v", "role": "Primary Teacher", "teaches": "Teaches Technology, Crafts and Review" },
+    { "name": "Ms. Duyen", "slug": "duyen", "role": "Office and Primary Teacher", "teaches": "Teaches Technology and Crafts" }
   ]
 }
