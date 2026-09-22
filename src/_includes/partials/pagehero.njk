@@ -11,7 +11,7 @@
     </div>
     <div class="phero__media rise" style="--d:2">
       {% set frondClass = "" %}{% include "partials/frond.njk" %}
-      {% photo heroPhoto, "phero__photo" + (" phero__photo--" + heroShape if heroShape else ""), "(min-width: 1240px) 520px, (min-width: 900px) 44vw, (min-width: 620px) 560px, 92vw", true %}
+      {% photo heroPhoto, "phero__photo" + (" phero__photo--" + heroShape if heroShape else ""), ("(min-width: 900px) 420px, (min-width: 480px) 420px, 92vw" if heroShape == "tall" else "(min-width: 1240px) 520px, (min-width: 900px) 44vw, (min-width: 620px) 560px, 92vw"), true %}
     </div>
   </div>
   {% include "partials/river.njk" %}

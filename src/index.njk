@@ -12,16 +12,16 @@ description: "Palm River Academy is an English language center in Hội An for c
   <div class="wrap hero__inner">
     <p class="eyebrow eyebrow--on rise" style="--d:0">English Language Center · Hội An</p>
     <h1 class="rise" style="--d:1">English, learned <span class="mark">by doing.</span></h1>
-    <p class="lede rise" style="--d:2">For children from 20 months to 18 years. Science, maths, cooking, art and sport, all in English.</p>
+    <p class="lede rise" style="--d:2">English, taught through science, maths, cooking, art and sport. For children from 20 months to 18 years.</p>
     <div class="hero__actions rise" style="--d:3">
       <a class="btn btn--white" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
     </div>
   </div>
   <ul class="hero__facts" aria-label="At a glance">
-    <li class="sticker">20 months to 18 years</li>
-    <li class="sticker sticker--green">{{ site.classCap }} or fewer per class</li>
-    <li class="sticker sticker--coral">Since {{ site.founded }}</li>
+    <li class="leafpill">20 months to 18 years</li>
+    <li class="leafpill">Small classes</li>
+    <li class="leafpill">Since {{ site.founded }}</li>
   </ul>
   {% include "partials/river.njk" %}
 </section>
@@ -66,7 +66,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div class="method">
       <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, with qualified teachers.</p></div>
       <div class="method__item">{{ ic.icon("whisk", "green") }}<strong>Doing, not drilling</strong><p>Every afternoon is hands-on: cooking, crafts, art, technology, sport.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "blue") }}<strong>Small enough to talk</strong><p>{{ site.classCap }} or fewer per class, so every child gets to speak.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Small enough to talk</strong><p>{{ site.classCap }} or fewer per class, so every child gets to speak.</p></div>
     </div>
   </div>
 </section>
@@ -95,7 +95,7 @@ description: "Palm River Academy is an English language center in Hội An for c
 <section class="band--blue">
   <div class="wrap stats">
     <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Children per class, at most</h3><p>In every academic class.</p></div>
-    <div class="stat"><p class="stat__num" data-count="22">22+</p><h3>Staff</h3><p>Vietnamese and international, Nursery to Upper Secondary.</p></div>
+    <div class="stat"><p class="stat__num" data-count="{{ ('' | year) - site.founded }}">{{ ('' | year) - site.founded }}</p><h3>Years in Hội An</h3><p>Serving families in Hội An and Đà Nẵng since {{ site.founded }}.</p></div>
     <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Alumni abroad</h3><p>At high schools and universities overseas.</p></div>
   </div>
 </section>

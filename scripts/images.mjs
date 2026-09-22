@@ -9,7 +9,8 @@
 //     "position": "attention",                // optional sharp crop position; default "attention"
 //     "region": [0.1, 0.2, 0.5, 0.5],         // optional [left, top, width, height] fractions, cut before the aspect crop
 //     "trim": true,                           // optional: cut a transparent border off first
-//     "focus": "50% 20%"                      // optional object-position for pages that crop it again (gallery squares)
+//     "focus": "50% 20%",                     // optional object-position for pages that crop it again (gallery squares)
+//     "quality": 60                           // optional WebP quality for a busy photo that comes out too heavy (default 78)
 //   }
 //
 // Output: src/assets/img/photos/<slug>-{480,960,1600}.webp
@@ -99,7 +100,7 @@ for (const p of picks) {
   for (const width of widths) {
     await source()
       .resize({ width, height: Math.round(width / ratio), fit: "cover", position: p.position || "attention" })
-      .webp({ quality: QUALITY })
+      .webp({ quality: p.quality || QUALITY })
       .toFile(join(OUT, `${p.slug}-${width}.webp`));
   }
   const sizes = widths;

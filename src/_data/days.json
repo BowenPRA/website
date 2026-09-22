@@ -139,14 +139,14 @@
       "am": {
         "title": "Every morning",
         "items": [
-          { "core": ["US diploma", "Cambridge pathway"], "coreJoin": "or", "text": "Two long blocks, 8:45 to 12:25. Each student works through their own accredited courses with a teacher coaching, plus IELTS, PTE or GED practice if it is part of their plan." }
+          { "core": ["Their own courses"], "text": "Two long blocks, 8:45 to 12:25. Each student works through their own accredited courses, most towards a US diploma, with a teacher coaching. The subjects follow the plan we agreed with them." }
         ]
       },
       "pm": {
         "title": "Afternoons",
         "items": [
           { "classes": ["Movement", "Wellbeing", "Maker Space (technology)", "Art of Science", "Study time"],
-            "text": "Study time goes on coursework, exam practice and the personal project." }
+            "text": "Study time goes on coursework and the personal project." }
         ]
       },
       "steps": [

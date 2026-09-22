@@ -35,7 +35,8 @@ Keep from the Wix Studio draft:
 - The facts: founded 2017, Hội An's oldest international learning center,
   under 13 per class, 22+ staff, 10+ alumni studying abroad, two campuses in
   Cẩm Thanh, Cambridge curriculum, EYFS for Early Years, US diploma or
-  Cambridge pathway for Upper Years, GED/IELTS/PTE prep, rotating vocational
+  Cambridge pathway for Upper Years, GED/IELTS/PTE prep (both dropped from the site
+  2026-09-22, see section 10), rotating vocational
   classes, four-step admissions process. (Checkpoint tests are not mentioned on the site.)
 - The five values (Intellectual Exploration, Creative Expression, Sports and
   Fun, Global Citizenship, Leadership Development). The draft says "6
@@ -100,7 +101,7 @@ Global Program · campus-life gallery · Find your way to PRA · CTA.
 | `/learning/early-years/` | Early Years (20 months to 4) | EYFS, play, language | What a morning looks like, four areas (social, physical, language, maths), partial-day option, FAQ | Book a visit |
 | `/learning/primary/` | Primary (5 to 11) | Cambridge core + PE + vocational | Subjects, daily PE, vocational rotation, reports, FAQ | Book a visit |
 | `/learning/lower-secondary/` | Lower Secondary (Years 7 to 9) | Same shape as Primary, own copy (the draft reused Primary text) | Subjects, PE, vocational, FAQ | Book a visit |
-| `/learning/upper-secondary/` | Upper Secondary (14 to 18) | Pathways: US diploma or Cambridge; exams; personal project; annual trip | Pathways, exam prep (GED, IELTS, PTE), project, trip | Ask a question |
+| `/learning/upper-secondary/` | Upper Secondary (14 to 18) | An individual plan, usually towards a US diploma; projects, internships, annual trip | How the plan is made, the day, projects and internships, where alumni went | Ask a question |
 | `/learning/global-program/` | Global Program (3 weeks to 3 months) | For travelling families; four pathways; price from | Who it is for, four pathways (Early Years, Vocational half day, Academic half day, Full day), what you get (reports, certificate), price from, how to book | Ask about dates |
 | `/admissions/` | How to enroll | Four steps + FAQ | Steps 1 to 4, FAQ (documents, assessment, English level, trial day, rolling admissions), inquiry form | Send inquiry |
 | `/admissions/tuition-and-fees/` | Tuition and fees | Real numbers | Regular Program table, Global Program table, other fees, payment schedule, transport, refund policy, Vietnamese translation link | Ask a question |
@@ -134,6 +135,10 @@ one hand-drawn underline per page, big photos of real students.
 - Stage colours (sun `#FFC857`, green, blue, coral `#FF6F59`, violet `#7C5CFF`) are markers
   only: menu dots, age chips, tile labels, price-card bars, the day chart and one sticker. They
   never colour a whole page or a button. Sun, coral and violet never carry body text.
+- Small accents keep the pages from looking samey: card icons cycle through the five colours,
+  as do value numbers, step badges, checklist ticks, calendar month bars, event month badges,
+  team photo rings, gallery tape and the three stat marks. All of these are small shapes, never
+  text on a coloured field except ink on sun.
 - **Page tones.** Front matter `tone:` is `blue` (default: Home, Academics, Lower Secondary,
   Contact), `green` (About, Primary, Handbook), `navy` (Admissions, Events, Upper Secondary) or
   `light`, a pale green-to-blue hero with blue headings (Early Years, Fees, Global Program,
@@ -270,5 +275,11 @@ Still open:
   `src/_data/days.json`, written by hand from `src/_data/schedule.json` (still
   copied from the admin app by `scripts/schedule-from-admin.mjs`, but no longer
   rendered). The same file feeds the "A day in ..." timelines on the stage pages.
+- Upper Secondary copy (Bowen, 2026-09-22): no Cambridge pathway, no IELTS, PTE or GED.
+  Say that we build an academic plan with the family around the student's goal, that most
+  work towards a US diploma (soft language, "most", "usually"), and that academics mix with
+  projects and internships. Internships are mentioned softly ("sometimes an internship", "ask us what might be possible").
+- Home hero facts are three leaf-shaped bubbles (round on three corners, pointed at the stem, pale
+  veins behind the text) in deep green, mint and teal: "20 months to 18 years", "Small classes", "Since 2017". The stats band shows years in Hội An (computed from the founding year), not staff count.
 - Photos: prefer the ones Bowen chose for the Wix draft plus polished activity shots
   of older students; avoid close-up toddler phone snapshots.
