@@ -2,14 +2,14 @@
 layout: layouts/base.njk
 tone: coral
 title: "Events"
-description: "Mid-Autumn lanterns, a Christmas talent show, March Mathness, trips and graduation: the 2025-26 year at Palm River Academy, month by month."
+description: "Festivals, theme weeks and trips at Palm River Academy in 2025-26, and what students did at each: performing, hosting, running stalls and leading activities for younger classes."
 permalink: /events/
 ---
 {% set heroPhoto = "events-hero-maths-prize-stickers" %}
 {% set heroShape = "tall" %}
 {% set heroEyebrow = "Events · 2025-26" %}
-{% set heroTitle = 'Lanterns, a talent show and <span class="mark">maths games</span>' %}
-{% set heroText = "What we did last year, August to June: festivals, theme weeks, trips and a graduation." %}
+{% set heroTitle = 'Our students <span class="mark">run the show</span>' %}
+{% set heroText = "Festivals, theme weeks and trips from 2025-26. At each one, students perform, host, run stalls or lead activities for younger classes." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
@@ -26,7 +26,13 @@ permalink: /events/
         <div class="event__body">
           <h2>{{ e.name }}</h2>
           <p class="event__date">{{ e.when }}</p>
-          {% for t in e.text %}<p>{{ t }}</p>{% endfor %}
+          <p class="event__summary">{{ e.summary }}</p>
+          {% if e.did.length %}
+          <h3 class="event__did-title">What students did</h3>
+          <ul class="event__did">
+            {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
+          </ul>
+          {% endif %}
           {% if e.photos.length %}
           <div class="gallery gallery--event"{% if e.photos.length == 4 %} style="--cols: 4"{% endif %}>
             {% for slug in e.photos %}{% photo slug, "", "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px" %}{% endfor %}
@@ -45,7 +51,7 @@ permalink: /events/
     <p class="eyebrow eyebrow--coral">This year</p>
     <h2>Dates for 2026-27</h2>
     <p class="lede">Term dates and holidays are on the calendar. Event dates go out to families during the year.</p>
-    <a class="btn btn--primary" href="{{ '/families/calendar/' | url }}">See the calendar</a>
+    <a class="btn btn--primary" href="{{ '/families/schedule/#calendar' | url }}">See the calendar</a>
   </div>
 </section>
 

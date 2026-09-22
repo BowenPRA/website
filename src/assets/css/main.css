@@ -1049,6 +1049,15 @@ tr:last-child td { border-bottom: 0; }
 .event h2 { margin-bottom: 0.2em; }
 .event__date { font-weight: 600; color: var(--m-ink); margin-bottom: 0.7em; }
 .event__body > p { max-width: 62ch; }
+.event__summary { font-size: 1.08em; font-weight: 500; }
+.event__did-title {
+  margin: 1.1em 0 0.6em; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--m-ink);
+}
+.event__did { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; max-width: 62ch; }
+.event__did li { position: relative; padding-left: 28px; }
+.event__did li::before {
+  content: ""; position: absolute; left: 2px; top: 0.5em; width: 12px; height: 12px; border-radius: 4px; rotate: 45deg; background: var(--m);
+}
 .event .gallery { margin-top: 30px; }
 .gallery--event { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 24px; }
 .gallery--event .photo { aspect-ratio: 4 / 3; }

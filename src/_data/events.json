@@ -5,9 +5,8 @@
     "month": "Aug",
     "year": "2025",
     "when": "28 August and 11 September",
-    "text": [
-      "Two evenings for parents at the start of the year: Year 6 to Secondary first, then Early Years and Primary. Teachers show how their lessons run, what homework looks like and how they keep in touch with families."
-    ],
+    "summary": "Two evenings at the start of the year when parents meet their child's teachers and hear how the year will run: lessons, homework and how teachers keep families updated.",
+    "did": [],
     "photos": []
   },
   {
@@ -16,13 +15,19 @@
     "month": "Oct",
     "year": "2025",
     "when": "Friday 3 October",
-    "text": [
-      "Every class took the stage: a Nursery catwalk, lantern songs and dances, a play written by Year 6 and a dance from the secondary students.",
-      "Then the older students ran the booths: henna, charcoal portraits, mask making, carnival games and a mooncake workshop, next to a charity thrift shop. 54 parents came, far more than we planned for."
+    "summary": "An afternoon festival for families, with a show and a fair run by students.",
+    "did": [
+      "Every class performed a song, dance or play, and the youngest children walked in a costume parade",
+      "Two students hosted the show, one in English and one in Vietnamese",
+      "Older students planned their own booths: they made the posters, set the prices and ran henna, bracelet, portrait drawing and game stalls"
     ],
     "photos": [
-      "mid-autumn-festival-costume-parade",
-      "mid-autumn-festival-parents-watching"
+      "mid-autumn-festival-show-for-families",
+      "mid-autumn-festival-student-host",
+      "mid-autumn-festival-ao-dai-dance",
+      "mid-autumn-festival-henna-booth",
+      "mid-autumn-festival-henna-designs",
+      "mid-autumn-festival-costume-parade"
     ]
   },
   {
@@ -31,8 +36,11 @@
     "month": "Oct",
     "year": "2025",
     "when": "20 to 31 October",
-    "text": [
-      "Each class turned a broken umbrella into a giant spider. On the 31st: a costume parade, carnival games, and three rooms run by the secondary students for the younger classes, with shadow puppets, marshmallows on strings and apple bobbing."
+    "summary": "Two weeks of Halloween activities, ending with a costume day on 31 October.",
+    "did": [
+      "Each class built a giant spider from an old umbrella and recycled materials",
+      "Students paraded in costume for their families",
+      "Older students ran activity rooms for the younger classes: a shadow puppet show, a marshmallow challenge and autumn games"
     ],
     "photos": []
   },
@@ -42,9 +50,11 @@
     "month": "Dec",
     "year": "2025",
     "when": "Wednesday 17 December, at Zen Library",
-    "text": [
-      "Fourteen acts: class songs and dances, piano solos, gymnastics, a Rubik’s Cube act, a comedy skit and a song from our French teacher.",
-      "Downstairs, students sold the cookies, hot chocolate, fruit skewers, kimonos and stockings they had made. The money went to flood relief kits for families in Đà Nẵng, through Da Nang Go."
+    "summary": "An evening talent show and Christmas market for families. The money raised went to flood relief kits for families in Đà Nẵng.",
+    "did": [
+      "Classes sang and danced, and students signed up for their own acts: piano, gymnastics, a Rubik's Cube act and a comedy skit",
+      "Two students hosted the show in English and Vietnamese",
+      "Students made and sold cookies, hot chocolate and fruit skewers, plus kimonos and stockings from their textiles class"
     ],
     "photos": [
       "christmas-show-gymnastics-duo",
@@ -57,17 +67,20 @@
     "name": "March Mathness",
     "month": "Mar",
     "year": "2026",
-    "when": "Every Friday in March",
-    "text": [
-      "Maths games, one topic a week. Guess when a minute is up, then sprint. Mark where 15 metres ends with a piece of chalk. Guess the pom-poms in the jar. Then maze puzzles, stick games and cube towers, with stickers for the winners."
+    "when": "March, with a family afternoon on 2 April",
+    "summary": "A month of maths games across the whole campus.",
+    "did": [
+      "Classes guessed where 15 metres ends, marked it in chalk, then checked with a tape measure",
+      "Students estimated the pom-poms in a jar, and winners took home prize stickers",
+      "At a Stay and Play afternoon, families joined their children at the game tables: mazes, cube towers, card puzzles and strategy games"
     ],
     "photos": [
       "march-mathness-pick-up-sticks-game",
+      "march-mathness-magic-square-cards",
       "march-mathness-cube-tower",
       "march-mathness-cube-building",
-      "march-mathness-pom-pom-models",
-      "march-mathness-counting-game",
-      "march-mathness-pom-pom-jar"
+      "march-mathness-paper-boats",
+      "march-mathness-counting-game"
     ]
   },
   {
@@ -76,8 +89,11 @@
     "month": "Apr",
     "year": "2026",
     "when": "April",
-    "text": [
-      "Roll-the-dice stories, a book cover contest in art class, a costume parade and Drop Everything And Read at lunch. It ended with a reading festival of word games: Articulate, Pictionary, charades, Codenames and Scrabble."
+    "summary": "A week of reading and storytelling.",
+    "did": [
+      "Students wrote stories from dice rolls and mystery objects pulled from a bag",
+      "They designed new book covers in art class and voted for the best one",
+      "Everyone stopped to read at lunch, and the week ended with a costume parade and a campus festival of word games"
     ],
     "photos": []
   },
@@ -87,8 +103,11 @@
     "month": "Jun",
     "year": "2026",
     "when": "The last two weeks of the year",
-    "text": [
-      "Class moved off campus. Sports day and a pool party, an afternoon on An Bàng beach, the Kim Bồng carpentry village, a peanut butter workshop, the 3D art museum in Đà Nẵng and a visit to an elderly home. Year 6 camped overnight."
+    "summary": "For the last two weeks of the year, learning moved off campus.",
+    "did": [
+      "Trips to the Kim Bồng carpentry village, a peanut butter workshop and a 3D art museum in Đà Nẵng",
+      "Volunteering at an elderly home in Đà Nẵng",
+      "A beach day, a sports day with a pool party, and an overnight camping trip for Year 6"
     ],
     "photos": [
       "learning-without-walls-kim-bong-carpentry-village",
@@ -101,8 +120,10 @@
     "month": "Jun",
     "year": "2026",
     "when": "Friday 12 June",
-    "text": [
-      "Two ceremonies: Early Years to Year 5 in the morning, then Year 6 to the teens. Every class performed, from a Nursery rainbow song to a periodic table song from the secondary students, and every student went home with a certificate."
+    "summary": "Two ceremonies for families: one for Early Years and the younger Primary classes, one for the older students.",
+    "did": [
+      "Every class performed: songs, a dance, speeches and a periodic table song",
+      "Each student walked up to receive a certificate"
     ],
     "photos": []
   }
