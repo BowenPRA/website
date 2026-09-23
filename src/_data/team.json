@@ -64,7 +64,10 @@
       "slug": "kiu",
       "role": "Primary Homeroom Teacher",
       "teaches": "Teaches English, Science and Wellbeing",
-      "tint": 6
+      "tint": 6,
+      "shots": [
+        "primary-lantern-class-hoi-an"
+      ]
     },
     {
       "name": "Ms. Solo",

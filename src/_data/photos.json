@@ -1121,5 +1121,115 @@
       940
     ],
     "src": "flyers/early-years-promotion.png"
+  },
+  "primary-cooking-shaping-dough": {
+    "alt": "Primary students shaping dough in the school kitchen",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/Cooking1.jpg"
+  },
+  "primary-cooking-kneading": {
+    "alt": "Primary students kneading dough together in cooking class",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/cooking2.jpg"
+  },
+  "primary-cooking-rolling-out": {
+    "alt": "Two Primary students roll out their dough in cooking class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/cooking3.jpg"
+  },
+  "primary-cooking-floury-table": {
+    "alt": "Primary students rolling dough on a floury table in cooking class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/cooking4.jpg"
+  },
+  "primary-cooking-rolling-pins": {
+    "alt": "Primary students working the dough with rolling pins",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/cooking5.jpg"
+  },
+  "primary-english-lesson": {
+    "alt": "A Primary English lesson, working through worksheets with counters",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimaryEnglish.jpg"
+  },
+  "primary-line-game": {
+    "alt": "Primary students line up hand on shoulder for a classroom game",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/collaboration2.jpg"
+  },
+  "primary-lantern-workshop": {
+    "alt": "Primary students painting silk lanterns at a workshop in Hội An",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/lantern-making.jpg"
+  },
+  "primary-lantern-class-hoi-an": {
+    "alt": "Ms. Kiu's Primary class at a lantern-making workshop in Hội An",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/lanternmaking2.jpg"
+  },
+  "primary-lanterns-finished": {
+    "alt": "Primary students with the lanterns they made, under the lanterns of Hội An",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/lantern-making-3.jpg"
   }
 }

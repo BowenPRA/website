@@ -822,5 +822,65 @@
     "slug": "early-years-tuition-offer-flyer",
     "quality": 88,
     "alt": "Nursery and Kindergarten flyer: 35% off tuition for a limited time, for children 20 months to 5 years, with English immersion and learning through play"
+  },
+  {
+    "src": "photos-2026-27/Cooking1.jpg",
+    "slug": "primary-cooking-shaping-dough",
+    "aspect": "3:4",
+    "alt": "Primary students shaping dough in the school kitchen"
+  },
+  {
+    "src": "photos-2026-27/cooking2.jpg",
+    "slug": "primary-cooking-kneading",
+    "aspect": "3:4",
+    "alt": "Primary students kneading dough together in cooking class"
+  },
+  {
+    "src": "photos-2026-27/cooking3.jpg",
+    "slug": "primary-cooking-rolling-out",
+    "aspect": "4:3",
+    "alt": "Two Primary students roll out their dough in cooking class"
+  },
+  {
+    "src": "photos-2026-27/cooking4.jpg",
+    "slug": "primary-cooking-floury-table",
+    "aspect": "4:3",
+    "alt": "Primary students rolling dough on a floury table in cooking class"
+  },
+  {
+    "src": "photos-2026-27/cooking5.jpg",
+    "slug": "primary-cooking-rolling-pins",
+    "aspect": "4:3",
+    "alt": "Primary students working the dough with rolling pins"
+  },
+  {
+    "src": "photos-2026-27/PrimaryEnglish.jpg",
+    "slug": "primary-english-lesson",
+    "aspect": "3:4",
+    "alt": "A Primary English lesson, working through worksheets with counters"
+  },
+  {
+    "src": "photos-2026-27/collaboration2.jpg",
+    "slug": "primary-line-game",
+    "aspect": "4:3",
+    "alt": "Primary students line up hand on shoulder for a classroom game"
+  },
+  {
+    "src": "photos-2026-27/lantern-making.jpg",
+    "slug": "primary-lantern-workshop",
+    "aspect": "4:3",
+    "alt": "Primary students painting silk lanterns at a workshop in Hội An"
+  },
+  {
+    "src": "photos-2026-27/lanternmaking2.jpg",
+    "slug": "primary-lantern-class-hoi-an",
+    "aspect": "3:4",
+    "alt": "Ms. Kiu's Primary class at a lantern-making workshop in Hội An"
+  },
+  {
+    "src": "photos-2026-27/lantern-making-3.jpg",
+    "slug": "primary-lanterns-finished",
+    "aspect": "4:3",
+    "alt": "Primary students with the lanterns they made, under the lanterns of Hội An"
   }
 ]
