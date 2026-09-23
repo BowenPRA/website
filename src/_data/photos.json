@@ -1483,5 +1483,104 @@
       940
     ],
     "src": "flyers/mid-autumn-festival-2026.png"
+  },
+  "da-lat-trip-dinner": {
+    "alt": "Upper Secondary students at dinner on the Đà Lạt trip, at a restaurant they chose",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250507_185340.jpg"
+  },
+  "da-lat-trip-harnesses": {
+    "alt": "Getting harnessed up for the high ropes course in the pines above Đà Lạt",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250508_102314.jpg"
+  },
+  "da-lat-trip-high-ropes": {
+    "alt": "A student crossing the high ropes course on the Đà Lạt trip",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250508_105501.jpg"
+  },
+  "da-lat-trip-zip-line": {
+    "alt": "A student on the zip line at the Đà Lạt adventure park",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250508_105908.jpg"
+  },
+  "da-lat-trip-lunch": {
+    "alt": "Lunch together on the Đà Lạt trip",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250508_141542.jpg"
+  },
+  "da-lat-trip-suspension-bridge": {
+    "alt": "Crossing a suspension bridge through the forest on the Đà Lạt trip",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250509_112748.jpg"
+  },
+  "da-lat-trip-capybara": {
+    "alt": "Meeting a capybara at an animal park near Đà Lạt",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250509_135739.jpg"
+  },
+  "da-lat-trip-go-karts": {
+    "alt": "Upper Secondary students lined up in the go-karts they booked for the Đà Lạt trip",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250510_113934.jpg"
+  },
+  "da-lat-trip-market": {
+    "alt": "Shopping in a Đà Lạt market, spending against the budget the students set",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250510_160150.jpg"
   }
 }

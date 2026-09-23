@@ -6,9 +6,10 @@
    Set collagePhotos (list of slugs) before including. Optional:
      collageWide   — 4:3 prints instead of 3:4
      collageArt    — prints keep their own proportions (posters, artwork)
+     collage2up    — four prints as a block of two by two, not a row of four
      collageCredit — a line under the group (who made it, what it is) #}
-<div class="collage{% if collageWide %} collage--wide{% endif %}{% if collageArt %} collage--art{% endif %}">
+<div class="collage{% if collageWide %} collage--wide{% endif %}{% if collageArt %} collage--art{% endif %}{% if collage2up %} collage--2up{% endif %}">
   {% for slug in collagePhotos %}{% photo slug, "", "(min-width: 900px) 260px, 44vw" %}{% endfor %}
 </div>
 {% if collageCredit %}<p class="collage__credit">{{ collageCredit | safe }}</p>{% endif %}
-{% set collageWide = false %}{% set collageArt = false %}{% set collageCredit = "" %}
+{% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
