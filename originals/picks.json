@@ -618,5 +618,71 @@
     "slug": "teacher-seth-henna-booth",
     "aspect": "4:3",
     "alt": "A student paints a henna design on Mr. Seth's hand at the henna booth their class ran"
+  },
+  {
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduation.JPG",
+    "slug": "graduation-teacher-speech",
+    "aspect": "4:3",
+    "alt": "Mr. Bowen speaks to families at the graduation ceremony, wearing an áo dài",
+    "region": [
+      0,
+      0.17,
+      1,
+      0.42
+    ]
+  },
+  {
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduationY9.JPG",
+    "slug": "graduation-certificates-and-cheers",
+    "aspect": "4:3",
+    "alt": "Graduating students hold up their certificates and cheer with their teachers"
+  },
+  {
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/Y8GradSpeech.JPG",
+    "slug": "graduation-student-speech",
+    "aspect": "4:3",
+    "alt": "A student gives a speech into a microphone at graduation while classmates listen"
+  },
+  {
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/Y8GradSpeech2.JPG",
+    "slug": "graduation-students-share-microphone",
+    "aspect": "4:3",
+    "alt": "Two students share a microphone to speak at the graduation ceremony"
+  },
+  {
+    "src": "events/2026_04 Reading Safari Week/Added 2026-09-23/CalebReading.jpg",
+    "slug": "reading-safari-teacher-in-costume",
+    "aspect": "4:3",
+    "alt": "Mr. Caleb in a tall striped hat and red tie for Reading Safari Week, giving two thumbs up"
+  },
+  {
+    "src": "events/2026_04 Reading Safari Week/Added 2026-09-23/ReadingWeekDavidGame.jpg",
+    "slug": "reading-safari-board-game",
+    "aspect": "4:3",
+    "alt": "Mr. David plays a board game with two children in costume during Reading Safari Week"
+  },
+  {
+    "src": "photos-extra/SecondaryNatureWalkBowen.jpg",
+    "slug": "secondary-nature-walk-jetty",
+    "aspect": "4:3",
+    "alt": "Secondary students and Mr. Bowen walk out onto a wooden jetty on the river",
+    "region": [
+      0.12,
+      0.28,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "src": "photos-extra/SecondaryNatureWalkGroup.jpg",
+    "slug": "secondary-nature-walk-group",
+    "aspect": "4:3",
+    "alt": "Secondary students and their teacher line up for a photo on the jetty at the end of a nature walk"
+  },
+  {
+    "src": "photos-extra/DavidPrimaryGroup.JPG",
+    "slug": "primary-playground-climbing",
+    "aspect": "4:3",
+    "alt": "Primary students climb the playground frame and read on the grass with their teacher"
   }
 ]

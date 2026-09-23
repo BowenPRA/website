@@ -23,7 +23,8 @@
 //     "lift": 0.07,      // optional: headroom above the head, as a fraction of the crop height
 //     "shift": 0.04,     // optional: nudge the crop sideways, as a fraction of its width
 //     "grow": 2,         // optional: pixels of the cut grown into the subject to eat the fringe
-//     "fade": false      // optional: keep a hard bottom edge on a portrait that stops short
+//     "fade": 0.18       // optional: how much of the person the bottom fade covers, or false
+//                        //   to keep a hard edge on a portrait that stops short (default 0.18)
 //   }
 //
 // Output: src/assets/img/team/<slug>-{360,720}.webp   (WebP keeps the alpha channel)
@@ -244,7 +245,7 @@ async function extract(buf, w, h, box) {
 // before the bottom of the card, the last stretch of them is faded out so they
 // sink into the colour instead. A portrait that already runs off the bottom
 // edge is left alone — that cut is the card's own edge and looks right.
-function fadeCutEdge(buf, w, h) {
+function fadeCutEdge(buf, w, h, fade) {
   let lastY = -1;
   for (let y = h - 1; y >= 0 && lastY < 0; y--) {
     for (let x = 0; x < w; x++) if (buf[(y * w + x) * 4 + 3] >= 24) { lastY = y; break; }
@@ -255,9 +256,13 @@ function fadeCutEdge(buf, w, h) {
   outer: for (let y = 0; y < h; y++) {
     for (let x = 0; x < w; x++) if (buf[(y * w + x) * 4 + 3] >= 24) { firstY = y; break outer; }
   }
-  const span = Math.max(24, Math.round((lastY - firstY) * 0.16));
+  // Hold the opacity and drop it late. A straight ramp leaves the middle of the
+  // band at half alpha, which turns a pale shirt into a ghost over a saturated
+  // card; this keeps the body solid and dissolves only the last stretch.
+  const span = Math.max(24, Math.round((lastY - firstY) * fade));
   for (let y = Math.max(0, lastY - span); y <= lastY; y++) {
-    const k = (lastY - y) / span;
+    const t = 1 - (lastY - y) / span;
+    const k = 1 - t * t * t;
     for (let x = 0; x < w; x++) {
       const p = (y * w + x) * 4 + 3;
       if (buf[p]) buf[p] = Math.round(buf[p] * k);
@@ -301,7 +306,7 @@ for (const spec of specs) {
   keepLargest(buf, w, h);
   const box = frame(buf, w, h, { face: spec.face, scale, lift, shift });
   const cropped = await extract(buf, w, h, box);
-  const faded = spec.fade === false ? false : fadeCutEdge(cropped, box.width, box.height);
+  const faded = spec.fade === false ? false : fadeCutEdge(cropped, box.width, box.height, spec.fade ?? 0.18);
   const png = await sharp(cropped, { raw: { width: box.width, height: box.height, channels: 4 } }).png().toBuffer();
 
   for (const width of WIDTHS) {

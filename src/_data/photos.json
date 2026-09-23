@@ -758,5 +758,104 @@
       1600
     ],
     "src": "staff/seth-henna-booth.jpg"
+  },
+  "graduation-teacher-speech": {
+    "alt": "Mr. Bowen speaks to families at the graduation ceremony, wearing an áo dài",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduation.JPG"
+  },
+  "graduation-certificates-and-cheers": {
+    "alt": "Graduating students hold up their certificates and cheer with their teachers",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduationY9.JPG"
+  },
+  "graduation-student-speech": {
+    "alt": "A student gives a speech into a microphone at graduation while classmates listen",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/Y8GradSpeech.JPG"
+  },
+  "graduation-students-share-microphone": {
+    "alt": "Two students share a microphone to speak at the graduation ceremony",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_06_12 Graduation/Added 2026-09-23/Y8GradSpeech2.JPG"
+  },
+  "reading-safari-teacher-in-costume": {
+    "alt": "Mr. Caleb in a tall striped hat and red tie for Reading Safari Week, giving two thumbs up",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_04 Reading Safari Week/Added 2026-09-23/CalebReading.jpg"
+  },
+  "reading-safari-board-game": {
+    "alt": "Mr. David plays a board game with two children in costume during Reading Safari Week",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_04 Reading Safari Week/Added 2026-09-23/ReadingWeekDavidGame.jpg"
+  },
+  "secondary-nature-walk-jetty": {
+    "alt": "Secondary students and Mr. Bowen walk out onto a wooden jetty on the river",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-extra/SecondaryNatureWalkBowen.jpg"
+  },
+  "secondary-nature-walk-group": {
+    "alt": "Secondary students and their teacher line up for a photo on the jetty at the end of a nature walk",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-extra/SecondaryNatureWalkGroup.jpg"
+  },
+  "primary-playground-climbing": {
+    "alt": "Primary students climb the playground frame and read on the grass with their teacher",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-extra/DavidPrimaryGroup.JPG"
   }
 }
