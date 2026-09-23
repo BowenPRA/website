@@ -12,17 +12,17 @@ description: "Palm River Academy is an English language center in Hội An for c
   <div class="wrap hero__inner">
     <p class="eyebrow eyebrow--on rise" style="--d:0">English Language Center · Hội An</p>
     <h1 class="rise" style="--d:1">English, learned <span class="mark">by doing.</span></h1>
-    <p class="lede rise" style="--d:2">English, taught through science, maths, cooking, art and sport. For children from 20 months to 18 years.</p>
+    <p class="lede rise" style="--d:2">English, taught through science, maths, cooking, art and sport. Not from a worksheet.</p>
     <div class="hero__actions rise" style="--d:3">
       <a class="btn btn--white" href="{{ '/contact/' | url }}">Book a tour</a>
       <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
     </div>
+    <ul class="hero__facts rise" style="--d:4" aria-label="At a glance">
+      <li>20 months to 18 years</li>
+      <li>Classes of {{ site.classCap }} or fewer</li>
+      <li>In Hội An since {{ site.founded }}</li>
+    </ul>
   </div>
-  <ul class="hero__facts" aria-label="At a glance">
-    <li class="leafpill">20 months to 18 years</li>
-    <li class="leafpill">Small classes</li>
-    <li class="leafpill">Since {{ site.founded }}</li>
-  </ul>
   {% include "partials/river.njk" %}
 </section>
 
@@ -136,7 +136,6 @@ description: "Palm River Academy is an English language center in Hội An for c
       {% photo "gallery-reading-corner", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
       {% photo "primary-group-drawing", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
       {% photo "primary-hands-in", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
-      {% photo "primary-movement-class", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
       {% photo "primary-lesson-on-the-turf", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
       {% photo "primary-lanterns-finished", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
     </div>
@@ -150,21 +149,19 @@ description: "Palm River Academy is an English language center in Hội An for c
   {% set frondClass = "frond--tr" %}{% include "partials/frond.njk" %}
   <div class="wrap film__grid">
     <div class="film__text">
-      <p class="eyebrow eyebrow--on">Made by students</p>
-      <h2>The 2025-26 yearbook, as a film</h2>
-      <p class="lede">Our Yearbook Team photographed, designed and edited the whole year. This is their three-minute cut.</p>
+      <p class="eyebrow eyebrow--on">Yearbook 2025-26</p>
+      <h2>The whole year, in three minutes</h2>
+      <p class="lede">Our Yearbook Team photographed, designed and edited the yearbook, then cut this film from it.</p>
       <p class="film__meta">3 min · with sound · every class, from Nursery to Upper Secondary</p>
     </div>
     <figure class="film__player">
-      <span class="sticker sticker--sun sticker--tl">Student made</span>
       <video class="film__video" controls preload="none" playsinline
         poster="{{ '/assets/video/yearbook-2025-26-poster.webp' | url }}"
         src="{{ '/assets/video/yearbook-2025-26.mp4' | url }}"
-        aria-label="Palm River Academy yearbook 2025-26, a film by the Yearbook Team"></video>
+        aria-label="Palm River Academy yearbook 2025-26 film"></video>
       <button class="film__play" type="button" aria-label="Play the yearbook film">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
       </button>
-      <figcaption class="film__caption">Yearbook 2025-26 · Palm River Academy students</figcaption>
     </figure>
     <figure class="film__team">
       {% photo "yearbook-team-2025-26", "", "(min-width: 900px) 300px, 280px" %}
