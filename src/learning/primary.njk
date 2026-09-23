@@ -3,7 +3,7 @@ layout: layouts/base.njk
 tone: green
 stage: green
 title: "Primary"
-description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Maths and Science every morning; cooking, technology, craft, art, dance and movement in the afternoons."
+description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Maths and Science every morning, all in English; cooking, technology, craft, art, dance and movement in the afternoons."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -15,16 +15,38 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
 {% include "partials/pagehero.njk" %}
 
 <section>
-  <div class="wrap two">
+  <div class="wrap two two--top">
     <div>
       <p class="eyebrow">Every morning</p>
       <h2>English, Maths and Science</h2>
-      <p>Three lessons before lunch, every day. <strong>English</strong> is real books, real writing and a lot of talking. <strong>Maths</strong> starts with objects and works up. <strong>Science</strong> is experiments first, explanations second.</p>
+      <p>Three lessons before lunch, every day, following Cambridge Primary. All three are in English, so a child who is still learning the language uses it all morning on things that matter: whether a shape rolls or stacks, what the bingo card says.</p>
+      <h3>English</h3>
+      <p>Real books, real writing and a lot of talking. There is a book corner, and a story on the rug.</p>
+      <h3>Maths</h3>
+      <p>Starts with the objects: counters, dice, bingo cards, shapes cut from paper. Then the numbers.</p>
+      <h3>Science</h3>
+      <p>Experiments first, explanations second. Children work out what happened before anyone tells them why.</p>
       <p>Cambridge Primary is recognised everywhere, so moving on later is easy.</p>
     </div>
     <div class="leaf-wrap leaf-wrap--r has-sticker">
       <span class="sticker sticker--green sticker--tr">Cambridge Primary</span>
-      {% photo "primary-maths-roll-or-stack", "photo--lg photo--square photo--tilt-r" %}
+      {% photo "primary-english-lesson", "photo--lg photo--tall photo--tilt-r" %}
+    </div>
+  </div>
+  <div class="wrap two mt">
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["primary-maths-bingo-cards", "primary-maths-roll-or-stack", "primary-maths-cut-shapes"] %}
+      {% set collageWide = true %}
+      {% set collageCredit = "Maths, with the objects out." %}
+      {% include "partials/collage.njk" %}
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["primary-reading-corner-books", "primary-story-time-rug"] %}
+      {% set collageWide = true %}
+      {% set collageCredit = "The book corner, and story time on the rug." %}
+      {% include "partials/collage.njk" %}
     </div>
   </div>
 </section>
@@ -46,14 +68,90 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow eyebrow--blue">Every afternoon</p>
-      <h2>The classes with the odd names</h2>
-      <p class="lede">This year's afternoon classes. This is where the English gets used.</p>
+      <h2>Where the English gets used</h2>
+      <p class="lede">Specialist and vocational classes after lunch. Same language, different room, and something to show for it by home time.</p>
     </div>
-    <div class="cards cards--3 mt">
-      <div class="card">{{ ic.icon("whisk", "sun") }}<h3>Cooking</h3><p>A real kitchen and a dish to take home.</p></div>
-      <div class="card">{{ ic.icon("laptop", "blue") }}<h3>Technology</h3><p>Typing, coding, and making screens do what you tell them.</p></div>
-      <div class="card">{{ ic.icon("palette", "coral") }}<h3>Craft and Art</h3><p>Lanterns, printing, clay, paint. Assessed by what gets made, not by a test.</p></div>
-      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement and Dance</h3><p>Sport, fitness, dance and free play on the turf.</p></div>
+  </div>
+  <div class="wrap two mt">
+    <div>
+      <p class="eyebrow">Cooking</p>
+      <h2>A real kitchen, a real dish</h2>
+      <p>Aprons on, hands washed, and a recipe on the board. Children weigh, knead, roll and shape, then take the result home.</p>
+      <p>A recipe is a reading exercise with a reward at the end. Half a cup, a pinch, until it is smooth: the words stick because the dough depends on them.</p>
+    </div>
+    <div class="leaf-wrap leaf-wrap--r has-sticker">
+      <span class="sticker sticker--sun sticker--tr">Aprons on</span>
+      {% photo "primary-cooking-kneading", "photo--lg photo--tall photo--tilt-r" %}
+    </div>
+  </div>
+  <div class="wrap mt">
+    {% set gallerySizes = "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
+    <div class="gallery">
+      {% photo "primary-cooking-rolling-out", "", gallerySizes %}
+      {% photo "primary-cooking-shaping-dough", "", gallerySizes %}
+      {% photo "primary-cooking-floury-table", "", gallerySizes %}
+      {% photo "primary-cooking-rolling-pins", "", gallerySizes %}
+    </div>
+    <p class="gallery__hint" hidden>Tap a photo to see it bigger.</p>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap two two--flip two--top">
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["primary-technology-inside-a-laptop", "primary-technology-tablet"] %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>
+    <div>
+      <p class="eyebrow eyebrow--blue">Technology</p>
+      <h2>What is inside the laptop</h2>
+      <p>Typing, coding, and making a screen do what you tell it. Also, now and then, a screwdriver: one student took a laptop apart this year to see what all the parts were for.</p>
+    </div>
+  </div>
+  <div class="wrap two two--top mt">
+    <div>
+      <p class="eyebrow">Craft and art</p>
+      <h2>Lanterns, paint and a very big sheet of paper</h2>
+      <p>Lanterns, printing, clay, paint. Some of it happens in class and some of it out in Hội An, like the silk lantern workshop, where every child painted their own and carried it home under the real ones.</p>
+      <p>Assessed by what gets made, not by a test.</p>
+    </div>
+    <div class="leaf-wrap leaf-wrap--tint has-sticker">
+      <span class="sticker sticker--coral sticker--tr">Made in Hội An</span>
+      {% photo "primary-lanterns-finished", "photo--lg photo--tilt" %}
+    </div>
+  </div>
+  <div class="wrap">
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+    {% set collagePhotos = ["primary-lantern-workshop", "primary-lantern-class-hoi-an", "primary-drawing-together"] %}
+    {% set collageWide = true %}
+    {% include "partials/collage.njk" %}
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">Movement and dance</p>
+      <h2>Out on the turf</h2>
+      <p>Sport, fitness, dance and free play on the turf and the climbing frame. The instructions come in English and the game does not wait, which is the fastest listening practice there is.</p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["primary-movement-class", "primary-stretching", "primary-playground-climbing"] %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+  <div class="wrap mt">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--blue">And the rest of the week</p>
+      <h2>The classes with the odd names</h2>
+    </div>
+    <div class="cards mt">
       <div class="card">{{ ic.icon("book", "violet") }}<h3>Talk, puzzles and books</h3><p>Practice, Presentation and Play, Master Minds, Everyday Experts, Book Worms and Wellbeing: speaking up, puzzles, know-how and reading.</p></div>
       <div class="card">{{ ic.icon("clock", "blue") }}<h3>Boredom</h3><p>No screens, no instructions. Just time to think something up.</p></div>
     </div>
@@ -77,49 +175,27 @@ description: "Primary at Palm River Academy, Years 1 to 6. Cambridge English, Ma
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
+<section>
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow">This year</p>
       <h2>A week in Primary</h2>
-      <p class="lede">Photos from this year's classes.</p>
+      <p class="lede">The bits in between: circle time, clipboards outside, a card game, a line game.</p>
     </div>
     {% set gallerySizes = "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
     <div class="gallery mt">
       {% photo "primary-circle-time", "", gallerySizes %}
-      {% photo "primary-maths-roll-or-stack", "", gallerySizes %}
-      {% photo "primary-story-time-rug", "", gallerySizes %}
-      {% photo "primary-movement-class", "", gallerySizes %}
-      {% photo "primary-reading-corner-books", "", gallerySizes %}
-      {% photo "primary-maths-cut-shapes", "", gallerySizes %}
       {% photo "primary-outdoor-clipboards", "", gallerySizes %}
       {% photo "primary-hands-in", "", gallerySizes %}
-      {% photo "primary-maths-bingo-cards", "", gallerySizes %}
-      {% photo "primary-book-corner", "", gallerySizes %}
       {% photo "primary-animal-sounds", "", gallerySizes %}
       {% photo "primary-card-game-table", "", gallerySizes %}
       {% photo "primary-at-the-whiteboard", "", gallerySizes %}
       {% photo "primary-writing-at-desk", "", gallerySizes %}
-      {% photo "primary-stretching", "", gallerySizes %}
-      {% photo "secondary-student-helping-primary", "", gallerySizes %}
-      {% photo "primary-lantern-workshop", "", gallerySizes %}
-      {% photo "primary-lantern-class-hoi-an", "", gallerySizes %}
-      {% photo "primary-lanterns-finished", "", gallerySizes %}
-      {% photo "primary-cooking-shaping-dough", "", gallerySizes %}
-      {% photo "primary-cooking-kneading", "", gallerySizes %}
-      {% photo "primary-cooking-rolling-out", "", gallerySizes %}
-      {% photo "primary-cooking-floury-table", "", gallerySizes %}
-      {% photo "primary-cooking-rolling-pins", "", gallerySizes %}
-      {% photo "primary-english-lesson", "", gallerySizes %}
       {% photo "primary-line-game", "", gallerySizes %}
-      {% photo "primary-technology-tablet", "", gallerySizes %}
-      {% photo "primary-technology-inside-a-laptop", "", gallerySizes %}
     </div>
     <p class="gallery__hint" hidden>Tap a photo to see it bigger.</p>
   </div>
 </section>
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section class="faq">
   <div class="wrap narrow">
