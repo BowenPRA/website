@@ -3,7 +3,7 @@ layout: layouts/base.njk
 tone: blue
 stage: blue
 title: "Lower Secondary"
-description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge English, Maths and Science every morning, plus History, Executive Function, Art of Science and technology in the Maker Space."
+description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Maths, Science and English every morning, each with a specialist teacher, plus History, Executive Function, Art of Science and technology in the Maker Space."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -11,20 +11,33 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
 {% set heroShape = "tall" %}
 {% set heroEyebrow = "Lower Secondary · Years 7 to 9 · ages 11 to 14" %}
 {% set heroTitle = 'More independence, bigger <span class="mark">projects</span>' %}
-{% set heroText = "Cambridge English, Maths and Science every morning, each with a specialist teacher. Classes of " + site.classCap + " or fewer, and students do more of the planning." %}
+{% set heroText = "Cambridge Maths, Science and English every morning, each with a specialist teacher. Classes of " + site.classCap + " or fewer, and students do more of the planning." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
-  <div class="wrap two">
+  <div class="wrap two two--top">
     <div>
-      <p class="eyebrow eyebrow--blue">The academic core</p>
-      <h2>Subject teachers, real practical work</h2>
-      <p>Each core subject has a teacher with a degree in it. <strong>English</strong> moves into literature and argument. <strong>Maths</strong> builds toward IGCSE. <strong>Science</strong> covers biology, chemistry and physics, with practical work every week.</p>
-      <p>Students also take <strong>History</strong> and <strong>Executive Function</strong>: learning to plan, organise and finish things.</p>
+      <p class="eyebrow eyebrow--blue">The Cambridge core</p>
+      <h2>Maths, Science and English, each with a specialist</h2>
+      <p>Three lessons every morning, one of each, and each with a teacher who has a degree in the subject. Then History or Executive Function until lunch.</p>
+      <h3>Maths</h3>
+      <p>Builds toward IGCSE. Less counting, more reasoning, and a lot of showing your working.</p>
+      <h3>Science</h3>
+      <p>Biology, chemistry and physics, with practical work every week: a ramp on the classroom floor, plants along the window, a bench full of samples.</p>
+      <h3>English</h3>
+      <p>Moves into literature and argument. Whole books, and a position to take and defend.</p>
+      <p>All of it is taught in English, and the language arrives with the subject. A student who can explain a fair test has learned some science and a lot of English.</p>
     </div>
-    <div class="leaf-wrap leaf-wrap--r has-sticker">
-      <span class="sticker sticker--blue sticker--tr">Cambridge Lower Secondary</span>
-      {% photo "secondary-ramp-experiment", "photo--lg photo--tilt-r" %}
+    <div>
+      <div class="leaf-wrap leaf-wrap--r has-sticker">
+        <span class="sticker sticker--blue sticker--tr">Cambridge Lower Secondary</span>
+        {% photo "secondary-ramp-experiment", "photo--lg photo--tilt-r" %}
+      </div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["secondary-window-garden", "secondary-class-notebooks"] %}
+      {% set collageWide = true %}
+      {% set collageCredit = "The window garden, and the write-up." %}
+      {% include "partials/collage.njk" %}
     </div>
   </div>
 </section>
@@ -36,10 +49,11 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
       <h2>Science you put goggles on for</h2>
       <p class="lede">Practical work every week, across biology, chemistry and physics.</p>
     </div>
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
     {% set collagePhotos = ["secondary-lab-preparing-sample", "secondary-lab-weighing", "secondary-lab-group-practical"] %}
     {% include "partials/collage.njk" %}
     <div class="center narrow mt">
-      <p>Every practical starts the same way: goggles on, apron on, gloves on, bench clear. Then students prepare their own samples, weigh them, run the test and write up what the numbers actually say. <strong>Art of Science</strong> in the afternoon picks up whatever the morning's lesson opened up.</p>
+      <p>Every practical starts the same way: goggles on, apron on, gloves on, bench clear. Then students prepare their own samples, weigh them, run the test and write up what the numbers actually say. The write-up is in English, and so is the argument about whose result is right. <strong>Art of Science</strong> in the afternoon picks up whatever the morning's lesson opened up.</p>
     </div>
   </div>
 </section>
@@ -50,7 +64,7 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
     <div class="center narrow">
       <p class="eyebrow eyebrow--blue">Monday to Friday</p>
       <h2>A Lower Secondary day</h2>
-      <p class="lede">The core subjects first, then History or Executive Function. Afternoons are for making, moving and experiments.</p>
+      <p class="lede">The Cambridge core first, then History or Executive Function. Afternoons are for making, moving and experiments.</p>
     </div>
     <div class="mt">{% set dayKey = "lower-secondary" %}{% include "partials/dayline.njk" %}</div>
   </div>
@@ -60,9 +74,9 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Beyond the core</p>
-      <h2>Where it gets built</h2>
-      <p class="lede">Specialist and vocational classes, in English, with the tools out.</p>
+      <p class="eyebrow">After lunch</p>
+      <h2>Specialist and vocational</h2>
+      <p class="lede">The afternoon classes, in English, with the tools out and the vocabulary to go with them.</p>
     </div>
     <div class="cards cards--3 mt">
       <div class="card">{{ ic.icon("flask", "blue") }}<h3>Art of Science</h3><p>Experiments that use the morning's science.</p></div>
@@ -74,9 +88,21 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
     </div>
     <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/#lower-secondary' | url }}">See the week at a glance</a></p>
   </div>
+  <div class="wrap two two--flip mt">
+    <div class="leaf-wrap has-sticker">
+      <span class="sticker sticker--sun sticker--tr">Maker Space</span>
+      {% photo "maker-space-chain-reaction-board", "photo--lg photo--tilt" %}
+    </div>
+    <div>
+      <p class="eyebrow">In the Maker Space</p>
+      <h2>Design it, build it, explain it</h2>
+      <p>The technology class. A problem, a pile of materials and a deadline: a chain-reaction machine on a board, for instance. Building it is half the class. Presenting it, and answering the questions, is the other half.</p>
+    </div>
+  </div>
 </section>
 
-<section>
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
   <div class="wrap two">
     <div>
       <p class="eyebrow eyebrow--blue">Executive Function</p>
@@ -85,6 +111,7 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
       <p>Some of it is routine — packing the right kit, knowing what a lesson needs before it starts. So one of last year's tasks was to make the reminders the classroom actually uses — what to put on before a practical, what to bring to sport — and they are still on the wall.</p>
     </div>
     <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
       {% set collagePhotos = ["poster-lab-safety", "poster-sport-kit"] %}
       {% set collageArt = true %}
       {% set collageCredit = "Made by our <strong>Lower Secondary</strong> students in Executive Function." %}
@@ -92,21 +119,18 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
     </div>
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
-  <div class="wrap two two--flip">
-    <div class="leaf-wrap leaf-wrap--tint">
-      {% photo "secondary-class-notebooks", "photo--lg photo--tilt" %}
-    </div>
-    <div>
+<section>
+  <div class="wrap">
+    <div class="center narrow">
       <p class="eyebrow">What comes next</p>
       <h2>Upper Secondary</h2>
-      <p>After Lower Secondary, students move into <a href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary</a>, where each student follows a plan built around their own goal.</p>
+      <p class="lede">After Lower Secondary, students move into Upper Secondary, where each student follows a plan built around their own goal.</p>
+      <p class="mt"><a class="btn btn--primary" href="{{ '/learning/upper-secondary/' | url }}">See Upper Secondary</a></p>
     </div>
   </div>
 </section>
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section class="faq">
   <div class="wrap narrow">
