@@ -42,16 +42,6 @@
     ],
     "src": "wix-draft/974c20_e38bbd5280e640b282909ca65d676a1c.jpg"
   },
-  "primary-students-boardwalk-trip": {
-    "alt": "Primary students on a bamboo boardwalk during a class trip",
-    "width": 810,
-    "height": 1080,
-    "sizes": [
-      480,
-      810
-    ],
-    "src": "wix-draft/Untitled-design.jpg"
-  },
   "secondary-students-classroom": {
     "alt": "Secondary students working through a task together in class",
     "width": 758,
@@ -759,17 +749,6 @@
     ],
     "src": "staff/seth-henna-booth.jpg"
   },
-  "graduation-teacher-speech": {
-    "alt": "Mr. Bowen speaking to families at graduation",
-    "width": 1600,
-    "height": 1200,
-    "sizes": [
-      480,
-      960,
-      1600
-    ],
-    "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduation.JPG"
-  },
   "graduation-certificates-and-cheers": {
     "alt": "Graduating students celebrating with their certificates",
     "width": 1600,
@@ -857,5 +836,269 @@
       1600
     ],
     "src": "photos-extra/DavidPrimaryGroup.JPG"
+  },
+  "primary-maths-cut-shapes": {
+    "alt": "Mr. Bowen working through a cut-and-fold shapes activity with a Primary maths group",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimaryBowenOneCutShapesMath.jpg"
+  },
+  "primary-movement-class": {
+    "alt": "Mr. Caleb running a Movement class on the turf",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimaryCalebMovement.jpg"
+  },
+  "primary-book-corner": {
+    "alt": "Ms. Duyen reading with Primary students in the book corner",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimaryDuyenReading.jpg"
+  },
+  "primary-circle-time": {
+    "alt": "Ms. Solo at circle time with her Primary class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimarySoloCircle.jpg"
+  },
+  "primary-maths-roll-or-stack": {
+    "alt": "Ms. Solo setting up a maths exploration: can it roll, can it stack?",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimarySoloMath.jpg"
+  },
+  "primary-big-book-story": {
+    "alt": "Ms. Solo reading a big book to her Primary class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimarySoloReading.jpg"
+  },
+  "secondary-student-helping-primary": {
+    "alt": "An Upper Secondary student helping out in a Primary class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimarySecondaryTA.jpg"
+  },
+  "primary-group-drawing": {
+    "alt": "A Primary class drawing together on one big sheet of paper",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9014.jpg"
+  },
+  "primary-lesson-on-the-turf": {
+    "alt": "A Primary class working together on the turf",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_1008.jpg"
+  },
+  "primary-reading-corner-books": {
+    "alt": "Primary students reading in the classroom book corner",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_1292.jpg"
+  },
+  "primary-writing-at-desk": {
+    "alt": "Two Primary students writing at their desk",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_1306.jpg"
+  },
+  "primary-animal-sounds": {
+    "alt": "A Primary class working out whether animal sounds are loud or soft",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_1320.jpg"
+  },
+  "primary-stretching": {
+    "alt": "Primary students stretching together before a lesson",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_1452.jpg"
+  },
+  "primary-outdoor-clipboards": {
+    "alt": "Primary students recording what they find in the school grounds",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9031.jpg"
+  },
+  "primary-story-time-rug": {
+    "alt": "Story time on the rug with a Primary class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9141.jpg"
+  },
+  "primary-maths-bingo": {
+    "alt": "A Primary maths lesson: finger maths and maths bingo",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9219.jpg"
+  },
+  "primary-maths-bingo-cards": {
+    "alt": "Primary students holding up their cards in maths bingo",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9221.jpg"
+  },
+  "primary-card-game-table": {
+    "alt": "Primary students playing a card game at their table",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9237.jpg"
+  },
+  "primary-start-of-the-day": {
+    "alt": "Ms. Solo and her Primary class at the start of the day",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9247.jpg"
+  },
+  "primary-hands-in": {
+    "alt": "A Primary class puts their hands in together",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9286.jpg"
+  },
+  "primary-at-the-whiteboard": {
+    "alt": "A Primary lesson at the whiteboard",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/IMG_9288.jpg"
+  },
+  "primary-classroom": {
+    "alt": "A Primary classroom at Palm River Academy",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/1787537563647_280856908741706020_408375327852841067_dddc939911524beee2e56bcb1bc3c567.jpg"
+  },
+  "primary-drawing-together": {
+    "alt": "Primary students working on a drawing together on the classroom floor",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/1785984948193_280856908741706020_408375327852841067_9c4ff932608645a3245e496b888895ec.jpg"
+  },
+  "primary-construction-toys": {
+    "alt": "A Primary student building with construction toys",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/1786437471771_280856908741706020_408375327852841067_565a5c53d98b02b9b9679ab27fddca94.jpg"
   }
 }

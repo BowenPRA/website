@@ -2,21 +2,120 @@
   "intro": "Every academic teacher has a degree in their subject and a TESOL certificate, and is qualified to teach in Việt Nam.",
   "note": "Keep each person to a role and one short line that starts with a verb (Teaches, Also teaches, Leads, Reviews, Runs), subjects in Title Case, no Oxford comma. Leadership first. `tint` picks the card's colour pair from .team in main.css and just cycles 1 to 6. `shots` lists photo slugs from photos.json showing that person at work; they become the card's lightbox, and a member with none simply has no lightbox.",
   "members": [
-    { "name": "Mr. Seth", "slug": "seth", "role": "Head Teacher", "teaches": "Also teaches Cooking", "tint": 1,
-      "shots": ["upper-years-science-with-teacher", "teacher-seth-maths-sticks-game", "teacher-seth-henna-booth"] },
-    { "name": "Mr. David", "slug": "david", "role": "Deputy Head Teacher", "teaches": "Reviews academics across PRA", "tint": 2,
-      "shots": ["reading-safari-board-game", "primary-playground-climbing"] },
-    { "name": "Mr. Bowen", "slug": "bowen", "role": "Upper Secondary Coordinator", "teaches": "Teaches Maths and Science", "tint": 3,
-      "shots": ["march-mathness-prize-winner", "global-program-nature-walk", "secondary-nature-walk-jetty", "secondary-nature-walk-group", "graduation-teacher-speech", "graduation-certificates-and-cheers"] },
-    { "name": "Ms. Hien", "slug": "hien", "role": "Operations Manager", "teaches": "Runs the school office", "tint": 4 },
-    { "name": "Mr. Caleb", "slug": "caleb", "role": "Primary Homeroom Teacher", "teaches": "Teaches English, Maths, Science and Movement", "tint": 5,
-      "shots": ["gallery-chess-library", "reading-safari-teacher-in-costume"] },
-    { "name": "Ms. Kiu", "slug": "kiu", "role": "Primary Homeroom Teacher", "teaches": "Teaches English, Science and Wellbeing", "tint": 6 },
-    { "name": "Ms. Solo", "slug": "solo", "role": "Primary Homeroom Teacher", "teaches": "Teaches English, Maths and Science", "tint": 1 },
-    { "name": "Ms. Thanh", "slug": "thanh", "role": "Kindergarten Homeroom Teacher", "teaches": "Teaches Phonics, Maths and Understanding the World", "tint": 2 },
-    { "name": "Ms. Tham", "slug": "tham", "role": "Nursery Homeroom Teacher", "teaches": "Leads the Nursery class", "tint": 3 },
-    { "name": "Ms. Thoa", "slug": "thoa", "role": "Nursery Teacher", "teaches": "Teaches in the Nursery all day", "tint": 4 },
-    { "name": "Ms. Thắm V", "slug": "tham-v", "role": "Primary Teacher", "teaches": "Teaches Technology, Crafts and Review", "tint": 5 },
-    { "name": "Ms. Duyen", "slug": "duyen", "role": "Office and Primary Teacher", "teaches": "Teaches Technology and Crafts", "tint": 6 }
+    {
+      "name": "Mr. Seth",
+      "slug": "seth",
+      "role": "Head Teacher",
+      "teaches": "Also teaches Cooking",
+      "tint": 1,
+      "shots": [
+        "upper-years-science-with-teacher",
+        "teacher-seth-maths-sticks-game",
+        "teacher-seth-henna-booth"
+      ]
+    },
+    {
+      "name": "Mr. David",
+      "slug": "david",
+      "role": "Deputy Head Teacher",
+      "teaches": "Reviews academics across PRA",
+      "tint": 2,
+      "shots": [
+        "reading-safari-board-game",
+        "primary-playground-climbing"
+      ]
+    },
+    {
+      "name": "Mr. Bowen",
+      "slug": "bowen",
+      "role": "Upper Secondary Coordinator",
+      "teaches": "Teaches Maths and Science",
+      "tint": 3,
+      "shots": [
+        "primary-maths-cut-shapes",
+        "march-mathness-prize-winner",
+        "global-program-nature-walk",
+        "secondary-nature-walk-jetty",
+        "secondary-nature-walk-group",
+        "graduation-certificates-and-cheers"
+      ]
+    },
+    {
+      "name": "Ms. Hien",
+      "slug": "hien",
+      "role": "Operations Manager",
+      "teaches": "Runs the school office",
+      "tint": 4
+    },
+    {
+      "name": "Mr. Caleb",
+      "slug": "caleb",
+      "role": "Primary Homeroom Teacher",
+      "teaches": "Teaches English, Maths, Science and Movement",
+      "tint": 5,
+      "shots": [
+        "primary-movement-class",
+        "gallery-chess-library",
+        "reading-safari-teacher-in-costume"
+      ]
+    },
+    {
+      "name": "Ms. Kiu",
+      "slug": "kiu",
+      "role": "Primary Homeroom Teacher",
+      "teaches": "Teaches English, Science and Wellbeing",
+      "tint": 6
+    },
+    {
+      "name": "Ms. Solo",
+      "slug": "solo",
+      "role": "Primary Homeroom Teacher",
+      "teaches": "Teaches English, Maths and Science",
+      "tint": 1,
+      "shots": [
+        "primary-circle-time",
+        "primary-maths-roll-or-stack",
+        "primary-big-book-story",
+        "primary-start-of-the-day"
+      ]
+    },
+    {
+      "name": "Ms. Thanh",
+      "slug": "thanh",
+      "role": "Kindergarten Homeroom Teacher",
+      "teaches": "Teaches Phonics, Maths and Understanding the World",
+      "tint": 2
+    },
+    {
+      "name": "Ms. Tham",
+      "slug": "tham",
+      "role": "Nursery Homeroom Teacher",
+      "teaches": "Leads the Nursery class",
+      "tint": 3
+    },
+    {
+      "name": "Ms. Thoa",
+      "slug": "thoa",
+      "role": "Nursery Teacher",
+      "teaches": "Teaches in the Nursery all day",
+      "tint": 4
+    },
+    {
+      "name": "Ms. Thắm V",
+      "slug": "tham-v",
+      "role": "Primary Teacher",
+      "teaches": "Teaches Technology, Crafts and Review",
+      "tint": 5
+    },
+    {
+      "name": "Ms. Duyen",
+      "slug": "duyen",
+      "role": "Office and Primary Teacher",
+      "teaches": "Teaches Technology and Crafts",
+      "tint": 6,
+      "shots": [
+        "primary-book-corner"
+      ]
+    }
   ]
 }

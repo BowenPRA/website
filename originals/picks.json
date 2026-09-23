@@ -24,12 +24,6 @@
     "alt": "Early Years children on the tyre climbing wall"
   },
   {
-    "src": "wix-draft/Untitled-design.jpg",
-    "slug": "primary-students-boardwalk-trip",
-    "aspect": "3:4",
-    "alt": "Primary students on a bamboo boardwalk during a class trip"
-  },
-  {
     "src": "wix-draft/124001_342e854d839b46dc9ba3d300bba13d98~mv2.jpg",
     "slug": "secondary-students-classroom",
     "aspect": "3:4",
@@ -620,18 +614,6 @@
     "alt": "A student painting henna on Mr. Seth's hand at the student-run Mid-Autumn Festival booth"
   },
   {
-    "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduation.JPG",
-    "slug": "graduation-teacher-speech",
-    "aspect": "4:3",
-    "alt": "Mr. Bowen speaking to families at graduation",
-    "region": [
-      0,
-      0.17,
-      1,
-      0.42
-    ]
-  },
-  {
     "src": "events/2026_06_12 Graduation/Added 2026-09-23/BowenGraduationY9.JPG",
     "slug": "graduation-certificates-and-cheers",
     "aspect": "4:3",
@@ -684,5 +666,149 @@
     "slug": "primary-playground-climbing",
     "aspect": "4:3",
     "alt": "Primary students climbing and reading on the playground with Mr. David"
+  },
+  {
+    "src": "photos-2026-27/PrimaryBowenOneCutShapesMath.jpg",
+    "slug": "primary-maths-cut-shapes",
+    "aspect": "4:3",
+    "alt": "Mr. Bowen working through a cut-and-fold shapes activity with a Primary maths group"
+  },
+  {
+    "src": "photos-2026-27/PrimaryCalebMovement.jpg",
+    "slug": "primary-movement-class",
+    "aspect": "4:3",
+    "alt": "Mr. Caleb running a Movement class on the turf"
+  },
+  {
+    "src": "photos-2026-27/PrimaryDuyenReading.jpg",
+    "slug": "primary-book-corner",
+    "aspect": "4:3",
+    "alt": "Ms. Duyen reading with Primary students in the book corner"
+  },
+  {
+    "src": "photos-2026-27/PrimarySoloCircle.jpg",
+    "slug": "primary-circle-time",
+    "aspect": "4:3",
+    "alt": "Ms. Solo at circle time with her Primary class"
+  },
+  {
+    "src": "photos-2026-27/PrimarySoloMath.jpg",
+    "slug": "primary-maths-roll-or-stack",
+    "aspect": "4:3",
+    "alt": "Ms. Solo setting up a maths exploration: can it roll, can it stack?"
+  },
+  {
+    "src": "photos-2026-27/PrimarySoloReading.jpg",
+    "slug": "primary-big-book-story",
+    "aspect": "4:3",
+    "alt": "Ms. Solo reading a big book to her Primary class"
+  },
+  {
+    "src": "photos-2026-27/PrimarySecondaryTA.jpg",
+    "slug": "secondary-student-helping-primary",
+    "aspect": "4:3",
+    "alt": "An Upper Secondary student helping out in a Primary class"
+  },
+  {
+    "src": "photos-2026-27/IMG_9014.jpg",
+    "slug": "primary-group-drawing",
+    "aspect": "3:4",
+    "alt": "A Primary class drawing together on one big sheet of paper"
+  },
+  {
+    "src": "photos-2026-27/IMG_1008.jpg",
+    "slug": "primary-lesson-on-the-turf",
+    "aspect": "4:3",
+    "alt": "A Primary class working together on the turf"
+  },
+  {
+    "src": "photos-2026-27/IMG_1292.jpg",
+    "slug": "primary-reading-corner-books",
+    "aspect": "4:3",
+    "alt": "Primary students reading in the classroom book corner"
+  },
+  {
+    "src": "photos-2026-27/IMG_1306.jpg",
+    "slug": "primary-writing-at-desk",
+    "aspect": "3:4",
+    "alt": "Two Primary students writing at their desk"
+  },
+  {
+    "src": "photos-2026-27/IMG_1320.jpg",
+    "slug": "primary-animal-sounds",
+    "aspect": "4:3",
+    "alt": "A Primary class working out whether animal sounds are loud or soft"
+  },
+  {
+    "src": "photos-2026-27/IMG_1452.jpg",
+    "slug": "primary-stretching",
+    "aspect": "4:3",
+    "alt": "Primary students stretching together before a lesson"
+  },
+  {
+    "src": "photos-2026-27/IMG_9031.jpg",
+    "slug": "primary-outdoor-clipboards",
+    "aspect": "4:3",
+    "alt": "Primary students recording what they find in the school grounds"
+  },
+  {
+    "src": "photos-2026-27/IMG_9141.jpg",
+    "slug": "primary-story-time-rug",
+    "aspect": "4:3",
+    "alt": "Story time on the rug with a Primary class"
+  },
+  {
+    "src": "photos-2026-27/IMG_9219.jpg",
+    "slug": "primary-maths-bingo",
+    "aspect": "4:3",
+    "alt": "A Primary maths lesson: finger maths and maths bingo"
+  },
+  {
+    "src": "photos-2026-27/IMG_9221.jpg",
+    "slug": "primary-maths-bingo-cards",
+    "aspect": "4:3",
+    "alt": "Primary students holding up their cards in maths bingo"
+  },
+  {
+    "src": "photos-2026-27/IMG_9237.jpg",
+    "slug": "primary-card-game-table",
+    "aspect": "3:4",
+    "alt": "Primary students playing a card game at their table"
+  },
+  {
+    "src": "photos-2026-27/IMG_9247.jpg",
+    "slug": "primary-start-of-the-day",
+    "aspect": "4:3",
+    "alt": "Ms. Solo and her Primary class at the start of the day"
+  },
+  {
+    "src": "photos-2026-27/IMG_9286.jpg",
+    "slug": "primary-hands-in",
+    "aspect": "4:3",
+    "alt": "A Primary class puts their hands in together"
+  },
+  {
+    "src": "photos-2026-27/IMG_9288.jpg",
+    "slug": "primary-at-the-whiteboard",
+    "aspect": "4:3",
+    "alt": "A Primary lesson at the whiteboard"
+  },
+  {
+    "src": "photos-2026-27/1787537563647_280856908741706020_408375327852841067_dddc939911524beee2e56bcb1bc3c567.jpg",
+    "slug": "primary-classroom",
+    "aspect": "4:3",
+    "alt": "A Primary classroom at Palm River Academy"
+  },
+  {
+    "src": "photos-2026-27/1785984948193_280856908741706020_408375327852841067_9c4ff932608645a3245e496b888895ec.jpg",
+    "slug": "primary-drawing-together",
+    "aspect": "3:4",
+    "alt": "Primary students working on a drawing together on the classroom floor"
+  },
+  {
+    "src": "photos-2026-27/1786437471771_280856908741706020_408375327852841067_565a5c53d98b02b9b9679ab27fddca94.jpg",
+    "slug": "primary-construction-toys",
+    "aspect": "3:4",
+    "alt": "A Primary student building with construction toys"
   }
 ]
