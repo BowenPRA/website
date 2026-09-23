@@ -153,10 +153,12 @@
     });
   }
 
-  // Gallery lightbox. Each .gallery is its own set: the arrows stay inside the gallery you opened.
-  var galleries = document.querySelectorAll(".gallery");
-  if (galleries.length && typeof HTMLDialogElement === "function") {
-    var items = [];
+  // One lightbox, shared by the photo galleries and the staff cards. A "set" is
+  // just a list of <img> elements; opening one takes over the arrows and swipes,
+  // so each gallery and each member stays its own run of photos.
+  var lightbox = null;
+  function useLightbox() {
+    if (lightbox || typeof HTMLDialogElement !== "function") return lightbox;
     var icon = function (d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'; };
     var box = document.createElement("dialog");
     box.className = "lightbox";
@@ -167,8 +169,10 @@
       '<button class="lightbox__prev" type="button" aria-label="Previous photo">' + icon("M15 5l-7 7 7 7") + "</button>" +
       '<button class="lightbox__next" type="button" aria-label="Next photo">' + icon("M9 5l7 7-7 7") + "</button>";
     document.body.appendChild(box);
+
     var bigImg = box.querySelector("img");
     var caption = box.querySelector("figcaption");
+    var items = [];
     var current = 0;
     function largest(img) {
       var set = (img.getAttribute("srcset") || "").split(",").map(function (s) { return s.trim().split(" ")[0]; });
@@ -181,25 +185,6 @@
       bigImg.alt = img.alt;
       caption.textContent = img.alt;
     }
-    galleries.forEach(function (gallery) {
-      var set = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));
-      set.forEach(function (img, i) {
-        var tile = img.parentElement;
-        tile.setAttribute("tabindex", "0");
-        tile.setAttribute("role", "button");
-        tile.setAttribute("aria-label", "View larger: " + img.alt);
-        function open() {
-          items = set;
-          box.classList.toggle("is-single", set.length < 2);
-          show(i);
-          box.showModal();
-        }
-        tile.addEventListener("click", open);
-        tile.addEventListener("keydown", function (e) {
-          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
-        });
-      });
-    });
     box.querySelector(".lightbox__close").addEventListener("click", function () { box.close(); });
     box.querySelector(".lightbox__prev").addEventListener("click", function () { show(current - 1); });
     box.querySelector(".lightbox__next").addEventListener("click", function () { show(current + 1); });
@@ -216,6 +201,47 @@
       if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
       touchX = null;
     });
+
+    lightbox = function (set, i) {
+      items = set;
+      box.classList.toggle("is-single", set.length < 2);
+      show(i);
+      box.showModal();
+    };
+    return lightbox;
+  }
+
+  // Photo galleries: every tile opens its own gallery's set.
+  var galleries = document.querySelectorAll(".gallery");
+  if (galleries.length && useLightbox()) {
+    galleries.forEach(function (gallery) {
+      var set = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));
+      set.forEach(function (img, i) {
+        var tile = img.parentElement;
+        tile.setAttribute("tabindex", "0");
+        tile.setAttribute("role", "button");
+        tile.setAttribute("aria-label", "View larger: " + img.alt);
+        function open() { useLightbox()(set, i); }
+        tile.addEventListener("click", open);
+        tile.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+        });
+      });
+    });
     document.querySelectorAll(".gallery__hint").forEach(function (hint) { hint.hidden = false; });
+  }
+
+  // Staff cards: the card opens that member's own photos. On a mouse the fan of
+  // thumbnails along the bottom previews them first; on a touch screen the badge
+  // is the only cue, so the whole card is the tap target.
+  var staff = document.querySelectorAll(".tcard--shots");
+  if (staff.length && useLightbox()) {
+    staff.forEach(function (card) {
+      var button = card.querySelector(".tcard__open");
+      var set = Array.prototype.slice.call(card.querySelectorAll(".tcard__shots img"));
+      if (!button || !set.length) return;
+      button.addEventListener("click", function () { useLightbox()(set, 0); });
+    });
+    document.querySelectorAll(".team__hint").forEach(function (hint) { hint.hidden = false; });
   }
 })();

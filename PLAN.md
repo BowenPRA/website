@@ -140,8 +140,17 @@ one hand-drawn underline per page, big photos of real students.
   never colour a whole page or a button. Sun, coral and violet never carry body text.
 - Small accents keep the pages from looking samey: card icons cycle through the five colours,
   as do value numbers, step badges, checklist ticks, calendar month bars, event month badges,
-  team photo rings, gallery tape and the three stat marks. All of these are small shapes, never
+  gallery tape, staff cards and the three stat marks. All of these are small shapes, never
   text on a coloured field except ink on sun.
+- **Staff cards.** The team grid follows the Wix Studio draft: each person is cut out of their
+  photo and stands on a two-colour card, above the waist, name and role on a white plate below.
+  `scripts/cutouts.mjs` keys the backdrop out and frames everyone from a hand-measured face width
+  (`originals/cutouts.json`) so every face is the same size on every card; where a source photo
+  stops at the chest the bottom of the portrait is faded into the colour instead of ending on a
+  hard line. Card colours cycle all six pairs (`tint` in team.json) because they are accents.
+  Anyone with `shots` in team.json also carries photos of them at work: on a mouse those fan up
+  from the bottom of the card on hover, on a touch screen a photo-count badge is the cue, and
+  the card opens the shared lightbox either way.
 - **Page tones.** Front matter `tone:` is `blue` (default: Home, Academics, Lower Secondary,
   Contact), `green` (About, Primary, Handbook), `navy` (Admissions, Events, Upper Secondary) or
   `light`, a pale green-to-blue hero with blue headings (Early Years, Fees, Global Program,
@@ -265,9 +274,10 @@ Still open:
 - One campus: Trần Nhân Tông, Cẩm Thanh, Hội An. The ĐX18 secondary campus is
   no longer used.
 - Staff on the site are the ten people on the current site plus Ms. Duyen from the
-  timetable (Mr. Chiến removed at Bowen's request, 2026-09-22). Each person gets a
-  role and one short line, no bio paragraph. Mr. Landon, Ms. Thuy and Ms. Ali from
-  the Wix draft are not listed until Bowen confirms.
+  timetable (Mr. Chiến removed at Bowen's request, 2026-09-22) and Ms. Hien, Operations
+  Manager (added 2026-09-23). Each person gets a role and one short line, no bio paragraph.
+  Ms. Hien has no line yet and Ms. Duyen still has no photo. Mr. Landon, Ms. Thuy and
+  Ms. Ali from the Wix draft are not listed until Bowen confirms.
 - The schedule page does not show full timetables (Bowen, 2026-09-22): it is for
   parents and gives the broad strokes. A day-at-a-glance chart compares the stages,
   then one card per stage shows the core subjects every morning and the mix of

@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "seth",
+    "src": "wix-current/Mr_-Seth.png",
+    "alt": "Mr. Seth",
+    "tol": 16,
+    "face": [
+      0.51,
+      0.2
+    ]
+  },
+  {
+    "slug": "david",
+    "src": "wix-current/David_edited_edited_edited.png",
+    "alt": "Mr. David",
+    "tol": 16,
+    "face": [
+      0.55,
+      0.178
+    ]
+  },
+  {
+    "slug": "bowen",
+    "src": "wix-current/Mr_-Bowen.png",
+    "alt": "Mr. Bowen",
+    "tol": 16,
+    "face": [
+      0.5,
+      0.16
+    ]
+  },
+  {
+    "slug": "hien",
+    "src": "staff/Ms-Hien.png",
+    "alt": "Ms. Hien",
+    "tol": 22,
+    "face": [
+      0.485,
+      0.124
+    ],
+    "mattes": [
+      [
+        0,
+        0,
+        0.34,
+        1
+      ]
+    ]
+  },
+  {
+    "slug": "caleb",
+    "src": "wix-current/Mr_-Caleb.png",
+    "alt": "Mr. Caleb",
+    "tol": 16,
+    "face": [
+      0.525,
+      0.2
+    ]
+  },
+  {
+    "slug": "kiu",
+    "src": "wix-current/Kiu.png",
+    "alt": "Ms. Kiu",
+    "tol": 16,
+    "face": [
+      0.535,
+      0.199
+    ]
+  },
+  {
+    "slug": "solo",
+    "src": "wix-current/Solo-2.png",
+    "alt": "Ms. Solo",
+    "tol": 16,
+    "face": [
+      0.5,
+      0.2
+    ]
+  },
+  {
+    "slug": "thanh",
+    "src": "wix-current/Thanh.png",
+    "alt": "Ms. Thanh",
+    "tol": 9,
+    "face": [
+      0.5,
+      0.149
+    ]
+  },
+  {
+    "slug": "tham",
+    "src": "wix-current/Ms_-Tham.png",
+    "alt": "Ms. Tham",
+    "tol": 16,
+    "face": [
+      0.5,
+      0.21
+    ]
+  },
+  {
+    "slug": "thoa",
+    "src": "staff/Ms-Thoa-2026.png",
+    "alt": "Ms. Thoa",
+    "tol": 20,
+    "face": [
+      0.5,
+      0.143
+    ],
+    "mattes": [
+      [
+        0,
+        0,
+        0.34,
+        1
+      ]
+    ]
+  },
+  {
+    "slug": "tham-v",
+    "src": "wix-current/Ms_-Tham-V.png",
+    "alt": "Ms. Thắm V",
+    "tol": 16,
+    "face": [
+      0.51,
+      0.189
+    ]
+  }
+]

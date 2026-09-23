@@ -2,4 +2,10 @@ node_modules/
 _site/
 .DS_Store
 Thumbs.db
-originals/
+.claude/
+# The originals are ~2 GB of photos and stay out of git, but the two small
+# build specs that describe them are hand-written and worth keeping.
+originals/*
+!originals/picks.json
+!originals/cutouts.json
+!originals/README.md

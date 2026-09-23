@@ -31,6 +31,21 @@ export default function (eleventyConfig) {
     return `<div class="photo ${classes}"><img src="${base}-${largest}.webp" srcset="${srcset}" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${alt}"${focus}${eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}></div>`;
   });
 
+  // {% cutout "slug" %}
+  // A staff portrait with the backdrop keyed out, from src/_data/cutouts.json
+  // (built by scripts/cutouts.mjs). It sits on the coloured card in .team.
+  let cutouts = {};
+  try { cutouts = JSON.parse(readFileSync("src/_data/cutouts.json", "utf8")); } catch {}
+  eleventyConfig.addShortcode("cutout", (slug, sizes = "(min-width: 1040px) 260px, (min-width: 720px) 30vw, 44vw") => {
+    const p = cutouts[slug];
+    if (!p) return `<div class="cutout cutout--none" aria-hidden="true"></div>`;
+    const base = `${pathPrefix}assets/img/team/${slug}`.replace(/\/{2,}/g, "/");
+    const srcset = p.sizes.map((w) => `${base}-${w}.webp ${w}w`).join(", ");
+    const largest = p.sizes[p.sizes.length - 1];
+    const alt = String(p.alt).replace(/"/g, "&quot;");
+    return `<img class="cutout" src="${base}-${largest}.webp" srcset="${srcset}" sizes="${sizes}" width="${p.width}" height="${p.height}" alt="${alt}" loading="lazy" decoding="async">`;
+  });
+
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     pathPrefix,

@@ -66,20 +66,34 @@ description: "Palm River Academy is a licensed English language center in Hội 
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow eyebrow--blue">Our team</p>
-      <h2>Vietnamese and international teachers</h2>
+      <h2>Vietnamese and international staff</h2>
       <p class="lede">{{ team.intro }}</p>
     </div>
     <ul class="team mt">
       {% for m in team.members %}
-      <li>
-        {% if photos["team-" + m.slug] %}{% photo "team-" + m.slug, "", "116px" %}{% else %}<div class="avatar" aria-hidden="true">{{ m.name | replace("Mr. ", "") | replace("Ms. ", "") | first }}</div>{% endif %}
-        <strong>{{ m.name }}</strong>
-        <em>{{ m.role }}</em>
-        {% if m.teaches %}<small>{{ m.teaches }}</small>{% endif %}
-        {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+      {% set shots = m.shots or [] %}
+      <li class="tcard tcard--t{{ m.tint or 1 }}{% if shots.length %} tcard--shots{% endif %}">
+        <div class="tcard__stage">
+          {% if cutouts[m.slug] %}{% cutout m.slug %}{% else %}<span class="tcard__initial" aria-hidden="true">{{ m.name | replace("Mr. ", "") | replace("Ms. ", "") | first }}</span>{% endif %}
+          {% if shots.length %}
+          <div class="tcard__shots">
+            {% for s in shots %}{% photo s, "tcard__shot", "200px" %}{% endfor %}
+          </div>
+          <span class="tcard__count">{{ shots.length }} photo{% if shots.length != 1 %}s{% endif %}</span>
+          {% endif %}
+        </div>
+        <div class="tcard__plate">
+          <strong>{{ m.name }}</strong>
+          <em>{{ m.role }}</em>
+          {% if m.teaches %}<small>{{ m.teaches }}</small>{% endif %}
+        </div>
+        {% if shots.length %}
+        <button class="tcard__open" type="button"><span class="u-hide">See photos of {{ m.name }} at work</span></button>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
+    <p class="team__hint" hidden>Tap a photo to see them at work.</p>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}

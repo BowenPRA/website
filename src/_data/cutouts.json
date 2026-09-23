@@ -1,0 +1,101 @@
+{
+  "seth": {
+    "alt": "Mr. Seth",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "david": {
+    "alt": "Mr. David",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "bowen": {
+    "alt": "Mr. Bowen",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "hien": {
+    "alt": "Ms. Hien",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "caleb": {
+    "alt": "Mr. Caleb",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "kiu": {
+    "alt": "Ms. Kiu",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "solo": {
+    "alt": "Ms. Solo",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "thanh": {
+    "alt": "Ms. Thanh",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "tham": {
+    "alt": "Ms. Tham",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "thoa": {
+    "alt": "Ms. Thoa",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "tham-v": {
+    "alt": "Ms. Thắm V",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  }
+}
