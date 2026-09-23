@@ -702,10 +702,13 @@ section { padding: var(--section) 0; position: relative; }
 .notice__when { margin: 0 0 0.7em; font-weight: 600; color: var(--ink); }
 .notice__text { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
 .notice__note { margin: 0.7em 0 0; color: var(--ink-soft); font-size: 0.8rem; }
+/* the row sits on the card's floor; `auto` collapses to nothing in a card with no slack,
+   so the gap above the rule comes from whatever the row follows. */
 .notice__do {
   display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px;
-  margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); margin-top: auto;
+  margin: auto 0 0; padding-top: 14px; border-top: 1px solid var(--line);
 }
+.notice > :nth-last-child(2) { margin-bottom: 18px; }
 .notice__do a, .notice__flyer {
   font-family: var(--font); font-size: 0.92rem; font-weight: 600; color: var(--stage-ink);
   background: none; border: 0; padding: 0; cursor: pointer;

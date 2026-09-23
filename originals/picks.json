@@ -1014,5 +1014,11 @@
     "slug": "poster-sport-kit",
     "alt": "A poster made by Lower Secondary students on what to bring to sport: a smile, a full water bottle and sport shoes",
     "quality": 86
+  },
+  {
+    "src": "flyers/mid-autumn-festival-2026.png",
+    "slug": "mid-autumn-festival-2026-flyer",
+    "quality": 88,
+    "alt": "Mid-Autumn Festival flyer: Friday 25 September 2026, 14h00 to 16h00 at Palm River Academy, welcome to all, with student performances, student-led booths and activities and a silent auction"
   }
 ]

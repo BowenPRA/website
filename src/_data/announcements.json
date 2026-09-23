@@ -6,11 +6,12 @@
     "title": "Mid-Autumn Festival",
     "when": "Friday 25 September, 2:30 to 4:00pm",
     "ticker": "Mid-Autumn Festival, Friday 25 September, 2:30pm. Everyone welcome",
-    "text": "Student-run booths selling food and handmade things, and a show put on by our classes. Open to the public, so bring the family.",
+    "text": "Student-led booths and activities, a silent auction, and performances by our classes. Open to the public, so bring the family.",
     "cta": {
       "label": "Last year's festival",
       "url": "/events/#mid-autumn"
-    }
+    },
+    "flyer": "mid-autumn-festival-2026-flyer"
   },
   {
     "id": "quarter-2",
