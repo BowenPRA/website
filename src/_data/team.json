@@ -3,11 +3,21 @@
   "note": "Keep each person to a role and one short line that starts with a verb (Teaches, Also teaches, Leads, Reviews, Runs), subjects in Title Case, no Oxford comma. Leadership first. `tint` picks the card's colour pair from .team in main.css and just cycles 1 to 6. `shots` lists photo slugs from photos.json showing that person at work; they become the card's lightbox, and a member with none simply has no lightbox.",
   "members": [
     {
+      "name": "Ms. Xuan",
+      "slug": "xuan",
+      "role": "Owner",
+      "teaches": "Leads Palm River Academy",
+      "shots": [
+        "mid-autumn-festival-henna-ms-xuan"
+      ],
+      "tint": 1
+    },
+    {
       "name": "Mr. Seth",
       "slug": "seth",
       "role": "Head Teacher",
       "teaches": "Also teaches Cooking",
-      "tint": 1,
+      "tint": 2,
       "shots": [
         "upper-years-science-with-teacher",
         "teacher-seth-maths-sticks-game",
@@ -19,25 +29,10 @@
       "slug": "david",
       "role": "Deputy Head Teacher",
       "teaches": "Reviews academics across PRA",
-      "tint": 2,
+      "tint": 3,
       "shots": [
         "reading-safari-board-game",
         "primary-playground-climbing"
-      ]
-    },
-    {
-      "name": "Mr. Bowen",
-      "slug": "bowen",
-      "role": "Upper Secondary Coordinator",
-      "teaches": "Teaches Maths and Science",
-      "tint": 3,
-      "shots": [
-        "primary-maths-cut-shapes",
-        "march-mathness-prize-winner",
-        "global-program-nature-walk",
-        "secondary-nature-walk-jetty",
-        "secondary-nature-walk-group",
-        "graduation-certificates-and-cheers"
       ]
     },
     {
@@ -48,11 +43,26 @@
       "tint": 4
     },
     {
+      "name": "Mr. Bowen",
+      "slug": "bowen",
+      "role": "Upper Secondary Coordinator",
+      "teaches": "Teaches Maths and Science",
+      "tint": 5,
+      "shots": [
+        "primary-maths-cut-shapes",
+        "march-mathness-prize-winner",
+        "global-program-nature-walk",
+        "secondary-nature-walk-jetty",
+        "secondary-nature-walk-group",
+        "graduation-certificates-and-cheers"
+      ]
+    },
+    {
       "name": "Mr. Caleb",
       "slug": "caleb",
       "role": "Primary Homeroom Teacher",
       "teaches": "Teaches English, Maths, Science and Movement",
-      "tint": 5,
+      "tint": 6,
       "shots": [
         "primary-movement-class",
         "gallery-chess-library",
@@ -64,7 +74,7 @@
       "slug": "kiu",
       "role": "Primary Homeroom Teacher",
       "teaches": "Teaches English, Science and Wellbeing",
-      "tint": 6,
+      "tint": 1,
       "shots": [
         "primary-lantern-class-hoi-an"
       ]
@@ -74,7 +84,7 @@
       "slug": "solo",
       "role": "Primary Homeroom Teacher",
       "teaches": "Teaches English, Maths and Science",
-      "tint": 1,
+      "tint": 2,
       "shots": [
         "primary-circle-time",
         "primary-maths-roll-or-stack",
@@ -87,35 +97,35 @@
       "slug": "thanh",
       "role": "Kindergarten Homeroom Teacher",
       "teaches": "Teaches Phonics, Maths and Understanding the World",
-      "tint": 2
+      "tint": 3
     },
     {
       "name": "Ms. Tham",
       "slug": "tham",
       "role": "Nursery Homeroom Teacher",
       "teaches": "Leads the Nursery class",
-      "tint": 3
+      "tint": 4
     },
     {
       "name": "Ms. Thoa",
       "slug": "thoa",
       "role": "Nursery Teacher",
       "teaches": "Teaches in the Nursery all day",
-      "tint": 4
+      "tint": 5
     },
     {
       "name": "Ms. Thắm V",
       "slug": "tham-v",
       "role": "Primary Teacher",
       "teaches": "Teaches Technology, Crafts and Review",
-      "tint": 5
+      "tint": 6
     },
     {
       "name": "Ms. Duyen",
       "slug": "duyen",
       "role": "Office and Primary Teacher",
       "teaches": "Teaches Technology and Crafts",
-      "tint": 6,
+      "tint": 1,
       "shots": [
         "primary-book-corner"
       ]

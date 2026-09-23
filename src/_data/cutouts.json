@@ -1,4 +1,13 @@
 {
+  "xuan": {
+    "alt": "Ms. Xuan",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
   "seth": {
     "alt": "Mr. Seth",
     "width": 720,

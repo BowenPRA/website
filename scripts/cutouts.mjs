@@ -26,6 +26,8 @@
 //                        //   rubbed out before the cut — for a cast shadow joined to the subject
 //     "lift": 0.07,      // optional: headroom above the head, as a fraction of the crop height
 //     "shift": 0.04,     // optional: nudge the crop sideways, as a fraction of its width
+//     "keep": [[0.4, 0.4, 0.28, 0.45]],   // optional [x, y, w, h] boxes the key may not enter,
+//                        //   for a white blouse against a white backdrop
 //     "grow": 2,         // optional: pixels of the cut grown into the subject to eat the fringe
 //     "shadow": true     // optional: also sweep away a grey wall shadow along the silhouette
 //                        //   ({ sat, drop, depth } to tune how colourless, how dark and how far) (default 0.18)
@@ -55,7 +57,7 @@ const force = process.argv.includes("--force");
 
 // Flood the backdrop in from the border. Interior areas that happen to match the
 // backdrop survive because the flood never reaches them.
-async function key(src, { tol, grow, feather, shadow }) {
+async function key(src, { tol, grow, feather, shadow, keep }) {
   const { data, info } = await sharp(src).rotate().ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const { width: w, height: h, channels: c } = info;
   const n = w * h;
@@ -84,9 +86,23 @@ async function key(src, { tol, grow, feather, shadow }) {
   });
 
   const lim = tol * 3;
+
+  // Sealed boxes the key may not enter. A white blouse against a white studio
+  // backdrop is the same colour as the backdrop and there is usually a way
+  // through at the collar, so without this the flood takes the blouse too.
+  const sealed = (keep ?? []).map(([x, y, kw, kh]) =>
+    [Math.round(x * w), Math.round(y * h), Math.round((x + kw) * w), Math.round((y + kh) * h)]);
+  const isKept = (p) => {
+    if (!sealed.length) return false;
+    const x = p % w, y = (p / w) | 0;
+    for (const [ax, ay, bx, by] of sealed) if (x >= ax && x < bx && y >= ay && y < by) return true;
+    return false;
+  };
+
   const isBg = (p) =>
-    data[p * c + 3] < 128 ||
-    (Math.abs(data[p * c] - bg[0]) + Math.abs(data[p * c + 1] - bg[1]) + Math.abs(data[p * c + 2] - bg[2]) <= lim);
+    !isKept(p) &&
+    (data[p * c + 3] < 128 ||
+     (Math.abs(data[p * c] - bg[0]) + Math.abs(data[p * c + 1] - bg[1]) + Math.abs(data[p * c + 2] - bg[2]) <= lim));
 
   for (const p of edge) if (!mask[p] && isBg(p)) { mask[p] = 1; work.push(p); }
   while (work.length) {
@@ -307,7 +323,7 @@ for (const spec of specs) {
   const done = !force && existing[slug] && (await stat(join(OUT, `${slug}-${WIDTHS[0]}.webp`)).catch(() => null));
   if (done && !process.argv.includes("--sheet")) { out[slug] = existing[slug]; continue; }
 
-  const { buf, w, h } = await key(join(ORIGINALS, src), { tol, grow, feather, shadow: spec.shadow });
+  const { buf, w, h } = await key(join(ORIGINALS, src), { tol, grow, feather, shadow: spec.shadow, keep: spec.keep });
   // A cast shadow the key cannot tell from the wall stays joined to the person,
   // so it is rubbed out by hand and the stray piece then falls away below.
   for (const [mx, my, mw, mh] of spec.mattes ?? []) {

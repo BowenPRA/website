@@ -1231,5 +1231,38 @@
       1600
     ],
     "src": "photos-2026-27/lantern-making-3.jpg"
+  },
+  "mid-autumn-festival-henna-ms-xuan": {
+    "alt": "A student paints a henna design on Ms. Xuan's hand at the Mid-Autumn Festival",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_10_03 Mid-Autumn Festival/Added 2026-09-23/IMG_4724.jpg"
+  },
+  "mid-autumn-festival-mooncake-stall": {
+    "alt": "A child shapes a mooncake at a Mid-Autumn Festival stall",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_10_03 Mid-Autumn Festival/Added 2026-09-23/IMG_4715.jpg"
+  },
+  "mid-autumn-festival-courtyard-crowd": {
+    "alt": "Families and students fill the courtyard for the Mid-Autumn Festival show",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2025_10_03 Mid-Autumn Festival/Added 2026-09-23/IMG_4657.jpg"
   }
 }

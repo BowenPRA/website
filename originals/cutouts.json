@@ -1,5 +1,29 @@
 [
   {
+    "slug": "xuan",
+    "src": "staff/Ms-Xuan.jpg",
+    "alt": "Ms. Xuan",
+    "tol": 55,
+    "face": [
+      0.55,
+      0.16
+    ],
+    "keep": [
+      [
+        0.47,
+        0.32,
+        0.16,
+        0.12
+      ],
+      [
+        0.48,
+        0.42,
+        0.32,
+        0.4
+      ]
+    ]
+  },
+  {
     "slug": "seth",
     "src": "wix-current/Mr_-Seth.png",
     "alt": "Mr. Seth",
