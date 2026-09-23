@@ -1,7 +1,6 @@
 {# The noticeboard, under the hero on the home page. Items come from src/_data/announcements.json.
-   The strip scrolls the headlines; the cards carry the detail. Two of them have a flyer: the little
-   tilted poster and the "See the flyer" button both open it full size in the shared lightbox (main.js).
-   The poster is decorative, so only the button is a tab stop. #}
+   The strip scrolls the headlines; the cards carry the detail. Two of them have a flyer: the button
+   carries a tilted thumbnail of it and opens it full size in the shared lightbox (main.js). #}
 <section class="notices-band">
   <div class="wrap">
     <h2 class="u-hide">Announcements</h2>
@@ -25,12 +24,16 @@
         <p class="notice__text">{{ a.text }}</p>
         {% if a.note %}<p class="notice__note">{{ a.note }}</p>{% endif %}
         <p class="notice__do">
-          {% if a.flyer %}<button class="notice__flyer" type="button">See the flyer</button>{% endif %}
+          {% if a.flyer %}
+          <button class="notice__flyer" type="button">
+            <span class="notice__poster" aria-hidden="true">{% photo a.flyer, "", "72px" %}</span>See the flyer
+          </button>
+          {% endif %}
           <a class="notice__link" href="{{ a.cta.url | url }}">{{ a.cta.label }}</a>
         </p>
-        {% if a.flyer %}<span class="notice__poster" aria-hidden="true">{% photo a.flyer, "", "120px" %}</span>{% endif %}
       </li>
       {% endfor %}
     </ul>
+    <p class="notices__hint">Swipe for more.</p>
   </div>
 </section>

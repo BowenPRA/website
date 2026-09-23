@@ -641,7 +641,10 @@ section { padding: var(--section) 0; position: relative; }
    of the same items, so translating the track by half is seamless. Each card takes its colour from
    `stage-*`, and the two offers carry a small tilted poster of the flyer in the corner. */
 
-.notices-band { padding: clamp(36px, 5vw, 56px) 0 var(--section-tight); }
+/* `.hero + section` would give this the full section gap top and bottom, and the section after it
+   another one, so the strip has to claim its own padding and hand the next section the tight gap. */
+.hero + .notices-band { padding: clamp(26px, 3vw, 40px) 0 clamp(18px, 2vw, 28px); }
+.notices-band + section { padding-top: var(--section-tight); }
 .ticker {
   display: flex; align-items: stretch; border-radius: var(--pill); overflow: hidden;
   background: var(--sun-pale); box-shadow: var(--shadow-sm); border: 1px solid var(--sun-tint);
@@ -663,9 +666,21 @@ section { padding: var(--section) 0; position: relative; }
 .ticker__item { padding: 12px 0 12px 1.5em; font-weight: 600; color: var(--blue-ink); white-space: nowrap; }
 .ticker__item::after { content: "✦"; margin-left: 1.5em; color: var(--sun-deep); font-size: 0.7em; vertical-align: 0.15em; }
 
-.notices { list-style: none; display: grid; gap: 18px; margin-top: clamp(24px, 3vw, 36px); }
-@media (min-width: 640px) { .notices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1040px) { .notices { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; } }
+.notices { list-style: none; display: grid; gap: 18px; margin-top: clamp(24px, 3vw, 36px); padding: 0; }
+/* Two up once a column is at least ~400px, which is where this much text stops towering.
+   Narrower than that, four stacked cards run to two screens, so they become a swipe strip
+   like the galleries; a strip card is 400px too, so nothing jumps at the breakpoint. */
+@media (min-width: 900px) { .notices { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; } }
+.notices__hint { display: none; margin: 0; text-align: center; font-size: var(--t-small); color: var(--ink-soft); }
+@media (max-width: 899px) {
+  .notices {
+    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter)); padding: 6px var(--gutter) 16px; scroll-padding-inline: var(--gutter);
+  }
+  .notices::-webkit-scrollbar { display: none; }
+  .notice { flex: 0 0 min(84%, 400px); scroll-snap-align: center; }
+  .notices__hint { display: block; }
+}
 .notice {
   position: relative; display: flex; flex-direction: column; overflow: hidden;
   background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 24px;
@@ -698,17 +713,15 @@ section { padding: var(--section) 0; position: relative; }
   text-decoration-color: color-mix(in srgb, var(--stage) 45%, transparent);
 }
 .notice__do a:hover, .notice__flyer:hover { color: var(--stage); text-decoration-color: currentColor; }
-/* the flyer, as a little poster pinned to the card's corner. Decorative: the button above is the control. */
-.notice__poster {
-  position: absolute; right: 14px; bottom: 14px; width: 76px; rotate: 4deg; cursor: pointer;
-  filter: drop-shadow(0 6px 14px rgba(14, 42, 92, 0.22));
-  transition: rotate 0.4s var(--bounce), scale 0.4s var(--bounce);
+/* the flyer rides in its own button as a tilted thumbnail */
+.notice__flyer { display: inline-flex; align-items: center; gap: 9px; text-align: left; }
+.notice__poster { width: 46px; flex: none; rotate: -4deg; transition: rotate 0.4s var(--bounce), scale 0.4s var(--bounce); }
+.notice__poster .photo {
+  aspect-ratio: 3 / 4; border-radius: 3px; border: 2px solid #fff; background: #fff;
+  box-shadow: 0 3px 8px rgba(14, 42, 92, 0.28);
 }
-.notice__poster .photo { aspect-ratio: 3 / 4; border-radius: 4px; border: 4px solid #fff; background: #fff; }
 .notice__poster .photo img { object-position: top; }
-.notice:hover .notice__poster { rotate: 0deg; scale: 1.06; }
-.notice:has(.notice__poster) .notice__do,
-.notice:has(.notice__poster) .notice__note { padding-right: 84px; }
+.notice:hover .notice__poster { rotate: 0deg; scale: 1.12; }
 
 /* no scroll, no second run: the headlines simply wrap and sit there */
 @media (prefers-reduced-motion: reduce) {

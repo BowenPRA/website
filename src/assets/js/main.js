@@ -92,7 +92,9 @@
     "main section .center.narrow", ".two > *", ".method > *", ".cards > *", ".tiles > *",
     // on phones the gallery is a swipe strip, so it rises as one piece instead of photo by photo
     window.innerWidth < 720 ? ".gallery" : ".gallery > *",
-    ".values > li", ".steps > li", ".team > li", ".stats > *", ".cal > *", ".programs > *", ".notices > li",
+    ".values > li", ".steps > li", ".team > li", ".stats > *", ".cal > *", ".programs > *",
+    // and on phones the noticeboard is a swipe strip, so it rises as one piece too
+    window.innerWidth < 900 ? ".notices" : ".notices > li",
     ".faq details", ".table-wrap", ".picker__chips", ".cta__inner", ".faq h2",
     ".dayplan__row", ".daynotes > li", ".stages > *", ".dayline li"
   ].join(",");
