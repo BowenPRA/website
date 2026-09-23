@@ -1582,5 +1582,37 @@
       1600
     ],
     "src": "trips/2025_05 Da Lat/20250510_160150.jpg"
+  },
+  "da-lat-trip-rope-bridge": {
+    "alt": "Crossing the rope bridge on the high ropes course above Đà Lạt",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "trips/2025_05 Da Lat/20250508_123227.jpg"
+  },
+  "upper-ta-reading-early-years": {
+    "alt": "An Upper Secondary student reading a picture book with an Early Years child",
+    "width": 956,
+    "height": 1275,
+    "sizes": [
+      480,
+      956
+    ],
+    "src": "photos-2026-27/UpperTAEarlyYearsReading.jpg"
+  },
+  "upper-ta-sharing-a-book": {
+    "alt": "An Upper Secondary student sharing a book with a younger child on the classroom rug",
+    "width": 1275,
+    "height": 956,
+    "sizes": [
+      480,
+      960,
+      1275
+    ],
+    "src": "photos-2026-27/UpperTAEarlyYearsBook.jpg"
   }
 }

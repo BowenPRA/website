@@ -1074,5 +1074,23 @@
     "slug": "da-lat-trip-market",
     "aspect": "4:3",
     "alt": "Shopping in a Đà Lạt market, spending against the budget the students set"
+  },
+  {
+    "src": "trips/2025_05 Da Lat/20250508_123227.jpg",
+    "slug": "da-lat-trip-rope-bridge",
+    "aspect": "3:4",
+    "alt": "Crossing the rope bridge on the high ropes course above Đà Lạt"
+  },
+  {
+    "src": "photos-2026-27/UpperTAEarlyYearsReading.jpg",
+    "slug": "upper-ta-reading-early-years",
+    "aspect": "3:4",
+    "alt": "An Upper Secondary student reading a picture book with an Early Years child"
+  },
+  {
+    "src": "photos-2026-27/UpperTAEarlyYearsBook.jpg",
+    "slug": "upper-ta-sharing-a-book",
+    "aspect": "4:3",
+    "alt": "An Upper Secondary student sharing a book with a younger child on the classroom rug"
   }
 ]

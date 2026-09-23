@@ -58,7 +58,7 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
     </div>
     <div class="leaf-wrap leaf-wrap--r has-sticker">
       <span class="sticker sticker--coral sticker--tr">Projects and a trip</span>
-      {% photo "secondary-student-helping-primary", "photo--lg photo--tilt" %}
+      {% photo "da-lat-trip-rope-bridge", "photo--lg photo--tilt" %}
     </div>
   </div>
 </section>
@@ -77,6 +77,24 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
     </div>
   </div>
 </section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow eyebrow--stage">Helping in the younger classes</p>
+      <h2>On the other side of the desk</h2>
+      <p>Some students spend part of their week assisting in an Early Years or Primary class. They read with the little ones, run an activity, and find out what it takes to hold a room of five-year-olds.</p>
+      <p>It is the same lesson as an internship, closer to home: turn up, be useful, and be someone a younger child looks up to.</p>
+    </div>
+    <div>
+      {% set collagePhotos = ["upper-ta-reading-early-years", "upper-ta-sharing-a-book", "secondary-student-helping-primary"] %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
   <div class="wrap">
