@@ -24,7 +24,8 @@ Then open http://localhost:8080. Edits under `src/` rebuild automatically.
 | `src/_includes/layouts/base.njk` | The one page layout (head, header, footer) |
 | `src/_includes/partials/` | Header, footer, river divider, CTA block |
 | `src/assets/css/main.css` | All styles. Design tokens are at the top |
-| `src/assets/js/main.js` | Nav sheet, age picker |
+| `src/assets/js/main.js` | Nav sheet, age picker, lightbox, the album's search and filters |
+| `src/_data/album.js` | Works out the tags behind `/album/`, our own index of every photo on the site |
 | `src/*.njk`, `src/**/*.njk` | The pages |
 | `originals/` | Full-size photos and Wix exports, not in git (too big); see its README |
 | `scripts/images.mjs` | Turns `originals/picks.json` into WebP files in `src/assets/img/photos/` |

@@ -7,7 +7,7 @@
    Contents: tokens · tones · base · type · small parts (eyebrow, mark, sticker, tape, dot, frond)
    · buttons · header · sections, bands, waves · heroes · photos · layouts · ribbons · noticeboard · tiles
    · picker and programs · stats · cards and icons · gallery and lightbox · values · steps · FAQ
-   · tables and fees · schedule · calendar · events · team · forms · CTA · footer · 404 · motion */
+   · tables and fees · schedule · calendar · events · team · forms · CTA · footer · 404 · album · motion */
 
 /* ---------- tokens ---------- */
 
@@ -1466,6 +1466,86 @@ tr:last-child td { border-bottom: 0; }
 .lost svg { width: 150px; margin: 0 auto 20px; animation: peek 4s ease-in-out infinite; }
 .lost h1 { color: var(--blue); }
 .lost .lede { margin-inline: auto; }
+
+/* ---------- the album (/album/) ----------
+   Our own index of every photo the site has built, so it is denser and plainer
+   than the rest: a working page, not a page for families. The site header
+   scrolls away here and the search bar takes the sticky spot instead, since at
+   the top of a long grid what you want is the filter, not the menu. */
+
+.page-album .site-header { position: static; }
+.page-album .float-cta { display: none; }
+
+.album-head { padding: var(--section-tight) 0 var(--s-2); }
+.album-head h1 { font-size: clamp(2rem, 1.5rem + 2.4vw, 3rem); }
+.album-head .lede, .album-head__note { max-width: 74ch; }
+.album-head__note { font-size: var(--t-small); color: var(--ink-soft); }
+.album-head code, .acopy code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78em; background: var(--blue-pale); color: var(--blue-ink);
+  padding: 1px 6px; border-radius: 6px; word-break: break-all;
+}
+
+.abar { position: sticky; top: 0; z-index: 40; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(8px); border-block: 1px solid var(--line); }
+.abar__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; }
+.abar__search { flex: 1 1 240px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border: 2px solid transparent; border-radius: var(--pill); background: var(--blue-pale); }
+.abar__search:focus-within { border-color: var(--blue); background: #fff; }
+.abar__search svg { flex: none; width: 18px; height: 18px; color: var(--blue-deep); }
+.abar__search input { flex: 1; min-width: 0; padding: 11px 0; border: 0; background: none; font: inherit; font-size: 0.95rem; }
+.abar__search input:focus { outline: none; }
+.abar__count { margin: 0; font-weight: 600; font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.abar__sort { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: var(--ink-soft); }
+.abar__sort select { padding: 8px 10px; border: 1.5px solid var(--line); border-radius: var(--r-sm); background: #fff; color: var(--ink); font: inherit; font-size: 0.85rem; }
+
+.album-body { padding: var(--s-3) 0 var(--section-tight); }
+.afilters { display: grid; gap: 8px; }
+.afilters__row { display: grid; gap: 4px; }
+.afilters__label { margin: 0; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); }
+.afilters__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+@media (min-width: 760px) {
+  .afilters__row { grid-template-columns: 130px minmax(0, 1fr); gap: 12px; align-items: start; }
+  .afilters__label { padding-top: 8px; text-align: right; }
+}
+/* the playful chip is too big and too bouncy by the dozen */
+.chip--sm { min-height: 32px; padding: 0.24em 0.8em; border-width: 1.5px; font-size: 0.82rem; }
+.chip--sm:hover { transform: translateY(-2px); }
+.chip--sm small { margin-left: 3px; font-size: 0.78em; opacity: 0.6; }
+
+.album { display: grid; gap: clamp(16px, 2vw, 24px); grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); margin-top: var(--s-4); }
+.acard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
+.acard[hidden] { display: none; }
+.acard:hover { box-shadow: var(--shadow); }
+.acard__shot { aspect-ratio: 4 / 3; border-radius: 0; cursor: zoom-in; }
+.acard__shot img { transition: scale 0.4s var(--ease-out); }
+.acard:hover .acard__shot img { scale: 1.03; }
+.acard__body { display: grid; gap: 9px; padding: 13px 15px 15px; }
+.acard__caption { margin: 0; font-size: 0.92rem; font-weight: 600; line-height: 1.4; color: var(--blue-ink); }
+
+.acard__tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.atag { padding: 2px 9px; border-radius: var(--pill); font-size: 0.71rem; font-weight: 600; background: var(--green-pale); color: var(--green-deep); }
+.atag--year { background: var(--blue-pale); color: var(--blue-deep); }
+.atag--event { background: var(--sun-pale); color: var(--sun-ink); }
+.atag--who { background: var(--violet-pale); color: var(--violet-ink); }
+
+.acard__facts { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 3px 10px; margin: 0; font-size: 0.76rem; }
+.acard__facts dt { color: var(--ink-soft); }
+.acard__facts dd { margin: 0; min-width: 0; }
+.acard__folder { display: block; margin-top: 2px; color: var(--ink-soft); word-break: break-all; }
+.acard__used { display: flex; flex-wrap: wrap; gap: 2px 4px; }
+.acard__used a::after, .acard__used span::after { content: ","; color: var(--ink-soft); }
+.acard__used a:last-child::after, .acard__used span:last-child::after { content: ""; }
+.acard__used em { font-style: normal; font-weight: 600; color: var(--coral-ink); }
+
+/* every name is a copy button: the slug to paste into a page, the path to find the original */
+.acopy { padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: copy; }
+.acopy:hover code { background: var(--blue-tint); }
+.acopy.is-copied code { background: var(--green-tint); color: var(--green-dark); }
+.acopy.is-copied code::after { content: " ✓"; }
+
+.album__empty { margin: var(--s-4) 0 0; text-align: center; color: var(--ink-soft); }
+.link { padding: 0; border: 0; background: none; font: inherit; color: var(--blue-deep); text-decoration: underline; cursor: pointer; }
+/* the album gives the lightbox a second line: the file name behind the photo */
+.lightbox__meta { display: block; margin-top: 8px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.78rem; color: rgba(255, 255, 255, 0.65); word-break: break-all; }
 
 /* ---------- scroll reveal (main.js adds .reveal only to things below the fold) ---------- */
 

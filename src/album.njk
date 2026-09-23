@@ -1,0 +1,104 @@
+---
+layout: layouts/base.njk
+tone: light
+title: "Photo album"
+description: "Every photo built into the Palm River Academy site, with its file name, caption and tags."
+permalink: /album/
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{# Our own index of the site's photos: not in the menu, not in search results.
+   Everything on it — the tags, the file names, where each photo is used — is
+   worked out at build time in src/_data/album.js. Filtering, search and sort
+   are in main.js under "the album". #}
+
+<section class="album-head">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--blue">Ours · not in the menu</p>
+    <h1>The photo album</h1>
+    <p class="lede">Every photo the site has built: <strong>{{ album.counts.total }}</strong> of them, from <strong>{{ album.counts.events }}</strong> events, and <strong>{{ album.counts.unused }}</strong> that no page uses yet. Search the captions, file names and folders, or filter. Click a photo to see it full size.</p>
+    <p class="album-head__note">The name under each photo is the one to paste into a page or into <code>picks.json</code>; click it to copy. The line below it is the original, as it is filed in the photo folders.</p>
+  </div>
+</section>
+
+<div class="abar">
+  <div class="wrap abar__inner">
+    <label class="abar__search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="search" id="album-q" placeholder="Search captions, file names, folders" autocomplete="off" spellcheck="false" aria-label="Search the album">
+    </label>
+    <p class="abar__count" id="album-count" aria-live="polite">{{ album.counts.total }} photos</p>
+    <label class="abar__sort">Sort
+      <select id="album-sort">
+        <option value="date">Newest first</option>
+        <option value="az">Caption A to Z</option>
+        <option value="file">File name A to Z</option>
+        <option value="unused">Not on the site first</option>
+      </select>
+    </label>
+    <button class="btn btn--small btn--ghost" type="button" id="album-clear">Clear</button>
+  </div>
+</div>
+
+<section class="album-body">
+  <div class="wrap">
+    <div class="afilters" id="album-filters">
+      {% for f in album.facets %}
+      <div class="afilters__row">
+        <p class="afilters__label" id="facet-{{ f.group }}">{{ f.label }}</p>
+        <div class="afilters__chips" role="group" aria-labelledby="facet-{{ f.group }}">
+          {% for v in f.values %}
+          <button class="chip chip--sm{% if v.token == 'use:not-on-the-site' %} chip--coral{% endif %}" type="button" data-f="{{ v.token }}" aria-pressed="false">{{ v.label }} <small>{{ v.count }}</small></button>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p class="album__empty" id="album-empty" hidden>No photo matches that. <button class="link" type="button" data-clear>Clear the filters</button></p>
+
+    <div class="album" id="album">
+      {% for p in album.photos %}
+      <article class="acard" data-f="{{ p.tokens }}" data-q="{{ p.search }}"
+               data-az="{{ p.alt | lower }}" data-file="{{ p.file | lower }}"
+               data-date="{{ p.taken or '' }}" data-used="{{ p.used.length }}"
+               data-meta="{{ p.slug }} · {{ p.src }}">
+        {% photo p.slug, "acard__shot", "(min-width: 1180px) 340px, (min-width: 760px) 42vw, 92vw" %}
+        <div class="acard__body">
+          <p class="acard__caption">{{ p.alt }}</p>
+
+          <ul class="acard__tags">
+            {% if p.event %}<li class="atag atag--event">{{ p.event.name }}</li>{% endif %}
+            <li class="atag atag--year">{{ p.year }}</li>
+            {% if p.klass %}<li class="atag">{{ p.klass }}</li>{% endif %}
+            {% for s in p.stages %}<li class="atag">{{ s }}</li>{% endfor %}
+            {% for n in p.people %}<li class="atag atag--who">{{ n }}</li>{% endfor %}
+            {% if p.kind != "Photo" %}<li class="atag">{{ p.kind }}</li>{% endif %}
+            {% for t in p.tags %}<li class="atag">{{ t }}</li>{% endfor %}
+          </ul>
+
+          <dl class="acard__facts">
+            <dt>On the site</dt>
+            <dd><button class="acopy" type="button" data-copy="{{ p.slug }}" title="Copy this name"><code>{{ p.slug }}</code></button></dd>
+
+            <dt>Original</dt>
+            <dd>
+              <button class="acopy" type="button" data-copy="{{ p.src }}" title="Copy the path under originals/"><code>{{ p.file }}</code></button>
+              <span class="acard__folder">{{ p.folder }}{% if p.taken %} · {{ p.taken }}{% endif %}</span>
+            </dd>
+
+            <dt>Used on</dt>
+            <dd class="acard__used">
+              {% if p.used.length %}
+                {% for u in p.used %}{% if u.url %}<a href="{{ u.url | url }}">{{ u.title }}</a>{% else %}<span>{{ u.title }}</span>{% endif %}{% endfor %}
+              {% else %}
+                <em>Not on the site</em>
+              {% endif %}
+            </dd>
+          </dl>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

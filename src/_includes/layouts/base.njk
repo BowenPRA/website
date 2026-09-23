@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
   <meta name="description" content="{{ description or site.description }}">
+  {# front matter `noindex: true` keeps a page out of search results — the album is ours, not the public's #}
+  {% if noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   <meta name="theme-color" content="#116DFF">
   <meta property="og:title" content="{{ title or site.name }}">
   <meta property="og:description" content="{{ description or site.description }}">

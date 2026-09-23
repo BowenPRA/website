@@ -186,6 +186,13 @@
       bigImg.src = largest(img);
       bigImg.alt = img.alt;
       caption.textContent = img.alt;
+      // the album hangs the file names off the photo, and wants them under it
+      if (img.dataset.meta) {
+        var meta = document.createElement("span");
+        meta.className = "lightbox__meta";
+        meta.textContent = img.dataset.meta;
+        caption.appendChild(meta);
+      }
     }
     box.querySelector(".lightbox__close").addEventListener("click", function () { box.close(); });
     box.querySelector(".lightbox__prev").addEventListener("click", function () { show(current - 1); });
@@ -259,5 +266,136 @@
       button.addEventListener("click", function () { useLightbox()(set, 0); });
     });
     document.querySelectorAll(".team__hint").forEach(function (hint) { hint.hidden = false; });
+  }
+
+  // The album (/album/): search, filter, sort and copy. Every card is already on
+  // the page with its tags on it, so nothing here fetches or rebuilds anything —
+  // it only hides what does not match. A group of chips is an "any of these",
+  // and the groups narrow each other: Primary AND 2026-27, not either.
+  var album = document.getElementById("album");
+  if (album) {
+    var cards = Array.prototype.slice.call(album.querySelectorAll(".acard"));
+    var query = document.getElementById("album-q");
+    var tally = document.getElementById("album-count");
+    var empty = document.getElementById("album-empty");
+    var sorter = document.getElementById("album-sort");
+    var chips = Array.prototype.slice.call(document.querySelectorAll("#album-filters .chip"));
+    var pressed = function (chip) { return chip.getAttribute("aria-pressed") === "true"; };
+
+    function apply() {
+      var groups = {};
+      chips.filter(pressed).forEach(function (chip) {
+        var group = chip.dataset.f.split(":")[0];
+        (groups[group] = groups[group] || []).push(chip.dataset.f);
+      });
+      var q = query.value.trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function (card) {
+        var ok = !q || card.dataset.q.indexOf(q) > -1;
+        var tokens = " " + card.dataset.f + " ";
+        for (var group in groups) {
+          if (!ok) break;
+          ok = groups[group].some(function (token) { return tokens.indexOf(" " + token + " ") > -1; });
+        }
+        card.hidden = !ok;
+        if (ok) shown++;
+      });
+      tally.textContent = shown === cards.length ? cards.length + " photos" : shown + " of " + cards.length + " photos";
+      empty.hidden = shown > 0;
+      remember(q);
+    }
+
+    // the filters live in the address bar too, so a useful view can be bookmarked
+    // or sent to someone ("#f=use:not-on-the-site")
+    function remember(q) {
+      var parts = [];
+      var tokens = chips.filter(pressed).map(function (chip) { return chip.dataset.f; });
+      if (q) parts.push("q=" + encodeURIComponent(q));
+      if (tokens.length) parts.push("f=" + tokens.join(","));
+      history.replaceState(null, "", parts.length ? "#" + parts.join("&") : location.pathname + location.search);
+    }
+    location.hash.replace(/^#/, "").split("&").forEach(function (part) {
+      var at = part.indexOf("=");
+      var name = part.slice(0, at);
+      var value = part.slice(at + 1);
+      if (name === "q") query.value = decodeURIComponent(value);
+      if (name === "f") value.split(",").forEach(function (token) {
+        chips.forEach(function (chip) { if (chip.dataset.f === token) chip.setAttribute("aria-pressed", "true"); });
+      });
+    });
+
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        chip.setAttribute("aria-pressed", pressed(chip) ? "false" : "true");
+        apply();
+      });
+    });
+    query.addEventListener("input", apply);
+    document.querySelectorAll("#album-clear, [data-clear]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        query.value = "";
+        chips.forEach(function (chip) { chip.setAttribute("aria-pressed", "false"); });
+        apply();
+      });
+    });
+
+    var sorts = {
+      date: function (a, b) { return (b.dataset.date || "").localeCompare(a.dataset.date || "") || a.dataset.az.localeCompare(b.dataset.az); },
+      az: function (a, b) { return a.dataset.az.localeCompare(b.dataset.az); },
+      file: function (a, b) { return a.dataset.file.localeCompare(b.dataset.file); },
+      unused: function (a, b) { return a.dataset.used - b.dataset.used || sorts.date(a, b); }
+    };
+    sorter.addEventListener("change", function () {
+      cards.slice().sort(sorts[sorter.value] || sorts.date).forEach(function (card) { album.appendChild(card); });
+    });
+
+    document.querySelectorAll(".acopy").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var text = button.dataset.copy;
+        function flash() {
+          button.classList.add("is-copied");
+          window.setTimeout(function () { button.classList.remove("is-copied"); }, 1200);
+        }
+        function theOldWay() {
+          var field = document.createElement("textarea");
+          field.value = text;
+          field.setAttribute("readonly", "");
+          field.style.position = "fixed";
+          field.style.opacity = "0";
+          document.body.appendChild(field);
+          field.select();
+          try { document.execCommand("copy"); flash(); } catch (e) { /* nothing to be done */ }
+          document.body.removeChild(field);
+        }
+        if (navigator.clipboard) navigator.clipboard.writeText(text).then(flash, theOldWay);
+        else theOldWay();
+      });
+    });
+
+    // A photo opens full size, and the arrows walk the photos you are looking at
+    // rather than all 149 of them.
+    if (useLightbox()) {
+      cards.forEach(function (card) {
+        var tile = card.querySelector(".photo");
+        var img = tile && tile.querySelector("img");
+        if (!img) return;
+        img.dataset.meta = card.dataset.meta;
+        tile.setAttribute("tabindex", "0");
+        tile.setAttribute("role", "button");
+        tile.setAttribute("aria-label", "View larger: " + img.alt);
+        function open() {
+          var set = cards.filter(function (c) { return !c.hidden; })
+            .map(function (c) { return c.querySelector(".photo img"); })
+            .filter(Boolean);
+          useLightbox()(set, Math.max(0, set.indexOf(img)));
+        }
+        tile.addEventListener("click", open);
+        tile.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+        });
+      });
+    }
+
+    apply();
   }
 })();

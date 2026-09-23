@@ -113,6 +113,7 @@ not a year group) · Find your way to PRA · CTA.
 | `/families/handbook/` | Family handbook | Norms and guidelines | Link to PDF plus a short summary | none |
 | `/events/` | Events | Last year's festivals, theme weeks, trips and graduation, August to June | Month chips, one section per event (from `src/_data/events.json`: name, date, 1 to 3 sentences, polaroids with a lightbox), link to this year's calendar | Book a visit |
 | `/contact/` | Contact / Book a visit | One form, map, phone, Zalo/WhatsApp, hours | Form (name, child's age, dates if visiting, message), addresses of both campuses, hours | Send |
+| `/album/` | Photo album (ours) | Find a photo again: every photo the site has built, with its tags, file names and the page it is used on | Search, filter chips (where it's used, school year, event, who's in it, stage, type), a card per photo, lightbox | none — not in the nav, `noindex` |
 | `/404.html` | Not found | Friendly | A palm and a link home | Home |
 
 The `/learning/` overview page and `/contact/` page are new; the rest map to
@@ -296,3 +297,11 @@ Still open:
   veins behind the text) in deep green, mint and teal: "20 months to 18 years", "Small classes", "Since 2017". The stats band shows years in Hội An (computed from the founding year), not staff count.
 - Photos: prefer the ones Bowen chose for the Wix draft plus polished activity shots
   of older students; avoid close-up toddler phone snapshots.
+
+- The photo album at `/album/` is for us, not for families: it is left out of the
+  header, the mobile sheet and the footer, and carries `noindex` so it stays out
+  of search results. Its tags are worked out at build time in `src/_data/album.js`
+  from photos.json, the templates and the original's own path, so a new photo
+  appears on it with no extra typing. When a guess is wrong, `picks.json` takes
+  `people`, `tags` or `taken` for that photo and those win. This is not the public
+  gallery page in the phases list below; that one is still to come.
