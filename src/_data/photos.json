@@ -1264,5 +1264,214 @@
       1600
     ],
     "src": "events/2025_10_03 Mid-Autumn Festival/Added 2026-09-23/IMG_4657.jpg"
+  },
+  "secondary-lab-preparing-sample": {
+    "alt": "A Lower Secondary student in goggles, gloves and apron preparing a sample in the lab",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/SecondaryLabOnion.jpg"
+  },
+  "secondary-lab-weighing": {
+    "alt": "Weighing a sample on the balance during a Lower Secondary science practical",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/SecondaryLabScale.jpg"
+  },
+  "secondary-lab-group-practical": {
+    "alt": "Lower Secondary students working through a practical together, all in goggles",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/SecondaryLabCoffeeScale.jpg"
+  },
+  "secondary-ramp-experiment": {
+    "alt": "Students run a ramp experiment on the classroom floor and write up the results",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/SecondaryRampLab.jpg"
+  },
+  "secondary-window-garden": {
+    "alt": "Students checking the plants growing along the classroom window",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/SecondaryHangingGarden.jpg"
+  },
+  "secondary-class-notebooks": {
+    "alt": "Lower Secondary students working through their notebooks in class",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/SecondaryClass.jpg"
+  },
+  "upper-maths-mirror-method": {
+    "alt": "Upper Secondary students use a mirror and similar triangles to measure a height",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperRightTriangleMirror.jpg"
+  },
+  "upper-maths-mirror-measuring": {
+    "alt": "Lining up the mirror and measuring the distance for the calculation",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperRightTrinalgeMirror2.jpg"
+  },
+  "upper-maths-rise-over-run": {
+    "alt": "Working out a gradient from rise over run, with the measurements taken in the room",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperRiseOverRun.jpg"
+  },
+  "upper-maths-measuring-up": {
+    "alt": "Holding the level steady to take a measurement in an Upper Secondary maths lesson",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/20260817_134631.jpg"
+  },
+  "upper-students-working-through": {
+    "alt": "Two Upper Secondary students working a problem through together",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/20260817_120423.jpg"
+  },
+  "upper-own-courses-together": {
+    "alt": "Upper Secondary students working on their own courses side by side, with a teacher on hand",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperGroupWork.jpg"
+  },
+  "upper-internship-bakery": {
+    "alt": "An Upper Secondary student on an internship at a Hội An bakery",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperIntern1.jpg"
+  },
+  "upper-internship-drinks": {
+    "alt": "Making up a drinks order on an internship shift",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperIntern2.jpg"
+  },
+  "upper-internship-counter": {
+    "alt": "Working the counter alongside the staff on an internship",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/UpperIntern3.jpg"
+  },
+  "primary-technology-tablet": {
+    "alt": "A Primary student working on a tablet in technology",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimaryTech1.jpg"
+  },
+  "primary-technology-inside-a-laptop": {
+    "alt": "A Primary student taking a laptop apart to see how it works",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "photos-2026-27/PrimaryTech2.jpg"
+  },
+  "poster-lab-safety": {
+    "alt": "A lab safety poster made by Lower Secondary students: goggles, mask, apron and gloves",
+    "width": 1587,
+    "height": 2245,
+    "sizes": [
+      480,
+      960,
+      1587
+    ],
+    "src": "photos-2026-27/poster-ready-for-lab.png"
+  },
+  "poster-sport-kit": {
+    "alt": "A poster made by Lower Secondary students on what to bring to sport: a smile, a full water bottle and sport shoes",
+    "width": 1587,
+    "height": 2245,
+    "sizes": [
+      480,
+      960,
+      1587
+    ],
+    "src": "photos-2026-27/poster-ready-for-sport.png"
   }
 }

@@ -63,11 +63,41 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Internships</p>
+      <h2>Time in a real job</h2>
+      <p class="lede">When it fits the plan, a student spends part of their week working in a local business.</p>
+    </div>
+    {% set collagePhotos = ["upper-internship-bakery", "upper-internship-drinks", "upper-internship-counter"] %}
+    {% include "partials/collage.njk" %}
+    <div class="center narrow mt">
+      <p>Front of house, the kitchen, the till. They turn up on time, take instructions from someone who is not their teacher, and find out what a working day is actually like. Ask us what might be possible for your child.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Maths off the page</p>
+      <h2>Measure it yourself</h2>
+      <p class="lede">The quickest way to believe a formula is to go and get the numbers.</p>
+    </div>
+    {% set collagePhotos = ["upper-maths-mirror-method", "upper-maths-mirror-measuring", "upper-maths-measuring-up"] %}
+    {% include "partials/collage.njk" %}
+    <div class="center narrow mt">
+      <p>Height from a mirror on the floor and a pair of similar triangles. A gradient from rise over run, measured across the room. The answer is checked against the thing itself, not against the back of the book.</p>
+    </div>
+  </div>
+</section>
+
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap two two--flip">
     <div class="leaf-wrap leaf-wrap--tint">
-      {% photo "upper-years-students-group-project", "photo--lg photo--tilt-r" %}
+      {% photo "upper-own-courses-together", "photo--lg photo--tilt-r" %}
     </div>
     <div>
       <p class="eyebrow">After PRA</p>

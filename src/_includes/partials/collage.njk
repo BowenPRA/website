@@ -1,0 +1,14 @@
+{# A small group of photos pinned up together, two to four prints taped and
+   overlapping, for a set that belongs together: three internships, one
+   experiment from three angles, a pair of posters. Bigger sets stay in
+   .gallery. Each print opens the shared lightbox.
+
+   Set collagePhotos (list of slugs) before including. Optional:
+     collageWide   — 4:3 prints instead of 3:4
+     collageArt    — prints keep their own proportions (posters, artwork)
+     collageCredit — a line under the group (who made it, what it is) #}
+<div class="collage{% if collageWide %} collage--wide{% endif %}{% if collageArt %} collage--art{% endif %}">
+  {% for slug in collagePhotos %}{% photo slug, "", "(min-width: 900px) 260px, 44vw" %}{% endfor %}
+</div>
+{% if collageCredit %}<p class="collage__credit">{{ collageCredit | safe }}</p>{% endif %}
+{% set collageWide = false %}{% set collageArt = false %}{% set collageCredit = "" %}

@@ -213,8 +213,8 @@
     return lightbox;
   }
 
-  // Photo galleries: every tile opens its own gallery's set.
-  var galleries = document.querySelectorAll(".gallery");
+  // Photo galleries and pinned-up collages: every tile opens its own set.
+  var galleries = document.querySelectorAll(".gallery, .collage");
   if (galleries.length && useLightbox()) {
     galleries.forEach(function (gallery) {
       var set = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));

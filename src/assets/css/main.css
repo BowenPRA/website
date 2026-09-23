@@ -906,6 +906,48 @@ section { padding: var(--section) 0; position: relative; }
 .gallery .photo:nth-child(4n) { rotate: 2.5deg; }
 .gallery .photo:hover, .gallery .photo:focus-visible { rotate: 0deg; scale: 1.06; z-index: 3; box-shadow: var(--shadow-pop); }
 .gallery__hint { margin: 20px 0 0; text-align: center; font-size: var(--t-small); color: var(--ink-soft); }
+
+/* ---------- collage ---------- */
+
+/* A handful of photos pinned up together rather than laid out in a grid: the
+   three internships, one experiment from three angles, the posters a class
+   made. Prints overlap and sit at different angles, so the group reads as one
+   thing. Under about 640px the third print wraps and centres itself, which
+   keeps the pinned-up look instead of shrinking everything to stamps. */
+.collage {
+  --shot: 3 / 4;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start;
+  gap: 4px; margin-top: clamp(22px, 3vw, 34px);
+}
+.collage--wide { --shot: 4 / 3; }
+/* posters and other artwork keep their own proportions instead of being cropped */
+.collage--art .photo { aspect-ratio: auto; }
+.collage--art .photo img { height: auto; object-fit: contain; }
+.collage .photo {
+  flex: 0 1 clamp(152px, 26vw, 258px); aspect-ratio: var(--shot);
+  border: 7px solid #fff; border-bottom-width: 22px; border-radius: 8px;
+  box-shadow: var(--shadow); cursor: zoom-in;
+  transition: rotate 0.4s var(--bounce), scale 0.4s var(--bounce), box-shadow 0.3s ease;
+}
+.collage .photo::before {
+  content: ""; position: absolute; z-index: 2; top: 5px; left: 50%;
+  width: 58px; height: 18px; margin-left: -29px; rotate: -5deg;
+  background: rgba(255, 200, 87, 0.75); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.collage .photo:nth-child(3n+1) { rotate: -3.2deg; }
+.collage .photo:nth-child(3n+2) { rotate: 1.6deg; margin-top: 18px; z-index: 2; }
+.collage .photo:nth-child(3n+2)::before { background: rgba(156, 198, 74, 0.75); rotate: 4deg; }
+.collage .photo:nth-child(3n) { rotate: 2.8deg; }
+.collage .photo:nth-child(3n)::before { background: rgba(255, 111, 89, 0.65); rotate: 2deg; }
+.collage .photo:hover, .collage .photo:focus-visible { rotate: 0deg; scale: 1.05; z-index: 5; box-shadow: var(--shadow-pop); }
+.collage__credit { margin: 18px 0 0; text-align: center; font-size: var(--t-small); color: var(--ink-soft); }
+.collage__credit strong { color: var(--blue-ink); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .collage .photo { transition: none; }
+  .collage .photo:hover, .collage .photo:focus-visible { rotate: 0deg; scale: 1; }
+}
+
 @media (max-width: 719px) {
   .gallery {
     display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;

@@ -24,7 +24,22 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
     </div>
     <div class="leaf-wrap leaf-wrap--r has-sticker">
       <span class="sticker sticker--blue sticker--tr">Cambridge Lower Secondary</span>
-      {% photo "lower-secondary-classroom-lesson", "photo--lg photo--tilt-r" %}
+      {% photo "secondary-ramp-experiment", "photo--lg photo--tilt-r" %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--blue">In the lab</p>
+      <h2>Science you put goggles on for</h2>
+      <p class="lede">Practical work every week, across biology, chemistry and physics.</p>
+    </div>
+    {% set collagePhotos = ["secondary-lab-preparing-sample", "secondary-lab-weighing", "secondary-lab-group-practical"] %}
+    {% include "partials/collage.njk" %}
+    <div class="center narrow mt">
+      <p>Every practical starts the same way: goggles on, apron on, gloves on, bench clear. Then students prepare their own samples, weigh them, run the test and write up what the numbers actually say. <strong>Art of Science</strong> in the afternoon picks up whatever the morning's lesson opened up.</p>
     </div>
   </div>
 </section>
@@ -61,11 +76,28 @@ description: "Lower Secondary at Palm River Academy, Years 7 to 9. Cambridge Eng
   </div>
 </section>
 
+<section>
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow eyebrow--blue">Executive Function</p>
+      <h2>The habits that get work done</h2>
+      <p>A timetabled class, late morning, alternating with History. It is about the part of school nobody teaches directly: planning a piece of work, breaking it up, keeping track of it, and finishing it.</p>
+      <p>Some of it is routine — packing the right kit, knowing what a lesson needs before it starts. So one of last year's tasks was to make the reminders the classroom actually uses — what to put on before a practical, what to bring to sport — and they are still on the wall.</p>
+    </div>
+    <div>
+      {% set collagePhotos = ["poster-lab-safety", "poster-sport-kit"] %}
+      {% set collageArt = true %}
+      {% set collageCredit = "Made by our <strong>Lower Secondary</strong> students in Executive Function." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap two two--flip">
     <div class="leaf-wrap leaf-wrap--tint">
-      {% photo "secondary-table-tennis", "photo--lg photo--tilt" %}
+      {% photo "secondary-class-notebooks", "photo--lg photo--tilt" %}
     </div>
     <div>
       <p class="eyebrow">What comes next</p>

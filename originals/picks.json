@@ -900,5 +900,119 @@
     "slug": "mid-autumn-festival-courtyard-crowd",
     "aspect": "4:3",
     "alt": "Families and students fill the courtyard for the Mid-Autumn Festival show"
+  },
+  {
+    "src": "photos-2026-27/SecondaryLabOnion.jpg",
+    "slug": "secondary-lab-preparing-sample",
+    "aspect": "3:4",
+    "alt": "A Lower Secondary student in goggles, gloves and apron preparing a sample in the lab"
+  },
+  {
+    "src": "photos-2026-27/SecondaryLabScale.jpg",
+    "slug": "secondary-lab-weighing",
+    "aspect": "3:4",
+    "alt": "Weighing a sample on the balance during a Lower Secondary science practical"
+  },
+  {
+    "src": "photos-2026-27/SecondaryLabCoffeeScale.jpg",
+    "slug": "secondary-lab-group-practical",
+    "aspect": "4:3",
+    "alt": "Lower Secondary students working through a practical together, all in goggles"
+  },
+  {
+    "src": "photos-2026-27/SecondaryRampLab.jpg",
+    "slug": "secondary-ramp-experiment",
+    "aspect": "4:3",
+    "alt": "Students run a ramp experiment on the classroom floor and write up the results"
+  },
+  {
+    "src": "photos-2026-27/SecondaryHangingGarden.jpg",
+    "slug": "secondary-window-garden",
+    "aspect": "4:3",
+    "alt": "Students checking the plants growing along the classroom window"
+  },
+  {
+    "src": "photos-2026-27/SecondaryClass.jpg",
+    "slug": "secondary-class-notebooks",
+    "aspect": "4:3",
+    "alt": "Lower Secondary students working through their notebooks in class"
+  },
+  {
+    "src": "photos-2026-27/UpperRightTriangleMirror.jpg",
+    "slug": "upper-maths-mirror-method",
+    "aspect": "3:4",
+    "alt": "Upper Secondary students use a mirror and similar triangles to measure a height"
+  },
+  {
+    "src": "photos-2026-27/UpperRightTrinalgeMirror2.jpg",
+    "slug": "upper-maths-mirror-measuring",
+    "aspect": "3:4",
+    "alt": "Lining up the mirror and measuring the distance for the calculation"
+  },
+  {
+    "src": "photos-2026-27/UpperRiseOverRun.jpg",
+    "slug": "upper-maths-rise-over-run",
+    "aspect": "4:3",
+    "alt": "Working out a gradient from rise over run, with the measurements taken in the room"
+  },
+  {
+    "src": "photos-2026-27/20260817_134631.jpg",
+    "slug": "upper-maths-measuring-up",
+    "aspect": "4:3",
+    "alt": "Holding the level steady to take a measurement in an Upper Secondary maths lesson"
+  },
+  {
+    "src": "photos-2026-27/20260817_120423.jpg",
+    "slug": "upper-students-working-through",
+    "aspect": "4:3",
+    "alt": "Two Upper Secondary students working a problem through together"
+  },
+  {
+    "src": "photos-2026-27/UpperGroupWork.jpg",
+    "slug": "upper-own-courses-together",
+    "aspect": "4:3",
+    "alt": "Upper Secondary students working on their own courses side by side, with a teacher on hand"
+  },
+  {
+    "src": "photos-2026-27/UpperIntern1.jpg",
+    "slug": "upper-internship-bakery",
+    "aspect": "3:4",
+    "alt": "An Upper Secondary student on an internship at a Hội An bakery"
+  },
+  {
+    "src": "photos-2026-27/UpperIntern2.jpg",
+    "slug": "upper-internship-drinks",
+    "aspect": "3:4",
+    "alt": "Making up a drinks order on an internship shift"
+  },
+  {
+    "src": "photos-2026-27/UpperIntern3.jpg",
+    "slug": "upper-internship-counter",
+    "aspect": "3:4",
+    "alt": "Working the counter alongside the staff on an internship"
+  },
+  {
+    "src": "photos-2026-27/PrimaryTech1.jpg",
+    "slug": "primary-technology-tablet",
+    "aspect": "4:3",
+    "alt": "A Primary student working on a tablet in technology"
+  },
+  {
+    "src": "photos-2026-27/PrimaryTech2.jpg",
+    "slug": "primary-technology-inside-a-laptop",
+    "aspect": "4:3",
+    "alt": "A Primary student taking a laptop apart to see how it works"
+  },
+  {
+    "src": "photos-2026-27/poster-ready-for-lab.png",
+    "slug": "poster-lab-safety",
+    "alt": "A lab safety poster made by Lower Secondary students: goggles, mask, apron and gloves",
+    "quality": 86
+  },
+  {
+    "src": "photos-2026-27/poster-ready-for-sport.png",
+    "slug": "poster-sport-kit",
+    "alt": "A poster made by Lower Secondary students on what to bring to sport: a smile, a full water bottle and sport shoes",
+    "quality": 86
   }
 ]
