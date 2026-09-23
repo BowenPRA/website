@@ -3,18 +3,30 @@ layout: layouts/base.njk
 tone: navy
 stage: coral
 title: "Upper Secondary"
-description: "Upper Secondary at Palm River Academy for students aged 14 to 18. An academic plan built around your child's goal, usually a US high school diploma, mixed with a personal project, a trip the students plan themselves and, for some, an internship or a turn helping in the younger classes."
+description: "Upper Secondary at Palm River Academy for students aged 14 to 18. Most work towards an American high school diploma, with a teacher in the room, supplementary lessons and guidance, plus hands-on projects, a trip the students plan themselves and, for some, an internship or a turn helping in the younger classes."
 ---
 {% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "students-waterfall-field-trip" %}
 {% set heroEyebrow = "Upper Secondary · ages 14 to 18" %}
-{% set heroTitle = 'A plan built around <span class="mark">your child</span>' %}
-{% set heroText = "We sit down with you and your child, talk about where they want to go, and build an academic plan for it. Most work towards a US high school diploma, with a teacher coaching them in the room." %}
+{% set heroTitle = 'A diploma, and a plan built around <span class="mark">your child</span>' %}
+{% set heroText = "Most of our Upper Secondary students work towards an American high school diploma. We build the plan with you and your child, then coach them through it, every morning, in the room." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
-  <div class="wrap">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow eyebrow--stage">The diploma</p>
+      <h2>An American high school diploma, with us alongside</h2>
+      <p>Most students work towards an American high school diploma through accredited online courses. We make that work: a PRA teacher coaches them in the room every morning, we add supplementary lessons where a course needs backing up, and we guide the choice of courses towards where they want to go next.</p>
+      <p>The coursework is all in English, so every essay and every exam is language practice with something riding on it.</p>
+    </div>
+    <div class="leaf-wrap leaf-wrap--r has-sticker">
+      <span class="sticker sticker--coral sticker--tr">US high school diploma</span>
+      {% photo "upper-own-courses-together", "photo--lg photo--tilt-r" %}
+    </div>
+  </div>
+  <div class="wrap mt">
     <div class="center narrow">
       <p class="eyebrow eyebrow--stage">How it works</p>
       <h2>First, a conversation</h2>
@@ -22,8 +34,8 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
     </div>
     <div class="cards cards--3 mt">
       <div class="card">{{ ic.icon("chat", "blue") }}<h3>Talk it through</h3><p>We meet you and your child, look at what they have done so far, and agree a goal: university abroad, a career, or something they have not named yet.</p></div>
-      <div class="card">{{ ic.icon("book", "green") }}<h3>Academics that fit</h3><p>Most students work towards a US high school diploma through accredited online courses, with a PRA teacher coaching them every morning. The subjects and the pace follow the plan.</p></div>
-      <div class="card">{{ ic.icon("tools", "coral") }}<h3>Learning by doing</h3><p>Alongside the coursework, students learn by doing: a personal project each year, sometimes an internship or a turn helping in the younger classes, and a trip they plan themselves.</p></div>
+      <div class="card">{{ ic.icon("book", "green") }}<h3>A plan that fits</h3><p>The subjects and the pace follow the plan. Where a course needs more than the screen gives, a teacher adds a lesson.</p></div>
+      <div class="card">{{ ic.icon("tools", "coral") }}<h3>Learning by doing</h3><p>Alongside the coursework: a personal project each year, a trip they plan themselves, and for some an internship or a turn helping in the younger classes.</p></div>
     </div>
   </div>
 </section>
@@ -43,54 +55,38 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 <section>
-  <div class="wrap two">
-    <div>
-      <p class="eyebrow eyebrow--blue">Beyond the coursework</p>
-      <h2>Projects, a trip and more</h2>
-      <h3>The personal project</h3>
-      <p>One project a year, their choice: a business, research, a film, an app, a garden. They set the goal, we hold them to it, they present it.</p>
-      <h3>Internships</h3>
-      <p>Some students also take on an internship when it fits their plan. Ask us what might be possible for your child.</p>
-      <h3>Helping in the younger classes</h3>
-      <p>Some students spend part of their week assisting in a Primary or Early Years class, working alongside the teacher and the younger children. Ask us what might be possible for your child.</p>
-      <h3>The trip</h3>
-      <p>Once a year the Upper Secondary students plan an educational trip and take it: tickets, lodging, food, activities, the lot. They do the spreadsheets. We check them.</p>
-    </div>
-    <div class="leaf-wrap leaf-wrap--r has-sticker">
-      <span class="sticker sticker--coral sticker--tr">Projects and a trip</span>
-      {% photo "da-lat-trip-rope-bridge", "photo--lg photo--tilt" %}
-    </div>
-  </div>
-</section>
-
-<section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--stage">Internships</p>
-      <h2>Time in a real job</h2>
-      <p class="lede">When it fits the plan, a student spends part of their week working in a local business.</p>
+      <p class="eyebrow eyebrow--stage">Learning by doing</p>
+      <h2>Measure it yourself</h2>
+      <p class="lede">The quickest way to believe a formula is to go and get the numbers.</p>
     </div>
-    {% set collagePhotos = ["upper-internship-bakery", "upper-internship-drinks", "upper-internship-counter"] %}
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+    {% set collagePhotos = ["upper-maths-mirror-method", "upper-maths-mirror-measuring", "upper-maths-measuring-up", "upper-maths-rise-over-run"] %}
     {% include "partials/collage.njk" %}
-    <div class="center narrow mt">
-      <p>Front of house, the kitchen, the till. They turn up on time, take instructions from someone who is not their teacher, and find out what a working day is actually like. Ask us what might be possible for your child.</p>
+    <div class="narrow mt">
+      <h3>Maths off the page</h3>
+      <p>Height from a mirror on the floor and a pair of similar triangles. A gradient from rise over run, measured across the room with a level and a marker. The answer is checked against the thing itself, not against the back of the book. Then they explain it to the class.</p>
+      <h3>The personal project</h3>
+      <p>One project a year, their choice: a business, research, a film, an app, a garden. They set the goal, we hold them to it, they present it.</p>
     </div>
   </div>
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
-  <div class="wrap two">
-    <div>
-      <p class="eyebrow eyebrow--stage">Helping in the younger classes</p>
-      <h2>On the other side of the desk</h2>
-      <p>Some students spend part of their week assisting in an Early Years or Primary class. They read with the little ones, run an activity, and find out what it takes to hold a room of five-year-olds.</p>
-      <p>It is the same lesson as an internship, closer to home: turn up, be useful, and be someone a younger child looks up to.</p>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">The trip</p>
+      <h2>Đà Lạt, planned by the students</h2>
+      <p class="lede">Once a year the Upper Secondary group plans a trip and then goes on it. The last one went up to Đà Lạt.</p>
     </div>
-    <div>
-      {% set collagePhotos = ["upper-ta-reading-early-years", "upper-ta-sharing-a-book", "secondary-student-helping-primary"] %}
-      {% set collageWide = true %}
-      {% include "partials/collage.njk" %}
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+    {% set collagePhotos = ["da-lat-trip-dinner", "da-lat-trip-high-ropes", "da-lat-trip-go-karts", "da-lat-trip-market"] %}
+    {% set collageWide = true %}{% set collage2up = true %}
+    {% include "partials/collage.njk" %}
+    <div class="center narrow mt">
+      <p>The students plan all of it. They book the tickets, arrange the lodging, decide where to eat and which activities to do, and cost every part of it against a budget they set themselves. They do the spreadsheets. Teachers travel with them and check the numbers. The itinerary is theirs.</p>
     </div>
   </div>
 </section>
@@ -99,30 +95,33 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--stage">The trip</p>
-      <h2>Đà Lạt, planned by the students</h2>
-      <p class="lede">Once a year the Upper Secondary group plans a trip and then goes on it. The last one went up to Đà Lạt.</p>
-    </div>
-    {% set collagePhotos = ["da-lat-trip-dinner", "da-lat-trip-high-ropes", "da-lat-trip-go-karts", "da-lat-trip-market"] %}
-    {% set collageWide = true %}{% set collage2up = true %}
-    {% include "partials/collage.njk" %}
-    <div class="center narrow mt">
-      <p>The students plan all of it. They book the tickets, arrange the lodging, decide where to eat and which activities to do, and cost every part of it against a budget they set themselves. Teachers travel with them and check the numbers. The itinerary is theirs.</p>
+      <p class="eyebrow eyebrow--stage">Beyond the classroom</p>
+      <h2>Internships and learning buddies</h2>
+      <p class="lede">For some students, when it fits the plan, part of the week happens somewhere other than their desk.</p>
     </div>
   </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="center narrow">
-      <p class="eyebrow eyebrow--stage">Maths off the page</p>
-      <h2>Measure it yourself</h2>
-      <p class="lede">The quickest way to believe a formula is to go and get the numbers.</p>
+  <div class="wrap two mt">
+    <div>
+      <h3>Time in a real job</h3>
+      <p>Some students spend part of their week working in a local business. Front of house, the kitchen, the till. They turn up on time, take instructions from someone who is not their teacher, and find out what a working day is actually like.</p>
     </div>
-    {% set collagePhotos = ["upper-maths-mirror-method", "upper-maths-mirror-measuring", "upper-maths-measuring-up"] %}
-    {% include "partials/collage.njk" %}
-    <div class="center narrow mt">
-      <p>Height from a mirror on the floor and a pair of similar triangles. A gradient from rise over run, measured across the room. The answer is checked against the thing itself, not against the back of the book.</p>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["upper-internship-bakery", "upper-internship-drinks", "upper-internship-counter"] %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+  <div class="wrap two two--flip mt">
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["upper-ta-reading-early-years", "upper-ta-sharing-a-book", "secondary-student-helping-primary"] %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>
+    <div>
+      <h3>On the other side of the desk</h3>
+      <p>Others assist in an Early Years or Primary class as a learning buddy. They read with the little ones, run an activity, and find out what it takes to hold a room of five-year-olds.</p>
+      <p>It is the same lesson as an internship, closer to home: turn up, be useful, and be someone a younger child looks up to. Ask us what might be possible for your child.</p>
     </div>
   </div>
 </section>
@@ -131,12 +130,13 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
 <section class="band--pale">
   <div class="wrap two two--flip">
     <div class="leaf-wrap leaf-wrap--tint">
-      {% photo "upper-own-courses-together", "photo--lg photo--tilt-r" %}
+      {% photo "upper-years-students-group-project", "photo--lg photo--tall photo--tilt-r" %}
     </div>
     <div>
       <p class="eyebrow">After PRA</p>
       <h2>Where our students have gone</h2>
-      <p>More than ten former students are at high schools and universities overseas: in the US and Australia, and at international schools in Hà Nội, Đà Nẵng and India.</p>
+      <p>More than ten former students have gone on to high schools and universities overseas: in the US and Australia, and to international schools in Hà Nội, Đà Nẵng and India.</p>
+      <p>Some moved on to a high school abroad. Others went straight on to university. Either way, they went with a plan they had helped write and a teacher who knew exactly where they were up to.</p>
     </div>
   </div>
 </section>
