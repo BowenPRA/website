@@ -1195,7 +1195,13 @@ tr:last-child td { border-bottom: 0; }
   content: ""; position: absolute; inset: 0;
   background: radial-gradient(64% 52% at 50% 26%, rgba(255, 255, 255, 0.3), transparent 72%);
 }
-.cutout { position: relative; display: block; width: 100%; height: auto; transition: scale 0.45s var(--bounce); transform-origin: 50% 100%; }
+/* Anchored to the top and cropped by the card, so a portrait that stops at the
+   chest is cut by the card's edge instead of ending in mid-air. */
+.cutout {
+  position: absolute; inset: 0; display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 0;
+  transition: scale 0.45s var(--bounce); transform-origin: 50% 100%;
+}
 .cutout--none, .tcard__initial {
   position: absolute; inset: 0; display: grid; place-items: center;
   color: rgba(255, 255, 255, 0.85); font-weight: 700; font-size: 3rem;

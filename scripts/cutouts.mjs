@@ -5,6 +5,10 @@
 // main.css). The key floods in from the border, so background-coloured areas
 // inside the subject (a white shirt, a pale áo dài) are kept.
 //
+// The crop stops at the person rather than padding out to the card's shape, so
+// the output is not always 4:5. The card crops it (object-fit: cover, anchored
+// to the top), which keeps everyone solid down to the bottom edge.
+//
 // cutouts.json is an array of:
 //   {
 //     "src":  "wix-current/Mr_-Seth.png",  // path under originals/
@@ -23,8 +27,8 @@
 //     "lift": 0.07,      // optional: headroom above the head, as a fraction of the crop height
 //     "shift": 0.04,     // optional: nudge the crop sideways, as a fraction of its width
 //     "grow": 2,         // optional: pixels of the cut grown into the subject to eat the fringe
-//     "fade": 0.18       // optional: how much of the person the bottom fade covers, or false
-//                        //   to keep a hard edge on a portrait that stops short (default 0.18)
+//     "shadow": true     // optional: also sweep away a grey wall shadow along the silhouette
+//                        //   ({ sat, drop, depth } to tune how colourless, how dark and how far) (default 0.18)
 //   }
 //
 // Output: src/assets/img/team/<slug>-{360,720}.webp   (WebP keeps the alpha channel)
@@ -51,7 +55,7 @@ const force = process.argv.includes("--force");
 
 // Flood the backdrop in from the border. Interior areas that happen to match the
 // backdrop survive because the flood never reaches them.
-async function key(src, { tol, grow, feather }) {
+async function key(src, { tol, grow, feather, shadow }) {
   const { data, info } = await sharp(src).rotate().ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const { width: w, height: h, channels: c } = info;
   const n = w * h;
@@ -91,6 +95,42 @@ async function key(src, { tol, grow, feather }) {
     if (x < w - 1) { const q = p + 1; if (!mask[q] && isBg(q)) { mask[q] = 1; work.push(q); } }
     if (y > 0)     { const q = p - w; if (!mask[q] && isBg(q)) { mask[q] = 1; work.push(q); } }
     if (y < h - 1) { const q = p + w; if (!mask[q] && isBg(q)) { mask[q] = 1; work.push(q); } }
+  }
+
+  // A wall shadow hugging the silhouette is too dark for the colour key and too
+  // close to the person to matte out by hand. It is, however, grey, and it is
+  // narrow: sweep outward from the backdrop through near-colourless pixels only,
+  // and no further than `depth` pixels, so the shadow goes and the sweep cannot
+  // run away into hair or a lit cheek if it finds a way in.
+  if (shadow) {
+    const satMax = shadow.sat ?? 18;
+    const drop = shadow.drop ?? 120;
+    const depth = shadow.depth ?? Math.max(8, Math.round(w * 0.02));
+    const bgLum = (bg[0] + bg[1] + bg[2]) / 3;
+    const isShadow = (p) => {
+      const r = data[p * c], g = data[p * c + 1], b = data[p * c + 2];
+      if (Math.max(r, g, b) - Math.min(r, g, b) > satMax) return false;
+      const lum = (r + g + b) / 3;
+      return lum <= bgLum + 12 && lum >= bgLum - drop;
+    };
+    let front = [];
+    for (let p = 0; p < n; p++) {
+      if (!mask[p]) continue;
+      const x = p % w, y = (p / w) | 0;
+      if ((x > 0 && !mask[p - 1]) || (x < w - 1 && !mask[p + 1]) ||
+          (y > 0 && !mask[p - w]) || (y < h - 1 && !mask[p + w])) front.push(p);
+    }
+    for (let step = 0; step < depth && front.length; step++) {
+      const next = [];
+      for (const p of front) {
+        const x = p % w, y = (p / w) | 0;
+        if (x > 0)     { const q = p - 1; if (!mask[q] && isShadow(q)) { mask[q] = 1; next.push(q); } }
+        if (x < w - 1) { const q = p + 1; if (!mask[q] && isShadow(q)) { mask[q] = 1; next.push(q); } }
+        if (y > 0)     { const q = p - w; if (!mask[q] && isShadow(q)) { mask[q] = 1; next.push(q); } }
+        if (y < h - 1) { const q = p + w; if (!mask[q] && isShadow(q)) { mask[q] = 1; next.push(q); } }
+      }
+      front = next;
+    }
   }
 
   // The last pixel or two of the subject is a blend of hair and backdrop and
@@ -186,11 +226,16 @@ function frame(buf, w, h, { face, scale, lift, shift }) {
   const cx = (count ? sum / count : w / 2) + faceW * scale * shift;
 
   const cropW = Math.round(faceW * scale);
-  const cropH = Math.round(cropW / ASPECT);
+  const top = Math.round(crown - (cropW / ASPECT) * lift);
+
+  // Stop at the person. Padding the crop out to the card's 4:5 would leave
+  // empty card below anyone whose photo ends at the chest; the card itself
+  // crops or scales what it gets instead (object-fit: cover in .cutout).
+  const cropH = Math.min(Math.round(cropW / ASPECT), y1 - top + 1);
 
   return {
     left: Math.round(cx - cropW / 2),
-    top: Math.round(crown - cropH * lift),
+    top,
     width: cropW,
     height: cropH,
     faceW: Math.round(faceW),
@@ -239,38 +284,6 @@ async function extract(buf, w, h, box) {
     .toBuffer();
 }
 
-// Not every source photo holds a whole above-the-waist portrait: several of the
-// old square headshots stop at the chest, which on a coloured card leaves the
-// body ending on a razor-straight line partway down. Where the person stops
-// before the bottom of the card, the last stretch of them is faded out so they
-// sink into the colour instead. A portrait that already runs off the bottom
-// edge is left alone — that cut is the card's own edge and looks right.
-function fadeCutEdge(buf, w, h, fade) {
-  let lastY = -1;
-  for (let y = h - 1; y >= 0 && lastY < 0; y--) {
-    for (let x = 0; x < w; x++) if (buf[(y * w + x) * 4 + 3] >= 24) { lastY = y; break; }
-  }
-  if (lastY < 0 || lastY >= h - 3) return false;
-
-  let firstY = 0;
-  outer: for (let y = 0; y < h; y++) {
-    for (let x = 0; x < w; x++) if (buf[(y * w + x) * 4 + 3] >= 24) { firstY = y; break outer; }
-  }
-  // Hold the opacity and drop it late. A straight ramp leaves the middle of the
-  // band at half alpha, which turns a pale shirt into a ghost over a saturated
-  // card; this keeps the body solid and dissolves only the last stretch.
-  const span = Math.max(24, Math.round((lastY - firstY) * fade));
-  for (let y = Math.max(0, lastY - span); y <= lastY; y++) {
-    const t = 1 - (lastY - y) / span;
-    const k = 1 - t * t * t;
-    for (let x = 0; x < w; x++) {
-      const p = (y * w + x) * 4 + 3;
-      if (buf[p]) buf[p] = Math.round(buf[p] * k);
-    }
-  }
-  return true;
-}
-
 /* ---------- build ---------- */
 
 const specs = JSON.parse(await readFile(join(ORIGINALS, "cutouts.json"), "utf8"));
@@ -294,7 +307,7 @@ for (const spec of specs) {
   const done = !force && existing[slug] && (await stat(join(OUT, `${slug}-${WIDTHS[0]}.webp`)).catch(() => null));
   if (done && !process.argv.includes("--sheet")) { out[slug] = existing[slug]; continue; }
 
-  const { buf, w, h } = await key(join(ORIGINALS, src), { tol, grow, feather });
+  const { buf, w, h } = await key(join(ORIGINALS, src), { tol, grow, feather, shadow: spec.shadow });
   // A cast shadow the key cannot tell from the wall stays joined to the person,
   // so it is rubbed out by hand and the stray piece then falls away below.
   for (const [mx, my, mw, mh] of spec.mattes ?? []) {
@@ -306,18 +319,19 @@ for (const spec of specs) {
   keepLargest(buf, w, h);
   const box = frame(buf, w, h, { face: spec.face, scale, lift, shift });
   const cropped = await extract(buf, w, h, box);
-  const faded = spec.fade === false ? false : fadeCutEdge(cropped, box.width, box.height, spec.fade ?? 0.18);
   const png = await sharp(cropped, { raw: { width: box.width, height: box.height, channels: 4 } }).png().toBuffer();
 
+  const shape = box.height / box.width;
   for (const width of WIDTHS) {
     await sharp(png)
-      .resize({ width, height: Math.round(width / ASPECT), fit: "fill" })
+      .resize({ width, height: Math.round(width * shape), fit: "fill" })
       .webp({ quality: QUALITY, alphaQuality: 90 })
       .toFile(join(OUT, `${slug}-${width}.webp`));
   }
-  out[slug] = { alt, width: WIDTHS[WIDTHS.length - 1], height: Math.round(WIDTHS[WIDTHS.length - 1] / ASPECT), sizes: WIDTHS };
+  const widest = WIDTHS[WIDTHS.length - 1];
+  out[slug] = { alt, width: widest, height: Math.round(widest * shape), sizes: WIDTHS };
   if (process.argv.includes("--sheet")) sheet.push({ slug, png });
-  console.log(`${slug.padEnd(9)} face ${String(box.faceW).padStart(4)}px wide  crop ${box.width}x${box.height}  from ${w}x${h}${faded ? '  (bottom faded)' : ''}`);
+  console.log(`${slug.padEnd(9)} face ${String(box.faceW).padStart(4)}px wide  crop ${box.width}x${box.height} (${(box.height / box.width).toFixed(2)})  from ${w}x${h}`);
 }
 
 await writeFile(DATA, JSON.stringify(out, null, 2) + "\n");
@@ -327,7 +341,7 @@ if (sheet.length) {
   const cw = 200, ch = 250, cols = 6;
   const rows = Math.ceil(sheet.length / cols);
   const tiles = await Promise.all(sheet.map(async (s, i) => ({
-    input: await sharp(s.png).resize(cw, ch, { fit: "fill" }).png().toBuffer(),
+    input: await sharp(s.png).resize(cw, ch, { fit: "cover", position: "top" }).png().toBuffer(),
     left: (i % cols) * cw, top: Math.floor(i / cols) * ch,
   })));
   const bg = Buffer.from(

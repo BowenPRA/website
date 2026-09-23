@@ -2,7 +2,7 @@
   "seth": {
     "alt": "Mr. Seth",
     "width": 720,
-    "height": 900,
+    "height": 764,
     "sizes": [
       360,
       720
@@ -29,7 +29,7 @@
   "hien": {
     "alt": "Ms. Hien",
     "width": 720,
-    "height": 900,
+    "height": 901,
     "sizes": [
       360,
       720
@@ -38,7 +38,7 @@
   "caleb": {
     "alt": "Mr. Caleb",
     "width": 720,
-    "height": 900,
+    "height": 787,
     "sizes": [
       360,
       720
@@ -56,7 +56,7 @@
   "solo": {
     "alt": "Ms. Solo",
     "width": 720,
-    "height": 900,
+    "height": 788,
     "sizes": [
       360,
       720
@@ -74,7 +74,7 @@
   "tham": {
     "alt": "Ms. Tham",
     "width": 720,
-    "height": 900,
+    "height": 793,
     "sizes": [
       360,
       720
@@ -92,7 +92,7 @@
   "tham-v": {
     "alt": "Ms. Thắm V",
     "width": 720,
-    "height": 900,
+    "height": 827,
     "sizes": [
       360,
       720
