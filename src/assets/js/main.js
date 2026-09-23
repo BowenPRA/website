@@ -92,7 +92,7 @@
     "main section .center.narrow", ".two > *", ".method > *", ".cards > *", ".tiles > *",
     // on phones the gallery is a swipe strip, so it rises as one piece instead of photo by photo
     window.innerWidth < 720 ? ".gallery" : ".gallery > *",
-    ".values > li", ".steps > li", ".team > li", ".stats > *", ".cal > *", ".programs > *",
+    ".values > li", ".steps > li", ".team > li", ".stats > *", ".cal > *", ".programs > *", ".notices > li",
     ".faq details", ".table-wrap", ".picker__chips", ".cta__inner", ".faq h2",
     ".dayplan__row", ".daynotes > li", ".stages > *", ".dayline li"
   ].join(",");
@@ -229,6 +229,20 @@
       });
     });
     document.querySelectorAll(".gallery__hint").forEach(function (hint) { hint.hidden = false; });
+  }
+
+  // Announcement flyers: the poster and the "See the flyer" button both open the flyer full size,
+  // and the arrows move between the flyers on the page.
+  var posters = Array.prototype.slice.call(document.querySelectorAll(".notice__poster"))
+    .filter(function (p) { return p.querySelector("img"); });
+  if (posters.length && useLightbox()) {
+    var flyers = posters.map(function (p) { return p.querySelector("img"); });
+    posters.forEach(function (poster, i) {
+      function open() { useLightbox()(flyers, i); }
+      poster.addEventListener("click", open);
+      var button = poster.closest(".notice").querySelector(".notice__flyer");
+      if (button) button.addEventListener("click", open);
+    });
   }
 
   // Staff cards: the card opens that member's own photos. On a mouse the fan of

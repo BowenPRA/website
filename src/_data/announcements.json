@@ -1,0 +1,57 @@
+[
+  {
+    "id": "mid-autumn-2026",
+    "kind": "This Friday",
+    "tone": "sun",
+    "title": "Mid-Autumn Festival",
+    "when": "Friday 25 September, 2:30 to 4:00pm",
+    "ticker": "Mid-Autumn Festival, Friday 25 September, 2:30pm. Everyone welcome",
+    "text": "Student-run booths selling food and handmade things, and a show put on by our classes. Open to the public.",
+    "cta": {
+      "label": "Last year's festival",
+      "url": "/events/#mid-autumn"
+    }
+  },
+  {
+    "id": "quarter-2",
+    "kind": "Term dates",
+    "tone": "blue",
+    "title": "Quarter 2 begins",
+    "when": "Thursday 15 October",
+    "ticker": "Quarter 2 begins Thursday 15 October",
+    "text": "Quarter 1 ends on 8 October and fall break runs to 14 October. New students can start with the new quarter.",
+    "cta": {
+      "label": "See the calendar",
+      "url": "/families/schedule/#calendar"
+    }
+  },
+  {
+    "id": "global-program-offer",
+    "kind": "Offer",
+    "tone": "violet",
+    "title": "10% and 15% off the Global Program",
+    "when": "Until December 2026",
+    "ticker": "Global Program: 10% off a first child, 15% off a second, until December",
+    "text": "10% off for a first child and 15% off for a second, on the full-day program. Ages 2 to 14, three weeks to three months.",
+    "cta": {
+      "label": "How it works",
+      "url": "/learning/global-program/"
+    },
+    "flyer": "global-program-2026-27-offer-flyer"
+  },
+  {
+    "id": "early-years-offer",
+    "kind": "Offer",
+    "tone": "green",
+    "title": "35% off Nursery and Kindergarten",
+    "when": "Limited time offer",
+    "ticker": "Nursery and Kindergarten: 35% off tuition for the rest of the year",
+    "text": "35% off tuition when you enrol for the rest of the academic year. English all day, ages 20 months to 5 years.",
+    "note": "Terms and conditions apply.",
+    "cta": {
+      "label": "About Early Years",
+      "url": "/learning/early-years/"
+    },
+    "flyer": "early-years-tuition-offer-flyer"
+  }
+]

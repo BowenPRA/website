@@ -1100,5 +1100,26 @@
       1600
     ],
     "src": "photos-2026-27/1786437471771_280856908741706020_408375327852841067_565a5c53d98b02b9b9679ab27fddca94.jpg"
+  },
+  "global-program-2026-27-offer-flyer": {
+    "alt": "Global Program 2026-2027 flyer: a short-term program for travelling families, ages 2 to 14, three weeks to three months, with 10% off a first child and 15% off a second in Quarters 1 and 2",
+    "width": 1414,
+    "height": 2000,
+    "sizes": [
+      480,
+      960,
+      1414
+    ],
+    "src": "flyers/global-program-2026-27.png"
+  },
+  "early-years-tuition-offer-flyer": {
+    "alt": "Nursery and Kindergarten flyer: 35% off tuition for a limited time, for children 20 months to 5 years, with English immersion and learning through play",
+    "width": 940,
+    "height": 788,
+    "sizes": [
+      480,
+      940
+    ],
+    "src": "flyers/early-years-promotion.png"
   }
 }

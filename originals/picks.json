@@ -810,5 +810,17 @@
     "slug": "primary-construction-toys",
     "aspect": "3:4",
     "alt": "A Primary student building with construction toys"
+  },
+  {
+    "src": "flyers/global-program-2026-27.png",
+    "slug": "global-program-2026-27-offer-flyer",
+    "quality": 88,
+    "alt": "Global Program 2026-2027 flyer: a short-term program for travelling families, ages 2 to 14, three weeks to three months, with 10% off a first child and 15% off a second in Quarters 1 and 2"
+  },
+  {
+    "src": "flyers/early-years-promotion.png",
+    "slug": "early-years-tuition-offer-flyer",
+    "quality": 88,
+    "alt": "Nursery and Kindergarten flyer: 35% off tuition for a limited time, for children 20 months to 5 years, with English immersion and learning through play"
   }
 ]

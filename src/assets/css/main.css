@@ -5,7 +5,7 @@
    navy or light. Motion is small and all of it switches off under prefers-reduced-motion.
 
    Contents: tokens · tones · base · type · small parts (eyebrow, mark, sticker, tape, dot, frond)
-   · buttons · header · sections, bands, waves · heroes · photos · layouts · ribbons · tiles
+   · buttons · header · sections, bands, waves · heroes · photos · layouts · ribbons · noticeboard · tiles
    · picker and programs · stats · cards and icons · gallery and lightbox · values · steps · FAQ
    · tables and fees · schedule · calendar · events · team · forms · CTA · footer · 404 · motion */
 
@@ -635,6 +635,89 @@ section { padding: var(--section) 0; position: relative; }
 .mascot__eyes { transform-origin: 50px 40px; animation: blink 5s infinite; }
 @keyframes peek { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
 @keyframes blink { 0%, 44%, 50%, 100% { transform: scaleY(1); } 47% { transform: scaleY(0.1); } }
+
+/* ---------- noticeboard (home) ----------
+   A scrolling strip of the headlines, then a card each. The strip reuses the ribbon marquee: two runs
+   of the same items, so translating the track by half is seamless. Each card takes its colour from
+   `stage-*`, and the two offers carry a small tilted poster of the flyer in the corner. */
+
+.notices-band { padding: clamp(36px, 5vw, 56px) 0 var(--section-tight); }
+.ticker {
+  display: flex; align-items: stretch; border-radius: var(--pill); overflow: hidden;
+  background: var(--sun-pale); box-shadow: var(--shadow-sm); border: 1px solid var(--sun-tint);
+}
+.ticker__label {
+  display: flex; align-items: center; gap: 8px; flex: none; margin: 0; padding: 12px clamp(14px, 2vw, 22px);
+  background: var(--sun); color: var(--sun-ink); font-size: var(--t-eyebrow); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
+}
+.ticker__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--coral-deep); position: relative; }
+.ticker__dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--coral-deep); animation: ping 2s ease-out infinite; }
+.ticker__window {
+  flex: 1; min-width: 0; display: flex; align-items: center; overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 44px), transparent);
+  mask: linear-gradient(90deg, transparent, #000 18px, #000 calc(100% - 44px), transparent);
+}
+.ticker__track { display: flex; width: max-content; animation: marquee 52s linear infinite; }
+.ticker:hover .ticker__track, .ticker:focus-within .ticker__track { animation-play-state: paused; }
+.ticker__item { padding: 12px 0 12px 1.5em; font-weight: 600; color: var(--blue-ink); white-space: nowrap; }
+.ticker__item::after { content: "✦"; margin-left: 1.5em; color: var(--sun-deep); font-size: 0.7em; vertical-align: 0.15em; }
+
+.notices { list-style: none; display: grid; gap: 18px; margin-top: clamp(24px, 3vw, 36px); }
+@media (min-width: 640px) { .notices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .notices { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; } }
+.notice {
+  position: relative; display: flex; flex-direction: column; overflow: hidden;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--bounce), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.notice::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--stage);
+  transform: scaleX(0.22); transform-origin: left; transition: transform 0.5s var(--ease-out);
+}
+.notice:hover { transform: translateY(-6px); box-shadow: 0 20px 40px color-mix(in srgb, var(--stage) 22%, rgba(14, 42, 92, 0.08)); border-color: color-mix(in srgb, var(--stage) 40%, #fff); }
+.notice:hover::after { transform: scaleX(1); }
+.notice__kind {
+  align-self: start; margin: 0 0 12px; padding: 4px 12px; border-radius: var(--pill);
+  background: color-mix(in srgb, var(--stage-tint) 70%, #fff); color: var(--stage-ink);
+  font-size: 0.76rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.notice h3 { margin-bottom: 0.25em; color: var(--stage-ink); font-size: 1.22rem; line-height: 1.25; }
+.notice__when { margin: 0 0 0.7em; font-weight: 600; color: var(--ink); }
+.notice__text { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+.notice__note { margin: 0.7em 0 0; color: var(--ink-soft); font-size: 0.8rem; }
+.notice__do {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px;
+  margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); margin-top: auto;
+}
+.notice__do a, .notice__flyer {
+  font-family: var(--font); font-size: 0.92rem; font-weight: 600; color: var(--stage-ink);
+  background: none; border: 0; padding: 0; cursor: pointer;
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--stage) 45%, transparent);
+}
+.notice__do a:hover, .notice__flyer:hover { color: var(--stage); text-decoration-color: currentColor; }
+/* the flyer, as a little poster pinned to the card's corner. Decorative: the button above is the control. */
+.notice__poster {
+  position: absolute; right: 14px; bottom: 14px; width: 76px; rotate: 4deg; cursor: pointer;
+  filter: drop-shadow(0 6px 14px rgba(14, 42, 92, 0.22));
+  transition: rotate 0.4s var(--bounce), scale 0.4s var(--bounce);
+}
+.notice__poster .photo { aspect-ratio: 3 / 4; border-radius: 4px; border: 4px solid #fff; background: #fff; }
+.notice__poster .photo img { object-position: top; }
+.notice:hover .notice__poster { rotate: 0deg; scale: 1.06; }
+.notice:has(.notice__poster) .notice__do,
+.notice:has(.notice__poster) .notice__note { padding-right: 84px; }
+
+/* no scroll, no second run: the headlines simply wrap and sit there */
+@media (prefers-reduced-motion: reduce) {
+  .ticker { border-radius: var(--r); }
+  .ticker__window { -webkit-mask: none; mask: none; }
+  .ticker__track { flex-wrap: wrap; width: auto; transform: none !important; }
+  .ticker__item[aria-hidden="true"] { display: none; }
+  .ticker__item:last-child::after { content: none; }
+}
 
 /* ---------- stage tiles ---------- */
 
@@ -1326,7 +1409,7 @@ tr:last-child td { border-bottom: 0; }
 .reveal:not(.is-in) { opacity: 0; }
 .reveal.is-in { animation: rise 0.8s var(--ease-out) both; animation-delay: calc(var(--i, 0) * 90ms); }
 
-@media print { .reveal { opacity: 1 !important; animation: none !important; } .site-header, .float-cta, .river, .ribbons, .frond { display: none; } }
+@media print { .reveal { opacity: 1 !important; animation: none !important; } .site-header, .float-cta, .river, .ribbons, .ticker, .frond { display: none; } }
 
 /* smooth page-to-page fades in browsers that support them */
 @view-transition { navigation: auto; }
