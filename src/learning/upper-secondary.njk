@@ -62,7 +62,7 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
       <p class="lede">The quickest way to believe a formula is to go and get the numbers.</p>
     </div>
     {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
-    {% set collagePhotos = ["upper-maths-mirror-method", "upper-maths-mirror-measuring", "upper-maths-measuring-up", "upper-maths-rise-over-run"] %}
+    {% set collagePhotos = ["upper-maths-mirror-method", "upper-students-working-through", "upper-maths-measuring-up", "upper-maths-rise-over-run"] %}
     {% include "partials/collage.njk" %}
     <div class="narrow mt">
       <h3>Maths off the page</h3>
@@ -82,8 +82,9 @@ description: "Upper Secondary at Palm River Academy for students aged 14 to 18. 
       <p class="lede">Once a year the Upper Secondary group plans a trip and then goes on it. The last one went up to Đà Lạt.</p>
     </div>
     {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
-    {% set collagePhotos = ["da-lat-trip-dinner", "da-lat-trip-high-ropes", "da-lat-trip-go-karts", "da-lat-trip-market"] %}
-    {% set collageWide = true %}{% set collage2up = true %}
+    {# the trip in order, from the first dinner to the last market: eight prints go two rows deep across the page, so no 2up here #}
+    {% set collagePhotos = ["da-lat-trip-dinner", "da-lat-trip-harnesses", "da-lat-trip-high-ropes", "da-lat-trip-zip-line", "da-lat-trip-lunch", "da-lat-trip-capybara", "da-lat-trip-go-karts", "da-lat-trip-market"] %}
+    {% set collageWide = true %}
     {% include "partials/collage.njk" %}
     <div class="center narrow mt">
       <p>The students plan all of it. They book the tickets, arrange the lodging, decide where to eat and which activities to do, and cost every part of it against a budget they set themselves. They do the spreadsheets. Teachers travel with them and check the numbers. The itinerary is theirs.</p>

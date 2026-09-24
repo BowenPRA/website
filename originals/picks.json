@@ -964,8 +964,8 @@
   {
     "src": "photos-2026-27/20260817_120423.jpg",
     "slug": "upper-students-working-through",
-    "aspect": "4:3",
-    "alt": "Two Upper Secondary students working a problem through together"
+    "aspect": "3:4",
+    "alt": "Two Upper Secondary students working a problem through together, the notebook open between them"
   },
   {
     "src": "photos-2026-27/UpperGroupWork.jpg",
@@ -977,7 +977,8 @@
     "src": "photos-2026-27/UpperIntern1.jpg",
     "slug": "upper-internship-bakery",
     "aspect": "3:4",
-    "alt": "An Upper Secondary student on an internship at a Hội An bakery"
+    "region": [0.36, 0, 0.62, 1],
+    "alt": "An Upper Secondary student pouring a drink on an internship shift at a Hội An bakery"
   },
   {
     "src": "photos-2026-27/UpperIntern2.jpg",
