@@ -165,5 +165,15 @@
       0.51,
       0.189
     ]
+  },
+  {
+    "slug": "duyen",
+    "src": "staff/Ms-Duyen-2026.png",
+    "alt": "Ms. Duyen",
+    "tol": 8,
+    "face": [
+      0.516,
+      0.292
+    ]
   }
 ]
