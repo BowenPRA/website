@@ -81,6 +81,10 @@ center in Hội An, Việt Nam." The rest of the site says "learning community",
 - Emoji as bullets; sparkle and rocket emoji anywhere
 - Three identical icon cards in a row as the default section
 - Sentences that could belong to any school on earth
+- A neat aphorism to close every paragraph, or the same point made twice, once
+  plainly and once cleverly ("Naming what you saw is the hard part, and it is the
+  English part"). Bowen, 2026-09-24: it "feels super like AI". Say the thing once,
+  plainly, and let the classroom detail carry it.
 
 ## 4. Site map
 
@@ -298,17 +302,16 @@ Still open:
   from the projects down (the personal project, the maths cluster, the trip, internships and
   learning buddies, where students have gone) is as Bowen wants it. Internships are mentioned
   softly ("sometimes an internship", "ask us what might be possible").
-- Stage-page copy (Bowen, 2026-09-24): the core sections on Primary and Lower Secondary lead
-  with the language, not the subjects. Say plainly that we are an English language center and
-  that the Cambridge subjects are how we teach English, then give each subject the English it
-  builds: Primary maths has the words for comparing and explaining (more than, half, heavier,
-  roll or stack), Primary science the words for what happened (first, then, because); Lower
-  Secondary maths is reading the problem and explaining the method, science is the write-up and
-  defending it, English is the lesson where the language itself is the subject. Each page keeps
-  one line that lands it: "A child who can tell you why the shape rolled has just used English
-  for something real", and "A student who can explain a fair test has learned some science and a
-  lot of English". IGCSE is no longer named on Lower Secondary (it implied a pathway the Upper
-  Secondary page does not offer); Bowen to say if it should come back.
+- Stage-page copy (Bowen, 2026-09-24): the core sections on Primary and Lower Secondary say
+  once, plainly, that we are an English language center and that the Cambridge subjects double
+  as English lessons, then describe each subject concretely and let that carry it. Primary maths
+  is the objects and the words for them (which shape rolls, heavier, more than, fewer, half);
+  Primary science is predict, watch, describe; Lower Secondary maths is reading the problem and
+  explaining the method, science is the write-up and the argument about whose numbers to trust,
+  English is books and argument. A first draft dressed every paragraph up with a closing line and
+  Bowen rejected it as AI writing, so keep the plain version (see the voice rules in section 3).
+  IGCSE is no longer named on Lower Secondary (it implied a pathway the Upper Secondary page does
+  not offer); Bowen to say if it should come back.
 - Home hero facts are three leaf-shaped bubbles (round on three corners, pointed at the stem, pale
   veins behind the text) in deep green, mint and teal: "20 months to 18 years", "Small classes", "Since 2017". The stats band shows years in Hội An (computed from the founding year), not staff count.
 - Photos: prefer the ones Bowen chose for the Wix draft plus polished activity shots
