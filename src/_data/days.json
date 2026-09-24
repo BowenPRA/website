@@ -139,7 +139,7 @@
       "am": {
         "title": "Every morning",
         "items": [
-          { "core": ["Their own courses"], "text": "Two long blocks, 8:45 to 12:25. Each student works through their own accredited courses in English, with a teacher coaching. The subjects follow the plan we agreed with them." }
+          { "core": ["Their own courses"], "text": "Two long blocks, 8:45 to 12:25. Each student works through their own courses in English, with a teacher coaching. The subjects follow the plan we agreed with them." }
         ]
       },
       "pm": {

@@ -294,9 +294,10 @@ Still open:
   `src/_data/days.json`, written by hand from `src/_data/schedule.json` (still
   copied from the admin app by `scripts/schedule-from-admin.mjs`, but no longer
   rendered). The same file feeds the "A day in ..." timelines on the stage pages.
-- Upper Secondary copy (Bowen, 2026-09-22, revised 2026-09-24): no Cambridge pathway, no
-  IELTS, PTE or GED, and since 24 September no US high school diploma either — the site does
-  not name a qualification anywhere. Say that we build an academic plan with the family around
+- Upper Secondary copy (Bowen, 2026-09-22, revised twice on 2026-09-24): no Cambridge pathway,
+  no IELTS, PTE or GED, no US high school diploma, and no mention of exams or accreditation
+  anywhere — not "accredited courses", not "every essay and every exam". The site does not name
+  a qualification or a verification of one. Say that we build an academic plan with the family around
   the student's goal, that the focus is stronger English and, for many, studying abroad, and
   that academics mix with projects and internships. The lead of the page carries that; everything
   from the projects down (the personal project, the maths cluster, the trip, internships and
