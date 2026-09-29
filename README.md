@@ -1,6 +1,6 @@
 # Palm River Academy website
 
-Static site for palmriveracademy.edu.vn, built with [Eleventy](https://www.11ty.dev/)
+Static site for pra.edu.vn, built with [Eleventy](https://www.11ty.dev/)
 and deployed to GitHub Pages. See [PLAN.md](PLAN.md) for the site plan, voice
 rules, and what content is still needed.
 
@@ -36,7 +36,13 @@ Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and
 publishes it to GitHub Pages. In the repo settings, set Pages, Source to
 "GitHub Actions" once.
 
-Until the custom domain is pointed here the site lives at
-`https://bowenpra.github.io/<repo-name>/`. The workflow sets `PATH_PREFIX`
-from the repo name so links work there. When DNS moves, add `src/CNAME`
-containing `palmriveracademy.edu.vn` and the prefix becomes `/`.
+The site is served at `https://pra.edu.vn/` (custom domain set under Settings, Pages).
+`src/CNAME` holds the domain; while it exists the workflow builds with the path
+prefix `/`. Without it the workflow falls back to `/<repo-name>/` for
+`https://bowenpra.github.io/<repo-name>/`. The admin app keeps its own domain,
+`current.pra.edu.vn`, from the BowenPRA/admin repo.
+
+DNS for pra.edu.vn is at P.A Vietnam: four A and four AAAA records for GitHub
+Pages on the apex, `www` as a CNAME to `bowenpra.github.io`, `current` as a
+CNAME to `bowenpra.github.io`. The MX and TXT records are Google Workspace
+email; leave them alone.
