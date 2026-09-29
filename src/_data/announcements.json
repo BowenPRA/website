@@ -1,26 +1,25 @@
 [
   {
     "id": "mid-autumn-2026",
-    "kind": "This Friday",
+    "kind": "Photos",
     "tone": "sun",
     "title": "Mid-Autumn Festival",
-    "when": "Friday 25 September, 2:30 to 4:00pm",
-    "ticker": "Mid-Autumn Festival, Friday 25 September, 2:30pm. Everyone welcome",
-    "text": "Student-led booths and activities, a silent auction, and performances by our classes. Open to the public, so bring the family.",
+    "when": "Friday 25 September",
+    "ticker": "Mid-Autumn Festival photos are up. 15% of the profits went to Go Danang Charity",
+    "text": "Thank you to everyone who came. Our students ran the stalls and games, and 15% of the profits went to Go Danang Charity. See what they did, with photos.",
     "cta": {
-      "label": "Last year's festival",
-      "url": "/events/#mid-autumn",
+      "label": "See the photos",
+      "url": "/events/#mid-autumn-2026",
       "vi": {
-        "label": "Trung thu năm ngoái"
+        "label": "Xem ảnh"
       }
     },
-    "flyer": "mid-autumn-festival-2026-flyer",
     "vi": {
-      "kind": "Thứ Sáu này",
+      "kind": "Ảnh",
       "title": "Tết Trung thu",
-      "when": "Thứ Sáu, 25/9, 14:30 đến 16:00",
-      "ticker": "Tết Trung thu, thứ Sáu, 25/9, 14:30. Mời tất cả mọi người",
-      "text": "Gian hàng và hoạt động do học viên tổ chức, một buổi đấu giá im lặng và các tiết mục biểu diễn của các lớp. Mở cửa cho mọi người, ba mẹ cứ đưa cả nhà cùng đến."
+      "when": "Thứ Sáu, 25/9",
+      "ticker": "Ảnh Tết Trung thu đã có trên trang. 15% lợi nhuận được quyên góp cho Go Danang",
+      "text": "Cảm ơn các gia đình đã đến. Học viên tự đứng gian hàng và tổ chức trò chơi, và 15% lợi nhuận được quyên góp cho tổ chức từ thiện Go Danang. Xem các con đã làm gì qua ảnh."
     }
   },
   {
