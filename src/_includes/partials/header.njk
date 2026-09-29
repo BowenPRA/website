@@ -42,7 +42,7 @@
       {% for code in ["en", "vi"] %}
       {% set L = strings[code] %}
       {% if code == lang %}<span lang="{{ code }}" aria-current="true"><abbr title="{{ L.name }}">{{ code | upper }}</abbr></span>
-      {% else %}<a href="{{ page.url | twin | href(lang) }}" lang="{{ code }}" hreflang="{{ code }}" title="{{ T.lang.switchTo }}"><span aria-hidden="true">{{ code | upper }}</span><span class="u-hide">{{ L.name }}</span></a>{% endif %}
+      {% else %}<a href="{{ page.url | twin | href(code) }}" lang="{{ code }}" hreflang="{{ code }}" title="{{ T.lang.switchTo }}"><span aria-hidden="true">{{ code | upper }}</span><span class="u-hide">{{ L.name }}</span></a>{% endif %}
       {% endfor %}
     </div>
     {% endif %}
