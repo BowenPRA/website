@@ -101,13 +101,30 @@ export default async function () {
     for (const slug of slugs) if (quoted.has(slug)) add(slug, { title, url });
   }
 
+  // ---- each staff card's photos ----
+  // The ones picked for the card by hand (team.json `shots`) come first, in their
+  // order; then every other photo the album finds the person in, newest first: named
+  // in the caption ("Mr. Seth speaking to families") or the file name, or given
+  // `people` in picks.json. So a captioned photo reaches the card without a hand edit.
+  const roster = team.members
+    .map((m) => ({ name: m.name, first: plain(m.name).replace(/^(Mr|Ms)\.\s*/, "") }))
+    .sort((a, b) => b.first.length - a.first.length); // "Thắm V" before "Tham", so the longer name wins
+  const peopleOf = (slug) => photos[slug].people || who({ slug, alt: photos[slug].alt, file: (photos[slug].src || "").split("/").pop() || "", team, roster });
+  const staffShots = Object.fromEntries(team.members.map((m) => {
+    const picked = (m.shots || []).filter((s) => photos[s]);
+    const found = slugs
+      .filter((s) => s !== `team-${m.slug}` && !picked.includes(s) && peopleOf(s).includes(m.name))
+      .sort((a, b) => (photos[b].taken || "").localeCompare(photos[a].taken || ""));
+    return [m.slug, [...picked, ...found]];
+  }));
+
   // ---- pages that render a photo out of a data file ----
   // The scan above cannot see these: the template only ever names a variable.
   // Each one is listed here by hand, so a new data file full of slugs needs a
   // line adding; until it gets one, the fallback below flags it rather than
   // calling the photo unused.
   for (const e of events) for (const slug of e.photos || []) add(slug, { title: e.name, url: `/events/#${e.id}`, group: "Events" });
-  for (const m of team.members) for (const slug of m.shots || []) add(slug, { title: `About Us · ${m.name}`, url: "/about/", group: "About Us" });
+  for (const m of team.members) for (const slug of staffShots[m.slug]) add(slug, { title: `About Us · ${m.name}`, url: "/about/", group: "About Us" });
   for (const a of announcements) if (a.flyer) add(a.flyer, { title: "Home · noticeboard", url: "/", group: "Home" });
   for (const p of programs) {
     if (!p.photo) continue;
@@ -134,10 +151,6 @@ export default async function () {
   }
 
   // ---- what the original's path can tell us ----
-  const roster = team.members
-    .map((m) => ({ name: m.name, first: plain(m.name).replace(/^(Mr|Ms)\.\s*/, "") }))
-    .sort((a, b) => b.first.length - a.first.length); // "Thắm V" before "Tham", so the longer name wins
-
   const thisYear = schoolYear(new Date().toISOString().slice(0, 10));
 
   const entries = slugs.map((slug) => {
@@ -157,7 +170,7 @@ export default async function () {
     const listed = events.find((e) => (e.photos || []).includes(slug));
     const event = listed ? { name: listed.name, url: `/events/#${listed.id}` } : eventFromPath(src, events);
 
-    const people = p.people || who({ slug, alt: p.alt, file, team, roster });
+    const people = peopleOf(slug);
     const stages = stagesOf({ slug, alt: p.alt, usedOn });
     const klass = classOf(src, p.alt);
     const kind = kindOf(slug, src);
@@ -235,6 +248,7 @@ export default async function () {
   return {
     photos: entries,
     facets,
+    team: staffShots, // staff slug -> the photos on that person's card on /about/
     counts: {
       total: entries.length,
       unused: entries.filter((e) => !e.used.length).length,

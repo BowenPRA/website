@@ -71,7 +71,7 @@ description: "Palm River Academy is a licensed English language center in Hội 
     </div>
     <ul class="team mt">
       {% for m in team.members %}
-      {% set shots = m.shots or [] %}
+      {% set shots = album.team[m.slug] or [] %}
       <li class="tcard tcard--t{{ m.tint or 1 }}{% if shots.length %} tcard--shots{% endif %}">
         <div class="tcard__stage">
           {% if cutouts[m.slug] %}{% cutout m.slug %}{% else %}<span class="tcard__initial" aria-hidden="true">{{ m.name | replace("Mr. ", "") | replace("Ms. ", "") | first }}</span>{% endif %}

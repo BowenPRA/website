@@ -1112,38 +1112,32 @@
     "focus": "63% 42%"
   },
   {
-    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-the-market-from-above.jpg",
-    "slug": "mid-autumn-festival-2026-the-market-from-above",
-    "alt": "Families browsing the student stalls in the courtyard at the Mid-Autumn Festival",
-    "taken": "2026-09-25",
-    "tags": [
-      "whole-school",
-      "celebration",
-      "courtyard"
-    ],
-    "focus": "42% 33%"
-  },
-  {
     "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-pressing-a-mooncake.jpg",
     "slug": "mid-autumn-festival-2026-pressing-a-mooncake",
-    "alt": "A student and an adult pressing a pink mooncake mould at the Mid-Autumn Festival",
+    "alt": "A student pressing a pink mooncake mould with Ms. Thắm V at the Mid-Autumn Festival",
     "taken": "2026-09-25",
     "tags": [
       "cooking",
       "courtyard"
     ],
-    "focus": "45% 55%"
+    "focus": "45% 55%",
+    "people": [
+      "Ms. Thắm V"
+    ]
   },
   {
     "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-pressing-the-mooncake-mould.jpg",
     "slug": "mid-autumn-festival-2026-pressing-the-mooncake-mould",
-    "alt": "A child and an adult pressing a mooncake mould together at the Mid-Autumn Festival",
+    "alt": "Ms. Thắm V pressing a mooncake mould with a child at the Mid-Autumn Festival",
     "taken": "2026-09-25",
     "tags": [
       "cooking",
       "courtyard"
     ],
-    "focus": "56% 29%"
+    "focus": "56% 29%",
+    "people": [
+      "Ms. Thắm V"
+    ]
   },
   {
     "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-the-snack-stall.jpg",
