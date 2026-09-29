@@ -59,7 +59,8 @@ maths, cooking, art and sport. Content through context, and doing.
 **The "English Language Center" line** appears in the footer on every page and
 in the About page opening: "Palm River Academy is a licensed English language
 center in Hội An, Việt Nam." The rest of the site says "learning community",
-"school day", "campus", "teachers" naturally.
+"class", "campus", "teachers" naturally. We are never "a school" or "the school" (Bowen,
+2026-09-29): not in English, and not "trường" in Vietnamese. Other schools can be schools.
 
 **Voice rules**
 - Short sentences. Plain words. Say the specific thing (13 kids, 2017, Cẩm
@@ -227,8 +228,10 @@ one hand-drawn underline per page, big photos of real students.
   Formspree action.
 - **Map:** static image of both campuses with a "Open in Google Maps" link.
   No embedded iframe (slow, cookie banner).
-- **Vietnamese version:** phase 5. Same templates, content under `src/vi/`,
-  language toggle in the header. Do not machine-translate.
+- **Vietnamese version:** built 2026-09-29. Every page has a twin under `/vi/` (source in `src/vi/`),
+  EN | VI toggle in the header, data files carry `vi` blocks. How it works, the glossary and the
+  writing rules are in VIETNAMESE.md; `npm run check:vi` catches drift. A Vietnamese member of staff
+  reads new copy before it goes live.
 - **Analytics:** none at launch. Add a privacy-friendly one later if wanted.
 
 ## 8. Content Bowen needs to supply
@@ -266,7 +269,7 @@ Still open:
    focus states, 404, social share image, favicon set.
 4. **Launch.** Add `CNAME`, move DNS from Wix, redirect old Wix URLs,
    update Google Business Profile link.
-5. **Later.** Vietnamese version, calendar `.ics` export, photo gallery page.
+5. **Later.** Calendar `.ics` export, photo gallery page. (Vietnamese version: done 2026-09-29.)
 
 ## 10. Decisions made in this plan
 

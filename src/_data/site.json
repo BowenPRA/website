@@ -21,5 +21,11 @@
     "facebook": "https://www.facebook.com/palmriveracademy",
     "whatsapp": "https://wa.me/84968494245"
   },
-  "formAction": "https://formspree.io/f/REPLACE_ME"
+  "formAction": "https://formspree.io/f/REPLACE_ME",
+  "vi": {
+    "tagline": "Trung tâm Anh ngữ tại Hội An, nơi các con học tiếng Anh bằng cách làm những việc thật.",
+    "description": "Palm River Academy là trung tâm Anh ngữ tại Hội An, Việt Nam, dành cho trẻ từ 20 tháng đến 18 tuổi. Chúng tôi dạy tiếng Anh qua nội dung: Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, trong những lớp học không quá 13 học viên.",
+    "hours": "Thứ Hai đến thứ Sáu, 8:00 đến 16:00",
+    "licenceLine": "Palm River Academy là trung tâm Anh ngữ được cấp phép tại Hội An, Việt Nam."
+  }
 }

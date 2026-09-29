@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+tone: green
+title: "Cẩm nang phụ huynh"
+description: "Cẩm nang phụ huynh của Palm River Academy: những quy định mọi gia đình ở PRA cùng thực hiện."
+---
+
+{% set heroPhoto = "gallery-reading-corner" %}
+{% set heroEyebrow = "Gia đình" %}
+{% set heroTitle = '<span class="mark">Cẩm nang</span> phụ huynh' %}
+{% set heroText = "Đưa đón, ngày con ốm, điện thoại: những điều mọi gia đình ở PRA cần biết." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">Hằng ngày, gia đình nào cũng cần nhớ</p>
+      <h2>Bản tóm tắt</h2>
+      <ul class="checklist">
+        <li><strong>Mở cửa lúc 8:00.</strong> Giờ học từ 8:30 đến 15:20. Nursery và Kindergarten tan lúc 15:15.</li>
+        <li><strong>Con ốm hoặc nghỉ?</strong> Ba mẹ báo cho chúng tôi trước 8:00 sáng hôm đó. Nếu đi du lịch, ba mẹ báo trước hai tuần để giáo viên chuẩn bị bài cho con.</li>
+        <li><strong>Người đón con</strong> phải là người có tên trong đơn đăng ký.</li>
+        <li><strong>Mang theo</strong> bình nước mỗi ngày, và giày kín mũi cho giờ thể dục và các chuyến đi. Early Years: quần áo dự phòng, thêm tã và khăn ướt nếu cần.</li>
+        <li><strong>Không có đồng phục.</strong> Các con mặc đồ của mình.</li>
+        <li><strong>Điện thoại</strong> của các con được gửi ở quầy lễ tân đến cuối ngày.</li>
+        <li><strong>Dấu hiệu ốm</strong> như sốt, ho, phát ban, đỏ mắt, nôn hoặc tiêu chảy: ba mẹ báo ngay cho chúng tôi.</li>
+        <li><strong>Thông tin</strong> được gửi qua Google Classroom, bản tin hằng tuần và nhóm Zalo của lớp.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Cẩm nang đầy đủ</h3>
+      <p>Cẩm nang đầy đủ nói về những phần còn lại: sức khỏe và thuốc, xe đưa đón, các chuyến đi và thiết bị điện tử.</p>
+      <p>Cần một bản? Ba mẹ hỏi văn phòng, chúng tôi sẽ gửi.</p>
+      <a class="btn btn--primary btn--small" href="mailto:{{ site.email }}?subject=C%E1%BA%A9m%20nang%20ph%E1%BB%A5%20huynh">Xin bản cẩm nang</a>
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "Còn thắc mắc gì, ba mẹ cứ hỏi văn phòng." %}
+{% set ctaText = "Câu hỏi nào hay, chúng tôi sẽ thêm vào cẩm nang." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

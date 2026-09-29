@@ -14,6 +14,8 @@ description: "Book a tour of Palm River Academy in Hội An, or ask a question. 
 <section>
   <div class="wrap two two--top">
     <form class="form" action="{{ site.formAction }}" method="POST">
+      {# Tells whoever answers which language the family wrote in. #}
+      <input type="hidden" name="language" value="{{ strings[lang].name }}">
       <div class="form__row">
         <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
         <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>

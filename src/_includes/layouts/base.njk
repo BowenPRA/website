@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+{% set T = strings[lang] %}
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,25 +12,39 @@
   <meta property="og:title" content="{{ title or site.name }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ site.url }}{{ '/assets/img/photos/hero-cooking-class-hoi-an-1600.webp' | url }}">
-  <link rel="icon" href="{{ '/assets/img/favicon.svg' | url }}" type="image/svg+xml">
+  <meta property="og:locale" content="{{ T.locale }}">
+  {# Each page and its twin in the other language (VIETNAMESE.md). English is the default. #}
+  {% if not noTwin %}
+  {% set enUrl = page.url | basePath %}
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ enUrl | url }}">
+  <link rel="alternate" hreflang="vi" href="{{ site.url }}{{ enUrl | twin | url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enUrl | url }}">
+  {% endif %}
+  <meta property="og:image" content="{{ site.url }}{{ '/assets/img/photos/hero-cooking-class-hoi-an-1600.webp' | href(lang) }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | href(lang) }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+  {# Poppins has no Vietnamese letters (ộ, ế, ở...). Vietnamese pages are set in Be Vietnam Pro; English pages
+     list it after Poppins, and the browser fetches only its Vietnamese letters, for place names like Hội An. #}
+  {% if lang == "vi" %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+  {% else %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | href(lang) }}">
   <script>document.documentElement.classList.add("js")</script>
 </head>
-<body class="page-{{ page.fileSlug or 'home' }} tone-{{ tone or 'blue' }}{% if stage %} stage-{{ stage }}{% endif %}">
-  <a class="skip" href="#main">Skip to content</a>
+<body class="page-{{ (page.fileSlug if page.fileSlug != 'vi') or 'home' }} tone-{{ tone or 'blue' }}{% if stage %} stage-{{ stage }}{% endif %}">
+  <a class="skip" href="#main">{{ T.skip }}</a>
   {% include "partials/frond-symbol.njk" %}
   {% include "partials/header.njk" %}
   <main id="main">
     {{ content | safe }}
   </main>
   {% include "partials/footer.njk" %}
-  <a class="float-cta" href="{{ '/contact/' | url }}" aria-label="Contact us">
+  <a class="float-cta" href="{{ '/contact/' | href(lang) }}" aria-label="{{ T.contact }}">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
   </a>
-  <script src="{{ '/assets/js/main.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | href(lang) }}" defer></script>
 </body>
 </html>

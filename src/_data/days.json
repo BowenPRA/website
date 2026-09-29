@@ -8,43 +8,59 @@
       "who": "Early Years", "sub": "20 months to 4 years", "tone": "sun", "href": "#early-years",
       "say": "Early Years: drop-off from 8:00, play and learning 8:30 to 11:15, lunch and a nap 11:15 to 13:45, an afternoon session, pick-up at 15:15.",
       "segs": [
-        { "from": "8:00", "to": "8:30", "k": "rest", "t": "Drop-off" },
-        { "from": "8:30", "to": "11:15", "k": "core", "t": "Play and learning, with snack at 10:00", "label": "Play, phonics, stories", "short": "Learning" },
-        { "from": "11:15", "to": "13:45", "k": "rest", "t": "Lunch and nap", "label": "Lunch and nap", "short": "Nap" },
-        { "from": "13:45", "to": "15:15", "k": "core", "t": "Afternoon session, then snack and play", "label": "Afternoon session" },
-        { "from": "15:15", "to": "15:30", "k": "rest", "t": "Pick-up" }
-      ]
+        { "from": "8:00", "to": "8:30", "k": "rest", "t": "Drop-off", "vi": { "t": "Đưa con đến" } },
+        { "from": "8:30", "to": "11:15", "k": "core", "t": "Play and learning, with snack at 10:00", "label": "Play, phonics, stories", "short": "Learning", "vi": { "t": "Chơi và học, bữa phụ lúc 10:00", "label": "Chơi, phonics, truyện", "short": "Học" } },
+        { "from": "11:15", "to": "13:45", "k": "rest", "t": "Lunch and nap", "label": "Lunch and nap", "short": "Nap", "vi": { "t": "Ăn trưa và ngủ trưa", "label": "Ăn trưa, ngủ trưa", "short": "Ngủ" } },
+        { "from": "13:45", "to": "15:15", "k": "core", "t": "Afternoon session, then snack and play", "label": "Afternoon session", "vi": { "t": "Buổi học chiều, sau đó ăn bữa phụ và chơi", "label": "Học buổi chiều" } },
+        { "from": "15:15", "to": "15:30", "k": "rest", "t": "Pick-up", "vi": { "t": "Đón con" } }
+      ],
+      "vi": {
+        "sub": "20 tháng đến 4 tuổi",
+        "say": "Early Years: đưa con đến từ 8:00, chơi và học 8:30 đến 11:15, ăn trưa và ngủ trưa 11:15 đến 13:45, một buổi học chiều, đón con lúc 15:15."
+      }
     },
     {
       "who": "Primary", "sub": "Ages 5 to 11", "tone": "green", "href": "#primary",
       "say": "Primary: arrive from 8:00, English, Maths and Science 8:45 to 11:35, lunch, specialist and vocational classes 12:25 to 15:15.",
       "segs": [
-        { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive" },
-        { "from": "8:45", "to": "11:35", "k": "core", "t": "English, Maths and Science, with snack at 10:25", "label": "English · Maths · Science", "short": "Core lessons" },
-        { "from": "11:35", "to": "12:25", "k": "rest", "t": "Lunch", "label": "Lunch" },
-        { "from": "12:25", "to": "15:15", "k": "spec", "t": "Specialist and vocational classes, with snack at 14:05", "label": "Specialist and vocational classes", "short": "Classes" }
-      ]
+        { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive", "vi": { "t": "Đến lớp, khởi động nhẹ nhàng và sinh hoạt lớp", "label": "Đến lớp" } },
+        { "from": "8:45", "to": "11:35", "k": "core", "t": "English, Maths and Science, with snack at 10:25", "label": "English · Maths · Science", "short": "Core lessons", "vi": { "t": "Tiếng Anh, Toán và Khoa học, bữa phụ lúc 10:25", "label": "Tiếng Anh · Toán · Khoa học", "short": "Môn chính" } },
+        { "from": "11:35", "to": "12:25", "k": "rest", "t": "Lunch", "label": "Lunch", "vi": { "t": "Ăn trưa", "label": "Ăn trưa" } },
+        { "from": "12:25", "to": "15:15", "k": "spec", "t": "Specialist and vocational classes, with snack at 14:05", "label": "Specialist and vocational classes", "short": "Classes", "vi": { "t": "Các lớp bộ môn và thực hành, bữa phụ lúc 14:05", "label": "Các lớp bộ môn và thực hành", "short": "Các lớp" } }
+      ],
+      "vi": {
+        "sub": "5 đến 11 tuổi",
+        "say": "Primary: đến lớp từ 8:00, tiếng Anh, Toán và Khoa học 8:45 đến 11:35, ăn trưa, các lớp bộ môn và thực hành 12:25 đến 15:15."
+      }
     },
     {
       "who": "Lower Secondary", "sub": "Ages 11 to 14", "tone": "blue", "href": "#lower-secondary",
       "say": "Lower Secondary: arrive from 8:00, Maths, English and Science 8:45 to 11:35, History or Executive Function, lunch at 12:25, specialist and vocational classes until 15:20.",
       "segs": [
-        { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive" },
-        { "from": "8:45", "to": "11:35", "k": "core", "t": "Maths, English and Science, with snack at 10:25", "label": "Maths · English · Science", "short": "Core lessons" },
-        { "from": "11:35", "to": "12:25", "k": "spec", "t": "History or Executive Function" },
-        { "from": "12:25", "to": "13:15", "k": "rest", "t": "Lunch", "label": "Lunch" },
-        { "from": "13:15", "to": "15:20", "k": "spec", "t": "Specialist and vocational classes, with snack at 14:05", "label": "Specialist and vocational", "short": "Classes" }
-      ]
+        { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive", "vi": { "t": "Đến lớp, khởi động nhẹ nhàng và sinh hoạt lớp", "label": "Đến lớp" } },
+        { "from": "8:45", "to": "11:35", "k": "core", "t": "Maths, English and Science, with snack at 10:25", "label": "Maths · English · Science", "short": "Core lessons", "vi": { "t": "Toán, tiếng Anh và Khoa học, bữa phụ lúc 10:25", "label": "Toán · Tiếng Anh · Khoa học", "short": "Môn chính" } },
+        { "from": "11:35", "to": "12:25", "k": "spec", "t": "History or Executive Function", "vi": { "t": "Lịch sử hoặc Executive Function" } },
+        { "from": "12:25", "to": "13:15", "k": "rest", "t": "Lunch", "label": "Lunch", "vi": { "t": "Ăn trưa", "label": "Ăn trưa" } },
+        { "from": "13:15", "to": "15:20", "k": "spec", "t": "Specialist and vocational classes, with snack at 14:05", "label": "Specialist and vocational", "short": "Classes", "vi": { "t": "Các lớp bộ môn và thực hành, bữa phụ lúc 14:05", "label": "Bộ môn và thực hành", "short": "Các lớp" } }
+      ],
+      "vi": {
+        "sub": "11 đến 14 tuổi",
+        "say": "Lower Secondary: đến lớp từ 8:00, Toán, tiếng Anh và Khoa học 8:45 đến 11:35, Lịch sử hoặc Executive Function, ăn trưa lúc 12:25, các lớp bộ môn và thực hành đến 15:20."
+      }
     },
     {
       "who": "Upper Secondary", "sub": "Ages 14 to 18", "tone": "coral", "href": "#upper-secondary",
       "say": "Upper Secondary: arrive from 8:00, two long blocks on each student's own program 8:45 to 12:25, lunch, then Movement, Wellbeing, electives and study time until 15:20.",
       "segs": [
-        { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive" },
-        { "from": "8:45", "to": "12:25", "k": "core", "t": "Two long blocks on each student's own program, with snack at 10:25", "label": "Two blocks on their own program", "short": "Core lessons" },
-        { "from": "12:25", "to": "13:15", "k": "rest", "t": "Lunch", "label": "Lunch" },
-        { "from": "13:15", "to": "15:20", "k": "spec", "t": "Movement, Wellbeing, electives and study time, with snack at 14:05", "label": "Movement, electives, study", "short": "Classes" }
-      ]
+        { "from": "8:00", "to": "8:45", "k": "rest", "t": "Arrival, soft start and homeroom", "label": "Arrive", "vi": { "t": "Đến lớp, khởi động nhẹ nhàng và sinh hoạt lớp", "label": "Đến lớp" } },
+        { "from": "8:45", "to": "12:25", "k": "core", "t": "Two long blocks on each student's own program, with snack at 10:25", "label": "Two blocks on their own program", "short": "Core lessons", "vi": { "t": "Hai tiết dài theo chương trình riêng của từng học viên, bữa phụ lúc 10:25", "label": "Hai tiết theo chương trình riêng", "short": "Môn chính" } },
+        { "from": "12:25", "to": "13:15", "k": "rest", "t": "Lunch", "label": "Lunch", "vi": { "t": "Ăn trưa", "label": "Ăn trưa" } },
+        { "from": "13:15", "to": "15:20", "k": "spec", "t": "Movement, Wellbeing, electives and study time, with snack at 14:05", "label": "Movement, electives, study", "short": "Classes", "vi": { "t": "Movement, Wellbeing, môn tự chọn và giờ tự học, bữa phụ lúc 14:05", "label": "Movement, tự chọn, tự học", "short": "Các lớp" } }
+      ],
+      "vi": {
+        "sub": "14 đến 18 tuổi",
+        "say": "Upper Secondary: đến lớp từ 8:00, hai tiết dài theo chương trình riêng của từng học viên 8:45 đến 12:25, ăn trưa, sau đó Movement, Wellbeing, môn tự chọn và giờ tự học đến 15:20."
+      }
     }
   ],
   "stages": [
@@ -56,25 +72,31 @@
       "am": {
         "title": "Mornings",
         "items": [
-          { "who": "Nursery", "text": "Short sessions of play, stories, songs and puzzles, with two teachers in the room all day." },
-          { "who": "Kindergarten", "core": ["Outside play", "Phonics and Maths", "Literacy"], "text": "Every morning, in that order, with snack and play in the middle." }
-        ]
+          { "who": "Nursery", "text": "Short sessions of play, stories, songs and puzzles, with two teachers in the room all day.", "vi": { "text": "Những buổi ngắn: chơi, nghe truyện, hát và ghép hình, luôn có hai giáo viên trong lớp cả ngày." } },
+          { "who": "Kindergarten", "core": ["Outside play", "Phonics and Maths", "Literacy"], "text": "Every morning, in that order, with snack and play in the middle.", "vi": { "core": ["Chơi ngoài trời", "Phonics (ngữ âm) và Toán", "Đọc viết"], "text": "Mỗi sáng, theo đúng thứ tự đó, giữa giờ có bữa phụ và giờ chơi." } }
+        ],
+        "vi": { "title": "Buổi sáng" }
       },
       "pm": {
         "title": "After lunch",
         "items": [
-          { "text": "Lunch at 11:15, then a two-hour nap in their own cot. After that, Nursery has one more play session and Kindergarten has Understanding the World: science and geography for four-year-olds." }
-        ]
+          { "text": "Lunch at 11:15, then a two-hour nap in their own cot. After that, Nursery has one more play session and Kindergarten has Understanding the World: science and geography for four-year-olds.", "vi": { "text": "Ăn trưa lúc 11:15, sau đó các bé ngủ trưa hai tiếng trên giường riêng. Sau giấc ngủ, Nursery có thêm một buổi chơi, còn Kindergarten học Understanding the World (Tìm hiểu thế giới): khoa học và địa lý cho các bé bốn tuổi." } }
+        ],
+        "vi": { "title": "Sau bữa trưa" }
       },
       "steps": [
-        { "t": "8:00", "what": "Drop-off", "note": "Until 8:30" },
-        { "t": "8:30", "what": "Outside play", "note": "Then phonics and maths in Kindergarten" },
-        { "t": "10:00", "what": "Snack and play" },
-        { "t": "10:30", "what": "Stories and literacy" },
-        { "t": "11:15", "what": "Lunch and a nap", "note": "Two hours, in their own cot" },
-        { "t": "13:45", "what": "Afternoon session", "note": "Understanding the World in Kindergarten" },
-        { "t": "15:15", "what": "Pick-up", "note": "After-care until 16:30, for a fee" }
-      ]
+        { "t": "8:00", "what": "Drop-off", "note": "Until 8:30", "vi": { "what": "Đưa con đến", "note": "Đến 8:30" } },
+        { "t": "8:30", "what": "Outside play", "note": "Then phonics and maths in Kindergarten", "vi": { "what": "Chơi ngoài trời", "note": "Sau đó là phonics và Toán ở Kindergarten" } },
+        { "t": "10:00", "what": "Snack and play", "vi": { "what": "Bữa phụ và giờ chơi" } },
+        { "t": "10:30", "what": "Stories and literacy", "vi": { "what": "Truyện và đọc viết" } },
+        { "t": "11:15", "what": "Lunch and a nap", "note": "Two hours, in their own cot", "vi": { "what": "Ăn trưa và ngủ trưa", "note": "Hai tiếng, trên giường riêng của bé" } },
+        { "t": "13:45", "what": "Afternoon session", "note": "Understanding the World in Kindergarten", "vi": { "what": "Học buổi chiều", "note": "Understanding the World ở Kindergarten" } },
+        { "t": "15:15", "what": "Pick-up", "note": "After-care until 16:30, for a fee", "vi": { "what": "Đón con", "note": "Trông thêm đến 16:30, có tính phí" } }
+      ],
+      "vi": {
+        "ages": "20 tháng đến 4 tuổi", "groups": "Nursery và Kindergarten",
+        "facts": ["Đưa con đến từ 8:00", "Đón con lúc 15:15", "Trông thêm đến 16:30, có tính phí"]
+      }
     },
     {
       "key": "primary", "name": "Primary", "tone": "green",
@@ -84,24 +106,31 @@
       "am": {
         "title": "Every morning",
         "items": [
-          { "core": ["English", "Maths", "Science"], "text": "Cambridge Primary. One lesson of each, every day, all before lunch." }
-        ]
+          { "core": ["English", "Maths", "Science"], "text": "Cambridge Primary. One lesson of each, every day, all before lunch.", "vi": { "core": ["Tiếng Anh", "Toán", "Khoa học"], "text": "Cambridge Primary. Mỗi ngày một tiết mỗi môn, tất cả trước bữa trưa." } }
+        ],
+        "vi": { "title": "Mỗi buổi sáng" }
       },
       "pm": {
         "title": "Afternoons",
         "items": [
           { "classes": ["Cooking", "Technology", "Art and Craft", "Movement and Exercise", "Dance", "Practice, Presentation and Play", "Master Minds", "Everyday Experts", "Book Worms", "Wellbeing", "Boredom"],
-            "text": "Specialist and vocational classes, where the English gets used." }
-        ]
+            "text": "Specialist and vocational classes, where the English gets used.",
+            "vi": { "classes": ["Nấu ăn", "Công nghệ", "Mỹ thuật và thủ công", "Movement và thể dục", "Múa", "Practice, Presentation and Play", "Master Minds", "Everyday Experts", "Book Worms", "Wellbeing", "Boredom"], "text": "Các lớp bộ môn và thực hành, nơi các con đem tiếng Anh ra dùng." } }
+        ],
+        "vi": { "title": "Buổi chiều" }
       },
       "steps": [
-        { "t": "8:00", "what": "Arrive", "note": "Soft start, play outside" },
-        { "t": "8:30", "what": "Homeroom" },
-        { "t": "8:45", "what": "English, Maths, Science", "note": "Snack break at 10:25" },
-        { "t": "11:35", "what": "Lunch" },
-        { "t": "12:25", "what": "Afternoon classes", "note": "Cooking, technology, craft, movement and more" },
-        { "t": "15:15", "what": "Home time" }
-      ]
+        { "t": "8:00", "what": "Arrive", "note": "Soft start, play outside", "vi": { "what": "Đến lớp", "note": "Khởi động nhẹ nhàng, chơi ngoài trời" } },
+        { "t": "8:30", "what": "Homeroom", "vi": { "what": "Sinh hoạt lớp" } },
+        { "t": "8:45", "what": "English, Maths, Science", "note": "Snack break at 10:25", "vi": { "what": "Tiếng Anh, Toán, Khoa học", "note": "Nghỉ ăn bữa phụ lúc 10:25" } },
+        { "t": "11:35", "what": "Lunch", "vi": { "what": "Ăn trưa" } },
+        { "t": "12:25", "what": "Afternoon classes", "note": "Cooking, technology, craft, movement and more", "vi": { "what": "Các lớp buổi chiều", "note": "Nấu ăn, công nghệ, thủ công, vận động và nhiều lớp khác" } },
+        { "t": "15:15", "what": "Home time", "vi": { "what": "Tan học" } }
+      ],
+      "vi": {
+        "ages": "5 đến 11 tuổi",
+        "facts": ["8:00 đến 15:15", "Sinh hoạt lớp lúc 8:30", "Ăn trưa lúc 11:35"]
+      }
     },
     {
       "key": "lower-secondary", "name": "Lower Secondary", "tone": "blue",
@@ -111,25 +140,32 @@
       "am": {
         "title": "Every morning",
         "items": [
-          { "core": ["Maths", "English", "Science"], "text": "Cambridge Lower Secondary, one lesson of each every day. Then History or Executive Function until lunch." }
-        ]
+          { "core": ["Maths", "English", "Science"], "text": "Cambridge Lower Secondary, one lesson of each every day. Then History or Executive Function until lunch.", "vi": { "core": ["Toán", "Tiếng Anh", "Khoa học"], "text": "Cambridge Lower Secondary, mỗi ngày một tiết mỗi môn. Sau đó là Lịch sử hoặc Executive Function đến giờ ăn trưa." } }
+        ],
+        "vi": { "title": "Mỗi buổi sáng" }
       },
       "pm": {
         "title": "Afternoons",
         "items": [
           { "classes": ["Maker Space (technology)", "Art of Science", "Movement", "History", "Executive Function", "Wellbeing"],
-            "text": "Specialist and vocational classes, with time each week to review and catch up." }
-        ]
+            "text": "Specialist and vocational classes, with time each week to review and catch up.",
+            "vi": { "classes": ["Maker Space (công nghệ)", "Art of Science", "Movement", "Lịch sử", "Executive Function", "Wellbeing"], "text": "Các lớp bộ môn và thực hành, mỗi tuần có giờ để ôn tập và theo kịp bài." } }
+        ],
+        "vi": { "title": "Buổi chiều" }
       },
       "steps": [
-        { "t": "8:00", "what": "Arrive", "note": "Soft start" },
-        { "t": "8:30", "what": "Homeroom" },
-        { "t": "8:45", "what": "Maths, English, Science", "note": "Snack break at 10:25" },
-        { "t": "11:35", "what": "History or Executive Function" },
-        { "t": "12:25", "what": "Lunch" },
-        { "t": "13:15", "what": "Afternoon classes", "note": "Art of Science, Maker Space, Movement, Wellbeing" },
-        { "t": "15:20", "what": "Home time" }
-      ]
+        { "t": "8:00", "what": "Arrive", "note": "Soft start", "vi": { "what": "Đến lớp", "note": "Khởi động nhẹ nhàng" } },
+        { "t": "8:30", "what": "Homeroom", "vi": { "what": "Sinh hoạt lớp" } },
+        { "t": "8:45", "what": "Maths, English, Science", "note": "Snack break at 10:25", "vi": { "what": "Toán, tiếng Anh, Khoa học", "note": "Nghỉ ăn bữa phụ lúc 10:25" } },
+        { "t": "11:35", "what": "History or Executive Function", "vi": { "what": "Lịch sử hoặc Executive Function" } },
+        { "t": "12:25", "what": "Lunch", "vi": { "what": "Ăn trưa" } },
+        { "t": "13:15", "what": "Afternoon classes", "note": "Art of Science, Maker Space, Movement, Wellbeing", "vi": { "what": "Các lớp buổi chiều", "note": "Art of Science, Maker Space, Movement, Wellbeing" } },
+        { "t": "15:20", "what": "Home time", "vi": { "what": "Tan học" } }
+      ],
+      "vi": {
+        "ages": "11 đến 14 tuổi",
+        "facts": ["8:00 đến 15:20", "Sinh hoạt lớp lúc 8:30", "Ăn trưa lúc 12:25"]
+      }
     },
     {
       "key": "upper-secondary", "name": "Upper Secondary", "tone": "coral",
@@ -139,25 +175,32 @@
       "am": {
         "title": "Every morning",
         "items": [
-          { "core": ["Their own courses"], "text": "Two long blocks, 8:45 to 12:25. Each student works through their own courses in English, with a teacher coaching. The subjects follow the plan we agreed with them." }
-        ]
+          { "core": ["Their own courses"], "text": "Two long blocks, 8:45 to 12:25. Each student works through their own courses in English, with a teacher coaching. The subjects follow the plan we agreed with them.", "vi": { "core": ["Các khóa học riêng"], "text": "Hai tiết dài, 8:45 đến 12:25. Mỗi học viên tự học các khóa học của mình bằng tiếng Anh, có giáo viên kèm. Các môn học theo kế hoạch chúng tôi đã thống nhất với từng học viên." } }
+        ],
+        "vi": { "title": "Mỗi buổi sáng" }
       },
       "pm": {
         "title": "Afternoons",
         "items": [
           { "classes": ["Movement", "Wellbeing", "Maker Space (technology)", "Art of Science", "Study time"],
-            "text": "Study time goes on coursework and the personal project." }
-        ]
+            "text": "Study time goes on coursework and the personal project.",
+            "vi": { "classes": ["Movement", "Wellbeing", "Maker Space (công nghệ)", "Art of Science", "Giờ tự học"], "text": "Giờ tự học dành cho bài tập của khóa học và dự án cá nhân." } }
+        ],
+        "vi": { "title": "Buổi chiều" }
       },
       "steps": [
-        { "t": "8:00", "what": "Arrive", "note": "Soft start" },
-        { "t": "8:30", "what": "Homeroom" },
-        { "t": "8:45", "what": "Block 1", "note": "Their own courses, a teacher coaching" },
-        { "t": "10:45", "what": "Block 2", "note": "After a snack break" },
-        { "t": "12:25", "what": "Lunch" },
-        { "t": "13:15", "what": "Afternoons", "note": "Movement, Wellbeing, electives, study time" },
-        { "t": "15:20", "what": "Home time" }
-      ]
+        { "t": "8:00", "what": "Arrive", "note": "Soft start", "vi": { "what": "Đến lớp", "note": "Khởi động nhẹ nhàng" } },
+        { "t": "8:30", "what": "Homeroom", "vi": { "what": "Sinh hoạt lớp" } },
+        { "t": "8:45", "what": "Block 1", "note": "Their own courses, a teacher coaching", "vi": { "what": "Tiết dài 1", "note": "Các khóa học riêng, có giáo viên kèm" } },
+        { "t": "10:45", "what": "Block 2", "note": "After a snack break", "vi": { "what": "Tiết dài 2", "note": "Sau giờ nghỉ ăn bữa phụ" } },
+        { "t": "12:25", "what": "Lunch", "vi": { "what": "Ăn trưa" } },
+        { "t": "13:15", "what": "Afternoons", "note": "Movement, Wellbeing, electives, study time", "vi": { "what": "Buổi chiều", "note": "Movement, Wellbeing, môn tự chọn, giờ tự học" } },
+        { "t": "15:20", "what": "Home time", "vi": { "what": "Tan học" } }
+      ],
+      "vi": {
+        "ages": "14 đến 18 tuổi",
+        "facts": ["8:00 đến 15:20", "Sinh hoạt lớp lúc 8:30", "Ăn trưa lúc 12:25"]
+      }
     }
   ]
 }

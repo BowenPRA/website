@@ -1,12 +1,13 @@
+{% set T = strings[lang] %}
 <section class="cta">
   {% set frondClass = "frond--bl" %}{% include "partials/frond.njk" %}
   {% set frondClass = "frond--tr" %}{% include "partials/frond.njk" %}
   <div class="wrap cta__inner">
-    <h2>{{ ctaTitle or "Come and see it for yourself." }}</h2>
-    <p>{{ ctaText or "Walk around with us for an hour, Monday to Friday. Not in Hội An yet? We will do a video call." }}</p>
+    <h2>{{ ctaTitle or T.cta.title }}</h2>
+    <p>{{ ctaText or T.cta.text }}</p>
     <div class="cta__actions">
-      <a class="btn btn--white" href="{{ '/contact/' | url }}">Book a tour</a>
-      <a class="btn btn--ghost-white" href="tel:{{ site.phoneIntl }}">Call {{ site.phone }}</a>
+      <a class="btn btn--white" href="{{ '/contact/' | href(lang) }}">{{ T.tour }}</a>
+      <a class="btn btn--ghost-white" href="tel:{{ site.phoneIntl }}">{{ T.call }} {{ site.phone }}</a>
     </div>
   </div>
 </section>

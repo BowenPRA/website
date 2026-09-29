@@ -1,12 +1,13 @@
 {# The noticeboard, under the hero on the home page. Items come from src/_data/announcements.json.
    The strip scrolls the headlines; the cards carry the detail. Two of them have a flyer: the button
    carries a tilted thumbnail of it and opens it full size in the shared lightbox (main.js). #}
+{% set T = strings[lang] %}
 <section class="notices-band">
   <div class="wrap">
-    <h2 class="u-hide">Announcements</h2>
+    <h2 class="u-hide">{{ T.notices.heading }}</h2>
 
     <div class="ticker">
-      <p class="ticker__label"><span class="ticker__dot" aria-hidden="true"></span>Now on</p>
+      <p class="ticker__label"><span class="ticker__dot" aria-hidden="true"></span>{{ T.notices.now }}</p>
       <div class="ticker__window">
         <div class="ticker__track">
           {% for a in announcements %}<span class="ticker__item">{{ a.ticker }}</span>{% endfor %}
@@ -26,14 +27,14 @@
         <p class="notice__do">
           {% if a.flyer %}
           <button class="notice__flyer" type="button">
-            <span class="notice__poster" aria-hidden="true">{% photo a.flyer, "", "72px" %}</span>See the flyer
+            <span class="notice__poster" aria-hidden="true">{% photo a.flyer, "", "72px" %}</span>{{ T.notices.flyer }}
           </button>
           {% endif %}
-          <a class="notice__link" href="{{ a.cta.url | url }}">{{ a.cta.label }}</a>
+          <a class="notice__link" href="{{ a.cta.url | href(lang) }}">{{ a.cta.label }}</a>
         </p>
       </li>
       {% endfor %}
     </ul>
-    <p class="notices__hint">Swipe for more.</p>
+    <p class="notices__hint">{{ T.notices.swipe }}</p>
   </div>
 </section>

@@ -1,15 +1,15 @@
 ---
 layout: layouts/base.njk
 tone: light
-title: "Schedule and calendar"
-description: "How the day runs at Palm River Academy, from Early Years to Upper Secondary: English, Maths and Science every morning, specialist and vocational classes after lunch. Plus the dates for the year."
+title: "Lịch học và lịch năm học"
+description: "Một ngày ở Palm River Academy, từ Early Years đến Upper Secondary: tiếng Anh, Toán và Khoa học mỗi sáng, các lớp bộ môn và thực hành sau bữa trưa. Kèm các ngày quan trọng trong năm."
 ---
 {% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "gallery-twister-game" %}
-{% set heroEyebrow = "Schedule and calendar · " + schedule.schoolYear %}
-{% set heroTitle = 'How the <span class="mark">day</span> runs' %}
-{% set heroText = "English, Maths and Science every morning. Cooking, technology, art and sport after lunch. Here is the shape of the week at each age, and the dates for the year." %}
+{% set heroEyebrow = "Lịch học và lịch năm học · " + schedule.schoolYear %}
+{% set heroTitle = 'Một <span class="mark">ngày học</span> ở PRA' %}
+{% set heroText = "Tiếng Anh, Toán và Khoa học mỗi buổi sáng. Nấu ăn, công nghệ, mỹ thuật và thể thao sau bữa trưa. Dưới đây là lịch tuần của từng độ tuổi và các ngày quan trọng trong năm." %}
 {% include "partials/pagehero.njk" %}
 
 {% set dayFrom = days.from | mins %}
@@ -17,16 +17,16 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Monday to Friday</p>
-      <h2>The day at a glance</h2>
-      <p class="lede">Doors open at 8:00 for every age. Core subjects first, while heads are fresh. After lunch, the classes where the English gets used.</p>
+      <p class="eyebrow">Thứ Hai đến thứ Sáu</p>
+      <h2>Lịch một ngày</h2>
+      <p class="lede">Trung tâm mở cửa lúc 8:00 cho mọi độ tuổi. Các môn chính học trước, khi đầu óc còn tỉnh táo. Sau bữa trưa là những lớp các con đem tiếng Anh ra dùng.</p>
     </div>
 
     <figure class="dayplan">
       <ul class="dayplan__key">
-        <li><i class="key key--core"></i>Core lessons</li>
-        <li><i class="key key--spec"></i>Specialist and vocational classes</li>
-        <li><i class="key key--rest"></i>Arrival, lunch and rest</li>
+        <li><i class="key key--core"></i>Môn chính</li>
+        <li><i class="key key--spec"></i>Lớp bộ môn và thực hành</li>
+        <li><i class="key key--rest"></i>Đến lớp, ăn trưa và nghỉ</li>
       </ul>
       <div class="dayplan__axis" aria-hidden="true">
         <span></span>
@@ -39,18 +39,18 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
         <a class="dayplan__who" href="{{ r.href }}"><span class="dot dot--{{ r.tone }}"></span><span>{{ r.who }}<small>{{ r.sub }}</small></span></a>
         <div class="dayplan__bar" role="img" aria-label="{{ r.say }}">
           {% for s in r.segs %}{% set a = s.from | mins %}{% set b = s.to | mins %}
-          <span class="seg seg--{{ s.k }}" style="--l: {{ (a - dayFrom) / daySpan * 100 }}%; --w: {{ (b - a) / daySpan * 100 }}%" title="{{ s.from }} to {{ s.to }} · {{ s.t }}"><b>{% if s.label %}<em class="seg__long">{{ s.label }}</em>{% endif %}{% if s.short %}<em class="seg__short">{{ s.short }}</em>{% endif %}</b></span>
+          <span class="seg seg--{{ s.k }}" style="--l: {{ (a - dayFrom) / daySpan * 100 }}%; --w: {{ (b - a) / daySpan * 100 }}%" title="{{ s.from }} đến {{ s.to }} · {{ s.t }}"><b>{% if s.label %}<em class="seg__long">{{ s.label }}</em>{% endif %}{% if s.short %}<em class="seg__short">{{ s.short }}</em>{% endif %}</b></span>
           {% endfor %}
         </div>
       </div>
       {% endfor %}
-      <figcaption>Snack breaks at about 10:25 and 14:05 are left off.</figcaption>
+      <figcaption>Biểu đồ không ghi giờ ăn phụ, vào khoảng 10:25 và 14:05.</figcaption>
     </figure>
 
     <ul class="daynotes">
-      <li>{{ ic.icon("clock", "violet") }}<span><strong>Off sick or away?</strong> Tell us by 8:00 that morning.</span></li>
-      <li>{{ ic.icon("whisk", "sun") }}<span><strong>Lunch and two snacks</strong> every day, if you want them.</span></li>
-      <li>{{ ic.icon("bus", "blue") }}<span><strong>The bus</strong> runs around Hội An, Vĩnh Điện and Đà Nẵng.</span></li>
+      <li>{{ ic.icon("clock", "violet") }}<span><strong>Con ốm hoặc nghỉ?</strong> Ba mẹ báo cho chúng tôi trước 8:00 sáng hôm đó.</span></li>
+      <li>{{ ic.icon("whisk", "sun") }}<span><strong>Bữa trưa và hai bữa phụ</strong> mỗi ngày, nếu ba mẹ đăng ký.</span></li>
+      <li>{{ ic.icon("bus", "blue") }}<span><strong>Xe đưa đón</strong> chạy quanh Hội An, Vĩnh Điện và Đà Nẵng.</span></li>
     </ul>
   </div>
 </section>
@@ -59,9 +59,9 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Stage by stage</p>
-      <h2>What the week holds</h2>
-      <p class="lede">Mornings keep to the core subjects. The mix after lunch changes as children grow.</p>
+      <p class="eyebrow">Theo từng cấp</p>
+      <h2>Một tuần có gì</h2>
+      <p class="lede">Buổi sáng luôn dành cho các môn chính. Các lớp buổi chiều thay đổi theo độ tuổi.</p>
     </div>
 
     <div class="stages mt">
@@ -73,7 +73,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
           <h3>{{ s.name }}</h3>
           {% if s.groups %}<p class="sday__groups">{{ s.groups }}</p>{% endif %}
           <ul class="sday__facts">{% for f in s.facts %}<li>{{ f }}</li>{% endfor %}</ul>
-          <a class="sday__more" href="{{ s.url | href(lang) }}">More about {{ s.name }} <span aria-hidden="true">→</span></a>
+          <a class="sday__more" href="{{ s.url | href(lang) }}">Tìm hiểu thêm về {{ s.name }} <span aria-hidden="true">→</span></a>
         </header>
         <div class="sday__body">
           {% for z in [s.am, s.pm] %}
@@ -95,7 +95,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
       </article>
       {% endfor %}
     </div>
-    <p class="table-note center">Teachers' names are left off; you will meet them on the tour. And yes, Boredom is a real class.</p>
+    <p class="table-note center">Chúng tôi không ghi tên giáo viên; ba mẹ sẽ gặp các thầy cô khi đến tham quan. Và đúng vậy, có một lớp tên là Boredom (“buồn chán”) thật.</p>
   </div>
 </section>
 
@@ -103,8 +103,8 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
 <section id="calendar">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Academic calendar</p>
-      <h2>Dates for {{ calendar.year }}</h2>
+      <p class="eyebrow">Lịch năm học</p>
+      <h2>Các ngày trong năm {{ calendar.year }}</h2>
     </div>
     <div class="cal mt">
       {% for m in calendar.months %}
@@ -122,7 +122,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
   </div>
 </section>
 
-{% set ctaTitle = "Come and watch a real Tuesday." %}
-{% set ctaText = "Pick a morning and see the day in action." %}
+{% set ctaTitle = "Mời ba mẹ đến xem một ngày thứ Ba bình thường." %}
+{% set ctaText = "Chọn một buổi sáng và xem một ngày học diễn ra thế nào." %}
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

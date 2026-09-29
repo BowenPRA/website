@@ -1,71 +1,83 @@
-{% set u = page.url or "/" %}
+{% set T = strings[lang] %}
+{% set u = (page.url or "/") | basePath %}
 {% set inAcademics = u.startsWith("/learning/") %}
 {% set inAdmissions = u.startsWith("/admissions/") or u.startsWith("/families/") or u.startsWith("/contact/") %}
 <header class="site-header">
   <div class="wrap site-header__bar">
-    <a class="brand" href="{{ '/' | url }}" aria-label="{{ site.name }} home">
-      <img class="brand__logo" src="{{ '/assets/img/logo.png' | url }}" alt="" width="1064" height="429">
+    <a class="brand" href="{{ '/' | href(lang) }}" aria-label="{{ T.homeLabel }}">
+      <img class="brand__logo" src="{{ '/assets/img/logo.png' | href(lang) }}" alt="" width="1064" height="429">
     </a>
 
-    <nav class="nav-desktop" aria-label="Main">
+    <nav class="nav-desktop" aria-label="{{ T.mainNav }}">
       <ul>
-        <li><a href="{{ '/about/' | url }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>About Us</a></li>
+        <li><a href="{{ '/about/' | href(lang) }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>{{ T.about }}</a></li>
         <li class="has-menu">
-          <a href="{{ '/learning/' | url }}"{% if inAcademics %} aria-current="{{ 'page' if u == '/learning/' else 'true' }}"{% endif %}>Academics <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="{{ '/learning/' | href(lang) }}"{% if inAcademics %} aria-current="{{ 'page' if u == '/learning/' else 'true' }}"{% endif %}>{{ T.academics }} <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="menu">
-            <li><a class="dot dot--sun" href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten, 20 months to 4</small></a></li>
-            <li><a class="dot dot--green" href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a></li>
-            <li><a class="dot dot--blue" href="{{ '/learning/lower-secondary/' | url }}">Lower Secondary <small>Years 7 to 9</small></a></li>
-            <li><a class="dot dot--coral" href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary <small>Ages 14 to 18</small></a></li>
-            <li><a class="dot dot--violet" href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a></li>
+            <li><a class="dot dot--sun" href="{{ '/learning/early-years/' | href(lang) }}">{{ T.stages.early }} <small>{{ T.stages.earlySub }}</small></a></li>
+            <li><a class="dot dot--green" href="{{ '/learning/primary/' | href(lang) }}">{{ T.stages.primary }} <small>{{ T.stages.primarySub }}</small></a></li>
+            <li><a class="dot dot--blue" href="{{ '/learning/lower-secondary/' | href(lang) }}">{{ T.stages.lower }} <small>{{ T.stages.lowerSub }}</small></a></li>
+            <li><a class="dot dot--coral" href="{{ '/learning/upper-secondary/' | href(lang) }}">{{ T.stages.upper }} <small>{{ T.stages.upperSub }}</small></a></li>
+            <li><a class="dot dot--violet" href="{{ '/learning/global-program/' | href(lang) }}">{{ T.stages.global }} <small>{{ T.stages.globalSub }}</small></a></li>
           </ul>
         </li>
         <li class="has-menu">
-          <a href="{{ '/admissions/' | url }}"{% if inAdmissions %} aria-current="{{ 'page' if u == '/admissions/' else 'true' }}"{% endif %}>Admissions <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="{{ '/admissions/' | href(lang) }}"{% if inAdmissions %} aria-current="{{ 'page' if u == '/admissions/' else 'true' }}"{% endif %}>{{ T.admissions }} <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="menu">
-            <li><a href="{{ '/admissions/' | url }}">Enrollment</a></li>
-            <li><a href="{{ '/admissions/tuition-and-fees/' | url }}">Tuition and fees</a></li>
-            <li><a href="{{ '/families/schedule/' | url }}">Schedule and calendar</a></li>
-            <li><a href="{{ '/families/handbook/' | url }}">Family handbook</a></li>
-            <li><a href="{{ '/contact/' | url }}">Book a tour</a></li>
+            <li><a href="{{ '/admissions/' | href(lang) }}">{{ T.enrollment }}</a></li>
+            <li><a href="{{ '/admissions/tuition-and-fees/' | href(lang) }}">{{ T.fees }}</a></li>
+            <li><a href="{{ '/families/schedule/' | href(lang) }}">{{ T.schedule }}</a></li>
+            <li><a href="{{ '/families/handbook/' | href(lang) }}">{{ T.handbook }}</a></li>
+            <li><a href="{{ '/contact/' | href(lang) }}">{{ T.tour }}</a></li>
           </ul>
         </li>
-        <li><a href="{{ '/events/' | url }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>Events</a></li>
+        <li><a href="{{ '/events/' | href(lang) }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>{{ T.events }}</a></li>
       </ul>
-      <a class="btn btn--green btn--small" href="{{ '/contact/' | url }}">Contact Us</a>
+      <a class="btn btn--green btn--small" href="{{ '/contact/' | href(lang) }}">{{ T.contact }}</a>
     </nav>
+
+    {# Language toggle: the same page in the other language. Pages with no twin (the album) set noTwin. #}
+    {% if not noTwin %}
+    <div class="lang-toggle" role="group" aria-label="{{ T.lang.label }}">
+      {% for code in ["en", "vi"] %}
+      {% set L = strings[code] %}
+      {% if code == lang %}<span lang="{{ code }}" aria-current="true"><abbr title="{{ L.name }}">{{ code | upper }}</abbr></span>
+      {% else %}<a href="{{ page.url | twin | href(lang) }}" lang="{{ code }}" hreflang="{{ code }}" title="{{ T.lang.switchTo }}"><span aria-hidden="true">{{ code | upper }}</span><span class="u-hide">{{ L.name }}</span></a>{% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sheet">
       <span class="menu-toggle__bars" aria-hidden="true"></span>
-      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__label">{{ T.menu }}</span>
     </button>
   </div>
 </header>
 
-<nav class="sheet" id="sheet" aria-label="Main, mobile" hidden>
+<nav class="sheet" id="sheet" aria-label="{{ T.mobileNav }}" hidden>
   <div class="sheet__group">
-    <a class="sheet__top" href="{{ '/' | url }}"{% if u == '/' %} aria-current="page"{% endif %}>Home</a>
-    <a class="sheet__top" href="{{ '/about/' | url }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>About Us</a>
-    <a class="sheet__top" href="{{ '/events/' | url }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>Events</a>
+    <a class="sheet__top" href="{{ '/' | href(lang) }}"{% if u == '/' %} aria-current="page"{% endif %}>{{ T.home }}</a>
+    <a class="sheet__top" href="{{ '/about/' | href(lang) }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>{{ T.about }}</a>
+    <a class="sheet__top" href="{{ '/events/' | href(lang) }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>{{ T.events }}</a>
   </div>
   <div class="sheet__group">
-    <a class="sheet__label" href="{{ '/learning/' | url }}">Academics</a>
-    <a class="dot dot--sun" href="{{ '/learning/early-years/' | url }}">Early Years <small>Nursery and Kindergarten</small></a>
-    <a class="dot dot--green" href="{{ '/learning/primary/' | url }}">Primary <small>Years 1 to 6</small></a>
-    <a class="dot dot--blue" href="{{ '/learning/lower-secondary/' | url }}">Lower Secondary <small>Years 7 to 9</small></a>
-    <a class="dot dot--coral" href="{{ '/learning/upper-secondary/' | url }}">Upper Secondary <small>Ages 14 to 18</small></a>
-    <a class="dot dot--violet" href="{{ '/learning/global-program/' | url }}">Global Program <small>3 weeks to 3 months</small></a>
+    <a class="sheet__label" href="{{ '/learning/' | href(lang) }}">{{ T.academics }}</a>
+    <a class="dot dot--sun" href="{{ '/learning/early-years/' | href(lang) }}">{{ T.stages.early }} <small>{{ T.stages.earlySubShort }}</small></a>
+    <a class="dot dot--green" href="{{ '/learning/primary/' | href(lang) }}">{{ T.stages.primary }} <small>{{ T.stages.primarySub }}</small></a>
+    <a class="dot dot--blue" href="{{ '/learning/lower-secondary/' | href(lang) }}">{{ T.stages.lower }} <small>{{ T.stages.lowerSub }}</small></a>
+    <a class="dot dot--coral" href="{{ '/learning/upper-secondary/' | href(lang) }}">{{ T.stages.upper }} <small>{{ T.stages.upperSub }}</small></a>
+    <a class="dot dot--violet" href="{{ '/learning/global-program/' | href(lang) }}">{{ T.stages.global }} <small>{{ T.stages.globalSub }}</small></a>
   </div>
   <div class="sheet__group">
-    <a class="sheet__label" href="{{ '/admissions/' | url }}">Admissions</a>
-    <a href="{{ '/admissions/' | url }}">Enrollment</a>
-    <a href="{{ '/admissions/tuition-and-fees/' | url }}">Tuition and fees</a>
-    <a href="{{ '/families/schedule/' | url }}">Schedule and calendar</a>
-    <a href="{{ '/families/handbook/' | url }}">Family handbook</a>
+    <a class="sheet__label" href="{{ '/admissions/' | href(lang) }}">{{ T.admissions }}</a>
+    <a href="{{ '/admissions/' | href(lang) }}">{{ T.enrollment }}</a>
+    <a href="{{ '/admissions/tuition-and-fees/' | href(lang) }}">{{ T.fees }}</a>
+    <a href="{{ '/families/schedule/' | href(lang) }}">{{ T.schedule }}</a>
+    <a href="{{ '/families/handbook/' | href(lang) }}">{{ T.handbook }}</a>
   </div>
   <div class="sheet__group sheet__group--cta">
-    <a class="btn btn--green" href="{{ '/contact/' | url }}">Contact Us</a>
-    <a class="sheet__phone" href="tel:{{ site.phoneIntl }}">Call {{ site.phone }}</a>
+    <a class="btn btn--green" href="{{ '/contact/' | href(lang) }}">{{ T.contact }}</a>
+    <a class="sheet__phone" href="tel:{{ site.phoneIntl }}">{{ T.call }} {{ site.phone }}</a>
   </div>
   <div class="tape" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 </nav>

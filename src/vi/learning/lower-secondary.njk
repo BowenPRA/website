@@ -1,0 +1,145 @@
+---
+layout: layouts/base.njk
+tone: blue
+stage: blue
+title: "Lower Secondary"
+description: "Lower Secondary tại Palm River Academy, Year 7 đến Year 9. Mỗi buổi sáng học Toán, Khoa học và tiếng Anh theo chương trình Cambridge, tất cả bằng tiếng Anh, mỗi môn có giáo viên bộ môn riêng; thêm Lịch sử, Executive Function, Art of Science và công nghệ ở Maker Space."
+---
+{% import "macros/icons.njk" as ic %}
+
+{% set heroPhoto = "secondary-students-classroom" %}
+{% set heroShape = "tall" %}
+{% set heroEyebrow = "Lower Secondary · Year 7 đến Year 9 · 11 đến 14 tuổi" %}
+{% set heroTitle = 'Tự lập hơn, <span class="mark">dự án</span> lớn hơn' %}
+{% set heroText = "Mỗi sáng học Toán, Khoa học và tiếng Anh theo chương trình Cambridge, tất cả bằng tiếng Anh, mỗi môn một giáo viên bộ môn. Mỗi lớp không quá " + site.classCap + " học viên, và học viên tự lên kế hoạch nhiều hơn." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow eyebrow--blue">Các môn chính Cambridge</p>
+      <h2>Các môn chính, dạy bằng tiếng Anh</h2>
+      <p>Mỗi sáng ba tiết, mỗi môn một tiết, và môn nào cũng do giáo viên có bằng đại học đúng chuyên ngành đó dạy. Sau đó là Lịch sử hoặc Executive Function cho đến giờ ăn trưa.</p>
+      <p>Tất cả đều dạy bằng tiếng Anh. Ở tuổi này, học viên học tiếng Anh chủ yếu qua việc dùng nó: đọc một chương sách, viết báo cáo thí nghiệm, tranh luận để bảo vệ ý kiến của mình trong lớp.</p>
+      <h3>Toán</h3>
+      <p>Ít tính đếm hơn, suy luận nhiều hơn, và phải trình bày lời giải thật kỹ. Bài toán có lời văn phải đọc cẩn thận, và học viên giải thích cách làm thành lời: mình đã làm gì và vì sao cách đó đúng.</p>
+      <h3>Khoa học</h3>
+      <p>Sinh học, hóa học và vật lý, tuần nào cũng có giờ thực hành: một mặt dốc đặt trên sàn lớp, cây trồng dọc cửa sổ, một bàn đầy mẫu vật. Buổi thực hành nào cũng kết thúc bằng một bài báo cáo, và thường là một cuộc tranh luận xem số liệu của ai đáng tin.</p>
+      <h3>Tiếng Anh</h3>
+      <p>Đọc trọn cuốn sách, học văn học và nghị luận. Học viên nêu quan điểm, đưa dẫn chứng để bảo vệ quan điểm đó và viết thành bài.</p>
+    </div>
+    <div>
+      <div class="leaf-wrap leaf-wrap--r has-sticker">
+        <span class="sticker sticker--blue sticker--tr">Cambridge Lower Secondary</span>
+        {% photo "secondary-ramp-experiment", "photo--lg photo--tilt-r" %}
+      </div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["secondary-window-garden", "secondary-class-notebooks"] %}
+      {% set collageWide = true %}
+      {% set collageCredit = "Vườn cây bên cửa sổ, và bài báo cáo." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--blue">Trong phòng thí nghiệm</p>
+      <h2>Giờ Khoa học phải đeo kính bảo hộ</h2>
+      <p class="lede">Tuần nào cũng có thực hành, cả sinh học, hóa học và vật lý.</p>
+    </div>
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+    {% set collagePhotos = ["secondary-lab-preparing-sample", "secondary-lab-weighing", "secondary-lab-group-practical"] %}
+    {% include "partials/collage.njk" %}
+    <div class="center narrow mt">
+      <p>Buổi thực hành nào cũng bắt đầu giống nhau: đeo kính, mặc tạp dề, đeo găng tay, dọn trống mặt bàn. Sau đó học viên tự chuẩn bị mẫu, cân mẫu, làm thí nghiệm và viết lại những gì số liệu thực sự cho thấy. Bài báo cáo viết bằng tiếng Anh, và cuộc tranh luận xem kết quả của ai đúng cũng bằng tiếng Anh. Buổi chiều, lớp <strong>Art of Science</strong> tiếp nối những gì bài học buổi sáng vừa mở ra.</p>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale" id="day">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--blue">Thứ Hai đến thứ Sáu</p>
+      <h2>Một ngày ở Lower Secondary</h2>
+      <p class="lede">Các môn chính Cambridge trước, rồi đến Lịch sử hoặc Executive Function. Buổi chiều dành cho chế tạo, vận động và làm thí nghiệm.</p>
+    </div>
+    <div class="mt">{% set dayKey = "lower-secondary" %}{% include "partials/dayline.njk" %}</div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">Sau bữa trưa</p>
+      <h2>Lớp bộ môn và thực hành</h2>
+      <p class="lede">Các lớp buổi chiều, học bằng tiếng Anh, có dụng cụ thật và vốn từ đi kèm.</p>
+    </div>
+    <div class="cards cards--3 mt">
+      <div class="card">{{ ic.icon("flask", "blue") }}<h3>Art of Science</h3><p>Các thí nghiệm vận dụng bài Khoa học buổi sáng.</p></div>
+      <div class="card">{{ ic.icon("tools", "sun") }}<h3>Maker Space</h3><p>Công nghệ và thiết kế. Dụng cụ, vật liệu và một vấn đề cần giải quyết: học viên thiết kế, chế tạo, thử nghiệm và thuyết trình.</p></div>
+      <div class="card">{{ ic.icon("ball", "green") }}<h3>Movement</h3><p>Thể thao và rèn thể lực.</p></div>
+      <div class="card">{{ ic.icon("heart", "coral") }}<h3>Wellbeing</h3><p>Lớp học về những điều giúp các ngày còn lại trong tuần suôn sẻ hơn.</p></div>
+      <div class="card">{{ ic.icon("clock", "violet") }}<h3>Review</h3><p>Thời gian để theo kịp bài, và hỏi câu mà trong giờ học mình chưa hỏi.</p></div>
+      <div class="card">{{ ic.icon("book", "green") }}<h3>Lịch sử và Executive Function</h3><p>Cuối buổi sáng, trước bữa trưa. Học về quá khứ, và về những thói quen giúp làm xong việc: lập kế hoạch, sắp xếp, làm đến cùng.</p></div>
+    </div>
+    <p class="center mt"><a class="btn btn--primary" href="{{ '/families/schedule/#lower-secondary' | href(lang) }}">Xem nhanh lịch cả tuần</a></p>
+  </div>
+  <div class="wrap two two--flip mt">
+    <div class="leaf-wrap has-sticker">
+      <span class="sticker sticker--sun sticker--tr">Maker Space</span>
+      {% photo "maker-space-chain-reaction-board", "photo--lg photo--tilt" %}
+    </div>
+    <div>
+      <p class="eyebrow">Ở Maker Space</p>
+      <h2>Thiết kế, chế tạo, giải thích</h2>
+      <p>Đây là lớp công nghệ. Một vấn đề, một đống vật liệu và một hạn chót: ví dụ như làm một cỗ máy phản ứng dây chuyền trên một tấm ván. Chế tạo là một nửa buổi học. Nửa còn lại là thuyết trình về sản phẩm và trả lời câu hỏi.</p>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow eyebrow--blue">Executive Function</p>
+      <h2>Thói quen để làm xong việc</h2>
+      <p>Một lớp có trong thời khóa biểu, vào cuối buổi sáng, học xen kẽ với Lịch sử. Lớp này dạy phần việc học mà không ai dạy trực tiếp: lên kế hoạch cho một bài làm, chia nhỏ ra, theo dõi tiến độ và làm cho xong.</p>
+      <p>Một phần là việc thường ngày: mang đúng đồ dùng, biết trước tiết học cần những gì. Vì vậy, một bài tập năm ngoái là làm những tấm bảng nhắc việc mà lớp học đang dùng thật: cần mặc gì trước giờ thực hành, cần mang gì đi học thể thao. Đến giờ chúng vẫn còn trên tường.</p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["poster-lab-safety", "poster-sport-kit"] %}
+      {% set collageArt = true %}
+      {% set collageCredit = "Do học viên <strong>Lower Secondary</strong> làm trong lớp Executive Function." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow">Tiếp theo</p>
+      <h2>Upper Secondary</h2>
+      <p class="lede">Sau Lower Secondary, học viên lên Upper Secondary. Ở đó mỗi bạn học theo một kế hoạch riêng, xây dựng quanh mục tiêu của chính mình.</p>
+      <p class="mt"><a class="btn btn--primary" href="{{ '/learning/upper-secondary/' | href(lang) }}">Xem Upper Secondary</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap narrow">
+    <h2>Ba mẹ thường hỏi</h2>
+    <details><summary>Con có thể vào học giữa năm không?</summary><p>Được. Chúng tôi nhận học viên quanh năm. Học phí tính từ ngày đầu tiên con đi học, và chúng tôi gặp con trước khi bắt đầu để con vào đúng lớp.</p></details>
+    <details><summary>Nếu con bị hổng kiến thức từ trường cũ thì sao?</summary><p>Chúng tôi gặp từng học viên và đọc báo cáo học tập gần nhất trước khi con vào học, nên biết con đang hổng ở đâu. Nếu đáp ứng được nhu cầu của con, chúng tôi cùng ba mẹ lập kế hoạch hỗ trợ; giáo viên của chúng tôi được đào tạo để hỗ trợ trẻ tự kỷ, ADHD và các khác biệt trong học tập. Khi con cần nhiều hơn thế, chúng tôi giới thiệu gia đình đến The LA Center để được hỗ trợ một kèm một và đánh giá, do gia đình tự sắp xếp và chi trả.</p></details>
+    <details><summary>PRA có dạy tiếng Việt không?</summary><p>Chúng tôi có lớp tiếng Việt như ngôn ngữ thứ hai. Các lớp ngôn ngữ thay đổi theo từng năm, tùy nhu cầu của học viên và giáo viên hiện có, nên ba mẹ hãy hỏi chúng tôi năm nay có lớp nào.</p></details>
+  </div>
+</section>
+
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

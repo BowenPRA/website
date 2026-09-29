@@ -3,6 +3,7 @@ layout: layouts/base.njk
 title: "Page not found"
 permalink: 404.html
 eleventyExcludeFromCollections: true
+noTwin: true
 ---
 
 <div class="wrap lost">
@@ -12,5 +13,7 @@ eleventyExcludeFromCollections: true
     <path d="M10 170 C 50 150, 90 165, 130 160 C 160 156, 180 150, 195 140 C 180 175, 130 185, 90 180 C 60 176, 30 180, 10 190 Z" fill="var(--blue)"/>
   </svg>
   <h1>That page floated off downstream.</h1>
-  <p class="lede">It happens. Try the <a href="{{ '/' | url }}">home page</a>, or <a href="{{ '/contact/' | url }}">tell us what you were looking for</a>.</p>
+  <p class="lede">It happens. Try the <a href="{{ '/' | href(lang) }}">home page</a>, or <a href="{{ '/contact/' | href(lang) }}">tell us what you were looking for</a>.</p>
+  {# One 404 page serves both languages, so it says it twice. #}
+  <p class="lede lost__vi" lang="vi">Không tìm thấy trang này. Ba mẹ có thể về <a href="{{ '/' | href('vi') }}">trang chủ</a>, hoặc <a href="{{ '/contact/' | href('vi') }}">cho chúng tôi biết ba mẹ đang tìm gì</a>.</p>
 </div>

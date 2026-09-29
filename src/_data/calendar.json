@@ -3,42 +3,46 @@
   "note": "From the 2026-2027 academic calendar. Tuition dates are for families paying by quarter. If bad weather closes PRA during the year, the lost days are made up on the marked make-up days.",
   "months": [
     { "name": "August", "events": [
-      { "date": "Tue 4 Aug", "what": "First day of the academic year", "tag": "" }
-    ]},
+      { "date": "Tue 4 Aug", "what": "First day of the academic year", "tag": "", "vi": { "date": "T3, 4/8", "what": "Ngày đầu tiên của năm học" } }
+    ], "vi": { "name": "Tháng 8" } },
     { "name": "September", "events": [
-      { "date": "Mon 31 Aug to Wed 2 Sep", "what": "Independence Day holiday", "tag": "no classes" }
-    ]},
+      { "date": "Mon 31 Aug to Wed 2 Sep", "what": "Independence Day holiday", "tag": "no classes", "vi": { "date": "T2, 31/8 đến T4, 2/9", "what": "Nghỉ lễ Quốc khánh 2/9", "tagLabel": "nghỉ học" } }
+    ], "vi": { "name": "Tháng 9" } },
     { "name": "October", "events": [
-      { "date": "Thu 8 Oct", "what": "End of Quarter 1. Quarter 2 tuition due", "tag": "fees" },
-      { "date": "Fri 9 to Wed 14 Oct", "what": "Fall break", "tag": "no classes" },
-      { "date": "Thu 15 Oct", "what": "Quarter 2 begins", "tag": "" }
-    ]},
+      { "date": "Thu 8 Oct", "what": "End of Quarter 1. Quarter 2 tuition due", "tag": "fees", "vi": { "date": "T5, 8/10", "what": "Kết thúc Quý 1. Hạn đóng học phí Quý 2", "tagLabel": "học phí" } },
+      { "date": "Fri 9 to Wed 14 Oct", "what": "Fall break", "tag": "no classes", "vi": { "date": "T6, 9/10 đến T4, 14/10", "what": "Kỳ nghỉ thu", "tagLabel": "nghỉ học" } },
+      { "date": "Thu 15 Oct", "what": "Quarter 2 begins", "tag": "", "vi": { "date": "T5, 15/10", "what": "Bắt đầu Quý 2" } }
+    ], "vi": { "name": "Tháng 10" } },
     { "name": "November", "events": [
-      { "date": "Tue 24 Nov", "what": "PRA closed", "tag": "no classes" }
-    ]},
+      { "date": "Tue 24 Nov", "what": "PRA closed", "tag": "no classes", "vi": { "date": "T3, 24/11", "what": "PRA nghỉ", "tagLabel": "nghỉ học" } }
+    ], "vi": { "name": "Tháng 11" } },
     { "name": "December", "events": [
-      { "date": "Thu 17 Dec", "what": "End of Quarter 2. Quarter 3 tuition due", "tag": "fees" },
-      { "date": "Fri 18 Dec to Mon 4 Jan", "what": "Winter holiday", "tag": "no classes" }
-    ]},
+      { "date": "Thu 17 Dec", "what": "End of Quarter 2. Quarter 3 tuition due", "tag": "fees", "vi": { "date": "T5, 17/12", "what": "Kết thúc Quý 2. Hạn đóng học phí Quý 3", "tagLabel": "học phí" } },
+      { "date": "Fri 18 Dec to Mon 4 Jan", "what": "Winter holiday", "tag": "no classes", "vi": { "date": "T6, 18/12 đến T2, 4/1", "what": "Kỳ nghỉ đông", "tagLabel": "nghỉ học" } }
+    ], "vi": { "name": "Tháng 12" } },
     { "name": "January", "events": [
-      { "date": "Tue 5 Jan", "what": "Quarter 3 begins", "tag": "" },
-      { "date": "Fri 29 Jan", "what": "Make-up day if weather has closed PRA earlier in the year", "tag": "make-up days" }
-    ]},
+      { "date": "Tue 5 Jan", "what": "Quarter 3 begins", "tag": "", "vi": { "date": "T3, 5/1", "what": "Bắt đầu Quý 3" } },
+      { "date": "Fri 29 Jan", "what": "Make-up day if weather has closed PRA earlier in the year", "tag": "make-up days", "vi": { "date": "T6, 29/1", "what": "Ngày học bù, nếu trước đó PRA đã phải nghỉ vì thời tiết", "tagLabel": "học bù" } }
+    ], "vi": { "name": "Tháng 1" } },
     { "name": "February", "events": [
-      { "date": "Mon 1 to Tue 2 Feb", "what": "Make-up days if weather has closed PRA earlier in the year", "tag": "make-up days" },
-      { "date": "Wed 3 to Mon 15 Feb", "what": "Tết holiday", "tag": "no classes" }
-    ]},
+      { "date": "Mon 1 to Tue 2 Feb", "what": "Make-up days if weather has closed PRA earlier in the year", "tag": "make-up days", "vi": { "date": "T2, 1/2 đến T3, 2/2", "what": "Ngày học bù, nếu trước đó PRA đã phải nghỉ vì thời tiết", "tagLabel": "học bù" } },
+      { "date": "Wed 3 to Mon 15 Feb", "what": "Tết holiday", "tag": "no classes", "vi": { "date": "T4, 3/2 đến T2, 15/2", "what": "Nghỉ Tết Nguyên Đán", "tagLabel": "nghỉ học" } }
+    ], "vi": { "name": "Tháng 2" } },
     { "name": "March", "events": [
-      { "date": "Mon 22 Mar", "what": "Quarter 4 tuition due", "tag": "fees" },
-      { "date": "Wed 24 Mar", "what": "End of Quarter 3", "tag": "" },
-      { "date": "Fri 26 Mar", "what": "PRA closed", "tag": "no classes" }
-    ]},
+      { "date": "Mon 22 Mar", "what": "Quarter 4 tuition due", "tag": "fees", "vi": { "date": "T2, 22/3", "what": "Hạn đóng học phí Quý 4", "tagLabel": "học phí" } },
+      { "date": "Wed 24 Mar", "what": "End of Quarter 3", "tag": "", "vi": { "date": "T4, 24/3", "what": "Kết thúc Quý 3" } },
+      { "date": "Fri 26 Mar", "what": "PRA closed", "tag": "no classes", "vi": { "date": "T6, 26/3", "what": "PRA nghỉ", "tagLabel": "nghỉ học" } }
+    ], "vi": { "name": "Tháng 3" } },
     { "name": "April", "events": [
-      { "date": "Fri 16 Apr", "what": "Hùng Kings' Commemoration Day", "tag": "no classes" },
-      { "date": "Mon 26 to Fri 30 Apr", "what": "Spring break and Reunification Day", "tag": "no classes" }
-    ]},
+      { "date": "Fri 16 Apr", "what": "Hùng Kings' Commemoration Day", "tag": "no classes", "vi": { "date": "T6, 16/4", "what": "Giỗ Tổ Hùng Vương", "tagLabel": "nghỉ học" } },
+      { "date": "Mon 26 to Fri 30 Apr", "what": "Spring break and Reunification Day", "tag": "no classes", "vi": { "date": "T2, 26/4 đến T6, 30/4", "what": "Kỳ nghỉ xuân và lễ 30/4", "tagLabel": "nghỉ học" } }
+    ], "vi": { "name": "Tháng 4" } },
     { "name": "June", "events": [
-      { "date": "Fri 4 Jun", "what": "Last day of the academic year", "tag": "" }
-    ]}
-  ]
+      { "date": "Fri 4 Jun", "what": "Last day of the academic year", "tag": "", "vi": { "date": "T6, 4/6", "what": "Ngày cuối cùng của năm học" } }
+    ], "vi": { "name": "Tháng 6" } }
+  ],
+  "vi": {
+    "year": "2026-2027",
+    "note": "Theo lịch năm học 2026-2027. Các hạn đóng học phí dành cho gia đình đóng theo quý. Nếu trong năm PRA phải nghỉ vì thời tiết xấu, những ngày nghỉ đó sẽ được học bù vào các ngày học bù ghi trên lịch."
+  }
 }

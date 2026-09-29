@@ -9,9 +9,19 @@
     "text": "Student-led booths and activities, a silent auction, and performances by our classes. Open to the public, so bring the family.",
     "cta": {
       "label": "Last year's festival",
-      "url": "/events/#mid-autumn"
+      "url": "/events/#mid-autumn",
+      "vi": {
+        "label": "Trung thu năm ngoái"
+      }
     },
-    "flyer": "mid-autumn-festival-2026-flyer"
+    "flyer": "mid-autumn-festival-2026-flyer",
+    "vi": {
+      "kind": "Thứ Sáu này",
+      "title": "Tết Trung thu",
+      "when": "Thứ Sáu, 25/9, 14:30 đến 16:00",
+      "ticker": "Tết Trung thu, thứ Sáu, 25/9, 14:30. Mời tất cả mọi người",
+      "text": "Gian hàng và hoạt động do học viên tổ chức, một buổi đấu giá im lặng và các tiết mục biểu diễn của các lớp. Mở cửa cho mọi người, ba mẹ cứ đưa cả nhà cùng đến."
+    }
   },
   {
     "id": "quarter-2",
@@ -23,7 +33,17 @@
     "text": "Quarter 1 ends on 8 October, with Quarter 2 tuition due the same day, and fall break runs to 14 October. New students can start with the new quarter.",
     "cta": {
       "label": "See the calendar",
-      "url": "/families/schedule/#calendar"
+      "url": "/families/schedule/#calendar",
+      "vi": {
+        "label": "Xem lịch"
+      }
+    },
+    "vi": {
+      "kind": "Lịch năm học",
+      "title": "Bắt đầu Quý 2",
+      "when": "Thứ Năm, 15/10",
+      "ticker": "Quý 2 bắt đầu vào thứ Năm, 15/10",
+      "text": "Quý 1 kết thúc ngày 8/10, cũng là hạn đóng học phí Quý 2, và kỳ nghỉ thu kéo dài đến 14/10. Học viên mới có thể bắt đầu học từ quý mới."
     }
   },
   {
@@ -36,9 +56,19 @@
     "text": "10% off for a first child and 15% off for a second, on the full-day program. Ages 2 to 14, three weeks to three months.",
     "cta": {
       "label": "How it works",
-      "url": "/learning/global-program/"
+      "url": "/learning/global-program/",
+      "vi": {
+        "label": "Chương trình diễn ra thế nào"
+      }
     },
-    "flyer": "global-program-2026-27-offer-flyer"
+    "flyer": "global-program-2026-27-offer-flyer",
+    "vi": {
+      "kind": "Ưu đãi",
+      "title": "Giảm 10% và 15% cho Global Program",
+      "when": "Đến tháng 12/2026",
+      "ticker": "Global Program: giảm 10% cho con thứ nhất, 15% cho con thứ hai, đến tháng 12",
+      "text": "Giảm 10% cho con thứ nhất và 15% cho con thứ hai, áp dụng cho chương trình cả ngày. Dành cho các con từ 2 đến 14 tuổi, học từ ba tuần đến ba tháng."
+    }
   },
   {
     "id": "early-years-offer",
@@ -51,8 +81,19 @@
     "note": "Terms and conditions apply.",
     "cta": {
       "label": "About Early Years",
-      "url": "/learning/early-years/"
+      "url": "/learning/early-years/",
+      "vi": {
+        "label": "Tìm hiểu Early Years"
+      }
     },
-    "flyer": "early-years-tuition-offer-flyer"
+    "flyer": "early-years-tuition-offer-flyer",
+    "vi": {
+      "kind": "Ưu đãi",
+      "title": "Giảm 35% cho Nursery và Kindergarten",
+      "when": "Ưu đãi có thời hạn",
+      "ticker": "Nursery và Kindergarten: giảm 35% học phí cho thời gian còn lại của năm học",
+      "text": "Giảm 35% học phí khi đăng ký học cho thời gian còn lại của năm học. Tiếng Anh cả ngày, dành cho các bé từ 20 tháng đến 5 tuổi.",
+      "note": "Áp dụng điều khoản và điều kiện."
+    }
   }
 ]

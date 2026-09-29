@@ -6,7 +6,8 @@
   "description": "Palm River Academy public website (Eleventy, GitHub Pages)",
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "check:vi": "node scripts/check-vi.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

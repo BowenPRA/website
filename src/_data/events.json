@@ -7,7 +7,14 @@
     "when": "28 August and 11 September",
     "summary": "Two evenings at the start of the year when parents meet their child's teachers and hear how the year will run: lessons, homework and how teachers keep families updated.",
     "did": [],
-    "photos": []
+    "photos": [],
+    "vi": {
+      "name": "Buổi tối gặp mặt đầu năm",
+      "month": "Th8",
+      "when": "28/8 và 11/9",
+      "summary": "Hai buổi tối đầu năm học, khi ba mẹ gặp giáo viên của con và nghe năm học sẽ diễn ra thế nào: bài học, bài tập về nhà và cách giáo viên cập nhật cho gia đình.",
+      "did": []
+    }
   },
   {
     "id": "mid-autumn",
@@ -31,7 +38,18 @@
       "mid-autumn-festival-courtyard-crowd",
       "mid-autumn-festival-mooncake-stall",
       "mid-autumn-festival-henna-ms-xuan"
-    ]
+    ],
+    "vi": {
+      "name": "Tết Trung thu",
+      "month": "Th10",
+      "when": "Thứ Sáu, 3/10",
+      "summary": "Một buổi chiều lễ hội cho các gia đình, có chương trình biểu diễn và hội chợ do học viên tổ chức.",
+      "did": [
+        "Lớp nào cũng biểu diễn một bài hát, điệu múa hoặc vở kịch, còn các bé nhỏ nhất diễu hành trong trang phục hóa trang",
+        "Hai học viên dẫn chương trình, một bạn bằng tiếng Anh và một bạn bằng tiếng Việt",
+        "Các học viên lớn tự lên kế hoạch cho gian hàng của mình: tự làm áp phích, tự định giá và đứng các gian vẽ henna, làm vòng tay, vẽ chân dung và trò chơi"
+      ]
+    }
   },
   {
     "id": "halloween",
@@ -45,7 +63,18 @@
       "Students paraded in costume for their families",
       "Older students ran activity rooms for the younger classes: a shadow puppet show, a marshmallow challenge and autumn games"
     ],
-    "photos": []
+    "photos": [],
+    "vi": {
+      "name": "Halloween",
+      "month": "Th10",
+      "when": "20 đến 31/10",
+      "summary": "Hai tuần hoạt động Halloween, kết thúc bằng ngày hóa trang vào 31/10.",
+      "did": [
+        "Mỗi lớp làm một con nhện khổng lồ từ một chiếc ô cũ và vật liệu tái chế",
+        "Học viên diễu hành trong trang phục hóa trang cho gia đình xem",
+        "Các học viên lớn tổ chức các phòng hoạt động cho các lớp nhỏ hơn: một buổi múa rối bóng, thử thách marshmallow và các trò chơi mùa thu"
+      ]
+    }
   },
   {
     "id": "thanksgiving",
@@ -60,7 +89,16 @@
     "photos": [
       "thanksgiving-cooking-team",
       "thanksgiving-stirring-the-pot"
-    ]
+    ],
+    "vi": {
+      "name": "Lễ Tạ ơn",
+      "month": "Th11",
+      "when": "Thứ Năm, 27/11",
+      "summary": "Một buổi mừng Lễ Tạ ơn theo kiểu Mỹ, cùng các gia đình.",
+      "did": [
+        "Học viên Upper Secondary cùng giáo viên nấu các món ăn, trong đó có những khay bánh quy tự làm"
+      ]
+    }
   },
   {
     "id": "christmas",
@@ -78,7 +116,18 @@
       "christmas-show-gymnastics-duo",
       "christmas-show-kindergarten-dance",
       "christmas-show-student-hosts"
-    ]
+    ],
+    "vi": {
+      "name": "Đêm diễn tài năng và hội chợ Giáng sinh",
+      "month": "Th12",
+      "when": "Thứ Tư, 17/12, tại Zen Library",
+      "summary": "Một buổi tối biểu diễn tài năng và hội chợ Giáng sinh cho các gia đình. Số tiền quyên góp được dùng để làm các phần quà cứu trợ lũ lụt cho các gia đình ở Đà Nẵng.",
+      "did": [
+        "Các lớp hát và múa, còn học viên tự đăng ký tiết mục riêng: đàn piano, thể dục dụng cụ, một tiết mục Rubik và một tiểu phẩm hài",
+        "Hai học viên dẫn chương trình bằng tiếng Anh và tiếng Việt",
+        "Học viên tự làm và bán bánh quy, sô-cô-la nóng và trái cây xiên, cùng áo kimono và tất Giáng sinh từ lớp may vá"
+      ]
+    }
   },
   {
     "id": "tet",
@@ -90,12 +139,23 @@
     "did": [
       "Students wrote New Year words in calligraphy on red paper",
       "Classes played traditional Vietnamese games together",
-      "Many children came to school in áo dài"
+      "Many children came in áo dài"
     ],
     "photos": [
       "tet-calligraphy-on-red-paper",
       "tet-tug-of-war"
-    ]
+    ],
+    "vi": {
+      "name": "Tết",
+      "month": "Th2",
+      "when": "Thứ Năm, 12/2",
+      "summary": "Một ngày với những phong tục ngày Tết để đón năm Bính Ngọ.",
+      "did": [
+        "Học viên viết thư pháp những chữ chúc năm mới trên giấy đỏ",
+        "Các lớp cùng nhau chơi trò chơi dân gian Việt Nam",
+        "Nhiều bạn mặc áo dài đến lớp"
+      ]
+    }
   },
   {
     "id": "march-mathness",
@@ -119,7 +179,18 @@
       "march-mathness-cube-building",
       "march-mathness-card-game",
       "march-mathness-paper-boats"
-    ]
+    ],
+    "vi": {
+      "name": "March Mathness",
+      "month": "Th3",
+      "when": "Tháng 3, với một buổi chiều cho gia đình vào 2/4",
+      "summary": "Một tháng trò chơi Toán, câu đố và thử thách khắp khuôn viên.",
+      "did": [
+        "Lớp nào cũng chơi trò chơi Toán và cùng nhau giải câu đố",
+        "Học viên tham gia các thử thách Toán, và các bạn thắng cuộc được mang giải thưởng về nhà",
+        "Các gia đình đến dự buổi chiều Stay and Play và cùng chơi"
+      ]
+    }
   },
   {
     "id": "reading-safari",
@@ -138,7 +209,18 @@
       "book-character-day-teacher",
       "reading-safari-teacher-in-costume",
       "reading-safari-board-game"
-    ]
+    ],
+    "vi": {
+      "name": "Tuần lễ Reading Safari",
+      "month": "Th4",
+      "when": "Tháng 4",
+      "summary": "Một tuần đọc sách và kể chuyện.",
+      "did": [
+        "Học viên viết truyện dựa trên những lần tung xúc xắc và các đồ vật bí ẩn bốc ra từ một chiếc túi",
+        "Các bạn thiết kế bìa sách mới trong giờ Mỹ thuật và bình chọn bìa đẹp nhất",
+        "Mọi người cùng dừng lại đọc sách vào giờ ăn trưa, và tuần lễ khép lại bằng một buổi diễu hành hóa trang và một ngày hội trò chơi chữ trong khuôn viên"
+      ]
+    }
   },
   {
     "id": "learning-without-walls",
@@ -159,7 +241,18 @@
       "learning-without-walls-water-game",
       "learning-without-walls-yoga",
       "learning-without-walls-kim-bong-carpentry-village"
-    ]
+    ],
+    "vi": {
+      "name": "Learning Without Walls",
+      "month": "Th6",
+      "when": "Hai tuần cuối năm học",
+      "summary": "Trong hai tuần cuối năm học, các lớp học bên ngoài khuôn viên.",
+      "did": [
+        "Tham quan làng mộc Kim Bồng, một xưởng làm bơ đậu phộng và một bảo tàng tranh 3D ở Đà Nẵng",
+        "Làm tình nguyện tại một viện dưỡng lão ở Đà Nẵng",
+        "Một ngày đi biển, một ngày hội thể thao có tiệc hồ bơi, và một chuyến cắm trại qua đêm cho Year 6"
+      ]
+    }
   },
   {
     "id": "graduation",
@@ -177,6 +270,17 @@
       "graduation-certificates-and-cheers",
       "graduation-student-speech",
       "graduation-students-share-microphone"
-    ]
+    ],
+    "vi": {
+      "name": "Lễ tốt nghiệp",
+      "month": "Th6",
+      "when": "Thứ Sáu, 12/6",
+      "summary": "Hai buổi lễ cho các gia đình: một cho Early Years và các lớp Primary nhỏ, một cho các học viên lớn.",
+      "did": [
+        "Lớp nào cũng biểu diễn: bài hát, một điệu múa, bài phát biểu và một bài hát về bảng tuần hoàn",
+        "Các học viên lớn tự viết bài phát biểu và đọc trước cả khán phòng",
+        "Từng học viên bước lên nhận giấy chứng nhận"
+      ]
+    }
   }
 ]

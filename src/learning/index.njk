@@ -27,7 +27,7 @@ description: "Early Years, Primary, Lower Secondary, Upper Secondary and the Glo
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
         <ul>{% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}</ul>
-        <a class="btn btn--primary btn--small" href="{{ p.url | url }}">About {{ p.name }}</a>
+        <a class="btn btn--primary btn--small" href="{{ p.url | href(lang) }}">About {{ p.name }}</a>
       </article>
       {% endfor %}
     </div>
@@ -51,7 +51,7 @@ description: "Early Years, Primary, Lower Secondary, Upper Secondary and the Glo
       </table>
     </div>
     <span class="swipe-hint">Swipe sideways to see the whole table.</span>
-    <p class="table-note">How the day runs at each age is on the <a href="{{ '/families/schedule/' | url }}">schedule page</a>.</p>
+    <p class="table-note">How the day runs at each age is on the <a href="{{ '/families/schedule/' | href(lang) }}">schedule page</a>.</p>
   </div>
 </section>
 

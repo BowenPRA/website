@@ -1,9 +1,10 @@
+{% set T = strings[lang] %}
 <footer class="site-footer">
   <div class="tape" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
   {% set frondClass = "frond--br" %}{% include "partials/frond.njk" %}
   <div class="wrap site-footer__grid">
     <div>
-      <img class="site-footer__logo" src="{{ '/assets/img/logo.png' | url }}" alt="{{ site.name }}" width="1064" height="429" loading="lazy">
+      <img class="site-footer__logo" src="{{ '/assets/img/logo.png' | href(lang) }}" alt="{{ site.name }}" width="1064" height="429" loading="lazy">
       <p class="site-footer__tag">{{ site.tagline }}</p>
       <p class="site-footer__licence">{{ site.licenceLine }}</p>
       <div class="social">
@@ -12,24 +13,24 @@
       </div>
     </div>
     <div>
-      <p class="site-footer__h">Find us</p>
-      <p>{{ site.campus.address }}<br><a href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Open in Google Maps</a></p>
+      <p class="site-footer__h">{{ T.footer.findUs }}</p>
+      <p>{{ site.campus.address }}<br><a href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">{{ T.footer.maps }}</a></p>
       <p>{{ site.hours }}</p>
     </div>
     <div>
-      <p class="site-footer__h">Talk to us</p>
+      <p class="site-footer__h">{{ T.footer.talk }}</p>
       <p><a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a><br>
       <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <ul class="site-footer__links">
-        <li><a href="{{ '/contact/' | url }}">Book a tour</a></li>
-        <li><a href="{{ '/admissions/' | url }}">Enrollment</a></li>
-        <li><a href="{{ '/admissions/tuition-and-fees/' | url }}">Fees</a></li>
-        <li><a href="{{ '/families/schedule/' | url }}">Schedule</a></li>
+        <li><a href="{{ '/contact/' | href(lang) }}">{{ T.tour }}</a></li>
+        <li><a href="{{ '/admissions/' | href(lang) }}">{{ T.enrollment }}</a></li>
+        <li><a href="{{ '/admissions/tuition-and-fees/' | href(lang) }}">{{ T.feesShort }}</a></li>
+        <li><a href="{{ '/families/schedule/' | href(lang) }}">{{ T.scheduleShort }}</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__small">
-    <span>© {{ '' | year }} {{ site.name }}. Serving families in Hội An and Đà Nẵng since {{ site.founded }}.</span>
-    <span><a href="{{ '/families/handbook/' | url }}">Family handbook</a></span>
+    <span>© {{ '' | year }} {{ site.name }}. {{ T.footer.since }} {{ site.founded }}.</span>
+    <span><a href="{{ '/families/handbook/' | href(lang) }}">{{ T.handbook }}</a></span>
   </div>
 </footer>

@@ -12,7 +12,17 @@
       "Phonics, maths and literacy in Kindergarten",
       "Outside play every morning"
     ],
-    "tone": "sun"
+    "tone": "sun",
+    "vi": {
+      "chip": "Dưới 5 tuổi",
+      "ages": "20 tháng đến 4 tuổi",
+      "summary": "Vui chơi, truyện, bài hát và phonics (ngữ âm), tất cả bằng tiếng Anh, theo khung chương trình EYFS của Anh.",
+      "points": [
+        "Hai giáo viên chủ nhiệm ở lớp Nursery",
+        "Phonics, Toán và đọc viết ở Kindergarten",
+        "Chơi ngoài trời mỗi sáng"
+      ]
+    }
   },
   {
     "key": "primary",
@@ -27,7 +37,17 @@
       "Movement and exercise every week",
       "Cooking, technology and craft after lunch"
     ],
-    "tone": "green"
+    "tone": "green",
+    "vi": {
+      "chip": "5 đến 11 tuổi",
+      "ages": "Year 1 đến Year 6, 5 đến 11 tuổi",
+      "summary": "Buổi sáng học tiếng Anh, Toán và Khoa học theo chương trình Cambridge, tất cả bằng tiếng Anh. Sau bữa trưa là nấu ăn, thủ công, thể thao và một lớp tên là Boredom.",
+      "points": [
+        "Chương trình Cambridge Primary",
+        "Vận động và thể dục mỗi tuần",
+        "Nấu ăn, Công nghệ và thủ công sau bữa trưa"
+      ]
+    }
   },
   {
     "key": "secondary",
@@ -42,7 +62,17 @@
       "Subject-specialist teachers",
       "Technology in the Maker Space"
     ],
-    "tone": "blue"
+    "tone": "blue",
+    "vi": {
+      "chip": "11 đến 14 tuổi",
+      "ages": "Year 7 đến Year 9, 11 đến 14 tuổi",
+      "summary": "Chương trình Cambridge Lower Secondary bằng tiếng Anh, với giáo viên bộ môn, cùng Lịch sử, Art of Science và Maker Space.",
+      "points": [
+        "Chương trình Cambridge Lower Secondary",
+        "Giáo viên bộ môn chuyên sâu",
+        "Công nghệ trong Maker Space"
+      ]
+    }
   },
   {
     "key": "upper",
@@ -57,7 +87,17 @@
       "Their own courses, in English, coached every morning",
       "Projects, sometimes an internship, and a student-planned trip"
     ],
-    "tone": "coral"
+    "tone": "coral",
+    "vi": {
+      "chip": "14 đến 18 tuổi",
+      "ages": "14 đến 18 tuổi",
+      "summary": "Một kế hoạch học tập xây dựng quanh mục tiêu của con, bằng tiếng Anh, có giáo viên kèm mỗi sáng. Cùng với các dự án và thực tập.",
+      "points": [
+        "Kế hoạch thống nhất cùng ba mẹ và con",
+        "Các khóa học riêng của con, bằng tiếng Anh, có giáo viên kèm mỗi sáng",
+        "Dự án, đôi khi có thực tập, và một chuyến đi do học viên tự lên kế hoạch"
+      ]
+    }
   },
   {
     "key": "global",
@@ -72,6 +112,16 @@
       "Half-day and full-day options",
       "Progress report in the first two weeks"
     ],
-    "tone": "violet"
+    "tone": "violet",
+    "vi": {
+      "chip": "Ở Hội An ngắn ngày",
+      "ages": "3 tuần đến 3 tháng, 2 đến 14 tuổi",
+      "summary": "Dành cho các gia đình đang du lịch: học trong một lớp thật, nửa ngày hoặc cả ngày, cuối khóa có báo cáo và giấy chứng nhận.",
+      "points": [
+        "Học từ 3 tuần đến 3 tháng",
+        "Chọn học nửa ngày hoặc cả ngày",
+        "Báo cáo tiến bộ trong hai tuần đầu"
+      ]
+    }
   }
 ]

@@ -1,23 +1,23 @@
 ---
 layout: layouts/base.njk
 tone: navy
-title: "Events"
-description: "Festivals, theme weeks and trips at Palm River Academy in 2025-26, and what students did at each: performing, hosting, running stalls and leading activities for younger classes."
-permalink: /events/
+title: "Sự kiện"
+description: "Các lễ hội, tuần chủ đề và chuyến đi ở Palm River Academy trong năm học 2025-26, và việc học viên đã làm ở mỗi sự kiện: biểu diễn, dẫn chương trình, đứng gian hàng và hướng dẫn hoạt động cho các lớp nhỏ hơn."
+permalink: /vi/events/
 ---
 {% set heroPhoto = "events-hero-maths-prize-stickers" %}
 {% set heroShape = "tall" %}
-{% set heroEyebrow = "Events · 2025-26" %}
-{% set heroTitle = 'Our students <span class="mark">run the show</span>' %}
-{% set heroText = "Festivals, theme weeks and trips from 2025-26. At each one, students perform, host, run stalls or lead activities for younger classes." %}
+{% set heroEyebrow = "Sự kiện · 2025-26" %}
+{% set heroTitle = 'Học viên <span class="mark">làm chủ sự kiện</span>' %}
+{% set heroText = "Lễ hội, tuần chủ đề và các chuyến đi trong năm học 2025-26. Ở mỗi sự kiện, học viên biểu diễn, dẫn chương trình, đứng gian hàng hoặc hướng dẫn hoạt động cho các lớp nhỏ hơn." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
   <div class="wrap">
-    <nav class="months" aria-label="Jump to a month">
+    <nav class="months" aria-label="Chuyển đến tháng">
       {% for e in events %}{% if loop.first or events[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
     </nav>
-    <p class="gallery__hint events__hint" hidden>Tap a photo to see it bigger.</p>
+    <p class="gallery__hint events__hint" hidden>Chạm vào ảnh để xem lớn hơn.</p>
 
     <ol class="year">
       {% for e in events %}
@@ -28,7 +28,7 @@ permalink: /events/
           <p class="event__date">{{ e.when }}</p>
           <p class="event__summary">{{ e.summary }}</p>
           {% if e.did.length %}
-          <h3 class="event__did-title">What students did</h3>
+          <h3 class="event__did-title">Học viên đã làm gì</h3>
           <ul class="event__did">
             {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
           </ul>
@@ -48,10 +48,10 @@ permalink: /events/
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap center narrow">
-    <p class="eyebrow eyebrow--blue">This year</p>
-    <h2>Dates for 2026-27</h2>
-    <p class="lede">Term dates and holidays are on the calendar. We send event dates to families during the year.</p>
-    <a class="btn btn--primary" href="{{ '/families/schedule/#calendar' | href(lang) }}">See the calendar</a>
+    <p class="eyebrow eyebrow--blue">Năm học này</p>
+    <h2>Lịch năm học 2026-27</h2>
+    <p class="lede">Ngày học và các ngày nghỉ có trên lịch năm học. Chúng tôi sẽ gửi ngày tổ chức sự kiện cho các gia đình trong năm.</p>
+    <a class="btn btn--primary" href="{{ '/families/schedule/#calendar' | href(lang) }}">Xem lịch năm học</a>
   </div>
 </section>
 

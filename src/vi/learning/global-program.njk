@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+tone: light
+stage: violet
+title: "Global Program"
+description: "Global Program tại Palm River Academy là chương trình từ 3 tuần đến 3 tháng dành cho các gia đình đang du lịch ở Hội An. Có lựa chọn nửa ngày và cả ngày, cho trẻ từ 2 đến 14 tuổi, kèm báo cáo tiến bộ và giấy chứng nhận."
+---
+
+{% set heroPhoto = "global-program-rice-paddy-hoi-an" %}
+{% set heroShape = "tall" %}
+{% set heroEyebrow = "Global Program · 3 tuần đến 3 tháng" %}
+{% set heroTitle = 'Cho các gia đình ghé qua <span class="mark">Hội An</span>' %}
+{% set heroText = "Gia đình đang du lịch, ở đây một mùa, hay con đang chờ chuyển trường? Con sẽ vào học một lớp thật sự, từ ba tuần đến ba tháng. Đây không phải lớp trông trẻ." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Bốn lựa chọn</p>
+      <h2>Chọn thời gian học mỗi ngày</h2>
+    </div>
+    <div class="cards mt">
+      <div class="card"><span class="card__tag">2 đến 5 tuổi</span><h3>Early Years</h3><p>Học qua chơi, bằng tiếng Anh: kể chuyện, âm nhạc, chơi cát và nước. Các bé học ngắn hạn quen nhanh vì ngày nào cũng theo cùng một nhịp.</p></div>
+      <div class="card"><span class="card__tag">Year 1 đến Year 9 · nửa ngày</span><h3>Nửa ngày thực hành</h3><p>Nấu ăn, nói trước đám đông, mỹ thuật, thể dục và tự tay làm đồ vật. Dành cho những bé học tốt nhất qua thực hành.</p></div>
+      <div class="card"><span class="card__tag">Year 1 đến Year 9 · nửa ngày</span><h3>Nửa ngày học thuật</h3><p>Tiếng Anh, Toán và Khoa học theo chương trình Cambridge, để con không bị chậm bài trong thời gian gia đình đi xa.</p></div>
+      <div class="card"><span class="card__tag">Year 1 đến Year 9 · cả ngày</span><h3>Cả ngày: Cambridge và thực hành</h3><p>Trọn một ngày ở PRA, giống các học viên học dài hạn: buổi sáng học chương trình Cambridge, sau bữa trưa là các lớp thực hành.</p></div>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "green" %}{% include "partials/wave.njk" %}
+<section class="band--green">
+  <div class="wrap two">
+    <div>
+      <h2>Báo cáo và giấy chứng nhận</h2>
+      <ul>
+        <li>Một báo cáo tiến bộ trong hai tuần đầu.</li>
+        <li>Một báo cáo tổng kết vào cuối đợt học.</li>
+        <li>Giấy chứng nhận hoàn thành. Có ích khi con quay lại lớp cũ ở quê nhà, và dán lên tủ lạnh cũng đẹp.</li>
+      </ul>
+      <p class="mt"><strong>Từ 4.200.000 VNĐ mỗi tuần</strong> cho Early Years và nửa ngày thực hành, khi con học từ 10 đến 12 tuần. Học ngắn hơn, hoặc chọn nửa ngày học thuật hay cả ngày, thì học phí mỗi tuần cao hơn. Bảng giá đầy đủ có ở <a href="{{ '/admissions/tuition-and-fees/' | href(lang) }}">trang học phí</a>.</p>
+    </div>
+    <div class="leaf-wrap leaf-wrap--deep">{% photo "global-program-nature-walk", "photo--lg photo--tilt" %}</div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section class="faq">
+  <div class="wrap narrow">
+    <h2>Các gia đình du lịch thường hỏi</h2>
+    <details><summary>Khi nào con có thể bắt đầu?</summary><p>Ba mẹ gửi cho chúng tôi thời gian gia đình ở Hội An và tuổi của con, chúng tôi sẽ báo lớp nào còn chỗ. Con học từ ba tuần (sáu tuần với nửa ngày học thuật và cả ngày của Lower Secondary) đến ba tháng. Học phí đóng trước ngày học đầu tiên.</p></details>
+    <details><summary>Con có cần biết tiếng Anh không?</summary><p>Với Early Years và nửa ngày thực hành thì không: con ở trình độ tiếng Anh nào cũng được. Nửa ngày học thuật và cả ngày cần đủ tiếng Anh để theo các tiết học Cambridge; chúng tôi gặp con rồi mới quyết định, tùy từng trường hợp.</p></details>
+    <details><summary>Con có thể học thử trước không?</summary><p>Được. Mỗi ngày học thử là 1.600.000 VNĐ, đã gồm bữa ăn, và con có thể học thử tối đa ba ngày. Nếu sau đó con vào học, chúng tôi trừ khoản này vào học phí.</p></details>
+    <details><summary>Học phí có gồm bữa trưa không?</summary><p>Không, nhưng ba mẹ có thể đăng ký thêm: bữa trưa và hai bữa phụ mỗi ngày. Ba mẹ hỏi chúng tôi để biết giá.</p></details>
+  </div>
+</section>
+
+{% set ctaTitle = "Cho chúng tôi biết lịch của gia đình." %}
+{% set ctaText = "Ba mẹ gửi tuổi của con và thời gian gia đình ở Hội An. Chúng tôi sẽ báo lại lớp nào còn chỗ và học phí." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

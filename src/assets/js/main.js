@@ -3,6 +3,11 @@
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // The few words this script writes into the page, in the page's language (VIETNAMESE.md).
+  var words = document.documentElement.lang === "vi"
+    ? { viewer: "Xem ảnh", close: "Đóng", prev: "Ảnh trước", next: "Ảnh tiếp theo", larger: "Xem ảnh lớn: " }
+    : { viewer: "Photo viewer", close: "Close", prev: "Previous photo", next: "Next photo", larger: "View larger: " };
+
   // Mobile nav sheet
   var toggle = document.querySelector(".menu-toggle");
   var sheet = document.getElementById("sheet");
@@ -164,12 +169,12 @@
     var icon = function (d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'; };
     var box = document.createElement("dialog");
     box.className = "lightbox";
-    box.setAttribute("aria-label", "Photo viewer");
+    box.setAttribute("aria-label", words.viewer);
     box.innerHTML =
       '<figure><img alt=""><figcaption></figcaption></figure>' +
-      '<button class="lightbox__close" type="button" aria-label="Close">' + icon("M6 6l12 12M18 6 6 18") + "</button>" +
-      '<button class="lightbox__prev" type="button" aria-label="Previous photo">' + icon("M15 5l-7 7 7 7") + "</button>" +
-      '<button class="lightbox__next" type="button" aria-label="Next photo">' + icon("M9 5l7 7-7 7") + "</button>";
+      '<button class="lightbox__close" type="button" aria-label="' + words.close + '">' + icon("M6 6l12 12M18 6 6 18") + "</button>" +
+      '<button class="lightbox__prev" type="button" aria-label="' + words.prev + '">' + icon("M15 5l-7 7 7 7") + "</button>" +
+      '<button class="lightbox__next" type="button" aria-label="' + words.next + '">' + icon("M9 5l7 7-7 7") + "</button>";
     document.body.appendChild(box);
 
     var bigImg = box.querySelector("img");
@@ -229,7 +234,7 @@
         var tile = img.parentElement;
         tile.setAttribute("tabindex", "0");
         tile.setAttribute("role", "button");
-        tile.setAttribute("aria-label", "View larger: " + img.alt);
+        tile.setAttribute("aria-label", words.larger + img.alt);
         function open() { useLightbox()(set, i); }
         tile.addEventListener("click", open);
         tile.addEventListener("keydown", function (e) {
@@ -382,7 +387,7 @@
         img.dataset.meta = card.dataset.meta;
         tile.setAttribute("tabindex", "0");
         tile.setAttribute("role", "button");
-        tile.setAttribute("aria-label", "View larger: " + img.alt);
+        tile.setAttribute("aria-label", words.larger + img.alt);
         function open() {
           var set = cards.filter(function (c) { return !c.hidden; })
             .map(function (c) { return c.querySelector(".photo img"); })

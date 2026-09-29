@@ -74,6 +74,7 @@ export default async function () {
   const collect = async (dir) => {
     for (const entry of await readdir(dir, { withFileTypes: true })) {
       if (entry.name.startsWith("_") || entry.name === "assets") continue;
+      if (dir === SRC && entry.name === "vi") continue; // the Vietnamese twins use the same photos as the English pages
       const p = path.join(dir, entry.name);
       if (entry.isDirectory()) await collect(p);
       else if (entry.name.endsWith(".njk")) templates.push(p);
@@ -123,7 +124,7 @@ export default async function () {
   // Safety net: a slug sitting in a data file nobody mapped is still on the site
   // somewhere, so say so rather than filing it under "Not on the site".
   for (const file of await readdir(DATA)) {
-    if (!file.endsWith(".json") || file === "photos.json") continue;
+    if (!file.endsWith(".json") || file === "photos.json" || file === "altVi.json") continue; // altVi.json captions every photo; it uses none
     const text = await readFile(path.join(DATA, file), "utf8");
     const quoted = new Set([...text.matchAll(/"([a-z0-9-]{4,})"/g)].map((m) => m[1]));
     for (const slug of slugs) {
@@ -215,7 +216,7 @@ export default async function () {
 
   const facets = [
     { group: "use", label: "Where it's used", sort: inMenuOrder },
-    { group: "year", label: "School year", sort: newestFirst },
+    { group: "year", label: "Academic year", sort: newestFirst },
     { group: "event", label: "Event", sort: byCount },
     { group: "who", label: "Who's in it", sort: byCount },
     { group: "stage", label: "Stage", sort: byCount },

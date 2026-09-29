@@ -1,0 +1,149 @@
+---
+layout: layouts/base.njk
+tone: navy
+stage: coral
+title: "Upper Secondary"
+description: "Upper Secondary tại Palm River Academy dành cho học viên từ 14 đến 18 tuổi. Chúng tôi xây dựng kế hoạch học tập theo mục tiêu của từng con, có giáo viên kèm ngay trong lớp mỗi buổi sáng, tiếng Anh vững hơn qua từng môn học và, với nhiều con, được nhận vào học ở nước ngoài. Ngoài ra còn có dự án thực hành, một chuyến đi do chính các con lên kế hoạch và, với một số con, thực tập hoặc phụ giúp ở các lớp nhỏ."
+---
+{% import "macros/icons.njk" as ic %}
+
+{% set heroPhoto = "students-waterfall-field-trip" %}
+{% set heroEyebrow = "Upper Secondary · 14 đến 18 tuổi" %}
+{% set heroTitle = 'Kế hoạch học <span class="mark">riêng cho con</span>' %}
+{% set heroText = "Chúng tôi ngồi lại với ba mẹ và con, thống nhất mục tiêu con đang hướng tới, rồi xây dựng việc học quanh mục tiêu đó. Tất cả đều bằng tiếng Anh, và với nhiều học viên, bước tiếp theo là đi du học." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow eyebrow--stage">Việc học</p>
+      <h2>Mỗi học viên một kế hoạch</h2>
+      <p>Mỗi học viên học theo kế hoạch của riêng mình. Các khóa học là khóa trực tuyến, nhưng không ai phải ngồi một mình với màn hình: sáng nào cũng có giáo viên PRA trong lớp để kèm, dạy những phần khó và theo dõi bài nào sắp đến hạn nộp.</p>
+      <p>Tất cả đều bằng tiếng Anh: đọc, viết, thuyết trình, bài nộp. Với những con tiếng Anh chưa vững, cả buổi sáng là thời gian dùng tiếng Anh liên tục.</p>
+      <p>Với nhiều học viên, bước tiếp theo là học cấp ba hoặc đại học ở nước ngoài. Chúng tôi chọn môn học theo hướng đó, và luyện cho các con thứ tiếng Anh các con sẽ cần khi sang đến nơi.</p>
+    </div>
+    <div class="leaf-wrap leaf-wrap--r has-sticker">
+      <span class="sticker sticker--coral sticker--tr">Môn nào cũng bằng tiếng Anh</span>
+      {% photo "upper-own-courses-together", "photo--lg photo--tilt-r" %}
+    </div>
+  </div>
+  <div class="wrap mt">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Cách làm</p>
+      <h2>Trước tiên là trò chuyện</h2>
+      <p class="lede">Kế hoạch của mỗi con một khác. Chúng tôi bắt đầu từ điều con muốn đạt được.</p>
+    </div>
+    <div class="cards cards--3 mt">
+      <div class="card">{{ ic.icon("chat", "blue") }}<h3>Cùng trao đổi</h3><p>Chúng tôi gặp ba mẹ và con, xem lại những gì con đã học đến nay, rồi thống nhất một mục tiêu. Có thể là đại học ở nước ngoài, một nghề nghiệp, hoặc chưa có gì cố định.</p></div>
+      <div class="card">{{ ic.icon("book", "green") }}<h3>Kế hoạch vừa với con</h3><p>Môn học và tốc độ học đi theo mục tiêu đó. Chỗ nào khóa học chưa đủ, giáo viên sẽ dạy lại phần đó cho kỹ.</p></div>
+      <div class="card">{{ ic.icon("tools", "coral") }}<h3>Học qua thực hành</h3><p>Song song với bài vở: mỗi năm một dự án cá nhân, một chuyến đi do các con tự lên kế hoạch, và với một số con là thực tập hoặc phụ giúp ở các lớp nhỏ.</p></div>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale" id="day">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Thứ Hai đến thứ Sáu</p>
+      <h2>Một ngày ở Upper Secondary</h2>
+      <p class="lede">Buổi sáng học khóa riêng, buổi chiều học chung.</p>
+    </div>
+    <div class="mt">{% set dayKey = "upper-secondary" %}{% include "partials/dayline.njk" %}</div>
+    <p class="table-note center">Buổi chiều có Movement (vận động), Wellbeing, một lớp tự chọn giữa Maker Space và Art of Science, và giờ tự học. <a href="{{ '/families/schedule/#upper-secondary' | href(lang) }}">Xem lịch cả tuần</a>.</p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Học qua thực hành</p>
+      <h2>Tự tay đo đạc</h2>
+      <p class="lede">Muốn tin một công thức, cách nhanh nhất là tự đi đo lấy số liệu.</p>
+    </div>
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+    {% set collagePhotos = ["upper-maths-mirror-method", "upper-students-working-through", "upper-maths-measuring-up", "upper-maths-rise-over-run"] %}
+    {% include "partials/collage.njk" %}
+    <div class="narrow mt">
+      <h3>Toán ngoài trang sách</h3>
+      <p>Đo chiều cao bằng một chiếc gương đặt trên sàn và hai tam giác đồng dạng. Tính độ dốc bằng tỉ số giữa độ cao và khoảng cách ngang, đo ngang căn phòng bằng thước thủy và bút đánh dấu. Đáp số được so với chính vật thật, không phải với đáp án cuối sách. Sau đó các con giải thích lại cho cả lớp.</p>
+      <h3>Dự án cá nhân</h3>
+      <p>Mỗi năm một dự án, do con tự chọn: một việc kinh doanh nhỏ, một đề tài nghiên cứu, một bộ phim, một ứng dụng, một khu vườn. Con tự đặt mục tiêu, chúng tôi theo sát để con làm đến nơi, rồi con trình bày kết quả.</p>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Chuyến đi</p>
+      <h2>Đà Lạt, do các con tự lên kế hoạch</h2>
+      <p class="lede">Mỗi năm một lần, nhóm Upper Secondary tự lên kế hoạch cho một chuyến đi rồi cùng nhau đi. Chuyến gần nhất là lên Đà Lạt.</p>
+    </div>
+    {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+    {# the trip in order, from the first dinner to the last market: eight prints go two rows deep across the page, so no 2up here #}
+    {% set collagePhotos = ["da-lat-trip-dinner", "da-lat-trip-harnesses", "da-lat-trip-high-ropes", "da-lat-trip-zip-line", "da-lat-trip-lunch", "da-lat-trip-capybara", "da-lat-trip-go-karts", "da-lat-trip-market"] %}
+    {% set collageWide = true %}
+    {% include "partials/collage.njk" %}
+    <div class="center narrow mt">
+      <p>Mọi thứ đều do các con lên kế hoạch: đặt vé, sắp xếp chỗ ở, chọn chỗ ăn và hoạt động, rồi tính chi phí từng khoản so với ngân sách tự đặt ra. Bảng tính cũng do các con làm. Giáo viên đi cùng và kiểm tra lại các con số, còn lịch trình là của các con.</p>
+    </div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap">
+    <div class="center narrow">
+      <p class="eyebrow eyebrow--stage">Ngoài lớp học</p>
+      <h2>Thực tập và kèm các em nhỏ</h2>
+      <p class="lede">Với một số học viên, khi phù hợp với kế hoạch, một phần thời gian trong tuần diễn ra ở nơi khác ngoài bàn học.</p>
+    </div>
+  </div>
+  <div class="wrap two mt">
+    <div>
+      <h3>Đi làm thật</h3>
+      <p>Một số học viên dành một phần thời gian trong tuần làm việc ở một quán hay cửa hàng tại địa phương: tiếp khách, phụ bếp, đứng quầy thu ngân. Các con đi làm đúng giờ, nhận việc từ một người không phải giáo viên của mình, và biết một ngày đi làm thật sự như thế nào.</p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["upper-internship-bakery", "upper-internship-drinks", "upper-internship-counter"] %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+  <div class="wrap two two--flip mt">
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["upper-ta-reading-early-years", "upper-ta-sharing-a-book", "secondary-student-helping-primary"] %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>
+    <div>
+      <h3>Thử làm người dạy</h3>
+      <p>Một số con khác phụ giúp trong lớp Early Years hoặc Primary, làm anh chị kèm học cho các em. Các con đọc sách cùng các bé, tổ chức một hoạt động, và hiểu phải làm gì để quản được một lớp toàn các bé năm tuổi.</p>
+      <p>Bài học cũng giống như đi thực tập, chỉ là ngay tại PRA: đến đúng giờ, làm được việc, và là người để một em nhỏ nhìn vào học theo. Ba mẹ cứ hỏi chúng tôi xem con có thể tham gia những gì.</p>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap two two--flip">
+    <div class="leaf-wrap leaf-wrap--tint">
+      {% photo "upper-years-students-group-project", "photo--lg photo--tall photo--tilt-r" %}
+    </div>
+    <div>
+      <p class="eyebrow">Sau PRA</p>
+      <h2>Học viên cũ giờ ở đâu</h2>
+      <p>Hơn mười học viên cũ đã tiếp tục học cấp ba và đại học ở nước ngoài: ở Mỹ và Úc, hoặc vào hệ quốc tế ở Hà Nội, Đà Nẵng và Ấn Độ.</p>
+      <p>Có con sang học cấp ba ở nước ngoài. Có con vào thẳng đại học. Dù theo hướng nào, các con đều đi với một kế hoạch mình đã cùng viết ra, và một giáo viên biết rõ con đang học đến đâu.</p>
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "Cùng bàn về kế hoạch cho con." %}
+{% set ctaText = "Kế hoạch ở đây là riêng cho từng con, nên bước đầu tiên là một buổi trò chuyện, gặp trực tiếp hoặc gọi video." %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

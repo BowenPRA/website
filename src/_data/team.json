@@ -10,7 +10,11 @@
       "shots": [
         "mid-autumn-festival-henna-ms-xuan"
       ],
-      "tint": 1
+      "tint": 1,
+      "vi": {
+        "role": "Chủ sở hữu",
+        "teaches": "Điều hành Palm River Academy"
+      }
     },
     {
       "name": "Mr. Seth",
@@ -22,7 +26,11 @@
         "upper-years-science-with-teacher",
         "teacher-seth-maths-sticks-game",
         "teacher-seth-henna-booth"
-      ]
+      ],
+      "vi": {
+        "role": "Giáo viên trưởng",
+        "teaches": "Kiêm dạy nấu ăn"
+      }
     },
     {
       "name": "Mr. David",
@@ -33,14 +41,22 @@
       "shots": [
         "reading-safari-board-game",
         "primary-playground-climbing"
-      ]
+      ],
+      "vi": {
+        "role": "Phó giáo viên trưởng",
+        "teaches": "Rà soát chuyên môn học thuật toàn PRA"
+      }
     },
     {
       "name": "Ms. Hien",
       "slug": "hien",
       "role": "Operations Manager",
-      "teaches": "Runs the school office",
-      "tint": 4
+      "teaches": "Runs the front office",
+      "tint": 4,
+      "vi": {
+        "role": "Quản lý vận hành",
+        "teaches": "Phụ trách văn phòng"
+      }
     },
     {
       "name": "Mr. Bowen",
@@ -55,7 +71,11 @@
         "secondary-nature-walk-jetty",
         "secondary-nature-walk-group",
         "graduation-certificates-and-cheers"
-      ]
+      ],
+      "vi": {
+        "role": "Điều phối viên Upper Secondary",
+        "teaches": "Dạy Toán và Khoa học"
+      }
     },
     {
       "name": "Mr. Caleb",
@@ -67,7 +87,11 @@
         "primary-movement-class",
         "gallery-chess-library",
         "reading-safari-teacher-in-costume"
-      ]
+      ],
+      "vi": {
+        "role": "Giáo viên chủ nhiệm Primary",
+        "teaches": "Dạy tiếng Anh, Toán, Khoa học và Movement"
+      }
     },
     {
       "name": "Ms. Kiu",
@@ -77,7 +101,11 @@
       "tint": 1,
       "shots": [
         "primary-lantern-class-hoi-an"
-      ]
+      ],
+      "vi": {
+        "role": "Giáo viên chủ nhiệm Primary",
+        "teaches": "Dạy tiếng Anh, Khoa học và Wellbeing"
+      }
     },
     {
       "name": "Ms. Solo",
@@ -90,35 +118,55 @@
         "primary-maths-roll-or-stack",
         "primary-big-book-story",
         "primary-start-of-the-day"
-      ]
+      ],
+      "vi": {
+        "role": "Giáo viên chủ nhiệm Primary",
+        "teaches": "Dạy tiếng Anh, Toán và Khoa học"
+      }
     },
     {
       "name": "Ms. Thanh",
       "slug": "thanh",
       "role": "Kindergarten Homeroom Teacher",
       "teaches": "Teaches Phonics, Maths and Understanding the World",
-      "tint": 3
+      "tint": 3,
+      "vi": {
+        "role": "Giáo viên chủ nhiệm Kindergarten",
+        "teaches": "Dạy phonics (ngữ âm), Toán và Tìm hiểu thế giới"
+      }
     },
     {
       "name": "Ms. Tham",
       "slug": "tham",
       "role": "Nursery Homeroom Teacher",
       "teaches": "Leads the Nursery class",
-      "tint": 4
+      "tint": 4,
+      "vi": {
+        "role": "Giáo viên chủ nhiệm Nursery",
+        "teaches": "Phụ trách lớp Nursery"
+      }
     },
     {
       "name": "Ms. Thoa",
       "slug": "thoa",
       "role": "Nursery Teacher",
       "teaches": "Teaches in the Nursery all day",
-      "tint": 5
+      "tint": 5,
+      "vi": {
+        "role": "Giáo viên Nursery",
+        "teaches": "Dạy lớp Nursery cả ngày"
+      }
     },
     {
       "name": "Ms. Thắm V",
       "slug": "tham-v",
       "role": "Primary Teacher",
       "teaches": "Teaches Technology, Crafts and Review",
-      "tint": 6
+      "tint": 6,
+      "vi": {
+        "role": "Giáo viên Primary",
+        "teaches": "Dạy Công nghệ, Thủ công và Review"
+      }
     },
     {
       "name": "Ms. Duyen",
@@ -128,7 +176,14 @@
       "tint": 1,
       "shots": [
         "primary-book-corner"
-      ]
+      ],
+      "vi": {
+        "role": "Nhân viên văn phòng và giáo viên Primary",
+        "teaches": "Dạy Công nghệ và Thủ công"
+      }
     }
-  ]
+  ],
+  "vi": {
+    "intro": "Mọi giáo viên dạy các môn học thuật đều có bằng đại học chuyên ngành và chứng chỉ TESOL, và đủ điều kiện giảng dạy tại Việt Nam."
+  }
 }

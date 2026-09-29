@@ -1,0 +1,117 @@
+{
+  "_about": "Words in the header, menu, footer and shared partials, in both languages. Page copy lives in the pages (src/ and src/vi/); data files carry their own `vi` blocks. See VIETNAMESE.md.",
+  "en": {
+    "code": "en",
+    "locale": "en_US",
+    "name": "English",
+    "skip": "Skip to content",
+    "home": "Home",
+    "homeLabel": "Palm River Academy home",
+    "mainNav": "Main",
+    "mobileNav": "Main, mobile",
+    "menu": "Menu",
+    "about": "About Us",
+    "academics": "Academics",
+    "admissions": "Admissions",
+    "events": "Events",
+    "contact": "Contact Us",
+    "enrollment": "Enrollment",
+    "fees": "Tuition and fees",
+    "feesShort": "Fees",
+    "schedule": "Schedule and calendar",
+    "scheduleShort": "Schedule",
+    "handbook": "Family handbook",
+    "tour": "Book a tour",
+    "call": "Call",
+    "stages": {
+      "early": "Early Years",
+      "earlySub": "Nursery and Kindergarten, 20 months to 4",
+      "earlySubShort": "Nursery and Kindergarten",
+      "primary": "Primary",
+      "primarySub": "Years 1 to 6",
+      "lower": "Lower Secondary",
+      "lowerSub": "Years 7 to 9",
+      "upper": "Upper Secondary",
+      "upperSub": "Ages 14 to 18",
+      "global": "Global Program",
+      "globalSub": "3 weeks to 3 months"
+    },
+    "lang": {
+      "label": "Language",
+      "switchTo": "Đọc trang này bằng tiếng Việt"
+    },
+    "footer": {
+      "findUs": "Find us",
+      "maps": "Open in Google Maps",
+      "talk": "Talk to us",
+      "since": "Serving families in Hội An and Đà Nẵng since"
+    },
+    "cta": {
+      "title": "Come and see it for yourself.",
+      "text": "Walk around with us for an hour, Monday to Friday. Not in Hội An yet? We will do a video call."
+    },
+    "notices": {
+      "heading": "Announcements",
+      "now": "Now on",
+      "flyer": "See the flyer",
+      "swipe": "Swipe for more."
+    }
+  },
+  "vi": {
+    "code": "vi",
+    "locale": "vi_VN",
+    "name": "Tiếng Việt",
+    "skip": "Chuyển đến nội dung chính",
+    "home": "Trang chủ",
+    "homeLabel": "Trang chủ Palm River Academy",
+    "mainNav": "Menu chính",
+    "mobileNav": "Menu chính, điện thoại",
+    "menu": "Menu",
+    "about": "Giới thiệu",
+    "academics": "Chương trình",
+    "admissions": "Tuyển sinh",
+    "events": "Sự kiện",
+    "contact": "Liên hệ",
+    "enrollment": "Đăng ký học",
+    "fees": "Học phí",
+    "feesShort": "Học phí",
+    "schedule": "Lịch học và lịch năm học",
+    "scheduleShort": "Lịch học",
+    "handbook": "Cẩm nang phụ huynh",
+    "tour": "Đặt lịch tham quan",
+    "call": "Gọi",
+    "stages": {
+      "early": "Early Years",
+      "earlySub": "Nursery và Kindergarten, 20 tháng đến 4 tuổi",
+      "earlySubShort": "Nursery và Kindergarten",
+      "primary": "Primary",
+      "primarySub": "Year 1 đến Year 6",
+      "lower": "Lower Secondary",
+      "lowerSub": "Year 7 đến Year 9",
+      "upper": "Upper Secondary",
+      "upperSub": "14 đến 18 tuổi",
+      "global": "Global Program",
+      "globalSub": "3 tuần đến 3 tháng"
+    },
+    "lang": {
+      "label": "Ngôn ngữ",
+      "switchTo": "Read this page in English"
+    },
+    "footer": {
+      "findUs": "Địa chỉ",
+      "maps": "Mở trên Google Maps",
+      "talk": "Liên lạc",
+      "since": "Đồng hành cùng các gia đình ở Hội An và Đà Nẵng từ năm"
+    },
+    "cta": {
+      "title": "Mời ba mẹ đến xem tận nơi.",
+      "text": "Ba mẹ có thể đến tham quan cùng chúng tôi trong khoảng một giờ, từ thứ Hai đến thứ Sáu. Chưa ở Hội An? Chúng tôi sẽ gọi video."
+    },
+    "notices": {
+      "heading": "Thông báo",
+      "now": "Tin mới",
+      "flyer": "Xem tờ rơi",
+      "swipe": "Vuốt để xem thêm."
+    }
+  }
+}

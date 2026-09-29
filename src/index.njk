@@ -14,8 +14,8 @@ description: "Palm River Academy is an English language center in Hội An for c
     <h1 class="rise" style="--d:1">English, learned <span class="mark">by doing.</span></h1>
     <p class="lede rise" style="--d:2">English, taught through science, maths, cooking, art and sport. Not from a worksheet.</p>
     <div class="hero__actions rise" style="--d:3">
-      <a class="btn btn--white" href="{{ '/contact/' | url }}">Book a tour</a>
-      <a class="btn btn--ghost-white" href="{{ '/learning/' | url }}">Our programs</a>
+      <a class="btn btn--white" href="{{ '/contact/' | href(lang) }}">Book a tour</a>
+      <a class="btn btn--ghost-white" href="{{ '/learning/' | href(lang) }}">Our programs</a>
     </div>
     <ul class="hero__facts rise" style="--d:4" aria-label="At a glance">
       <li>20 months to 18 years</li>
@@ -35,7 +35,7 @@ description: "Palm River Academy is an English language center in Hội An for c
       <h2>Serving families in Hội An and Đà Nẵng since {{ site.founded }}</h2>
       <p class="lede lede--blue">Hội An's oldest international learning center.</p>
       <p>We opened in {{ site.founded }} for families who wanted their children to learn English without sitting still all day. That is still the idea. Half our families are Vietnamese and half are from abroad. So are our teachers.</p>
-      <a class="btn btn--primary" href="{{ '/about/' | url }}">About us</a>
+      <a class="btn btn--primary" href="{{ '/about/' | href(lang) }}">About us</a>
     </div>
     <div class="leaf-wrap leaf-wrap--r has-sticker">
       <span class="sticker sticker--sun sticker--tl">Est. {{ site.founded }}</span>
@@ -83,7 +83,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     </div>
     <div class="tiles mt">
       {% for p in programs %}{% if p.key != 'global' %}
-      <a class="tile tile--{{ p.tone }}" href="{{ p.url | url }}">
+      <a class="tile tile--{{ p.tone }}" href="{{ p.url | href(lang) }}">
         {% photo p.photo, "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 46vw" %}
         <span class="tile__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span class="tile__label"><strong>{{ p.name }}</strong><small>{{ p.ages }}</small></span>
@@ -113,7 +113,7 @@ description: "Palm River Academy is an English language center in Hội An for c
       <p class="eyebrow eyebrow--violet">Visiting Hội An?</p>
       <h2>The Global Program</h2>
       <p>Here for a few weeks or a season? Your child joins a real class for three weeks to three months, half day or full day, ages 2 to 14.</p>
-      <a class="btn btn--green" href="{{ '/learning/global-program/' | url }}">How it works</a>
+      <a class="btn btn--green" href="{{ '/learning/global-program/' | href(lang) }}">How it works</a>
     </div>
   </div>
 </section>
@@ -140,7 +140,7 @@ description: "Palm River Academy is an English language center in Hội An for c
       {% photo "primary-lanterns-finished", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
     </div>
     <p class="gallery__hint" hidden>Tap a photo to see it bigger.</p>
-    <p class="center mt"><a class="btn btn--primary" href="{{ '/events/' | url }}">A year of events</a></p>
+    <p class="center mt"><a class="btn btn--primary" href="{{ '/events/' | href(lang) }}">A year of events</a></p>
   </div>
 </section>
 
@@ -156,8 +156,8 @@ description: "Palm River Academy is an English language center in Hội An for c
     </div>
     <figure class="film__player">
       <video class="film__video" controls preload="none" playsinline
-        poster="{{ '/assets/video/yearbook-2025-26-poster.webp' | url }}"
-        src="{{ '/assets/video/yearbook-2025-26.mp4' | url }}"
+        poster="{{ '/assets/video/yearbook-2025-26-poster.webp' | href(lang) }}"
+        src="{{ '/assets/video/yearbook-2025-26.mp4' | href(lang) }}"
         aria-label="Palm River Academy yearbook 2025-26 film"></video>
       <button class="film__play" type="button" aria-label="Play the yearbook film">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
