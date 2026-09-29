@@ -19,7 +19,7 @@
     {
       "name": "Mr. Seth",
       "slug": "seth",
-      "role": "Head Teacher",
+      "role": "Head of Academy",
       "teaches": "Also teaches Cooking",
       "tint": 2,
       "shots": [
@@ -28,7 +28,7 @@
         "teacher-seth-henna-booth"
       ],
       "vi": {
-        "role": "Giáo viên trưởng",
+        "role": "Giám đốc học thuật",
         "teaches": "Kiêm dạy nấu ăn"
       }
     },

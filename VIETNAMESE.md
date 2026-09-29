@@ -88,7 +88,7 @@ grade 6).
 | Global Program pathways: Vocational half day / Academic half day / Cambridge and vocational full day | Nửa ngày thực hành / Nửa ngày học thuật / Cả ngày: Cambridge và thực hành |
 | homeroom (the daily slot) | sinh hoạt lớp |
 | silent auction | đấu giá im lặng |
-| Owner / Head Teacher / Deputy Head Teacher | Chủ sở hữu / Giáo viên trưởng / Phó giáo viên trưởng |
+| Owner / Head of Academy / Deputy Head Teacher | Chủ sở hữu / Giám đốc học thuật / Phó giáo viên trưởng |
 | campus | cơ sở (the site as a place: khuôn viên) |
 | lunch, snack | bữa trưa, bữa phụ |
 | the bus, transport | xe đưa đón |
