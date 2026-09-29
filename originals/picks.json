@@ -977,7 +977,12 @@
     "src": "photos-2026-27/UpperIntern1.jpg",
     "slug": "upper-internship-bakery",
     "aspect": "3:4",
-    "region": [0.36, 0, 0.62, 1],
+    "region": [
+      0.36,
+      0,
+      0.62,
+      1
+    ],
     "alt": "An Upper Secondary student pouring a drink on an internship shift at a Hội An bakery"
   },
   {
@@ -1093,5 +1098,136 @@
     "slug": "upper-ta-sharing-a-book",
     "aspect": "4:3",
     "alt": "An Upper Secondary student sharing a book with a younger child on the classroom rug"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-reaching-for-the-yellow-lion.jpg",
+    "slug": "mid-autumn-festival-2026-reaching-for-the-yellow-lion",
+    "alt": "A child laughing and reaching for the yellow lion at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "lion-dance",
+      "celebration",
+      "courtyard"
+    ],
+    "focus": "63% 42%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-the-market-from-above.jpg",
+    "slug": "mid-autumn-festival-2026-the-market-from-above",
+    "alt": "Families browsing the student stalls in the courtyard at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "whole-school",
+      "celebration",
+      "courtyard"
+    ],
+    "focus": "42% 33%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-pressing-a-mooncake.jpg",
+    "slug": "mid-autumn-festival-2026-pressing-a-mooncake",
+    "alt": "A student and an adult pressing a pink mooncake mould at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "cooking",
+      "courtyard"
+    ],
+    "focus": "45% 55%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-pressing-the-mooncake-mould.jpg",
+    "slug": "mid-autumn-festival-2026-pressing-the-mooncake-mould",
+    "alt": "A child and an adult pressing a mooncake mould together at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "cooking",
+      "courtyard"
+    ],
+    "focus": "56% 29%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-the-snack-stall.jpg",
+    "slug": "mid-autumn-festival-2026-the-snack-stall",
+    "alt": "Two students running their snack stall at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "food",
+      "project",
+      "courtyard"
+    ],
+    "focus": "47% 45%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-grinning-under-the-pole.jpg",
+    "slug": "mid-autumn-festival-2026-grinning-under-the-pole",
+    "alt": "A child grinning while ducking under the limbo pole at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "game",
+      "courtyard"
+    ],
+    "focus": "55% 45%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-limbo-in-ao-dai.jpg",
+    "slug": "mid-autumn-festival-2026-limbo-in-ao-dai",
+    "alt": "A student in a cream áo dài leaning back under the limbo pole",
+    "taken": "2026-09-25",
+    "tags": [
+      "game",
+      "celebration",
+      "courtyard"
+    ],
+    "focus": "42% 52%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-hand-in-hand-with-lanterns.jpg",
+    "slug": "mid-autumn-festival-2026-hand-in-hand-with-lanterns",
+    "alt": "Two children walking hand in hand with lanterns at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "lanterns",
+      "celebration",
+      "courtyard"
+    ],
+    "focus": "49% 44%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-tugging-the-masked-dancer.jpg",
+    "slug": "mid-autumn-festival-2026-tugging-the-masked-dancer",
+    "alt": "Children tugging at a masked performer as families watch at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "whole-school",
+      "lion-dance",
+      "celebration",
+      "play",
+      "courtyard"
+    ],
+    "focus": "35% 60%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-two-lions-two-sparklers.jpg",
+    "slug": "mid-autumn-festival-2026-two-lions-two-sparklers",
+    "alt": "Two lions rearing face to face with sparklers at the Mid-Autumn Festival",
+    "taken": "2026-09-25",
+    "tags": [
+      "lion-dance",
+      "performance",
+      "celebration",
+      "courtyard"
+    ],
+    "focus": "55% 45%"
+  },
+  {
+    "src": "events/2026_09_25 Mid-Autumn Festival/curated/mid-autumn-festival-2026-speaking-after-the-dance.jpg",
+    "slug": "mid-autumn-festival-2026-speaking-after-the-dance",
+    "alt": "Mr. Seth speaking to families after the lion dance",
+    "taken": "2026-09-25",
+    "tags": [
+      "celebration",
+      "courtyard"
+    ],
+    "focus": "44% 40%"
   }
 ]

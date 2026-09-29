@@ -2,46 +2,54 @@
 layout: layouts/base.njk
 tone: navy
 title: "Events"
-description: "Festivals, theme weeks and trips at Palm River Academy in 2025-26, and what students did at each: performing, hosting, running stalls and leading activities for younger classes."
+description: "Festivals, theme weeks and trips at Palm River Academy, and what students did at each: performing, hosting, running stalls and leading activities for younger classes."
 permalink: /events/
 ---
 {% set heroPhoto = "events-hero-maths-prize-stickers" %}
 {% set heroShape = "tall" %}
-{% set heroEyebrow = "Events · 2025-26" %}
+{% set heroEyebrow = "Events" %}
 {% set heroTitle = 'Our students <span class="mark">run the show</span>' %}
-{% set heroText = "Festivals, theme weeks and trips from 2025-26. At each one, students perform, host, run stalls or lead activities for younger classes." %}
+{% set heroText = "Festivals, theme weeks and trips. At each one, students perform, host, run stalls or lead activities for younger classes. This year's events are added as they happen, with last year's below." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
   <div class="wrap">
-    <nav class="months" aria-label="Jump to a month">
-      {% for e in events %}{% if loop.first or events[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
-    </nav>
     <p class="gallery__hint events__hint" hidden>Tap a photo to see it bigger.</p>
 
-    <ol class="year">
-      {% for e in events %}
-      <li class="event" id="{{ e.id }}" data-c="{{ loop.index0 % 5 }}">
-        <p class="event__when"><span class="event__month">{{ e.month }}</span> <span class="event__yr">{{ e.year }}</span></p>
-        <div class="event__body">
-          <h2>{{ e.name }}</h2>
-          <p class="event__date">{{ e.when }}</p>
-          <p class="event__summary">{{ e.summary }}</p>
-          {% if e.did.length %}
-          <h3 class="event__did-title">What students did</h3>
-          <ul class="event__did">
-            {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
-          </ul>
-          {% endif %}
-          {% if e.photos.length %}
-          <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
-            {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
+    {# One section per academic year, newest first, in the order of events.json. #}
+    {% for sy, list in events | groupby("school_year") %}
+    <div class="season" id="year-{{ sy }}">
+      <h2 class="season__title">{{ sy }} <span>{% if loop.first %}This year{% else %}Last year{% endif %}</span></h2>
+      {% if list.length > 2 %}
+      <nav class="months" aria-label="Jump to a month">
+        {% for e in list %}{% if loop.first or list[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
+      </nav>
+      {% endif %}
+      <ol class="year">
+        {% for e in list %}
+        <li class="event" id="{{ e.id }}" data-c="{{ loop.index0 % 5 }}">
+          <p class="event__when"><span class="event__month">{{ e.month }}</span> <span class="event__yr">{{ e.year }}</span></p>
+          <div class="event__body">
+            <h2>{{ e.name }}</h2>
+            <p class="event__date">{{ e.when }}</p>
+            <p class="event__summary">{{ e.summary }}</p>
+            {% if e.did.length %}
+            <h3 class="event__did-title">What students did</h3>
+            <ul class="event__did">
+              {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+            {% if e.photos.length %}
+            <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
+              {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
+            </div>
+            {% endif %}
           </div>
-          {% endif %}
-        </div>
-      </li>
-      {% endfor %}
-    </ol>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
