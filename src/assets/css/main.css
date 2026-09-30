@@ -149,6 +149,11 @@ strong { font-weight: 600; }
 .center { text-align: center; }
 .center .lede { margin-inline: auto; }
 .narrow { max-width: 760px; margin-inline: auto; }
+/* Long reading pages (privacy): smaller section headings than the marketing pages. */
+.prose h2 { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.6rem); margin-top: 2em; }
+.prose h2:first-child { margin-top: 0; }
+.prose li { margin-bottom: 0.55em; }
+.prose__date { margin-top: 2.5em; font-size: 0.9rem; color: var(--ink-soft); }
 .mt { margin-top: var(--s-5); }
 
 .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 8px 14px; border-radius: 8px; z-index: 100; }
