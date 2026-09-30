@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+tone: navy
+title: "Enrollment form"
+description: "The Palm River Academy enrollment form: one form for each child, with the documents we need, sent straight to the office."
+script: "/assets/js/enroll.js"
+---
+
+{% set heroPhoto = "gallery-magnetic-tiles" %}
+{% set heroEyebrow = "Admissions" %}
+{% set heroTitle = 'The enrollment <span class="mark">form</span>' %}
+{% set heroText = "One form for each child. Have ready a photo of your child, passport copies for your child and the parents, and your child's last school report if there is one. You add them at the end." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap narrow">
+    {% include "partials/enroll-form.njk" %}
+  </div>
+</section>

@@ -1,0 +1,250 @@
+{# The enrollment form, in the page's language. Every word comes from src/_data/enroll.json; the script is
+   src/assets/js/enroll.js, which sends the form to the office system (The Current).
+   A field's name is where its answer goes in the message ("parents.0.email"); the database function
+   adm_enroll_submit (admin repo, supabase/updates-2026-09-30-enrollments.sql) reads the same names.
+   Without the script the five steps show as one long page and the buttons stay off. #}
+{% set t = enroll.t %}
+
+{% macro field(name, label, o={}) %}
+{% set id = "f-" + (name | replace(".", "-")) %}
+<div>
+  <label for="{{ id }}">{{ label }}{% if o.required %} *{% endif %}</label>
+  <input id="{{ id }}" name="{{ name }}" type="{{ o.type or 'text' }}"{% if o.required %} required{% endif %}{% if (o.type or 'text') != 'date' %} maxlength="{{ o.max or 80 }}"{% endif %}{% if o.autocomplete %} autocomplete="{{ o.autocomplete }}"{% endif %}{% if o.placeholder %} placeholder="{{ o.placeholder }}"{% endif %}{% if o.past %} data-past{% endif %}>
+  {% if o.hint %}<p class="form__note">{{ o.hint }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro address(prefix, t, required) %}
+<div class="form__row">
+  {{ field(prefix + ".line1", t.street, { required: required, max: 160 }) }}
+  {{ field(prefix + ".line2", t.street2, { max: 160 }) }}
+</div>
+<div class="form__row">
+  {{ field(prefix + ".city", t.city, { required: required }) }}
+  {{ field(prefix + ".state", t.state) }}
+</div>
+<div class="form__row">
+  {{ field(prefix + ".postal", t.postal, { max: 20 }) }}
+  {{ field(prefix + ".country", t.country, { required: required }) }}
+</div>
+{% endmacro %}
+
+{% macro yesno(name, q, t) %}
+<fieldset class="yn">
+  <legend>{{ q }} *</legend>
+  <label class="pick"><input type="radio" name="{{ name }}" value="yes" required> {{ t.yes }}</label>
+  <label class="pick"><input type="radio" name="{{ name }}" value="no" required> {{ t.no }}</label>
+</fieldset>
+{% endmacro %}
+
+{% macro parent(i, t, required) %}
+{% set p = "parents." + i %}
+<fieldset class="group">
+  <legend>{{ t.parent }} {{ i + 1 }}{% if not required %} <span class="group__opt">({{ t.optional }})</span>{% endif %}</legend>
+  {% if not required %}<p class="form__note">{{ t.parent2Hint }}</p>{% endif %}
+  <div class="form__row">
+    {{ field(p + ".first", t.firstName, { required: required }) }}
+    {{ field(p + ".last", t.familyName, { required: required }) }}
+  </div>
+  <div class="form__row">
+    {{ field(p + ".relation", t.relation, { required: required, max: 60 }) }}
+    {{ field(p + ".nationality", t.nationality, { required: required, max: 60 }) }}
+  </div>
+  <div class="form__row">
+    {{ field(p + ".id_number", t.parentId, { required: required, max: 60 }) }}
+    {{ field(p + ".issue_date", t.issueDate, { required: required, type: "date", past: true }) }}
+  </div>
+  <div class="form__row">
+    {{ field(p + ".issue_place", t.issuePlace, { required: required, max: 100 }) }}
+    <div>
+      <label for="f-parents-{{ i }}-language">{{ t.langPref }}{% if required %} *{% endif %}</label>
+      <select id="f-parents-{{ i }}-language" name="{{ p }}.language"{% if required %} required{% endif %}>
+        <option value="">{{ t.choose }}</option>
+        <option value="English">{{ t.english }}</option>
+        <option value="Vietnamese">{{ t.vietnamese }}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form__row">
+    {{ field(p + ".phone", t.phone, { required: required, type: "tel", max: 40, placeholder: "+84 905 123 456" }) }}
+    {{ field(p + ".email", t.email, { required: required, type: "email", max: 200 }) }}
+  </div>
+  {{ field(p + ".profession", t.profession, { required: required, max: 100 }) }}
+  <label class="pick"><input type="checkbox" name="{{ p }}.same_address" checked data-hides="address-{{ i }}"> {{ t.sameAddress }}</label>
+  <div class="group__more" id="address-{{ i }}" hidden>
+    {{ address(p + ".address", t, required) }}
+  </div>
+</fieldset>
+{% endmacro %}
+
+{% macro person(prefix, title, t, o={}) %}
+<fieldset class="group">
+  <legend>{{ title }}{% if not o.required %} <span class="group__opt">({{ t.optional }})</span>{% endif %}</legend>
+  <div class="form__row">
+    {{ field(prefix + ".first", t.firstName, { required: o.required }) }}
+    {{ field(prefix + ".last", t.familyName, { required: o.required }) }}
+  </div>
+  <div class="form__row">
+    {{ field(prefix + ".relation", t.relation, { required: o.required, max: 60 }) }}
+    {{ field(prefix + ".phone", t.mobile if o.email else t.phone, { required: o.required, type: "tel", max: 40, placeholder: "+84 905 123 456" }) }}
+  </div>
+  {% if o.email %}{{ field(prefix + ".email", t.email, { required: o.required, type: "email", max: 200 }) }}{% endif %}
+</fieldset>
+{% endmacro %}
+
+<div class="enroll">
+  <form class="form enroll__form" method="post" data-enroll-form data-base="{{ site.forms.base }}" data-key="{{ site.forms.key }}"
+    data-say-step="{{ t.stepOf }}" data-say-uploading="{{ t.uploading }}" data-say-sending="{{ t.sending }}" data-say-remove="{{ t.docsRemove }}"
+    data-say-none="{{ t.docsNone }}" data-say-big="{{ t.docsTooBig }}" data-say-type="{{ t.docsBadType }}" data-say-many="{{ t.docsTooMany }}" data-say-sign="{{ t.signMissing }}">
+    <div class="enroll__top">
+      <p class="enroll__count" aria-live="polite"></p>
+      <div class="enroll__bar" aria-hidden="true"><span></span></div>
+    </div>
+    <p class="form__note">{{ t.required }}</p>
+
+    {# ---------- 1. Student ---------- #}
+    <section class="enroll__step">
+      <h2 tabindex="-1">{{ enroll.steps[0].title }}</h2>
+      <div>
+        <label for="f-applying">{{ t.applyingFor }} *</label>
+        <select id="f-applying" name="applying_for" required>
+          <option value="">{{ t.choose }}</option>
+          {% for o in enroll.applying %}<option value="{{ o.value }}">{{ o.label }}</option>{% endfor %}
+        </select>
+      </div>
+      <fieldset class="group">
+        <legend>{{ t.studentName }}</legend>
+        <div class="form__row">
+          {{ field("student.first", t.firstName, { required: true }) }}
+          {{ field("student.last", t.familyName, { required: true }) }}
+        </div>
+      </fieldset>
+      <div class="form__row">
+        {{ field("student.dob", t.dob, { required: true, type: "date", past: true }) }}
+        {{ field("student.place_of_birth", t.birthPlace, { required: true, max: 100 }) }}
+      </div>
+      <div class="form__row">
+        {{ field("student.nationality", t.nationality, { required: true, max: 60 }) }}
+        {{ field("student.id_number", t.studentId, { required: true, max: 60 }) }}
+      </div>
+      {{ field("student.languages", t.languages, { required: true, max: 160 }) }}
+      <fieldset class="yn">
+        <legend>{{ t.gender }} *</legend>
+        <label class="pick"><input type="radio" name="student.gender" value="female" required> {{ t.female }}</label>
+        <label class="pick"><input type="radio" name="student.gender" value="male" required> {{ t.male }}</label>
+        <label class="pick"><input type="radio" name="student.gender" value="other" required data-shows="gender-other"> {{ t.other }}</label>
+      </fieldset>
+      <div id="gender-other" hidden>{{ field("student.gender_other", t.genderOther, { max: 60 }) }}</div>
+      <fieldset class="group">
+        <legend>{{ t.homeAddress }}</legend>
+        {{ address("student.address", t, true) }}
+      </fieldset>
+      {{ field("student.start_date", t.startDate, { type: "date", hint: t.startHint }) }}
+    </section>
+
+    {# ---------- 2. Parents and emergency contacts ---------- #}
+    <section class="enroll__step">
+      <h2 tabindex="-1">{{ enroll.steps[1].title }}</h2>
+      {{ parent(0, t, true) }}
+      {{ parent(1, t, false) }}
+      <h3>{{ t.emergencyHead }}</h3>
+      {{ person("emergency.0", t.emergency + " 1", t, { required: true, email: true }) }}
+      {{ person("emergency.1", t.emergency + " 2", t, { email: true }) }}
+    </section>
+
+    {# ---------- 3. Education and health ---------- #}
+    <section class="enroll__step">
+      <h2 tabindex="-1">{{ enroll.steps[2].title }}</h2>
+      <h3>{{ t.eduHead }}</h3>
+      <p class="form__note">{{ t.eduIntro }}</p>
+      {% for n in [0, 1, 2] %}
+      <div class="form__row">
+        {{ field("schools." + n + ".name", t.school + " " + (n + 1), { max: 200, placeholder: t.schoolHint }) }}
+        {{ field("schools." + n + ".years", t.years, { max: 200, placeholder: t.yearsHint }) }}
+      </div>
+      {% endfor %}
+      {{ field("school_language", t.schoolLang, { max: 160, placeholder: t.schoolLangHint }) }}
+      {% for q in enroll.background %}{{ yesno("background." + q.key, q.q, t) }}{% endfor %}
+      <div><label for="f-bg-explain">{{ t.explainBg }}</label><textarea id="f-bg-explain" name="background.explain" maxlength="2000"></textarea></div>
+
+      <h3>{{ t.healthHead }}</h3>
+      {% for q in enroll.health %}{{ yesno("health." + q.key, q.q, t) }}{% endfor %}
+      <div><label for="f-health-explain">{{ t.explainHealth }}</label><textarea id="f-health-explain" name="health.explain" maxlength="2000"></textarea></div>
+      {% for q in enroll.allergy %}{{ yesno("health." + q.key, q.q, t) }}{% endfor %}
+      <div><label for="f-allergies">{{ t.allergies }}</label><textarea id="f-allergies" name="health.allergies" maxlength="2000"></textarea></div>
+      <div class="declare">
+        <h3>{{ t.medicalHead }}</h3>
+        <p>{{ t.medicalText }}</p>
+      </div>
+    </section>
+
+    {# ---------- 4. Photos and pick-up ---------- #}
+    <section class="enroll__step">
+      <h2 tabindex="-1">{{ enroll.steps[3].title }}</h2>
+      <fieldset class="group">
+        <legend>{{ t.consentHead }} *</legend>
+        <p class="form__note">{{ t.consentAsk }}</p>
+        <label class="choice"><input type="radio" name="photo_consent" value="total" required><span><strong>{{ t.totalTitle }}</strong>{{ t.totalText }}</span></label>
+        <label class="choice"><input type="radio" name="photo_consent" value="private" required><span><strong>{{ t.privateTitle }}</strong>{{ t.privateText }}</span></label>
+      </fieldset>
+      <div class="declare">
+        <h3>{{ t.policyHead }}</h3>
+        <p>{{ t.policyText }}</p>
+      </div>
+      <h3>{{ t.pickupHead }}</h3>
+      <p class="form__note">{{ t.pickupIntro }}</p>
+      {% for n in [0, 1, 2] %}{{ person("pickup." + n, t.person + " " + (n + 1), t) }}{% endfor %}
+    </section>
+
+    {# ---------- 5. Contract, documents and signature ---------- #}
+    <section class="enroll__step">
+      <h2 tabindex="-1">{{ enroll.steps[4].title }}</h2>
+      <h3>{{ t.contractHead }}</h3>
+      {% if t.contractNote %}<p class="form__note">{{ t.contractNote }}</p>{% endif %}
+      <div class="contract" tabindex="0" lang="en">
+        <p>{{ enroll.contractIntro }}</p>
+        {% for part in enroll.contract %}
+        <h4>{{ part[0] }}</h4>
+        {% for para in part.slice(1) %}<p>{{ para }}</p>{% endfor %}
+        {% endfor %}
+      </div>
+      <label class="pick"><input type="checkbox" name="terms" required> {{ t.agree }} *</label>
+
+      <fieldset class="group">
+        <legend>{{ t.docsHead }} *</legend>
+        <p class="form__note">{{ t.docsAsk }}</p>
+        <ol class="docs">{% for d in enroll.docs %}<li>{{ d.item }}</li>{% endfor %}</ol>
+        <label class="btn btn--ghost btn--small files__add">{{ t.docsButton }}<input type="file" class="files__input" multiple accept="image/*,application/pdf,.heic,.heif"></label>
+        <p class="form__note">{{ t.docsHint }}</p>
+        <ul class="files" aria-live="polite"></ul>
+        <p class="form__note form__error files__error" role="alert" hidden></p>
+      </fieldset>
+
+      <fieldset class="group">
+        <legend>{{ t.signHead }} *</legend>
+        <p class="form__note">{{ t.signHint }}</p>
+        <canvas class="sign" width="640" height="200" role="img" aria-label="{{ t.signHead }}"></canvas>
+        <button type="button" class="btn btn--ghost btn--small sign__clear">{{ t.signClear }}</button>
+        <p class="form__note form__error sign__error" role="alert" hidden></p>
+      </fieldset>
+      <p class="form__note">{{ t.privacy }} <a href="{{ '/privacy/' | href(lang) }}">{{ t.privacyLink }}</a>.</p>
+    </section>
+
+    {# People never see this box. Robots fill it in, and what they send is thrown away. #}
+    <div class="form__trap" aria-hidden="true"><label for="f-website">{{ t.trap }}</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+    <div class="enroll__nav">
+      <button type="button" class="btn btn--ghost" data-back hidden>{{ t.back }}</button>
+      <button type="button" class="btn btn--primary" data-next disabled>{{ t.next }}</button>
+      <button type="submit" class="btn btn--green" data-send disabled>{{ t.send }}</button>
+    </div>
+    <p class="form__note enroll__status" role="status" hidden></p>
+    <p class="form__note form__error enroll__error" role="alert" hidden>{{ t.error }} <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a> · <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a></p>
+    <noscript><p class="form__note">{{ t.noscript }} <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a> · <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a></p></noscript>
+  </form>
+  <div class="form form__done" role="status" tabindex="-1" hidden>
+    <h2>{{ t.doneTitle }}</h2>
+    <p>{{ t.doneText }}</p>
+    <button type="button" class="btn btn--green" data-another>{{ t.another }}</button>
+  </div>
+</div>

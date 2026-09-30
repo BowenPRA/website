@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+tone: navy
+title: "Đơn đăng ký học"
+description: "Đơn đăng ký học tại Palm River Academy: mỗi con một đơn, kèm các giấy tờ cần thiết, gửi thẳng đến văn phòng."
+script: "/assets/js/enroll.js"
+---
+
+{% set heroPhoto = "gallery-magnetic-tiles" %}
+{% set heroEyebrow = "Tuyển sinh" %}
+{% set heroTitle = 'Đơn <span class="mark">đăng ký học</span>' %}
+{% set heroText = "Mỗi con điền một đơn. Ba mẹ vui lòng chuẩn bị ảnh chân dung của con, bản sao hộ chiếu của con và của ba mẹ, cùng học bạ hoặc báo cáo học tập gần nhất của con nếu có. Ba mẹ sẽ gửi các giấy tờ này ở cuối đơn." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap narrow">
+    {% include "partials/enroll-form.njk" %}
+  </div>
+</section>

@@ -1445,6 +1445,64 @@ tr:last-child td { border-bottom: 0; }
 .form__done h2 { font-size: var(--t-h3); color: var(--green-dark); margin: 0; }
 .form__done p { margin: 0; }
 
+/* ---------- enrollment form (partials/enroll-form.njk) ---------- */
+
+.page-enroll .float-cta { display: none; } /* it would sit on the form's own buttons */
+.enroll { display: grid; gap: 24px; }
+.enroll__form { scroll-margin-top: 96px; } /* a new step starts below the floating header */
+.enroll__top { display: grid; gap: 8px; }
+.enroll__count { margin: 0; font-weight: 700; color: var(--blue-ink); }
+.enroll__bar { height: 8px; border-radius: 99px; background: var(--blue-tint); overflow: hidden; }
+.enroll__bar span { display: block; height: 100%; width: 20%; background: var(--blue); border-radius: inherit; transition: width 0.3s ease; }
+.enroll__step { display: grid; gap: 18px; padding: 0; } /* a <section>, but not a page band */
+.enroll__step > h2 { font-size: clamp(1.35rem, 1.2rem + 0.8vw, 1.7rem); margin: 6px 0 0; }
+.enroll__step > h2:focus { outline: none; }
+.enroll__step > h3 { margin: 14px 0 0; }
+.enroll__nav { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 6px; }
+.enroll__nav [data-next], .enroll__nav [data-send] { margin-left: auto; }
+.enroll__status { font-weight: 600; color: var(--blue-ink); }
+
+/* Ticks and dots are not text boxes. */
+.form input[type="radio"], .form input[type="checkbox"] { width: 22px; height: 22px; min-height: 0; padding: 0; margin: 0; flex: none; accent-color: var(--blue); }
+.form .pick { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin: 0; font-weight: 500; cursor: pointer; }
+
+/* A set of boxes that belong together: a parent, an address, a contact. */
+.group { display: grid; gap: 16px; min-width: 0; margin: 0; padding: 14px 18px 18px; border: 1px solid var(--line); border-radius: 18px; }
+.group > legend { padding: 0 8px; font-weight: 700; color: var(--blue-ink); }
+.group__opt { font-weight: 400; color: var(--ink-soft); }
+.group__more { display: grid; gap: 16px; }
+@media (max-width: 599px) { .group { padding: 10px 12px 14px; } } /* a box inside a box leaves little room on a phone */
+
+/* A question answered with one tap. */
+.yn { display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.yn > legend { padding: 0; margin-bottom: 2px; font-weight: 600; font-size: 0.95em; }
+
+/* A choice that comes with a paragraph to read. */
+.form .choice { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; margin: 0; padding: 14px; border: 2px solid var(--line); border-radius: 14px; font-weight: 400; cursor: pointer; }
+.form .choice:has(input:checked) { border-color: var(--blue); background: var(--blue-pale); }
+.choice strong { display: block; margin-bottom: 2px; color: var(--blue-ink); }
+
+/* Words a parent agrees to by sending the form. */
+.declare { padding: 14px 16px; border-radius: 14px; background: var(--blue-pale); font-size: 0.92em; }
+.declare h3 { margin: 0 0 6px; font-size: 1em; }
+.declare p { margin: 0; }
+.contract { max-height: 320px; overflow: auto; padding: 14px 16px; border: 2px solid var(--line); border-radius: 14px; background: #FBFDFF; font-size: 0.9em; }
+.contract h4 { margin: 1.1em 0 0.3em; font-size: 1em; }
+.contract p { margin: 0 0 0.6em; }
+.contract:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+/* Documents and the signature. */
+.docs { margin: 0; padding-left: 1.3em; font-size: 0.95em; }
+.form .files__add { position: relative; display: inline-flex; margin: 0; overflow: hidden; cursor: pointer; }
+.form .files__input { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; padding: 0; border: 0; opacity: 0; cursor: pointer; }
+.files__add:focus-within { outline: 3px solid var(--blue); outline-offset: 2px; }
+.files { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.files:empty { display: none; }
+.files li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 6px 4px 14px; border: 1px solid var(--line); border-radius: 12px; font-size: 0.92em; }
+.files li span { min-width: 0; overflow-wrap: anywhere; }
+.files button { min-height: 44px; padding: 0 8px; border: 0; background: none; color: var(--coral-ink); font: inherit; font-weight: 600; cursor: pointer; }
+.sign { width: 100%; max-width: 640px; aspect-ratio: 16 / 5; border: 2px dashed var(--blue-light); border-radius: 14px; background: #fff; touch-action: none; cursor: crosshair; }
+
 /* ---------- CTA block ---------- */
 
 .cta { background: var(--blue); color: #fff; position: relative; overflow: hidden; isolation: isolate; }

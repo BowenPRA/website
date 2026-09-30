@@ -229,6 +229,14 @@ one hand-drawn underline per page, big photos of real students.
   The script is at the top of `main.js`; the words a family reads are in the two
   `contact.njk` pages. If the call fails, the form points to email and WhatsApp. No
   email is sent to admin@: the office sees messages on the Leads page.
+  The enrollment form at `/admissions/enroll/` (2026-09-30, it replaces the Jotform
+  form) works the same way: `partials/enroll-form.njk` with its words in
+  `src/_data/enroll.json`, script `assets/js/enroll.js`. It is five steps, keeps answers
+  in the tab until sent, puts the attached documents in a private folder of The Current
+  and then calls `adm_enroll_submit` (admin repo,
+  `supabase/updates-2026-09-30-enrollments.sql`). The form shows under Office >
+  Enrollments and the child becomes a pending student. The admission contract is in
+  English on both pages until PRA supplies a Vietnamese text.
 - **Map:** static image of both campuses with a "Open in Google Maps" link.
   No embedded iframe (slow, cookie banner).
 - **Vietnamese version:** built 2026-09-29. Every page has a twin under `/vi/` (source in `src/vi/`),

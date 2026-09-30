@@ -22,6 +22,7 @@
     "whatsapp": "https://wa.me/84968494245"
   },
   "forms": {
+    "base": "https://gpfycuxltrjeeyxnnktu.supabase.co",
     "endpoint": "https://gpfycuxltrjeeyxnnktu.supabase.co/rest/v1/rpc/adm_web_submit",
     "key": "sb_publishable_PnbUt3hda2bKjMnW__il0w_7aR3lqhe"
   },

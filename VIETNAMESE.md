@@ -11,7 +11,7 @@ header links each page to its twin. Added 2026-09-29.
 | Which language a page is in | `lang`: `"en"` from `src/_data/lang.json`, `"vi"` for everything under `src/vi/` (`src/vi/vi.11tydata.js`) |
 | Vietnamese pages | `src/vi/`, mirroring `src/` file for file (`src/learning/primary.njk` -> `src/vi/learning/primary.njk`) |
 | Header, menu, footer, buttons | `src/_data/strings.json`, `en` and `vi` side by side. Partials read `strings[lang]` as `T` |
-| Data files (events, team, days, programs, announcements, calendar, site) | Each object keeps its English fields plus a `vi` block with the same fields in Vietnamese. `src/vi/vi.11tydata.js` swaps the Vietnamese in for pages under `/vi/`, so templates read `events`, `days` etc. the same way in both languages |
+| Data files (events, team, days, programs, announcements, calendar, site, enroll) | Each object keeps its English fields plus a `vi` block with the same fields in Vietnamese. `src/vi/vi.11tydata.js` swaps the Vietnamese in for pages under `/vi/`, so templates read `events`, `days` etc. the same way in both languages |
 | Photo captions / alt text | English in `photos.json` (built from `originals/picks.json`); Vietnamese in `src/_data/altVi.json`, by slug. A missing slug falls back to English |
 | Words written by main.js | The `words` object at the top of `src/assets/js/main.js` |
 | Font | Poppins has no Vietnamese letters, so Vietnamese pages use Be Vietnam Pro (`:root:lang(vi)` in main.css) |

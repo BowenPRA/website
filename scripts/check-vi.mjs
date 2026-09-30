@@ -88,6 +88,8 @@ const TECH = new Set(["_about", "id", "key", "tone", "slug", "tag", "k", "href",
 const SKIP = {
   "site.json": ["name", "shortName", "url", "address"],
   "team.json": ["note", "name"],
+  // What a choice sends to the office stays in English; the admission contract is English on both pages.
+  "enroll.json": ["value", "contractIntro", "contract"],
 };
 // Values that stay in English in Vietnamese too (VIETNAMESE.md, glossary).
 const KEEP = new Set(["Early Years", "Nursery", "Kindergarten", "Primary", "Lower Secondary", "Upper Secondary", "Global Program",
@@ -116,7 +118,7 @@ function checkData(file, node, path, skip) {
   }
   for (const [k, v] of Object.entries(node)) if (k !== "vi" && v && typeof v === "object") checkData(file, v, path ? `${path}.${k}` : k, skip);
 }
-for (const f of ["site.json", "announcements.json", "calendar.json", "days.json", "events.json", "programs.json", "team.json"]) {
+for (const f of ["site.json", "announcements.json", "calendar.json", "days.json", "events.json", "programs.json", "team.json", "enroll.json"]) {
   checkData(f, json("src/_data/" + f), "", SKIP[f] || []);
 }
 
@@ -139,7 +141,7 @@ function collectVi(file, node) {
   if (node.vi) texts.push([file, JSON.stringify(node.vi)]);
   Object.entries(node).forEach(([k, v]) => k !== "vi" && collectVi(file, v));
 }
-for (const f of ["site.json", "announcements.json", "calendar.json", "days.json", "events.json", "programs.json", "team.json"]) collectVi(`src/_data/${f}`, json("src/_data/" + f));
+for (const f of ["site.json", "announcements.json", "calendar.json", "days.json", "events.json", "programs.json", "team.json", "enroll.json"]) collectVi(`src/_data/${f}`, json("src/_data/" + f));
 texts.push(["src/_data/strings.json", JSON.stringify(json("src/_data/strings.json").vi)]);
 texts.push(["src/_data/altVi.json", JSON.stringify(altVi)]);
 
