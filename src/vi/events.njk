@@ -2,26 +2,26 @@
 layout: layouts/base.njk
 tone: navy
 title: "Sự kiện"
-description: "Các lễ hội, tuần chủ đề và chuyến đi ở Palm River Academy, và việc học viên đã làm ở mỗi sự kiện: biểu diễn, dẫn chương trình, đứng gian hàng và hướng dẫn hoạt động cho các lớp nhỏ hơn."
+description: "Các lễ hội, tuần lễ chủ đề và chuyến đi tại Palm River Academy, cùng những việc học viên đảm nhận trong từng sự kiện: biểu diễn, dẫn chương trình, phụ trách gian hàng và hướng dẫn hoạt động cho các lớp nhỏ hơn."
 permalink: /vi/events/
 ---
 {% set heroPhoto = "events-hero-maths-prize-stickers" %}
 {% set heroShape = "tall" %}
 {% set heroEyebrow = "Sự kiện" %}
-{% set heroTitle = 'Học viên <span class="mark">làm chủ sự kiện</span>' %}
-{% set heroText = "Lễ hội, tuần chủ đề và các chuyến đi. Ở mỗi sự kiện, học viên biểu diễn, dẫn chương trình, đứng gian hàng hoặc hướng dẫn hoạt động cho các lớp nhỏ hơn. Sự kiện năm nay được thêm vào khi diễn ra, bên dưới là sự kiện của năm trước." %}
+{% set heroTitle = 'Sự kiện do chính <span class="mark">học viên tổ chức</span>' %}
+{% set heroText = "Lễ hội, tuần lễ chủ đề và các chuyến đi. Ở mỗi sự kiện, học viên đều có phần việc của mình: biểu diễn, dẫn chương trình, phụ trách gian hàng hoặc hướng dẫn hoạt động cho các lớp nhỏ hơn. Sự kiện của năm học này được cập nhật sau khi diễn ra, phía dưới là các sự kiện của năm học trước." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
   <div class="wrap">
-    <p class="gallery__hint events__hint" hidden>Chạm vào ảnh để xem lớn hơn.</p>
+    <p class="gallery__hint events__hint" hidden>Chạm vào ảnh để phóng to.</p>
 
     {# One section per academic year, newest first, in the order of events.json. #}
     {% for sy, list in events | groupby("school_year") %}
     <div class="season" id="year-{{ sy }}">
-      <h2 class="season__title">Năm học {{ sy }} <span>{% if loop.first %}Năm nay{% else %}Năm trước{% endif %}</span></h2>
+      <h2 class="season__title">Năm học {{ sy }} <span>{% if loop.first %}Năm học này{% else %}Năm học trước{% endif %}</span></h2>
       {% if list.length > 2 %}
-      <nav class="months" aria-label="Chuyển đến tháng">
+      <nav class="months" aria-label="Chọn tháng">
         {% for e in list %}{% if loop.first or list[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
       </nav>
       {% endif %}
@@ -34,7 +34,7 @@ permalink: /vi/events/
             <p class="event__date">{{ e.when }}</p>
             <p class="event__summary">{{ e.summary }}</p>
             {% if e.did.length %}
-            <h3 class="event__did-title">Học viên đã làm gì</h3>
+            <h3 class="event__did-title">Phần việc của học viên</h3>
             <ul class="event__did">
               {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
             </ul>
@@ -58,7 +58,7 @@ permalink: /vi/events/
   <div class="wrap center narrow">
     <p class="eyebrow eyebrow--blue">Năm học này</p>
     <h2>Lịch năm học 2026-27</h2>
-    <p class="lede">Ngày học và các ngày nghỉ có trên lịch năm học. Chúng tôi sẽ gửi ngày tổ chức sự kiện cho các gia đình trong năm.</p>
+    <p class="lede">Thời gian học và các kỳ nghỉ đều có trong lịch năm học. Ngày tổ chức từng sự kiện sẽ được PRA thông báo đến các gia đình trong năm.</p>
     <a class="btn btn--primary" href="{{ '/families/schedule/#calendar' | href(lang) }}">Xem lịch năm học</a>
   </div>
 </section>

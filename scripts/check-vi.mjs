@@ -145,7 +145,7 @@ texts.push(["src/_data/altVi.json", JSON.stringify(altVi)]);
 
 const WORDS = [
   // "trường" alone is school; môi trường, thị trường, trường hợp, quảng trường, trưởng are other words.
-  [/(?<!môi |thị |quảng |chiến |lập |hiện |sở |thao |nông |ngư |phi |từ |điện )trường(?! hợp)/gi, "trường: fine for another school (trường cũ, trường quốc tế, đại học), never for PRA"],
+  [/(?<!môi |thị |quảng |chiến |lập |hiện |sở |thao |nông |ngư |phi |từ |điện |chuyển |các )trường(?! hợp| cũ| quốc tế)/gi, "trường: fine for another school (trường cũ, trường quốc tế, đại học), never for PRA"],
   [/hiệu trưởng/gi, "hiệu trưởng: we have no principal (Giáo viên trưởng)"],
   [/học sinh/gi, "học sinh: our students are học viên, or con / các con / các bé"],
   [/bố mẹ/gi, "bố mẹ: we write ba mẹ"],

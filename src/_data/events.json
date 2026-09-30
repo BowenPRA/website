@@ -29,12 +29,12 @@
       "name": "Tết Trung thu",
       "month": "Th9",
       "when": "Thứ Sáu, 25/9",
-      "summary": "Một buổi chiều lễ hội cho các gia đình, với gian hàng và trò chơi do học viên tổ chức, bàn làm bánh trung thu và màn múa lân khép lại lễ hội. Lợi nhuận được trả lại cho học viên, trong đó 15% được quyên góp cho tổ chức từ thiện Go Danang.",
+      "summary": "Buổi chiều vui Tết Trung thu dành cho các gia đình, với các gian hàng và trò chơi do học viên phụ trách, bàn làm bánh trung thu, và kết thúc bằng màn múa lân. Lợi nhuận thuộc về các học viên, trong đó 15% được quyên góp cho tổ chức từ thiện Go Danang.",
       "did": [
-        "Học viên Year 1 biểu diễn một bài hát",
+        "Lớp Year 1 biểu diễn một tiết mục hát",
         "Học viên Primary bán kem và tổ chức các trò chơi hội chợ",
-        "Học viên Lower Secondary đứng một gian đồ thủ công tự làm (DIY) và một gian bánh nướng",
-        "Học viên Upper Secondary vẽ mặt, vẽ hình xăm henna và tổ chức cuộc thi nhảy limbo cho học viên và phụ huynh"
+        "Học viên Lower Secondary phụ trách một gian làm đồ thủ công và một gian bánh ngọt tự làm",
+        "Học viên Upper Secondary vẽ mặt, vẽ henna và tổ chức cuộc thi limbo cho học viên và phụ huynh"
       ]
     }
   },
@@ -49,10 +49,10 @@
     "did": [],
     "photos": [],
     "vi": {
-      "name": "Buổi tối gặp mặt đầu năm",
+      "name": "Buổi gặp mặt đầu năm học",
       "month": "Th8",
       "when": "28/8 và 11/9",
-      "summary": "Hai buổi tối đầu năm học, khi ba mẹ gặp giáo viên của con và nghe năm học sẽ diễn ra thế nào: bài học, bài tập về nhà và cách giáo viên cập nhật cho gia đình.",
+      "summary": "Hai buổi tối đầu năm học để ba mẹ gặp gỡ giáo viên của con và nghe giới thiệu về năm học mới: chương trình học, bài tập về nhà và cách giáo viên cập nhật tình hình cho gia đình.",
       "did": []
     }
   },
@@ -84,11 +84,11 @@
       "name": "Tết Trung thu",
       "month": "Th10",
       "when": "Thứ Sáu, 3/10",
-      "summary": "Một buổi chiều lễ hội cho các gia đình, có chương trình biểu diễn và hội chợ do học viên tổ chức.",
+      "summary": "Buổi chiều vui Tết Trung thu dành cho các gia đình, gồm chương trình văn nghệ và hội chợ do học viên tổ chức.",
       "did": [
-        "Lớp nào cũng biểu diễn một bài hát, điệu múa hoặc vở kịch, còn các bé nhỏ nhất diễu hành trong trang phục hóa trang",
-        "Hai học viên dẫn chương trình, một bạn bằng tiếng Anh và một bạn bằng tiếng Việt",
-        "Các học viên lớn tự lên kế hoạch cho gian hàng của mình: tự làm áp phích, tự định giá và đứng các gian vẽ henna, làm vòng tay, vẽ chân dung và trò chơi"
+        "Mỗi lớp biểu diễn một tiết mục hát, múa hoặc kịch; các bé nhỏ nhất diễu hành hóa trang",
+        "Hai học viên dẫn chương trình, một bạn dẫn bằng tiếng Anh, một bạn dẫn bằng tiếng Việt",
+        "Các học viên lớn tự lên kế hoạch cho gian hàng của mình: tự làm poster, tự định giá và phụ trách các gian vẽ henna, làm vòng tay, vẽ chân dung và trò chơi"
       ]
     }
   },
@@ -110,11 +110,11 @@
       "name": "Halloween",
       "month": "Th10",
       "when": "20 đến 31/10",
-      "summary": "Hai tuần hoạt động Halloween, kết thúc bằng ngày hóa trang vào 31/10.",
+      "summary": "Hai tuần hoạt động Halloween, kết thúc bằng ngày hội hóa trang 31/10.",
       "did": [
-        "Mỗi lớp làm một con nhện khổng lồ từ một chiếc ô cũ và vật liệu tái chế",
-        "Học viên diễu hành trong trang phục hóa trang cho gia đình xem",
-        "Các học viên lớn tổ chức các phòng hoạt động cho các lớp nhỏ hơn: một buổi múa rối bóng, thử thách marshmallow và các trò chơi mùa thu"
+        "Mỗi lớp làm một con nhện khổng lồ từ một chiếc dù cũ và vật liệu tái chế",
+        "Học viên diễu hành hóa trang cho gia đình cùng xem",
+        "Các học viên lớn tổ chức các phòng hoạt động cho các lớp nhỏ hơn: múa rối bóng, thử thách marshmallow và các trò chơi mùa thu"
       ]
     }
   },
@@ -137,9 +137,9 @@
       "name": "Lễ Tạ ơn",
       "month": "Th11",
       "when": "Thứ Năm, 27/11",
-      "summary": "Một buổi mừng Lễ Tạ ơn theo kiểu Mỹ, cùng các gia đình.",
+      "summary": "Buổi tiệc mừng Lễ Tạ ơn theo truyền thống Mỹ, tổ chức cùng các gia đình.",
       "did": [
-        "Học viên Upper Secondary cùng giáo viên nấu các món ăn, trong đó có những khay bánh quy tự làm"
+        "Học viên Upper Secondary cùng giáo viên nấu các món ăn, trong đó có nhiều khay bánh quy tự làm"
       ]
     }
   },
@@ -162,14 +162,14 @@
       "christmas-show-student-hosts"
     ],
     "vi": {
-      "name": "Đêm diễn tài năng và hội chợ Giáng sinh",
+      "name": "Đêm hội tài năng và hội chợ Giáng sinh",
       "month": "Th12",
       "when": "Thứ Tư, 17/12, tại Zen Library",
-      "summary": "Một buổi tối biểu diễn tài năng và hội chợ Giáng sinh cho các gia đình. Số tiền quyên góp được dùng để làm các phần quà cứu trợ lũ lụt cho các gia đình ở Đà Nẵng.",
+      "summary": "Buổi tối biểu diễn tài năng và hội chợ Giáng sinh dành cho các gia đình. Số tiền gây quỹ được dùng để chuẩn bị các phần quà cứu trợ cho những gia đình bị ảnh hưởng bởi lũ lụt ở Đà Nẵng.",
       "did": [
-        "Các lớp hát và múa, còn học viên tự đăng ký tiết mục riêng: đàn piano, thể dục dụng cụ, một tiết mục Rubik và một tiểu phẩm hài",
+        "Các lớp hát và múa; học viên còn tự đăng ký tiết mục riêng như đàn piano, thể dục dụng cụ, xoay Rubik và tiểu phẩm hài",
         "Hai học viên dẫn chương trình bằng tiếng Anh và tiếng Việt",
-        "Học viên tự làm và bán bánh quy, sô-cô-la nóng và trái cây xiên, cùng áo kimono và tất Giáng sinh từ lớp may vá"
+        "Học viên tự làm và bán bánh quy, sô-cô-la nóng và trái cây xiên que, cùng áo kimono và vớ Giáng sinh do các con may trong lớp học may"
       ]
     }
   },
@@ -194,10 +194,10 @@
       "name": "Tết",
       "month": "Th2",
       "when": "Thứ Năm, 12/2",
-      "summary": "Một ngày với những phong tục ngày Tết để đón năm Bính Ngọ.",
+      "summary": "Một ngày với các hoạt động truyền thống ngày Tết để đón năm Bính Ngọ.",
       "did": [
-        "Học viên viết thư pháp những chữ chúc năm mới trên giấy đỏ",
-        "Các lớp cùng nhau chơi trò chơi dân gian Việt Nam",
+        "Học viên viết thư pháp chữ chúc Tết trên giấy đỏ",
+        "Các lớp cùng nhau chơi các trò chơi dân gian",
         "Nhiều bạn mặc áo dài đến lớp"
       ]
     }
@@ -229,12 +229,12 @@
     "vi": {
       "name": "March Mathness",
       "month": "Th3",
-      "when": "Tháng 3, với một buổi chiều cho gia đình vào 2/4",
-      "summary": "Một tháng trò chơi Toán, câu đố và thử thách khắp khuôn viên.",
+      "when": "Tháng 3, kèm buổi chiều dành cho gia đình vào ngày 2/4",
+      "summary": "Một tháng với các trò chơi, câu đố và thử thách Toán học trên khắp khuôn viên.",
       "did": [
-        "Lớp nào cũng chơi trò chơi Toán và cùng nhau giải câu đố",
-        "Học viên tham gia các thử thách Toán, và các bạn thắng cuộc được mang giải thưởng về nhà",
-        "Các gia đình đến dự buổi chiều Stay and Play và cùng chơi"
+        "Lớp nào cũng chơi các trò chơi Toán học và cùng nhau giải đố",
+        "Học viên tham gia các thử thách Toán học, bạn nào thắng cuộc được nhận giải thưởng mang về nhà",
+        "Các gia đình đến dự buổi chiều Stay and Play và cùng chơi với các con"
       ]
     }
   },
@@ -261,11 +261,11 @@
       "name": "Tuần lễ Reading Safari",
       "month": "Th4",
       "when": "Tháng 4",
-      "summary": "Một tuần đọc sách và kể chuyện.",
+      "summary": "Một tuần dành cho đọc sách và kể chuyện.",
       "did": [
-        "Học viên viết truyện dựa trên những lần tung xúc xắc và các đồ vật bí ẩn bốc ra từ một chiếc túi",
-        "Các bạn thiết kế bìa sách mới trong giờ Mỹ thuật và bình chọn bìa đẹp nhất",
-        "Mọi người cùng dừng lại đọc sách vào giờ ăn trưa, và tuần lễ khép lại bằng một buổi diễu hành hóa trang và một ngày hội trò chơi chữ trong khuôn viên"
+        "Học viên sáng tác truyện dựa trên kết quả tung xúc xắc và những đồ vật bí ẩn rút ra từ một chiếc túi",
+        "Các con thiết kế bìa sách mới trong giờ Mỹ thuật và bình chọn bìa đẹp nhất",
+        "Vào giờ ăn trưa, mọi người cùng dừng tay để đọc sách; tuần lễ khép lại bằng buổi diễu hành hóa trang và ngày hội trò chơi chữ trong khuôn viên"
       ]
     }
   },
@@ -294,11 +294,11 @@
       "name": "Learning Without Walls",
       "month": "Th6",
       "when": "Hai tuần cuối năm học",
-      "summary": "Trong hai tuần cuối năm học, các lớp học bên ngoài khuôn viên.",
+      "summary": "Trong hai tuần cuối năm học, việc học diễn ra bên ngoài khuôn viên PRA.",
       "did": [
         "Tham quan làng mộc Kim Bồng, một xưởng làm bơ đậu phộng và một bảo tàng tranh 3D ở Đà Nẵng",
         "Làm tình nguyện tại một viện dưỡng lão ở Đà Nẵng",
-        "Một ngày đi biển, một ngày hội thể thao có tiệc hồ bơi, và một chuyến cắm trại qua đêm cho Year 6"
+        "Một ngày đi biển, một ngày hội thể thao kết hợp tiệc hồ bơi, và một chuyến cắm trại qua đêm của Year 6"
       ]
     }
   },
@@ -324,11 +324,11 @@
       "name": "Lễ tốt nghiệp",
       "month": "Th6",
       "when": "Thứ Sáu, 12/6",
-      "summary": "Hai buổi lễ cho các gia đình: một cho Early Years và các lớp Primary nhỏ, một cho các học viên lớn.",
+      "summary": "Hai buổi lễ dành cho các gia đình: một buổi cho Early Years và các lớp Primary nhỏ, một buổi cho các học viên lớn hơn.",
       "did": [
-        "Lớp nào cũng biểu diễn: bài hát, một điệu múa, bài phát biểu và một bài hát về bảng tuần hoàn",
-        "Các học viên lớn tự viết bài phát biểu và đọc trước cả khán phòng",
-        "Từng học viên bước lên nhận giấy chứng nhận"
+        "Lớp nào cũng có tiết mục: hát, múa, phát biểu và cả một bài hát về bảng tuần hoàn",
+        "Các học viên lớn tự viết và tự trình bày bài phát biểu trước cả khán phòng",
+        "Từng học viên lên sân khấu nhận giấy chứng nhận"
       ]
     }
   }

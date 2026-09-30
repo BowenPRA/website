@@ -75,7 +75,7 @@ grade 6).
 | EYFS | khung chương trình EYFS của Anh |
 | phonics | phonics (ngữ âm) on first use, then phonics |
 | academic year / quarter / fall break / make-up day | năm học / quý (Quý 1) / kỳ nghỉ thu / ngày học bù |
-| tuition, fees | học phí, các khoản phí |
+| tuition, fees | học phí, các khoản phí (the page title is "Học phí và các khoản phí khác") |
 | enrollment, enrol | đăng ký học |
 | admissions | tuyển sinh |
 | book a tour / a visit | đặt lịch tham quan |
@@ -84,16 +84,25 @@ grade 6).
 | Certificate of Completion | Giấy chứng nhận hoàn thành |
 | homeroom teacher | giáo viên chủ nhiệm |
 | subject teacher / specialist | giáo viên bộ môn |
-| specialist and vocational classes | các lớp bộ môn và thực hành |
+| specialist and vocational classes | các lớp kỹ năng và thực hành ("lớp bộ môn" is not a phrase; "giáo viên bộ môn" is) |
 | Global Program pathways: Vocational half day / Academic half day / Cambridge and vocational full day | Nửa ngày thực hành / Nửa ngày học thuật / Cả ngày: Cambridge và thực hành |
 | homeroom (the daily slot) | sinh hoạt lớp |
+| soft start | giờ tự do đầu ngày; for Primary "chơi tự do ngoài sân" |
+| block (Upper Secondary mornings) | ca học ("Ca học 1", "hai ca học dài") |
+| after-care | giữ bé ngoài giờ |
+| a real class (Global Program) | học chung lớp với các học viên dài hạn |
+| pathway (Global Program) | lựa chọn |
+| poster, flyer | poster, tờ rơi |
+| join, start (a student) | nhập học |
+| Questions parents ask / Before you ask | Câu hỏi thường gặp |
+| learning by doing | học qua thực hành |
 | silent auction | đấu giá im lặng |
 | Owner / Head of Academy / Deputy Head Teacher | Chủ sở hữu / Giám đốc học thuật / Phó giáo viên trưởng |
 | campus | cơ sở (the site as a place: khuôn viên) |
 | lunch, snack | bữa trưa, bữa phụ |
 | the bus, transport | xe đưa đón |
 | internship | thực tập |
-| the five values: Intellectual Exploration, Creative Expression, Sports and Fun, Global Citizenship, Leadership Development | Khám phá tri thức, Sáng tạo và thể hiện, Thể thao và vui chơi, Công dân toàn cầu, Rèn luyện khả năng lãnh đạo |
+| the six values: Intellectual Exploration, Creative Expression, Sports and Fun, Community Impact, Global Citizenship, Leadership Development | Khám phá tri thức, Sáng tạo và thể hiện bản thân, Thể thao và vui chơi, Đóng góp cho cộng đồng, Công dân toàn cầu, Phát triển kỹ năng lãnh đạo |
 | Contact Us | Liên hệ |
 | Events | Sự kiện |
 
@@ -104,8 +113,22 @@ words, the specific thing, no closing flourish. Write it the way a Vietnamese me
 staff would tell a parent at the front desk, not as a word-for-word copy of the English.
 
 - **Who is talking to whom.** Parents are "ba mẹ" (not "bố mẹ", and "quý phụ huynh" only in
-  formal notes such as payment terms). Their child is "con". We are "chúng tôi" or "PRA".
-  Teachers are "giáo viên" or "thầy cô".
+  formal notes such as payment terms). Their child is "con"; the youngest are "các bé", and
+  Secondary students are "các em". We are "PRA" or "trung tâm" first, and "chúng tôi" only now
+  and then: a run of "chúng tôi" is what makes a page read as translated. Teachers are
+  "giáo viên" or "thầy cô".
+- **Whole sentences.** English copy here is full of clipped fragments ("Aprons on, hands washed",
+  "Four steps: an inquiry, a visit"). In Vietnamese a fragment with no subject or verb reads as
+  a mistake, so give it one: "Các con đeo tạp dề, rửa tay sạch, rồi ...". Ask politely: "Ba mẹ
+  vui lòng báo cho PRA ...", not a bare imperative.
+- **Do not translate "real".** "A real class", "a real kitchen", "real subjects" come out as
+  "lớp thật", "môn học thật", which mean nothing. Say what is meant: "học chung lớp với các học
+  viên dài hạn", "hoạt động thực tế", "dụng cụ thật" (that one is fine: an object).
+- **Words from here.** Our families are in Hội An and Đà Nẵng, so where north and south differ
+  use the central and southern word: bị bệnh (not ốm, which means thin here), dù (not ô), hồ bơi
+  (not bể bơi), vớ (not tất), tã (not bỉm), trái cây, đậu phộng. "Bánh nướng" at Mid-Autumn means
+  a baked mooncake, so baked goods are "bánh ngọt tự làm".
+- **Tone marks** in the modern style everywhere: hóa, khỏe, xóa (not hoá, khoẻ, xoá).
 - **Keep every fact.** Same numbers, prices, dates, ages and names. Add nothing, drop nothing.
   If an English joke does not work in Vietnamese, say the plain thing instead.
 - **Sentence case** for headings: capital on the first word and on names only.

@@ -44,7 +44,7 @@
       ],
       "vi": {
         "role": "Phó giáo viên trưởng",
-        "teaches": "Rà soát chuyên môn học thuật toàn PRA"
+        "teaches": "Phụ trách rà soát chất lượng học thuật tại PRA"
       }
     },
     {
@@ -132,7 +132,7 @@
       "tint": 3,
       "vi": {
         "role": "Giáo viên chủ nhiệm Kindergarten",
-        "teaches": "Dạy phonics (ngữ âm), Toán và Tìm hiểu thế giới"
+        "teaches": "Dạy phonics (ngữ âm), Toán và Understanding the World"
       }
     },
     {
@@ -184,6 +184,6 @@
     }
   ],
   "vi": {
-    "intro": "Mọi giáo viên dạy các môn học thuật đều có bằng đại học chuyên ngành và chứng chỉ TESOL, và đủ điều kiện giảng dạy tại Việt Nam."
+    "intro": "Tất cả giáo viên dạy các môn học thuật đều có bằng đại học đúng chuyên ngành, chứng chỉ TESOL và đủ điều kiện giảng dạy tại Việt Nam."
   }
 }

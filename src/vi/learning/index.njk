@@ -2,20 +2,20 @@
 layout: layouts/base.njk
 tone: blue
 title: "Chương trình học"
-description: "So sánh Early Years, Primary, Lower Secondary, Upper Secondary và Global Program tại Palm River Academy."
+description: "Tìm hiểu và so sánh các chương trình Early Years, Primary, Lower Secondary, Upper Secondary và Global Program tại Palm River Academy."
 ---
 
 {% set heroPhoto = "primary-students-clay-modelling" %}
 {% set heroEyebrow = "Chương trình học" %}
-{% set heroTitle = 'Năm chương trình, một <span class="mark">cách học</span>' %}
-{% set heroText = "Ở lứa tuổi nào cũng vậy: học bằng tiếng Anh, có vận động và có tự tay làm ra một thứ gì đó." %}
+{% set heroTitle = 'Năm chương trình, chung một <span class="mark">cách học</span>' %}
+{% set heroText = "Ở lứa tuổi nào cũng vậy: các con học bằng tiếng Anh, được vận động và được tự tay làm ra sản phẩm." %}
 {% include "partials/pagehero.njk" %}
 
 <section data-picker>
   <div class="wrap">
     <p class="eyebrow">Bắt đầu từ đây</p>
     <h2>Con bao nhiêu tuổi?</h2>
-    <p class="lede">Chọn độ tuổi của con để xem chương trình phù hợp.</p>
+    <p class="lede">Ba mẹ chọn độ tuổi của con để xem chương trình phù hợp.</p>
     <div class="picker__chips" role="group" aria-label="Lọc chương trình theo độ tuổi">
       {% for p in programs %}<button class="chip chip--{{ p.tone }}" type="button" data-key="{{ p.key }}" aria-pressed="false">{{ p.chip }}</button>{% endfor %}
     </div>
@@ -42,16 +42,16 @@ description: "So sánh Early Years, Primary, Lower Secondary, Upper Secondary v�
       <table>
         <thead><tr><th>Chương trình</th><th>Độ tuổi</th><th>Nội dung học</th><th>Giờ học</th><th>Sĩ số lớp</th></tr></thead>
         <tbody>
-          <tr><td>Early Years</td><td>20 tháng đến 4 tuổi</td><td>Khung chương trình EYFS của Anh, học bằng tiếng Anh</td><td>8:00 đến 15:15</td><td>Nhóm nhỏ, hai giáo viên</td></tr>
-          <tr><td>Primary</td><td>Year 1 đến Year 6</td><td>Cambridge Primary + các lớp bộ môn và thực hành</td><td>8:00 đến 15:15</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
-          <tr><td>Lower Secondary</td><td>Year 7 đến Year 9</td><td>Cambridge Lower Secondary + các lớp bộ môn và thực hành</td><td>8:00 đến 15:20</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
-          <tr><td>Upper Secondary</td><td>14 đến 18 tuổi</td><td>Kế hoạch học riêng theo mục tiêu của từng học viên, hoàn toàn bằng tiếng Anh</td><td>8:00 đến 15:20</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
-          <tr><td>Global Program</td><td>2 đến 14 tuổi</td><td>Học cùng các lớp ở trên, từ 3 tuần đến 3 tháng</td><td>Nửa ngày hoặc cả ngày</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
+          <tr><td>Early Years</td><td>20 tháng đến 4 tuổi</td><td>Khung chương trình EYFS của Anh, dạy bằng tiếng Anh</td><td>8:00 đến 15:15</td><td>Nhóm nhỏ, hai giáo viên</td></tr>
+          <tr><td>Primary</td><td>Year 1 đến Year 6</td><td>Cambridge Primary, cùng các lớp kỹ năng và thực hành</td><td>8:00 đến 15:15</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
+          <tr><td>Lower Secondary</td><td>Year 7 đến Year 9</td><td>Cambridge Lower Secondary, cùng các lớp kỹ năng và thực hành</td><td>8:00 đến 15:20</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
+          <tr><td>Upper Secondary</td><td>14 đến 18 tuổi</td><td>Kế hoạch học tập riêng theo mục tiêu của từng học viên, hoàn toàn bằng tiếng Anh</td><td>8:00 đến 15:20</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
+          <tr><td>Global Program</td><td>2 đến 14 tuổi</td><td>Học chung lớp với học viên các chương trình trên, từ 3 tuần đến 3 tháng</td><td>Nửa ngày hoặc cả ngày</td><td>Tối đa {{ site.classCap }} học viên</td></tr>
         </tbody>
       </table>
     </div>
-    <span class="swipe-hint">Vuốt ngang để xem hết bảng.</span>
-    <p class="table-note">Một ngày học ở từng lứa tuổi diễn ra thế nào, ba mẹ xem ở <a href="{{ '/families/schedule/' | href(lang) }}">trang lịch học</a>.</p>
+    <span class="swipe-hint">Vuốt ngang để xem toàn bộ bảng.</span>
+    <p class="table-note">Ba mẹ có thể xem một ngày học của từng lứa tuổi tại <a href="{{ '/families/schedule/' | href(lang) }}">trang lịch học</a>.</p>
   </div>
 </section>
 

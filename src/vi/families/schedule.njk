@@ -2,14 +2,14 @@
 layout: layouts/base.njk
 tone: light
 title: "Lịch học và lịch năm học"
-description: "Một ngày ở Palm River Academy, từ Early Years đến Upper Secondary: tiếng Anh, Toán và Khoa học mỗi sáng, các lớp bộ môn và thực hành sau bữa trưa. Kèm các ngày quan trọng trong năm."
+description: "Một ngày học tại Palm River Academy, từ Early Years đến Upper Secondary: buổi sáng học tiếng Anh, Toán và Khoa học, sau bữa trưa là các lớp kỹ năng và thực hành. Trang này cũng có các ngày quan trọng trong năm học."
 ---
 {% import "macros/icons.njk" as ic %}
 
 {% set heroPhoto = "gallery-twister-game" %}
 {% set heroEyebrow = "Lịch học và lịch năm học · " + schedule.schoolYear %}
-{% set heroTitle = 'Một <span class="mark">ngày học</span> ở PRA' %}
-{% set heroText = "Tiếng Anh, Toán và Khoa học mỗi buổi sáng. Nấu ăn, công nghệ, mỹ thuật và thể thao sau bữa trưa. Dưới đây là lịch tuần của từng độ tuổi và các ngày quan trọng trong năm." %}
+{% set heroTitle = 'Một <span class="mark">ngày học</span> tại PRA' %}
+{% set heroText = "Buổi sáng, các con học tiếng Anh, Toán và Khoa học. Sau bữa trưa là nấu ăn, Công nghệ, Mỹ thuật và thể thao. Bên dưới là lịch học trong tuần của từng độ tuổi và các ngày quan trọng trong năm học." %}
 {% include "partials/pagehero.njk" %}
 
 {% set dayFrom = days.from | mins %}
@@ -18,15 +18,15 @@ description: "Một ngày ở Palm River Academy, từ Early Years đến Upper 
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow">Thứ Hai đến thứ Sáu</p>
-      <h2>Lịch một ngày</h2>
-      <p class="lede">Trung tâm mở cửa lúc 8:00 cho mọi độ tuổi. Các môn chính học trước, khi đầu óc còn tỉnh táo. Sau bữa trưa là những lớp các con đem tiếng Anh ra dùng.</p>
+      <h2>Tổng quan một ngày học</h2>
+      <p class="lede">PRA mở cửa đón học viên ở mọi độ tuổi từ 8:00. Các môn chính được học vào buổi sáng, khi các con còn tỉnh táo nhất. Sau bữa trưa là những lớp để các con vận dụng tiếng Anh.</p>
     </div>
 
     <figure class="dayplan">
       <ul class="dayplan__key">
         <li><i class="key key--core"></i>Môn chính</li>
-        <li><i class="key key--spec"></i>Lớp bộ môn và thực hành</li>
-        <li><i class="key key--rest"></i>Đến lớp, ăn trưa và nghỉ</li>
+        <li><i class="key key--spec"></i>Lớp kỹ năng và thực hành</li>
+        <li><i class="key key--rest"></i>Đến lớp, ăn trưa và nghỉ ngơi</li>
       </ul>
       <div class="dayplan__axis" aria-hidden="true">
         <span></span>
@@ -44,13 +44,13 @@ description: "Một ngày ở Palm River Academy, từ Early Years đến Upper 
         </div>
       </div>
       {% endfor %}
-      <figcaption>Biểu đồ không ghi giờ ăn phụ, vào khoảng 10:25 và 14:05.</figcaption>
+      <figcaption>Biểu đồ không thể hiện hai giờ nghỉ ăn bữa phụ, vào khoảng 10:25 và 14:05.</figcaption>
     </figure>
 
     <ul class="daynotes">
-      <li>{{ ic.icon("clock", "violet") }}<span><strong>Con ốm hoặc nghỉ?</strong> Ba mẹ báo cho chúng tôi trước 8:00 sáng hôm đó.</span></li>
+      <li>{{ ic.icon("clock", "violet") }}<span><strong>Con bị bệnh hoặc xin nghỉ?</strong> Ba mẹ vui lòng báo cho PRA trước 8:00 sáng hôm đó.</span></li>
       <li>{{ ic.icon("whisk", "sun") }}<span><strong>Bữa trưa và hai bữa phụ</strong> mỗi ngày, nếu ba mẹ đăng ký.</span></li>
-      <li>{{ ic.icon("bus", "blue") }}<span><strong>Xe đưa đón</strong> chạy quanh Hội An, Vĩnh Điện và Đà Nẵng.</span></li>
+      <li>{{ ic.icon("bus", "blue") }}<span><strong>Xe đưa đón</strong> phục vụ khu vực Hội An, Vĩnh Điện và Đà Nẵng.</span></li>
     </ul>
   </div>
 </section>
@@ -59,8 +59,8 @@ description: "Một ngày ở Palm River Academy, từ Early Years đến Upper 
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Theo từng cấp</p>
-      <h2>Một tuần có gì</h2>
+      <p class="eyebrow">Theo từng chương trình</p>
+      <h2>Một tuần học gồm những gì</h2>
       <p class="lede">Buổi sáng luôn dành cho các môn chính. Các lớp buổi chiều thay đổi theo độ tuổi.</p>
     </div>
 
@@ -95,7 +95,7 @@ description: "Một ngày ở Palm River Academy, từ Early Years đến Upper 
       </article>
       {% endfor %}
     </div>
-    <p class="table-note center">Chúng tôi không ghi tên giáo viên; ba mẹ sẽ gặp các thầy cô khi đến tham quan. Và đúng vậy, có một lớp tên là Boredom (“buồn chán”) thật.</p>
+    <p class="table-note center">Trang này không ghi tên giáo viên; ba mẹ sẽ gặp các thầy cô khi đến tham quan. Và đúng là PRA có một lớp tên là Boredom (“buồn chán”).</p>
   </div>
 </section>
 
@@ -104,7 +104,7 @@ description: "Một ngày ở Palm River Academy, từ Early Years đến Upper 
   <div class="wrap">
     <div class="center narrow">
       <p class="eyebrow">Lịch năm học</p>
-      <h2>Các ngày trong năm {{ calendar.year }}</h2>
+      <h2>Các mốc thời gian năm học {{ calendar.year }}</h2>
     </div>
     <div class="cal mt">
       {% for m in calendar.months %}
@@ -122,7 +122,7 @@ description: "Một ngày ở Palm River Academy, từ Early Years đến Upper 
   </div>
 </section>
 
-{% set ctaTitle = "Mời ba mẹ đến xem một ngày thứ Ba bình thường." %}
-{% set ctaText = "Chọn một buổi sáng và xem một ngày học diễn ra thế nào." %}
+{% set ctaTitle = "Mời ba mẹ đến xem một ngày học bình thường." %}
+{% set ctaText = "Ba mẹ chọn một buổi sáng và đến xem các con học như thế nào." %}
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

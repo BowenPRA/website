@@ -2,13 +2,13 @@
 layout: layouts/base.njk
 tone: blue
 title: "Đặt lịch tham quan"
-description: "Đặt lịch tham quan Palm River Academy ở Hội An, hoặc gửi câu hỏi cho chúng tôi. Số điện thoại, email và địa chỉ."
+description: "Đặt lịch tham quan Palm River Academy tại Hội An hoặc gửi câu hỏi cho chúng tôi. Trang này có số điện thoại, email và địa chỉ của trung tâm."
 ---
 
 {% set heroPhoto = site.campus.photo %}
 {% set heroEyebrow = "Liên hệ" %}
 {% set heroTitle = 'Mời ba mẹ đến <span class="mark">tham quan</span>' %}
-{% set heroText = "Mỗi buổi tham quan khoảng một giờ, từ thứ Hai đến thứ Sáu. Chưa ở Hội An? Chúng tôi sẽ gọi video. Nếu có câu hỏi, ba mẹ cứ gửi cho chúng tôi." %}
+{% set heroText = "Mỗi buổi tham quan kéo dài khoảng một tiếng, từ thứ Hai đến thứ Sáu. Nếu gia đình chưa đến Hội An, PRA có thể trò chuyện với ba mẹ qua video. Ba mẹ có câu hỏi nào cũng cứ gửi cho chúng tôi nhé." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
@@ -21,34 +21,34 @@ description: "Đặt lịch tham quan Palm River Academy ở Hội An, hoặc g�
         <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
       </div>
       <div class="form__row">
-        <div><label for="phone">Điện thoại, Zalo hoặc WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div><label for="phone">Số điện thoại, Zalo hoặc WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
         <div><label for="age">Tuổi của con</label>
           <select id="age" name="child_age">
-            <option value="">Chọn một mục</option>
+            <option value="">Vui lòng chọn</option>
             <option>Dưới 2 tuổi</option><option>2 đến 4 tuổi</option><option>5 đến 7 tuổi</option><option>8 đến 11 tuổi</option><option>11 đến 14 tuổi</option><option>14 đến 18 tuổi</option>
           </select>
         </div>
       </div>
-      <div><label for="want">Ba mẹ muốn</label>
+      <div><label for="want">Ba mẹ cần hỗ trợ gì?</label>
         <select id="want" name="want">
           <option>Tham quan trung tâm</option>
-          <option>Gọi video</option>
-          <option>Thông tin về Global Program</option>
-          <option>Chỉ muốn hỏi một câu</option>
+          <option>Trò chuyện qua video</option>
+          <option>Tìm hiểu về Global Program</option>
+          <option>Chỉ muốn hỏi thêm thông tin</option>
         </select>
       </div>
-      <div><label for="msg">Điều ba mẹ muốn chúng tôi biết</label><textarea id="msg" name="message" placeholder="Thời gian gia đình ở Hội An, trình độ tiếng Anh của con, con thích làm gì..."></textarea></div>
+      <div><label for="msg">Thông tin ba mẹ muốn chia sẻ thêm</label><textarea id="msg" name="message" placeholder="Thời gian gia đình ở Hội An, trình độ tiếng Anh của con, sở thích của con..."></textarea></div>
       <input type="hidden" name="_subject" value="Website inquiry">
       {% if "REPLACE_ME" in site.formAction %}
       <button class="btn btn--green" type="submit" disabled>Gửi</button>
-      <p class="form__note">Biểu mẫu này đang được kết nối. Trong lúc chờ, ba mẹ vui lòng gửi email đến <a href="mailto:{{ site.email }}">{{ site.email }}</a> hoặc nhắn tin cho chúng tôi qua <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
+      <p class="form__note">Biểu mẫu này đang được hoàn thiện. Trong thời gian này, ba mẹ vui lòng gửi email đến <a href="mailto:{{ site.email }}">{{ site.email }}</a> hoặc nhắn tin cho PRA qua <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
       {% else %}
       <button class="btn btn--green" type="submit">Gửi</button>
       {% endif %}
     </form>
     <div class="card-stack">
       <div class="card">
-        <h3>Nói chuyện trực tiếp</h3>
+        <h3>Liên hệ trực tiếp</h3>
         <p><a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a><br><a href="mailto:{{ site.email }}">{{ site.email }}</a><br>{{ site.hours }}</p>
         <p><a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a> · <a href="{{ site.social.facebook }}" rel="noopener" target="_blank">Facebook</a></p>
       </div>
@@ -56,7 +56,7 @@ description: "Đặt lịch tham quan Palm River Academy ở Hội An, hoặc g�
         {% photo "campus-playground-collage", "", "(min-width: 900px) 40vw, 100vw" %}
         <h3>Địa chỉ</h3>
         <p>{{ site.campus.address }}</p>
-        <a href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Mở trên Google Maps</a>
+        <a href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Xem trên Google Maps</a>
       </div>
     </div>
   </div>

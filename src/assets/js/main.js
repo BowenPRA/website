@@ -5,7 +5,7 @@
 
   // The few words this script writes into the page, in the page's language (VIETNAMESE.md).
   var words = document.documentElement.lang === "vi"
-    ? { viewer: "Xem ảnh", close: "Đóng", prev: "Ảnh trước", next: "Ảnh tiếp theo", larger: "Xem ảnh lớn: " }
+    ? { viewer: "Xem ảnh", close: "Đóng", prev: "Ảnh trước", next: "Ảnh tiếp theo", larger: "Phóng to ảnh: " }
     : { viewer: "Photo viewer", close: "Close", prev: "Previous photo", next: "Next photo", larger: "View larger: " };
 
   // Mobile nav sheet

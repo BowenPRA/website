@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "Học tiếng Anh bằng cách làm"
-description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ từ 20 tháng đến 18 tuổi. Các con học tiếng Anh qua Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, mỗi lớp không quá 13 em."
+title: "Học tiếng Anh qua thực hành"
+description: "Palm River Academy là trung tâm Anh ngữ tại Hội An dành cho trẻ từ 20 tháng đến 18 tuổi. Các con học tiếng Anh qua các giờ Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, mỗi lớp tối đa 13 học viên."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -11,16 +11,16 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
   {% set frondClass = "frond--bl" %}{% include "partials/frond.njk" %}
   <div class="wrap hero__inner">
     <p class="eyebrow eyebrow--on rise" style="--d:0">Trung tâm Anh ngữ · Hội An</p>
-    <h1 class="rise" style="--d:1">Học tiếng Anh <span class="mark">bằng cách làm.</span></h1>
-    <p class="lede rise" style="--d:2">Con học tiếng Anh qua Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, chứ không phải qua phiếu bài tập.</p>
+    <h1 class="rise" style="--d:1">Học tiếng Anh <span class="mark">qua thực hành.</span></h1>
+    <p class="lede rise" style="--d:2">Các con học tiếng Anh qua các giờ Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, chứ không chỉ ngồi làm bài tập trên giấy.</p>
     <div class="hero__actions rise" style="--d:3">
       <a class="btn btn--white" href="{{ '/contact/' | href(lang) }}">Đặt lịch tham quan</a>
-      <a class="btn btn--ghost-white" href="{{ '/learning/' | href(lang) }}">Các chương trình</a>
+      <a class="btn btn--ghost-white" href="{{ '/learning/' | href(lang) }}">Chương trình học</a>
     </div>
-    <ul class="hero__facts rise" style="--d:4" aria-label="Thông tin nhanh">
-      <li>20 tháng đến 18 tuổi</li>
-      <li>Mỗi lớp không quá {{ site.classCap }} em</li>
-      <li>Ở Hội An từ năm {{ site.founded }}</li>
+    <ul class="hero__facts rise" style="--d:4" aria-label="Thông tin tóm tắt">
+      <li>Từ 20 tháng đến 18 tuổi</li>
+      <li>Tối đa {{ site.classCap }} học viên mỗi lớp</li>
+      <li>Có mặt tại Hội An từ năm {{ site.founded }}</li>
     </ul>
   </div>
   {% include "partials/river.njk" %}
@@ -31,14 +31,14 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 <section>
   <div class="wrap two">
     <div>
-      <p class="eyebrow eyebrow--blue">Câu chuyện của chúng tôi</p>
-      <h2>Đồng hành cùng các gia đình ở Hội An và Đà Nẵng từ năm {{ site.founded }}</h2>
-      <p class="lede lede--blue">Trung tâm học tập quốc tế lâu năm nhất ở Hội An.</p>
-      <p>Chúng tôi mở cửa năm {{ site.founded }} cho những gia đình muốn con học tiếng Anh mà không phải ngồi yên cả ngày. Đến nay chúng tôi vẫn làm như vậy. Một nửa số gia đình là người Việt, một nửa đến từ nước ngoài. Giáo viên cũng vậy.</p>
-      <a class="btn btn--primary" href="{{ '/about/' | href(lang) }}">Về chúng tôi</a>
+      <p class="eyebrow eyebrow--blue">Câu chuyện của PRA</p>
+      <h2>Đồng hành cùng các gia đình tại Hội An và Đà Nẵng từ năm {{ site.founded }}</h2>
+      <p class="lede lede--blue">Trung tâm học tập quốc tế hoạt động lâu năm nhất tại Hội An.</p>
+      <p>PRA thành lập năm {{ site.founded }}, dành cho những gia đình muốn con học tiếng Anh mà không phải ngồi yên một chỗ cả ngày. Đến nay, PRA vẫn giữ đúng tinh thần ấy. Một nửa số gia đình ở đây là người Việt, nửa còn lại đến từ nhiều nước khác. Đội ngũ giáo viên cũng vậy.</p>
+      <a class="btn btn--primary" href="{{ '/about/' | href(lang) }}">Giới thiệu về PRA</a>
     </div>
     <div class="leaf-wrap leaf-wrap--r has-sticker">
-      <span class="sticker sticker--sun sticker--tl">Từ {{ site.founded }}</span>
+      <span class="sticker sticker--sun sticker--tl">Từ năm {{ site.founded }}</span>
       {% photo "community-at-campus-wall", "photo--lg photo--tilt-r" %}
     </div>
   </div>
@@ -53,7 +53,7 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
   </div>
   <div class="ribbon ribbon--blue">
     <div class="ribbon__track">
-      {% for i in [1, 2] %}<span>Khám phá tri thức</span><span>Sáng tạo và thể hiện</span><span>Thể thao và vui chơi</span><span>Đóng góp cho cộng đồng</span><span>Công dân toàn cầu</span><span>Khả năng lãnh đạo</span>{% endfor %}
+      {% for i in [1, 2] %}<span>Khám phá tri thức</span><span>Sáng tạo và thể hiện bản thân</span><span>Thể thao và vui chơi</span><span>Đóng góp cho cộng đồng</span><span>Công dân toàn cầu</span><span>Kỹ năng lãnh đạo</span>{% endfor %}
     </div>
   </div>
 </div>
@@ -61,14 +61,14 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 <section class="band--pale">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Cách chúng tôi dạy tiếng Anh</p>
-      <h2>Học qua nội dung và ngữ cảnh</h2>
-      <p class="lede">Không ai học được ngoại ngữ chỉ từ phiếu bài tập. Các con học tiếng Anh vì cần nó để đong bột, giải thích thí nghiệm và tranh luận về luật chơi.</p>
+      <p class="eyebrow">Phương pháp dạy tiếng Anh</p>
+      <h2>Học tiếng Anh qua môn học và tình huống thực tế</h2>
+      <p class="lede">Không ai giỏi ngoại ngữ chỉ nhờ làm bài tập trên giấy. Các con học được tiếng Anh vì cần dùng nó để đong bột, giải thích thí nghiệm và tranh luận về luật chơi.</p>
     </div>
     <div class="method">
-      <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Môn học thật, bằng tiếng Anh</strong><p>Buổi sáng nào cũng có tiếng Anh, Toán và Khoa học theo chương trình Cambridge, do giáo viên có bằng cấp giảng dạy.</p></div>
-      <div class="method__item">{{ ic.icon("whisk", "green") }}<strong>Thực hành, không học vẹt</strong><p>Buổi chiều nào cũng là giờ tự tay làm: nấu ăn, thủ công, Mỹ thuật, Công nghệ, thể thao.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Lớp đủ nhỏ để con được nói</strong><p>Mỗi lớp không quá {{ site.classCap }} em, nên em nào cũng có lượt nói.</p></div>
+      <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Học các môn bằng tiếng Anh</strong><p>Mỗi buổi sáng, các con học tiếng Anh, Toán và Khoa học theo chương trình Cambridge với giáo viên có bằng cấp chuyên môn.</p></div>
+      <div class="method__item">{{ ic.icon("whisk", "green") }}<strong>Thực hành thay vì học vẹt</strong><p>Buổi chiều nào các con cũng được tự tay làm: nấu ăn, thủ công, Mỹ thuật, Công nghệ, thể thao.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Lớp ít học viên, con được nói nhiều</strong><p>Mỗi lớp tối đa {{ site.classCap }} học viên, nên bạn nào cũng có cơ hội nói.</p></div>
     </div>
   </div>
 </section>
@@ -77,9 +77,9 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 <section>
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow eyebrow--blue">Chương trình</p>
+      <p class="eyebrow eyebrow--blue">Chương trình học</p>
       <h2>Từ 20 tháng đến 18 tuổi</h2>
-      <p class="lede">Chọn chương trình theo độ tuổi của con.</p>
+      <p class="lede">Ba mẹ chọn chương trình theo độ tuổi của con.</p>
     </div>
     <div class="tiles mt">
       {% for p in programs %}{% if p.key != 'global' %}
@@ -96,9 +96,9 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 <section class="band--blue">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Số em tối đa mỗi lớp</h3><p>Ở tất cả các lớp học thuật.</p></div>
-    <div class="stat"><p class="stat__num" data-count="{{ ('' | year) - site.founded }}">{{ ('' | year) - site.founded }}</p><h3>Năm ở Hội An</h3><p>Đồng hành cùng các gia đình ở Hội An và Đà Nẵng từ năm {{ site.founded }}.</p></div>
-    <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Cựu học viên ở nước ngoài</h3><p>Đang học trung học và đại học ở nước ngoài.</p></div>
+    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Học viên tối đa mỗi lớp</h3><p>Áp dụng cho tất cả các lớp học thuật.</p></div>
+    <div class="stat"><p class="stat__num" data-count="{{ ('' | year) - site.founded }}">{{ ('' | year) - site.founded }}</p><h3>Năm hoạt động tại Hội An</h3><p>Đồng hành cùng các gia đình tại Hội An và Đà Nẵng từ năm {{ site.founded }}.</p></div>
+    <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Cựu học viên du học</h3><p>Đang học trung học và đại học ở nước ngoài.</p></div>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
@@ -106,14 +106,14 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 <section>
   <div class="wrap two two--flip">
     <div class="leaf-wrap has-sticker">
-      <span class="sticker sticker--violet sticker--br">3 tuần đến 3 tháng</span>
+      <span class="sticker sticker--violet sticker--br">Từ 3 tuần đến 3 tháng</span>
       {% photo "global-program-nature-walk", "photo--lg photo--tilt" %}
     </div>
     <div>
-      <p class="eyebrow eyebrow--violet">Đến Hội An một thời gian?</p>
+      <p class="eyebrow eyebrow--violet">Gia đình đến Hội An ngắn ngày?</p>
       <h2>Global Program</h2>
-      <p>Gia đình ở Hội An vài tuần hay cả một mùa? Con vào học cùng một lớp thật trong ba tuần đến ba tháng, nửa ngày hoặc cả ngày, dành cho các con từ 2 đến 14 tuổi.</p>
-      <a class="btn btn--green" href="{{ '/learning/global-program/' | href(lang) }}">Xem cách tham gia</a>
+      <p>Gia đình ở Hội An vài tuần hay vài tháng? Con sẽ vào học chung lớp với các học viên dài hạn của PRA, từ ba tuần đến ba tháng, nửa ngày hoặc cả ngày. Chương trình dành cho các con từ 2 đến 14 tuổi.</p>
+      <a class="btn btn--green" href="{{ '/learning/global-program/' | href(lang) }}">Tìm hiểu chương trình</a>
     </div>
   </div>
 </section>
@@ -122,7 +122,7 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 <section class="band--pale-green">
   <div class="wrap">
     <div class="center narrow">
-      <p class="eyebrow">Hoạt động ở PRA</p>
+      <p class="eyebrow">Hoạt động tại PRA</p>
       <h2>Đèn lồng, bánh cupcake và cờ vua</h2>
     </div>
     <div class="gallery mt">
@@ -139,7 +139,7 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
       {% photo "primary-lesson-on-the-turf", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
       {% photo "primary-lanterns-finished", "", "(min-width: 1240px) 280px, (min-width: 720px) 23vw, 70vw" %}
     </div>
-    <p class="gallery__hint" hidden>Chạm vào ảnh để xem lớn hơn.</p>
+    <p class="gallery__hint" hidden>Chạm vào ảnh để phóng to.</p>
     <p class="center mt"><a class="btn btn--primary" href="{{ '/events/' | href(lang) }}">Các sự kiện trong năm</a></p>
   </div>
 </section>
@@ -150,16 +150,16 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
   <div class="wrap film__grid">
     <div class="film__text">
       <p class="eyebrow eyebrow--on">Kỷ yếu 2025-26</p>
-      <h2>Cả năm học trong ba phút</h2>
-      <p class="lede">Nhóm Kỷ yếu của chúng tôi đã tự chụp ảnh, thiết kế và biên tập cuốn kỷ yếu, rồi dựng đoạn phim này từ đó.</p>
-      <p class="film__meta">3 phút · có âm thanh · tất cả các lớp, từ Nursery đến Upper Secondary</p>
+      <h2>Cả năm học gói gọn trong ba phút</h2>
+      <p class="lede">Nhóm Kỷ yếu của PRA đã tự chụp ảnh, thiết kế và biên tập cuốn kỷ yếu, rồi dựng thành đoạn phim này.</p>
+      <p class="film__meta">3 phút · có âm thanh · đủ các lớp, từ Nursery đến Upper Secondary</p>
     </div>
     <figure class="film__player">
       <video class="film__video" controls preload="none" playsinline
         poster="{{ '/assets/video/yearbook-2025-26-poster.webp' | href(lang) }}"
         src="{{ '/assets/video/yearbook-2025-26.mp4' | href(lang) }}"
-        aria-label="Phim kỷ yếu 2025-26 của Palm River Academy"></video>
-      <button class="film__play" type="button" aria-label="Phát phim kỷ yếu">
+        aria-label="Phim kỷ yếu năm học 2025-26 của Palm River Academy"></video>
+      <button class="film__play" type="button" aria-label="Xem phim kỷ yếu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
       </button>
     </figure>
@@ -174,15 +174,15 @@ description: "Palm River Academy là trung tâm Anh ngữ ở Hội An cho trẻ
 <section>
   <div class="wrap two">
     <div class="leaf-wrap leaf-wrap--tint has-sticker">
-      <span class="sticker sticker--green sticker--tr">5 phút đến phố cổ</span>
+      <span class="sticker sticker--green sticker--tr">Cách phố cổ 5 phút</span>
       {% photo site.campus.photo, "photo--lg photo--wide" %}
     </div>
     <div>
-      <p class="eyebrow">Địa chỉ</p>
-      <h2>Một cơ sở ở Cẩm Thanh</h2>
-      <p>Cách phố cổ Hội An vài phút. Học viên ở mọi lứa tuổi đều học chung một khuôn viên.</p>
+      <p class="eyebrow">Địa điểm</p>
+      <h2>Một cơ sở duy nhất tại Cẩm Thanh</h2>
+      <p>PRA chỉ cách phố cổ Hội An vài phút. Học viên ở mọi lứa tuổi cùng học trong một khuôn viên.</p>
       <p><strong>{{ site.campus.address }}</strong><br>{{ site.hours }}</p>
-      <a class="btn btn--primary" href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Mở trên Google Maps</a>
+      <a class="btn btn--primary" href="{{ site.campus.mapUrl }}" rel="noopener" target="_blank">Xem trên Google Maps</a>
     </div>
   </div>
 </section>

@@ -15,11 +15,11 @@
       }
     },
     "vi": {
-      "kind": "Ảnh",
+      "kind": "Hình ảnh",
       "title": "Tết Trung thu",
       "when": "Thứ Sáu, 25/9",
-      "ticker": "Ảnh Tết Trung thu đã có trên trang. 15% lợi nhuận được quyên góp cho Go Danang",
-      "text": "Cảm ơn các gia đình đã đến. Học viên tự đứng gian hàng và tổ chức trò chơi, và 15% lợi nhuận được quyên góp cho tổ chức từ thiện Go Danang. Xem các con đã làm gì qua ảnh."
+      "ticker": "Đã có ảnh Tết Trung thu. 15% lợi nhuận được quyên góp cho tổ chức từ thiện Go Danang",
+      "text": "Cảm ơn các gia đình đã đến tham dự. Học viên tự phụ trách các gian hàng và trò chơi, và 15% lợi nhuận đã được quyên góp cho tổ chức từ thiện Go Danang. Mời ba mẹ xem ảnh và những việc các con đã làm."
     }
   },
   {
@@ -34,15 +34,15 @@
       "label": "See the calendar",
       "url": "/families/schedule/#calendar",
       "vi": {
-        "label": "Xem lịch"
+        "label": "Xem lịch năm học"
       }
     },
     "vi": {
       "kind": "Lịch năm học",
-      "title": "Bắt đầu Quý 2",
+      "title": "Quý 2 bắt đầu",
       "when": "Thứ Năm, 15/10",
       "ticker": "Quý 2 bắt đầu vào thứ Năm, 15/10",
-      "text": "Quý 1 kết thúc ngày 8/10, cũng là hạn đóng học phí Quý 2, và kỳ nghỉ thu kéo dài đến 14/10. Học viên mới có thể bắt đầu học từ quý mới."
+      "text": "Quý 1 kết thúc ngày 8/10, cũng là hạn đóng học phí Quý 2. Kỳ nghỉ thu kéo dài đến hết ngày 14/10. Học viên mới có thể nhập học từ đầu quý mới."
     }
   },
   {
@@ -57,16 +57,16 @@
       "label": "How it works",
       "url": "/learning/global-program/",
       "vi": {
-        "label": "Chương trình diễn ra thế nào"
+        "label": "Tìm hiểu chương trình"
       }
     },
     "flyer": "global-program-2026-27-offer-flyer",
     "vi": {
       "kind": "Ưu đãi",
-      "title": "Giảm 10% và 15% cho Global Program",
+      "title": "Global Program: ưu đãi 10% và 15%",
       "when": "Đến tháng 12/2026",
-      "ticker": "Global Program: giảm 10% cho con thứ nhất, 15% cho con thứ hai, đến tháng 12",
-      "text": "Giảm 10% cho con thứ nhất và 15% cho con thứ hai, áp dụng cho chương trình cả ngày. Dành cho các con từ 2 đến 14 tuổi, học từ ba tuần đến ba tháng."
+      "ticker": "Global Program: giảm 10% cho con thứ nhất, 15% cho con thứ hai, áp dụng đến tháng 12",
+      "text": "Giảm 10% cho con thứ nhất và 15% cho con thứ hai khi đăng ký chương trình cả ngày. Dành cho các con từ 2 đến 14 tuổi, thời gian học từ ba tuần đến ba tháng."
     }
   },
   {
@@ -88,11 +88,11 @@
     "flyer": "early-years-tuition-offer-flyer",
     "vi": {
       "kind": "Ưu đãi",
-      "title": "Giảm 35% cho Nursery và Kindergarten",
+      "title": "Giảm 35% học phí Nursery và Kindergarten",
       "when": "Ưu đãi có thời hạn",
-      "ticker": "Nursery và Kindergarten: giảm 35% học phí cho thời gian còn lại của năm học",
-      "text": "Giảm 35% học phí khi đăng ký học cho thời gian còn lại của năm học. Tiếng Anh cả ngày, dành cho các bé từ 20 tháng đến 5 tuổi.",
-      "note": "Áp dụng điều khoản và điều kiện."
+      "ticker": "Nursery và Kindergarten: giảm 35% học phí đến hết năm học",
+      "text": "Giảm 35% học phí khi đăng ký học đến hết năm học. Các bé học bằng tiếng Anh cả ngày, độ tuổi từ 20 tháng đến 5 tuổi.",
+      "note": "Áp dụng kèm điều khoản và điều kiện."
     }
   }
 ]
