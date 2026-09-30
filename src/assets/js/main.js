@@ -8,6 +8,72 @@
     ? { viewer: "Xem ảnh", close: "Đóng", prev: "Ảnh trước", next: "Ảnh tiếp theo", larger: "Phóng to ảnh: " }
     : { viewer: "Photo viewer", close: "Close", prev: "Previous photo", next: "Next photo", larger: "View larger: " };
 
+  // Contact form. This site has no server of its own, so the form hands the message
+  // straight to the office system (The Current), which files it under Leads. The address
+  // and key on the form are public on purpose: they allow this one call and nothing else.
+  // The words a family reads (thank you, could not send) are in the page, not here.
+  document.querySelectorAll("form[data-web-form]").forEach(function (form) {
+    var button = form.querySelector("button[type=submit]");
+    var error = form.querySelector(".form__error");
+    var visit = form.querySelector(".form__visit");
+    var done = form.parentElement.querySelector(".form__done");
+    var want = form.elements.want;
+    var day = form.elements.visit_date;
+    function two(n) { return (n < 10 ? "0" : "") + n; }
+    function iso(d) { return d.getFullYear() + "-" + two(d.getMonth() + 1) + "-" + two(d.getDate()); }
+    function wantsVisit() { return want.value === "tour" || want.value === "call"; }
+    // Tours and calls are on weekdays. The office confirms the day, so holidays are left to them.
+    function checkDay() {
+      var weekday = wantsVisit() && day.value ? new Date(day.value + "T12:00:00").getDay() : 1;
+      day.setCustomValidity(weekday === 0 || weekday === 6 ? day.getAttribute("data-weekend") : "");
+    }
+    function showVisit() { visit.hidden = !wantsVisit(); checkDay(); }
+    function text(name) { return String(form.elements[name].value || "").trim(); }
+
+    var now = new Date();
+    day.min = iso(now);
+    day.max = iso(new Date(now.getFullYear(), now.getMonth() + 6, now.getDate()));
+    day.addEventListener("input", checkDay);
+    want.addEventListener("change", showVisit);
+    showVisit();
+    button.disabled = false; // off in the page, so the form cannot be sent the old way without this script
+
+    function sent() {
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+    }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (button.disabled) return;
+      var message = {
+        want: want.value,
+        name: text("name"),
+        email: text("email"),
+        phone: text("phone"),
+        child_age: text("child_age"),
+        visit_date: wantsVisit() ? day.value : "",
+        visit_time: wantsVisit() ? form.elements.visit_time.value : "",
+        message: text("message"),
+        lang: document.documentElement.lang === "vi" ? "vi" : "en",
+        website: text("website")
+      };
+      button.disabled = true;
+      error.hidden = true;
+      fetch(form.getAttribute("data-endpoint"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", apikey: form.getAttribute("data-key") },
+        body: JSON.stringify({ p: message })
+      }).then(function (reply) {
+        if (!reply.ok) throw new Error(String(reply.status));
+        sent();
+      }).catch(function () {
+        error.hidden = false;
+        button.disabled = false;
+      });
+    });
+  });
+
   // Mobile nav sheet
   var toggle = document.querySelector(".menu-toggle");
   var sheet = document.getElementById("sheet");

@@ -1433,7 +1433,17 @@ tr:last-child td { border-bottom: 0; }
 .form__row { display: grid; gap: 18px; }
 @media (min-width: 600px) { .form__row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 .form .btn { justify-self: start; }
-.form__note { font-size: 0.9em; color: var(--ink-soft); }
+.form__note { font-size: 0.9em; color: var(--ink-soft); margin: 0; }
+.form[hidden], .form [hidden] { display: none; }
+.form__visit { display: grid; gap: 10px; }
+.form__error { color: var(--coral-ink); font-weight: 600; padding: 12px 14px; background: var(--coral-pale); border-radius: 14px; }
+.form__error a { color: inherit; }
+/* A box for robots: off the page, and out of the way of keyboards and screen readers. */
+.form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form__done { border-top-color: var(--green); gap: 10px; }
+.form__done:focus { outline: none; }
+.form__done h2 { font-size: var(--t-h3); color: var(--green-dark); margin: 0; }
+.form__done p { margin: 0; }
 
 /* ---------- CTA block ---------- */
 

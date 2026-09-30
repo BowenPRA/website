@@ -13,39 +13,58 @@ description: "Đặt lịch tham quan Palm River Academy tại Hội An hoặc g
 
 <section>
   <div class="wrap two two--top">
-    <form class="form" action="{{ site.formAction }}" method="POST">
-      {# Tells whoever answers which language the family wrote in. #}
-      <input type="hidden" name="language" value="{{ strings[lang].name }}">
-      <div class="form__row">
-        <div><label for="name">Họ và tên</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-      </div>
-      <div class="form__row">
-        <div><label for="phone">Số điện thoại, Zalo hoặc WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div><label for="age">Tuổi của con</label>
-          <select id="age" name="child_age">
-            <option value="">Vui lòng chọn</option>
-            <option>Dưới 2 tuổi</option><option>2 đến 4 tuổi</option><option>5 đến 7 tuổi</option><option>8 đến 11 tuổi</option><option>11 đến 14 tuổi</option><option>14 đến 18 tuổi</option>
+    <div>
+      {# main.js sends this to the office system, The Current, where it is filed under Leads.
+         The option values are the same in both languages, so the office reads one set of words. #}
+      <form class="form" method="post" data-web-form data-endpoint="{{ site.forms.endpoint }}" data-key="{{ site.forms.key }}">
+        <div class="form__row">
+          <div><label for="name">Họ và tên</label><input id="name" name="name" type="text" autocomplete="name" maxlength="120" required></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
+        </div>
+        <div class="form__row">
+          <div><label for="phone">Số điện thoại, Zalo hoặc WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
+          <div><label for="age">Tuổi của con</label>
+            <select id="age" name="child_age">
+              <option value="">Vui lòng chọn</option>
+              <option value="Under 2">Dưới 2 tuổi</option><option value="2 to 4">2 đến 4 tuổi</option><option value="5 to 7">5 đến 7 tuổi</option><option value="8 to 11">8 đến 11 tuổi</option><option value="11 to 14">11 đến 14 tuổi</option><option value="14 to 18">14 đến 18 tuổi</option>
+            </select>
+          </div>
+        </div>
+        <div><label for="want">Ba mẹ cần hỗ trợ gì?</label>
+          <select id="want" name="want">
+            <option value="tour">Tham quan trung tâm</option>
+            <option value="call">Trò chuyện qua video</option>
+            <option value="global">Tìm hiểu về Global Program</option>
+            <option value="question">Chỉ muốn hỏi thêm thông tin</option>
           </select>
         </div>
+        <div class="form__visit">
+          <div class="form__row">
+            <div><label for="day">Ba mẹ muốn hẹn ngày nào?</label><input id="day" name="visit_date" type="date" data-weekend="PRA hẹn tham quan và gọi video từ thứ Hai đến thứ Sáu. Ba mẹ vui lòng chọn một ngày trong tuần."></div>
+            <div><label for="time">Buổi sáng hay buổi chiều?</label>
+              <select id="time" name="visit_time">
+                <option value="any">Buổi nào cũng được</option>
+                <option value="morning">Buổi sáng</option>
+                <option value="afternoon">Buổi chiều</option>
+              </select>
+            </div>
+          </div>
+          <p class="form__note">PRA sẽ liên hệ lại để xác nhận ngày giờ với ba mẹ.</p>
+        </div>
+        <div><label for="msg">Thông tin ba mẹ muốn chia sẻ thêm</label><textarea id="msg" name="message" maxlength="4000" placeholder="Thời gian gia đình ở Hội An, trình độ tiếng Anh của con, sở thích của con..."></textarea></div>
+        {# People never see this box. Robots fill it in, and what they send is thrown away. #}
+        <div class="form__trap" aria-hidden="true"><label for="website">Vui lòng để trống ô này</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn--green" type="submit" disabled>Gửi</button>
+        <p class="form__note form__error" role="alert" hidden>Tin nhắn chưa gửi được. Ba mẹ vui lòng thử lại, hoặc gửi email đến <a href="mailto:{{ site.email }}">{{ site.email }}</a> hay nhắn cho PRA qua <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
+        <noscript><p class="form__note">Biểu mẫu này cần JavaScript để hoạt động. Nếu không gửi được, ba mẹ vui lòng gửi email đến <a href="mailto:{{ site.email }}">{{ site.email }}</a> hoặc nhắn cho PRA qua <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p></noscript>
+        <p class="form__note">Tin nhắn của ba mẹ chỉ được gửi đến văn phòng PRA. <a href="{{ '/privacy/' | href(lang) }}">PRA bảo vệ thông tin của ba mẹ như thế nào</a>.</p>
+      </form>
+      <div class="form form__done" role="status" tabindex="-1" hidden>
+        <h2>Cảm ơn ba mẹ. PRA đã nhận được tin nhắn.</h2>
+        <p>Văn phòng sẽ liên hệ lại với ba mẹ qua email hoặc điện thoại. Nếu ba mẹ đặt lịch tham quan hoặc gọi video, PRA sẽ xác nhận lại ngày giờ với ba mẹ.</p>
+        <p>Nếu cần gấp, ba mẹ vui lòng gọi <a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a> hoặc nhắn cho PRA qua <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
       </div>
-      <div><label for="want">Ba mẹ cần hỗ trợ gì?</label>
-        <select id="want" name="want">
-          <option>Tham quan trung tâm</option>
-          <option>Trò chuyện qua video</option>
-          <option>Tìm hiểu về Global Program</option>
-          <option>Chỉ muốn hỏi thêm thông tin</option>
-        </select>
-      </div>
-      <div><label for="msg">Thông tin ba mẹ muốn chia sẻ thêm</label><textarea id="msg" name="message" placeholder="Thời gian gia đình ở Hội An, trình độ tiếng Anh của con, sở thích của con..."></textarea></div>
-      <input type="hidden" name="_subject" value="Website inquiry">
-      {% if "REPLACE_ME" in site.formAction %}
-      <button class="btn btn--green" type="submit" disabled>Gửi</button>
-      <p class="form__note">Biểu mẫu này đang được hoàn thiện. Trong thời gian này, ba mẹ vui lòng gửi email đến <a href="mailto:{{ site.email }}">{{ site.email }}</a> hoặc nhắn tin cho PRA qua <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
-      {% else %}
-      <button class="btn btn--green" type="submit">Gửi</button>
-      {% endif %}
-    </form>
+    </div>
     <div class="card-stack">
       <div class="card">
         <h3>Liên hệ trực tiếp</h3>

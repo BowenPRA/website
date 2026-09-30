@@ -221,11 +221,14 @@ one hand-drawn underline per page, big photos of real students.
   Output folder `_site`. Custom domain via `CNAME` in `src/` when DNS is
   moved off Wix. `PATH_PREFIX` env var handles the interim
   `bowenpra.github.io/<repo>/` URL.
-- **Forms:** GitHub Pages cannot receive form posts. Options, in order of
-  preference: (1) Formspree free tier posting to admin@palmriveracademy.edu.vn,
-  (2) a Google Form embedded on `/contact/`, (3) `mailto:` plus Zalo/WhatsApp
-  buttons as the fallback. The scaffold ships with (3) plus a placeholder
-  Formspree action.
+- **Forms:** GitHub Pages cannot receive form posts, so since 2026-09-30 the form on
+  `/contact/` sends its message from the browser straight to the office system (The
+  Current, Supabase), where it is filed under Leads. `src/_data/site.json` `forms` holds
+  the address and the public key; they allow one database function (`adm_web_submit`,
+  in the admin repo's `supabase/updates-2026-09-30-website-forms.sql`) and nothing else.
+  The script is at the top of `main.js`; the words a family reads are in the two
+  `contact.njk` pages. If the call fails, the form points to email and WhatsApp. No
+  email is sent to admin@: the office sees messages on the Leads page.
 - **Map:** static image of both campuses with a "Open in Google Maps" link.
   No embedded iframe (slow, cookie banner).
 - **Vietnamese version:** built 2026-09-29. Every page has a twin under `/vi/` (source in `src/vi/`),
@@ -240,15 +243,12 @@ Filled in on 2026-09-22 from the 2026-27 Tuition and Fees sheet, the 2026-27
 academic calendar (10 Aug version), the 2025-26 Family Handbook, the Global
 Program brochure (Sep 2025), the admissions SOP and the admin app. Decisions from
 Bowen: Upper Secondary fees are "ask us"; the Global brochure table stands for
-2026-27; there is no development fee any more; the contact form stays (Formspree).
+2026-27; there is no development fee any more; the contact form stays (it now saves to The Current, see "Forms" above).
 
 Done: fee tables and fee FAQs, enrollment FAQs, program FAQs, team, daily
 schedules, 2026-27 calendar, handbook short version.
 
 Still open:
-- Formspree form ID for the contact form (sign up with admin@, create a form,
-  put the ID in `src/_data/site.json` `formAction`). Until then Send is disabled
-  and the form points people to email and WhatsApp.
 - A 2026-27 family handbook. The site offers a copy by email rather than a PDF,
   because only the 2025-26 edition exists.
 - Quarter 4 start: the fee sheet says 29 March, the calendar says 25 March. The

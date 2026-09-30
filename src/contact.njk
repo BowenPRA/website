@@ -13,39 +13,58 @@ description: "Book a tour of Palm River Academy in Hội An, or ask a question. 
 
 <section>
   <div class="wrap two two--top">
-    <form class="form" action="{{ site.formAction }}" method="POST">
-      {# Tells whoever answers which language the family wrote in. #}
-      <input type="hidden" name="language" value="{{ strings[lang].name }}">
-      <div class="form__row">
-        <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-      </div>
-      <div class="form__row">
-        <div><label for="phone">Phone, Zalo or WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-        <div><label for="age">Your child's age</label>
-          <select id="age" name="child_age">
-            <option value="">Choose one</option>
-            <option>Under 2</option><option>2 to 4</option><option>5 to 7</option><option>8 to 11</option><option>11 to 14</option><option>14 to 18</option>
+    <div>
+      {# main.js sends this to the office system, The Current, where it is filed under Leads.
+         The option values are the same in both languages, so the office reads one set of words. #}
+      <form class="form" method="post" data-web-form data-endpoint="{{ site.forms.endpoint }}" data-key="{{ site.forms.key }}">
+        <div class="form__row">
+          <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" maxlength="120" required></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="200" required></div>
+        </div>
+        <div class="form__row">
+          <div><label for="phone">Phone, Zalo or WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
+          <div><label for="age">Your child's age</label>
+            <select id="age" name="child_age">
+              <option value="">Choose one</option>
+              <option value="Under 2">Under 2</option><option value="2 to 4">2 to 4</option><option value="5 to 7">5 to 7</option><option value="8 to 11">8 to 11</option><option value="11 to 14">11 to 14</option><option value="14 to 18">14 to 18</option>
+            </select>
+          </div>
+        </div>
+        <div><label for="want">What would you like?</label>
+          <select id="want" name="want">
+            <option value="tour">A campus tour</option>
+            <option value="call">A video call</option>
+            <option value="global">Information about the Global Program</option>
+            <option value="question">Just a question</option>
           </select>
         </div>
+        <div class="form__visit">
+          <div class="form__row">
+            <div><label for="day">Which day suits you?</label><input id="day" name="visit_date" type="date" data-weekend="Tours and calls are Monday to Friday. Please choose a weekday."></div>
+            <div><label for="time">Morning or afternoon?</label>
+              <select id="time" name="visit_time">
+                <option value="any">Either</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+              </select>
+            </div>
+          </div>
+          <p class="form__note">We will reply to confirm the day and time.</p>
+        </div>
+        <div><label for="msg">Anything we should know</label><textarea id="msg" name="message" maxlength="4000" placeholder="Dates you are in Hội An, your child's English, what they love doing..."></textarea></div>
+        {# People never see this box. Robots fill it in, and what they send is thrown away. #}
+        <div class="form__trap" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <button class="btn btn--green" type="submit" disabled>Send</button>
+        <p class="form__note form__error" role="alert" hidden>That did not send. Please try again, or email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or message us on <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
+        <noscript><p class="form__note">This form needs JavaScript. If it will not send, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or message us on <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p></noscript>
+        <p class="form__note">Your message goes to the PRA office and nowhere else. <a href="{{ '/privacy/' | href(lang) }}">How we look after your information</a>.</p>
+      </form>
+      <div class="form form__done" role="status" tabindex="-1" hidden>
+        <h2>Thank you. We have your message.</h2>
+        <p>Someone from the office will reply by email or phone. If you asked for a tour or a call, we will confirm the day and time with you.</p>
+        <p>In a hurry? Call <a href="tel:{{ site.phoneIntl }}">{{ site.phone }}</a> or message us on <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
       </div>
-      <div><label for="want">What would you like?</label>
-        <select id="want" name="want">
-          <option>A campus tour</option>
-          <option>A video call</option>
-          <option>Information about the Global Program</option>
-          <option>Just a question</option>
-        </select>
-      </div>
-      <div><label for="msg">Anything we should know</label><textarea id="msg" name="message" placeholder="Dates you are in Hội An, your child's English, what they love doing..."></textarea></div>
-      <input type="hidden" name="_subject" value="Website inquiry">
-      {% if "REPLACE_ME" in site.formAction %}
-      <button class="btn btn--green" type="submit" disabled>Send</button>
-      <p class="form__note">We are still connecting this form. Until then, email <a href="mailto:{{ site.email }}">{{ site.email }}</a> or message us on <a href="{{ site.social.whatsapp }}" rel="noopener" target="_blank">WhatsApp</a>.</p>
-      {% else %}
-      <button class="btn btn--green" type="submit">Send</button>
-      {% endif %}
-    </form>
+    </div>
     <div class="card-stack">
       <div class="card">
         <h3>Talk to a person</h3>
