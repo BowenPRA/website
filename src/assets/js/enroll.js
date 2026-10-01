@@ -121,42 +121,56 @@
 
   // ---------- documents ----------
 
-  var files = []; // { file, n, path }
+  // Each document is its own question (a photo, the student's passport, the parents', a report).
+  // A file remembers which question it answers, and the office sees that next to it.
+  var files = []; // { file, n, path, kind }
   var seq = 0;
-  var list = form.querySelector(".files");
-  var picker = form.querySelector(".files__input");
-  var fileError = form.querySelector(".files__error");
+  var docs = [].map.call(form.querySelectorAll(".doc"), function (box) {
+    return {
+      kind: box.getAttribute("data-doc"),
+      needed: box.hasAttribute("data-needed"),
+      list: box.querySelector(".files"),
+      picker: box.querySelector(".files__input"),
+      error: box.querySelector(".files__error")
+    };
+  });
 
   function complain(box, text) { box.textContent = text; box.hidden = !text; }
-  function FileProblem(text) { this.text = text; }
+  function FileProblem(text, kind) { this.text = text; this.kind = kind; }
   function isPdf(f) { return f.type === "application/pdf" || /\.pdf$/i.test(f.name); }
   function isPicture(f) { return /^image\//.test(f.type) || /\.(jpe?g|png|webp|heic|heif)$/i.test(f.name); }
-  function drawFiles() {
-    list.textContent = "";
-    files.forEach(function (item) {
+  function of(doc) { return files.filter(function (f) { return f.kind === doc.kind; }); }
+  function docOf(kind) { return docs.filter(function (d) { return d.kind === kind; })[0] || docs[0]; }
+  function drawFiles(doc) {
+    doc.list.textContent = "";
+    of(doc).forEach(function (item) {
       var li = document.createElement("li");
       var name = document.createElement("span");
       name.textContent = item.file.name;
       var remove = document.createElement("button");
       remove.type = "button";
       remove.textContent = say("remove");
-      remove.addEventListener("click", function () { files.splice(files.indexOf(item), 1); drawFiles(); });
+      remove.addEventListener("click", function () { files.splice(files.indexOf(item), 1); drawFiles(doc); });
       li.appendChild(name);
       li.appendChild(remove);
-      list.appendChild(li);
+      doc.list.appendChild(li);
     });
   }
-  picker.addEventListener("change", function () {
-    var problems = [];
-    [].forEach.call(picker.files, function (f) {
-      if (files.length >= MAX_FILES) { if (problems.indexOf(say("many")) < 0) problems.push(say("many")); return; }
-      if (!isPdf(f) && !isPicture(f)) { problems.push(f.name + " " + say("type")); return; }
-      if (isPdf(f) && f.size > MAX_BYTES) { problems.push(f.name + " " + say("big")); return; }
-      files.push({ file: f, n: ++seq, path: "" });
+  docs.forEach(function (doc) {
+    doc.picker.addEventListener("change", function () {
+      var problems = [];
+      [].forEach.call(doc.picker.files, function (f) {
+        if (!isPdf(f) && !isPicture(f)) { problems.push(f.name + " " + say("type")); return; }
+        if (isPdf(f) && f.size > MAX_BYTES) { problems.push(f.name + " " + say("big")); return; }
+        // A question that takes one file (the photo): a new choice takes the place of the old one.
+        if (!doc.picker.multiple) files = files.filter(function (x) { return x.kind !== doc.kind; });
+        if (files.length >= MAX_FILES) { if (problems.indexOf(say("many")) < 0) problems.push(say("many")); return; }
+        files.push({ file: f, n: ++seq, path: "", kind: doc.kind });
+      });
+      doc.picker.value = "";
+      complain(doc.error, problems.join(" "));
+      drawFiles(doc);
     });
-    picker.value = "";
-    complain(fileError, problems.join(" "));
-    drawFiles();
   });
 
   // Phone photos are often 3 to 8 MB. Scaled to a size where a passport's print is still sharp
@@ -189,8 +203,8 @@
   function upload(item) {
     if (item.path) return Promise.resolve(); // already there from an earlier try
     return prepare(item.file).then(function (ready) {
-      if (ready.blob.size > MAX_BYTES) throw new FileProblem(item.file.name + " " + say("big"));
-      if (!EXT[ready.type]) throw new FileProblem(item.file.name + " " + say("type"));
+      if (ready.blob.size > MAX_BYTES) throw new FileProblem(item.file.name + " " + say("big"), item.kind);
+      if (!EXT[ready.type]) throw new FileProblem(item.file.name + " " + say("type"), item.kind);
       var path = formId + "/" + item.n + "-" + safeName(item.file.name) + "." + EXT[ready.type];
       return fetch(base + "/storage/v1/object/" + BUCKET + "/" + path, {
         method: "POST",
@@ -273,7 +287,7 @@
     message.submission_id = formId;
     message.lang = document.documentElement.lang === "vi" ? "vi" : "en";
     message.signature = signData;
-    message.files = files.filter(function (f) { return f.path; }).map(function (f) { return { path: f.path, name: f.file.name }; });
+    message.files = files.filter(function (f) { return f.path; }).map(function (f) { return { path: f.path, name: f.file.name, kind: f.kind }; });
     return message;
   }
   function busy(on, text) {
@@ -301,7 +315,9 @@
     if (send.disabled) return;
     error.hidden = true;
     if (!checkUpTo(steps.length - 1)) return;
-    if (!files.length) { complain(fileError, say("none")); fileError.scrollIntoView({ block: "center" }); return; }
+    var missing = docs.filter(function (doc) { return doc.needed && !of(doc).length; });
+    missing.forEach(function (doc) { complain(doc.error, say("none")); });
+    if (missing.length) { missing[0].error.scrollIntoView({ block: "center" }); return; }
     if (!signed) { complain(signError, say("sign")); signError.scrollIntoView({ block: "center" }); return; }
     saveDraft();
 
@@ -326,7 +342,7 @@
     }).catch(function (problem) {
       busy(false);
       // A file that is too big or the wrong kind is said by name; anything else gets the general note.
-      if (problem instanceof FileProblem) { complain(fileError, problem.text); fileError.scrollIntoView({ block: "center" }); }
+      if (problem instanceof FileProblem) { var at = docOf(problem.kind).error; complain(at, problem.text); at.scrollIntoView({ block: "center" }); }
       else error.hidden = false;
     });
   });

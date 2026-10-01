@@ -1492,7 +1492,9 @@ tr:last-child td { border-bottom: 0; }
 .contract:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
 
 /* Documents and the signature. */
-.docs { margin: 0; padding-left: 1.3em; font-size: 0.95em; }
+.doc { display: grid; gap: 8px; justify-items: start; padding-top: 14px; border-top: 1px solid var(--line); }
+.doc__ask { margin: 0; font-weight: 600; }
+.doc .files, .doc .files__error { justify-self: stretch; }
 .form .files__add { position: relative; display: inline-flex; margin: 0; overflow: hidden; cursor: pointer; }
 .form .files__input { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; padding: 0; border: 0; opacity: 0; cursor: pointer; }
 .files__add:focus-within { outline: 3px solid var(--blue); outline-offset: 2px; }

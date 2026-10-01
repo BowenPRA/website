@@ -158,12 +158,18 @@
       <h3>{{ t.eduHead }}</h3>
       <p class="form__note">{{ t.eduIntro }}</p>
       {% for n in [0, 1, 2] %}
-      <div class="form__row">
-        {{ field("schools." + n + ".name", t.school + " " + (n + 1), { max: 200, placeholder: t.schoolHint }) }}
-        {{ field("schools." + n + ".years", t.years, { max: 200, placeholder: t.yearsHint }) }}
-      </div>
+      <fieldset class="group">
+        <legend>{{ t.school }} {{ n + 1 }}</legend>
+        <div class="form__row">
+          {{ field("schools." + n + ".name", t.schoolName, { max: 200 }) }}
+          {{ field("schools." + n + ".language", t.schoolLang, { max: 160, placeholder: t.schoolLangHint }) }}
+        </div>
+        <div class="form__row">
+          {{ field("schools." + n + ".years", t.years, { max: 200, placeholder: t.yearsHint }) }}
+          {{ field("schools." + n + ".grades", t.grades, { max: 200, placeholder: t.gradesHint }) }}
+        </div>
+      </fieldset>
       {% endfor %}
-      {{ field("school_language", t.schoolLang, { max: 160, placeholder: t.schoolLangHint }) }}
       {% for q in enroll.background %}{{ yesno("background." + q.key, q.q, t) }}{% endfor %}
       <div><label for="f-bg-explain">{{ t.explainBg }}</label><textarea id="f-bg-explain" name="background.explain" maxlength="2000"></textarea></div>
 
@@ -211,13 +217,17 @@
       <label class="pick"><input type="checkbox" name="terms" required> {{ t.agree }} *</label>
 
       <fieldset class="group">
-        <legend>{{ t.docsHead }} *</legend>
-        <p class="form__note">{{ t.docsAsk }}</p>
-        <ol class="docs">{% for d in enroll.docs %}<li>{{ d.item }}</li>{% endfor %}</ol>
-        <label class="btn btn--ghost btn--small files__add">{{ t.docsButton }}<input type="file" class="files__input" multiple accept="image/*,application/pdf,.heic,.heif"></label>
+        <legend>{{ t.docsHead }}</legend>
         <p class="form__note">{{ t.docsHint }}</p>
-        <ul class="files" aria-live="polite"></ul>
-        <p class="form__note form__error files__error" role="alert" hidden></p>
+        {# One question per document. `key` goes with each file, so the office sees which is which. #}
+        {% for d in enroll.docs %}
+        <div class="doc" data-doc="{{ d.key }}"{% if d.needed %} data-needed{% endif %}>
+          <p class="doc__ask" id="doc-{{ d.key }}">{{ d.item }}{% if d.needed %} *{% else %} <span class="group__opt">({{ t.optional }})</span>{% endif %}</p>
+          <ul class="files" aria-live="polite"></ul>
+          <label class="btn btn--ghost btn--small files__add">{{ t.docsButton }}<input type="file" class="files__input"{% if d.several %} multiple{% endif %} accept="image/*,application/pdf,.heic,.heif" aria-labelledby="doc-{{ d.key }}"></label>
+          <p class="form__note form__error files__error" role="alert" hidden></p>
+        </div>
+        {% endfor %}
       </fieldset>
 
       <fieldset class="group">
