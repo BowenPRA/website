@@ -43,7 +43,8 @@
     var name = domain.slice(0, domain.indexOf("."));
     var ending = domain.slice(domain.indexOf(".") + 1);
     var comSlip = COM_SLIPS.indexOf(ending) > -1;
-    if (ONE_DOMAIN[name]) return ONE_DOMAIN[name];
+    // Its own keys only: "constructor.io" is a company's domain, not ONE_DOMAIN.constructor.
+    if (Object.prototype.hasOwnProperty.call(ONE_DOMAIN, name)) return ONE_DOMAIN[name];
     if (NAMES.indexOf(name) > -1 || REAL_NAMES.indexOf(name) > -1) return comSlip ? name + ".com" : "";
     if (name.length < 4) return "";
     var meant = SLIP_NAMES.filter(function (k) { return edits(name, k) === 1; })[0];
