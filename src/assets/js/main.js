@@ -20,6 +20,13 @@
     "bigpond.com", "bigpond.net.au", "optusnet.com.au", "xtra.co.nz", "comcast.net", "verizon.net",
     "fpt.vn", "vnn.vn", "pra.edu.vn", "palmriveracademy.edu.vn"];
   var ONE_DOMAIN = { gmail: "gmail.com", googlemail: "googlemail.com", icloud: "icloud.com" };
+  // Only real slips are pointed out ("gmial", "hotmial", "yahooo", ".con"). A domain that exists is
+  // left alone: yahoo., hotmail., outlook. and live. with a country's ending, ymail.com, mail.com,
+  // email.com, foxmail.com, and any company's own domain.
+  var SLIP_NAMES = ["gmail", "yahoo", "hotmail", "outlook", "icloud"];
+  var REAL_NAMES = ["ymail", "mail", "email", "cloud"];
+  var COM_SLIPS = ["con", "cpm", "xom", "vom", "cim", "comm", "coom", "cmo", "ocm", "c0m", "ccom", "come"];
+  var NAMES = KNOWN.map(function (k) { return k.split(".")[0]; });
   function edits(a, b) {
     var d = [], i, j;
     for (i = 0; i <= a.length; i++) { d[i] = [i]; for (j = 1; j <= b.length; j++) d[i][j] = i ? 0 : j; }
@@ -32,14 +39,16 @@
     return d[a.length][b.length];
   }
   function domainSlip(domain) {
-    if (!domain || KNOWN.indexOf(domain) > -1) return "";
-    var name = domain.split(".")[0];
+    if (!domain || domain.indexOf(".") < 0 || KNOWN.indexOf(domain) > -1) return "";
+    var name = domain.slice(0, domain.indexOf("."));
+    var ending = domain.slice(domain.indexOf(".") + 1);
+    var comSlip = COM_SLIPS.indexOf(ending) > -1;
     if (ONE_DOMAIN[name]) return ONE_DOMAIN[name];
-    var best = "", bestD = 9;
-    KNOWN.forEach(function (k) { var n = edits(domain, k); if (n < bestD) { best = k; bestD = n; } });
-    if (bestD === 1 && best.length >= 8) return best;
-    if (bestD === 2 && best.length >= 9 && domain.length >= 7) return best;
-    return "";
+    if (NAMES.indexOf(name) > -1 || REAL_NAMES.indexOf(name) > -1) return comSlip ? name + ".com" : "";
+    if (name.length < 4) return "";
+    var meant = SLIP_NAMES.filter(function (k) { return edits(name, k) === 1; })[0];
+    if (!meant) return "";
+    return ONE_DOMAIN[meant] || meant + "." + (comSlip ? "com" : ending);
   }
   document.querySelectorAll("form[data-say-slip]").forEach(function (form) {
     var say = form.getAttribute("data-say-slip");
