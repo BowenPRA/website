@@ -16,7 +16,8 @@ description: "Book a tour of Palm River Academy in Hội An, or ask a question. 
     <div>
       {# main.js sends this to the office system, The Current, where it is filed under Leads.
          The option values are the same in both languages, so the office reads one set of words. #}
-      <form class="form" method="post" data-web-form data-endpoint="{{ site.forms.endpoint }}" data-key="{{ site.forms.key }}">
+      <form class="form" method="post" data-web-form data-endpoint="{{ site.forms.endpoint }}" data-key="{{ site.forms.key }}"
+        data-say-slip="{typed}: did you mean {suggestion}?" data-say-fix="Use {email}">
         <div class="form__row">
           <div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" maxlength="120" required></div>
           <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="200" required></div>

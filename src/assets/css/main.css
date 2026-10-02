@@ -1438,6 +1438,9 @@ tr:last-child td { border-bottom: 0; }
 .form__visit { display: grid; gap: 10px; }
 .form__error { color: var(--coral-ink); font-weight: 600; padding: 12px 14px; background: var(--coral-pale); border-radius: 14px; }
 .form__error a { color: inherit; }
+/* A slip in an email address ("gmai.com"): a warning under the box, with a button that puts it right. */
+.form__slip { color: var(--sun-ink); font-weight: 600; margin-top: 6px; }
+.form__slip-fix { display: inline; width: auto; min-height: 0; text-align: left; font: inherit; color: var(--blue); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
 /* A box for robots: off the page, and out of the way of keyboards and screen readers. */
 .form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form__done { border-top-color: var(--green); gap: 10px; }

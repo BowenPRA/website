@@ -8,6 +8,74 @@
     ? { viewer: "Xem ảnh", close: "Đóng", prev: "Ảnh trước", next: "Ảnh tiếp theo", larger: "Phóng to ảnh: " }
     : { viewer: "Photo viewer", close: "Close", prev: "Previous photo", next: "Next photo", larger: "View larger: " };
 
+  // Email boxes on the forms: a slip after the @ ("gmai.com") is pointed out when the box is
+  // left, with a button that puts it right. Only a warning: the form sends what is in the box.
+  // The words are on the form (data-say-slip, data-say-fix). The same list of domains is in The
+  // Current (admin repo, src/lib/emailCheck.js); keep the two alike.
+  var KNOWN = ["gmail.com", "googlemail.com", "yahoo.com", "yahoo.com.vn", "yahoo.co.uk", "yahoo.fr", "yahoo.de",
+    "hotmail.com", "hotmail.co.uk", "hotmail.fr", "hotmail.de", "hotmail.it", "outlook.com", "outlook.fr", "outlook.de",
+    "live.com", "live.co.uk", "live.fr", "msn.com", "icloud.com", "me.com", "mac.com", "aol.com",
+    "protonmail.com", "proton.me", "gmx.de", "gmx.net", "gmx.at", "web.de", "t-online.de", "orange.fr", "free.fr", "wanadoo.fr",
+    "mail.ru", "yandex.ru", "bk.ru", "inbox.ru", "list.ru", "qq.com", "163.com", "126.com", "naver.com", "daum.net",
+    "bigpond.com", "bigpond.net.au", "optusnet.com.au", "xtra.co.nz", "comcast.net", "verizon.net",
+    "fpt.vn", "vnn.vn", "pra.edu.vn", "palmriveracademy.edu.vn"];
+  var ONE_DOMAIN = { gmail: "gmail.com", googlemail: "googlemail.com", icloud: "icloud.com" };
+  function edits(a, b) {
+    var d = [], i, j;
+    for (i = 0; i <= a.length; i++) { d[i] = [i]; for (j = 1; j <= b.length; j++) d[i][j] = i ? 0 : j; }
+    for (i = 1; i <= a.length; i++) {
+      for (j = 1; j <= b.length; j++) {
+        d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+      }
+    }
+    return d[a.length][b.length];
+  }
+  function domainSlip(domain) {
+    if (!domain || KNOWN.indexOf(domain) > -1) return "";
+    var name = domain.split(".")[0];
+    if (ONE_DOMAIN[name]) return ONE_DOMAIN[name];
+    var best = "", bestD = 9;
+    KNOWN.forEach(function (k) { var n = edits(domain, k); if (n < bestD) { best = k; bestD = n; } });
+    if (bestD === 1 && best.length >= 8) return best;
+    if (bestD === 2 && best.length >= 9 && domain.length >= 7) return best;
+    return "";
+  }
+  document.querySelectorAll("form[data-say-slip]").forEach(function (form) {
+    var say = form.getAttribute("data-say-slip");
+    var fixSay = form.getAttribute("data-say-fix");
+    form.querySelectorAll("input[type=email]").forEach(function (box) {
+      var note = document.createElement("p");
+      note.className = "form__note form__slip";
+      note.setAttribute("role", "status");
+      note.hidden = true;
+      box.insertAdjacentElement("afterend", note);
+      function check() {
+        var value = box.value.trim();
+        var at = value.lastIndexOf("@");
+        var domain = at > 0 ? value.slice(at + 1).toLowerCase().replace(/\.+$/, "") : "";
+        var suggestion = domain.indexOf(".") > 0 ? domainSlip(domain) : "";
+        note.textContent = "";
+        note.hidden = !suggestion;
+        if (!suggestion) return;
+        var fixed = value.slice(0, at + 1) + suggestion;
+        note.appendChild(document.createTextNode(say.replace("{typed}", domain).replace("{suggestion}", suggestion) + " "));
+        var fix = document.createElement("button");
+        fix.type = "button";
+        fix.className = "form__slip-fix";
+        fix.textContent = fixSay.replace("{email}", fixed);
+        fix.addEventListener("click", function () {
+          box.value = fixed;
+          box.dispatchEvent(new Event("input", { bubbles: true }));
+          box.focus();
+        });
+        note.appendChild(fix);
+      }
+      box.addEventListener("blur", check);
+      box.addEventListener("input", function () { if (!note.hidden) check(); });
+    });
+  });
+
   // Contact form. This site has no server of its own, so the form hands the message
   // straight to the office system (The Current), which files it under Leads. The address
   // and key on the form are public on purpose: they allow this one call and nothing else.
