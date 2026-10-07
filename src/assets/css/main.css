@@ -1320,8 +1320,9 @@ tr:last-child td { border-bottom: 0; }
 /* ---------- team ---------- */
 
 /* Each member is a cutout portrait standing on a coloured card, the way the
-   staff photos were done in the Wix Studio draft. The portraits are keyed and
-   framed by scripts/cutouts.mjs so every face is the same size on every card.
+   staff photos were done in the Wix Studio draft. The portraits are cut out,
+   framed and graded by scripts/portraits.py so every face is the same size, the
+   eyes sit on the same line and the light matches from card to card.
    A member with `shots` in team.json also carries a small set of photos of them
    at work: on a mouse they fan up along the bottom of the card on hover, on a
    touch screen the count badge is the cue, and either way the card opens a
@@ -1364,7 +1365,7 @@ tr:last-child td { border-bottom: 0; }
 
 .tcard__plate { padding: 12px 12px 15px; text-align: center; }
 .tcard__plate strong { display: block; color: var(--blue-ink); font-size: 1rem; line-height: 1.25; }
-.tcard__plate em { display: block; font-style: normal; font-weight: 600; color: var(--green-deep); font-size: var(--t-small); line-height: 1.3; margin-top: 3px; }
+.tcard__plate em { display: block; font-style: normal; font-weight: 600; color: var(--green-deep); font-size: var(--t-small); line-height: 1.3; margin-top: 3px; text-wrap: balance; }
 .tcard__plate small { display: block; color: var(--ink-soft); font-size: 0.78rem; line-height: 1.4; margin-top: 6px; text-wrap: balance; }
 @media (min-width: 640px) { .tcard__plate { padding: 14px 14px 18px; } .tcard__plate small { font-size: 0.82rem; } }
 

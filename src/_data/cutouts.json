@@ -11,7 +11,7 @@
   "seth": {
     "alt": "Mr. Seth",
     "width": 720,
-    "height": 764,
+    "height": 900,
     "sizes": [
       360,
       720
@@ -19,6 +19,15 @@
   },
   "david": {
     "alt": "Mr. David",
+    "width": 720,
+    "height": 900,
+    "sizes": [
+      360,
+      720
+    ]
+  },
+  "hien": {
+    "alt": "Ms. Hien",
     "width": 720,
     "height": 900,
     "sizes": [
@@ -35,19 +44,10 @@
       720
     ]
   },
-  "hien": {
-    "alt": "Ms. Hien",
-    "width": 720,
-    "height": 901,
-    "sizes": [
-      360,
-      720
-    ]
-  },
   "caleb": {
     "alt": "Mr. Caleb",
     "width": 720,
-    "height": 787,
+    "height": 900,
     "sizes": [
       360,
       720
@@ -65,7 +65,7 @@
   "solo": {
     "alt": "Ms. Solo",
     "width": 720,
-    "height": 788,
+    "height": 900,
     "sizes": [
       360,
       720
@@ -83,7 +83,7 @@
   "tham": {
     "alt": "Ms. Tham",
     "width": 720,
-    "height": 793,
+    "height": 900,
     "sizes": [
       360,
       720
@@ -99,9 +99,9 @@
     ]
   },
   "tham-v": {
-    "alt": "Ms. Thắm V",
+    "alt": "Ms. Th\u1eafm V",
     "width": 720,
-    "height": 827,
+    "height": 900,
     "sizes": [
       360,
       720
@@ -110,7 +110,7 @@
   "duyen": {
     "alt": "Ms. Duyen",
     "width": 720,
-    "height": 572,
+    "height": 900,
     "sizes": [
       360,
       720

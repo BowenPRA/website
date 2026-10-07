@@ -1,0 +1,15 @@
+[
+  { "slug": "xuan",   "src": "staff/Ms-Xuan.jpg",           "alt": "Ms. Xuan" },
+  { "slug": "seth",   "src": "staff/Mr-Seth-2026.jpg",      "alt": "Mr. Seth" },
+  { "slug": "david",  "src": "staff/Mr-David-2026.jpg",     "alt": "Mr. David" },
+  { "slug": "hien",   "src": "staff/Ms-Hien.png",           "alt": "Ms. Hien" },
+  { "slug": "bowen",  "src": "wix-current/Mr_-Bowen.png",   "alt": "Mr. Bowen" },
+  { "slug": "caleb",  "src": "staff/Mr-Caleb-2026.jpg",     "alt": "Mr. Caleb", "grade": { "exposure": -0.3 } },
+  { "slug": "kiu",    "src": "wix-current/Kiu.png",         "alt": "Ms. Kiu" },
+  { "slug": "solo",   "src": "wix-current/Solo-2.png",      "alt": "Ms. Solo" },
+  { "slug": "thanh",  "src": "wix-current/Thanh.png",       "alt": "Ms. Thanh" },
+  { "slug": "tham",   "src": "wix-current/Ms_-Tham.png",    "alt": "Ms. Tham" },
+  { "slug": "thoa",   "src": "staff/Ms-Thoa-2026.png",      "alt": "Ms. Thoa" },
+  { "slug": "tham-v", "src": "wix-current/Ms_-Tham-V.png",  "alt": "Ms. Thắm V" },
+  { "slug": "duyen",  "src": "staff/Ms-Duyen-original.jpg", "alt": "Ms. Duyen" }
+]

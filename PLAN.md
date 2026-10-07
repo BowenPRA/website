@@ -151,10 +151,11 @@ one hand-drawn underline per page, big photos of real students.
   text on a coloured field except ink on sun.
 - **Staff cards.** The team grid follows the Wix Studio draft: each person is cut out of their
   photo and stands on a two-colour card, above the waist, name and role on a white plate below.
-  `scripts/cutouts.mjs` keys the backdrop out and frames everyone from a hand-measured face width
-  (`originals/cutouts.json`) so every face is the same size on every card; where a source photo
-  stops at the chest the bottom of the portrait is faded into the colour instead of ending on a
-  hard line. Card colours cycle all six pairs (`tint` in team.json) because they are accents.
+  `scripts/portraits.py` (spec in `originals/portraits.json`) finds the eyes and mouth with a face
+  detector and frames every card the same way: same face size, eyes on the same line, the body
+  running off the bottom edge. BiRefNet cuts the person out, the edge colours are cleaned of the old
+  backdrop, and each photo gets a gentle grade toward common skin brightness and white balance, so
+  the cards look like one shoot. No retouching of faces. Card colours cycle all six pairs (`tint` in team.json) because they are accents.
   Anyone with `shots` in team.json also carries photos of them at work: on a mouse those fan up
   from the bottom of the card on hover, on a touch screen a photo-count badge is the cue, and
   the card opens the shared lightbox either way.

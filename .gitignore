@@ -7,5 +7,5 @@ Thumbs.db
 # build specs that describe them are hand-written and worth keeping.
 originals/*
 !originals/picks.json
-!originals/cutouts.json
+!originals/portraits.json
 !originals/README.md

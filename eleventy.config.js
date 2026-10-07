@@ -52,8 +52,8 @@ export default function (eleventyConfig) {
   });
 
   // {% cutout "slug" %}
-  // A staff portrait with the backdrop keyed out, from src/_data/cutouts.json
-  // (built by scripts/cutouts.mjs). It sits on the coloured card in .team.
+  // A staff portrait cut out of its photo, from src/_data/cutouts.json
+  // (built by scripts/portraits.py). It sits on the coloured card in .team.
   let cutouts = {};
   try { cutouts = JSON.parse(readFileSync("src/_data/cutouts.json", "utf8")); } catch {}
   eleventyConfig.addShortcode("cutout", function (slug, sizes = "(min-width: 1040px) 260px, (min-width: 720px) 30vw, 44vw") {

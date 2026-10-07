@@ -72,7 +72,7 @@
       "am": {
         "title": "Mornings",
         "items": [
-          { "who": "Nursery", "text": "Short sessions of play, stories, songs and puzzles, with two teachers in the room all day.", "vi": { "text": "Các hoạt động ngắn xen kẽ nhau: chơi, nghe kể chuyện, hát và ghép hình. Lớp luôn có hai giáo viên suốt cả ngày." } },
+          { "who": "Nursery", "text": "Short sessions of play, stories, songs and puzzles, with a teacher and a teaching assistant in the room all day.", "vi": { "text": "Các hoạt động ngắn xen kẽ nhau: chơi, nghe kể chuyện, hát và ghép hình. Lớp luôn có một giáo viên và một trợ giảng suốt cả ngày." } },
           { "who": "Kindergarten", "core": ["Outside play", "Phonics and Maths", "Literacy"], "text": "Every morning, in that order, with snack and play in the middle.", "vi": { "core": ["Chơi ngoài trời", "Phonics (ngữ âm) và Toán", "Đọc viết"], "text": "Sáng nào cũng theo thứ tự này, giữa buổi có bữa phụ và giờ chơi." } }
         ],
         "vi": { "title": "Buổi sáng" }
