@@ -35,7 +35,7 @@ originals/portraits.json is an array of:
     "zoom": 1.0                           // optional: >1 makes this face bigger than the rest
   }
 
-Output: src/assets/img/team/<slug>-{360,720}.webp (4:5, alpha) and src/_data/cutouts.json.
+Output: src/assets/img/team/<slug>-{360,720}.webp (20:23, alpha) and src/_data/cutouts.json.
 The matte is cached in originals/_cache/portraits/, so a change to the grade is quick.
 
 Needs: pip install rembg pymatting opencv-python pillow numpy
@@ -61,9 +61,11 @@ CACHE = ORIG / "_cache" / "portraits"
 YUNET = ORIG / "_models" / "face_detection_yunet_2023mar.onnx"
 MATTE_MODEL = os.environ.get("PORTRAIT_MATTE", "birefnet-portrait")
 
-# The framing everyone shares, as fractions of the 4:5 card.
-ASPECT = 5 / 4     # height over width
-EYES = 0.41        # the eye line, down from the top of the card
+# The framing everyone shares, as fractions of the 20:23 card (.tcard__stage in main.css).
+# It was 4:5 with the eyes 41% down; Bowen found too much empty space over the heads, so
+# 0.1 of the width came off the top and the face size and the bottom edge stayed put.
+ASPECT = 23 / 20   # height over width
+EYES = 0.3587      # the eye line, down from the top of the card
 FACE = 0.163       # face size (mean of eye-to-eye and eyes-to-mouth) over card width
 WIDTHS = (360, 720)
 WORK = 1440        # the widest the card is worked at before the final resize
@@ -318,11 +320,12 @@ def frame(face, w, h, spec):
 def fit_bottom(box, face, h):
     """If the photo stops above the card's bottom edge, zoom in until it does not."""
     left, top, cw, ch = box
-    if top + ch <= h:
+    end = h - 2    # stop a little inside the photo, so resampling never reaches past its edge
+    if top + ch <= end:
         return box, 1.0
     eye_y = face["eye"][1]
     # keep the eyes on their line: the part below them must shrink to fit
-    below = h - eye_y
+    below = end - eye_y
     ch2 = below / (1 - EYES)
     k = ch / ch2
     cw2 = ch2 / ASPECT

@@ -1345,7 +1345,7 @@ tr:last-child td { border-bottom: 0; }
 .tcard--t5 { --a: #1F8F73; --b: #9CC64A; }
 .tcard--t6 { --a: #0B4FBF; --b: #7C5CFF; }
 
-.tcard__stage { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: linear-gradient(165deg, var(--a), var(--b)); }
+.tcard__stage { position: relative; aspect-ratio: 20 / 23; overflow: hidden; background: linear-gradient(165deg, var(--a), var(--b)); }
 /* a soft light behind the head, so the cutout sits in the card instead of on it */
 .tcard__stage::before {
   content: ""; position: absolute; inset: 0;

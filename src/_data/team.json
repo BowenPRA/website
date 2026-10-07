@@ -1,26 +1,23 @@
 {
   "intro": "Every academic teacher has a degree in their subject and a TESOL certificate, and is qualified to teach in Việt Nam.",
-  "note": "Keep each person to a role and one short line that starts with a verb. Teachers' lines say what they teach as English through the subject (\"Teaches English through Maths and Science\"), because PRA is a language center; teaching assistants' lines start with \"Supports\". Subjects in Title Case, no Oxford comma. Leadership first, then teachers, then teaching assistants. `tint` picks the card's colour pair from .team in main.css and just cycles 1 to 6 down the list. `shots` lists photo slugs from photos.json showing that person at work; they become the card's lightbox, and a member with none simply has no lightbox.",
+  "note": "Each card shows a name and a title only, no line under it. Leadership first, then the teachers, then the Vietnamese teaching staff, whose title is \"Teaching Staff\" (vi \"Nhân viên giảng dạy\"). `tint` picks the card's colour pair from .team in main.css and just cycles 1 to 6 down the list. `shots` lists photo slugs from photos.json showing that person at work; they become the card's lightbox, and a member with none simply has no lightbox.",
   "members": [
     {
       "name": "Ms. Xuan",
       "slug": "xuan",
       "role": "Owner",
-      "teaches": "Leads Palm River Academy",
       "shots": [
         "mid-autumn-festival-henna-ms-xuan"
       ],
       "tint": 1,
       "vi": {
-        "role": "Chủ sở hữu",
-        "teaches": "Điều hành Palm River Academy"
+        "role": "Chủ sở hữu"
       }
     },
     {
       "name": "Mr. Seth",
       "slug": "seth",
       "role": "Head of Academy",
-      "teaches": "Also teaches English through Cooking",
       "shots": [
         "upper-years-science-with-teacher",
         "teacher-seth-maths-sticks-game",
@@ -28,41 +25,35 @@
       ],
       "tint": 2,
       "vi": {
-        "role": "Giám đốc học thuật",
-        "teaches": "Kiêm dạy tiếng Anh qua lớp nấu ăn"
-      }
-    },
-    {
-      "name": "Mr. David",
-      "slug": "david",
-      "role": "Deputy Head Teacher",
-      "teaches": "Reviews teaching across PRA",
-      "shots": [
-        "reading-safari-board-game",
-        "primary-playground-climbing"
-      ],
-      "tint": 3,
-      "vi": {
-        "role": "Phó giáo viên trưởng",
-        "teaches": "Phụ trách rà soát chất lượng giảng dạy tại PRA"
+        "role": "Giám đốc học thuật"
       }
     },
     {
       "name": "Ms. Hien",
       "slug": "hien",
       "role": "Operations Manager",
-      "teaches": "Runs the front office",
+      "tint": 3,
+      "vi": {
+        "role": "Quản lý vận hành"
+      }
+    },
+    {
+      "name": "Mr. David",
+      "slug": "david",
+      "role": "Deputy Head Teacher",
+      "shots": [
+        "reading-safari-board-game",
+        "primary-playground-climbing"
+      ],
       "tint": 4,
       "vi": {
-        "role": "Quản lý vận hành",
-        "teaches": "Phụ trách văn phòng"
+        "role": "Phó giáo viên trưởng"
       }
     },
     {
       "name": "Mr. Bowen",
       "slug": "bowen",
       "role": "Upper Secondary Coordinator",
-      "teaches": "Teaches English through Maths and Science",
       "shots": [
         "primary-maths-cut-shapes",
         "march-mathness-prize-winner",
@@ -73,15 +64,13 @@
       ],
       "tint": 5,
       "vi": {
-        "role": "Điều phối viên Upper Secondary",
-        "teaches": "Dạy tiếng Anh qua môn Toán và Khoa học"
+        "role": "Điều phối viên Upper Secondary"
       }
     },
     {
       "name": "Ms. Solo",
       "slug": "solo",
       "role": "Primary Homeroom Teacher",
-      "teaches": "Teaches English through Maths and Science",
       "shots": [
         "primary-circle-time",
         "primary-maths-roll-or-stack",
@@ -90,15 +79,13 @@
       ],
       "tint": 6,
       "vi": {
-        "role": "Giáo viên chủ nhiệm Primary",
-        "teaches": "Dạy tiếng Anh qua môn Toán và Khoa học"
+        "role": "Giáo viên chủ nhiệm Primary"
       }
     },
     {
       "name": "Mr. Caleb",
       "slug": "caleb",
       "role": "Primary Homeroom Teacher",
-      "teaches": "Teaches English through Movement and Exercise",
       "shots": [
         "primary-movement-class",
         "gallery-chess-library",
@@ -106,80 +93,67 @@
       ],
       "tint": 1,
       "vi": {
-        "role": "Giáo viên chủ nhiệm Primary",
-        "teaches": "Dạy tiếng Anh qua Movement và thể dục"
+        "role": "Giáo viên chủ nhiệm Primary"
       }
     },
     {
       "name": "Ms. Kiu",
       "slug": "kiu",
       "role": "Primary Homeroom Teacher",
-      "teaches": "Teaches English through Science and Wellbeing",
       "shots": [
         "primary-lantern-class-hoi-an"
       ],
       "tint": 2,
       "vi": {
-        "role": "Giáo viên chủ nhiệm Primary",
-        "teaches": "Dạy tiếng Anh qua môn Khoa học và Wellbeing"
+        "role": "Giáo viên chủ nhiệm Primary"
       }
     },
     {
       "name": "Ms. Thanh",
       "slug": "thanh",
-      "role": "Kindergarten Homeroom Teacher",
-      "teaches": "Teaches English through Phonics, Maths and Understanding the World",
+      "role": "Teaching Staff",
       "tint": 3,
       "vi": {
-        "role": "Giáo viên chủ nhiệm Kindergarten",
-        "teaches": "Dạy tiếng Anh qua phonics (ngữ âm), Toán và Understanding the World"
+        "role": "Nhân viên giảng dạy"
       }
     },
     {
       "name": "Ms. Tham",
       "slug": "tham",
-      "role": "Nursery Homeroom Teacher",
-      "teaches": "Teaches English through play in the Nursery",
+      "role": "Teaching Staff",
       "tint": 4,
       "vi": {
-        "role": "Giáo viên chủ nhiệm Nursery",
-        "teaches": "Dạy tiếng Anh cho các bé lớp Nursery qua vui chơi"
+        "role": "Nhân viên giảng dạy"
       }
     },
     {
       "name": "Ms. Duyen",
       "slug": "duyen",
-      "role": "Office and Primary Teaching Assistant",
-      "teaches": "Supports Technology and Crafts classes",
+      "role": "Teaching Staff",
       "shots": [
         "primary-book-corner"
       ],
       "tint": 5,
       "vi": {
-        "role": "Nhân viên văn phòng và trợ giảng Primary",
-        "teaches": "Hỗ trợ các lớp Công nghệ và Thủ công"
+        "role": "Nhân viên giảng dạy"
       }
     },
     {
       "name": "Ms. Thắm V",
       "slug": "tham-v",
-      "role": "Primary Teaching Assistant",
-      "teaches": "Supports Technology, Crafts and Review classes",
+      "role": "Teaching Staff",
       "tint": 6,
       "vi": {
-        "role": "Trợ giảng Primary",
-        "teaches": "Hỗ trợ các lớp Công nghệ, Thủ công và Review"
+        "role": "Nhân viên giảng dạy"
       }
     },
     {
       "name": "Ms. Thoa",
       "slug": "thoa",
-      "role": "Nursery Teaching Assistant",
-      "teaches": "Supports the Nursery class all day",
+      "role": "Teaching Staff",
       "tint": 1,
       "vi": {
-        "role": "Trợ giảng Nursery",
-        "teaches": "Hỗ trợ lớp Nursery cả ngày"
+        "role": "Nhân viên giảng dạy"
       }
     }
   ],
