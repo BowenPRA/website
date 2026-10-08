@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: "Học tiếng Anh qua thực hành"
 pageTitle: "Palm River Academy · Trung tâm Anh ngữ tại Hội An"
-description: "Palm River Academy là trung tâm Anh ngữ tại Hội An dành cho trẻ từ 20 tháng đến 18 tuổi. Các con học tiếng Anh qua các giờ Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, mỗi lớp tối đa 13 học viên."
+description: "Palm River Academy là trung tâm Anh ngữ tại Hội An dành cho trẻ từ 20 tháng đến 18 tuổi. Các con học tiếng Anh qua các giờ Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, trong những lớp ít học viên."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -20,7 +20,7 @@ description: "Palm River Academy là trung tâm Anh ngữ tại Hội An dành c
     </div>
     <ul class="hero__facts rise" style="--d:4" aria-label="Thông tin tóm tắt">
       <li>Từ 20 tháng đến 18 tuổi</li>
-      <li>Tối đa {{ site.classCap }} học viên mỗi lớp</li>
+      <li>Lớp ít học viên</li>
       <li>Có mặt tại Hội An từ năm {{ site.founded }}</li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ description: "Palm River Academy là trung tâm Anh ngữ tại Hội An dành c
     <div class="method">
       <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Học các môn bằng tiếng Anh</strong><p>Mỗi buổi sáng, các con học tiếng Anh với các chủ đề học thuật toán, khoa học, khám phá thế giới theo chương trình Cambridge với giáo viên có bằng cấp chuyên môn.</p></div>
       <div class="method__item">{{ ic.icon("whisk", "green") }}<strong>Thực hành thay vì học vẹt</strong><p>Buổi chiều nào các con cũng được trải nghiệm giao tiếp tiếng Anh thông qua các hoạt động nấu ăn, thủ công, mỹ thuật, thể thao và công nghệ.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Lớp ít học viên, con được nói nhiều</strong><p>Mỗi lớp tối đa {{ site.classCap }} học viên, nên bạn nào cũng có cơ hội nói.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Lớp ít học viên, con được nói nhiều</strong><p>Mỗi lớp chỉ có ít bạn, nên bạn nào cũng có cơ hội nói.</p></div>
     </div>
   </div>
 </section>
@@ -97,7 +97,6 @@ description: "Palm River Academy là trung tâm Anh ngữ tại Hội An dành c
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 <section class="band--blue">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Học viên tối đa mỗi lớp</h3><p>Áp dụng cho tất cả các lớp học thuật.</p></div>
     <div class="stat"><p class="stat__num" data-count="{{ ('' | year) - site.founded }}">{{ ('' | year) - site.founded }}</p><h3>Năm hoạt động tại Hội An</h3><p>Đồng hành cùng các gia đình tại Hội An và Đà Nẵng từ năm {{ site.founded }}.</p></div>
     <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Cựu học viên du học</h3><p>Đang học trung học và đại học ở nước ngoài.</p></div>
   </div>

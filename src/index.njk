@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: "English, learned by doing"
 pageTitle: "Palm River Academy · English language center in Hội An"
-description: "Palm River Academy is an English language center in Hội An for children from 20 months to 18. We teach English through science, maths, cooking, art and sport, in classes of 13 or fewer."
+description: "Palm River Academy is an English language center in Hội An for children from 20 months to 18. We teach English through science, maths, cooking, art and sport, in small classes."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -20,7 +20,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     </div>
     <ul class="hero__facts rise" style="--d:4" aria-label="At a glance">
       <li>20 months to 18 years</li>
-      <li>Classes of {{ site.classCap }} or fewer</li>
+      <li>Small classes</li>
       <li>In Hội An since {{ site.founded }}</li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ description: "Palm River Academy is an English language center in Hội An for c
     <div class="method">
       <div class="method__item">{{ ic.icon("flask", "blue") }}<strong>Real subjects, in English</strong><p>Cambridge English, Maths and Science every morning, with qualified teachers.</p></div>
       <div class="method__item">{{ ic.icon("whisk", "green") }}<strong>Doing, not drilling</strong><p>Every afternoon is hands-on: cooking, crafts, art, technology, sport.</p></div>
-      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Small enough to talk</strong><p>{{ site.classCap }} or fewer per class, so every child gets to speak.</p></div>
+      <div class="method__item">{{ ic.icon("chat", "sun") }}<strong>Small enough to talk</strong><p>Classes are small, so every child gets to speak.</p></div>
     </div>
   </div>
 </section>
@@ -97,7 +97,6 @@ description: "Palm River Academy is an English language center in Hội An for c
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 <section class="band--blue">
   <div class="wrap stats">
-    <div class="stat"><p class="stat__num" data-count="{{ site.classCap }}">{{ site.classCap }}</p><h3>Children per class, at most</h3><p>In every academic class.</p></div>
     <div class="stat"><p class="stat__num" data-count="{{ ('' | year) - site.founded }}">{{ ('' | year) - site.founded }}</p><h3>Years in Hội An</h3><p>Serving families in Hội An and Đà Nẵng since {{ site.founded }}.</p></div>
     <div class="stat"><p class="stat__num" data-count="10">10+</p><h3>Alumni abroad</h3><p>At high schools and universities overseas.</p></div>
   </div>

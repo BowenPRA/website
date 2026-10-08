@@ -83,7 +83,7 @@ for (const p of walk(join(SRC, "vi")).map(rel).filter((p) => p.endsWith(".njk"))
 
 // Keys that are ids, colours, paths or times, never words to translate.
 const TECH = new Set(["_about", "id", "key", "tone", "slug", "tag", "k", "href", "url", "photo", "photos", "flyer", "shots", "tint",
-  "mapUrl", "email", "phone", "phoneIntl", "formAction", "social", "from", "to", "year", "founded", "classCap"]);
+  "mapUrl", "email", "phone", "phoneIntl", "formAction", "social", "from", "to", "year", "founded"]);
 // Per file: keys that stay as they are (names, editor notes).
 const SKIP = {
   "site.json": ["name", "shortName", "url", "address"],

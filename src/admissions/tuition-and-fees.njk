@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 tone: light
 title: "Tuition and fees"
-description: "Tuition for 2026-2027 at Palm River Academy in Hội An: the cost per quarter for each program, Global Program weekly prices, sibling discounts, meals and transport."
+description: "Tuition for 2026-2027 at Palm River Academy in Hội An: the cost per quarter for each program, the admission fee, sibling discounts, meals and transport."
 ---
 {% import "macros/icons.njk" as ic %}
 
@@ -24,7 +24,7 @@ description: "Tuition for 2026-2027 at Palm River Academy in Hội An: the cost 
       <li class="price price--blue"><span class="price__name">Lower Secondary</span><span class="price__ages">Years 7 to 9</span><span class="price__amount">61,000,000</span><span class="price__per">VND per quarter</span></li>
       <li class="price price--coral"><span class="price__name">Upper Secondary</span><span class="price__ages">Ages 14 to 18</span><span class="price__amount price__amount--ask">Ask us</span><span class="price__per">Depends on the plan</span></li>
     </ul>
-    <p class="table-note table-note--gap">Payments are due by 28 July, 8 October, 17 December and 22 March. Joining partway through the year? You pay from your child's first day.</p>
+    <p class="table-note table-note--gap">Payments are due by 28 July, 8 October, 17 December and 22 March. Joining partway through the year? You pay from your child's first day. New students also pay a one-time admission fee of 10,000,000 VND.</p>
   </div>
 </section>
 
@@ -32,30 +32,10 @@ description: "Tuition for 2026-2027 at Palm River Academy in Hội An: the cost 
 <section class="band--pale">
   <div class="wrap">
     <p class="eyebrow eyebrow--violet">Global Program</p>
-    <h2>Priced by the week</h2>
-    <p class="lede">For stays of three weeks to three months. The longer the stay, the less each week costs.</p>
-    <div class="table-wrap mt">
-      <table class="fees-table">
-        <thead>
-          <tr><th rowspan="2">Pathway</th><th colspan="3" class="group">Price per week, by length of stay</th></tr>
-          <tr><th class="num">3 to 5 weeks</th><th class="num">6 to 9 weeks</th><th class="num">10 to 12 weeks</th></tr>
-        </thead>
-        <tbody>
-          <tr class="fees-table__group"><td colspan="4">Early Years<small>Nursery and Kindergarten, ages 2 to 5</small></td></tr>
-          <tr><td>Full day</td><td class="num" data-label="3 to 5 weeks">5,000,000</td><td class="num" data-label="6 to 9 weeks">4,500,000</td><td class="num" data-label="10 to 12 weeks">4,200,000</td></tr>
-          <tr class="fees-table__group"><td colspan="4">Primary<small>Years 1 to 6</small></td></tr>
-          <tr><td>Vocational, half day</td><td class="num" data-label="3 to 5 weeks">5,000,000</td><td class="num" data-label="6 to 9 weeks">4,500,000</td><td class="num" data-label="10 to 12 weeks">4,200,000</td></tr>
-          <tr><td>Academic, half day *</td><td class="num" data-label="3 to 5 weeks">7,000,000</td><td class="num" data-label="6 to 9 weeks">6,800,000</td><td class="num" data-label="10 to 12 weeks">6,500,000</td></tr>
-          <tr><td>Cambridge and vocational, full day *</td><td class="num" data-label="3 to 5 weeks">9,200,000</td><td class="num" data-label="6 to 9 weeks">8,800,000</td><td class="num" data-label="10 to 12 weeks">8,500,000</td></tr>
-          <tr class="fees-table__group"><td colspan="4">Lower Secondary<small>Years 7 to 9</small></td></tr>
-          <tr><td>Vocational, half day</td><td class="num" data-label="3 to 5 weeks">5,200,000</td><td class="num" data-label="6 to 9 weeks">4,800,000</td><td class="num" data-label="10 to 12 weeks">4,400,000</td></tr>
-          <tr><td>Academic, half day *</td><td class="num muted" data-label="3 to 5 weeks">not offered</td><td class="num" data-label="6 to 9 weeks">7,000,000</td><td class="num" data-label="10 to 12 weeks">6,700,000</td></tr>
-          <tr><td>Cambridge and vocational, full day *</td><td class="num muted" data-label="3 to 5 weeks">not offered</td><td class="num" data-label="6 to 9 weeks">9,100,000</td><td class="num" data-label="10 to 12 weeks">8,800,000</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <span class="swipe-hint">Swipe sideways to see the whole table.</span>
-    <p class="table-note">All amounts in VND. * Needs enough English to follow Cambridge lessons. <a href="{{ '/learning/global-program/' | href(lang) }}">How the Global Program works</a>.</p>
+    <h2>Ask us for a price</h2>
+    <p class="lede">For stays of three weeks to three months. The price depends on how long your child stays and which pathway you choose. Send us your dates and your child's age and we will reply with a price.</p>
+    <p class="mt"><a class="btn btn--primary" href="{{ '/contact/' | href(lang) }}">Ask for a price</a></p>
+    <p class="table-note"><a href="{{ '/learning/global-program/' | href(lang) }}">How the Global Program works</a>.</p>
   </div>
 </section>
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}

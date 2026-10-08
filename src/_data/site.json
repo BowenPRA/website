@@ -2,14 +2,13 @@
   "name": "Palm River Academy",
   "shortName": "PRA",
   "tagline": "An English language center in Hội An where children learn English by doing real things.",
-  "description": "Palm River Academy is an English language center in Hội An, Việt Nam, for children from 20 months to 18 years. We teach English through content: science, maths, cooking, art and sport, in classes of 13 or fewer.",
+  "description": "Palm River Academy is an English language center in Hội An, Việt Nam, for children from 20 months to 18 years. We teach English through content: science, maths, cooking, art and sport, in small classes.",
   "url": "https://pra.edu.vn",
   "email": "admin@palmriveracademy.edu.vn",
   "phone": "0968 49 42 45",
   "phoneIntl": "+84968494245",
   "hours": "Monday to Friday, 8:00 to 16:00",
   "founded": 2017,
-  "classCap": 13,
   "licenceLine": "Palm River Academy is a licensed English language center in Hội An, Việt Nam.",
   "campus": {
     "name": "Palm River Academy",
@@ -28,7 +27,7 @@
   },
   "vi": {
     "tagline": "Trung tâm Anh ngữ tại Hội An, nơi các con học tiếng Anh qua những hoạt động thực tế.",
-    "description": "Palm River Academy là trung tâm Anh ngữ tại Hội An, Việt Nam, dành cho trẻ từ 20 tháng đến 18 tuổi. PRA dạy tiếng Anh qua các môn học: Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, mỗi lớp tối đa 13 học viên.",
+    "description": "Palm River Academy là trung tâm Anh ngữ tại Hội An, Việt Nam, dành cho trẻ từ 20 tháng đến 18 tuổi. PRA dạy tiếng Anh qua các môn học: Khoa học, Toán, nấu ăn, Mỹ thuật và thể thao, trong những lớp ít học viên.",
     "hours": "Thứ Hai đến thứ Sáu, 8:00 đến 16:00",
     "licenceLine": "Palm River Academy là trung tâm Anh ngữ được cấp phép tại Hội An, Việt Nam."
   }

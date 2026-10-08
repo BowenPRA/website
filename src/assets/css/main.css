@@ -833,7 +833,7 @@ section { padding: var(--section) 0; position: relative; }
 /* ---------- stats (on a blue band) ---------- */
 
 .stats { display: grid; gap: 36px; }
-@media (min-width: 720px) { .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; } }
+@media (min-width: 720px) { .stats { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 40px; } }
 .stat { position: relative; padding-top: 22px; }
 .stat::before { content: ""; position: absolute; left: 0; top: 0; width: 44px; height: 5px; border-radius: 5px; background: var(--green-light); }
 .stat:nth-child(2)::before { background: var(--sun); }
