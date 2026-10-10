@@ -1,5 +1,5 @@
 {
-  "_about": "The student writing blog: /writing/ lists the posts, one page per post under src/writing/ (tag `writing`) and its Vietnamese twin under src/vi/writing/ (tag `writingVi`). Posts go up as the student wrote them, with no corrections. `name` is a working name until Bowen picks one (2026-10-10).",
+  "_about": "The student writing blog: /writing/ lists the posts, one page per post under src/writing/ (tag `writing`) and its Vietnamese twin under src/vi/writing/ (tag `writingVi`). Posts go up in the student's own words and spelling; only spacing and punctuation are tidied (Bowen, 2026-10-10). In the menu it sits under About Us as The Palm Press.",
   "name": "The Palm Press",
   "tagline": "Writing by Palm River Academy students, posted as they wrote it.",
   "asWritten": "Posted as written",

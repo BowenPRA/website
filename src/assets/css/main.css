@@ -447,6 +447,8 @@ body.sheet-open .reel { display: none; }
 .sheet__group a.dot::before { left: 2px; top: 16px; }
 .sheet__group a[aria-current] { color: var(--blue); }
 .sheet__top, .sheet__label { font-size: 1.5rem !important; font-weight: 600 !important; color: var(--blue) !important; }
+/* a page that belongs under the link above it (The Palm Press under About Us) */
+.sheet__group a.sheet__sub { margin: -2px 0 6px 4px; padding: 8px 0 8px 18px; border-left: 2px solid var(--blue-tint); }
 .sheet__group--cta { border: 0; padding: 24px 0; }
 .sheet__group--cta .btn { width: 100%; margin-bottom: 10px; }
 .sheet__phone { text-align: center; color: var(--blue-deep) !important; }
@@ -724,7 +726,7 @@ section { padding: var(--section) 0; position: relative; }
 .notice {
   position: relative; display: flex; flex-direction: column; overflow: hidden;
   background: #fff; border: 1px solid var(--line); border-radius: var(--r); padding: 24px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm); scroll-margin-top: 24px; /* the reel links to a card: /#quarter-2 */
   transition: transform 0.35s var(--bounce), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .notice::after {

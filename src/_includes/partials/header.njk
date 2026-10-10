@@ -1,5 +1,6 @@
 {% set T = strings[lang] %}
 {% set u = (page.url or "/") | basePath %}
+{% set inAbout = u.startsWith("/about/") or u.startsWith("/writing/") %}
 {% set inAcademics = u.startsWith("/learning/") %}
 {% set inAdmissions = u.startsWith("/admissions/") or u.startsWith("/families/") or u.startsWith("/contact/") %}
 <header class="site-header">
@@ -10,7 +11,13 @@
 
     <nav class="nav-desktop" aria-label="{{ T.mainNav }}">
       <ul>
-        <li><a href="{{ '/about/' | href(lang) }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>{{ T.about }}</a></li>
+        <li class="has-menu">
+          <a href="{{ '/about/' | href(lang) }}"{% if inAbout %} aria-current="{{ 'page' if u == '/about/' else 'true' }}"{% endif %}>{{ T.about }} <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="menu">
+            <li><a href="{{ '/about/' | href(lang) }}">{{ T.about }} <small>{{ T.aboutSub }}</small></a></li>
+            <li><a href="{{ '/writing/' | href(lang) }}">{{ T.writing }} <small>{{ T.writingSub }}</small></a></li>
+          </ul>
+        </li>
         <li class="has-menu">
           <a href="{{ '/learning/' | href(lang) }}"{% if inAcademics %} aria-current="{{ 'page' if u == '/learning/' else 'true' }}"{% endif %}>{{ T.academics }} <svg class="caret" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <ul class="menu">
@@ -32,7 +39,6 @@
           </ul>
         </li>
         <li><a href="{{ '/events/' | href(lang) }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>{{ T.events }}</a></li>
-        <li><a href="{{ '/writing/' | href(lang) }}"{% if u.startsWith('/writing/') %} aria-current="{{ 'page' if u == '/writing/' else 'true' }}"{% endif %}>{{ T.writing }}</a></li>
       </ul>
       <a class="btn btn--green btn--small" href="{{ '/contact/' | href(lang) }}">{{ T.contact }}</a>
     </nav>
@@ -96,8 +102,9 @@
   <div class="sheet__group">
     <a class="sheet__top" href="{{ '/' | href(lang) }}"{% if u == '/' %} aria-current="page"{% endif %}>{{ T.home }}</a>
     <a class="sheet__top" href="{{ '/about/' | href(lang) }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>{{ T.about }}</a>
+    {# The Palm Press sits under About Us, as in the desktop menu #}
+    <a class="sheet__sub" href="{{ '/writing/' | href(lang) }}"{% if u.startsWith('/writing/') %} aria-current="page"{% endif %}>{{ T.writing }} <small>{{ T.writingSub }}</small></a>
     <a class="sheet__top" href="{{ '/events/' | href(lang) }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>{{ T.events }}</a>
-    <a class="sheet__top" href="{{ '/writing/' | href(lang) }}"{% if u.startsWith('/writing/') %} aria-current="page"{% endif %}>{{ T.writing }}</a>
   </div>
   <div class="sheet__group">
     <a class="sheet__label" href="{{ '/learning/' | href(lang) }}">{{ T.academics }}</a>

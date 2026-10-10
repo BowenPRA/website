@@ -2,14 +2,14 @@
   "_about": "The announcement reel under the main nav bar, on every page (partials/header.njk). One item shows at a time; with more than one they take turns. An item disappears on its hideFrom date (Vietnam time): the build leaves it out, and a short script in the header removes it from pages built before that day. Leave `url` out for an item that links nowhere.",
   "items": [
     {
-      "id": "campus-closed-fall-break",
-      "text": "Campus closed until Thursday 15 October",
-      "hideFrom": "2026-10-15",
-      "url": "/families/schedule/#calendar",
-      "link": "See the calendar",
+      "id": "campus-opens-q1-showcase",
+      "text": "Campus opens Thursday 15 October, with the Quarter 1 Showcase that afternoon",
+      "hideFrom": "2026-10-16",
+      "url": "/#quarter-2",
+      "link": "Details",
       "vi": {
-        "text": "Trung tâm nghỉ đến hết ngày 14/10. Học lại từ thứ Năm, 15/10",
-        "link": "Xem lịch năm học"
+        "text": "Trung tâm mở cửa lại vào thứ Năm, 15/10, và chiều hôm đó có buổi Showcase Quý 1",
+        "link": "Xem chi tiết"
       }
     }
   ]
