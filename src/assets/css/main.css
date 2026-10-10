@@ -1429,14 +1429,13 @@ tr:last-child td { border-bottom: 0; }
 .post-note__back { font-weight: 600; }
 .post-note__back::before { content: "← "; }
 
-/* ---------- Google reviews (home) ----------
-   The listing's rating as a white badge beside the heading, then a card per review in columns
-   (a swipe strip on phones). Stars are text with a sun overlay cut to --fill, so 4.6 shows as
-   4.6. Long reviews stop after a few lines behind a fade until "Read more" (main.js adds
-   .is-long; without JavaScript every review shows in full). */
-.reviews-head { display: grid; gap: 22px 40px; align-items: end; margin-bottom: clamp(26px, 3vw, 38px); }
-@media (min-width: 900px) { .reviews-head { grid-template-columns: minmax(0, 1fr) auto; } }
-.reviews-head .lede { margin-bottom: 0; max-width: 46ch; }
+/* ---------- Google reviews ----------
+   Home: a compact carousel (partials/reviews-carousel.njk), one line from each review on a taped
+   white card that sits on a small stack of notes. About: every review in full
+   (partials/reviews.njk), each card led by the same line, with that line marked in the text like a
+   highlighter pen. Both show the listing's rating as a white badge (partials/rating.njk). Stars
+   are text with a sun overlay cut to --fill, so 4.6 shows as 4.6. */
+
 .rating {
   justify-self: start; display: inline-flex; align-items: center; gap: 16px; padding: 14px 22px 14px 18px;
   background: #fff; border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow-sm);
@@ -1452,22 +1451,84 @@ tr:last-child td { border-bottom: 0; }
 .stars::after { content: "★★★★★"; position: absolute; left: 0; top: 0; width: var(--fill, 100%); overflow: hidden; white-space: nowrap; color: var(--sun-deep); }
 .stars--small { font-size: 1rem; }
 
-.reviews { margin: 0; padding: 0; list-style: none; columns: 1; column-gap: 20px; }
+/* home: the carousel */
+.quotes-band { overflow: hidden; }
+.quotes { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr); gap: 34px; align-items: center; }
+.quotes__stage { min-width: 0; }
+@media (min-width: 900px) { .quotes { grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr); gap: 64px; } }
+.quotes__intro h2 { margin-bottom: 20px; }
+.quotes__all { margin: 18px 0 0; font-weight: 600; }
+.quotes__all a::after { content: " →"; }
+.quotes__deck { position: relative; margin: 14px 6px 0; }
+/* two notes peeking out from under the card, and a strip of tape holding it up */
+.quotes__deck::before, .quotes__deck::after { content: ""; position: absolute; border-radius: var(--r-lg); pointer-events: none; }
+.quotes__deck::before { inset: 10px -12px -14px 16px; background: var(--green-tint); rotate: 2.6deg; }
+.quotes__deck::after { inset: 6px 10px -8px -10px; background: #fff; border: 1px solid var(--line); rotate: -2deg; }
+.quotes__track {
+  position: relative; z-index: 1; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  margin: 0; padding: 0; list-style: none; background: #fff; border-radius: var(--r-lg); box-shadow: var(--shadow);
+  overscroll-behavior-x: contain;
+}
+.quotes__track::-webkit-scrollbar { display: none; }
+.quotes__tape {
+  position: absolute; z-index: 2; top: -13px; left: 50%; width: 112px; height: 28px; margin-left: -56px;
+  background: rgba(156, 198, 74, 0.78); rotate: -3deg; border-radius: 3px; box-shadow: 0 2px 6px rgba(14, 42, 92, 0.12);
+}
+.quote {
+  flex: 0 0 100%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 14px;
+  padding: clamp(30px, 3.6vw, 44px) clamp(24px, 4vw, 50px) clamp(22px, 3vw, 32px);
+}
+.quote__text { margin: 0; font-size: clamp(1.15rem, 1rem + 0.7vw, 1.5rem); font-weight: 500; line-height: 1.45; color: var(--blue-ink); }
+.quote__text::before { content: "“"; display: block; height: 0.5em; margin-bottom: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 4em; font-weight: 700; line-height: 1; color: var(--green); }
+.quote__text p { margin: 0; }
+.quote__who { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; margin: auto 0 0; padding-top: 6px; font-size: var(--t-small); }
+.quote__who strong { color: var(--blue-ink); }
+.quote__who span { color: var(--ink-soft); }
+.quotes__nav { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 26px; }
+.quotes__arrow {
+  display: grid; place-items: center; width: 46px; height: 46px; padding: 0; cursor: pointer;
+  background: #fff; color: var(--blue-deep); border: 1px solid var(--line); border-radius: 50%; box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.3s var(--bounce);
+}
+.quotes__arrow:hover { background: var(--blue); color: #fff; transform: scale(1.06); }
+.quotes__arrow svg { width: 20px; height: 20px; }
+.quotes__dots { display: flex; margin: 0; }
+.quotes__dots button { position: relative; width: 20px; height: 32px; padding: 0; border: 0; background: none; cursor: pointer; }
+.quotes__dots button::before {
+  content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; border-radius: var(--pill);
+  background: color-mix(in srgb, var(--blue) 28%, #fff); transition: width 0.3s var(--ease-out), margin 0.3s var(--ease-out), background-color 0.2s ease;
+}
+.quotes__dots button[aria-current]::before { width: 18px; margin-left: -9px; background: var(--blue); }
+@media (max-width: 519px) { .quotes__dots button { width: 15px; } .quotes__dots button[aria-current]::before { width: 14px; margin-left: -7px; } }
+
+/* About: every review in full */
+.reviews-head { display: grid; gap: 22px 40px; align-items: end; margin-bottom: clamp(26px, 3vw, 38px); }
+@media (min-width: 900px) { .reviews-head { grid-template-columns: minmax(0, 1fr) auto; } }
+.reviews-head .lede { margin-bottom: 0; max-width: 46ch; }
+.reviews { margin: 0; padding: 0; list-style: none; columns: 1; column-gap: 22px; }
 @media (min-width: 720px) { .reviews { columns: 2; } }
 @media (min-width: 1040px) { .reviews { columns: 3; } }
 .review {
-  position: relative; break-inside: avoid; margin: 0 0 20px; padding: 22px 24px 20px;
+  --bar: var(--blue);
+  position: relative; overflow: hidden; break-inside: avoid; margin: 0 0 22px; padding: 26px 24px 20px;
   background: #fff; border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow-sm);
+  transition: transform 0.35s var(--bounce), box-shadow 0.3s ease;
 }
-/* a big quote mark in the corner */
-.review::after { content: "“"; position: absolute; top: 4px; right: 18px; font-size: 4.2rem; line-height: 1; font-weight: 800; color: var(--blue-tint); pointer-events: none; }
+.review:nth-child(5n+2) { --bar: var(--green); }
+.review:nth-child(5n+3) { --bar: var(--sun-deep); }
+.review:nth-child(5n+4) { --bar: var(--coral); }
+.review:nth-child(5n) { --bar: var(--violet); }
+.review::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--bar); }
+.review:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .review .stars { margin-bottom: 12px; }
-.review__text { font-size: 0.97rem; line-height: 1.62; }
+.review__pull { margin: 0 0 14px; font-size: 1.12rem; font-weight: 600; line-height: 1.4; color: var(--blue-ink); }
+.review__text { font-size: 0.92rem; line-height: 1.62; color: var(--ink-soft); }
 .review__text p { margin: 0 0 0.7em; }
 .review__text p:last-child { margin-bottom: 0; }
+.review__mark { padding: 0 2px; color: var(--ink); background: linear-gradient(transparent 52%, var(--sun-tint) 52%, var(--sun-tint) 92%, transparent 92%); }
 .review.is-long:not(.is-open) .review__text {
-  max-height: calc(1.62em * 7); overflow: hidden;
-  -webkit-mask: linear-gradient(#000 62%, transparent); mask: linear-gradient(#000 62%, transparent);
+  max-height: calc(1.62em * 5); overflow: hidden;
+  -webkit-mask: linear-gradient(#000 55%, transparent); mask: linear-gradient(#000 55%, transparent);
 }
 .review__more {
   margin-top: 8px; padding: 0; border: 0; background: none; cursor: pointer;

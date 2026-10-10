@@ -86,7 +86,11 @@
       "source": "Google review",
       "more": "Read more",
       "less": "Show less",
-      "swipe": "Swipe for more."
+      "swipe": "Swipe for more.",
+      "readAll": "Read the reviews in full",
+      "prev": "Previous review",
+      "next": "Next review",
+      "show": "Show review"
     }
   },
   "vi": {
@@ -175,7 +179,11 @@
       "source": "Đánh giá trên Google",
       "more": "Đọc thêm",
       "less": "Thu gọn",
-      "swipe": "Vuốt để xem thêm."
+      "swipe": "Vuốt để xem thêm.",
+      "readAll": "Đọc đầy đủ các đánh giá",
+      "prev": "Đánh giá trước",
+      "next": "Đánh giá tiếp theo",
+      "show": "Xem đánh giá"
     }
   }
 }

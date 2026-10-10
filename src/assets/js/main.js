@@ -197,14 +197,14 @@
   if (header) header.addEventListener("focusin", function () { header.classList.remove("is-hidden"); });
   onScroll();
 
-  // Google reviews (home): a review longer than about seven lines stops behind a fade with a
-  // "Read more" button that opens it, and closes it again.
+  // Google reviews in full (About): a review longer than about five lines stops behind a fade with
+  // a "Read more" button that opens it, and closes it again.
   document.querySelectorAll(".review").forEach(function (review) {
     var text = review.querySelector(".review__text");
     var more = review.querySelector(".review__more");
     if (!text || !more) return;
     var lineHeight = parseFloat(getComputedStyle(text.querySelector("p") || text).lineHeight) || 24;
-    if (text.scrollHeight <= lineHeight * 7.6) return;
+    if (text.scrollHeight <= lineHeight * 5.6) return;
     review.classList.add("is-long");
     more.hidden = false;
     var moreWord = more.textContent, lessWord = more.getAttribute("data-less");
@@ -213,6 +213,50 @@
       more.setAttribute("aria-expanded", open ? "true" : "false");
       more.textContent = open ? lessWord : moreWord;
     });
+  });
+
+  // Reviews carousel (home): the arrows and dots scroll the strip a card at a time, and the dots
+  // follow the strip, so a swipe keeps them right. It turns by itself every eight seconds while it
+  // is on screen, until someone points at it, tabs into it or uses it. Never under reduced motion.
+  document.querySelectorAll(".quotes__stage").forEach(function (stage) {
+    var track = stage.querySelector(".quotes__track");
+    var slides = track ? [].slice.call(track.children) : [];
+    var dots = [].slice.call(stage.querySelectorAll(".quotes__dots button"));
+    if (slides.length < 2) return;
+    var at = 0, held = false, used = false, seen = false;
+    function mark(n) {
+      if (n === at && dots[n] && dots[n].hasAttribute("aria-current")) return;
+      at = n;
+      dots.forEach(function (d, i) { if (i === n) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current"); });
+    }
+    function go(n) {
+      n = (n + slides.length) % slides.length;
+      track.scrollTo({ left: slides[n].offsetLeft, behavior: reduceMotion ? "auto" : "smooth" });
+      mark(n);
+    }
+    var ticking = false;
+    track.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        ticking = false;
+        mark(Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / track.clientWidth))));
+      });
+    }, { passive: true });
+    stage.querySelectorAll(".quotes__arrow").forEach(function (b) {
+      b.addEventListener("click", function () { used = true; go(at + Number(b.getAttribute("data-go"))); });
+    });
+    dots.forEach(function (d, i) { d.addEventListener("click", function () { used = true; go(i); }); });
+    ["pointerdown", "wheel", "keydown"].forEach(function (t) { track.addEventListener(t, function () { used = true; }, { passive: true }); });
+    stage.addEventListener("mouseenter", function () { held = true; });
+    stage.addEventListener("mouseleave", function () { held = false; });
+    stage.addEventListener("focusin", function () { held = true; });
+    stage.addEventListener("focusout", function () { held = false; });
+    if (reduceMotion) return;
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (entries) { seen = entries[0].isIntersecting; }, { threshold: 0.5 }).observe(stage);
+    } else seen = true;
+    setInterval(function () { if (seen && !held && !used && !document.hidden) go(at + 1); }, 8000);
   });
 
   // Calendar grid (schedule page): ring today's date, by the date in Vietnam, and show "Today" in the key.

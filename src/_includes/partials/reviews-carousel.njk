@@ -1,0 +1,39 @@
+{# What families say, compact: one line from each five-star Google review (`pull` in
+   src/_data/reviews.json) on a taped card that turns over, for the home page. A scroll-snap strip,
+   so phones swipe it; the arrows and dots move it, and main.js turns it every eight seconds while
+   it is on screen and nobody is using it (never under reduced motion). The full reviews are on
+   the About page (partials/reviews.njk). #}
+{% set R = strings[lang].reviews %}
+{% set list = reviews.items | reviewsFor(lang) %}
+<section class="band--pale-blue quotes-band">
+  {% set frondClass = "frond--br frond--soft" %}{% include "partials/frond.njk" %}
+  <div class="wrap quotes">
+    <div class="quotes__intro">
+      <p class="eyebrow eyebrow--blue">{{ R.eyebrow }}</p>
+      <h2>{{ R.heading }}</h2>
+      {% include "partials/rating.njk" %}
+      <p class="quotes__all"><a href="{{ '/about/#reviews' | href(lang) }}">{{ R.readAll }}</a></p>
+    </div>
+
+    <div class="quotes__stage" role="region" aria-roledescription="carousel" aria-label="{{ R.heading }}">
+      <div class="quotes__deck">
+        <span class="quotes__tape" aria-hidden="true"></span>
+        <ul class="quotes__track">
+          {% for r in list %}
+          {% set q = r | pullQuote %}
+          <li class="quote" aria-roledescription="slide" aria-label="{{ loop.index }} / {{ list.length }}">
+            <span class="stars stars--small" style="--fill: 100%" role="img" aria-label="{{ R.stars }}"></span>
+            <blockquote class="quote__text" lang="{{ r.lang }}"><p>{% if q.pre %}…{% endif %}{{ q.text }}{% if q.post %}…{% endif %}</p></blockquote>
+            <p class="quote__who"><strong>{{ r.name }}</strong><span>{{ R.source }}</span></p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="quotes__nav">
+        <button class="quotes__arrow" type="button" data-go="-1" aria-label="{{ R.prev }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <p class="quotes__dots">{% for r in list %}<button type="button" aria-label="{{ R.show }} {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>{% endfor %}</p>
+        <button class="quotes__arrow" type="button" data-go="1" aria-label="{{ R.next }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>

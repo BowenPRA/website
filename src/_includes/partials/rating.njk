@@ -1,0 +1,11 @@
+{# The Google listing's overall rating as a small white badge that opens the listing
+   (src/_data/reviews.json `rating`, `count`, `url`). Used by both review partials. #}
+{% set R = strings[lang].reviews %}
+<a class="rating" href="{{ reviews.url }}" rel="noopener" target="_blank">
+  <span class="rating__num">{{ reviews.rating }}</span>
+  <span class="rating__side">
+    <span class="stars" style="--fill: {{ reviews.rating / 5 * 100 }}%" role="img" aria-label="{{ reviews.rating }} {{ R.outOf }}"></span>
+    <span class="rating__count">{{ reviews.count }} {{ R.count }}</span>
+    <span class="rating__all">{{ R.all }}</span>
+  </span>
+</a>

@@ -37,6 +37,28 @@ export default function (eleventyConfig) {
     return [...own, ...more].slice(0, max);
   });
 
+  // A review's `pull` line for the home carousel, with whether a sentence was cut before or after it
+  // (the carousel shows … there). A line that starts or ends on a sentence boundary needs none.
+  // Falls back to the first paragraph.
+  eleventyConfig.addFilter("pullQuote", (r) => {
+    const ends = /[.!?…]["”’)]?$/;
+    for (const p of r.paras) {
+      const i = r.pull ? p.indexOf(r.pull) : -1;
+      if (i < 0) continue;
+      const before = p.slice(0, i).trimEnd();
+      const after = p.slice(i + r.pull.length).trim();
+      return { text: r.pull, pre: before !== "" && !ends.test(before), post: after !== "" && !ends.test(r.pull) };
+    }
+    return { text: r.paras[0], pre: false, post: false };
+  });
+  // One paragraph of a review, HTML-escaped, with its `pull` line marked like a highlighter pen.
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  eleventyConfig.addFilter("markPull", (para, pull) => {
+    const i = pull ? para.indexOf(pull) : -1;
+    if (i < 0) return esc(para);
+    return esc(para.slice(0, i)) + '<mark class="review__mark">' + esc(pull) + "</mark>" + esc(para.slice(i + pull.length));
+  });
+
   // Reel items (src/_data/reel.json) whose hideFrom date has come, by the date in Vietnam, are left out.
   eleventyConfig.addFilter("current", (items) => {
     const today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
