@@ -1,0 +1,37 @@
+{# What families say: five-star Google reviews (src/_data/reviews.json) on the home page, with the
+   listing's overall rating beside the heading. Each review keeps its own language (lang on the
+   text); `reviewsFor` puts the page's language first. Long reviews are cut to a few lines with a
+   "Read more" button (main.js); without JavaScript they show in full. A column of cards on wide
+   screens, a swipe strip on phones like the noticeboard. #}
+{% set R = strings[lang].reviews %}
+<section class="band--pale-blue reviews-band">
+  <div class="wrap">
+    <div class="reviews-head">
+      <div>
+        <p class="eyebrow eyebrow--blue">{{ R.eyebrow }}</p>
+        <h2>{{ R.heading }}</h2>
+        <p class="lede">{{ R.lede }}</p>
+      </div>
+      <a class="rating" href="{{ reviews.url }}" rel="noopener" target="_blank">
+        <span class="rating__num">{{ reviews.rating }}</span>
+        <span class="rating__side">
+          <span class="stars" style="--fill: {{ reviews.rating / 5 * 100 }}%" role="img" aria-label="{{ reviews.rating }} {{ R.outOf }}"></span>
+          <span class="rating__count">{{ reviews.count }} {{ R.count }}</span>
+          <span class="rating__all">{{ R.all }}</span>
+        </span>
+      </a>
+    </div>
+
+    <ul class="reviews">
+      {% for r in reviews.items | reviewsFor(lang) %}
+      <li class="review">
+        <span class="stars stars--small" style="--fill: 100%" role="img" aria-label="{{ R.stars }}"></span>
+        <div class="review__text" lang="{{ r.lang }}">{% for p in r.paras %}<p>{{ p }}</p>{% endfor %}</div>
+        <button class="review__more" type="button" aria-expanded="false" data-less="{{ R.less }}" hidden>{{ R.more }}</button>
+        <p class="review__who"><strong>{{ r.name }}</strong><span>{{ R.source }}</span></p>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="reviews__hint">{{ R.swipe }}</p>
+  </div>
+</section>

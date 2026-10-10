@@ -197,6 +197,24 @@
   if (header) header.addEventListener("focusin", function () { header.classList.remove("is-hidden"); });
   onScroll();
 
+  // Google reviews (home): a review longer than about seven lines stops behind a fade with a
+  // "Read more" button that opens it, and closes it again.
+  document.querySelectorAll(".review").forEach(function (review) {
+    var text = review.querySelector(".review__text");
+    var more = review.querySelector(".review__more");
+    if (!text || !more) return;
+    var lineHeight = parseFloat(getComputedStyle(text.querySelector("p") || text).lineHeight) || 24;
+    if (text.scrollHeight <= lineHeight * 7.6) return;
+    review.classList.add("is-long");
+    more.hidden = false;
+    var moreWord = more.textContent, lessWord = more.getAttribute("data-less");
+    more.addEventListener("click", function () {
+      var open = review.classList.toggle("is-open");
+      more.setAttribute("aria-expanded", open ? "true" : "false");
+      more.textContent = open ? lessWord : moreWord;
+    });
+  });
+
   // Calendar grid (schedule page): ring today's date, by the date in Vietnam, and show "Today" in the key.
   var todayCell = document.querySelector('.calgrid [data-date="' + new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10) + '"]');
   if (todayCell) {

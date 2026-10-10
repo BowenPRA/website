@@ -1429,6 +1429,66 @@ tr:last-child td { border-bottom: 0; }
 .post-note__back { font-weight: 600; }
 .post-note__back::before { content: "← "; }
 
+/* ---------- Google reviews (home) ----------
+   The listing's rating as a white badge beside the heading, then a card per review in columns
+   (a swipe strip on phones). Stars are text with a sun overlay cut to --fill, so 4.6 shows as
+   4.6. Long reviews stop after a few lines behind a fade until "Read more" (main.js adds
+   .is-long; without JavaScript every review shows in full). */
+.reviews-head { display: grid; gap: 22px 40px; align-items: end; margin-bottom: clamp(26px, 3vw, 38px); }
+@media (min-width: 900px) { .reviews-head { grid-template-columns: minmax(0, 1fr) auto; } }
+.reviews-head .lede { margin-bottom: 0; max-width: 46ch; }
+.rating {
+  justify-self: start; display: inline-flex; align-items: center; gap: 16px; padding: 14px 22px 14px 18px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow-sm);
+  color: var(--ink); text-decoration: none; transition: transform 0.35s var(--bounce), box-shadow 0.3s ease;
+}
+.rating:hover { transform: translateY(-4px); box-shadow: var(--shadow); color: var(--ink); }
+.rating__num { font-size: 3rem; font-weight: 800; line-height: 1; color: var(--blue-ink); }
+.rating__side { display: grid; gap: 3px; }
+.rating__count { font-size: var(--t-small); font-weight: 600; }
+.rating__all { font-size: 0.82rem; font-weight: 600; color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
+.stars { position: relative; display: inline-block; font-size: 1.25rem; line-height: 1; letter-spacing: 2px; color: var(--line); }
+.stars::before { content: "★★★★★"; }
+.stars::after { content: "★★★★★"; position: absolute; left: 0; top: 0; width: var(--fill, 100%); overflow: hidden; white-space: nowrap; color: var(--sun-deep); }
+.stars--small { font-size: 1rem; }
+
+.reviews { margin: 0; padding: 0; list-style: none; columns: 1; column-gap: 20px; }
+@media (min-width: 720px) { .reviews { columns: 2; } }
+@media (min-width: 1040px) { .reviews { columns: 3; } }
+.review {
+  position: relative; break-inside: avoid; margin: 0 0 20px; padding: 22px 24px 20px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow-sm);
+}
+/* a big quote mark in the corner */
+.review::after { content: "“"; position: absolute; top: 4px; right: 18px; font-size: 4.2rem; line-height: 1; font-weight: 800; color: var(--blue-tint); pointer-events: none; }
+.review .stars { margin-bottom: 12px; }
+.review__text { font-size: 0.97rem; line-height: 1.62; }
+.review__text p { margin: 0 0 0.7em; }
+.review__text p:last-child { margin-bottom: 0; }
+.review.is-long:not(.is-open) .review__text {
+  max-height: calc(1.62em * 7); overflow: hidden;
+  -webkit-mask: linear-gradient(#000 62%, transparent); mask: linear-gradient(#000 62%, transparent);
+}
+.review__more {
+  margin-top: 8px; padding: 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--blue-deep);
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--blue) 40%, transparent);
+}
+.review__who { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: var(--t-small); }
+.review__who strong { color: var(--blue-ink); }
+.review__who span { color: var(--ink-soft); }
+.reviews__hint { display: none; margin: 0; text-align: center; font-size: var(--t-small); color: var(--ink-soft); }
+@media (max-width: 719px) {
+  .reviews {
+    display: flex; gap: 14px; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter)); padding: 6px var(--gutter) 16px; scroll-padding-inline: var(--gutter);
+  }
+  .reviews::-webkit-scrollbar { display: none; }
+  .review { flex: 0 0 min(86%, 380px); margin: 0; scroll-snap-align: center; }
+  .reviews__hint { display: block; }
+}
+
 /* ---------- events: the year in order, month badges on a dashed line ---------- */
 
 .months { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; margin: 0 calc(-1 * var(--gutter)); padding: 6px var(--gutter) 12px; }

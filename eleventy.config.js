@@ -29,6 +29,14 @@ export default function (eleventyConfig) {
     return date.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
   });
 
+  // Google reviews for a home page (src/_data/reviews.json): the page's own language first; the
+  // Vietnamese home tops up with English ones. At most `max`.
+  eleventyConfig.addFilter("reviewsFor", (items, lang, max = 9) => {
+    const own = (items || []).filter((r) => r.lang === lang);
+    const more = lang === "en" ? [] : (items || []).filter((r) => r.lang === "en");
+    return [...own, ...more].slice(0, max);
+  });
+
   // Reel items (src/_data/reel.json) whose hideFrom date has come, by the date in Vietnam, are left out.
   eleventyConfig.addFilter("current", (items) => {
     const today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);

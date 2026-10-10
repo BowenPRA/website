@@ -74,6 +74,19 @@
       "fee": "Quarterly tuition due",
       "today": "Today",
       "caption": "The year month by month. Every date is also in the list below."
+    },
+    "reviews": {
+      "eyebrow": "Google reviews",
+      "heading": "What families say",
+      "lede": "From families who have been with us for years, and families who joined us for a few weeks while travelling.",
+      "outOf": "out of 5",
+      "count": "reviews on Google",
+      "all": "Read them all on Google",
+      "stars": "5 stars",
+      "source": "Google review",
+      "more": "Read more",
+      "less": "Show less",
+      "swipe": "Swipe for more."
     }
   },
   "vi": {
@@ -150,6 +163,19 @@
       "fee": "Hạn đóng học phí theo quý",
       "today": "Hôm nay",
       "caption": "Lịch năm học theo từng tháng. Tất cả các ngày cũng có trong danh sách bên dưới."
+    },
+    "reviews": {
+      "eyebrow": "Đánh giá trên Google",
+      "heading": "Phụ huynh nói về PRA",
+      "lede": "Có những gia đình đã đồng hành cùng PRA nhiều năm, cũng có những gia đình chỉ ở Hội An vài tuần.",
+      "outOf": "trên 5",
+      "count": "đánh giá trên Google",
+      "all": "Xem tất cả đánh giá trên Google",
+      "stars": "5 sao",
+      "source": "Đánh giá trên Google",
+      "more": "Đọc thêm",
+      "less": "Thu gọn",
+      "swipe": "Vuốt để xem thêm."
     }
   }
 }
