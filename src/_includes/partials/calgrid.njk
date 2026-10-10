@@ -1,0 +1,29 @@
+{# The academic calendar month by month, like the office's calendar PDF: weekdays tinted by quarter,
+   closed days in solid coral, make-up days hatched, the first and last day in green, and a navy dot
+   on the days quarterly tuition is due. Days come from src/_data/calendarGrid.js (dates in
+   calendar.json `grid`); quarter names from calendar.json, the rest from strings.json `cal`.
+   The grids are hidden from screen readers: the list under them has every date in words.
+   main.js rings today's date. #}
+{% set C = strings[lang].cal %}
+<figure class="calgrid">
+  <figcaption class="u-hide">{{ C.caption }}</figcaption>
+  <ul class="calgrid__key">
+    {% for q in calendar.grid.quarters %}<li><i class="cd cd--term cd--q{{ q.n }}"></i>{{ q.label }}</li>{% endfor %}
+    <li><i class="cd cd--closed"></i>{{ C.closed }}</li>
+    <li><i class="cd cd--makeup"></i>{{ C.makeup }}</li>
+    <li><i class="cd cd--firstlast"></i>{{ C.firstLast }}</li>
+    <li><i class="cd cd--fee"></i>{{ C.fee }}</li>
+    <li class="calgrid__today" hidden><i class="cd is-today"></i>{{ C.today }}</li>
+  </ul>
+  <div class="calgrid__months" aria-hidden="true">
+    {% for m in calendarGrid %}
+    <div class="calgrid__month">
+      <p class="calgrid__name">{{ C.months[m.month] }}{{ C.sep }}{{ m.year }}</p>
+      <div class="calgrid__days">
+        {% for w in C.days %}<span class="calgrid__dow">{{ w }}</span>{% endfor %}
+        {% for c in m.cells %}{% if c %}<span class="cd cd--{{ c.kind }}{% if c.q %} cd--q{{ c.q }}{% endif %}{% if c.fee %} cd--fee{% endif %}" data-date="{{ c.date }}">{{ c.d }}</span>{% else %}<span></span>{% endif %}{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</figure>

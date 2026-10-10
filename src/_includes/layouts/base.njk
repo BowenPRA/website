@@ -56,7 +56,9 @@
   }] } | dump | safe }}</script>
   {% endif %}
 </head>
-<body class="page-{{ (page.fileSlug if page.fileSlug != 'vi') or 'home' }} tone-{{ tone or 'blue' }}{% if stage %} stage-{{ stage }}{% endif %}">
+{# The announcement reel under the nav bar (partials/header.njk). `has-reel` makes room for it above each hero. #}
+{% set reelNow = reel.items | current %}
+<body class="page-{{ (page.fileSlug if page.fileSlug != 'vi') or 'home' }} tone-{{ tone or 'blue' }}{% if stage %} stage-{{ stage }}{% endif %}{% if reelNow.length %} has-reel{% endif %}">
   <a class="skip" href="#main">{{ T.skip }}</a>
   {% include "partials/frond-symbol.njk" %}
   {% include "partials/header.njk" %}

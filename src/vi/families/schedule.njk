@@ -106,6 +106,7 @@ description: "Một ngày học tại Palm River Academy, từ Early Years đế
       <p class="eyebrow">Lịch năm học</p>
       <h2>Các mốc thời gian năm học {{ calendar.year }}</h2>
     </div>
+    {% include "partials/calgrid.njk" %}
     <div class="cal mt">
       {% for m in calendar.months %}
       <div class="cal__month">

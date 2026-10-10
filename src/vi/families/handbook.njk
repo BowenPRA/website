@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 tone: green
 title: "Cẩm nang phụ huynh"
-description: "Cẩm nang phụ huynh của Palm River Academy: những quy định chung mà mọi gia đình tại PRA cùng thực hiện."
+description: "Cẩm nang phụ huynh của Palm River Academy: bản tóm tắt những điều gia đình nào tại PRA cũng cần biết, và bản cẩm nang đầy đủ để đọc hoặc tải về."
 ---
 
 {% set heroPhoto = "gallery-reading-corner" %}
@@ -18,7 +18,7 @@ description: "Cẩm nang phụ huynh của Palm River Academy: những quy đị
       <h2>Bản tóm tắt</h2>
       <ul class="checklist">
         <li><strong>PRA mở cửa lúc 8:00.</strong> Giờ học từ 8:30 đến 15:20. Nursery và Kindergarten tan học lúc 15:15.</li>
-        <li><strong>Con bị bệnh hoặc xin nghỉ?</strong> Ba mẹ vui lòng báo cho PRA trước 8:00 sáng hôm đó. Nếu gia đình đi xa, ba mẹ vui lòng báo trước hai tuần để giáo viên chuẩn bị bài cho con.</li>
+        <li><strong>Con bị bệnh hoặc xin nghỉ?</strong> Ba mẹ vui lòng báo cho PRA trước 8:00 sáng hôm đó. Nếu gia đình đi xa, ba mẹ vui lòng báo trước bảy ngày để giáo viên chuẩn bị bài cho con.</li>
         <li><strong>Người đón con</strong> phải là người có tên trong đơn đăng ký.</li>
         <li><strong>Con cần mang theo</strong> bình nước mỗi ngày, và giày bít mũi cho giờ thể dục và các chuyến đi. Với Early Years: quần áo để thay, thêm tã và khăn ướt nếu bé cần.</li>
         <li><strong>Không có đồng phục.</strong> Các con mặc trang phục thường ngày của mình.</li>
@@ -27,11 +27,31 @@ description: "Cẩm nang phụ huynh của Palm River Academy: những quy đị
         <li><strong>Thông tin</strong> được gửi qua Google Classroom, bản tin hằng tuần và nhóm Zalo của lớp.</li>
       </ul>
     </div>
-    <div class="card">
-      <h3>Cẩm nang đầy đủ</h3>
-      <p>Bản đầy đủ có thêm các nội dung khác: sức khỏe và thuốc men, xe đưa đón, các chuyến đi và thiết bị điện tử.</p>
-      <p>Ba mẹ cần một bản? Vui lòng liên hệ văn phòng, PRA sẽ gửi cho ba mẹ.</p>
-      <a class="btn btn--primary btn--small" href="mailto:{{ site.email }}?subject=C%E1%BA%A9m%20nang%20ph%E1%BB%A5%20huynh">Nhận bản cẩm nang</a>
+    {# The guidebook PDF is in English only; see the note on the English page. #}
+    <div class="card guidebook">
+      <a class="guidebook__cover" href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}" target="_blank" rel="noopener">{% photo "family-guidebook-2026-cover", "", "(min-width: 480px) 150px, 124px" %}</a>
+      <div>
+        <h3>Cẩm nang phụ huynh 2026</h3>
+        <p>Bản đầy đủ có thêm các nội dung khác: thủ tục nhập học, học phí, sức khỏe và sơ cứu, xe đưa đón, các hoạt động sau giờ học, thiết bị điện tử và cách liên hệ với PRA.</p>
+        <p class="guidebook__meta">12 trang · PDF · 3,3 MB · bản tiếng Anh</p>
+        <p class="guidebook__do">
+          <a class="btn btn--primary btn--small" href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}" target="_blank" rel="noopener">Đọc cẩm nang</a>
+          <a class="btn btn--ghost btn--small" href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}" download="Palm River Academy Family Guidebook 2026.pdf">Tải về</a>
+        </p>
+      </div>
+      <div class="guidebook__inside">
+        <p class="guidebook__head">Nội dung</p>
+        <ol>
+          {% for p in [
+            [2, "Lời chào mừng"], [3, "Sứ mệnh và tầm nhìn"], [4, "Gia đình và PRA cùng phối hợp"],
+            [5, "Những quy định chính ba mẹ cần biết"], [6, "Nhập học tại PRA"], [7, "Một ngày tại PRA"],
+            [8, "Việc học tại PRA"], [9, "Sức khỏe và an toàn"], [10, "Quy tắc ứng xử chung"],
+            [11, "Gia đình đồng hành cùng PRA"], [12, "Thông tin liên hệ"]
+          ] %}
+          <li><a href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}#page={{ p[0] }}" target="_blank" rel="noopener"><span>tr. {{ p[0] }}</span>{{ p[1] }}</a></li>
+          {% endfor %}
+        </ol>
+      </div>
     </div>
   </div>
 </section>

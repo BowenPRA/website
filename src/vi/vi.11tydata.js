@@ -6,7 +6,7 @@
 import { readFileSync } from "node:fs";
 import { loc } from "../../lib/i18n.js";
 
-const FILES = ["site", "announcements", "calendar", "days", "events", "programs", "team", "enroll"];
+const FILES = ["site", "announcements", "reel", "calendar", "days", "events", "programs", "team", "enroll", "writing"];
 const vi = (f) => () => loc(JSON.parse(readFileSync(`src/_data/${f}.json`, "utf8")), "vi");
 
 export default {

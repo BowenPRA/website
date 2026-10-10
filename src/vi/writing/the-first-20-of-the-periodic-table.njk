@@ -1,0 +1,76 @@
+---
+layout: layouts/base.njk
+tone: light
+tags: writingVi
+title: "THE FIRST 20 OF THE PERIODIC TABLE PROJECT"
+description: "Dự án Art of Science của Amada về 20 nguyên tố đầu tiên trong bảng tuần hoàn, bằng chính lời của em."
+date: 2026-10-10
+author: "Amada"
+subject: "Art of Science"
+cover: "student-writing-amada-periodic-table-poster"
+summary: "Dự án của Amada về 20 nguyên tố đầu tiên: bảng tuần hoàn là gì, vì sao em chọn đề tài này và em đã làm như thế nào."
+---
+
+{# Amada's English stays exactly as she wrote it, as on the English page (see the note there). #}
+<section class="phero phero--post">
+  <span class="phero__dots" aria-hidden="true"></span>
+  {% set frondClass = "frond--tr frond--soft" %}{% include "partials/frond.njk" %}
+  <div class="wrap post-head">
+    <p class="eyebrow eyebrow--on rise" style="--d:0"><a href="{{ '/writing/' | href(lang) }}">{{ writing.name }}</a> · {{ subject }}</p>
+    <h1 class="rise" style="--d:1" lang="en">{{ title }}</h1>
+    <p class="post-head__by rise" style="--d:2">{{ writing.by }} <strong>{{ author }}</strong> · <time datetime="{{ page.date.toISOString().slice(0, 10) }}">{{ page.date | longDate(lang) }}</time> · Bài viết tiếng Anh, đăng nguyên văn</p>
+  </div>
+  {% include "partials/river.njk" %}
+</section>
+
+<section class="post">
+  <div class="wrap post__grid">
+    <article class="post__paper" lang="en">
+      <h2>WHAT IS THE PERIODIC  TABLE?</h2>
+      <p>THE PERIODIC TABLE IS A TABLE THAT SHOWS ALL THE ELEMENTS AND WHAT ELEMENTS NUMBER THEY ARE.</p>
+
+      <h2>WHY I CHOSE TO PRESENT THE PERIODIC TABLE:</h2>
+      <p>BECAUSE  I THOUGHT IT WAS UNIQUE NO ONE WAS DOING AND BECAUSE I NEED TO REMEBER WHAT ELEMENTS WERE WHAT SO I DECIDED TO DO SOMETHING I FOUND DIFFICULT.</p>
+
+      <h2>HOW I MADE IT:</h2>
+      <p>FIRST OF ALL I NEEDED A BIG PIECE OF CARDBOARD TO MAKE THE BASE OF THE PROJECT THEN I MIXED SOME DIFFERENT PAINTS EXPIEREMENTING WITH THE COLORS<br>BUT NOT MIXING THEM FULLY TO MAKE A NICE EFFECT THEN I MADE A SIGN  OUT OF PAPER AND CARDBOARD ,AND THEN I MADE A CUTE FRAME OUT OF CLAY AND BOWS.</p>
+
+      <h2>ABOUT ART OF SCIENCE  CLASS:</h2>
+      <p>IN ART OF SCIENCE CLASS ,OUR TEACHER IS MR SETH . WE MAKE DIFFERENT ROJECTS DEPENDING ON WHAT WE ARE LEARNING IN SIENCE CLASS MY CLASS HAS MADE MANY PROJECTS INCLUDING A DIAGRAM : OF A CELL ,WATER CYCLE , SOLAR SYSTEM , VOLCANO , ROBAT AND HAVE DONE SOME EXPIERIMENT .</p>
+    </article>
+
+    <div class="post__art">
+      <figure class="post__fig post__fig--project">
+        {% photo "student-writing-amada-periodic-table-project", "post__project", "(min-width: 960px) 360px, 92vw" %}
+        <figcaption>Sản phẩm hoàn chỉnh.</figcaption>
+      </figure>
+      <figure class="post__fig post__fig--poster">
+        {% photo "student-writing-amada-periodic-table-poster", "post__poster", "(min-width: 960px) 300px, 64vw" %}
+        <figcaption>Poster Amada tự làm trên Canva.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale post-note">
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">Đôi lời từ PRA</p>
+      <h2>Ghi chú của PRA</h2>
+      <p>PRA đăng bài viết của học viên đúng như các em đã viết, không chỉnh sửa. Amada làm dự án này trong lớp Art of Science, nơi các em làm một sản phẩm cho mỗi chủ đề đang học ở môn Khoa học. Bên dưới là hai mô hình vòng tuần hoàn của nước, cũng từ lớp này.</p>
+      <p><a class="post-note__back" href="{{ '/writing/' | href(lang) }}">{{ writing.back }}</a></p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["art-of-science-water-cycle-model-hills", "art-of-science-water-cycle-model-box"] %}
+      {% set collageArt = true %}
+      {% set collageCredit = "Các mô hình vòng tuần hoàn của nước từ lớp Art of Science." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

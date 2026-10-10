@@ -106,6 +106,7 @@ description: "How the day runs at Palm River Academy, from Early Years to Upper 
       <p class="eyebrow">Academic calendar</p>
       <h2>Dates for {{ calendar.year }}</h2>
     </div>
+    {% include "partials/calgrid.njk" %}
     <div class="cal mt">
       {% for m in calendar.months %}
       <div class="cal__month">

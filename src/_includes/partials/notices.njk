@@ -1,20 +1,11 @@
-{# The noticeboard, under the hero on the home page. Items come from src/_data/announcements.json.
-   The strip scrolls the headlines; the cards carry the detail. Two of them have a flyer: the button
-   carries a tilted thumbnail of it and opens it full size in the shared lightbox (main.js). #}
+{# The noticeboard, under the hero on the home page. Items come from src/_data/announcements.json,
+   a card each. Two of them have a flyer: the button carries a tilted thumbnail of it and opens it
+   full size in the shared lightbox (main.js). Short headlines go in the reel under the nav bar
+   (src/_data/reel.json), which replaced the scrolling strip that used to sit above these cards. #}
 {% set T = strings[lang] %}
 <section class="notices-band">
   <div class="wrap">
     <h2 class="u-hide">{{ T.notices.heading }}</h2>
-
-    <div class="ticker">
-      <p class="ticker__label"><span class="ticker__dot" aria-hidden="true"></span>{{ T.notices.now }}</p>
-      <div class="ticker__window">
-        <div class="ticker__track">
-          {% for a in announcements %}<span class="ticker__item">{{ a.ticker }}</span>{% endfor %}
-          {% for a in announcements %}<span class="ticker__item" aria-hidden="true">{{ a.ticker }}</span>{% endfor %}
-        </div>
-      </div>
-    </div>
 
     <ul class="notices">
       {% for a in announcements %}

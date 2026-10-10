@@ -168,7 +168,7 @@
       if (e.key === "Escape" && !sheet.hidden) { setSheet(false); toggle.focus(); }
     });
     window.addEventListener("resize", function () {
-      if (window.innerWidth >= 900 && !sheet.hidden) setSheet(false);
+      if (window.innerWidth >= 1100 && !sheet.hidden) setSheet(false);
     });
   }
 
@@ -196,6 +196,39 @@
   }, { passive: true });
   if (header) header.addEventListener("focusin", function () { header.classList.remove("is-hidden"); });
   onScroll();
+
+  // Calendar grid (schedule page): ring today's date, by the date in Vietnam, and show "Today" in the key.
+  var todayCell = document.querySelector('.calgrid [data-date="' + new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10) + '"]');
+  if (todayCell) {
+    todayCell.classList.add("is-today");
+    var todayKey = document.querySelector(".calgrid__today");
+    if (todayKey) todayKey.hidden = false;
+  }
+
+  // Announcement reel under the nav bar: with more than one item, each shows for seven seconds in
+  // turn. Pointing at it or tabbing into it holds the one showing; the dots pick one. Under reduced
+  // motion nothing turns by itself and the dots do the work.
+  var reel = document.querySelector(".reel");
+  var reelItems = reel ? [].slice.call(reel.querySelectorAll(".reel__item")) : [];
+  if (reelItems.length > 1) {
+    var reelDots = [].slice.call(reel.querySelectorAll(".reel__dots button"));
+    var reelAt = 0, reelHeld = false;
+    var showReel = function (n) {
+      reelItems[reelAt].hidden = true;
+      reelItems[reelAt].classList.remove("is-new");
+      if (reelDots[reelAt]) reelDots[reelAt].removeAttribute("aria-current");
+      reelAt = (n + reelItems.length) % reelItems.length;
+      reelItems[reelAt].hidden = false;
+      reelItems[reelAt].classList.add("is-new");
+      if (reelDots[reelAt]) reelDots[reelAt].setAttribute("aria-current", "true");
+    };
+    reelDots.forEach(function (dot, i) { dot.addEventListener("click", function () { showReel(i); }); });
+    reel.addEventListener("mouseenter", function () { reelHeld = true; });
+    reel.addEventListener("mouseleave", function () { reelHeld = false; });
+    reel.addEventListener("focusin", function () { reelHeld = true; });
+    reel.addEventListener("focusout", function () { reelHeld = false; });
+    if (!reduceMotion) setInterval(function () { if (!reelHeld && !document.hidden) showReel(reelAt + 1); }, 7000);
+  }
 
   // Yearbook film: the big play button starts the video and gets out of the way
   document.querySelectorAll(".film__player").forEach(function (player) {
@@ -369,8 +402,8 @@
     return lightbox;
   }
 
-  // Photo galleries and pinned-up collages: every tile opens its own set.
-  var galleries = document.querySelectorAll(".gallery, .collage");
+  // Photo galleries, pinned-up collages and a blog post's pictures: every tile opens its own set.
+  var galleries = document.querySelectorAll(".gallery, .collage, .post__art");
   if (galleries.length && useLightbox()) {
     galleries.forEach(function (gallery) {
       var set = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));

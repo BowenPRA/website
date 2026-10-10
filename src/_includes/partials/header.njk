@@ -32,6 +32,7 @@
           </ul>
         </li>
         <li><a href="{{ '/events/' | href(lang) }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>{{ T.events }}</a></li>
+        <li><a href="{{ '/writing/' | href(lang) }}"{% if u.startsWith('/writing/') %} aria-current="{{ 'page' if u == '/writing/' else 'true' }}"{% endif %}>{{ T.writing }}</a></li>
       </ul>
       <a class="btn btn--green btn--small" href="{{ '/contact/' | href(lang) }}">{{ T.contact }}</a>
     </nav>
@@ -52,6 +53,43 @@
       <span class="menu-toggle__label">{{ T.menu }}</span>
     </button>
   </div>
+
+  {# The announcement reel, under the nav bar on every page (src/_data/reel.json; `reelNow` is set in
+     layouts/base.njk). One item shows at a time and main.js turns them over when there are several.
+     The script straight after it drops any item whose hideFrom date has come since the site was built,
+     before the page is drawn. #}
+  {% if reelNow.length %}
+  <div class="wrap reel" role="region" aria-label="{{ T.reel.region }}">
+    <p class="reel__label"><span class="reel__dot" aria-hidden="true"></span><span class="reel__word">{{ T.reel.label }}</span></p>
+    <ul class="reel__items">
+      {% for r in reelNow %}
+      <li class="reel__item"{% if r.hideFrom %} data-hide-from="{{ r.hideFrom }}"{% endif %}{% if not loop.first %} hidden{% endif %}>
+        {% if r.url %}<a href="{{ r.url | href(lang) }}"><span class="reel__text">{{ r.text }}</span>{% if r.link %}<span class="reel__more">{{ r.link }}</span>{% endif %}</a>
+        {% else %}<span class="reel__text">{{ r.text }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% if reelNow.length > 1 %}
+    <p class="reel__dots">{% for r in reelNow %}<button type="button" aria-label="{{ T.reel.show }} {{ loop.index }}"{% if loop.first %} aria-current="true"{% endif %}></button>{% endfor %}</p>
+    {% endif %}
+  </div>
+  <script>
+    (function () {
+      var reel = document.currentScript.previousElementSibling;
+      var today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
+      var items = reel.querySelectorAll(".reel__item"), dots = reel.querySelectorAll(".reel__dots button");
+      for (var i = 0; i < items.length; i++) {
+        var until = items[i].getAttribute("data-hide-from");
+        if (until && until <= today) { items[i].remove(); if (dots[i]) dots[i].remove(); }
+      }
+      var left = reel.querySelectorAll(".reel__item");
+      if (!left.length) { reel.remove(); document.body.classList.remove("has-reel"); return; }
+      left[0].hidden = false;
+      var dotRow = reel.querySelector(".reel__dots");
+      if (dotRow && left.length < 2) dotRow.remove();
+    })();
+  </script>
+  {% endif %}
 </header>
 
 <nav class="sheet" id="sheet" aria-label="{{ T.mobileNav }}" hidden>
@@ -59,6 +97,7 @@
     <a class="sheet__top" href="{{ '/' | href(lang) }}"{% if u == '/' %} aria-current="page"{% endif %}>{{ T.home }}</a>
     <a class="sheet__top" href="{{ '/about/' | href(lang) }}"{% if u.startsWith('/about/') %} aria-current="page"{% endif %}>{{ T.about }}</a>
     <a class="sheet__top" href="{{ '/events/' | href(lang) }}"{% if u.startsWith('/events/') %} aria-current="page"{% endif %}>{{ T.events }}</a>
+    <a class="sheet__top" href="{{ '/writing/' | href(lang) }}"{% if u.startsWith('/writing/') %} aria-current="page"{% endif %}>{{ T.writing }}</a>
   </div>
   <div class="sheet__group">
     <a class="sheet__label" href="{{ '/learning/' | href(lang) }}">{{ T.academics }}</a>

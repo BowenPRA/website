@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+tone: blue
+title: "Student writing"
+description: "The Palm Press: writing by Palm River Academy students, posted as they wrote it."
+---
+
+{# The student writing blog. Posts are pages under src/writing/ tagged `writing`, newest first.
+   The blog's name and the shared words are in src/_data/writing.json. #}
+{% set heroPhoto = "secondary-class-notebooks" %}
+{% set heroEyebrow = "Student writing" %}
+{% set heroTitle = '<span class="mark">' + writing.name + '</span>' %}
+{% set heroText = writing.tagline %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap">
+    <ul class="posts">
+      {% for post in collections.writing | reverse %}
+      <li class="post-card">
+        <a href="{{ post.url | url }}">
+          {% photo post.data.cover, "post-card__photo", "(min-width: 1024px) 370px, (min-width: 720px) 46vw, 92vw" %}
+          <span class="post-card__body">
+            <span class="post-card__kind">{{ post.data.subject }}</span>
+            <h2>{{ post.data.title }}</h2>
+            <span class="post-card__by">{{ writing.by }} {{ post.data.author }} · {{ post.date | longDate(lang) }}</span>
+            <span class="post-card__sum">{{ post.data.summary }}</span>
+            <span class="post-card__more">{{ writing.read }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="table-note center">Every piece goes up as the student wrote it. We do not correct the spelling or the grammar.</p>
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
 tone: green
-title: "Family handbook"
-description: "The Palm River Academy family handbook. The guidelines every PRA family follows."
+title: "Family guidebook"
+description: "The Palm River Academy Family Guidebook: the short version of what every PRA family needs to know, and the full guidebook to read or download."
 ---
 
 {% set heroPhoto = "gallery-reading-corner" %}
 {% set heroEyebrow = "Families" %}
-{% set heroTitle = 'The family <span class="mark">handbook</span>' %}
+{% set heroTitle = 'The family <span class="mark">guidebook</span>' %}
 {% set heroText = "Drop-off, pick-up, sick days, phones: what every PRA family needs to know." %}
 {% include "partials/pagehero.njk" %}
 
@@ -18,7 +18,7 @@ description: "The Palm River Academy family handbook. The guidelines every PRA f
       <h2>The short version</h2>
       <ul class="checklist">
         <li><strong>Doors open at 8:00.</strong> Classes run from 8:30 to 15:20. Nursery and Kindergarten finish at 15:15.</li>
-        <li><strong>Off sick or away?</strong> Tell us by 8:00 that morning. For travel, give us two weeks' notice so the teachers can prepare work.</li>
+        <li><strong>Off sick or away?</strong> Tell us by 8:00 that morning. For travel, give us seven days' notice so the teachers can prepare work.</li>
         <li><strong>Pick-up</strong> is only by the people named on your enrollment form.</li>
         <li><strong>Pack</strong> a water bottle every day, and closed-toe shoes for PE and trips. Early Years: spare clothes, plus nappies and wipes if needed.</li>
         <li><strong>No uniform.</strong> Children come in their own clothes.</li>
@@ -27,16 +27,37 @@ description: "The Palm River Academy family handbook. The guidelines every PRA f
         <li><strong>News</strong> comes through Google Classroom, the weekly newsletter and your class Zalo group.</li>
       </ul>
     </div>
-    <div class="card">
-      <h3>The full handbook</h3>
-      <p>The handbook covers the rest: health and medicine, the bus, trips and devices.</p>
-      <p>Need a copy? Ask the office and we will send one.</p>
-      <a class="btn btn--primary btn--small" href="mailto:{{ site.email }}?subject=Family%20handbook">Ask for the handbook</a>
+    {# The guidebook is a Canva PDF from the office (Family Guidebook 2026.pdf), saved smaller for phones.
+       Each line under "Inside" opens it at that page, in browsers that follow #page. #}
+    <div class="card guidebook">
+      <a class="guidebook__cover" href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}" target="_blank" rel="noopener">{% photo "family-guidebook-2026-cover", "", "(min-width: 480px) 150px, 124px" %}</a>
+      <div>
+        <h3>Family Guidebook 2026</h3>
+        <p>Everything else is in the guidebook: joining PRA, fees, health and first aid, the bus, after-school activities, devices, and how to reach us.</p>
+        <p class="guidebook__meta">12 pages · PDF · 3.3 MB</p>
+        <p class="guidebook__do">
+          <a class="btn btn--primary btn--small" href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}" target="_blank" rel="noopener">Read the guidebook</a>
+          <a class="btn btn--ghost btn--small" href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}" download="Palm River Academy Family Guidebook 2026.pdf">Download</a>
+        </p>
+      </div>
+      <div class="guidebook__inside">
+        <p class="guidebook__head">Inside</p>
+        <ol>
+          {% for p in [
+            [2, "Welcome to Palm River Academy"], [3, "Our mission and vision"], [4, "Your role in our partnership"],
+            [5, "Key policies you should know"], [6, "Joining us at Palm River"], [7, "Daily life at PRA"],
+            [8, "Learning at PRA"], [9, "Health, safety and well-being"], [10, "Community expectations"],
+            [11, "Family partnership"], [12, "Contact information"]
+          ] %}
+          <li><a href="{{ '/assets/docs/family-guidebook-2026.pdf' | href(lang) }}#page={{ p[0] }}" target="_blank" rel="noopener"><span>p. {{ p[0] }}</span>{{ p[1] }}</a></li>
+          {% endfor %}
+        </ol>
+      </div>
     </div>
   </div>
 </section>
 
 {% set ctaTitle = "Ask the office about anything else." %}
-{% set ctaText = "If it is a good question, we will add it to the handbook." %}
+{% set ctaText = "If it is a good question, we will add it to the guidebook." %}
 {% set waveColor = "blue" %}{% include "partials/wave.njk" %}
 {% include "partials/cta.njk" %}

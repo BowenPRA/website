@@ -41,6 +41,22 @@
       { "date": "Fri 4 Jun", "what": "Last day of the academic year", "tag": "", "vi": { "date": "T6, 4/6", "what": "Ngày cuối cùng của năm học" } }
     ], "vi": { "name": "Tháng 6" } }
   ],
+  "_grid": "The month grids above the list (src/_data/calendarGrid.js). Same dates as the list, as machine dates: change both together. From the 2026-2027 Main Academic Calendar PDF of 10 August; winter break runs to Mon 4 Jan as in the list, although the PDF colours 4 Jan as Quarter 3.",
+  "grid": {
+    "from": "2026-08",
+    "to": "2027-06",
+    "quarters": [
+      { "n": 1, "from": "2026-08-04", "to": "2026-10-08", "label": "Quarter 1 · 4 Aug to 8 Oct", "vi": { "label": "Quý 1 · 4/8 đến 8/10" } },
+      { "n": 2, "from": "2026-10-15", "to": "2026-12-17", "label": "Quarter 2 · 15 Oct to 17 Dec", "vi": { "label": "Quý 2 · 15/10 đến 17/12" } },
+      { "n": 3, "from": "2027-01-05", "to": "2027-03-24", "label": "Quarter 3 · 5 Jan to 24 Mar", "vi": { "label": "Quý 3 · 5/1 đến 24/3" } },
+      { "n": 4, "from": "2027-03-25", "to": "2027-06-04", "label": "Quarter 4 · 25 Mar to 4 Jun", "vi": { "label": "Quý 4 · 25/3 đến 4/6" } }
+    ],
+    "closed": [["2026-08-31", "2026-09-02"], ["2026-10-09", "2026-10-14"], ["2026-11-24"], ["2026-12-18", "2027-01-04"],
+      ["2027-02-03", "2027-02-15"], ["2027-03-26"], ["2027-04-16"], ["2027-04-26", "2027-04-30"]],
+    "makeup": ["2027-01-29", "2027-02-01", "2027-02-02"],
+    "fees": ["2026-10-08", "2026-12-17", "2027-03-22"],
+    "firstLast": ["2026-08-04", "2027-06-04"]
+  },
   "vi": {
     "year": "2026-2027",
     "note": "Theo lịch năm học 2026-2027. Các hạn đóng học phí áp dụng cho gia đình đóng theo quý. Nếu trong năm trung tâm phải nghỉ vì thời tiết xấu, học viên sẽ học bù vào những ngày học bù ghi trên lịch."

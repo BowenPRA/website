@@ -1799,5 +1799,76 @@
       "celebration",
       "courtyard"
     ]
+  },
+  "family-guidebook-2026-cover": {
+    "alt": "Cover of the Palm River Academy Family Guidebook 2026: a family of four sitting together on a picnic blanket",
+    "width": 1241,
+    "height": 1755,
+    "sizes": [
+      480,
+      960,
+      1241
+    ],
+    "src": "guidebook/family-guidebook-2026-cover.png"
+  },
+  "student-writing-amada-periodic-table-poster": {
+    "alt": "Amada's Canva poster for her project, The First 20 of the Periodic Table. Her words are written out on this page.",
+    "width": 1080,
+    "height": 1920,
+    "sizes": [
+      480,
+      960,
+      1080
+    ],
+    "src": "writing/2026-10-amada/The first 20 periotic table By Amada.png",
+    "taken": "2026-10-09",
+    "tags": [
+      "student writing",
+      "Art of Science"
+    ]
+  },
+  "art-of-science-water-cycle-model-hills": {
+    "alt": "A student holds up her water cycle model: a painted river running down green card hills, with clouds on sticks and labelled arrows",
+    "width": 1600,
+    "height": 2133,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "writing/2026-10-amada/Image_20261009_184815_096.jpeg",
+    "tags": [
+      "Art of Science"
+    ]
+  },
+  "art-of-science-water-cycle-model-box": {
+    "alt": "Three students hold up their water cycle model, built in a box painted blue, with a paper sun and cotton-wool clouds labelled condensation and precipitation",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "writing/2026-10-amada/Image_20261009_184815_221.jpeg",
+    "tags": [
+      "Art of Science"
+    ]
+  },
+  "student-writing-amada-periodic-table-project": {
+    "alt": "Amada's finished periodic table: the first 20 elements painted on black squares in a pink clay frame with red bows, and her handwritten key beside it",
+    "width": 1600,
+    "height": 640,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "writing/2026-10-amada/Image_20261009_184815_139.jpeg",
+    "taken": "2026-10-09",
+    "tags": [
+      "student writing",
+      "Art of Science"
+    ]
   }
 }

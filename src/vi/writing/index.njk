@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+tone: blue
+title: "Bài viết học viên"
+description: "The Palm Press: bài viết của học viên Palm River Academy, đăng nguyên văn như các em đã viết."
+---
+
+{% set heroPhoto = "secondary-class-notebooks" %}
+{% set heroEyebrow = "Bài viết học viên" %}
+{% set heroTitle = '<span class="mark">' + writing.name + '</span>' %}
+{% set heroText = writing.tagline %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap">
+    <ul class="posts">
+      {% for post in collections.writingVi | reverse %}
+      <li class="post-card">
+        <a href="{{ post.url | url }}">
+          {% photo post.data.cover, "post-card__photo", "(min-width: 1024px) 370px, (min-width: 720px) 46vw, 92vw" %}
+          <span class="post-card__body">
+            <span class="post-card__kind">{{ post.data.subject }}</span>
+            <h2>{{ post.data.title }}</h2>
+            <span class="post-card__by">{{ writing.by }} {{ post.data.author }} · {{ post.date | longDate(lang) }}</span>
+            <span class="post-card__sum">{{ post.data.summary }}</span>
+            <span class="post-card__more">{{ writing.read }}</span>
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="table-note center">Các bài viết bằng tiếng Anh được đăng đúng như học viên đã viết. PRA không sửa chính tả hay ngữ pháp.</p>
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

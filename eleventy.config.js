@@ -22,6 +22,19 @@ export default function (eleventyConfig) {
   // 33500000 -> "33,500,000" in English, "33.500.000" in Vietnamese.
   eleventyConfig.addFilter("money", (n, lang) => Number(n).toLocaleString(lang === "vi" ? "vi-VN" : "en-US"));
 
+  // A post's date: "10 October 2026" in English, "10/10/2026" in Vietnamese.
+  eleventyConfig.addFilter("longDate", (d, lang) => {
+    const date = new Date(d);
+    if (lang === "vi") return `${date.getUTCDate()}/${date.getUTCMonth() + 1}/${date.getUTCFullYear()}`;
+    return date.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  });
+
+  // Reel items (src/_data/reel.json) whose hideFrom date has come, by the date in Vietnam, are left out.
+  eleventyConfig.addFilter("current", (items) => {
+    const today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
+    return (items || []).filter((i) => !i.hideFrom || i.hideFrom > today);
+  });
+
   // "8:45" -> 525, minutes since midnight (day chart on the schedule page)
   eleventyConfig.addFilter("mins", (t) => {
     const [h, m] = String(t).split(":").map(Number);

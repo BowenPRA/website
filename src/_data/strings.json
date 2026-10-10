@@ -14,13 +14,14 @@
     "academics": "Academics",
     "admissions": "Admissions",
     "events": "Events",
+    "writing": "Student writing",
     "contact": "Contact Us",
     "enrollment": "Enrollment",
     "fees": "Tuition and fees",
     "feesShort": "Fees",
     "schedule": "Schedule and calendar",
     "scheduleShort": "Schedule",
-    "handbook": "Family handbook",
+    "handbook": "Family guidebook",
     "privacy": "Privacy",
     "tour": "Book a tour",
     "call": "Call",
@@ -53,9 +54,24 @@
     },
     "notices": {
       "heading": "Announcements",
-      "now": "Now on",
       "flyer": "See the flyer",
       "swipe": "Swipe for more."
+    },
+    "reel": {
+      "label": "Notice",
+      "region": "Announcements",
+      "show": "Show announcement"
+    },
+    "cal": {
+      "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      "sep": " ",
+      "days": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+      "closed": "PRA closed",
+      "makeup": "Make-up day, only if needed",
+      "firstLast": "First and last day",
+      "fee": "Quarterly tuition due",
+      "today": "Today",
+      "caption": "The year month by month. Every date is also in the list below."
     }
   },
   "vi": {
@@ -72,6 +88,7 @@
     "academics": "Chương trình",
     "admissions": "Tuyển sinh",
     "events": "Sự kiện",
+    "writing": "Bài viết học viên",
     "contact": "Liên hệ",
     "enrollment": "Đăng ký học",
     "fees": "Học phí",
@@ -111,9 +128,24 @@
     },
     "notices": {
       "heading": "Thông báo",
-      "now": "Tin mới",
       "flyer": "Xem tờ rơi",
       "swipe": "Vuốt để xem thêm."
+    },
+    "reel": {
+      "label": "Thông báo",
+      "region": "Thông báo",
+      "show": "Xem thông báo"
+    },
+    "cal": {
+      "months": ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
+      "sep": "/",
+      "days": ["T2", "T3", "T4", "T5", "T6", "T7", "CN"],
+      "closed": "Trung tâm nghỉ",
+      "makeup": "Ngày học bù, chỉ khi cần",
+      "firstLast": "Ngày đầu và ngày cuối năm học",
+      "fee": "Hạn đóng học phí theo quý",
+      "today": "Hôm nay",
+      "caption": "Lịch năm học theo từng tháng. Tất cả các ngày cũng có trong danh sách bên dưới."
     }
   }
 }

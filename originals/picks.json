@@ -1223,5 +1223,54 @@
       "courtyard"
     ],
     "focus": "44% 40%"
+  },
+  {
+    "src": "guidebook/family-guidebook-2026-cover.png",
+    "slug": "family-guidebook-2026-cover",
+    "alt": "Cover of the Palm River Academy Family Guidebook 2026: a family of four sitting together on a picnic blanket"
+  },
+  {
+    "src": "writing/2026-10-amada/The first 20 periotic table By Amada.png",
+    "slug": "student-writing-amada-periodic-table-poster",
+    "alt": "Amada's Canva poster for her project, The First 20 of the Periodic Table. Her words are written out on this page.",
+    "taken": "2026-10-09",
+    "tags": [
+      "student writing",
+      "Art of Science"
+    ]
+  },
+  {
+    "src": "writing/2026-10-amada/Image_20261009_184815_096.jpeg",
+    "slug": "art-of-science-water-cycle-model-hills",
+    "aspect": "3:4",
+    "alt": "A student holds up her water cycle model: a painted river running down green card hills, with clouds on sticks and labelled arrows",
+    "tags": [
+      "Art of Science"
+    ]
+  },
+  {
+    "src": "writing/2026-10-amada/Image_20261009_184815_221.jpeg",
+    "slug": "art-of-science-water-cycle-model-box",
+    "aspect": "4:3",
+    "alt": "Three students hold up their water cycle model, built in a box painted blue, with a paper sun and cotton-wool clouds labelled condensation and precipitation",
+    "tags": [
+      "Art of Science"
+    ]
+  },
+  {
+    "src": "writing/2026-10-amada/Image_20261009_184815_139.jpeg",
+    "slug": "student-writing-amada-periodic-table-project",
+    "region": [
+      0.2865,
+      0.6035,
+      0.62,
+      0.3307
+    ],
+    "alt": "Amada's finished periodic table: the first 20 elements painted on black squares in a pink clay frame with red bows, and her handwritten key beside it",
+    "taken": "2026-10-09",
+    "tags": [
+      "student writing",
+      "Art of Science"
+    ]
   }
 ]

@@ -1,0 +1,79 @@
+---
+layout: layouts/base.njk
+tone: light
+tags: writing
+title: "THE FIRST 20 OF THE PERIODIC TABLE PROJECT"
+description: "Amada's Art of Science project on the first 20 elements of the periodic table, in her own words."
+date: 2026-10-10
+author: "Amada"
+subject: "Art of Science"
+cover: "student-writing-amada-periodic-table-poster"
+summary: "Amada's project on the first 20 elements: what the periodic table is, why she chose it and how she made it."
+---
+
+{# Amada's words come from her Canva design (canva.link/lr8u9poaw57gv05), copied exactly: her capitals,
+   spelling, spacing and punctuation, with no corrections (Bowen, 2026-10-10). The paragraphs keep
+   double spaces (white-space: pre-wrap), and the one line break inside "HOW I MADE IT" is hers.
+   The periodic table photo is cropped so the student's face is out of frame; never use the uncropped original. #}
+<section class="phero phero--post">
+  <span class="phero__dots" aria-hidden="true"></span>
+  {% set frondClass = "frond--tr frond--soft" %}{% include "partials/frond.njk" %}
+  <div class="wrap post-head">
+    <p class="eyebrow eyebrow--on rise" style="--d:0"><a href="{{ '/writing/' | href(lang) }}">{{ writing.name }}</a> · {{ subject }}</p>
+    <h1 class="rise" style="--d:1">{{ title }}</h1>
+    <p class="post-head__by rise" style="--d:2">{{ writing.by }} <strong>{{ author }}</strong> · <time datetime="{{ page.date.toISOString().slice(0, 10) }}">{{ page.date | longDate(lang) }}</time> · {{ writing.asWritten }}</p>
+  </div>
+  {% include "partials/river.njk" %}
+</section>
+
+<section class="post">
+  <div class="wrap post__grid">
+    <article class="post__paper" lang="en">
+      <h2>WHAT IS THE PERIODIC  TABLE?</h2>
+      <p>THE PERIODIC TABLE IS A TABLE THAT SHOWS ALL THE ELEMENTS AND WHAT ELEMENTS NUMBER THEY ARE.</p>
+
+      <h2>WHY I CHOSE TO PRESENT THE PERIODIC TABLE:</h2>
+      <p>BECAUSE  I THOUGHT IT WAS UNIQUE NO ONE WAS DOING AND BECAUSE I NEED TO REMEBER WHAT ELEMENTS WERE WHAT SO I DECIDED TO DO SOMETHING I FOUND DIFFICULT.</p>
+
+      <h2>HOW I MADE IT:</h2>
+      <p>FIRST OF ALL I NEEDED A BIG PIECE OF CARDBOARD TO MAKE THE BASE OF THE PROJECT THEN I MIXED SOME DIFFERENT PAINTS EXPIEREMENTING WITH THE COLORS<br>BUT NOT MIXING THEM FULLY TO MAKE A NICE EFFECT THEN I MADE A SIGN  OUT OF PAPER AND CARDBOARD ,AND THEN I MADE A CUTE FRAME OUT OF CLAY AND BOWS.</p>
+
+      <h2>ABOUT ART OF SCIENCE  CLASS:</h2>
+      <p>IN ART OF SCIENCE CLASS ,OUR TEACHER IS MR SETH . WE MAKE DIFFERENT ROJECTS DEPENDING ON WHAT WE ARE LEARNING IN SIENCE CLASS MY CLASS HAS MADE MANY PROJECTS INCLUDING A DIAGRAM : OF A CELL ,WATER CYCLE , SOLAR SYSTEM , VOLCANO , ROBAT AND HAVE DONE SOME EXPIERIMENT .</p>
+    </article>
+
+    <div class="post__art">
+      <figure class="post__fig post__fig--project">
+        {% photo "student-writing-amada-periodic-table-project", "post__project", "(min-width: 960px) 360px, 92vw" %}
+        <figcaption>The finished project.</figcaption>
+      </figure>
+      <figure class="post__fig post__fig--poster">
+        {% photo "student-writing-amada-periodic-table-poster", "post__poster", "(min-width: 960px) 300px, 64vw" %}
+        <figcaption>Amada's poster, made in Canva.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale post-note">
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">From us</p>
+      <h2>A note from PRA</h2>
+      <p>We post student writing as the student wrote it, with no corrections. Amada made this project in Art of Science, where students build something for each topic they cover in science. Below are two water cycle models from the same class.</p>
+      <p><a class="post-note__back" href="{{ '/writing/' | href(lang) }}">{{ writing.back }}</a></p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["art-of-science-water-cycle-model-hills", "art-of-science-water-cycle-model-box"] %}
+      {% set collageArt = true %}
+      {% set collageCredit = "Water cycle models from Art of Science." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

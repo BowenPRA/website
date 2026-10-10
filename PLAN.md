@@ -7,7 +7,7 @@
 
 Working plan for the new palmriveracademy.edu.vn. This replaces both the current
 Wix site (one long page) and the unfinished Wix Studio draft (ten pages). It is
-a static site hosted on GitHub Pages. No blog for now.
+a static site hosted on GitHub Pages. A student writing blog was added on 2026-10-10 (`/writing/`).
 
 ## 1. Who the site is for
 
@@ -89,10 +89,14 @@ center in Hội An, Việt Nam." The rest of the site says "learning community",
 
 ## 4. Site map
 
-Top nav (mirrors the Wix draft; hamburger sheet on mobile):
+Top nav (mirrors the Wix draft; hamburger sheet below 1100px since the sixth link arrived):
 About Us · Academics ▾ (Early Years, Primary, Secondary, Upper Years, Global Program) ·
-Admissions ▾ (Enrollment, Tuition and fees, Schedule and calendar, Family handbook,
-Book a tour) · Events · [Contact Us]
+Admissions ▾ (Enrollment, Tuition and fees, Schedule and calendar, Family guidebook,
+Book a tour) · Events · Student writing · [Contact Us]
+
+Under the nav bar on every page, the announcement reel (`src/_data/reel.json`): a navy pill
+with one short notice at a time. Each item has a `hideFrom` date and disappears on that day
+without a rebuild. It replaced the scrolling "Now on" strip that sat above the home noticeboard.
 
 Home page section order, top to bottom: full-bleed photo hero with palm leaves ·
 Our story · values marquee · "Content through context" (the English
@@ -115,8 +119,9 @@ not a year group) · Find your way to PRA · CTA.
 | `/admissions/` | How to enroll | Four steps + FAQ | Steps 1 to 4, FAQ (documents, assessment, English level, trial day, rolling admissions), inquiry form | Send inquiry |
 | `/admissions/tuition-and-fees/` | Tuition and fees | Real numbers | Regular Program table, Global Program table, other fees, payment schedule, transport, refund policy, Vietnamese translation link | Ask a question |
 | `/families/calendar/` | Calendar | Academic year dates | Month-by-month list (from data file), download .ics link later | none |
-| `/families/schedule/` | Schedule and calendar | The shape of the day at each stage, then the year's dates | Day-at-a-glance chart, one card per stage (core mornings, weekly mix of specialist and vocational classes), practical notes, calendar | Book a visit |
-| `/families/handbook/` | Family handbook | Norms and guidelines | Link to PDF plus a short summary | none |
+| `/families/schedule/` | Schedule and calendar | The shape of the day at each stage, then the year's dates | Day-at-a-glance chart, one card per stage (core mornings, weekly mix of specialist and vocational classes), practical notes, calendar: month grids like the office's PDF (`partials/calgrid.njk`, dates in `calendar.json` `grid`), then the list | Book a visit |
+| `/families/handbook/` | Family guidebook | Norms and guidelines | Short summary, then the Family Guidebook 2026 PDF (`src/assets/docs/`, shrunk from 18.8 MB to 3.3 MB) to read or download, with its contents opening the PDF at each page | none |
+| `/writing/` | Student writing (working name The Palm Press) | Students' own writing, posted as written | A card per post; each post (`src/writing/`, tag `writing`) is the student's words on ruled paper beside their pictures, then a note from us | Book a visit |
 | `/events/` | Events | Last year's festivals, theme weeks, trips and graduation, August to June | Month chips, one section per event (from `src/_data/events.json`: name, date, 1 to 3 sentences, polaroids with a lightbox), link to this year's calendar | Book a visit |
 | `/contact/` | Contact / Book a visit | One form, map, phone, Zalo/WhatsApp, hours | Form (name, child's age, dates if visiting, message), addresses of both campuses, hours | Send |
 | `/album/` | Photo album (ours) | Find a photo again: every photo the site has built, with its tags, file names and the page it is used on | Search, filter chips (where it's used, school year, event, who's in it, stage, type), a card per photo, lightbox | none — not in the nav, `noindex` |
@@ -145,6 +150,9 @@ one hand-drawn underline per page, big photos of real students.
 - Stage colours (sun `#FFC857`, green, blue, coral `#FF6F59`, violet `#7C5CFF`) are markers
   only: menu dots, age chips, tile labels, price-card bars, the day chart and one sticker. They
   never colour a whole page or a button. Sun, coral and violet never carry body text.
+- The calendar month grids are the one place where sun fills a square: closed days are solid sun,
+  as in the office's PDF and the "no classes" tags; the four quarters tint their weekdays blue,
+  green, violet and coral. They are day-sized markers, not bands.
 - Small accents keep the pages from looking samey: card icons cycle through the five colours,
   as do value numbers, step badges, checklist ticks, calendar month bars, event month badges,
   gallery tape, staff cards and the three stat marks. All of these are small shapes, never

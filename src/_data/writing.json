@@ -1,0 +1,16 @@
+{
+  "_about": "The student writing blog: /writing/ lists the posts, one page per post under src/writing/ (tag `writing`) and its Vietnamese twin under src/vi/writing/ (tag `writingVi`). Posts go up as the student wrote them, with no corrections. `name` is a working name until Bowen picks one (2026-10-10).",
+  "name": "The Palm Press",
+  "tagline": "Writing by Palm River Academy students, posted as they wrote it.",
+  "asWritten": "Posted as written",
+  "by": "By",
+  "back": "All student writing",
+  "read": "Read it",
+  "vi": {
+    "tagline": "Bài viết của học viên Palm River Academy, đăng nguyên văn như các em đã viết.",
+    "asWritten": "Đăng nguyên văn",
+    "by": "Bài của",
+    "back": "Tất cả bài viết của học viên",
+    "read": "Đọc bài"
+  }
+}
