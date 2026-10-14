@@ -1591,6 +1591,15 @@ tr:last-child td { border-bottom: 0; }
 .event .gallery { margin-top: 30px; }
 .gallery--event { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 24px; }
 .gallery--event .photo { aspect-ratio: 4 / 3; }
+.event__more { margin: 1.2em 0 0; }
+
+/* An event's own page (src/events/<id>.njk): sections from the stage pages, a blue charity band with stats, button rows */
+.charity__links, .event-page__links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--s-5); }
+.event-page__links { justify-content: center; }
+.band--blue .charity__links .btn--white { color: var(--blue-deep); }
+.charity__text { max-width: 760px; }
+.charity__text p:not(.lede) { color: rgba(255,255,255,0.9); max-width: 62ch; }
+.band--pale .event__did { margin: 1.2em 0; --m: var(--blue-deep); }
 
 @media (min-width: 720px) {
   .year::before { content: ""; position: absolute; left: 52px; top: 30px; bottom: 30px; border-left: 3px dashed var(--line); }

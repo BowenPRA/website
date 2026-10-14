@@ -1,0 +1,124 @@
+---
+layout: layouts/base.njk
+tone: navy
+title: "Mid-Autumn Festival 2026"
+description: "Our Mid-Autumn Festival on Friday 25 September 2026: stalls and games run by students, mooncakes, a lion dance, and money raised for Da Nang Go's Mid-Autumn gifts for children."
+permalink: /events/mid-autumn-2026/
+---
+{# Facts come from Bowen (2026-09-28 and 09-29), the event write-up in
+   PRA Photos/2026-09-25 Mid-Autumn Festival/current/event.json, PRA's Facebook posts of 30 September and 6 October 2026
+   and Da Nang Go's recap of 2 October 2026 (both linked below). The charity is "Da Nang Go"
+   (facebook.com/dananggo.org). Never link dananggo.org itself: that domain is an unrelated website.
+   Do not name the lion dance troupe or credit the photographer (Bowen, 2026-09-28). #}
+{# Our two Mid-Autumn posts: the photos (30 Sep 2026, 10:43; linked by its first photo, the post has no public link)
+   and the Da Nang Go thank-you (6 Oct 2026). #}
+{% set fbPhotos = "https://www.facebook.com/photo/?fbid=1613111863944771&set=a.554071849848783" %}
+{% set fbPra = "https://www.facebook.com/palm.river.academy/posts/pfbid0rBDiYnSygD5ngiMQGSEMB8xyuEZekrFC4SgHprw5gNerus9Sn5JKtJ2NmFSQXuMFl" %}
+{% set fbDng = "https://www.facebook.com/dananggo.org" %}
+{% set fbDngRecap = "https://www.facebook.com/dananggo.org/posts/pfbid02cBEyvj6TpKUJjgBWFM6M9yrjYBrd62ebsuUyjif5TYt7oxVbajuoGk7K5hLLMHQWl" %}
+
+{% set heroPhoto = "mid-autumn-festival-2026-reaching-for-the-yellow-lion" %}
+{% set heroShape = "" %}
+{% set heroEyebrow = "Events · Friday 25 September 2026" %}
+{% set heroTitle = 'Mid-Autumn <span class="mark">Festival</span>' %}
+{% set heroText = "An afternoon for families, with stalls and games run by our students, mooncakes, a lion dance, and money raised for children's Mid-Autumn gifts." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">The afternoon</p>
+      <h2>Lanterns, mooncakes and a courtyard of families</h2>
+      <p>Year 7 spent the morning making paper lanterns for the festival. In the afternoon families came to a courtyard full of lanterns and student stalls.</p>
+      <p>Year 1 sang "Lemon Tree". At the mooncake table, adults helped children shape the filling and press it into moulds.</p>
+      <p>Cinnamon &amp; Spice Hội An baked cinnamon buns, focaccia and bread for the day.</p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["mid-autumn-festival-2026-pressing-the-mooncake-mould", "mid-autumn-festival-2026-pressing-a-mooncake", "mid-autumn-festival-2026-hand-in-hand-with-lanterns"] %}
+      {% set collageCredit = "The mooncake table, and lanterns in the courtyard." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap two two--top two--flip">
+    <div>
+      <p class="eyebrow eyebrow--blue">Run by students</p>
+      <h2>The stalls and games</h2>
+      <p>Students planned their own booths. They made the signs, set up the tables and served customers all afternoon.</p>
+      <ul class="event__did">
+        <li>Primary sold ice cream and ran carnival games.</li>
+        <li>Lower Secondary sold banana bread and ran a DIY craft booth.</li>
+        <li>Upper Secondary did face painting and henna, and hosted a limbo competition for students and parents.</li>
+      </ul>
+      <p>The profits went back to the students, who gave 15% of them to Da Nang Go.</p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["mid-autumn-festival-2026-the-snack-stall", "mid-autumn-festival-2026-limbo-in-ao-dai", "mid-autumn-festival-2026-grinning-under-the-pole"] %}
+      {% set collageWide = true %}
+      {% set collageCredit = "A student snack stall, and the limbo pole." %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">To finish</p>
+      <h2>Two lions in the courtyard</h2>
+      <p>A red lion and a yellow lion danced on the grass, along the upstairs balcony and down the stairs, then came in among the families. Children gave them lucky money, and a few brave ones rode on their backs.</p>
+      <p>The dance ended with both lions unrolling Mid-Autumn banners, and Mr. Seth spoke to the families.</p>
+    </div>
+    <div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = ["mid-autumn-festival-2026-two-lions-two-sparklers", "mid-autumn-festival-2026-tugging-the-masked-dancer", "mid-autumn-festival-2026-speaking-after-the-dance"] %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+<section class="band--blue charity" id="da-nang-go">
+  <div class="wrap">
+    <div class="charity__text">
+      <p class="eyebrow eyebrow--on">Giving back</p>
+      <h2>Mid-Autumn gifts with Da Nang Go</h2>
+      <p class="lede">Da Nang Go is a non-profit volunteer group in Đà Nẵng. This Mid-Autumn they collected snacks, milk, notebooks, rice and lanterns, packed them as gifts and took them to children who needed them.</p>
+      <p>Our students gave 15% of their stall profits. Parents gave money too, and bid on lanterns in a silent auction. Da Nang Go's campaign reached more than 850 children.</p>
+    </div>
+    <div class="stats mt">
+      <div class="stat"><p class="stat__num" data-count="200">200</p><h3>In Ngũ Hành Sơn</h3><p>Children in Đà Nẵng's Ngũ Hành Sơn area.</p></div>
+      <div class="stat"><p class="stat__num" data-count="115">115</p><h3>In the mountains</h3><p>Children at a school in the mountains.</p></div>
+      <div class="stat"><p class="stat__num" data-count="540">540</p><h3>Near the border</h3><p>Children in communities near the border.</p></div>
+    </div>
+    <p class="charity__links">
+      <a class="btn btn--white" href="{{ fbDngRecap }}" rel="noopener">Da Nang Go's recap</a>
+      <a class="btn btn--ghost-white" href="{{ fbDng }}" rel="noopener">Da Nang Go on Facebook</a>
+    </p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--blue">Thank you</p>
+    <h2>To everyone who came</h2>
+    <p class="lede">Thank you to the families who came, bought, bid and donated, and to our students, who got their booths ready and ran them for the whole afternoon.</p>
+    <p class="event-page__links">
+      <a class="btn btn--primary" href="{{ fbPhotos }}" rel="noopener">Our photos on Facebook</a>
+      <a class="btn btn--green" href="{{ fbPra }}" rel="noopener">Our Da Nang Go post</a>
+      <a class="btn btn--ghost" href="{{ '/events/' | href(lang) }}">All events</a>
+    </p>
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

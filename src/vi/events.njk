@@ -39,6 +39,7 @@ permalink: /vi/events/
               {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
             </ul>
             {% endif %}
+            {% if e.page %}<p class="event__more"><a class="btn btn--primary btn--small" href="{{ e.page | href(lang) }}">Xem toàn bộ</a></p>{% endif %}
             {% if e.photos.length %}
             <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
               {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
