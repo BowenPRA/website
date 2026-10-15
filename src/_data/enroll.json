@@ -1,8 +1,7 @@
 {
   "_about": "Every word on the enrollment form (/admissions/enroll/), English with a `vi` block. The form itself is src/_includes/partials/enroll-form.njk and its script src/assets/js/enroll.js. The values a choice sends (`value`) stay in English so the office reads one set of words. The admission contract is kept in English on both pages (check-vi skips contractIntro and contract): put a Vietnamese text here only when PRA supplies one.",
   "applying": [
-    { "value": "Academic Year 26-27", "label": "Academic year 2026-2027", "vi": { "label": "Năm học 2026-2027" } },
-    { "value": "Summer Program 2026", "label": "Summer Program 2026", "vi": { "label": "Chương trình hè 2026" } }
+    { "value": "Academic Year 26-27", "label": "Academic year 2026-2027", "vi": { "label": "Năm học 2026-2027" } }
   ],
   "steps": [
     { "title": "Student", "vi": { "title": "Học viên" } },

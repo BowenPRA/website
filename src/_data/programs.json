@@ -103,10 +103,11 @@
     "key": "global",
     "chip": "Just visiting Hội An",
     "name": "Global Program",
+    "more": "About the Global Program",
     "ages": "3 weeks to 3 months, ages 2 to 14",
     "url": "/learning/global-program/",
     "photo": "global-program-rice-paddy-hoi-an",
-    "summary": "For travelling families: a real class, half or full day, with a report and certificate at the end.",
+    "summary": "For traveling families: a real class, half or full day, with a report and certificate at the end.",
     "points": [
       "Stay 3 weeks to 3 months",
       "Half-day and full-day options",
@@ -115,6 +116,7 @@
     "tone": "violet",
     "vi": {
       "chip": "Đến Hội An ngắn ngày",
+      "more": "Tìm hiểu Global Program",
       "ages": "3 tuần đến 3 tháng, 2 đến 14 tuổi",
       "summary": "Dành cho các gia đình đang du lịch: con học chung lớp với học viên dài hạn, nửa ngày hoặc cả ngày, cuối khóa có báo cáo và giấy chứng nhận.",
       "points": [

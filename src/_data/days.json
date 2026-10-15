@@ -147,9 +147,9 @@
       "pm": {
         "title": "Afternoons",
         "items": [
-          { "classes": ["Maker Space (technology)", "Art of Science", "Movement", "History", "Executive Function", "Wellbeing"],
+          { "classes": ["Maker Space (technology)", "Art of Science", "Movement", "Wellbeing"],
             "text": "Specialist and vocational classes, with time each week to review and catch up.",
-            "vi": { "classes": ["Maker Space (công nghệ)", "Art of Science", "Movement", "Lịch sử", "Executive Function", "Wellbeing"], "text": "Các lớp kỹ năng và thực hành. Mỗi tuần đều có thời gian để các em ôn tập và bổ sung kiến thức." } }
+            "vi": { "classes": ["Maker Space (công nghệ)", "Art of Science", "Movement", "Wellbeing"], "text": "Các lớp kỹ năng và thực hành. Mỗi tuần đều có thời gian để các em ôn tập và bổ sung kiến thức." } }
         ],
         "vi": { "title": "Buổi chiều" }
       },

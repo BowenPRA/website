@@ -27,7 +27,7 @@ description: "Tìm hiểu và so sánh các chương trình Early Years, Primary
         <h3>{{ p.name }}</h3>
         <p>{{ p.summary }}</p>
         <ul>{% for pt in p.points %}<li>{{ pt }}</li>{% endfor %}</ul>
-        <a class="btn btn--primary btn--small" href="{{ p.url | href(lang) }}">Tìm hiểu {{ p.name }}</a>
+        <a class="btn btn--primary btn--small" href="{{ p.url | href(lang) }}">{{ p.more or ("Tìm hiểu " + p.name) }}</a>
       </article>
       {% endfor %}
     </div>
@@ -40,7 +40,7 @@ description: "Tìm hiểu và so sánh các chương trình Early Years, Primary
     <h2>So sánh các chương trình</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Chương trình</th><th>Độ tuổi</th><th>Nội dung học</th><th>Giờ học</th><th>Sĩ số lớp</th></tr></thead>
+        <thead><tr><th>Chương trình</th><th>Độ tuổi / khối lớp</th><th>Nội dung học</th><th>Giờ học</th><th>Sĩ số lớp</th></tr></thead>
         <tbody>
           <tr><td>Early Years</td><td>20 tháng đến 4 tuổi</td><td>Khung chương trình EYFS của Anh, dạy bằng tiếng Anh</td><td>8:00 đến 15:15</td><td>Nhóm nhỏ</td></tr>
           <tr><td>Primary</td><td>Year 1 đến Year 6</td><td>Cambridge Primary, cùng các lớp kỹ năng và thực hành</td><td>8:00 đến 15:15</td><td>Lớp nhỏ</td></tr>
