@@ -2295,5 +2295,24 @@
       "play",
       "classroom"
     ]
+  },
+  "quarter-1-showcase-2026-at-the-reading-wall": {
+    "alt": "Lower Secondary students and a parent at a reading wall where every sticky note is a book read.",
+    "width": 1600,
+    "height": 1200,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_10_15 Quarter 1 Showcase/curated/quarter-1-showcase-2026-at-the-reading-wall.jpg",
+    "focus": "48% 26%",
+    "taken": "2026-10-15",
+    "tags": [
+      "lower-secondary",
+      "reading",
+      "presentation",
+      "classroom"
+    ]
   }
 }
