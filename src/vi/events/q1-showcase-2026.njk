@@ -2,28 +2,77 @@
 layout: layouts/base.njk
 tone: green
 title: "Showcase Quý 1 năm 2026"
-description: "Buổi Showcase Quý 1 tại Palm River Academy, thứ Năm 15/10/2026: các con giới thiệu với ba mẹ những gì đã học trong quý, từ vở kịch về cây của lớp Year 1 đến những câu hỏi Toán dành cho ba mẹ."
+description: "Buổi Showcase Quý 1 tại Palm River Academy, thứ Năm 15/10/2026: những bữa tiệc tranh luận, câu hỏi Toán dành cho ba mẹ, vở kịch về cái cây của lớp Year 1 và các góc học tập của Early Years."
 permalink: /vi/events/q1-showcase-2026/
 ---
 {# Twin of src/events/q1-showcase-2026.njk; see the notes there. Not yet read by Vietnamese staff. #}
 {% set slides = '/assets/docs/year-1-showcase-quarter-1-2026.pdf' | href(lang) %}
 
-{# Until the photos are published the hero is Year 1's first slide. #}
-{% set heroPhoto = "quarter-1-showcase-2026-the-high-kicking-gardener" if photos["quarter-1-showcase-2026-the-high-kicking-gardener"] else "quarter-1-showcase-2026-year-1-slides-cover" %}
-{% set heroShape = "" %}
+{% set heroPhoto = "quarter-1-showcase-2026-the-ai-debate" %}
+{% set heroShape = "tall" %}
+{% if not photos[heroPhoto] %}{% set heroPhoto = "quarter-1-showcase-2026-year-1-slides-cover" %}{% set heroShape = "" %}{% endif %}
 {% set heroEyebrow = "Sự kiện · Thứ Năm, 15/10/2026" %}
 {% set heroTitle = 'Showcase <span class="mark">Quý 1</span>' %}
 {% set heroText = "Một buổi chiều để các con giới thiệu với ba mẹ những gì mình đã học trong quý đầu tiên của năm học." %}
 {% include "partials/pagehero.njk" %}
 
-{% set pics = ["quarter-1-showcase-2026-welcome-to-the-year-1-showcase", "quarter-1-showcase-2026-raindrops-and-seeds", "quarter-1-showcase-2026-singing-the-plant-song"] | onSite(photos) %}
+{% set pics = ["quarter-1-showcase-2026-showing-his-grandfather", "quarter-1-showcase-2026-the-social-media-debate", "quarter-1-showcase-2026-two-dinner-party-debates", "quarter-1-showcase-2026-peeking-over-the-debate"] | onSite(photos) %}
 <section>
+  <div class="wrap {{ 'two two--top' if pics.length else 'narrow' }}">
+    <div>
+      <p class="eyebrow">Upper Secondary</p>
+      <h2>Bữa tiệc tranh luận</h2>
+      <p>Mỗi học viên Upper Secondary chọn một câu hỏi, rồi tưởng tượng một bữa tiệc tối nơi những người nổi tiếng trong lịch sử và ngày nay cùng tranh luận về câu hỏi đó. Trên poster của mình, các em vẽ bàn tiệc, xếp chỗ cho khách mời và viết lại lời từng người: Napoleon và Abraham Lincoln bàn về thuế và cách mạng, Einstein nói về trí tuệ nhân tạo, Dolly Parton nói về chuyện con người có sinh ra để hợp tác với nhau hay không.</p>
+      <p>Những bàn tiệc khác bàn về việc giới hạn độ tuổi dùng mạng xã hội, và về việc ba mẹ có nên chỉnh sửa gen cho con hay không. Tại buổi Showcase, các em dẫn dắt ba mẹ qua cuộc tranh luận của mình, và một em đã kể lại cho ông nghe.</p>
+    </div>
+    {% if pics.length %}<div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = pics %}
+      {% set collage2up = pics.length == 4 %}
+      {% include "partials/collage.njk" %}
+    </div>{% endif %}
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+{% set pics = ["quarter-1-showcase-2026-the-parents-maths-challenge", "quarter-1-showcase-2026-fractions-on-the-whiteboard", "quarter-1-showcase-2026-at-the-reading-wall"] | onSite(photos) %}
+<section class="band--pale">
+  <div class="wrap {{ 'two two--top two--flip' if pics.length else 'narrow' }}">
+    <div>
+      <p class="eyebrow eyebrow--blue">Lower Secondary</p>
+      <h2>Câu hỏi Toán dành cho ba mẹ</h2>
+      <p>Học viên Lower Secondary giới thiệu các mô hình làm trong lớp Art of Science, lớp mỹ thuật đi kèm môn Khoa học Cambridge, cùng các poster giải thích những phần Toán đã học trong quý.</p>
+      <p>Sau đó đến lượt ba mẹ trả lời. Trên các poster có những bài đố, trong đó có bài về số chính phương và số lập phương, và ba mẹ viết câu trả lời lên giấy ghi chú và bảng con.</p>
+    </div>
+    {% if pics.length %}<div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = pics %}
+      {% include "partials/collage.njk" %}
+    </div>{% endif %}
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+{% set pics = ["quarter-1-showcase-2026-the-high-kicking-gardener", "quarter-1-showcase-2026-roll-and-read", "quarter-1-showcase-2026-showing-her-shapes"] | onSite(photos) %}
+<section id="year-1">
   <div class="wrap {{ 'two two--top' if pics.length else 'narrow' }}">
     <div>
       <p class="eyebrow">Year 1</p>
       <h2>Cây lớn lên như thế nào</h2>
-      <p>Ms. Solo mở đầu bằng vài lời giới thiệu ngắn với ba mẹ. Sau đó lớp Year 1 diễn một vở kịch nhỏ về cách cây lớn lên.</p>
-      <p>Các con đội băng đô, mặc trang phục bằng giấy, đóng vai mặt trời, cơn mưa, cái cây và người làm vườn, vừa diễn vừa hát.</p>
+      <p>Ms. Solo mở đầu bằng vài lời giới thiệu ngắn với ba mẹ. Sau đó lớp Year 1 diễn một vở kịch nhỏ về cách cây lớn lên: các con mặc trang phục bằng giấy, đóng vai mặt trời, cơn mưa, cái cây và người làm vườn, vừa diễn vừa hát.</p>
+      <p>Tiếp theo, ba mẹ ngồi cùng các con chơi đố vui: gieo xúc xắc rồi hỏi các con những câu trên thẻ. Cuối buổi, ba mẹ xem vở và các dự án của các con, và Ms. Solo trò chuyện riêng với những ba mẹ muốn hỏi thêm về con mình.</p>
+      <div class="card guidebook guidebook--slides" id="year-1-slides">
+        <a class="guidebook__cover" href="{{ slides }}" target="_blank" rel="noopener">{% photo "quarter-1-showcase-2026-year-1-slides-cover", "", "(min-width: 480px) 200px, 90vw" %}</a>
+        <div>
+          <h3>Trang chiếu của Year 1</h3>
+          <p>Điểm lại từng môn học trong quý, kèm ảnh chụp trong lớp.</p>
+          <p class="guidebook__meta">22 trang · PDF · 3,4 MB</p>
+          <p class="guidebook__do">
+            <a class="btn btn--primary btn--small" href="{{ slides }}" target="_blank" rel="noopener">Xem trang chiếu</a>
+            <a class="btn btn--ghost btn--small" href="{{ slides }}" download="Year 1 Showcase, Quarter 1 2026.pdf">Tải về</a>
+          </p>
+        </div>
+      </div>
     </div>
     {% if pics.length %}<div>
       {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
@@ -35,86 +84,11 @@ permalink: /vi/events/q1-showcase-2026/
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-{% set pics = ["quarter-1-showcase-2026-roll-and-read", "quarter-1-showcase-2026-showing-her-shapes", "quarter-1-showcase-2026-our-best-work"] | onSite(photos) %}
-<section class="band--pale">
-  <div class="wrap {{ 'two two--top two--flip' if pics.length else 'narrow' }}">
-    <div>
-      <p class="eyebrow eyebrow--blue">Year 1</p>
-      <h2>Thẻ đố vui và vở của các con</h2>
-      <p>Tiếp theo là trò đố vui. Ba mẹ ngồi cùng các con, gieo xúc xắc rồi hỏi các con những câu trên thẻ: mình trồng gì xuống đất? Con chó có lớn lên không?</p>
-      <p>Cuối buổi, ba mẹ xem vở và các dự án của các con, và Ms. Solo trò chuyện riêng với những ba mẹ muốn hỏi thêm về con mình.</p>
-    </div>
-    {% if pics.length %}<div>
-      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
-      {% set collagePhotos = pics %}
-      {% include "partials/collage.njk" %}
-    </div>{% endif %}
-  </div>
-</section>
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
-
-<section id="year-1-slides">
-  <div class="wrap two two--top">
-    <div>
-      <p class="eyebrow">Quý 1 của lớp Year 1</p>
-      <h2>Cả quý trong 22 trang chiếu</h2>
-      <p>Bộ trang chiếu lớp Year 1 trình chiếu chiều hôm đó điểm lại từng môn học trong quý, kèm ảnh chụp trong lớp.</p>
-      <ul class="event__did">
-        <li><strong>Tiếng Anh:</strong> phonics (ngữ âm), từ CVC, nguyên âm ngắn và nguyên âm dài, và cách đặt câu.</li>
-        <li><strong>Toán:</strong> đếm cách 2, số chẵn và số lẻ, hình 2D và hình 3D cùng các mặt, cạnh và đỉnh của chúng.</li>
-        <li><strong>Khoa học:</strong> cây và những gì cây cần để lớn, vật sống và vật không sống, và âm thanh, qua những nhạc cụ các con tự làm.</li>
-      </ul>
-    </div>
-    <div class="card guidebook guidebook--slides">
-      <a class="guidebook__cover" href="{{ slides }}" target="_blank" rel="noopener">{% photo "quarter-1-showcase-2026-year-1-slides-cover", "", "(min-width: 480px) 380px, 90vw" %}</a>
-      <div>
-        <h3>Year 1 Showcase, Quý 1</h3>
-        <p class="guidebook__meta">22 trang · PDF · 3,4 MB</p>
-        <p class="guidebook__do">
-          <a class="btn btn--primary btn--small" href="{{ slides }}" target="_blank" rel="noopener">Xem trang chiếu</a>
-          <a class="btn btn--ghost btn--small" href="{{ slides }}" download="Year 1 Showcase, Quarter 1 2026.pdf">Tải về</a>
-        </p>
-      </div>
-      <div class="guidebook__inside">
-        <p class="guidebook__head">Bên trong</p>
-        <ol>
-          {% for p in [
-            [2, "Chương trình buổi chiều"], [3, "Học qua vui chơi"], [4, "Quý 1"], [5, "Vận động buổi sáng"],
-            [8, "Tiếng Anh"], [10, "Toán"], [13, "Khoa học"], [15, "Giờ đọc sách"], [16, "Tình bạn"],
-            [18, "Nấu ăn"], [19, "Công nghệ"], [20, "Mỹ thuật"], [21, "Trò chơi ngoài sân"]
-          ] %}<li><a href="{{ slides }}#page={{ p[0] }}" target="_blank" rel="noopener"><span>{{ p[0] }}</span>{{ p[1] }}</a></li>{% endfor %}
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-{% set pics = ["quarter-1-showcase-2026-the-parents-maths-challenge", "quarter-1-showcase-2026-fractions-on-the-whiteboard"] | onSite(photos) %}
-<section class="band--pale">
-  <div class="wrap {{ 'two two--top two--flip' if pics.length else 'narrow' }}">
-    <div>
-      <p class="eyebrow eyebrow--blue">Lower Secondary và Upper Secondary</p>
-      <h2>Poster, mô hình và câu hỏi dành cho ba mẹ</h2>
-      <p>Học viên Lower Secondary giới thiệu các mô hình làm trong lớp Art of Science, lớp mỹ thuật đi kèm môn Khoa học Cambridge, cùng các poster giải thích những phần Toán đã học trong quý.</p>
-      <p>Sau đó đến lượt ba mẹ trả lời. Bên dưới poster về số chính phương và số lập phương có một bài đố, và ba mẹ viết câu trả lời lên giấy ghi chú.</p>
-      <p>Học viên Upper Secondary dẫn dắt ba mẹ cùng trò chuyện về các nhân vật lịch sử, như trong một bữa tối gia đình.</p>
-    </div>
-    {% if pics.length %}<div>
-      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
-      {% set collagePhotos = pics %}
-      {% set collageCredit = "Ba mẹ giải bài đố Toán của học viên Lower Secondary." %}
-      {% include "partials/collage.njk" %}
-    </div>{% endif %}
-  </div>
-</section>
-
-{% set waveColor = "white" %}{% include "partials/wave.njk" %}
-
 {% set pics = ["quarter-1-showcase-2026-count-and-match", "quarter-1-showcase-2026-threading-bead-patterns", "quarter-1-showcase-2026-blend-find-write"] | onSite(photos) %}
-<section>
-  <div class="wrap {{ 'two two--top' if pics.length else 'narrow' }}">
+<section class="band--pale">
+  <div class="wrap {{ 'two two--top two--flip' if pics.length else 'narrow' }}">
     <div>
-      <p class="eyebrow">Early Years</p>
+      <p class="eyebrow eyebrow--blue">Early Years</p>
       <h2>Chữ cái, quy luật và đếm số</h2>
       <p>Ở lớp Early Years, ba mẹ cùng các bé và cô giáo đi qua từng góc chơi trong lớp. Có góc chữ cái để ghép âm, tìm và viết, góc xâu hạt theo quy luật, góc thẻ số để đếm và ghép cặp, và một khay bọt có màu.</p>
     </div>
@@ -126,9 +100,9 @@ permalink: /vi/events/q1-showcase-2026/
     </div>{% endif %}
   </div>
 </section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
-{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
-<section class="band--pale">
+<section>
   <div class="wrap center narrow">
     <p class="eyebrow eyebrow--blue">Cảm ơn</p>
     <h2>Cảm ơn mọi người đã đến</h2>
