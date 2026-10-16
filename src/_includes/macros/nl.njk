@@ -8,10 +8,10 @@
 {%- else -%}{{ obj | nl(lang) }}{%- endif -%}
 {%- endmacro %}
 
-{# A body: small HTML, already cleaned by The Current (README "payload"), so it goes in as it is #}
+{# A body: small HTML, cleaned by The Current (README "payload") and cleaned again here, so no stored text can run on the page #}
 {% macro body(obj, lang, T) -%}
 {%- set en = obj | nlEn(lang) -%}
-<div class="nl-text"{% if en %} lang="en"{% endif %}>{% if en %}<p class="nl-entag-row"><span class="nl-entag">{{ T.nl.english }}</span></p>{% endif %}{{ obj | nl(lang) | safe }}</div>
+<div class="nl-text"{% if en %} lang="en"{% endif %}>{% if en %}<p class="nl-entag-row"><span class="nl-entag">{{ T.nl.english }}</span></p>{% endif %}{{ obj | nl(lang) | nlHtml | safe }}</div>
 {%- endmacro %}
 
 {# One photo: src about 1600 px wide, small about 800; alt doubles as the caption #}

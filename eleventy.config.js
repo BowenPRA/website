@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { loc, isVi, toLang, twinPath, basePath } from "./lib/i18n.js";
-import { pick as nlPick, isEnglishOnly as nlIsEnglishOnly, icon as nlIcon, dateLeaf as nlDateLeaf, sitePath as nlSitePath, addDays as nlAddDays } from "./lib/newsletter.js";
+import { pick as nlPick, cleanHtml as nlClean, isEnglishOnly as nlIsEnglishOnly, icon as nlIcon, dateLeaf as nlDateLeaf, sitePath as nlSitePath, addDays as nlAddDays } from "./lib/newsletter.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
@@ -69,6 +69,7 @@ export default function (eleventyConfig) {
   // ---------- the weekly newsletter (lib/newsletter.js, src/_data/newsletters.js) ----------
   // Text from a payload in the page's language, English when the Vietnamese is not written yet.
   eleventyConfig.addFilter("nl", (obj, lang) => nlPick(obj, lang));
+  eleventyConfig.addFilter("nlHtml", (html) => nlClean(html));
   // True when a Vietnamese page shows English for this text (it gets an "English" tag).
   eleventyConfig.addFilter("nlEn", (obj, lang) => nlIsEnglishOnly(obj, lang));
   // A lucide icon as inline SVG: {{ "trophy" | ico | safe }}, {{ "check" | ico("nl-tick") | safe }}
