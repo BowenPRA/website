@@ -91,6 +91,8 @@
       "latest": "Latest newsletters",
       "latestText": "Every Friday we send families the news from the week and the dates coming up. Every issue is also here, in English and Vietnamese.",
       "reelLink": "Read this week's issue",
+      "share": "Share this issue",
+      "copied": "Link copied",
       "editions": {
         "post": "Palm River Post",
         "ey": "Early Years"
@@ -221,6 +223,8 @@
       "latest": "Bản tin mới nhất",
       "latestText": "Mỗi thứ Sáu, PRA gửi đến các gia đình tin tức trong tuần và những ngày sắp tới. Tất cả các số bản tin cũng được đăng ở đây, bằng tiếng Anh và tiếng Việt.",
       "reelLink": "Đọc số tuần này",
+      "share": "Chia sẻ bản tin",
+      "copied": "Đã sao chép đường dẫn",
       "editions": {
         "post": "Palm River Post",
         "ey": "Early Years"

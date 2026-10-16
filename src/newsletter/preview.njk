@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+permalink: /newsletter/preview/
+noindex: true
+eleventyExcludeFromCollections: true
+title: "Newsletter preview"
+description: "A preview of a newsletter issue from The Current."
+---
+{# The full-page preview The Current opens from its newsletter editor (Preview > Full page).
+   The editor sends the issue as it is right now (and again as it changes) with postMessage;
+   this page draws it with lib/nl-page.js, the same code that draws the real issue pages.
+   Only The Current (current.pra.edu.vn) may send it; nothing is saved, and the page is not
+   linked from anywhere or indexed. #}
+<div id="nl-preview">
+  <section class="nlpv-wait">
+    <div class="wrap">
+      <p class="nlpv-wait__h">Newsletter preview</p>
+      <p>Open this page from The Current: Outreach, Newsletter, an issue, then <b>Full page preview</b>. The issue shows here as families will see it on pra.edu.vn.</p>
+    </div>
+  </section>
+</div>
+<div class="nlpv-bar" role="region" aria-label="Preview">
+  <span class="nlpv-bar__tag">Preview</span>
+  <span class="nlpv-bar__text">Not on the website yet. It updates as the issue is edited in The Current.</span>
+  <span class="nlpv-bar__lang" role="group" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="vi" aria-pressed="false">VI</button>
+  </span>
+</div>
+<script id="nl-preview-data" type="application/json">{{ { strings: { en: strings.en, vi: strings.vi }, icons: ("" | nlIconMap), siteName: site.name } | dump | safe }}</script>
+<script type="module">
+  import { renderIssue, enhance } from "/assets/js/nl-page.js";
+  const data = JSON.parse(document.getElementById("nl-preview-data").textContent);
+  const box = document.getElementById("nl-preview");
+  // The live Current only; any local address while this page itself is a local test build.
+  const local = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  const okOrigin = (o) => o === "https://current.pra.edu.vn" || (local && /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o));
+  const icon = (n, c) => { const svg = data.icons[n] || data.icons.circle; return c ? svg.replace('class="ico"', `class="ico ${c}"`) : svg; };
+  let issue = null;
+  let lang = "en";
+  // Inside The Current's editor (?embed=1) the editor has its own EN / VI, so the bar goes.
+  const embed = new URLSearchParams(location.search).has("embed");
+  if (embed) document.documentElement.classList.add("nlpv-embed");
+  function draw(keepPlace) {
+    if (!issue) return;
+    const y = window.scrollY;
+    const { hero, body } = renderIssue(issue, { lang, T: data.strings[lang], siteName: data.siteName, icon, preview: true });
+    box.innerHTML = hero + body;
+    document.documentElement.lang = lang;
+    document.body.classList.toggle("tone-green", issue.edition === "ey");
+    document.body.classList.toggle("tone-blue", issue.edition !== "ey");
+    document.title = `Preview · ${(issue.edition_name && issue.edition_name[lang]) || ""} · ${(issue.label && issue.label[lang]) || ""}`;
+    document.querySelectorAll(".nlpv-bar__lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    enhance(document);
+    if (keepPlace) window.scrollTo(0, y);
+  }
+  window.addEventListener("message", (e) => {
+    if (!okOrigin(e.origin) || !e.data || e.data.type !== "nl-preview" || !e.data.issue) return;
+    const first = !issue;
+    issue = e.data.issue;
+    // The language The Current asks for: on the first draw, or always when it says so (the editor's own EN / VI).
+    if (e.data.lang && (first || e.data.force)) lang = e.data.lang === "vi" ? "vi" : "en";
+    draw(!first);
+  });
+  const setLang = (l) => { lang = l; draw(false); window.scrollTo(0, 0); };
+  box.addEventListener("click", (e) => { const a = e.target.closest("a[data-lang]"); if (a) { e.preventDefault(); setLang(a.dataset.lang); } });
+  document.querySelectorAll(".nlpv-bar__lang button").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
+  // Tell The Current this page is ready for the issue (the message carries nothing else).
+  const host = window.opener || (window.parent !== window ? window.parent : null);
+  if (host) host.postMessage({ type: "nl-preview-ready" }, "*");
+</script>

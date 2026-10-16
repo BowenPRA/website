@@ -1,10 +1,14 @@
 import { readFileSync } from "node:fs";
 import { loc, isVi, toLang, twinPath, basePath } from "./lib/i18n.js";
 import { pick as nlPick, cleanHtml as nlClean, isEnglishOnly as nlIsEnglishOnly, icon as nlIcon, dateLeaf as nlDateLeaf, sitePath as nlSitePath, addDays as nlAddDays } from "./lib/newsletter.js";
+import { renderIssue as nlRender, PAGE_ICONS as NL_PAGE_ICONS } from "./lib/nl-page.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/CNAME": "CNAME" });
+  // The newsletter page's renderer, also for the browser (the preview The Current opens).
+  eleventyConfig.addPassthroughCopy({ "lib/nl-page.js": "assets/js/nl-page.js" });
+  eleventyConfig.addWatchTarget("lib/nl-page.js");
   eleventyConfig.addWatchTarget("src/assets/");
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
@@ -66,7 +70,11 @@ export default function (eleventyConfig) {
     return (items || []).filter((i) => !i.hideFrom || i.hideFrom > today);
   });
 
-  // ---------- the weekly newsletter (lib/newsletter.js, src/_data/newsletters.js) ----------
+  // ---------- the weekly newsletter (lib/newsletter.js, lib/nl-page.js, src/_data/newsletters.js) ----------
+  // An issue's page, hero and body (lib/nl-page.js: the same code draws The Current's preview).
+  eleventyConfig.addFilter("nlPage", (issue, lang, strings, siteName, piece) => nlRender(issue, { lang, T: strings[lang], siteName, icon: nlIcon })[piece]);
+  // Every icon the issue page may use, as { name: svg }, for the preview page.
+  eleventyConfig.addFilter("nlIconMap", () => Object.fromEntries(NL_PAGE_ICONS.map((n) => [n, nlIcon(n)])));
   // Text from a payload in the page's language, English when the Vietnamese is not written yet.
   eleventyConfig.addFilter("nl", (obj, lang) => nlPick(obj, lang));
   // Cleaned again; a paragraph all in bold becomes a small heading, as in the office's Google Doc.

@@ -2238,6 +2238,109 @@ tr:last-child td { border-bottom: 0; }
 .nl-press__go .ico { width: 18px; height: 18px; transition: translate 0.25s var(--bounce); }
 .nl-press:hover .nl-press__go .ico { translate: 3px 0; }
 
+/* ----- sections written as in the office's Google Doc (lib/nl-page.js) ----- */
+/* The heading's emoji in the round badge, where the icon was */
+.nl-badge--emoji { font-size: 27px; line-height: 1; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+.nl-head > div { min-width: 0; }
+.nl-kicker { margin: 6px 0 0; font-size: clamp(1rem, 0.94rem + 0.3vw, 1.15rem); font-weight: 600; line-height: 1.35; color: var(--c-ink); }
+.nl-main .nl-text { font-size: 1.04rem; line-height: 1.72; }
+.nl-main .nl-text p { max-width: 68ch; }
+
+/* a class's section: the band, its emoji in the round face, the theme under the name */
+.nl-class__face--emoji { font-size: 38px; line-height: 1; background: #fff; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+.nl-class__theme { margin: 4px 0 0; font-size: clamp(1rem, 0.94rem + 0.3vw, 1.15rem); font-weight: 600; line-height: 1.3; color: var(--blue-ink); opacity: 0.85; }
+
+/* small headings as cards, two side by side on a wide screen */
+.nl-cards2 { display: grid; gap: 14px; container-type: inline-size; }
+@media (min-width: 720px) { .nl-cards2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .nl-card2--wide { grid-column: 1 / -1; } }
+.nl-card2 {
+  min-width: 0; padding: 18px 20px 20px; border-radius: 18px;
+  background: color-mix(in srgb, var(--c-pale) 45%, #fff); border: 1px solid color-mix(in srgb, var(--c-edge) 70%, #fff);
+}
+.nl-card2:nth-child(4n+2) { background: #fff; }
+.nl-card2:nth-child(4n+3) { background: #fff; }
+.nl-card2 h3 { display: flex; align-items: center; gap: 11px; margin: 0 0 10px; font-size: 1.08rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.005em; color: var(--blue-ink); }
+.nl-card2__e {
+  flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
+  background: #fff; box-shadow: inset 0 0 0 1.5px var(--c-edge), 2px 2px 0 var(--c-edge); font-size: 19px; line-height: 1; rotate: -5deg;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+.nl-card2:nth-child(even) .nl-card2__e { rotate: 4deg; }
+.nl-main .nl-card2 .nl-text { font-size: 1rem; line-height: 1.65; }
+/* "Looking Ahead": the card with a list, in the section's colour */
+.nl-card2--list { background: var(--c-pale) !important; border-color: var(--c-edge); border-style: dashed; border-width: 2px; }
+
+/* lists whose lines start with a word in bold ("Phonics: …"): the word as a label */
+.nl-text ul.nl-labels { display: grid; gap: 10px; margin: 0 0 0.85em; padding: 0; list-style: none; }
+.nl-labels li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin: 0; padding: 0; line-height: 1.55; }
+.nl-labels .nl-label {
+  display: inline-block; padding: 2px 11px; border-radius: var(--pill); background: #fff; border: 1.5px solid var(--c-edge);
+  color: var(--c-ink); font-size: 0.84rem; font-weight: 700; line-height: 1.5; white-space: nowrap;
+}
+.nl-labels > li > span:last-child { flex: 1 1 260px; min-width: 0; }
+.nl-labels__e { font-size: 1.1em; }
+
+/* a section that is a list of dates: calendar leaves */
+.nl-datesec .nl-need__h { background: var(--c, var(--np-btn)); }
+.nl-datesec.nl-t--sun .nl-need__h { color: var(--sun-ink); }
+.nl-need__e { font-size: 1.35em; line-height: 1; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+.nl-datesec .nl-dates ul { margin: 0; }
+.nl-leafwrap { position: relative; align-self: start; display: block; width: 64px; }
+.nl-leafwrap .nl-leaf { width: 64px; }
+.nl-date:nth-child(even) .nl-leafwrap .nl-leaf { rotate: 2deg; }
+.nl-leaf__e {
+  position: absolute; right: -10px; bottom: -10px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  background: #fff; box-shadow: 0 3px 8px rgba(14,42,92,0.16); font-size: 16px; line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+.nl-dates__note { margin: 18px 0 0; padding-top: 16px; border-top: 1px dashed var(--line); color: var(--ink-soft); font-size: 0.98rem; line-height: 1.6; }
+.nl-date--plain .nl-leaf--none { font-size: 26px; height: 56px; }
+
+/* a section that is a short list: a checklist */
+.nl-checksec { box-shadow: var(--shadow-sm); }
+.nl-checksec .nl-rem { padding: 22px clamp(18px, 3vw, 26px) 24px; background: color-mix(in srgb, var(--green-pale) 80%, #fff); }
+.nl-part .nl-rem__h { display: flex; align-items: center; gap: 11px; margin: 0 0 16px; font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.45rem); line-height: 1.25; color: var(--blue-ink); }
+.nl-rem__note { margin-bottom: 14px; }
+.nl-checksec .nl-rem li { font-size: 1.02rem; }
+.nl-checksec .nl-rem li b { color: var(--green-deep); }
+
+/* the hero of an issue with no opening and no cover: what is in it, as chips */
+.nl-heroc { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.nl-heroc a {
+  display: inline-flex; align-items: center; gap: 9px; padding: 9px 18px 9px 13px; border-radius: var(--pill);
+  background: #fff; border: 1.5px solid var(--c-edge, var(--line)); box-shadow: 0 6px 16px rgba(14,42,92,0.08);
+  color: var(--blue-ink); font-weight: 600; text-decoration: none; transition: transform 0.25s var(--bounce);
+}
+.nl-heroc a:hover { transform: translateY(-3px); color: var(--blue-ink); }
+.nl-heroc .ico { width: 18px; height: 18px; color: var(--c-ink); }
+.nl-toc__e, .nl-heroc .nl-toc__e { flex: none; font-size: 18px; line-height: 1; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+.nl-row--1 { grid-template-columns: minmax(0, 1fr); max-width: 620px; }
+/* when the hero already lists the sections, the list beside them is only for wide screens */
+@media (max-width: 1039px) { .nlhead:has(.nl-heroc) ~ .nlbody .nl-toc { display: none; } }
+
+/* how far down the issue the reader is */
+.nl-progress { position: fixed; z-index: 90; inset: 0 0 auto 0; height: 4px; pointer-events: none; }
+.nl-progress span { display: block; height: 100%; transform: scaleX(0); transform-origin: 0 50%; background: linear-gradient(90deg, var(--np-accent), var(--green-light)); border-radius: 0 4px 4px 0; }
+.nl-share .ico { width: 18px; height: 18px; }
+
+/* the preview The Current opens (/newsletter/preview/) */
+.nlpv-wait { padding: calc(var(--header-h) + 60px) 0 90px; text-align: center; }
+.nlpv-wait__h { margin: 0 0 10px; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); font-weight: 700; color: var(--blue-ink); }
+.nlpv-wait p:last-child { max-width: 52ch; margin: 0 auto; color: var(--ink-soft); }
+.nlpv-bar {
+  position: fixed; z-index: 95; left: 50%; bottom: 16px; translate: -50% 0; display: flex; align-items: center; gap: 12px;
+  width: max-content; max-width: calc(100% - 24px); padding: 8px 8px 8px 10px; border-radius: var(--pill);
+  background: var(--blue-ink); color: #fff; box-shadow: 0 12px 30px rgba(14,42,92,0.35); font-size: 0.86rem; line-height: 1.3;
+}
+.nlpv-bar__tag { padding: 4px 11px; border-radius: var(--pill); background: var(--sun); color: var(--sun-ink); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.72rem; }
+.nlpv-bar__text { opacity: 0.9; }
+@media (max-width: 620px) { .nlpv-bar__text { display: none; } }
+.nlpv-bar__lang { display: flex; gap: 2px; padding: 3px; border-radius: var(--pill); background: rgba(255,255,255,0.12); }
+.nlpv-bar__lang button { min-width: 44px; padding: 6px 12px; border: 0; border-radius: var(--pill); background: transparent; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.nlpv-bar__lang button[aria-pressed="true"] { background: #fff; color: var(--blue-ink); }
+.nlpv-embed .nlpv-bar { display: none; }
+@media print { .nl-progress, .nlpv-bar, .nl-share { display: none !important; } }
+
 /* ----- closing and the end of the issue ----- */
 .nl-closing { padding-top: 30px; border-top: 2px dashed var(--line); }
 .nl-sign { margin: 22px 0 0; line-height: 1.5; color: var(--ink-soft); }
