@@ -1,44 +1,44 @@
 [
   {
-    "id": "mid-autumn-2026",
+    "id": "q1-showcase-2026",
     "kind": "Photos",
     "tone": "sun",
-    "title": "Mid-Autumn Festival",
-    "when": "Friday 25 September",
-    "text": "Thank you to everyone who came. Our students ran the stalls and games, and 15% of the profits went to Da Nang Go. See what they did, with photos.",
+    "title": "Quarter 1 Showcase",
+    "when": "Thursday 15 October",
+    "text": "Thank you to every family who came. Our students presented what they learned this quarter, from a plant role play to maths topics and dinner party debates. See what they did, with photos.",
     "cta": {
       "label": "See the photos",
-      "url": "/events/mid-autumn-2026/",
+      "url": "/events/q1-showcase-2026/",
       "vi": {
         "label": "Xem ảnh"
       }
     },
     "vi": {
       "kind": "Hình ảnh",
-      "title": "Tết Trung thu",
-      "when": "Thứ Sáu, 25/9",
-      "text": "Cảm ơn các gia đình đã đến tham dự. Học viên tự phụ trách các gian hàng và trò chơi, và 15% lợi nhuận đã được quyên góp cho tổ chức thiện nguyện Da Nang Go. Mời ba mẹ xem ảnh và những việc các con đã làm."
+      "title": "Showcase Quý 1",
+      "when": "Thứ Năm, 15/10",
+      "text": "Cảm ơn các gia đình đã đến tham dự. Các con đã trình bày với ba mẹ những gì đã học trong quý, từ vở kịch về cái cây đến các chủ đề Toán và những bữa tiệc tranh luận. Mời ba mẹ xem ảnh."
     }
   },
   {
-    "id": "quarter-2",
-    "kind": "Term dates",
+    "id": "thanksgiving-2026",
+    "kind": "Coming up",
     "tone": "blue",
-    "title": "Quarter 2 begins, with the Quarter 1 Showcase",
-    "when": "Thursday 15 October",
-    "text": "The Quarter 1 Showcase has been postponed to Thursday 15 October, in the afternoon. Quarter 1 ends on 8 October, with Quarter 2 tuition due the same day, and fall break runs to 14 October. New students can start with the new quarter.",
+    "title": "Thanksgiving lunch",
+    "when": "Thursday 26 November",
+    "text": "Families are invited to join us for lunch at our American Thanksgiving celebration. The dates for the rest of the quarter are in this week's Palm River Post.",
     "cta": {
-      "label": "See the calendar",
-      "url": "/families/schedule/#calendar",
+      "label": "Read the newsletter",
+      "url": "/newsletter/2026-27-q2-week-1/",
       "vi": {
-        "label": "Xem lịch năm học"
+        "label": "Đọc bản tin"
       }
     },
     "vi": {
-      "kind": "Lịch năm học",
-      "title": "Quý 2 bắt đầu, cùng buổi Showcase Quý 1",
-      "when": "Thứ Năm, 15/10",
-      "text": "Buổi Showcase Quý 1 được dời sang chiều thứ Năm, 15/10. Quý 1 kết thúc ngày 8/10, cũng là hạn đóng học phí Quý 2. Kỳ nghỉ thu kéo dài đến hết ngày 14/10. Học viên mới có thể nhập học từ đầu quý mới."
+      "kind": "Sắp diễn ra",
+      "title": "Tiệc trưa Lễ Tạ ơn",
+      "when": "Thứ Năm, 26/11",
+      "text": "Ba mẹ được mời đến dùng bữa trưa cùng PRA trong dịp Lễ Tạ ơn (Thanksgiving) của Mỹ. Các ngày quan trọng còn lại của quý có trong bản tin The Palm River Post tuần này."
     }
   },
   {

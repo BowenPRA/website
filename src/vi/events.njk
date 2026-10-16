@@ -5,60 +5,41 @@ title: "Sự kiện"
 description: "Các lễ hội, tuần lễ chủ đề và chuyến đi tại Palm River Academy, cùng những việc học viên đảm nhận trong từng sự kiện: biểu diễn, dẫn chương trình và phụ trách gian hàng."
 permalink: /vi/events/
 ---
+{# Twin of src/events.njk; see the notes there. #}
 {% set heroPhoto = "events-hero-maths-prize-stickers" %}
 {% set heroShape = "tall" %}
 {% set heroEyebrow = "Sự kiện" %}
 {% set heroTitle = 'Sự kiện do chính <span class="mark">học viên tổ chức</span>' %}
-{% set heroText = "Lễ hội, tuần lễ chủ đề và các chuyến đi. Ở mỗi sự kiện, học viên đều có phần việc của mình: biểu diễn, dẫn chương trình, phụ trách gian hàng hoặc hướng dẫn hoạt động cho các lớp nhỏ hơn. Sự kiện của năm học này được cập nhật sau khi diễn ra, phía dưới là các sự kiện của năm học trước." %}
+{% set heroText = "Lễ hội, tuần lễ chủ đề và các chuyến đi. Ở mỗi sự kiện, học viên đều có phần việc của mình: biểu diễn, dẫn chương trình, phụ trách gian hàng hoặc hướng dẫn hoạt động cho các lớp nhỏ hơn. Sự kiện của năm học này được cập nhật sau khi diễn ra, sự kiện mới nhất ở trên cùng." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
   <div class="wrap">
     <p class="gallery__hint events__hint" hidden>Chạm vào ảnh để phóng to.</p>
-
-    {# One section per academic year, newest first, in the order of events.json. #}
-    {% for sy, list in events | groupby("school_year") %}
-    <div class="season" id="year-{{ sy }}">
-      <h2 class="season__title">Năm học {{ sy }} <span>{% if loop.first %}Năm học này{% else %}Năm học trước{% endif %}</span></h2>
-      {% if list.length > 2 %}
-      <nav class="months" aria-label="Chọn tháng">
-        {% for e in list %}{% if loop.first or list[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
-      </nav>
-      {% endif %}
-      <ol class="year">
-        {% for e in list %}
-        <li class="event" id="{{ e.id }}" data-c="{{ loop.index0 % 5 }}">
-          <p class="event__when"><span class="event__month">{{ e.month }}</span> <span class="event__yr">{{ e.year }}</span></p>
-          <div class="event__body">
-            <h2>{{ e.name }}</h2>
-            <p class="event__date">{{ e.when }}</p>
-            <p class="event__summary">{{ e.summary }}</p>
-            {% if e.did.length %}
-            <h3 class="event__did-title">Phần việc của học viên</h3>
-            <ul class="event__did">
-              {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
-            </ul>
-            {% endif %}
-            {% if e.page %}<p class="event__more"><a class="btn btn--primary btn--small" href="{{ e.page | href(lang) }}">Xem toàn bộ</a></p>{% endif %}
-            {% if e.photos.length %}
-            <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
-              {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
-            </div>
-            {% endif %}
-          </div>
-        </li>
-        {% endfor %}
-      </ol>
-    </div>
-    {% endfor %}
+    {% set sy = eventYears.current %}{% set evNewest = true %}
+    {% set evTitle = "Năm học " + sy + " <span>Năm học này</span>" %}
+    {% set evMonths = "Chọn tháng" %}{% set evDid = "Phần việc của học viên" %}{% set evMore = "Xem toàn bộ" %}
+    {% include "partials/events-year.njk" %}
   </div>
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--blue">Năm học trước</p>
+    <h2>Sự kiện năm học {{ eventYears.past[0] }}</h2>
+    <p class="lede">Trung thu, Giáng sinh, Tết, March Mathness, lễ tốt nghiệp và nhiều sự kiện khác, cùng phần việc của học viên trong từng sự kiện.</p>
+    <p class="event-page__links">
+      {% for y in eventYears.past %}<a class="btn {{ 'btn--primary' if loop.first else 'btn--ghost' }}" href="{{ ('/events/' + y + '/') | href(lang) }}">Sự kiện năm học {{ y }}</a>{% endfor %}
+    </p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap center narrow">
     <p class="eyebrow eyebrow--blue">Năm học này</p>
-    <h2>Lịch năm học 2026-27</h2>
+    <h2>Lịch năm học {{ eventYears.current }}</h2>
     <p class="lede">Thời gian học và các kỳ nghỉ đều có trong lịch năm học. Ngày tổ chức từng sự kiện sẽ được PRA thông báo đến các gia đình trong năm.</p>
     <a class="btn btn--primary" href="{{ '/families/schedule/#calendar' | href(lang) }}">Xem lịch năm học</a>
   </div>

@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+tone: navy
+pagination:
+  data: eventYears.past
+  size: 1
+  alias: sy
+permalink: "/events/{{ sy }}/"
+eleventyComputed:
+  title: "Events {{ sy }}"
+  description: "Palm River Academy's events in {{ sy }}, and what students did at each: festivals, theme weeks, trips and graduation."
+---
+{# One page per past school year (src/_data/eventYears.js), in the order of the year.
+   This year's events are on /events/ (src/events.njk). #}
+{% set heroPhoto = "graduation-certificates-and-cheers" %}
+{% set heroShape = "" %}
+{% set heroEyebrow = "Events · " + sy %}
+{% set heroTitle = 'Events in <span class="mark">' + sy + '</span>' %}
+{% set heroText = "Festivals, theme weeks, trips and graduation, from August to June, with what students did at each." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap">
+    <p class="gallery__hint events__hint" hidden>Tap a photo to see it bigger.</p>
+    {% set evNewest = false %}
+    {% set evTitle = sy %}
+    {% set evMonths = "Jump to a month" %}{% set evDid = "What students did" %}{% set evMore = "The full story" %}
+    {% include "partials/events-year.njk" %}
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--blue">This year</p>
+    <h2>Events in {{ eventYears.current }}</h2>
+    <p class="lede">This year's events are added as they happen.</p>
+    <a class="btn btn--primary" href="{{ '/events/' | href(lang) }}">This year's events</a>
+  </div>
+</section>
+
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

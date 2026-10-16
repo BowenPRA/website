@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+tone: navy
+pagination:
+  data: eventYears.past
+  size: 1
+  alias: sy
+permalink: "/vi/events/{{ sy }}/"
+eleventyComputed:
+  title: "Sự kiện năm học {{ sy }}"
+  description: "Các sự kiện của Palm River Academy trong năm học {{ sy }}, cùng phần việc của học viên trong từng sự kiện: lễ hội, tuần lễ chủ đề, chuyến đi và lễ tốt nghiệp."
+---
+{# Twin of src/events/past.njk; see the notes there. #}
+{% set heroPhoto = "graduation-certificates-and-cheers" %}
+{% set heroShape = "" %}
+{% set heroEyebrow = "Sự kiện · " + sy %}
+{% set heroTitle = 'Sự kiện năm học <span class="mark">' + sy + '</span>' %}
+{% set heroText = "Lễ hội, tuần lễ chủ đề, các chuyến đi và lễ tốt nghiệp, từ tháng 8 đến tháng 6, cùng phần việc của học viên trong từng sự kiện." %}
+{% include "partials/pagehero.njk" %}
+
+<section>
+  <div class="wrap">
+    <p class="gallery__hint events__hint" hidden>Chạm vào ảnh để phóng to.</p>
+    {% set evNewest = false %}
+    {% set evTitle = "Năm học " + sy %}
+    {% set evMonths = "Chọn tháng" %}{% set evDid = "Phần việc của học viên" %}{% set evMore = "Xem toàn bộ" %}
+    {% include "partials/events-year.njk" %}
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--blue">Năm học này</p>
+    <h2>Sự kiện năm học {{ eventYears.current }}</h2>
+    <p class="lede">Sự kiện của năm học này được cập nhật sau khi diễn ra.</p>
+    <a class="btn btn--primary" href="{{ '/events/' | href(lang) }}">Sự kiện năm học này</a>
+  </div>
+</section>
+
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

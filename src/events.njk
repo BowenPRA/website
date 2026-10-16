@@ -5,60 +5,42 @@ title: "Events"
 description: "Festivals, theme weeks and trips at Palm River Academy, and what students did at each: performing, hosting, running stalls and leading activities for younger classes."
 permalink: /events/
 ---
+{# This school year's events, newest first (Bowen, 2026-10-16). Past years have a page each,
+   /events/<year>/ from src/events/past.njk. Which year is "this year" comes from src/_data/eventYears.js. #}
 {% set heroPhoto = "events-hero-maths-prize-stickers" %}
 {% set heroShape = "tall" %}
 {% set heroEyebrow = "Events" %}
 {% set heroTitle = 'Our students <span class="mark">run the show</span>' %}
-{% set heroText = "Festivals, theme weeks and trips. At each one, students perform, host, run stalls or lead activities for younger classes. This year's events are added as they happen, with last year's below." %}
+{% set heroText = "Festivals, theme weeks and trips. At each one, students perform, host, run stalls or lead activities for younger classes. This year's events are added as they happen, newest first." %}
 {% include "partials/pagehero.njk" %}
 
 <section>
   <div class="wrap">
     <p class="gallery__hint events__hint" hidden>Tap a photo to see it bigger.</p>
-
-    {# One section per academic year, newest first, in the order of events.json. #}
-    {% for sy, list in events | groupby("school_year") %}
-    <div class="season" id="year-{{ sy }}">
-      <h2 class="season__title">{{ sy }} <span>{% if loop.first %}This year{% else %}Last year{% endif %}</span></h2>
-      {% if list.length > 2 %}
-      <nav class="months" aria-label="Jump to a month">
-        {% for e in list %}{% if loop.first or list[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
-      </nav>
-      {% endif %}
-      <ol class="year">
-        {% for e in list %}
-        <li class="event" id="{{ e.id }}" data-c="{{ loop.index0 % 5 }}">
-          <p class="event__when"><span class="event__month">{{ e.month }}</span> <span class="event__yr">{{ e.year }}</span></p>
-          <div class="event__body">
-            <h2>{{ e.name }}</h2>
-            <p class="event__date">{{ e.when }}</p>
-            <p class="event__summary">{{ e.summary }}</p>
-            {% if e.did.length %}
-            <h3 class="event__did-title">What students did</h3>
-            <ul class="event__did">
-              {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
-            </ul>
-            {% endif %}
-            {% if e.page %}<p class="event__more"><a class="btn btn--primary btn--small" href="{{ e.page | href(lang) }}">The full story</a></p>{% endif %}
-            {% if e.photos.length %}
-            <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
-              {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
-            </div>
-            {% endif %}
-          </div>
-        </li>
-        {% endfor %}
-      </ol>
-    </div>
-    {% endfor %}
+    {% set sy = eventYears.current %}{% set evNewest = true %}
+    {% set evTitle = sy + " <span>This year</span>" %}
+    {% set evMonths = "Jump to a month" %}{% set evDid = "What students did" %}{% set evMore = "The full story" %}
+    {% include "partials/events-year.njk" %}
   </div>
 </section>
 
 {% set waveColor = "pale" %}{% include "partials/wave.njk" %}
 <section class="band--pale">
   <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--blue">Last year</p>
+    <h2>Events from {{ eventYears.past[0] }}</h2>
+    <p class="lede">Mid-Autumn, Christmas, Tết, March Mathness, graduation and more, with what students did at each.</p>
+    <p class="event-page__links">
+      {% for y in eventYears.past %}<a class="btn {{ 'btn--primary' if loop.first else 'btn--ghost' }}" href="{{ ('/events/' + y + '/') | href(lang) }}">{{ y }} events</a>{% endfor %}
+    </p>
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section>
+  <div class="wrap center narrow">
     <p class="eyebrow eyebrow--blue">This year</p>
-    <h2>Dates for 2026-27</h2>
+    <h2>Dates for {{ eventYears.current }}</h2>
     <p class="lede">Term dates and holidays are on the calendar. We send event dates to families during the year.</p>
     <a class="btn btn--primary" href="{{ '/families/schedule/#calendar' | href(lang) }}">See the calendar</a>
   </div>

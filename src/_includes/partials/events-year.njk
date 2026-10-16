@@ -1,0 +1,43 @@
+{# One school year of events: a month strip and a card per event, from src/_data/events.json.
+   Set before including:
+     sy           the school year ("2026-27")
+     evNewest     true to show the newest event first (this year), false for the order of the year
+     evTitle      the heading ("2026-27" plus its label), may hold a <span>
+     evMonths     aria-label of the month strip
+     evDid        heading over "what students did"
+     evMore       label of the button to an event's own page
+   events.json keeps every year in the order of the year; this partial turns this year round. #}
+{% set evList = (events | groupby("school_year"))[sy] or [] %}
+{% if evNewest %}{% set evList = evList | reverse %}{% endif %}
+<div class="season" id="year-{{ sy }}">
+  <h2 class="season__title">{{ evTitle | safe }}</h2>
+  {% if evList.length > 2 %}
+  <nav class="months" aria-label="{{ evMonths }}">
+    {% for e in evList %}{% if loop.first or evList[loop.index0 - 1].month != e.month %}<a href="#{{ e.id }}" data-c="{{ loop.index0 % 5 }}">{{ e.month }}</a>{% endif %}{% endfor %}
+  </nav>
+  {% endif %}
+  <ol class="year">
+    {% for e in evList %}
+    <li class="event" id="{{ e.id }}" data-c="{{ loop.index0 % 5 }}">
+      <p class="event__when"><span class="event__month">{{ e.month }}</span> <span class="event__yr">{{ e.year }}</span></p>
+      <div class="event__body">
+        <h2>{{ e.name }}</h2>
+        <p class="event__date">{{ e.when }}</p>
+        <p class="event__summary">{{ e.summary }}</p>
+        {% if e.did.length %}
+        <h3 class="event__did-title">{{ evDid }}</h3>
+        <ul class="event__did">
+          {% for d in e.did %}<li>{{ d }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if e.page %}<p class="event__more"><a class="btn btn--primary btn--small" href="{{ e.page | href(lang) }}">{{ evMore }}</a></p>{% endif %}
+        {% if e.photos.length %}
+        <div class="gallery gallery--event"{% if e.photos.length == 4 or e.photos.length == 2 %} style="--cols: {{ e.photos.length }}"{% endif %}>
+          {% for slug in e.photos %}{% photo slug, "", ("(min-width: 1240px) 500px, (min-width: 720px) 42vw, 300px" if e.photos.length == 2 else "(min-width: 1240px) 330px, (min-width: 720px) 28vw, 300px") %}{% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
