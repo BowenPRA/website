@@ -3,7 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # The Current starts a build when a newsletter is published (supabase/functions/newsletter-build).
   workflow_dispatch:
+  # Every night at 02:30 in Hội An (19:30 UTC), so dated things (the reel, newsletter notices) keep up.
+  schedule:
+    - cron: '30 19 * * *'
 
 permissions:
   contents: read

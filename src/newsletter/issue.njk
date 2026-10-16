@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: newsletters
+  size: 1
+  alias: issue
+  addAllPagesToCollections: true
+permalink: "/newsletter/{{ issue.slug }}/"
+---
+{# One page per published issue (src/_data/newsletters.js). Title, link preview and colour come from
+   newsletter.11tydata.js; everything on the page is in partials/nl-issue.njk, shared with the twin. #}
+{% include "partials/nl-issue.njk" %}

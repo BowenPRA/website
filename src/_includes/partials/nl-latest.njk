@@ -1,0 +1,17 @@
+{# The newest issue of each newsletter, on the schedule page under the calendar. Nothing shows until
+   an issue is published. #}
+{% set W = strings[lang].nl %}
+{% set latest = newsletters | nlLatest %}
+{% if latest.length %}
+<div class="nl-latest">
+  <div class="nl-latest__intro">
+    <p class="eyebrow eyebrow--blue">{{ strings[lang].newsletter }}</p>
+    <h3>{{ W.latest }}</h3>
+    <p>{{ W.latestText }}</p>
+    <a class="nl-latest__all" href="{{ '/newsletter/' | href(lang) }}">{{ W.allIssues }}{{ "arrow-right" | ico | safe }}</a>
+  </div>
+  <ul class="nl-cards nl-cards--latest">
+    {% for card in latest %}{% set cardH = "h4" %}{% include "partials/nl-card.njk" %}{% endfor %}
+  </ul>
+</div>
+{% endif %}

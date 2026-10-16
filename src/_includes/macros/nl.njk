@@ -1,0 +1,29 @@
+{# Small pieces of the newsletter pages (partials/nl-issue.njk, partials/nl-card.njk).
+   {% import "macros/nl.njk" as m %}. Text comes from a payload ({ en, vi }); on a Vietnamese page
+   whose Vietnamese is not written yet, the English shows with a small "English" tag. #}
+
+{# Plain text in the page's language #}
+{% macro text(obj, lang, T) -%}
+{%- if obj | nlEn(lang) -%}<span lang="en">{{ obj | nl(lang) }}</span> <span class="nl-entag">{{ T.nl.english }}</span>
+{%- else -%}{{ obj | nl(lang) }}{%- endif -%}
+{%- endmacro %}
+
+{# A body: small HTML, already cleaned by The Current (README "payload"), so it goes in as it is #}
+{% macro body(obj, lang, T) -%}
+{%- set en = obj | nlEn(lang) -%}
+<div class="nl-text"{% if en %} lang="en"{% endif %}>{% if en %}<p class="nl-entag-row"><span class="nl-entag">{{ T.nl.english }}</span></p>{% endif %}{{ obj | nl(lang) | safe }}</div>
+{%- endmacro %}
+
+{# One photo: src about 1600 px wide, small about 800; alt doubles as the caption #}
+{% macro img(p, lang, sizes, eager = false) -%}
+{%- set srcset = p | nlSrcset -%}
+<img src="{{ p.src | nlUrl }}"{% if srcset %} srcset="{{ srcset }}" sizes="{{ sizes }}"{% endif %}{% if p.w and p.h %} width="{{ p.w }}" height="{{ p.h }}"{% endif %} alt="{{ p.alt | nl(lang) }}"{% if p.focus | nlFocus %} style="object-position: {{ p.focus | nlFocus }}"{% endif %}{% if eager %} fetchpriority="high"{% else %} loading="lazy" decoding="async"{% endif %}>
+{%- endmacro %}
+
+{# A photo in a frame with its caption under it. `shape` keeps the photo's own proportions when set to "own". #}
+{% macro fig(p, lang, sizes, shape = "") -%}
+<figure class="nl-fig">
+  <div class="photo"{% if shape == "own" and p.w and p.h %} style="aspect-ratio: {{ p.w }} / {{ p.h }}"{% endif %}>{{ img(p, lang, sizes) }}</div>
+  {%- if p.alt | nl(lang) %}<figcaption>{{ p.alt | nl(lang) }}</figcaption>{% endif %}
+</figure>
+{%- endmacro %}

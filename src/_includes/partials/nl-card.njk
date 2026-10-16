@@ -1,0 +1,18 @@
+{# One newsletter issue as a card: the archive, "Past issues" and the schedule page. Needs `card` (an issue),
+   `lang`, and `cardH` (the heading tag, h3 by default). Links carry ?from=site for the reader count. #}
+{% set W = strings[lang].nl %}
+<li class="nl-card nl-card--{{ card.edition }}" data-ed="{{ card.edition }}">
+  <a href="{{ ('/newsletter/' + card.slug + '/?from=site') | href(lang) }}">
+    <span class="nl-card__photo">
+      {% if card.cover %}<img src="{{ (card.cover.small or card.cover.src) | nlUrl }}" alt=""{% if card.cover.w and card.cover.h %} width="{{ card.cover.w }}" height="{{ card.cover.h }}"{% endif %}{% if card.cover.focus | nlFocus %} style="object-position: {{ card.cover.focus | nlFocus }}"{% endif %} loading="lazy" decoding="async">
+      {% else %}<span class="nl-card__blank">{{ "newspaper" | ico | safe }}</span>{% endif %}
+      <span class="nl-card__ed">{{ W.editions[card.edition] }}</span>
+    </span>
+    <span class="nl-card__body">
+      <{{ cardH or "h3" }} class="nl-card__label">{{ card.label | nl(lang) }}</{{ cardH or "h3" }}>
+      <span class="nl-card__day">{{ card.day | nl(lang) }}</span>
+      {% if card.opening and (card.opening.lead | nl(lang)) %}<span class="nl-card__lead">{{ card.opening.lead | nl(lang) }}</span>{% endif %}
+      <span class="nl-card__more">{{ W.readIssue }}{{ "arrow-right" | ico | safe }}</span>
+    </span>
+  </a>
+</li>

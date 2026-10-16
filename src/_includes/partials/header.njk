@@ -2,7 +2,7 @@
 {% set u = (page.url or "/") | basePath %}
 {% set inAbout = u.startsWith("/about/") or u.startsWith("/writing/") %}
 {% set inAcademics = u.startsWith("/learning/") %}
-{% set inAdmissions = u.startsWith("/admissions/") or u.startsWith("/families/") or u.startsWith("/contact/") %}
+{% set inAdmissions = u.startsWith("/admissions/") or u.startsWith("/families/") or u.startsWith("/contact/") or u.startsWith("/newsletter/") %}
 <header class="site-header">
   <div class="wrap site-header__bar">
     <a class="brand" href="{{ '/' | href(lang) }}" aria-label="{{ T.homeLabel }}">
@@ -35,6 +35,7 @@
             <li><a href="{{ '/admissions/tuition-and-fees/' | href(lang) }}">{{ T.fees }}</a></li>
             <li><a href="{{ '/families/schedule/' | href(lang) }}">{{ T.schedule }}</a></li>
             <li><a href="{{ '/families/handbook/' | href(lang) }}">{{ T.handbook }}</a></li>
+            <li><a href="{{ '/newsletter/' | href(lang) }}">{{ T.newsletter }}</a></li>
             <li><a href="{{ '/contact/' | href(lang) }}">{{ T.tour }}</a></li>
           </ul>
         </li>
@@ -120,6 +121,7 @@
     <a href="{{ '/admissions/tuition-and-fees/' | href(lang) }}">{{ T.fees }}</a>
     <a href="{{ '/families/schedule/' | href(lang) }}">{{ T.schedule }}</a>
     <a href="{{ '/families/handbook/' | href(lang) }}">{{ T.handbook }}</a>
+    <a href="{{ '/newsletter/' | href(lang) }}"{% if u.startsWith('/newsletter/') %} aria-current="page"{% endif %}>{{ T.newsletter }}</a>
   </div>
   <div class="sheet__group sheet__group--cta">
     <a class="btn btn--green" href="{{ '/contact/' | href(lang) }}">{{ T.contact }}</a>

@@ -340,7 +340,9 @@
     // and on phones the noticeboard is a swipe strip, so it rises as one piece too
     window.innerWidth < 900 ? ".notices" : ".notices > li",
     ".faq details", ".table-wrap", ".picker__chips", ".cta__inner", ".faq h2",
-    ".dayplan__row", ".daynotes > li", ".stages > *", ".dayline li"
+    ".dayplan__row", ".daynotes > li", ".stages > *", ".dayline li",
+    // the newsletter: each part of an issue, and the issue cards
+    ".nl-main > .nl-part", ".nl-cards > li"
   ].join(",");
   var counters = document.querySelectorAll("[data-count]");
   if ("IntersectionObserver" in window && !reduceMotion) {
@@ -465,7 +467,7 @@
   }
 
   // Photo galleries, pinned-up collages and a blog post's pictures: every tile opens its own set.
-  var galleries = document.querySelectorAll(".gallery, .collage, .post__art");
+  var galleries = document.querySelectorAll(".gallery, .collage, .post__art, .nl-gallery");
   if (galleries.length && useLightbox()) {
     galleries.forEach(function (gallery) {
       var set = Array.prototype.slice.call(gallery.querySelectorAll(".photo img"));

@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {# `pageTitle` replaces the whole title; the home pages use it so a search for the name finds "Palm River Academy" first #}
   <title>{% if pageTitle %}{{ pageTitle }}{% elif title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
-  <meta name="description" content="{{ description or site.description }}">
+  {# `metaDescription`, `ogTitle`, `ogType` and `ogImage` (with ogImageW/H/Alt) let a page set its own link preview;
+     the newsletter issues do (src/newsletter/newsletter.11tydata.js). #}
+  <meta name="description" content="{{ metaDescription or description or site.description }}">
   {# front matter `noindex: true` keeps a page out of search results — the album is ours, not the public's #}
   {% if noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<link rel="canonical" href="{{ site.url }}{{ page.url | url }}">{% endif %}
   <meta name="theme-color" content="#116DFF">
-  <meta property="og:title" content="{{ pageTitle or title or site.name }}">
-  <meta property="og:description" content="{{ description or site.description }}">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ ogTitle or pageTitle or title or site.name }}">
+  <meta property="og:description" content="{{ metaDescription or description or site.description }}">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
   <meta property="og:locale" content="{{ T.locale }}">
   {# Each page and its twin in the other language (VIETNAMESE.md). English is the default. #}
   {% if not noTwin %}
@@ -21,7 +23,18 @@
   <link rel="alternate" hreflang="vi" href="{{ site.url }}{{ enUrl | twin | url }}">
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ enUrl | url }}">
   {% endif %}
+  {% if ogImage %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:image" content="{{ ogImage }}">
+  {% if ogImageW and ogImageH %}<meta property="og:image:width" content="{{ ogImageW }}">
+  <meta property="og:image:height" content="{{ ogImageH }}">{% endif %}
+  {% if ogImageAlt %}<meta property="og:image:alt" content="{{ ogImageAlt }}">{% endif %}
+  {% if ogPublished %}<meta property="article:published_time" content="{{ ogPublished }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% else %}
   <meta property="og:image" content="{{ site.url }}{{ '/assets/img/photos/hero-cooking-class-hoi-an-1600.webp' | href(lang) }}">
+  {% endif %}
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | href(lang) }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +70,7 @@
   {% endif %}
 </head>
 {# The announcement reel under the nav bar (partials/header.njk). `has-reel` makes room for it above each hero. #}
-{% set reelNow = reel.items | current %}
+{% set reelNow = reel.items | withNewsletter(newsletters, lang, strings) | current %}
 <body class="page-{{ (page.fileSlug if page.fileSlug != 'vi') or 'home' }} tone-{{ tone or 'blue' }}{% if stage %} stage-{{ stage }}{% endif %}{% if reelNow.length %} has-reel{% endif %}">
   <a class="skip" href="#main">{{ T.skip }}</a>
   {% include "partials/frond-symbol.njk" %}

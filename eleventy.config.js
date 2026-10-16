@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { loc, isVi, toLang, twinPath, basePath } from "./lib/i18n.js";
+import { pick as nlPick, isEnglishOnly as nlIsEnglishOnly, icon as nlIcon, dateLeaf as nlDateLeaf, sitePath as nlSitePath, addDays as nlAddDays } from "./lib/newsletter.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
@@ -63,6 +64,70 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("current", (items) => {
     const today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
     return (items || []).filter((i) => !i.hideFrom || i.hideFrom > today);
+  });
+
+  // ---------- the weekly newsletter (lib/newsletter.js, src/_data/newsletters.js) ----------
+  // Text from a payload in the page's language, English when the Vietnamese is not written yet.
+  eleventyConfig.addFilter("nl", (obj, lang) => nlPick(obj, lang));
+  // True when a Vietnamese page shows English for this text (it gets an "English" tag).
+  eleventyConfig.addFilter("nlEn", (obj, lang) => nlIsEnglishOnly(obj, lang));
+  // A lucide icon as inline SVG: {{ "trophy" | ico | safe }}, {{ "check" | ico("nl-tick") | safe }}
+  eleventyConfig.addFilter("ico", (name, cls) => nlIcon(name, cls));
+  // "From {name}" | fill({ name: "Ms. Thanh" })
+  eleventyConfig.addFilter("fill", (s, vars = {}) => String(s ?? "").replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? ""));
+  // The calendar leaf beside a date to remember: { month, day, more }.
+  eleventyConfig.addFilter("nlLeaf", (d, lang) => nlDateLeaf(d.iso, d.end, lang));
+  // srcset for a newsletter photo (small is about 800 px wide, src about 1600 px).
+  eleventyConfig.addFilter("nlSrcset", (p) => (p?.small && p.small !== p.src ? `${p.small} 800w, ${p.src} 1600w` : ""));
+  // Only web, mail and phone addresses go into a link or an image; anything else becomes "#".
+  eleventyConfig.addFilter("nlUrl", (url) => (/^(https?:\/\/|mailto:|tel:|\/(?!\/))/i.test(String(url || "").trim()) ? String(url).trim() : "#"));
+  // A photo's focus ("50% 30%") as object-position, or "" when it is anything else.
+  eleventyConfig.addFilter("nlFocus", (f) => (/^\d{1,3}(\.\d+)?% \d{1,3}(\.\d+)?%$/.test(String(f || "")) ? f : ""));
+  // True for an address on this website (opens in the same tab).
+  eleventyConfig.addFilter("nlOnSite", (url) => !!nlSitePath(url) || /^\/(?!\/)/.test(String(url || "")));
+  // A full pra.edu.vn address as a site path in this language; any other address unchanged.
+  eleventyConfig.addFilter("nlLink", (url, lang) => {
+    const path = nlSitePath(url);
+    return path ? urlFilter(toLang(path, lang)) : url;
+  });
+  // The archive: issues grouped by academic year and quarter, newest first.
+  eleventyConfig.addFilter("nlByQuarter", (issues) => {
+    const groups = [];
+    for (const is of issues || []) {
+      const key = `${is.school_year}-q${is.quarter}`;
+      let g = groups.find((x) => x.key === key);
+      if (!g) groups.push((g = { key, year: is.school_year, quarter: is.quarter, issues: [] }));
+      g.issues.push(is);
+    }
+    return groups;
+  });
+  // The newest `n` other issues of the same newsletter, for "Past issues".
+  eleventyConfig.addFilter("nlPast", (issues, issue, n = 6) =>
+    (issues || []).filter((x) => x.edition === issue.edition && x.slug !== issue.slug && x.date <= issue.date).slice(0, n));
+  // The newest issue of each newsletter, Post first.
+  eleventyConfig.addFilter("nlLatest", (issues) => ["post", "ey"].map((e) => (issues || []).find((x) => x.edition === e)).filter(Boolean));
+  // Reminders (or any { en, vi } list) with something written in them.
+  eleventyConfig.addFilter("nlWithText", (list) => (list || []).filter((x) => nlPick(x, "en").trim()));
+  // Whether an issue has a part of this type.
+  eleventyConfig.addFilter("nlHasPart", (parts, type) => (parts || []).some((p) => p?.type === type));
+  // The newest issue of one newsletter, or null.
+  eleventyConfig.addFilter("nlNewest", (issues, edition) => (issues || []).find((x) => x.edition === edition) || null);
+  // How many of the issues belong to one newsletter.
+  eleventyConfig.addFilter("nlCount", (issues, edition) => (issues || []).filter((x) => x.edition === edition).length);
+  // The announcement reel with the newest issue on top for four days from its Friday
+  // (hideFrom is the fifth day), so nobody has to add it by hand.
+  eleventyConfig.addFilter("withNewsletter", (items, issues, lang, strings) => {
+    const is = (issues || [])[0];
+    if (!is) return items || [];
+    const T = strings[lang].nl;
+    const item = {
+      id: `newsletter-${is.slug}`,
+      text: `${nlPick(is.edition_name, lang)}, ${nlPick(is.label, lang)}`,
+      url: `/newsletter/${is.slug}/?from=site`,
+      link: T.reelLink,
+      hideFrom: nlAddDays(is.date, 4),
+    };
+    return [item, ...(items || [])];
   });
 
   // "8:45" -> 525, minutes since midnight (day chart on the schedule page)

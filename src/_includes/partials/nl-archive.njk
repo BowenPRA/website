@@ -1,0 +1,56 @@
+{# The newsletter archive, /newsletter/ and /vi/newsletter/: every issue, newest first, by quarter.
+   The page sets heroEyebrow, heroTitle (may hold a <span class="mark">) and heroText.
+   The filter works without a script: each chip links to an anchor, and the CSS (:target with :has)
+   hides the other newsletter. Without :has, every issue shows, which is fine. #}
+{% set T = strings[lang] %}{% set W = T.nl %}
+<section class="phero nl-archhero">
+  <span class="phero__dots" aria-hidden="true"></span>
+  {% set frondClass = "frond--tr frond--soft" %}{% include "partials/frond.njk" %}
+  <div class="wrap phero__grid">
+    <div class="phero__text">
+      <p class="eyebrow eyebrow--on rise" style="--d:0">{{ heroEyebrow }}</p>
+      <h1 class="rise" style="--d:1">{{ heroTitle | safe }}</h1>
+      <p class="lede rise" style="--d:2">{{ heroText }}</p>
+    </div>
+    <div class="nl-stack rise" style="--d:2" aria-hidden="true">
+      {% for e in ["post", "ey"] %}
+      {% set nw = newsletters | nlNewest(e) %}
+      <div class="nl-paper nl-paper--{{ e }}">
+        <p class="nl-paper__name">{{ (nw.edition_name | nl(lang)) if nw else W.editions[e] }}</p>
+        {% if nw %}<p class="nl-paper__label">{{ nw.label | nl(lang) }} · {{ nw.day | nl(lang) }}</p>{% endif %}
+        {% if nw and nw.cover %}<img src="{{ (nw.cover.small or nw.cover.src) | nlUrl }}" alt="" loading="lazy" decoding="async">
+        {% else %}<span class="nl-paper__lines"><i></i><i></i><i></i><i></i></span>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% include "partials/river.njk" %}
+</section>
+
+<section class="nl-archive" id="issues">
+  <span class="nl-anchor" id="f-post"></span><span class="nl-anchor" id="f-ey"></span>
+  <div class="wrap">
+    {% if newsletters.length %}
+    <nav class="nl-filter" aria-label="{{ T.newsletter }}">
+      <span class="nl-filter__label">{{ W.show }}</span>
+      <a class="nl-filter__all" href="#issues">{{ W.all }} <small>{{ newsletters.length }}</small></a>
+      <a class="nl-filter__post" href="#f-post"><span class="nl-filter__dot" aria-hidden="true"></span>{{ W.editions.post }} <small>{{ newsletters | nlCount("post") }}</small></a>
+      <a class="nl-filter__ey" href="#f-ey"><span class="nl-filter__dot" aria-hidden="true"></span>{{ W.editions.ey }} <small>{{ newsletters | nlCount("ey") }}</small></a>
+    </nav>
+    {% for g in newsletters | nlByQuarter %}
+    <div class="nl-q">
+      <h2 class="nl-q__h">{{ W.quarter | fill({ q: g.quarter, year: g.year }) }}</h2>
+      <ul class="nl-cards">
+        {% for card in g.issues %}{% set cardH = "h3" %}{% include "partials/nl-card.njk" %}{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="nl-empty">{{ "newspaper" | ico | safe }}{{ W.empty }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

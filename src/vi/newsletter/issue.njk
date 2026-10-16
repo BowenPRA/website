@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: newsletters
+  size: 1
+  alias: issue
+  addAllPagesToCollections: true
+permalink: "/vi/newsletter/{{ issue.slug }}/"
+---
+{# Mỗi số bản tin một trang. Nội dung nằm trong partials/nl-issue.njk, dùng chung với trang tiếng Anh. #}
+{% include "partials/nl-issue.njk" %}
