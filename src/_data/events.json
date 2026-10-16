@@ -47,34 +47,34 @@
     "month": "Oct",
     "year": "2026",
     "when": "Thursday 15 October",
-    "summary": "An afternoon for families to see the work students did in English in the first quarter, shown by the students themselves.",
+    "summary": "An afternoon for students to present what they learned in the first quarter to their families, in their own words.",
     "did": [
-      "Upper Secondary wrote dinner party debates between famous people from history and today, in each guest's voice, and guided their parents through them",
-      "Lower Secondary showed their Art of Science models and posters explaining their maths, and set maths questions for the parents",
-      "Primary acted out how a plant grows in English and answered their families' quiz questions",
-      "Early Years showed their families round their letter sounds, pattern and counting stations"
+      "Early Years showed their families round their letter, pattern and counting stations",
+      "Primary presented what they learned about plants as a role play, then answered their families' quiz questions",
+      "Lower Secondary each explained a different maths topic to their parents with a poster and a quiz, and showed their Art of Science models",
+      "Upper Secondary guided their parents through dinner party debates between famous people from history and today"
     ],
     "photos": [
       "quarter-1-showcase-2026-the-ai-debate",
-      "quarter-1-showcase-2026-the-high-kicking-gardener",
-      "quarter-1-showcase-2026-the-parents-maths-challenge",
       "quarter-1-showcase-2026-count-and-match",
-      "quarter-1-showcase-2026-showing-his-grandfather",
-      "quarter-1-showcase-2026-roll-and-read",
       "quarter-1-showcase-2026-threading-bead-patterns",
-      "quarter-1-showcase-2026-the-social-media-debate",
-      "quarter-1-showcase-2026-showing-her-shapes"
+      "quarter-1-showcase-2026-the-high-kicking-gardener",
+      "quarter-1-showcase-2026-roll-and-read",
+      "quarter-1-showcase-2026-showing-her-shapes",
+      "quarter-1-showcase-2026-the-parents-maths-challenge",
+      "quarter-1-showcase-2026-showing-his-grandfather",
+      "quarter-1-showcase-2026-the-social-media-debate"
     ],
     "vi": {
       "name": "Showcase Quý 1",
       "month": "Th10",
       "when": "Thứ Năm, 15/10",
-      "summary": "Buổi chiều để ba mẹ xem những bài làm bằng tiếng Anh của các con trong quý đầu tiên, do chính các con giới thiệu.",
+      "summary": "Buổi chiều để các con tự trình bày với ba mẹ những gì đã học trong quý đầu tiên, bằng lời của chính mình.",
       "did": [
-        "Học viên Upper Secondary viết những bữa tiệc tranh luận giữa những người nổi tiếng trong lịch sử và ngày nay, theo giọng của từng vị khách, rồi dẫn dắt ba mẹ qua cuộc tranh luận đó",
-        "Học viên Lower Secondary giới thiệu các mô hình làm trong lớp Art of Science và các poster giải thích phần Toán, rồi ra câu hỏi Toán cho ba mẹ giải",
-        "Các con lớp Primary diễn vở kịch về cách cây lớn lên bằng tiếng Anh và trả lời câu đố của gia đình",
-        "Các bé Early Years dẫn ba mẹ đi qua các góc chơi về âm chữ cái, quy luật và đếm số"
+        "Các bé Early Years dẫn ba mẹ đi qua các góc chơi về chữ cái, quy luật và đếm số",
+        "Các con lớp Primary trình bày những gì đã học về cây xanh qua một vở kịch nhỏ, rồi trả lời câu đố của gia đình",
+        "Mỗi học viên Lower Secondary giải thích cho ba mẹ một chủ đề Toán khác nhau bằng poster và câu đố, và giới thiệu các mô hình làm trong lớp Art of Science",
+        "Học viên Upper Secondary dẫn dắt ba mẹ qua những bữa tiệc tranh luận giữa những người nổi tiếng trong lịch sử và ngày nay"
       ]
     }
   },
