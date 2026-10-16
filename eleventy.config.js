@@ -130,7 +130,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("nlCount", (issues, edition) => (issues || []).filter((x) => x.edition === edition).length);
   // The announcement reel with the newest issue on top for four days from its Friday
   // (hideFrom is the fifth day), so nobody has to add it by hand.
+  // Off for now (Bowen, 16 October 2026): the issue pages stay, the banner goes. true brings it back.
+  const NEWSLETTER_IN_REEL = false;
   eleventyConfig.addFilter("withNewsletter", (items, issues, lang, strings) => {
+    if (!NEWSLETTER_IN_REEL) return items || [];
     const is = (issues || [])[0];
     if (!is) return items || [];
     const T = strings[lang].nl;
