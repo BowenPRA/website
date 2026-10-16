@@ -1,0 +1,154 @@
+---
+layout: layouts/base.njk
+tone: green
+title: "Quarter 1 Showcase 2026"
+description: "Our Quarter 1 Showcase on Thursday 15 October 2026: students showed their families what they learned this quarter, from a Year 1 plant role play to maths questions for the parents."
+permalink: /events/q1-showcase-2026/
+---
+{# Facts come from Bowen (2026-10-16), Ms. Solo's note on the Year 1 afternoon (as Bowen passed it on),
+   Year 1's slides (Year 1 Showcase 1.pdf in the event's Drive folder) and what the photos show
+   (PRA Photos/2026-10-15 Quarter 1 Showcase). Bowen did not know what Early Years showed, so their
+   section says only what is in their photos. Do not mention the showcase being moved for the rain (Bowen).
+   Photos come from The Current's sign-off as quarter-1-showcase-2026-<title>; until they are published
+   the page shows grey placeholders. The slides PDF holds about seventy photos of Year 1 children and does
+   not go through that sign-off: it must be checked against the no-photo list before this page goes live. #}
+{% set slides = '/assets/docs/year-1-showcase-quarter-1-2026.pdf' | href(lang) %}
+
+{# Until the photos are published the hero is Year 1's first slide. #}
+{% set heroPhoto = "quarter-1-showcase-2026-the-high-kicking-gardener" if photos["quarter-1-showcase-2026-the-high-kicking-gardener"] else "quarter-1-showcase-2026-year-1-slides-cover" %}
+{% set heroShape = "" %}
+{% set heroEyebrow = "Events · Thursday 15 October 2026" %}
+{% set heroTitle = 'Quarter 1 <span class="mark">Showcase</span>' %}
+{% set heroText = "An afternoon when our students showed their families what they learned in the first quarter of the year." %}
+{% include "partials/pagehero.njk" %}
+
+{% set pics = ["quarter-1-showcase-2026-welcome-to-the-year-1-showcase", "quarter-1-showcase-2026-raindrops-and-seeds", "quarter-1-showcase-2026-singing-the-plant-song"] | onSite(photos) %}
+<section>
+  <div class="wrap {{ 'two two--top' if pics.length else 'narrow' }}">
+    <div>
+      <p class="eyebrow">Year 1</p>
+      <h2>How a plant grows</h2>
+      <p>Ms. Solo began with a short introduction for the parents. Then Year 1 acted out how a plant grows.</p>
+      <p>In paper costumes and headbands, the children played the sun, the rain, the plants and the gardener, and sang as they went.</p>
+    </div>
+    {% if pics.length %}<div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = pics %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>{% endif %}
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+{% set pics = ["quarter-1-showcase-2026-roll-and-read", "quarter-1-showcase-2026-showing-her-shapes", "quarter-1-showcase-2026-our-best-work"] | onSite(photos) %}
+<section class="band--pale">
+  <div class="wrap {{ 'two two--top two--flip' if pics.length else 'narrow' }}">
+    <div>
+      <p class="eyebrow eyebrow--blue">Year 1</p>
+      <h2>Quiz cards and books</h2>
+      <p>Next came a quiz game. Families sat down with the children, rolled a dice and asked questions from the cards: what do we plant in the soil? Can a dog grow?</p>
+      <p>To finish, families looked through the children's books and projects, and Ms. Solo talked with any parents who wanted a word about their child.</p>
+    </div>
+    {% if pics.length %}<div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = pics %}
+      {% include "partials/collage.njk" %}
+    </div>{% endif %}
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+<section id="year-1-slides">
+  <div class="wrap two two--top">
+    <div>
+      <p class="eyebrow">Year 1's quarter</p>
+      <h2>The quarter in 22 slides</h2>
+      <p>Year 1's slides from the afternoon go through the quarter subject by subject, with photos from the classroom.</p>
+      <ul class="event__did">
+        <li><strong>English:</strong> phonics, CVC words, short and long vowel sounds, and building sentences.</li>
+        <li><strong>Maths:</strong> counting in 2s, odd and even numbers, and 2D and 3D shapes, with their faces, edges and vertices.</li>
+        <li><strong>Science:</strong> plants and what they need to grow, living and non-living things, and sound, with instruments the children made.</li>
+      </ul>
+    </div>
+    {# The slides are Year 1's Canva PDF, saved as one picture per slide (33 MB down to 3.4 MB).
+       Each line under "Inside" opens it at that slide, in browsers that follow #page. #}
+    <div class="card guidebook guidebook--slides">
+      <a class="guidebook__cover" href="{{ slides }}" target="_blank" rel="noopener">{% photo "quarter-1-showcase-2026-year-1-slides-cover", "", "(min-width: 480px) 380px, 90vw" %}</a>
+      <div>
+        <h3>Year 1 Showcase, Quarter 1</h3>
+        <p class="guidebook__meta">22 slides · PDF · 3.4 MB</p>
+        <p class="guidebook__do">
+          <a class="btn btn--primary btn--small" href="{{ slides }}" target="_blank" rel="noopener">Open the slides</a>
+          <a class="btn btn--ghost btn--small" href="{{ slides }}" download="Year 1 Showcase, Quarter 1 2026.pdf">Download</a>
+        </p>
+      </div>
+      <div class="guidebook__inside">
+        <p class="guidebook__head">Inside</p>
+        <ol>
+          {% for p in [
+            [2, "The afternoon's plan"], [3, "Learning through play"], [4, "Quarter 1"], [5, "Morning movement"],
+            [8, "English"], [10, "Maths"], [13, "Science"], [15, "Reading time"], [16, "Friendship"],
+            [18, "Cooking"], [19, "Technology"], [20, "Art"], [21, "Games outside"]
+          ] %}<li><a href="{{ slides }}#page={{ p[0] }}" target="_blank" rel="noopener"><span>{{ p[0] }}</span>{{ p[1] }}</a></li>{% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+{% set pics = ["quarter-1-showcase-2026-the-parents-maths-challenge", "quarter-1-showcase-2026-fractions-on-the-whiteboard"] | onSite(photos) %}
+<section class="band--pale">
+  <div class="wrap {{ 'two two--top two--flip' if pics.length else 'narrow' }}">
+    <div>
+      <p class="eyebrow eyebrow--blue">Lower and Upper Secondary</p>
+      <h2>Posters, models and questions for the parents</h2>
+      <p>Lower Secondary showed the models they made in Art of Science, the art class that goes with their Cambridge Science, and posters explaining the maths they covered this quarter.</p>
+      <p>Then they turned the questions on their parents. Under the poster on square and cube numbers was a quiz, and parents wrote their answers on sticky notes.</p>
+      <p>Upper Secondary guided their parents through dinner-table discussions about historical figures.</p>
+    </div>
+    {% if pics.length %}<div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = pics %}
+      {% set collageCredit = "Parents answering the Lower Secondary maths quiz." %}
+      {% include "partials/collage.njk" %}
+    </div>{% endif %}
+  </div>
+</section>
+{% set waveColor = "white" %}{% include "partials/wave.njk" %}
+
+{% set pics = ["quarter-1-showcase-2026-count-and-match", "quarter-1-showcase-2026-threading-bead-patterns", "quarter-1-showcase-2026-blend-find-write"] | onSite(photos) %}
+<section>
+  <div class="wrap {{ 'two two--top' if pics.length else 'narrow' }}">
+    <div>
+      <p class="eyebrow">Early Years</p>
+      <h2>Letters, patterns and counting</h2>
+      <p>In Early Years, families went round the classroom stations with the children and their teacher. There were letter tiles to blend, find and write, beads to thread into patterns, number cards to count and match, and a tray of foam and colours.</p>
+    </div>
+    {% if pics.length %}<div>
+      {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
+      {% set collagePhotos = pics %}
+      {% set collageWide = true %}
+      {% include "partials/collage.njk" %}
+    </div>{% endif %}
+  </div>
+</section>
+
+{% set waveColor = "pale" %}{% include "partials/wave.njk" %}
+<section class="band--pale">
+  <div class="wrap center narrow">
+    <p class="eyebrow eyebrow--blue">Thank you</p>
+    <h2>To everyone who came</h2>
+    <p class="lede">Thank you to the families who came and joined in, and to our students, who got their work ready to show you.</p>
+    <p class="event-page__links">
+      {# Add "Our photos on Facebook" here once the post is up, as on the Mid-Autumn page. #}
+      <a class="btn btn--primary" href="#year-1-slides">Year 1's slides</a>
+      <a class="btn btn--ghost" href="{{ '/events/' | href(lang) }}">All events</a>
+    </p>
+  </div>
+</section>
+
+{% set ctaTitle = "" %}{% set ctaText = "" %}
+{% set waveColor = "blue" %}{% include "partials/wave.njk" %}
+{% include "partials/cta.njk" %}

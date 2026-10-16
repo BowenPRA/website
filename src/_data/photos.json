@@ -1811,6 +1811,18 @@
     ],
     "src": "guidebook/family-guidebook-2026-cover.png"
   },
+  "quarter-1-showcase-2026-year-1-slides-cover": {
+    "alt": "The first slide of Year 1's showcase: Welcome to the Year 1 Showcase, with a cartoon bear, globe and pencils",
+    "width": 1600,
+    "height": 900,
+    "sizes": [
+      480,
+      960,
+      1600
+    ],
+    "src": "events/2026_10_15 Quarter 1 Showcase/year-1-showcase-slides-cover.png",
+    "taken": "2026-10-15"
+  },
   "student-writing-amada-periodic-table-poster": {
     "alt": "Amada's Canva poster for her project, The First 20 of the Periodic Table. Her words are written out on this page.",
     "width": 1080,

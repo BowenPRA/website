@@ -70,6 +70,10 @@ export default function (eleventyConfig) {
     return (items || []).filter((i) => !i.hideFrom || i.hideFrom > today);
   });
 
+  // The slugs in a list that have been built (src/_data/photos.json), so a page can go up before
+  // its event photos have come through The Current's sign-off and fill in when they do.
+  eleventyConfig.addFilter("onSite", (slugs, photos) => (slugs || []).filter((s) => photos && photos[s]));
+
   // ---------- the weekly newsletter (lib/newsletter.js, lib/nl-page.js, src/_data/newsletters.js) ----------
   // An issue's page, hero and body (lib/nl-page.js: the same code draws The Current's preview).
   eleventyConfig.addFilter("nlPage", (issue, lang, strings, siteName, piece) => nlRender(issue, { lang, T: strings[lang], siteName, icon: nlIcon })[piece]);

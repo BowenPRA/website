@@ -40,6 +40,35 @@
     }
   },
   {
+    "id": "q1-showcase-2026",
+    "page": "/events/q1-showcase-2026/",
+    "school_year": "2026-27",
+    "name": "Quarter 1 Showcase",
+    "month": "Oct",
+    "year": "2026",
+    "when": "Thursday 15 October",
+    "summary": "An afternoon for families to see what students learned in the first quarter, shown by the students themselves.",
+    "did": [
+      "Year 1 acted out how a plant grows and ran a quiz game with their families",
+      "Lower Secondary showed their Art of Science models and maths posters, and set maths questions for the parents",
+      "Upper Secondary guided their parents through dinner-table discussions about historical figures",
+      "Early Years showed their families round their letter, pattern and counting stations"
+    ],
+    "photos": [],
+    "vi": {
+      "name": "Showcase Quý 1",
+      "month": "Th10",
+      "when": "Thứ Năm, 15/10",
+      "summary": "Buổi chiều để ba mẹ xem các con đã học được gì trong quý đầu tiên, do chính các con giới thiệu.",
+      "did": [
+        "Lớp Year 1 diễn một vở kịch nhỏ về cách cây lớn lên và chơi trò đố vui cùng gia đình",
+        "Học viên Lower Secondary giới thiệu các mô hình làm trong lớp Art of Science và các poster môn Toán, rồi ra câu hỏi Toán cho ba mẹ giải",
+        "Học viên Upper Secondary dẫn dắt ba mẹ cùng trò chuyện về các nhân vật lịch sử, như trong một bữa tối gia đình",
+        "Các bé Early Years dẫn ba mẹ đi qua các góc chơi về chữ cái, quy luật và đếm số"
+      ]
+    }
+  },
+  {
     "id": "welcome-back",
     "school_year": "2025-26",
     "name": "Welcome Back Nights",

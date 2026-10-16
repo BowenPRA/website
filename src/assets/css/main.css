@@ -1173,6 +1173,11 @@ tr:last-child td { border-bottom: 0; }
   .guidebook__cover { width: 124px; margin-left: 6px; }
   .guidebook__inside ol { columns: 1; }
 }
+/* The same card for a slide deck (an event's slides): the first slide on top, wide, then the rest. */
+.guidebook--slides { grid-template-columns: minmax(0, 1fr); }
+.guidebook--slides .guidebook__cover { max-width: 380px; rotate: -2deg; }
+.card.guidebook--slides .guidebook__cover .photo { aspect-ratio: 16 / 9; }
+@media (max-width: 479px) { .guidebook--slides .guidebook__cover { width: auto; margin-left: 0; } }
 
 /* ---------- schedule: the day at a glance, and one card per stage ----------
    Stage colours are the one place where all five colours sit together, because they name the stages. */
