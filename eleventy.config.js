@@ -69,7 +69,8 @@ export default function (eleventyConfig) {
   // ---------- the weekly newsletter (lib/newsletter.js, src/_data/newsletters.js) ----------
   // Text from a payload in the page's language, English when the Vietnamese is not written yet.
   eleventyConfig.addFilter("nl", (obj, lang) => nlPick(obj, lang));
-  eleventyConfig.addFilter("nlHtml", (html) => nlClean(html));
+  // Cleaned again; a paragraph all in bold becomes a small heading, as in the office's Google Doc.
+  eleventyConfig.addFilter("nlHtml", (html) => nlClean(html).replace(/<p><b>((?:(?!<\/?(?:p|b)>).)*)<\/b><\/p>/g, '<h3 class="nl-sub">$1</h3>'));
   // True when a Vietnamese page shows English for this text (it gets an "English" tag).
   eleventyConfig.addFilter("nlEn", (obj, lang) => nlIsEnglishOnly(obj, lang));
   // A lucide icon as inline SVG: {{ "trophy" | ico | safe }}, {{ "check" | ico("nl-tick") | safe }}

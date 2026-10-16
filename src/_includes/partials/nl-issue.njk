@@ -58,7 +58,7 @@
         {% if part.type == "class" %}
         <li class="nl-t--{{ part.tone }}"><a href="#s-{{ part.id }}"><span class="nl-toc__dot" aria-hidden="true"></span><span>{{ part.class }}</span></a></li>
         {% elif part.type == "story" or part.type == "photos" %}
-        <li class="nl-t--{{ part.tone }}"><a href="#s-{{ part.id }}">{{ part.icon | ico | safe }}<span>{{ part.heading | nl(lang) }}</span></a></li>
+        <li class="nl-t--{{ part.tone }}"><a href="#s-{{ part.id }}">{% if not part.emoji_heading %}{{ part.icon | ico | safe }}{% endif %}<span>{{ part.heading | nl(lang) }}</span></a></li>
         {% elif part.type == "quote" %}
         <li class="nl-t--green"><a href="#s-{{ part.id }}">{{ "quote" | ico | safe }}<span>{{ part.who | nl(lang) }}</span></a></li>
         {% elif part.type == "press" %}
@@ -107,7 +107,7 @@
       {% set n = part.photos.length if part.photos else 0 %}
       <section class="nl-part nl-story nl-t--{{ part.tone }}" id="s-{{ part.id }}">
         <header class="nl-head">
-          <span class="nl-badge">{{ part.icon | ico | safe }}</span>
+          {% if not part.emoji_heading %}<span class="nl-badge">{{ part.icon | ico | safe }}</span>{% endif %}
           <h2>{{ m.text(part.heading, lang, T) }}</h2>
         </header>
         {% if part.when and (part.when | nl(lang)) %}<p class="nl-when">{{ "clock" | ico | safe }}{{ m.text(part.when, lang, T) }}</p>{% endif %}
@@ -170,7 +170,7 @@
       {% if n %}
       <section class="nl-part nl-photoset nl-t--{{ part.tone }}" id="s-{{ part.id }}">
         <header class="nl-head">
-          <span class="nl-badge">{{ part.icon | ico | safe }}</span>
+          {% if not part.emoji_heading %}<span class="nl-badge">{{ part.icon | ico | safe }}</span>{% endif %}
           <h2>{{ m.text(part.heading, lang, T) }}</h2>
         </header>
         <div class="collage collage--wide nl-prints nl-prints--{{ n if n < 4 else 'many' }}">
