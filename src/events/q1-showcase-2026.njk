@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 tone: green
 title: "Quarter 1 Showcase 2026"
-description: "Our Quarter 1 Showcase on Thursday 15 October 2026: dinner party debates, maths questions for the parents, a Year 1 plant role play and Early Years learning stations."
+description: "Our Quarter 1 Showcase on Thursday 15 October 2026: students showed their families the work they did in English, from dinner party debates and maths posters to a plant role play."
 permalink: /events/q1-showcase-2026/
 ---
 {# Facts come from Bowen (2026-10-16), Ms. Solo's note on the Year 1 afternoon (as Bowen passed it on),
@@ -11,6 +11,8 @@ permalink: /events/q1-showcase-2026/
    he photographed them the day after. Bowen did not know what Early Years showed, so their section says
    only what is in their photos. Do not mention the showcase being moved for the rain (Bowen).
    Bowen asked for the classes to get equal weight (2026-10-16): one section each, three or four photos each.
+   Then (same day) for the copy to lean a little more on English, and for the Year 1 banner to read Primary.
+   Only say "in English" where it can be seen: the posters, the quiz cards, the books, the slides.
    Photos come from The Current's sign-off as quarter-1-showcase-2026-<title>; a section shows only those
    already built (onSite), so the page stands on its own until they are published. #}
 {% set slides = '/assets/docs/year-1-showcase-quarter-1-2026.pdf' | href(lang) %}
@@ -20,7 +22,7 @@ permalink: /events/q1-showcase-2026/
 {% if not photos[heroPhoto] %}{% set heroPhoto = "quarter-1-showcase-2026-year-1-slides-cover" %}{% set heroShape = "" %}{% endif %}
 {% set heroEyebrow = "Events · Thursday 15 October 2026" %}
 {% set heroTitle = 'Quarter 1 <span class="mark">Showcase</span>' %}
-{% set heroText = "An afternoon when our students showed their families what they learned in the first quarter of the year." %}
+{% set heroText = "An afternoon when our students showed their families the work they did in English this quarter, from debates and maths posters to a plant role play." %}
 {% include "partials/pagehero.njk" %}
 
 {% set pics = ["quarter-1-showcase-2026-showing-his-grandfather", "quarter-1-showcase-2026-the-social-media-debate", "quarter-1-showcase-2026-two-dinner-party-debates", "quarter-1-showcase-2026-peeking-over-the-debate"] | onSite(photos) %}
@@ -29,8 +31,8 @@ permalink: /events/q1-showcase-2026/
     <div>
       <p class="eyebrow">Upper Secondary</p>
       <h2>The dinner party debate</h2>
-      <p>Each Upper Secondary student chose a question and imagined a dinner party where famous people from history and today argue it out. Their posters show the table, the guests and what each one says: Napoleon and Abraham Lincoln on taxes and revolution, Einstein on artificial intelligence, Dolly Parton on whether people are born to work together.</p>
-      <p>Other tables took on an age limit for social media and whether parents should genetically enhance their children. At the showcase the students guided their parents through their debates, and one talked his grandfather through his.</p>
+      <p>Each Upper Secondary student chose a question and imagined a dinner party where famous people from history and today argue it out. On their posters they wrote what each guest says, in English and in that guest's voice, with the guests agreeing, disagreeing and answering each other.</p>
+      <p>Napoleon and Abraham Lincoln argued about taxes and revolution, Einstein about artificial intelligence, and Dolly Parton about whether people are born to work together. Other tables took on an age limit for social media and whether parents should genetically enhance their children. At the showcase the students guided their parents through their debates, and one talked his grandfather through his.</p>
     </div>
     {% if pics.length %}<div>
       {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
@@ -48,8 +50,8 @@ permalink: /events/q1-showcase-2026/
     <div>
       <p class="eyebrow eyebrow--blue">Lower Secondary</p>
       <h2>Maths questions for the parents</h2>
-      <p>Lower Secondary showed the models they made in Art of Science, the art class that goes with their Cambridge Science, and posters explaining the maths they covered this quarter.</p>
-      <p>Then they turned the questions on their parents. The posters had quizzes on them, on square and cube numbers among others, and parents worked out their answers on sticky notes and small whiteboards.</p>
+      <p>Lower Secondary showed the models they made in Art of Science, the art class that goes with their Cambridge Science, and posters that explain this quarter's maths in their own words.</p>
+      <p>Then they turned the questions on their parents. The students wrote a quiz for each poster, on square and cube numbers among others, and parents worked out their answers on sticky notes and small whiteboards.</p>
     </div>
     {% if pics.length %}<div>
       {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
@@ -61,23 +63,23 @@ permalink: /events/q1-showcase-2026/
 {% set waveColor = "white" %}{% include "partials/wave.njk" %}
 
 {% set pics = ["quarter-1-showcase-2026-the-high-kicking-gardener", "quarter-1-showcase-2026-roll-and-read", "quarter-1-showcase-2026-showing-her-shapes"] | onSite(photos) %}
-<section id="year-1">
+<section id="primary">
   <div class="wrap {{ 'two two--top' if pics.length else 'narrow' }}">
     <div>
-      <p class="eyebrow">Year 1</p>
+      <p class="eyebrow">Primary</p>
       <h2>How a plant grows</h2>
-      <p>Ms. Solo began with a short introduction for the parents. Then Year 1 acted out how a plant grows, playing the sun, the rain, the plants and the gardener in paper costumes, and singing as they went.</p>
-      <p>Next, families sat down for a quiz: they rolled a dice and asked the children questions from the cards. To finish, they looked through the children's books and projects, and Ms. Solo talked with any parents who wanted a word about their child.</p>
-      {# Year 1's Canva slides from the afternoon, saved as one picture per slide (33 MB down to 3.4 MB). #}
-      <div class="card guidebook guidebook--slides" id="year-1-slides">
+      <p>Ms. Solo began with a short introduction for the parents. Then our Primary students acted out how a plant grows. In paper costumes as the sun, the rain, the plants and the gardener, they spoke and sang their parts in English.</p>
+      <p>Next came a quiz: families rolled a dice and read out the questions on the cards, and the children answered in English. To finish, families looked through the children's books, from spelling tests to the sentences they now write, and Ms. Solo talked with any parents who wanted a word about their child.</p>
+      {# The class's Canva slides from the afternoon (Year 1 Showcase 1.pdf), saved as one picture per slide (33 MB down to 3.4 MB). #}
+      <div class="card guidebook guidebook--slides" id="primary-slides">
         <a class="guidebook__cover" href="{{ slides }}" target="_blank" rel="noopener">{% photo "quarter-1-showcase-2026-year-1-slides-cover", "", "(min-width: 480px) 200px, 90vw" %}</a>
         <div>
-          <h3>Year 1's slides</h3>
-          <p>The quarter subject by subject, with photos from the classroom.</p>
+          <h3>The Primary slides</h3>
+          <p>Phonics, maths, science and the rest of the quarter, with photos from the classroom.</p>
           <p class="guidebook__meta">22 slides · PDF · 3.4 MB</p>
           <p class="guidebook__do">
             <a class="btn btn--primary btn--small" href="{{ slides }}" target="_blank" rel="noopener">Open the slides</a>
-            <a class="btn btn--ghost btn--small" href="{{ slides }}" download="Year 1 Showcase, Quarter 1 2026.pdf">Download</a>
+            <a class="btn btn--ghost btn--small" href="{{ slides }}" download="Primary Showcase, Quarter 1 2026.pdf">Download</a>
           </p>
         </div>
       </div>
@@ -98,7 +100,7 @@ permalink: /events/q1-showcase-2026/
     <div>
       <p class="eyebrow eyebrow--blue">Early Years</p>
       <h2>Letters, patterns and counting</h2>
-      <p>In Early Years, families went round the classroom stations with the children and their teacher. There were letter tiles to blend, find and write, beads to thread into patterns, number cards to count and match, and a tray of foam and colours.</p>
+      <p>In Early Years, families went round the classroom stations with the children and their teacher. There were letter tiles for blending sounds into words and writing them, beads to thread into patterns, number cards to count and match, and a tray of foam and colours.</p>
     </div>
     {% if pics.length %}<div>
       {% set collageWide = false %}{% set collageArt = false %}{% set collage2up = false %}{% set collageCredit = "" %}
@@ -114,10 +116,10 @@ permalink: /events/q1-showcase-2026/
   <div class="wrap center narrow">
     <p class="eyebrow eyebrow--blue">Thank you</p>
     <h2>To everyone who came</h2>
-    <p class="lede">Thank you to the families who came and joined in, and to our students, who got their work ready to show you.</p>
+    <p class="lede">Thank you to the families who came and joined in, and to our students, who got their work ready and talked you through it.</p>
     <p class="event-page__links">
       {# Add "Our photos on Facebook" here once the post is up, as on the Mid-Autumn page. #}
-      <a class="btn btn--primary" href="#year-1-slides">Year 1's slides</a>
+      <a class="btn btn--primary" href="#primary-slides">The Primary slides</a>
       <a class="btn btn--ghost" href="{{ '/events/' | href(lang) }}">All events</a>
     </p>
   </div>
