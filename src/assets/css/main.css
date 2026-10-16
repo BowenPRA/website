@@ -2149,6 +2149,8 @@ tr:last-child td { border-bottom: 0; }
 
 .nl-fig { margin: 0; }
 .nl-fig .photo { border: 6px solid #fff; border-radius: var(--r); box-shadow: var(--shadow); cursor: zoom-in; }
+/* Captions are hidden for now (Bowen, 16 October 2026): delete this line to show them again. */
+.nl-fig figcaption, .nl-cover figcaption { display: none; }
 .nl-fig figcaption { margin-top: 10px; font-size: 0.84rem; line-height: 1.45; color: var(--ink-soft); }
 .nl-side .nl-fig .photo { rotate: 1.6deg; }
 @media (max-width: 719px) { .nl-side .nl-fig .photo { aspect-ratio: 4 / 3 !important; } }
