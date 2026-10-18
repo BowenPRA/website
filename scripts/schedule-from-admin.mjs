@@ -1,8 +1,12 @@
-// Copy the weekly timetable from the admin app into src/_data/schedule.json,
-// dropping teacher names (public site) and keeping subjects, times and kinds.
+// Copy the weekly timetable from the admin app (the admin folder in the user folder)
+// into src/_data/schedule.json, dropping teacher names (public site) and keeping
+// subjects, times and kinds.
 //   node scripts/schedule-from-admin.mjs
 import { writeFile } from "node:fs/promises";
-const { DEFAULT_SCHEDULE, DAYS } = await import("file:///C:/Users/bowen/admin/src/data/schedule.js");
+import { homedir } from "node:os";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
+const { DEFAULT_SCHEDULE, DAYS } = await import(pathToFileURL(join(homedir(), "admin", "src", "data", "schedule.js")).href);
 const out = {
   schoolYear: DEFAULT_SCHEDULE.schoolYear,
   days: DAYS,

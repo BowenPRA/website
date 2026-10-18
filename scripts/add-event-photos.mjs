@@ -1,9 +1,9 @@
 // Puts the photos an office account chose in The Current onto this website, and
 // takes down the ones that are no longer allowed.
 //
-//   node "C:\Users\bowen\pra-website\scripts\add-event-photos.mjs" "C:\Users\bowen\Downloads\website-<event>.json"
+//   node "C:\Users\sbowe\pra-website\scripts\add-event-photos.mjs" "C:\Users\sbowe\Downloads\website-<event>.json"
 //   ... --dry-run                 say what would change, change nothing
-//   ... --library "D:\Photos"     where the photo library is (default C:\Users\bowen\PRA Photos)
+//   ... --library "D:\Photos"     where the photo library is (default PRA Photos in the user folder)
 //   ... --event mid-autumn-2026   also list the photos under this event in src/_data/events.json
 //
 // The list comes from The Current > Photos > an event > Website > "Download the
@@ -29,6 +29,7 @@
 
 import { readFile, writeFile, mkdir, copyFile, rm, readdir, stat } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { homedir } from "node:os";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
@@ -37,13 +38,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const flag = (name) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : null; };
 const dryRun = args.includes("--dry-run");
-const library = flag("--library") || "C:\\Users\\bowen\\PRA Photos";
+const library = flag("--library") || join(homedir(), "PRA Photos");
 const eventId = flag("--event");
 const skip = new Set([flag("--library"), flag("--event")].filter(Boolean));
 const listPath = args.find((a) => !a.startsWith("--") && !skip.has(a));
 
 if (!listPath || !existsSync(listPath)) {
-  console.error('Give the list downloaded from The Current, e.g. "C:\\Users\\bowen\\Downloads\\website-2026-09-25-mid-autumn-festival.json"');
+  console.error(`Give the list downloaded from The Current, e.g. "${join(homedir(), "Downloads", "website-2026-09-25-mid-autumn-festival.json")}"`);
   process.exit(1);
 }
 const list = JSON.parse((await readFile(listPath, "utf8")).replace(/^\uFEFF/, ""));
