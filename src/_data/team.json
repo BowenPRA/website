@@ -1,6 +1,6 @@
 {
   "intro": "Every academic teacher has a degree in their subject and a TESOL certificate, and is qualified to teach in Việt Nam.",
-  "note": "Each card shows a name and a title only, no line under it. Leadership first, then the teachers, then the Vietnamese teaching staff, whose title is \"Teaching Staff\" (vi \"Nhân viên giảng dạy\"). `tint` picks the card's colour pair from .team in main.css and just cycles 1 to 6 down the list. `shots` lists photo slugs from photos.json showing that person at work; they become the card's lightbox, and a member with none simply has no lightbox.",
+  "note": "Each card shows a name and a title only, no line under it. Leadership first, then the teachers, then the Vietnamese teaching staff, whose title is \"Teaching Staff\" (vi \"Nhân viên\" for Ms. Tham, Ms. Duyen, Ms. Thắm V and Ms. Thoa, as Hien asked on 2026-10-21; Ms. Thanh still \"Nhân viên giảng dạy\"). `tint` picks the card's colour pair from .team in main.css and just cycles 1 to 6 down the list. `shots` lists photo slugs from photos.json showing that person at work; they become the card's lightbox, and a member with none simply has no lightbox.",
   "members": [
     {
       "name": "Ms. Xuan",
@@ -123,7 +123,7 @@
       "role": "Teaching Staff",
       "tint": 4,
       "vi": {
-        "role": "Nhân viên giảng dạy"
+        "role": "Nhân viên"
       }
     },
     {
@@ -135,7 +135,7 @@
       ],
       "tint": 5,
       "vi": {
-        "role": "Nhân viên giảng dạy"
+        "role": "Nhân viên"
       }
     },
     {
@@ -144,7 +144,7 @@
       "role": "Teaching Staff",
       "tint": 6,
       "vi": {
-        "role": "Nhân viên giảng dạy"
+        "role": "Nhân viên"
       }
     },
     {
@@ -153,7 +153,7 @@
       "role": "Teaching Staff",
       "tint": 1,
       "vi": {
-        "role": "Nhân viên giảng dạy"
+        "role": "Nhân viên"
       }
     }
   ],
