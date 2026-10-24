@@ -46,3 +46,12 @@ DNS for pra.edu.vn is at P.A Vietnam: four A and four AAAA records for GitHub
 Pages on the apex, `www` as a CNAME to `bowenpra.github.io`, `current` as a
 CNAME to `bowenpra.github.io`. The MX and TXT records are Google Workspace
 email; leave them alone.
+
+## Visitor numbers
+
+Cloudflare Web Analytics counts visits (free, no cookies). See them at
+dash.cloudflare.com, Analytics & Logs, Web Analytics, pra.edu.vn. The site's
+token is `analytics.cloudflareToken` in `src/_data/site.json`; the layout adds
+the beacon to every page except `noindex` ones. Ad blockers stop the beacon, so
+the real number of visitors is somewhat higher. DNS stays at P.A Vietnam:
+the beacon does not need the domain on Cloudflare.

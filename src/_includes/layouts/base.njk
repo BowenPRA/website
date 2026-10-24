@@ -85,5 +85,8 @@
   <script src="{{ '/assets/js/main.js' | href(lang) }}" defer></script>
   {# A page that needs its own script names it in front matter: `script: "/assets/js/enroll.js"`. #}
   {% if script %}<script src="{{ script | href(lang) }}" defer></script>{% endif %}
+  {# Visitor counts: Cloudflare Web Analytics, no cookies (dash.cloudflare.com, Analytics & Logs, Web Analytics).
+     The token is in site.json; empty turns it off. Our own pages (noindex: the album, newsletter preview) are not counted. #}
+  {% if site.analytics.cloudflareToken and not noindex %}<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.analytics.cloudflareToken }}"}'></script>{% endif %}
 </body>
 </html>
