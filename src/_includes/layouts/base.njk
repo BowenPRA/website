@@ -36,15 +36,13 @@
   <meta property="og:image" content="{{ site.url }}{{ '/assets/img/photos/hero-cooking-class-hoi-an-1600.webp' | href(lang) }}">
   {% endif %}
   <link rel="icon" href="{{ '/assets/img/favicon.svg' | href(lang) }}" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {# Poppins has no Vietnamese letters (ộ, ế, ở...). Vietnamese pages are set in Be Vietnam Pro; English pages
-     list it after Poppins, and the browser fetches only its Vietnamese letters, for place names like Hội An. #}
-  {% if lang == "vi" %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
-  {% else %}
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
-  {% endif %}
+     list it after Poppins, and the browser fetches only its Vietnamese letters, for place names like Hội An.
+     Both fonts are files on this site (scripts/fonts.mjs), so the text never waits on Google's servers.
+     The body and heading weights are fetched first. #}
+  {% set fontsFirst = ["be-vietnam-pro-400-latin", "be-vietnam-pro-700-latin", "be-vietnam-pro-400-vietnamese"] if lang == "vi" else ["poppins-400-latin", "poppins-700-latin"] %}
+  {% for f in fontsFirst %}<link rel="preload" href="{{ ('/assets/fonts/' + f + '.woff2') | url }}" as="font" type="font/woff2" crossorigin>
+  {% endfor %}<style>{% include "partials/fonts.njk" %}</style>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | href(lang) }}">
   <script>document.documentElement.classList.add("js")</script>
   {# The center's details for Google, on the home page only. EducationalOrganization, never School (PRA is a language center). #}

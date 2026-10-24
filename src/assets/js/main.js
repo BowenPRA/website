@@ -355,9 +355,11 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
 
+    // Measure every block first, then hide the ones below the fold. Measuring after each change
+    // made the browser lay the whole page out again for every block: most of a second on a phone.
     var fold = window.innerHeight * 0.92;
-    document.querySelectorAll(revealSelector).forEach(function (el) {
-      if (el.getBoundingClientRect().top < fold) return;
+    var below = [].filter.call(document.querySelectorAll(revealSelector), function (el) { return el.getBoundingClientRect().top >= fold; });
+    below.forEach(function (el) {
       var siblings = Array.prototype.indexOf.call(el.parentElement.children, el);
       el.style.setProperty("--i", String(Math.min(siblings, 5)));
       el.classList.add("reveal");

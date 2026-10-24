@@ -24,6 +24,7 @@ Then open http://localhost:8080. Edits under `src/` rebuild automatically.
 | `src/_includes/layouts/base.njk` | The one page layout (head, header, footer) |
 | `src/_includes/partials/` | Header, footer, river divider, CTA block |
 | `src/assets/css/main.css` | All styles. Design tokens are at the top |
+| `src/assets/fonts/`, `src/_includes/partials/fonts.njk` | Poppins and Be Vietnam Pro, served from this site (no Google Fonts request). `node scripts/fonts.mjs` fetches them again and rewrites the rules |
 | `src/assets/js/main.js` | Nav sheet, age picker, lightbox, the album's search and filters |
 | `src/_data/album.js` | Works out the tags behind `/album/`, our own index of every photo on the site |
 | `src/*.njk`, `src/**/*.njk` | The pages |
